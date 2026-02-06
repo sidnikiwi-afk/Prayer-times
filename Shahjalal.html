@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shahjalal Islamic Society - Ramadhan 1447 Timetable</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            color: #1a1a1a;
+            padding: 10px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            text-align: center;
+            padding: 20px 15px;
+            background: linear-gradient(135deg, #1a5c2e 0%, #2d8a47 100%);
+            color: white;
+        }
+        .mosque-icon {
+            font-size: 50px;
+            margin-bottom: 10px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+        h1 {
+            font-size: clamp(18px, 5vw, 28px);
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+        .address {
+            font-size: clamp(11px, 3vw, 14px);
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+        .month-year {
+            font-size: clamp(14px, 4vw, 18px);
+            font-weight: 600;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+        
+        /* Countdown Section */
+        .countdown-section {
+            background: linear-gradient(135deg, #8b0000 0%, #c41e3a 100%);
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .countdown-section.pre-ramadan {
+            background: linear-gradient(135deg, #1a5c2e 0%, #2d8a47 100%);
+        }
+        .countdown-label {
+            font-size: 14px;
+            margin-bottom: 8px;
+            opacity: 0.9;
+        }
+        .countdown-display {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .countdown-item {
+            background: rgba(255,255,255,0.15);
+            padding: 10px 15px;
+            border-radius: 8px;
+            min-width: 70px;
+        }
+        .countdown-value {
+            font-size: clamp(24px, 6vw, 36px);
+            font-weight: bold;
+        }
+        .countdown-unit {
+            font-size: 11px;
+            text-transform: uppercase;
+            opacity: 0.8;
+        }
+        .next-prayer {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .next-prayer-time {
+            background: rgba(255,255,255,0.2);
+            padding: 3px 12px;
+            border-radius: 15px;
+            margin-left: 5px;
+        }
+
+        /* Demo mode banner */
+        .demo-banner {
+            background: #ffc107;
+            color: #1a1a1a;
+            padding: 8px 15px;
+            text-align: center;
+            font-size: 13px;
+            display: none;
+        }
+        .demo-banner.active {
+            display: block;
+        }
+        .demo-banner button {
+            background: #1a1a1a;
+            color: white;
+            border: none;
+            padding: 4px 12px;
+            border-radius: 15px;
+            margin-left: 10px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .demo-banner button:hover {
+            background: #333;
+        }
+        .demo-controls {
+            background: #f0f0f0;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        .demo-controls button {
+            background: #1a5c2e;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+        .demo-controls button:hover {
+            background: #2d8a47;
+            transform: scale(1.05);
+        }
+        .demo-controls button.active {
+            background: #8b0000;
+        }
+        .demo-controls select {
+            padding: 8px 12px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            font-size: 13px;
+            margin-left: 10px;
+        }
+        .demo-time-control {
+            margin-top: 10px;
+            display: none;
+        }
+        .demo-time-control.active {
+            display: block;
+        }
+        .demo-time-control input[type="range"] {
+            width: 200px;
+            margin: 0 10px;
+        }
+        .demo-time-display {
+            font-weight: bold;
+            background: #1a5c2e;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 12px;
+        }
+
+        /* Dua Section */
+        .dua-section {
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 12px;
+        }
+        .dua-box {
+            flex: 1 1 250px;
+            text-align: center;
+            padding: 15px 10px;
+            color: white;
+        }
+        .dua-box.intention {
+            background: #1a5c2e;
+        }
+        .dua-box.completing {
+            background: #8b0000;
+        }
+        .dua-title {
+            font-style: italic;
+            font-size: 11px;
+            margin-bottom: 5px;
+            opacity: 0.9;
+        }
+        .dua-arabic {
+            font-size: 13px;
+            margin-bottom: 3px;
+            font-weight: 500;
+        }
+        .dua-translation {
+            font-style: italic;
+            font-size: 10px;
+            opacity: 0.85;
+        }
+
+        /* Table Styles */
+        .table-container {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: clamp(10px, 2.5vw, 12px);
+            min-width: 700px;
+        }
+        thead tr:first-child th {
+            padding: 10px 4px;
+            font-weight: 600;
+            color: white;
+        }
+        .header-ramadan {
+            background: #1a1a1a;
+        }
+        .header-beginning {
+            background: #1a5c2e;
+        }
+        .header-jamaah {
+            background: #8b0000;
+        }
+        thead tr:nth-child(2) th {
+            background: #f0f0f0;
+            color: #1a1a1a;
+            padding: 8px 4px;
+            font-size: clamp(9px, 2vw, 11px);
+            border: 1px solid #ccc;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        tbody tr {
+            transition: all 0.3s ease;
+        }
+        tbody tr:nth-child(odd) {
+            background: #fafafa;
+        }
+        tbody tr:nth-child(even) {
+            background: white;
+        }
+        tbody tr:hover {
+            background: #e8f5e9 !important;
+        }
+        td {
+            padding: 8px 4px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        .date-col {
+            font-weight: 600;
+        }
+        .friday {
+            background: #ffe6e6 !important;
+        }
+        .friday:hover {
+            background: #ffcccc !important;
+        }
+        .friday .day-col {
+            color: #8b0000;
+            font-weight: bold;
+        }
+        .sehri-col {
+            color: #8b0000;
+            font-weight: bold;
+        }
+        .iftari-col {
+            font-weight: bold;
+            color: #1a5c2e;
+        }
+        
+        /* Today's row highlighting */
+        .today {
+            background: linear-gradient(90deg, #fff3cd 0%, #ffeeba 100%) !important;
+            box-shadow: inset 0 0 0 2px #ffc107;
+            animation: pulse 2s infinite;
+        }
+        .today td {
+            border-color: #ffc107;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.85; }
+        }
+        .today-badge {
+            display: inline-block;
+            background: #ffc107;
+            color: #1a1a1a;
+            font-size: 8px;
+            padding: 2px 6px;
+            border-radius: 10px;
+            margin-left: 5px;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+
+        /* Footer */
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 15px;
+            background: #f5f5f5;
+        }
+        .footer-section {
+            flex: 1 1 200px;
+            text-align: center;
+            padding: 10px;
+        }
+        .eid-info {
+            background: #1a5c2e;
+            color: white;
+            border-radius: 8px;
+        }
+        .footer-section strong {
+            color: #8b0000;
+        }
+        .eid-info strong {
+            color: #ffc107;
+        }
+        .fitrana-box {
+            background: white;
+            border-radius: 8px;
+            border: 2px solid #8b0000;
+        }
+        .contact-box {
+            background: white;
+            border-radius: 8px;
+        }
+
+        /* Dark mode toggle */
+        .dark-mode-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #1a5c2e;
+            color: white;
+            border: none;
+            padding: 12px 15px;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            font-size: 18px;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+        .dark-mode-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        /* Dark mode styles */
+        body.dark-mode {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+        body.dark-mode .container {
+            background: #1f1f1f;
+            color: #e0e0e0;
+        }
+        body.dark-mode .demo-controls {
+            background: #2d2d2d;
+            border-color: #444;
+        }
+        body.dark-mode .demo-controls select {
+            background: #1f1f1f;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+        body.dark-mode thead tr:nth-child(2) th {
+            background: #2d2d2d;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+        body.dark-mode tbody tr:nth-child(odd) {
+            background: #252525;
+        }
+        body.dark-mode tbody tr:nth-child(even) {
+            background: #1f1f1f;
+        }
+        body.dark-mode tbody tr:hover {
+            background: #2d4a3e !important;
+        }
+        body.dark-mode td {
+            border-color: #444;
+        }
+        body.dark-mode .friday {
+            background: #3d2525 !important;
+        }
+        body.dark-mode .today {
+            background: linear-gradient(90deg, #3d3520 0%, #4a4025 100%) !important;
+        }
+        body.dark-mode .footer {
+            background: #252525;
+        }
+        body.dark-mode .fitrana-box,
+        body.dark-mode .contact-box {
+            background: #2d2d2d;
+            color: #e0e0e0;
+        }
+        body.dark-mode .sehri-col {
+            color: #ff6b6b;
+        }
+        body.dark-mode .iftari-col {
+            color: #69db7c;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: white !important;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+            }
+            .dark-mode-toggle,
+            .countdown-section,
+            .demo-controls,
+            .demo-banner {
+                display: none !important;
+            }
+            .today {
+                background: #fff3cd !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+
+        /* Mobile optimizations */
+        @media (max-width: 600px) {
+            .countdown-item {
+                min-width: 60px;
+                padding: 8px 10px;
+            }
+            .footer-section {
+                flex: 1 1 100%;
+            }
+            .demo-controls {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .demo-controls select {
+                margin-left: 0;
+                margin-top: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="mosque-icon">🕌</div>
+            <h1>SHAHJALAL ISLAMIC SOCIETY</h1>
+            <div class="address">149A Little Horton Lane, Bradford, West Yorkshire, BD5 0HS</div>
+            <div class="month-year">RAMADHĀN 1447 | FEBRUARY 2026</div>
+        </div>
+
+        <div class="demo-banner" id="demoBanner">
+            🧪 <strong>Demo Mode Active</strong> - Simulating <span id="demoDateDisplay"></span>
+            <button onclick="exitDemoMode()">Exit Demo</button>
+        </div>
+
+        <div class="demo-controls" id="demoControls">
+            <span>🧪 <strong>Test the countdown:</strong></span>
+            <button onclick="toggleDemoMode()" id="demoToggle">Enable Demo Mode</button>
+            <select id="demoDateSelect" onchange="changeDemoDate()" disabled>
+                <option value="">Select a Ramadan day...</option>
+            </select>
+            <div class="demo-time-control" id="demoTimeControl">
+                <span>⏰ Simulate time of day:</span>
+                <input type="range" id="demoTimeSlider" min="0" max="1439" value="600" oninput="changeDemoTime()">
+                <span class="demo-time-display" id="demoTimeDisplay">10:00</span>
+            </div>
+        </div>
+
+        <div class="countdown-section" id="countdownSection">
+            <div class="countdown-label" id="countdownLabel">Time until Iftar</div>
+            <div class="countdown-display">
+                <div class="countdown-item" id="daysContainer" style="display: none;">
+                    <div class="countdown-value" id="days">--</div>
+                    <div class="countdown-unit">Days</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="hours">--</div>
+                    <div class="countdown-unit">Hours</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="minutes">--</div>
+                    <div class="countdown-unit">Minutes</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="seconds">--</div>
+                    <div class="countdown-unit">Seconds</div>
+                </div>
+            </div>
+            <div class="next-prayer" id="nextPrayer"></div>
+        </div>
+
+        <div class="dua-section">
+            <div class="dua-box intention">
+                <div class="dua-title">Intention for fasting</div>
+                <div class="dua-arabic">Wa bisawmi ghadin nawaytu min shahri Ramadhān</div>
+                <div class="dua-translation">"I intend to keep the fast tomorrow in the month of Ramadhān."</div>
+            </div>
+            <div class="dua-box completing">
+                <div class="dua-title">Completing the Fast Du'ā</div>
+                <div class="dua-arabic">Allāhumma laka sumtu wa 'ala rizqika aftartu</div>
+                <div class="dua-translation">"O Allāh! For You I have fasted and by what (food) You have blessed me with, have I broken it."</div>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table id="timetable">
+                <thead>
+                    <tr>
+                        <th colspan="4" class="header-ramadan">RAMADHĀN</th>
+                        <th colspan="5" class="header-beginning">BEGINNING TIME</th>
+                        <th colspan="5" class="header-jamaah">JAMĀ'AH TIME</th>
+                    </tr>
+                    <tr>
+                        <th>Date</th>
+                        <th>Day</th>
+                        <th>No</th>
+                        <th>Sehri</th>
+                        <th>Fajr</th>
+                        <th>Sunrise</th>
+                        <th>Zuhr</th>
+                        <th>Asr</th>
+                        <th>Isha</th>
+                        <th>Fajr</th>
+                        <th>Zuhr</th>
+                        <th>Asr</th>
+                        <th>Maghrib</th>
+                        <th>Isha</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer">
+            <div class="footer-section eid-info">
+                <strong>Two Eid Salāh Will Be Held:</strong><br>
+                1st Jamā'ah at 6:24am | 2nd Jamā'ah at 9:00am
+            </div>
+            <div class="footer-section fitrana-box">
+                <strong>FITRANA:</strong><br>
+                £5.00 PER PERSON
+            </div>
+            <div class="footer-section contact-box">
+                <em>Late night jamā'ah will be held.</em><br>
+                <strong>07903 582141 | 07867 607330</strong>
+            </div>
+        </div>
+    </div>
+
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
+
+    <script>
+        // Demo mode state
+        let demoMode = false;
+        let demoDate = null;
+        let demoTimeMinutes = 600; // 10:00 AM default (minutes since midnight)
+
+        // Timetable data with full dates (year, month, day)
+        const timetableData = [
+            { date: [2026, 2, 18], day: "Wed", no: 1, sehri: "5:39", fajr: "5:44", sunrise: "7:22", zuhr: "12:21", asr: "3:29", isha: "6:40", jFajr: "5:59", jZuhr: "1:00", jAsr: "4:00", maghrib: "5:26", jIsha: "7:30" },
+            { date: [2026, 2, 19], day: "Thu", no: 2, sehri: "5:37", fajr: "5:42", sunrise: "7:20", zuhr: "12:21", asr: "3:31", isha: "6:41", jFajr: "5:57", jZuhr: "1:00", jAsr: "4:00", maghrib: "5:28", jIsha: "7:30" },
+            { date: [2026, 2, 20], day: "Fri", no: 3, sehri: "5:35", fajr: "5:40", sunrise: "7:17", zuhr: "12:21", asr: "3:32", isha: "6:43", jFajr: "5:55", jZuhr: "1:00", jAsr: "4:00", maghrib: "5:30", jIsha: "7:30" },
+            { date: [2026, 2, 21], day: "Sat", no: 4, sehri: "5:33", fajr: "5:38", sunrise: "7:15", zuhr: "12:21", asr: "3:34", isha: "6:45", jFajr: "5:53", jZuhr: "1:00", jAsr: "4:00", maghrib: "5:32", jIsha: "7:30" },
+            { date: [2026, 2, 22], day: "Sun", no: 5, sehri: "5:31", fajr: "5:36", sunrise: "7:13", zuhr: "12:20", asr: "3:36", isha: "6:47", jFajr: "5:51", jZuhr: "1:00", jAsr: "4:00", maghrib: "5:34", jIsha: "7:30" },
+            { date: [2026, 2, 23], day: "Mon", no: 6, sehri: "5:29", fajr: "5:34", sunrise: "7:11", zuhr: "12:20", asr: "3:38", isha: "6:48", jFajr: "5:49", jZuhr: "1:00", jAsr: "4:00", maghrib: "5:36", jIsha: "7:30" },
+            { date: [2026, 2, 24], day: "Tue", no: 7, sehri: "5:27", fajr: "5:32", sunrise: "7:09", zuhr: "12:20", asr: "3:39", isha: "6:50", jFajr: "5:47", jZuhr: "1:00", jAsr: "4:00", maghrib: "5:38", jIsha: "7:30" },
+            { date: [2026, 2, 25], day: "Wed", no: 8, sehri: "5:25", fajr: "5:30", sunrise: "7:06", zuhr: "12:20", asr: "3:41", isha: "6:52", jFajr: "5:45", jZuhr: "1:00", jAsr: "4:00", maghrib: "5:40", jIsha: "7:30" },
+            { date: [2026, 2, 26], day: "Thu", no: 9, sehri: "5:23", fajr: "5:28", sunrise: "7:04", zuhr: "12:20", asr: "3:43", isha: "6:54", jFajr: "5:43", jZuhr: "1:00", jAsr: "4:00", maghrib: "5:42", jIsha: "7:30" },
+            { date: [2026, 2, 27], day: "Fri", no: 10, sehri: "5:20", fajr: "5:25", sunrise: "7:02", zuhr: "12:20", asr: "3:45", isha: "6:56", jFajr: "5:40", jZuhr: "1:00", jAsr: "4:00", maghrib: "5:44", jIsha: "7:30" },
+            { date: [2026, 2, 28], day: "Sat", no: 11, sehri: "5:18", fajr: "5:23", sunrise: "7:00", zuhr: "12:20", asr: "3:46", isha: "6:58", jFajr: "5:38", jZuhr: "1:00", jAsr: "4:00", maghrib: "5:46", jIsha: "7:30" },
+            { date: [2026, 3, 1], day: "Sun", no: 12, sehri: "5:14", fajr: "5:19", sunrise: "6:55", zuhr: "12:19", asr: "3:50", isha: "7:00", jFajr: "5:34", jZuhr: "1:00", jAsr: "4:30", maghrib: "5:47", jIsha: "8:00" },
+            { date: [2026, 3, 2], day: "Mon", no: 13, sehri: "5:11", fajr: "5:16", sunrise: "6:53", zuhr: "12:19", asr: "3:52", isha: "7:02", jFajr: "5:31", jZuhr: "1:00", jAsr: "4:30", maghrib: "5:49", jIsha: "8:00" },
+            { date: [2026, 3, 3], day: "Tue", no: 14, sehri: "5:09", fajr: "5:14", sunrise: "6:50", zuhr: "12:19", asr: "3:53", isha: "7:03", jFajr: "5:29", jZuhr: "1:00", jAsr: "4:30", maghrib: "5:52", jIsha: "8:00" },
+            { date: [2026, 3, 4], day: "Wed", no: 15, sehri: "5:07", fajr: "5:12", sunrise: "6:48", zuhr: "12:19", asr: "3:55", isha: "7:05", jFajr: "5:27", jZuhr: "1:00", jAsr: "4:30", maghrib: "5:54", jIsha: "8:00" },
+            { date: [2026, 3, 5], day: "Thu", no: 16, sehri: "5:04", fajr: "5:09", sunrise: "6:46", zuhr: "12:18", asr: "3:57", isha: "7:07", jFajr: "5:24", jZuhr: "1:00", jAsr: "4:30", maghrib: "5:56", jIsha: "8:00" },
+            { date: [2026, 3, 6], day: "Fri", no: 17, sehri: "5:02", fajr: "5:07", sunrise: "6:43", zuhr: "12:18", asr: "3:58", isha: "7:09", jFajr: "5:22", jZuhr: "1:00", jAsr: "4:30", maghrib: "5:58", jIsha: "8:00" },
+            { date: [2026, 3, 7], day: "Sat", no: 18, sehri: "4:59", fajr: "5:04", sunrise: "6:41", zuhr: "12:18", asr: "4:00", isha: "7:11", jFajr: "5:19", jZuhr: "1:00", jAsr: "4:30", maghrib: "6:00", jIsha: "8:00" },
+            { date: [2026, 3, 8], day: "Sun", no: 19, sehri: "4:57", fajr: "5:02", sunrise: "6:38", zuhr: "12:18", asr: "4:01", isha: "7:13", jFajr: "5:17", jZuhr: "1:00", jAsr: "4:30", maghrib: "6:02", jIsha: "8:00" },
+            { date: [2026, 3, 9], day: "Mon", no: 20, sehri: "4:53", fajr: "4:59", sunrise: "6:36", zuhr: "12:17", asr: "4:03", isha: "7:15", jFajr: "5:13", jZuhr: "1:00", jAsr: "4:30", maghrib: "6:04", jIsha: "8:00" },
+            { date: [2026, 3, 10], day: "Tue", no: 21, sehri: "4:52", fajr: "4:57", sunrise: "6:34", zuhr: "12:17", asr: "4:05", isha: "7:17", jFajr: "5:12", jZuhr: "1:00", jAsr: "4:30", maghrib: "6:06", jIsha: "8:00" },
+            { date: [2026, 3, 11], day: "Wed", no: 22, sehri: "4:50", fajr: "4:55", sunrise: "6:31", zuhr: "12:17", asr: "4:06", isha: "7:19", jFajr: "5:10", jZuhr: "1:00", jAsr: "4:45", maghrib: "6:08", jIsha: "8:30" },
+            { date: [2026, 3, 12], day: "Thu", no: 23, sehri: "4:47", fajr: "4:52", sunrise: "6:29", zuhr: "12:17", asr: "4:08", isha: "7:21", jFajr: "5:07", jZuhr: "1:00", jAsr: "4:45", maghrib: "6:10", jIsha: "8:30" },
+            { date: [2026, 3, 13], day: "Fri", no: 24, sehri: "4:44", fajr: "4:49", sunrise: "6:26", zuhr: "12:16", asr: "4:09", isha: "7:24", jFajr: "5:04", jZuhr: "1:00", jAsr: "4:45", maghrib: "6:12", jIsha: "8:30" },
+            { date: [2026, 3, 14], day: "Sat", no: 25, sehri: "4:42", fajr: "4:47", sunrise: "6:24", zuhr: "12:16", asr: "4:11", isha: "7:25", jFajr: "5:02", jZuhr: "1:00", jAsr: "4:45", maghrib: "6:14", jIsha: "8:30" },
+            { date: [2026, 3, 15], day: "Sun", no: 26, sehri: "4:39", fajr: "4:44", sunrise: "6:22", zuhr: "12:16", asr: "4:12", isha: "7:27", jFajr: "4:59", jZuhr: "1:00", jAsr: "4:45", maghrib: "6:16", jIsha: "8:30" },
+            { date: [2026, 3, 16], day: "Mon", no: 27, sehri: "4:37", fajr: "4:42", sunrise: "6:19", zuhr: "12:16", asr: "4:14", isha: "7:28", jFajr: "4:57", jZuhr: "1:00", jAsr: "4:45", maghrib: "6:18", jIsha: "8:30" },
+            { date: [2026, 3, 17], day: "Tue", no: 28, sehri: "4:34", fajr: "4:39", sunrise: "6:17", zuhr: "12:15", asr: "4:16", isha: "7:30", jFajr: "4:54", jZuhr: "1:00", jAsr: "4:45", maghrib: "6:20", jIsha: "8:30" },
+            { date: [2026, 3, 18], day: "Wed", no: 29, sehri: "4:31", fajr: "4:36", sunrise: "6:14", zuhr: "12:15", asr: "4:18", isha: "7:32", jFajr: "4:51", jZuhr: "1:00", jAsr: "4:45", maghrib: "6:22", jIsha: "8:30" },
+            { date: [2026, 3, 19], day: "Thu", no: 30, sehri: "4:29", fajr: "4:34", sunrise: "6:12", zuhr: "12:15", asr: "4:20", isha: "7:34", jFajr: "4:49", jZuhr: "1:00", jAsr: "4:45", maghrib: "6:24", jIsha: "8:30" },
+            { date: [2026, 3, 20], day: "Fri", no: "", sehri: "4:26", fajr: "4:31", sunrise: "6:09", zuhr: "12:15", asr: "4:21", isha: "7:36", jFajr: "4:46", jZuhr: "1:00", jAsr: "4:45", maghrib: "6:26", jIsha: "8:30" }
+        ];
+
+        // Ramadan start and end dates
+        const ramadanStart = new Date(2026, 1, 18); // Feb 18, 2026
+        const ramadanEnd = new Date(2026, 2, 20);   // Mar 20, 2026
+
+        // Get effective "today" (real or demo)
+        function getEffectiveToday() {
+            if (demoMode && demoDate) {
+                return new Date(demoDate);
+            }
+            return new Date();
+        }
+
+        // Populate demo date selector
+        function populateDemoSelector() {
+            const select = document.getElementById('demoDateSelect');
+            timetableData.forEach((row, index) => {
+                const option = document.createElement('option');
+                const date = new Date(row.date[0], row.date[1] - 1, row.date[2]);
+                option.value = date.toISOString();
+                option.textContent = `Day ${row.no || 'Eid'} - ${row.day} ${row.date[2]}/${row.date[1]}`;
+                select.appendChild(option);
+            });
+        }
+
+        // Toggle demo mode
+        function toggleDemoMode() {
+            demoMode = !demoMode;
+            const btn = document.getElementById('demoToggle');
+            const select = document.getElementById('demoDateSelect');
+            const banner = document.getElementById('demoBanner');
+            const timeControl = document.getElementById('demoTimeControl');
+
+            if (demoMode) {
+                btn.textContent = 'Disable Demo Mode';
+                btn.classList.add('active');
+                select.disabled = false;
+                timeControl.classList.add('active');
+                // Default to first day of Ramadan
+                if (!demoDate) {
+                    select.selectedIndex = 1;
+                    changeDemoDate();
+                }
+                banner.classList.add('active');
+            } else {
+                exitDemoMode();
+            }
+        }
+
+        // Exit demo mode
+        function exitDemoMode() {
+            demoMode = false;
+            demoDate = null;
+            demoTimeMinutes = 600;
+            const btn = document.getElementById('demoToggle');
+            const select = document.getElementById('demoDateSelect');
+            const banner = document.getElementById('demoBanner');
+            const timeControl = document.getElementById('demoTimeControl');
+            const slider = document.getElementById('demoTimeSlider');
+
+            btn.textContent = 'Enable Demo Mode';
+            btn.classList.remove('active');
+            select.disabled = true;
+            select.selectedIndex = 0;
+            banner.classList.remove('active');
+            timeControl.classList.remove('active');
+            slider.value = 600;
+            document.getElementById('demoTimeDisplay').textContent = '10:00';
+
+            renderTable();
+            updateCountdown();
+        }
+
+        // Change demo date
+        function changeDemoDate() {
+            const select = document.getElementById('demoDateSelect');
+            if (select.value) {
+                demoDate = select.value;
+                const date = new Date(demoDate);
+                document.getElementById('demoDateDisplay').textContent = 
+                    date.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+                renderTable();
+                updateCountdown();
+            }
+        }
+
+        // Change demo time
+        function changeDemoTime() {
+            const slider = document.getElementById('demoTimeSlider');
+            demoTimeMinutes = parseInt(slider.value);
+            const hours = Math.floor(demoTimeMinutes / 60);
+            const mins = demoTimeMinutes % 60;
+            const timeStr = `${hours.toString().padStart(2, '0')}:${mins.toString().padStart(2, '0')}`;
+            document.getElementById('demoTimeDisplay').textContent = timeStr;
+            updateCountdown();
+        }
+
+        // Render table
+        function renderTable() {
+            const tbody = document.getElementById('tableBody');
+            const today = getEffectiveToday();
+            today.setHours(0, 0, 0, 0);
+
+            tbody.innerHTML = timetableData.map((row, index) => {
+                const rowDate = new Date(row.date[0], row.date[1] - 1, row.date[2]);
+                const isToday = rowDate.getTime() === today.getTime();
+                const isFriday = row.day === "Fri";
+                
+                let rowClass = '';
+                if (isToday) rowClass = 'today';
+                else if (isFriday) rowClass = 'friday';
+
+                const todayBadge = isToday ? '<span class="today-badge">TODAY</span>' : '';
+                const displayDate = row.date[2];
+
+                return `
+                    <tr class="${rowClass}" data-date="${row.date.join('-')}">
+                        <td class="date-col">${displayDate}${todayBadge}</td>
+                        <td class="day-col">${row.day}</td>
+                        <td>${row.no}</td>
+                        <td class="sehri-col">${row.sehri}</td>
+                        <td>${row.fajr}</td>
+                        <td>${row.sunrise}</td>
+                        <td>${row.zuhr}</td>
+                        <td>${row.asr}</td>
+                        <td>${row.isha}</td>
+                        <td>${row.jFajr}</td>
+                        <td>${row.jZuhr}</td>
+                        <td>${row.jAsr}</td>
+                        <td class="iftari-col">${row.maghrib}</td>
+                        <td>${row.jIsha}</td>
+                    </tr>
+                `;
+            }).join('');
+
+            // Scroll to today's row
+            const todayRow = document.querySelector('.today');
+            if (todayRow) {
+                setTimeout(() => {
+                    todayRow.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 300);
+            }
+        }
+
+        // Get today's timetable entry
+        function getTodayData() {
+            const today = getEffectiveToday();
+            return timetableData.find(row => {
+                const rowDate = new Date(row.date[0], row.date[1] - 1, row.date[2]);
+                return rowDate.toDateString() === today.toDateString();
+            });
+        }
+
+        // Parse time string to today's Date object
+        function parseTime(timeStr, baseDate) {
+            const [hours, minutes] = timeStr.split(':').map(Number);
+            const date = new Date(baseDate || getEffectiveToday());
+            date.setHours(hours, minutes, 0, 0);
+            return date;
+        }
+
+        // Update countdown
+        function updateCountdown() {
+            const now = demoMode ? getEffectiveToday() : new Date();
+            const todayData = getTodayData();
+            const countdownSection = document.getElementById('countdownSection');
+            const daysContainer = document.getElementById('daysContainer');
+
+            // Check if we're before Ramadan
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            
+            if (!demoMode && today < ramadanStart) {
+                // Show countdown to Ramadan
+                countdownSection.classList.add('pre-ramadan');
+                daysContainer.style.display = 'block';
+
+                const diff = ramadanStart - now;
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                document.getElementById('countdownLabel').textContent = '🌙 Countdown to Ramadan 1447';
+                document.getElementById('days').textContent = days.toString().padStart(2, '0');
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+                document.getElementById('nextPrayer').innerHTML = `Ramadan begins <span class="next-prayer-time">Wed 18th February</span>`;
+                return;
+            }
+
+            // Check if we're after Ramadan
+            if (!demoMode && today > ramadanEnd) {
+                countdownSection.classList.remove('pre-ramadan');
+                daysContainer.style.display = 'none';
+                document.getElementById('countdownLabel').textContent = 'Ramadan 1447 has ended';
+                document.getElementById('hours').textContent = '--';
+                document.getElementById('minutes').textContent = '--';
+                document.getElementById('seconds').textContent = '--';
+                document.getElementById('nextPrayer').innerHTML = `<span class="next-prayer-time">Eid Mubarak! 🌙</span>`;
+                return;
+            }
+
+            // During Ramadan (or demo mode)
+            countdownSection.classList.remove('pre-ramadan');
+            daysContainer.style.display = 'none';
+
+            if (!todayData) {
+                document.getElementById('countdownLabel').textContent = 'Ramadan timetable for Feb 18 - Mar 20, 2026';
+                document.getElementById('hours').textContent = '--';
+                document.getElementById('minutes').textContent = '--';
+                document.getElementById('seconds').textContent = '--';
+                document.getElementById('nextPrayer').textContent = '';
+                return;
+            }
+
+            const baseDate = getEffectiveToday();
+            const sehriTime = parseTime(todayData.sehri, baseDate);
+            const iftarTime = parseTime(todayData.maghrib, baseDate);
+            
+            // In demo mode, use the simulated time from the slider
+            let effectiveNow;
+            if (demoMode) {
+                effectiveNow = new Date(baseDate);
+                const hours = Math.floor(demoTimeMinutes / 60);
+                const mins = demoTimeMinutes % 60;
+                effectiveNow.setHours(hours, mins, 0, 0);
+            } else {
+                effectiveNow = now;
+            }
+
+            let targetTime, label, nextPrayerText;
+
+            // Get hours and minutes for easier comparison
+            const currentHours = effectiveNow.getHours();
+            const currentMins = effectiveNow.getMinutes();
+            const currentTotalMins = currentHours * 60 + currentMins;
+
+            const [sehriH, sehriM] = todayData.sehri.split(':').map(Number);
+            const sehriTotalMins = sehriH * 60 + sehriM;
+
+            const [iftarH, iftarM] = todayData.maghrib.split(':').map(Number);
+            // Maghrib times are in PM (evening), so add 12 hours if less than 12
+            const iftarHour24 = iftarH < 12 ? iftarH + 12 : iftarH;
+            const iftarTotalMins = iftarHour24 * 60 + iftarM;
+
+            if (currentTotalMins < sehriTotalMins) {
+                // Before Sehri ends - countdown to Sehri
+                const diffMins = sehriTotalMins - currentTotalMins;
+                const hours = Math.floor(diffMins / 60);
+                const minutes = diffMins % 60;
+                
+                document.getElementById('countdownLabel').textContent = '🍽️ Time until Sehri ends';
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = '00';
+                document.getElementById('nextPrayer').innerHTML = `Sehri ends at <span class="next-prayer-time">${todayData.sehri}</span>`;
+                return;
+            } else if (currentTotalMins < iftarTotalMins) {
+                // After Sehri, before Iftar - countdown to Iftar
+                const diffMins = iftarTotalMins - currentTotalMins;
+                const hours = Math.floor(diffMins / 60);
+                const minutes = diffMins % 60;
+                
+                document.getElementById('countdownLabel').textContent = '🌅 Time until Iftar';
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = '00';
+                document.getElementById('nextPrayer').innerHTML = `Iftar at <span class="next-prayer-time">${todayData.maghrib}</span>`;
+                return;
+            } else {
+                // After Iftar
+                document.getElementById('countdownLabel').textContent = '✨ Iftar time has passed';
+                document.getElementById('hours').textContent = '00';
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+                document.getElementById('nextPrayer').innerHTML = `Isha Jamā'ah at <span class="next-prayer-time">${todayData.jIsha}</span>`;
+                return;
+            }
+        }
+
+        // Dark mode toggle
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            const btn = document.querySelector('.dark-mode-toggle');
+            btn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+            localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Check saved dark mode preference
+            if (localStorage.getItem('darkMode') === 'true') {
+                document.body.classList.add('dark-mode');
+                document.querySelector('.dark-mode-toggle').textContent = '☀️';
+            }
+
+            populateDemoSelector();
+            renderTable();
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        });
+    </script>
+</body>
+</html>
