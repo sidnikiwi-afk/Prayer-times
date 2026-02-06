@@ -725,51 +725,72 @@
                 return;
             }
 
-            // Build target times as Date objects for ms-precision countdown
-            const [sehriH, sehriM] = todayData.sehri.split(':').map(Number);
-            const sehriTarget = new Date(now);
-            sehriTarget.setHours(sehriH, sehriM, 0, 0);
+            // Helper: parse time string to Date, with optional PM flag
+            function toDate(timeStr, isPM) {
+                const [h, m] = timeStr.split(':').map(Number);
+                const d = new Date(now);
+                d.setHours(isPM && h < 12 ? h + 12 : h, m, 0, 0);
+                return d;
+            }
 
-            const [iftarH, iftarM] = todayData.maghrib.split(':').map(Number);
-            const iftarHour24 = iftarH < 12 ? iftarH + 12 : iftarH;
-            const iftarTarget = new Date(now);
-            iftarTarget.setHours(iftarHour24, iftarM, 0, 0);
+            // Build prayer sequence in chronological order
+            const events = [
+                { label: '🍽️ Sehri ends', time: toDate(todayData.sehri, false), display: todayData.sehri },
+                { label: '🕌 Fajr Jamaah', time: toDate(todayData.jFajr, false), display: todayData.jFajr },
+                { label: '☀️ Zuhr begins', time: toDate(todayData.zuhr, false), display: todayData.zuhr },
+                { label: '🕌 Zuhr Jamaah', time: toDate(todayData.jZuhr, true), display: todayData.jZuhr },
+                { label: '☀️ Asr begins', time: toDate(todayData.asr, true), display: todayData.asr },
+                { label: '🕌 Asr Jamaah', time: toDate(todayData.jAsr, true), display: todayData.jAsr },
+                { label: '🌅 Iftar', time: toDate(todayData.maghrib, true), display: todayData.maghrib },
+                { label: '☀️ Isha begins', time: toDate(todayData.isha, true), display: todayData.isha },
+                { label: '🕌 Isha Jamaah', time: toDate(todayData.jIsha, true), display: todayData.jIsha },
+            ];
 
-            if (now < sehriTarget) {
-                // Before Sehri ends - countdown to Sehri
-                const diff = sehriTarget - now;
+            // Find next upcoming event
+            const nextEvent = events.find(e => now < e.time);
+
+            if (nextEvent) {
+                const diff = nextEvent.time - now;
                 const hours = Math.floor(diff / (1000 * 60 * 60));
                 const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-                document.getElementById('countdownLabel').textContent = '🍽️ Time until Sehri ends';
+                document.getElementById('countdownLabel').textContent = nextEvent.label;
                 document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
                 document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
                 document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-                document.getElementById('nextPrayer').innerHTML = `Sehri ends at <span class="next-prayer-time">${todayData.sehri}</span>`;
-                return;
-            } else if (now < iftarTarget) {
-                // After Sehri, before Iftar - countdown to Iftar
-                const diff = iftarTarget - now;
-                const hours = Math.floor(diff / (1000 * 60 * 60));
-                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-                document.getElementById('countdownLabel').textContent = '🌅 Time until Iftar';
-                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-                document.getElementById('nextPrayer').innerHTML = `Iftar at <span class="next-prayer-time">${todayData.maghrib}</span>`;
-                return;
-            } else {
-                // After Iftar
-                document.getElementById('countdownLabel').textContent = '✨ Iftar time has passed';
-                document.getElementById('hours').textContent = '00';
-                document.getElementById('minutes').textContent = '00';
-                document.getElementById('seconds').textContent = '00';
-                document.getElementById('nextPrayer').innerHTML = `Isha Jamā'ah at <span class="next-prayer-time">${todayData.jIsha}</span>`;
+                document.getElementById('nextPrayer').innerHTML = `${nextEvent.label.replace(/^\S+\s/, '')} at <span class="next-prayer-time">${nextEvent.display}</span>`;
                 return;
             }
+
+            // After Isha Jamaah - countdown to tomorrow's Sehri
+            const tomorrowIndex = timetableData.indexOf(todayData) + 1;
+            if (tomorrowIndex < timetableData.length) {
+                const tmrw = timetableData[tomorrowIndex];
+                const [sH, sM] = tmrw.sehri.split(':').map(Number);
+                const sehriTmrw = new Date(now);
+                sehriTmrw.setDate(sehriTmrw.getDate() + 1);
+                sehriTmrw.setHours(sH, sM, 0, 0);
+
+                const diff = sehriTmrw - now;
+                const hours = Math.floor(diff / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                document.getElementById('countdownLabel').textContent = '🍽️ Sehri ends tomorrow';
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+                document.getElementById('nextPrayer').innerHTML = `Sehri ends at <span class="next-prayer-time">${tmrw.sehri}</span>`;
+                return;
+            }
+
+            // Last day after Isha - Ramadan ending
+            document.getElementById('countdownLabel').textContent = '✨ Eid Mubarak!';
+            document.getElementById('hours').textContent = '00';
+            document.getElementById('minutes').textContent = '00';
+            document.getElementById('seconds').textContent = '00';
+            document.getElementById('nextPrayer').innerHTML = `<span class="next-prayer-time">Ramadan 1447 complete</span>`;
         }
 
         // Notifications
