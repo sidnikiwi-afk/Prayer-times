@@ -16,6 +16,20 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        .masjid-nav {
+            display: flex; align-items: center; background: #1a1a2e;
+            padding: 8px 12px; gap: 8px; font-size: 12px;
+        }
+        .masjid-nav a {
+            color: rgba(255,255,255,0.5); text-decoration: none;
+            padding: 5px 12px; border-radius: 20px; transition: all 0.2s ease; white-space: nowrap;
+        }
+        .masjid-nav a:hover { color: white; background: rgba(255,255,255,0.1); }
+        .masjid-nav a.active { color: white; background: rgba(255,255,255,0.15); font-weight: 600; }
+        .masjid-nav .nav-label {
+            color: rgba(255,255,255,0.3); font-size: 10px;
+            text-transform: uppercase; letter-spacing: 1px; margin-right: 4px;
+        }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
@@ -190,6 +204,7 @@
         .notify-btn.active { background: #1a5a7e; }
 
         /* Dark mode */
+        body.dark-mode .masjid-nav { background: #111122; }
         body.dark-mode { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); }
         body.dark-mode .container { background: #1f1f1f; color: #e0e0e0; }
         body.dark-mode thead tr:nth-child(2) th { background: #2d2d2d; color: #e0e0e0; border-color: #444; }
@@ -209,7 +224,7 @@
         @media print {
             body { background: white !important; padding: 0; }
             .container { box-shadow: none; }
-            .dark-mode-toggle, .share-btn, .notify-btn, .countdown-section { display: none !important; }
+            .dark-mode-toggle, .share-btn, .notify-btn, .countdown-section, .masjid-nav { display: none !important; }
             .today { background: #fff3cd !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
         }
 
@@ -222,6 +237,11 @@
 </head>
 <body>
     <div class="container">
+        <nav class="masjid-nav">
+            <span class="nav-label">Masjid:</span>
+            <a href="../shahjalal/">Shahjalal</a>
+            <a href="../quba/" class="active">Masjid Quba</a>
+        </nav>
         <div class="header">
             <div class="mosque-icon">🕌</div>
             <h1>MASJID QUBA</h1>
