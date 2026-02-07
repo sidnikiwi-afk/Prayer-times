@@ -2,6 +2,7 @@
 const MASJIDS = [
     { name: 'Shahjalal Islamic Society', addr: '149A Little Horton Lane, BD5 0HS', folder: 'shahjalal' },
     { name: 'Masjid Quba', addr: '20 Quba Court, BD8 7LA', folder: 'quba' },
+    { name: 'Al Mahad Ul Islami', addr: 'Dorset Street, BD5 0LT', folder: 'Almahad' },
 ];
 
 (function() {
