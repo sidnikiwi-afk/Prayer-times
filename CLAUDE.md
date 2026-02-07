@@ -48,18 +48,20 @@ Prayer-times/
 - **Almahad**: Receiver: 456.62500
 
 ## Features (All Mosques)
+- **Today View**: Card-based layout showing today's prayer times only, with pill toggle to switch to Full Timetable. Passed prayers dimmed with checkmark, next prayer highlighted with accent border + "NEXT" badge, tomorrow's Sehri/Iftar preview at bottom. Friday shows "Jumu'ah" instead of Zuhr. View preference saved to localStorage. Auto-refreshes every 60s. Defaults to "Today" during Ramadan, "Full Timetable" otherwise.
 - Live prayer-by-prayer countdown (Sehri > Fajr Jamaah > Zuhr > Zuhr Jamaah > Asr > Asr Jamaah > Iftar > Isha > Isha Jamaah > next Sehri)
 - Pre-Ramadan countdown with days display
 - Post-Ramadan "Eid Mubarak" state
-- Today's row auto-highlighted with pulse animation and "TODAY" badge
+- Today's row auto-highlighted with pulse animation and "TODAY" badge (full timetable view)
 - Friday rows highlighted in red
 - Last 10 nights highlighted (gold border), odd nights marked with "ODD" badge
 - Dark mode (toggle bottom-right, saved to localStorage)
 - WhatsApp share button (green, bottom-right)
 - Browser notifications (15 min before Sehri/Iftar)
 - Shared nav dropdown (search + switch mosques)
+- Submit timetable / report error links (Google Form) on all pages + landing page
 - Responsive mobile layout
-- Print-friendly (hides buttons, countdown, nav)
+- Print-friendly (hides buttons, countdown, nav, today-view)
 - Moon sighting disclaimer in header
 
 ### Shahjalal-Only Features
@@ -82,8 +84,9 @@ Copy any existing `index.html` as a starting point, then update:
 - Header content (mosque name, address, contact info)
 - `timetableData` array with all 30 days of prayer times
 - Theme colors throughout CSS (search/replace the old color hex values)
-- localStorage keys (use unique prefix, e.g. `newmosque-darkMode`, `newmosque-notifications`)
+- localStorage keys (use unique prefix, e.g. `newmosque-darkMode`, `newmosque-notifications`, `newmosque-viewMode`)
 - WhatsApp share URL
+- Today View: CSS accent colors, `renderTodayView()`, `setView()`, localStorage key, toggle HTML
 - Footer content (Eid times, Fitrana, donation details, notices)
 - Any unique sections (programmes, sunnah, etc.)
 - Add `<script src="../nav.js"></script>` before `</body>`
@@ -132,11 +135,11 @@ Asr begins → Asr Jamaah → Iftar → Isha begins → Isha Jamaah →
 After the last day's Isha Jamaah, shows "Eid Mubarak".
 
 ### localStorage Keys Per Mosque
-| Mosque | Dark Mode Key | Notifications Key |
-|--------|--------------|-------------------|
-| Shahjalal | `darkMode` | `notifications` |
-| Quba | `quba-darkMode` | `quba-notifications` |
-| Almahad | `almahad-darkMode` | `almahad-notifications` |
+| Mosque | Dark Mode Key | Notifications Key | View Mode Key |
+|--------|--------------|-------------------|---------------|
+| Shahjalal | `darkMode` | `notifications` | `viewMode` |
+| Quba | `quba-darkMode` | `quba-notifications` | `quba-viewMode` |
+| Almahad | `almahad-darkMode` | `almahad-notifications` | `almahad-viewMode` |
 
 ### nav.js
 - Self-executing function that injects CSS, HTML, and event handlers
