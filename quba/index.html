@@ -17,19 +17,59 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         .masjid-nav {
-            display: flex; align-items: center; background: #1a1a2e;
-            padding: 8px 12px; gap: 8px; font-size: 12px;
+            display: flex; align-items: center; justify-content: space-between;
+            background: #1a1a2e; padding: 6px 12px; font-size: 12px;
         }
-        .masjid-nav a {
-            color: rgba(255,255,255,0.5); text-decoration: none;
-            padding: 5px 12px; border-radius: 20px; transition: all 0.2s ease; white-space: nowrap;
-        }
-        .masjid-nav a:hover { color: white; background: rgba(255,255,255,0.1); }
-        .masjid-nav a.active { color: white; background: rgba(255,255,255,0.15); font-weight: 600; }
+        .masjid-nav .nav-left { display: flex; align-items: center; gap: 8px; }
         .masjid-nav .nav-label {
-            color: rgba(255,255,255,0.3); font-size: 10px;
-            text-transform: uppercase; letter-spacing: 1px; margin-right: 4px;
+            color: rgba(255,255,255,0.4); font-size: 10px;
+            text-transform: uppercase; letter-spacing: 1px;
         }
+        .nav-selector { position: relative; }
+        .nav-current {
+            display: flex; align-items: center; gap: 6px;
+            color: white; background: rgba(255,255,255,0.12);
+            padding: 5px 12px; border-radius: 6px; cursor: pointer;
+            font-size: 13px; font-weight: 600;
+            border: 1px solid rgba(255,255,255,0.15);
+            transition: all 0.2s ease; user-select: none;
+        }
+        .nav-current:hover { background: rgba(255,255,255,0.18); }
+        .nav-current::after { content: '\25BE'; font-size: 10px; opacity: 0.6; margin-left: 2px; }
+        .nav-dropdown {
+            display: none; position: absolute; top: calc(100% + 6px); left: 0;
+            background: #1a1a2e; border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 8px; min-width: 280px; max-height: 360px;
+            overflow-y: auto; z-index: 200; box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+        }
+        .nav-dropdown.open { display: block; }
+        .nav-search {
+            width: 100%; padding: 10px 12px; border: none;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.05); color: white;
+            font-size: 13px; outline: none;
+        }
+        .nav-search::placeholder { color: rgba(255,255,255,0.3); }
+        .nav-list { list-style: none; padding: 4px 0; }
+        .nav-list a {
+            display: flex; flex-direction: column; padding: 10px 14px;
+            color: rgba(255,255,255,0.7); text-decoration: none;
+            transition: all 0.15s ease; border-left: 3px solid transparent;
+        }
+        .nav-list a:hover { background: rgba(255,255,255,0.08); color: white; }
+        .nav-list a.active {
+            color: white; background: rgba(255,255,255,0.06);
+            border-left-color: currentColor; font-weight: 600;
+        }
+        .nav-list .nav-name { font-size: 13px; }
+        .nav-list .nav-addr { font-size: 10px; opacity: 0.45; margin-top: 1px; }
+        .nav-all {
+            display: block; text-align: center; padding: 8px;
+            color: rgba(255,255,255,0.4); text-decoration: none;
+            font-size: 11px; border-top: 1px solid rgba(255,255,255,0.08);
+            transition: all 0.15s ease;
+        }
+        .nav-all:hover { color: white; background: rgba(255,255,255,0.05); }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
@@ -205,6 +245,7 @@
 
         /* Dark mode */
         body.dark-mode .masjid-nav { background: #111122; }
+        body.dark-mode .nav-dropdown { background: #111122; }
         body.dark-mode { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); }
         body.dark-mode .container { background: #1f1f1f; color: #e0e0e0; }
         body.dark-mode thead tr:nth-child(2) th { background: #2d2d2d; color: #e0e0e0; border-color: #444; }
@@ -224,7 +265,7 @@
         @media print {
             body { background: white !important; padding: 0; }
             .container { box-shadow: none; }
-            .dark-mode-toggle, .share-btn, .notify-btn, .countdown-section, .masjid-nav { display: none !important; }
+            .dark-mode-toggle, .share-btn, .notify-btn, .countdown-section, .masjid-nav, .nav-dropdown { display: none !important; }
             .today { background: #fff3cd !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
         }
 
@@ -238,9 +279,20 @@
 <body>
     <div class="container">
         <nav class="masjid-nav">
-            <span class="nav-label">Masjid:</span>
-            <a href="../shahjalal/">Shahjalal</a>
-            <a href="../quba/" class="active">Masjid Quba</a>
+            <div class="nav-left">
+                <span class="nav-label">Masjid</span>
+                <div class="nav-selector">
+                    <div class="nav-current" onclick="toggleNav()">Masjid Quba</div>
+                    <div class="nav-dropdown" id="navDropdown">
+                        <input type="text" class="nav-search" id="navSearch" placeholder="Search masjids..." oninput="filterNav()">
+                        <ul class="nav-list" id="navList">
+                            <li><a href="../shahjalal/"><span class="nav-name">Shahjalal Islamic Society</span><span class="nav-addr">149A Little Horton Lane, BD5 0HS</span></a></li>
+                            <li><a href="../quba/" class="active"><span class="nav-name">Masjid Quba</span><span class="nav-addr">20 Quba Court, BD8 7LA</span></a></li>
+                        </ul>
+                        <a href="../" class="nav-all">View all masjids</a>
+                    </div>
+                </div>
+            </div>
         </nav>
         <div class="header">
             <div class="mosque-icon">🕌</div>
@@ -639,6 +691,29 @@
             setInterval(updateCountdown, 1000);
             setInterval(checkNotifications, 30000);
             updateNotifyButton();
+        });
+
+        // Masjid nav dropdown
+        function toggleNav() {
+            const dd = document.getElementById('navDropdown');
+            dd.classList.toggle('open');
+            if (dd.classList.contains('open')) {
+                const search = document.getElementById('navSearch');
+                search.value = '';
+                filterNav();
+                setTimeout(() => search.focus(), 50);
+            }
+        }
+        function filterNav() {
+            const q = document.getElementById('navSearch').value.toLowerCase();
+            document.querySelectorAll('#navList li').forEach(li => {
+                const text = li.textContent.toLowerCase();
+                li.style.display = text.includes(q) ? '' : 'none';
+            });
+        }
+        document.addEventListener('click', e => {
+            const dd = document.getElementById('navDropdown');
+            if (dd && !e.target.closest('.nav-selector')) dd.classList.remove('open');
         });
     </script>
 </body>
