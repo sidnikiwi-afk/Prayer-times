@@ -6,13 +6,16 @@ Hosted on GitHub Pages. Each mosque gets its own subfolder with a self-contained
 
 - **Repo**: https://github.com/sidnikiwi-afk/Prayer-times
 - **Live**: https://waqt.uk/
+- **Domain**: `waqt.uk` (Namecheap, DNS → GitHub Pages)
 - **GitHub account**: sidnikiwi-afk
 
 ## File Structure
 ```
 Prayer-times/
-├── index.html              # Landing page - mosque selector
+├── index.html              # Landing page - mosque selector (waqt.uk)
 ├── nav.js                  # Shared navigation dropdown (edit MASJIDS array here)
+├── CNAME                   # Custom domain config (waqt.uk)
+├── CLAUDE.md               # This file - project documentation
 ├── .gitignore
 ├── shahjalal/
 │   ├── index.html          # Shahjalal Islamic Society timetable
@@ -150,8 +153,26 @@ After the last day's Isha Jamaah, shows "Eid Mubarak".
 ### Deployment
 - GitHub Pages, deploy from branch (legacy mode), `master` branch
 - Push to `master` triggers automatic rebuild
-- Custom domain: `waqt.uk` (Namecheap, A records + CNAME to GitHub)
+- Custom domain: `waqt.uk` (Namecheap)
 - Old URL `sidnikiwi-afk.github.io/Prayer-times/` redirects to `waqt.uk`
+- HTTPS enforced (SSL cert auto-provisioned by GitHub)
+
+### Domain DNS (Namecheap)
+```
+A     @     185.199.108.153
+A     @     185.199.109.153
+A     @     185.199.110.153
+A     @     185.199.111.153
+CNAME www   sidnikiwi-afk.github.io
+```
+
+### URLs
+| Page | URL |
+|------|-----|
+| Landing page | `waqt.uk` |
+| Shahjalal | `waqt.uk/shahjalal/` |
+| Masjid Quba | `waqt.uk/quba/` |
+| Al Mahad Ul Islami | `waqt.uk/Almahad/` |
 
 ### Git Config
 - Repo: `sidnikiwi-afk/Prayer-times`
