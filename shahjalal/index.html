@@ -629,11 +629,15 @@
             .dark-mode-toggle,
             .share-btn,
             .notify-btn,
+            .audio-btn,
+            .qibla-btn,
+            .qibla-overlay,
             .countdown-section,
             .demo-toggle,
             .demo-panel,
             .view-toggle,
-            .today-view {
+            .today-view,
+            .ramadan-progress {
                 display: none !important;
             }
             .today {
@@ -764,6 +768,10 @@
             .mosque-icon-svg {
                 animation: none !important;
             }
+            .mosque-icon-svg path[opacity="0.4"],
+            .mosque-icon-svg path[opacity="0.5"] {
+                animation: none !important;
+            }
             .countdown-value {
                 transition: none !important;
             }
@@ -870,11 +878,254 @@
             pointer-events: none;
             opacity: 0.6;
         }
+
+        /* === Feature 1: Countdown Flip Animation === */
+        .flip-digit {
+            display: inline-block;
+            perspective: 200px;
+            transition: transform 0.25s ease;
+        }
+        .flip-digit.flipping {
+            animation: flipDigit 0.35s ease-out;
+        }
+        @keyframes flipDigit {
+            0%   { transform: rotateX(0deg) scale(1); }
+            40%  { transform: rotateX(-90deg) scale(0.95); }
+            70%  { transform: rotateX(10deg) scale(1.02); }
+            100% { transform: rotateX(0deg) scale(1); }
+        }
+
+        /* === Feature 2: Animated Mosque SVG Icon === */
+        .mosque-icon-svg path[opacity="0.4"] {
+            animation: windowGlow04 3s ease-in-out infinite;
+        }
+        .mosque-icon-svg path[opacity="0.5"] {
+            animation: windowGlow05 3s ease-in-out infinite;
+        }
+        @keyframes windowGlow04 {
+            0%, 100% { opacity: 0.4; }
+            50%      { opacity: 0.7; }
+        }
+        @keyframes windowGlow05 {
+            0%, 100% { opacity: 0.5; }
+            50%      { opacity: 0.8; }
+        }
+        .mosque-icon-svg {
+            animation: moonGlow 3s ease-in-out infinite alternate, mosqueFloat 4s ease-in-out infinite;
+        }
+        @keyframes mosqueFloat {
+            0%, 100% { transform: translateY(0); }
+            50%      { transform: translateY(-3px); }
+        }
+
+        /* === Feature 4: Ramadan Progress Bar === */
+        .ramadan-progress {
+            position: relative;
+            width: 100%;
+            height: 20px;
+            background: rgba(0, 77, 64, 0.1);
+            display: none;
+        }
+        .ramadan-progress.visible { display: block; }
+        .progress-fill {
+            height: 100%;
+            border-radius: 0 3px 3px 0;
+            background: linear-gradient(90deg, #004d40, #00796b, #4db6ac);
+            transition: width 0.6s ease;
+            min-width: 2px;
+        }
+        .progress-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 10px;
+            font-weight: 600;
+            color: white;
+            white-space: nowrap;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+            letter-spacing: 0.5px;
+        }
+        body.dark-mode .ramadan-progress {
+            background: rgba(128, 203, 196, 0.1);
+        }
+        body.dark-mode .progress-fill {
+            background: linear-gradient(90deg, #004d40, #00796b, #80cbc4);
+        }
+        body.dark-mode .progress-text {
+            color: #e0e0e0;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+        }
+
+        /* === Feature 7: Qibla Compass === */
+        .qibla-btn {
+            position: fixed;
+            bottom: 80px;
+            left: 20px;
+            background: rgba(0, 77, 64, 0.85);
+            color: white;
+            border: none;
+            padding: 12px 15px;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            font-size: 18px;
+            z-index: 100;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .qibla-btn:hover { transform: scale(1.1); }
+        .qibla-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 10000;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+        .qibla-overlay.open { display: flex; }
+        .qibla-compass {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            max-width: 320px;
+            width: 90%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            position: relative;
+        }
+        .qibla-compass h3 {
+            color: #004d40;
+            margin: 0 0 5px;
+            font-size: 18px;
+        }
+        .qibla-compass .qibla-subtitle {
+            color: #666;
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+        .qibla-compass-ring {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 15px;
+            position: relative;
+            border-radius: 50%;
+            border: 3px solid #e0f2f1;
+            background: radial-gradient(circle, #f5f5f5 0%, #e0f2f1 100%);
+        }
+        .qibla-compass-ring svg {
+            width: 100%;
+            height: 100%;
+        }
+        .qibla-bearing-text {
+            font-size: 14px;
+            color: #333;
+            font-weight: 600;
+        }
+        .qibla-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 22px;
+            cursor: pointer;
+            color: #999;
+            line-height: 1;
+        }
+        .qibla-close:hover { color: #333; }
+        body.dark-mode .qibla-compass {
+            background: #2d2d2d;
+            color: #e0e0e0;
+        }
+        body.dark-mode .qibla-compass h3 { color: #80cbc4; }
+        body.dark-mode .qibla-compass .qibla-subtitle { color: #999; }
+        body.dark-mode .qibla-compass-ring {
+            border-color: #37474f;
+            background: radial-gradient(circle, #1f1f1f 0%, #263238 100%);
+        }
+        body.dark-mode .qibla-bearing-text { color: #ccc; }
+        body.dark-mode .qibla-close { color: #777; }
+        body.dark-mode .qibla-close:hover { color: #ccc; }
+
+        /* === Feature 8: Custom Themed Scrollbar === */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #e0f2f1; }
+        ::-webkit-scrollbar-thumb { background: #00796b; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #004d40; }
+        body.dark-mode::-webkit-scrollbar-track { background: #1a1a2e; }
+        body.dark-mode::-webkit-scrollbar-thumb { background: #00796b; }
+        html {
+            scrollbar-color: #00796b #e0f2f1;
+            scrollbar-width: thin;
+        }
+
+        /* === Feature 9: Skeleton Shimmer for Granim === */
+        .header.shimmer::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.08) 50%, transparent 100%);
+            background-size: 200% 100%;
+            animation: shimmerMove 1.5s linear infinite;
+            pointer-events: none;
+        }
+        @keyframes shimmerMove {
+            0%   { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        /* === Feature 6: Audio Alert Button === */
+        .audio-btn {
+            position: fixed;
+            bottom: 200px;
+            right: 20px;
+            background: rgba(0, 77, 64, 0.85);
+            color: white;
+            border: none;
+            padding: 12px 15px;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            font-size: 18px;
+            z-index: 100;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .audio-btn:hover { transform: scale(1.1); }
+        .audio-btn.active { background: rgba(0, 77, 64, 1); box-shadow: 0 0 12px rgba(0,150,136,0.5); }
+
+        /* Print: hide new interactive elements */
+        @media print {
+            .ramadan-progress,
+            .qibla-btn,
+            .qibla-overlay,
+            .audio-btn {
+                display: none !important;
+            }
+        }
+
+        /* Reduced motion: disable new animations */
+        @media (prefers-reduced-motion: reduce) {
+            .flip-digit { animation: none !important; }
+            .flip-digit.flipping { animation: none !important; }
+            .mosque-icon-svg path[opacity="0.4"],
+            .mosque-icon-svg path[opacity="0.5"] { animation: none !important; }
+            .mosque-icon-svg { animation: none !important; }
+            .progress-fill { transition: none !important; }
+            .header.shimmer::before { animation: none !important; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
+        <div class="header shimmer">
             <canvas id="shaderCanvas"></canvas>
             <div class="mosque-icon-svg">
                 <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
@@ -916,6 +1167,11 @@
             <div class="address">149A Little Horton Lane, Bradford, West Yorkshire, BD5 0HS</div>
             <div class="month-year">RAMADHĀN 1447 | FEBRUARY 2026</div>
             <div class="moon-sighting">Dates are subject to moon sighting confirmation</div>
+        </div>
+
+        <div class="ramadan-progress" id="ramadanProgress">
+            <div class="progress-fill" id="progressFill"></div>
+            <span class="progress-text" id="progressText"></span>
         </div>
 
         <div class="countdown-section" id="countdownSection">
@@ -1029,11 +1285,50 @@
         <button class="demo-reset" onclick="resetDemo()">Reset to Live</button>
     </div>
 
+    <button class="audio-btn" id="audioBtn" onclick="toggleAudioAlert()" title="Enable prayer time chime">🔇</button>
     <button class="notify-btn" id="notifyBtn" onclick="toggleNotifications()" title="Enable Sehri/Iftar reminders">🔔</button>
     <button class="share-btn" onclick="shareWhatsApp()" title="Share on WhatsApp">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </button>
     <button class="dark-mode-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
+
+    <button class="qibla-btn" id="qiblaBtn" onclick="openQibla()" title="Qibla direction">🧭</button>
+    <div class="qibla-overlay" id="qiblaOverlay" onclick="closeQiblaOverlay(event)">
+        <div class="qibla-compass" onclick="event.stopPropagation()">
+            <button class="qibla-close" onclick="closeQibla()">&times;</button>
+            <h3>Qibla Direction</h3>
+            <div class="qibla-subtitle">From Bradford, UK</div>
+            <div class="qibla-compass-ring" id="qiblaRing">
+                <svg viewBox="0 0 200 200" id="qiblaSvg">
+                    <!-- Compass rose -->
+                    <circle cx="100" cy="100" r="95" fill="none" stroke="#b2dfdb" stroke-width="1"/>
+                    <circle cx="100" cy="100" r="70" fill="none" stroke="#e0e0e0" stroke-width="0.5"/>
+                    <!-- Cardinal labels -->
+                    <text x="100" y="18" text-anchor="middle" font-size="12" font-weight="bold" fill="#004d40">N</text>
+                    <text x="188" y="104" text-anchor="middle" font-size="11" fill="#888">E</text>
+                    <text x="100" y="194" text-anchor="middle" font-size="11" fill="#888">S</text>
+                    <text x="14" y="104" text-anchor="middle" font-size="11" fill="#888">W</text>
+                    <!-- Tick marks -->
+                    <line x1="100" y1="8" x2="100" y2="16" stroke="#004d40" stroke-width="2"/>
+                    <line x1="192" y1="100" x2="184" y2="100" stroke="#ccc" stroke-width="1"/>
+                    <line x1="100" y1="192" x2="100" y2="184" stroke="#ccc" stroke-width="1"/>
+                    <line x1="8" y1="100" x2="16" y2="100" stroke="#ccc" stroke-width="1"/>
+                    <!-- Qibla arrow (119.7 degrees from north) -->
+                    <g id="qiblaArrow" transform="rotate(119.7, 100, 100)">
+                        <line x1="100" y1="100" x2="100" y2="25" stroke="#8b0000" stroke-width="2.5" stroke-linecap="round"/>
+                        <polygon points="100,20 94,36 106,36" fill="#8b0000"/>
+                        <circle cx="100" cy="100" r="5" fill="#004d40"/>
+                        <circle cx="100" cy="100" r="2" fill="white"/>
+                    </g>
+                    <!-- Kaaba icon at arrow tip -->
+                    <g id="qiblaKaaba" transform="rotate(119.7, 100, 100)">
+                        <rect x="95" y="12" width="10" height="10" rx="1" fill="#1a1a1a" transform="rotate(-119.7, 100, 17)"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="qibla-bearing-text" id="qiblaBearingText">Qibla is 119.7&deg; from North (ESE)</div>
+        </div>
+    </div>
 
     <script>
         // Timetable data with full dates (year, month, day)
@@ -1581,13 +1876,19 @@
         var canvas = document.getElementById('shaderCanvas');
         if (!canvas) return;
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || window.innerWidth < 600) {
-            canvas.style.display = 'none'; return;
+            canvas.style.display = 'none';
+            var headerEl = document.querySelector('.header');
+            if (headerEl) headerEl.classList.remove('shimmer');
+            return;
         }
         var s = document.createElement('script');
         s.src = 'https://cdn.jsdelivr.net/npm/granim@2.0.0/dist/granim.min.js';
         s.async = true;
         s.onload = function() {
             if (typeof Granim === 'undefined') { canvas.style.display = 'none'; return; }
+            // Remove shimmer now that Granim is loaded
+            var headerEl = document.querySelector('.header');
+            if (headerEl) headerEl.classList.remove('shimmer');
             var isDark = document.body.classList.contains('dark-mode');
             var granimInstance = new Granim({
                 element: '#shaderCanvas',
@@ -1614,7 +1915,11 @@
                     : [['#004d40', '#00796b'], ['#00695c', '#00bcd4'], ['#005b4f', '#26a69a']];
             };
         };
-        s.onerror = function() { canvas.style.display = 'none'; };
+        s.onerror = function() {
+            canvas.style.display = 'none';
+            var headerEl = document.querySelector('.header');
+            if (headerEl) headerEl.classList.remove('shimmer');
+        };
         document.body.appendChild(s);
     })();
     </script>
@@ -1709,6 +2014,476 @@
                 });
             };
         })();
+    </script>
+
+    <!-- Feature 1: Countdown Flip Animation -->
+    <script>
+    (function() {
+        const ids = ['hours', 'minutes', 'seconds', 'days'];
+        const prevDigits = {};
+        ids.forEach(id => prevDigits[id] = '');
+
+        // Wrap each character in the countdown values with flip-digit spans
+        function wrapDigits(el) {
+            const text = el.textContent;
+            el.innerHTML = text.split('').map((ch, i) =>
+                '<span class="flip-digit" data-idx="' + i + '">' + ch + '</span>'
+            ).join('');
+        }
+
+        setInterval(() => {
+            ids.forEach(id => {
+                const el = document.getElementById(id);
+                if (!el) return;
+                // Get raw text (strip any existing spans)
+                const rawText = el.textContent;
+                if (rawText === prevDigits[id]) return;
+
+                const oldVal = prevDigits[id];
+                prevDigits[id] = rawText;
+
+                // Wrap digits
+                wrapDigits(el);
+
+                // Flip only changed digits
+                if (oldVal && oldVal.length === rawText.length) {
+                    const spans = el.querySelectorAll('.flip-digit');
+                    for (let i = 0; i < rawText.length; i++) {
+                        if (oldVal[i] !== rawText[i] && spans[i]) {
+                            spans[i].classList.add('flipping');
+                            (function(span) {
+                                setTimeout(() => span.classList.remove('flipping'), 350);
+                            })(spans[i]);
+                        }
+                    }
+                }
+            });
+        }, 300);
+    })();
+    </script>
+
+    <!-- Feature 3: Eid Confetti Burst -->
+    <script>
+    (function() {
+        let confettiFired = false;
+
+        function checkEidConfetti() {
+            if (confettiFired) return;
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+            const label = document.getElementById('countdownLabel');
+            const nextPrayer = document.getElementById('nextPrayer');
+            if (!label || !nextPrayer) return;
+
+            const labelText = label.textContent || '';
+            const nextText = nextPrayer.textContent || '';
+
+            if (labelText.includes('Eid Mubarak') || nextText.includes('Eid Mubarak')) {
+                confettiFired = true;
+                launchConfetti();
+            }
+        }
+
+        function launchConfetti() {
+            const canvas = document.createElement('canvas');
+            canvas.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;';
+            document.body.appendChild(canvas);
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const colors = ['#ffd54f', '#00796b', '#ffffff', '#4caf50', '#ff9800', '#e91e63'];
+            const particles = [];
+
+            for (let i = 0; i < 150; i++) {
+                particles.push({
+                    x: canvas.width / 2 + (Math.random() - 0.5) * 200,
+                    y: -10,
+                    vx: (Math.random() - 0.5) * 12,
+                    vy: Math.random() * -15 - 5,
+                    w: Math.random() * 8 + 3,
+                    h: Math.random() * 6 + 2,
+                    color: colors[Math.floor(Math.random() * colors.length)],
+                    rotation: Math.random() * 360,
+                    rotSpeed: (Math.random() - 0.5) * 10,
+                    gravity: 0.3 + Math.random() * 0.2,
+                    wind: (Math.random() - 0.5) * 0.5,
+                    isCircle: Math.random() > 0.5,
+                    opacity: 1
+                });
+            }
+
+            const startTime = Date.now();
+            const duration = 5000;
+
+            function animate() {
+                const elapsed = Date.now() - startTime;
+                if (elapsed > duration) {
+                    canvas.remove();
+                    return;
+                }
+
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                const fadeStart = duration * 0.7;
+                const globalAlpha = elapsed > fadeStart ? 1 - (elapsed - fadeStart) / (duration - fadeStart) : 1;
+
+                particles.forEach(p => {
+                    p.vy += p.gravity;
+                    p.vx += p.wind;
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    p.rotation += p.rotSpeed;
+                    p.vx *= 0.99;
+
+                    ctx.save();
+                    ctx.translate(p.x, p.y);
+                    ctx.rotate(p.rotation * Math.PI / 180);
+                    ctx.globalAlpha = globalAlpha * p.opacity;
+                    ctx.fillStyle = p.color;
+
+                    if (p.isCircle) {
+                        ctx.beginPath();
+                        ctx.arc(0, 0, p.w / 2, 0, Math.PI * 2);
+                        ctx.fill();
+                    } else {
+                        ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+                    }
+                    ctx.restore();
+                });
+
+                requestAnimationFrame(animate);
+            }
+            animate();
+        }
+
+        // Check periodically for Eid state
+        setInterval(checkEidConfetti, 2000);
+        // Also check on page load (after a short delay for countdown to render)
+        setTimeout(checkEidConfetti, 1500);
+    })();
+    </script>
+
+    <!-- Feature 4: Ramadan Progress Bar -->
+    <script>
+    (function() {
+        function updateRamadanProgress() {
+            const bar = document.getElementById('ramadanProgress');
+            const fill = document.getElementById('progressFill');
+            const text = document.getElementById('progressText');
+            if (!bar || !fill || !text) return;
+
+            const today = getEffectiveToday();
+            const todayData = getTodayData();
+
+            // Only show during Ramadan
+            if (today < ramadanStart || today > ramadanEnd || !todayData) {
+                bar.classList.remove('visible');
+                return;
+            }
+
+            const dayNum = todayData.no;
+            if (!dayNum || dayNum === '') {
+                // Eid day (day 31 row) - show complete
+                bar.classList.add('visible');
+                fill.style.width = '100%';
+                text.textContent = 'Eid Mubarak!';
+                return;
+            }
+
+            const totalDays = 30;
+            const pct = Math.min((dayNum / totalDays) * 100, 100);
+
+            bar.classList.add('visible');
+            fill.style.width = pct + '%';
+            text.textContent = 'Day ' + dayNum + ' of ' + totalDays;
+        }
+
+        // Update on load and every 60s
+        document.addEventListener('DOMContentLoaded', () => {
+            updateRamadanProgress();
+            setInterval(updateRamadanProgress, 60000);
+        });
+
+        // Also update when demo changes (hook into existing functions)
+        const origOnDemoDateChange = window.onDemoDateChange;
+        window.onDemoDateChange = function() {
+            origOnDemoDateChange();
+            updateRamadanProgress();
+        };
+        const origOnDemoTimeChange = window.onDemoTimeChange;
+        window.onDemoTimeChange = function() {
+            origOnDemoTimeChange();
+            updateRamadanProgress();
+        };
+        const origResetDemo = window.resetDemo;
+        window.resetDemo = function() {
+            origResetDemo();
+            updateRamadanProgress();
+        };
+    })();
+    </script>
+
+    <!-- Feature 5: Auto Dark Mode at Maghrib -->
+    <script>
+    (function() {
+        const AUTO_DARK_KEY = 'shahjalal-autoDark';
+
+        function isAutoDarkEnabled() {
+            const val = localStorage.getItem(AUTO_DARK_KEY);
+            return val === null || val === 'true'; // default true
+        }
+
+        function checkAutoDark() {
+            if (!isAutoDarkEnabled()) return;
+            if (demoMode) return; // Don't auto-toggle in demo
+
+            const todayData = getTodayData();
+            if (!todayData) return;
+
+            const now = new Date();
+            const currentMins = now.getHours() * 60 + now.getMinutes();
+
+            // Parse Fajr time (AM)
+            const [fajrH, fajrM] = todayData.fajr.split(':').map(Number);
+            const fajrMins = fajrH * 60 + fajrM;
+
+            // Parse Maghrib time (PM)
+            const [magH, magM] = todayData.maghrib.split(':').map(Number);
+            const maghribHour24 = magH < 12 ? magH + 12 : magH;
+            const maghribMins = maghribHour24 * 60 + magM;
+
+            const isDark = document.body.classList.contains('dark-mode');
+
+            if (currentMins >= maghribMins && !isDark) {
+                // After Maghrib - enable dark mode
+                document.body.classList.add('dark-mode');
+                document.querySelector('.dark-mode-toggle').textContent = '\u2600\uFE0F';
+                localStorage.setItem('darkMode', 'true');
+            } else if (currentMins >= fajrMins && currentMins < maghribMins && isDark) {
+                // Between Fajr and Maghrib - disable dark mode
+                document.body.classList.remove('dark-mode');
+                document.querySelector('.dark-mode-toggle').textContent = '\uD83C\uDF19';
+                localStorage.setItem('darkMode', 'false');
+            }
+        }
+
+        // Wrap toggleDarkMode to detect manual toggles and disable auto-dark
+        const origToggleDarkMode = window.toggleDarkMode;
+        window.toggleDarkMode = function() {
+            // Manual toggle disables auto-dark
+            localStorage.setItem(AUTO_DARK_KEY, 'false');
+            origToggleDarkMode();
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Check on load (small delay to let other init finish)
+            setTimeout(checkAutoDark, 500);
+            // Check every 60 seconds
+            setInterval(checkAutoDark, 60000);
+        });
+    })();
+    </script>
+
+    <!-- Feature 6: Audio Alert (Web Audio API) -->
+    <script>
+    (function() {
+        const AUDIO_KEY = 'shahjalal-audioAlert';
+        let audioEnabled = localStorage.getItem(AUDIO_KEY) === 'true';
+        let audioCtx = null;
+        let lastAudioNotification = '';
+
+        function updateAudioButton() {
+            const btn = document.getElementById('audioBtn');
+            if (!btn) return;
+            if (audioEnabled) {
+                btn.classList.add('active');
+                btn.textContent = '\uD83D\uDD0A';
+                btn.title = 'Disable prayer time chime';
+            } else {
+                btn.classList.remove('active');
+                btn.textContent = '\uD83D\uDD07';
+                btn.title = 'Enable prayer time chime';
+            }
+        }
+
+        window.toggleAudioAlert = function() {
+            audioEnabled = !audioEnabled;
+            localStorage.setItem(AUDIO_KEY, audioEnabled.toString());
+            updateAudioButton();
+
+            if (audioEnabled) {
+                // Play a test chime so user knows it works (and to init AudioContext from gesture)
+                playChime();
+            }
+        };
+
+        function getAudioContext() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+            return audioCtx;
+        }
+
+        function playChime() {
+            try {
+                const ctx = getAudioContext();
+                const notes = [523.25, 659.25, 783.99]; // C5, E5, G5
+                const noteLength = 0.2;
+                const now = ctx.currentTime;
+
+                notes.forEach((freq, i) => {
+                    const osc = ctx.createOscillator();
+                    const gain = ctx.createGain();
+
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(freq, now + i * noteLength);
+
+                    // Smooth envelope
+                    gain.gain.setValueAtTime(0, now + i * noteLength);
+                    gain.gain.linearRampToValueAtTime(0.3, now + i * noteLength + 0.03);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + i * noteLength + noteLength);
+
+                    osc.connect(gain);
+                    gain.connect(ctx.destination);
+                    osc.start(now + i * noteLength);
+                    osc.stop(now + i * noteLength + noteLength + 0.05);
+                });
+            } catch (e) {
+                // Web Audio not supported
+            }
+        }
+
+        function checkAudioAlert() {
+            if (!audioEnabled) return;
+            if (!notificationsEnabled) return; // Gate behind notification permission
+            const todayData = getTodayData();
+            if (!todayData) return;
+
+            const now = new Date();
+            const currentMins = now.getHours() * 60 + now.getMinutes();
+
+            // Check Sehri 15 min warning
+            const [sehriH, sehriM] = todayData.sehri.split(':').map(Number);
+            const sehriMins = sehriH * 60 + sehriM;
+
+            const [iftarH, iftarM] = todayData.maghrib.split(':').map(Number);
+            const iftarHour24 = iftarH < 12 ? iftarH + 12 : iftarH;
+            const iftarMins = iftarHour24 * 60 + iftarM;
+
+            const key = now.toDateString();
+
+            if (currentMins === sehriMins - 15 && lastAudioNotification !== key + '-sehri-audio') {
+                lastAudioNotification = key + '-sehri-audio';
+                playChime();
+            }
+            if (currentMins === iftarMins - 15 && lastAudioNotification !== key + '-iftar-audio') {
+                lastAudioNotification = key + '-iftar-audio';
+                playChime();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateAudioButton();
+            setInterval(checkAudioAlert, 30000);
+        });
+    })();
+    </script>
+
+    <!-- Feature 7: Qibla Compass -->
+    <script>
+    (function() {
+        const QIBLA_BEARING = 119.7; // degrees from North for Bradford
+        let orientationWatching = false;
+
+        window.openQibla = function() {
+            document.getElementById('qiblaOverlay').classList.add('open');
+            startOrientation();
+        };
+
+        window.closeQibla = function() {
+            document.getElementById('qiblaOverlay').classList.remove('open');
+        };
+
+        window.closeQiblaOverlay = function(e) {
+            if (e.target === document.getElementById('qiblaOverlay')) {
+                closeQibla();
+            }
+        };
+
+        function startOrientation() {
+            if (orientationWatching) return;
+
+            // Check for iOS permission
+            if (typeof DeviceOrientationEvent !== 'undefined' &&
+                typeof DeviceOrientationEvent.requestPermission === 'function') {
+                DeviceOrientationEvent.requestPermission().then(function(state) {
+                    if (state === 'granted') {
+                        window.addEventListener('deviceorientationabsolute', handleOrientation, true);
+                        window.addEventListener('deviceorientation', handleOrientation, true);
+                        orientationWatching = true;
+                    }
+                }).catch(function() {
+                    showStaticBearing();
+                });
+            } else if ('DeviceOrientationEvent' in window) {
+                window.addEventListener('deviceorientationabsolute', handleOrientation, true);
+                window.addEventListener('deviceorientation', handleOrientation, true);
+                orientationWatching = true;
+
+                // If no event fires after 1 second, show static
+                setTimeout(function() {
+                    if (!orientationWatching || !window._orientationReceived) {
+                        showStaticBearing();
+                    }
+                }, 1500);
+            } else {
+                showStaticBearing();
+            }
+        }
+
+        window._orientationReceived = false;
+
+        function handleOrientation(event) {
+            window._orientationReceived = true;
+            let heading = null;
+
+            if (event.webkitCompassHeading !== undefined) {
+                heading = event.webkitCompassHeading; // iOS
+            } else if (event.alpha !== null) {
+                heading = event.absolute ? (360 - event.alpha) : event.alpha;
+            }
+
+            if (heading !== null) {
+                // Rotate compass so Qibla arrow always points correctly
+                const arrow = document.getElementById('qiblaArrow');
+                const kaaba = document.getElementById('qiblaKaaba');
+                const ring = document.getElementById('qiblaSvg');
+
+                if (ring) {
+                    // Rotate the whole compass opposite to device heading, keeping Qibla arrow fixed at QIBLA_BEARING
+                    ring.style.transform = 'rotate(' + (-heading) + 'deg)';
+                    ring.style.transition = 'transform 0.3s ease-out';
+                }
+
+                const bearingText = document.getElementById('qiblaBearingText');
+                if (bearingText) {
+                    const relBearing = ((QIBLA_BEARING - heading) % 360 + 360) % 360;
+                    bearingText.textContent = 'Qibla: ' + Math.round(relBearing) + '\u00B0 from you';
+                }
+            }
+        }
+
+        function showStaticBearing() {
+            const bearingText = document.getElementById('qiblaBearingText');
+            if (bearingText) {
+                bearingText.textContent = 'Qibla is 119.7\u00B0 from North (ESE)';
+            }
+        }
+    })();
     </script>
 </body>
 </html>

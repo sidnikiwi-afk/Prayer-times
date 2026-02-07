@@ -9,6 +9,17 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕌</text></svg>">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* --- Custom Scrollbar --- */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f5f5f5; }
+        ::-webkit-scrollbar-thumb { background: #455a64; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #263238; }
+        html {
+            scrollbar-color: #455a64 #f5f5f5;
+            scrollbar-width: thin;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
@@ -18,23 +29,90 @@
             align-items: center;
             justify-content: center;
             padding: 20px;
+            position: relative;
+            overflow-x: hidden;
         }
+
+        /* --- Islamic Geometric Pattern Overlay --- */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='0.8'%3E%3Cpolygon points='40,5 51.18,16.18 65,10 58.82,23.82 75,25 63.82,36.18 75,40 63.82,43.82 75,55 58.82,56.18 65,70 51.18,63.82 40,75 28.82,63.82 15,70 21.18,56.18 5,55 16.18,43.82 5,40 16.18,36.18 5,25 21.18,23.82 15,10 28.82,16.18'/%3E%3Cpolygon points='40,20 46.18,26.18 55,23.5 51.82,32.32 60,35 51.82,37.68 55,46.5 46.18,43.82 40,50 33.82,43.82 25,46.5 28.18,37.68 20,35 28.18,32.32 25,23.5 33.82,26.18'/%3E%3Ccircle cx='40' cy='40' r='6'/%3E%3C/g%3E%3C/svg%3E");
+            background-repeat: repeat;
+            background-size: 80px 80px;
+        }
+
+        /* --- Granim Canvas --- */
+        #granimCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        /* --- Shimmer Loading State --- */
+        .shimmer-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #1a1a2e 100%);
+            background-size: 400% 400%;
+            animation: shimmerBg 2s ease infinite;
+        }
+        @keyframes shimmerBg {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* --- Main Content --- */
         .container {
             max-width: 600px;
             width: 100%;
             text-align: center;
+            position: relative;
+            z-index: 1;
         }
-        .icon { font-size: 64px; margin-bottom: 15px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3)); }
+
+        /* --- Entrance Animations --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .icon {
+            font-size: 64px;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+            animation: fadeIn 0.6s ease both;
+        }
         h1 {
             font-size: clamp(22px, 6vw, 32px);
             font-weight: bold;
             letter-spacing: 1px;
             margin-bottom: 5px;
+            animation: fadeIn 0.6s ease 0.1s both;
         }
         .subtitle {
             font-size: clamp(13px, 3.5vw, 16px);
             opacity: 0.7;
             margin-bottom: 30px;
+            animation: fadeIn 0.6s ease 0.15s both;
         }
         .label {
             font-size: 14px;
@@ -42,12 +120,15 @@
             letter-spacing: 2px;
             opacity: 0.5;
             margin-bottom: 15px;
+            animation: fadeIn 0.6s ease 0.2s both;
         }
         .masjid-list {
             display: flex;
             flex-direction: column;
             gap: 12px;
         }
+
+        /* --- Card Styles & Hover Effects --- */
         .masjid-card {
             display: flex;
             align-items: center;
@@ -58,15 +139,64 @@
             padding: 18px 20px;
             text-decoration: none;
             color: white;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-left: 3px solid transparent;
+            /* Stagger animation - overridden per card */
+            animation: slideUp 0.5s ease both;
         }
+        .masjid-card:nth-child(1) { animation-delay: 0.1s; }
+        .masjid-card:nth-child(2) { animation-delay: 0.2s; }
+        .masjid-card:nth-child(3) { animation-delay: 0.3s; }
+
         .masjid-card:hover {
             background: rgba(255,255,255,0.15);
             border-color: rgba(255,255,255,0.25);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            transform: scale(1.03);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
-        .masjid-card:active { transform: translateY(0); }
+        /* Per-mosque left border glow on hover */
+        .masjid-card[data-mosque="shahjalal"]:hover {
+            border-left-color: #00796b;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15), -3px 0 12px rgba(0,121,107,0.3);
+        }
+        .masjid-card[data-mosque="quba"]:hover {
+            border-left-color: #2a8ab5;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15), -3px 0 12px rgba(42,138,181,0.3);
+        }
+        .masjid-card[data-mosque="almahad"]:hover {
+            border-left-color: #388e3c;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15), -3px 0 12px rgba(56,142,60,0.3);
+        }
+
+        /* Mobile: use :active instead of :hover */
+        @media (hover: none) and (pointer: coarse) {
+            .masjid-card:hover {
+                background: rgba(255,255,255,0.08);
+                border-color: rgba(255,255,255,0.1);
+                transform: none;
+                box-shadow: none;
+                border-left-color: transparent;
+            }
+            .masjid-card:active {
+                background: rgba(255,255,255,0.15);
+                transform: scale(1.03);
+                box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            }
+            .masjid-card[data-mosque="shahjalal"]:active {
+                border-left-color: #00796b;
+                box-shadow: 0 8px 25px rgba(0,0,0,0.15), -3px 0 12px rgba(0,121,107,0.3);
+            }
+            .masjid-card[data-mosque="quba"]:active {
+                border-left-color: #2a8ab5;
+                box-shadow: 0 8px 25px rgba(0,0,0,0.15), -3px 0 12px rgba(42,138,181,0.3);
+            }
+            .masjid-card[data-mosque="almahad"]:active {
+                border-left-color: #388e3c;
+                box-shadow: 0 8px 25px rgba(0,0,0,0.15), -3px 0 12px rgba(56,142,60,0.3);
+            }
+        }
+
+        .masjid-card:active { transform: scale(0.99); }
         .card-icon {
             font-size: 36px;
             flex-shrink: 0;
@@ -94,10 +224,13 @@
             transition: all 0.3s ease;
         }
         .masjid-card:hover .card-arrow { opacity: 0.8; transform: translateX(3px); }
+
+        /* --- Submit / Contribute Section --- */
         .submit-section {
             margin-top: 35px;
             padding-top: 25px;
             border-top: 1px solid rgba(255,255,255,0.08);
+            animation: slideUp 0.5s ease 0.4s both;
         }
         .submit-label {
             font-size: 12px;
@@ -137,21 +270,88 @@
         .submit-btn .btn-text { text-align: left; }
         .submit-btn .btn-title { display: block; font-weight: 600; }
         .submit-btn .btn-desc { display: block; font-size: 10px; opacity: 0.5; margin-top: 1px; }
+
+        /* --- Footer Enhancement --- */
         .footer {
             margin-top: 25px;
             font-size: 11px;
             opacity: 0.3;
+            animation: slideUp 0.5s ease 0.5s both;
+        }
+        .footer-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+        .footer-divider::before,
+        .footer-divider::after {
+            content: '';
+            flex: 1;
+            max-width: 80px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+        }
+        .footer-ornament {
+            font-size: 10px;
+            opacity: 0.5;
+            letter-spacing: 3px;
+        }
+        .footer-context {
+            font-size: 10px;
+            opacity: 0.25;
+            margin-top: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        /* --- Prefers Reduced Motion --- */
+        @media (prefers-reduced-motion: reduce) {
+            .icon, h1, .subtitle, .label, .masjid-card, .submit-section, .footer {
+                animation: none !important;
+            }
+            .masjid-card {
+                transition: background 0.15s ease, border-color 0.15s ease !important;
+            }
+            .shimmer-overlay {
+                animation: none !important;
+            }
+        }
+
+        /* --- Print Styles --- */
+        @media print {
+            #granimCanvas,
+            .shimmer-overlay,
+            body::after {
+                display: none !important;
+            }
+            body {
+                background: white !important;
+                color: black !important;
+            }
+            .masjid-card {
+                border: 1px solid #ccc !important;
+                background: white !important;
+                color: black !important;
+                animation: none !important;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Shimmer overlay while Granim loads -->
+    <div class="shimmer-overlay" id="shimmerOverlay"></div>
+
+    <!-- Granim animated background canvas -->
+    <canvas id="granimCanvas"></canvas>
+
     <div class="container">
-        <div class="icon">🌙</div>
+        <div class="icon">&#127769;</div>
         <h1>RAMADAN 1447</h1>
         <div class="subtitle">Prayer Timetables &bull; Bradford</div>
         <div class="label">Select your masjid</div>
         <div class="masjid-list">
-            <a href="shahjalal/" class="masjid-card">
+            <a href="shahjalal/" class="masjid-card" data-mosque="shahjalal">
                 <div class="card-colour" style="background: linear-gradient(to bottom, #004d40, #00796b);"></div>
                 <div class="card-info">
                     <div class="card-name">Shahjalal Islamic Society</div>
@@ -159,7 +359,7 @@
                 </div>
                 <div class="card-arrow">&rsaquo;</div>
             </a>
-            <a href="quba/" class="masjid-card">
+            <a href="quba/" class="masjid-card" data-mosque="quba">
                 <div class="card-colour" style="background: linear-gradient(to bottom, #1a5a7e, #2a8ab5);"></div>
                 <div class="card-info">
                     <div class="card-name">Masjid Quba</div>
@@ -167,7 +367,7 @@
                 </div>
                 <div class="card-arrow">&rsaquo;</div>
             </a>
-            <a href="Almahad/" class="masjid-card">
+            <a href="Almahad/" class="masjid-card" data-mosque="almahad">
                 <div class="card-colour" style="background: linear-gradient(to bottom, #1b5e20, #388e3c);"></div>
                 <div class="card-info">
                     <div class="card-name">Al Mahad Ul Islami</div>
@@ -195,7 +395,53 @@
                 </a>
             </div>
         </div>
-        <div class="footer">February &ndash; March 2026</div>
+        <div class="footer">
+            <div class="footer-divider">
+                <span class="footer-ornament">&#x2726; &#x2726; &#x2726;</span>
+            </div>
+            Ramadan 1447 &bull; Bradford
+            <div class="footer-context">February &ndash; March 2026</div>
+        </div>
     </div>
+
+    <!-- Granim.js - loaded asynchronously -->
+    <script>
+        (function() {
+            var script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/granim@2.0.0/dist/granim.min.js';
+            script.async = true;
+            script.onload = function() {
+                var granimInstance = new Granim({
+                    element: '#granimCanvas',
+                    direction: 'diagonal',
+                    isPausedWhenNotInView: true,
+                    stateTransitionSpeed: 500,
+                    states: {
+                        'default-state': {
+                            gradients: [
+                                ['#1a237e', '#004d40'],
+                                ['#006064', '#1b5e20'],
+                                ['#0d47a1', '#00695c']
+                            ],
+                            transitionSpeed: 7000
+                        }
+                    }
+                });
+                // Remove shimmer once Granim is initialized
+                var shimmer = document.getElementById('shimmerOverlay');
+                if (shimmer) {
+                    shimmer.style.transition = 'opacity 0.5s ease';
+                    shimmer.style.opacity = '0';
+                    setTimeout(function() { shimmer.remove(); }, 500);
+                }
+            };
+            script.onerror = function() {
+                // If Granim fails to load, just remove shimmer
+                var shimmer = document.getElementById('shimmerOverlay');
+                if (shimmer) { shimmer.remove(); }
+            };
+            document.head.appendChild(script);
+        })();
+    </script>
 </body>
 </html>

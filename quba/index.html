@@ -425,6 +425,185 @@
         .notify-btn { background: rgba(139, 0, 0, 0.85); }
         .notify-btn.active { background: rgba(26, 90, 126, 0.85); }
 
+        /* === 1. Countdown Flip Animation === */
+        .flip-digit {
+            display: inline-block;
+            perspective: 200px;
+            transform-style: preserve-3d;
+        }
+        .flip-digit.flipping {
+            animation: flipDigit 0.35s ease-in-out;
+        }
+        @keyframes flipDigit {
+            0% { transform: rotateX(0deg) scale(1); }
+            50% { transform: rotateX(-90deg) scale(1.08); }
+            100% { transform: rotateX(0deg) scale(1); }
+        }
+
+        /* === 2. Animated Mosque SVG Icon === */
+        .lantern-icon {
+            animation: lanternGlow 3s ease-in-out infinite alternate, lanternFloat 4s ease-in-out infinite;
+        }
+        @keyframes lanternFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-3px); }
+        }
+        .lantern-icon svg .mosque-window-glow {
+            animation: windowGlow 3s ease-in-out infinite;
+        }
+        @keyframes windowGlow {
+            0%, 100% { opacity: 0.45; }
+            50% { opacity: 0.85; }
+        }
+
+        /* === 4. Ramadan Progress Bar === */
+        .ramadan-progress {
+            position: relative;
+            height: 6px;
+            background: #e3f2fd;
+            margin-bottom: 20px;
+        }
+        .ramadan-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #1a5a7e, #2a8ab5);
+            border-radius: 0 3px 3px 0;
+            transition: width 0.6s ease;
+        }
+        .ramadan-progress-text {
+            position: absolute;
+            top: 8px;
+            width: 100%;
+            text-align: center;
+            font-size: 11px;
+            font-weight: 600;
+            color: #1a5a7e;
+            padding: 2px 0;
+        }
+        body.dark-mode .ramadan-progress {
+            background: #0d1b2a;
+        }
+        body.dark-mode .ramadan-progress-fill {
+            background: linear-gradient(90deg, #2a8ab5, #69b8db);
+        }
+        body.dark-mode .ramadan-progress-text {
+            color: #69b8db;
+        }
+
+        /* === 6. Audio Alert Toggle Button === */
+        .audio-btn {
+            position: fixed; bottom: 200px; right: 20px;
+            background: rgba(139, 0, 0, 0.85); color: white; border: none;
+            padding: 12px 15px; border-radius: 50px; cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2); font-size: 18px;
+            z-index: 100; transition: all 0.3s ease;
+            backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+        }
+        .audio-btn:hover { transform: scale(1.1); }
+        .audio-btn.active { background: rgba(26, 90, 126, 0.85); }
+
+        /* === 7. Qibla Compass === */
+        .qibla-btn {
+            position: fixed; bottom: 20px; left: 20px;
+            background: rgba(26, 90, 126, 0.85); color: white; border: none;
+            padding: 12px 15px; border-radius: 50px; cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2); font-size: 18px;
+            z-index: 100; transition: all 0.3s ease;
+            backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+        }
+        .qibla-btn:hover { transform: scale(1.1); }
+        .qibla-overlay {
+            display: none;
+            position: fixed; inset: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 200;
+            justify-content: center;
+            align-items: center;
+        }
+        .qibla-overlay.visible { display: flex; }
+        .qibla-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            max-width: 320px;
+            width: 90%;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+            position: relative;
+        }
+        .qibla-card h3 {
+            color: #1a5a7e;
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+        .qibla-card p {
+            color: #666;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+        .qibla-compass-wrap {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 15px;
+        }
+        .qibla-compass-rose {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        .qibla-bearing {
+            font-size: 13px;
+            color: #1a5a7e;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .qibla-close {
+            background: #1a5a7e;
+            color: white;
+            border: none;
+            padding: 8px 24px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        .qibla-close:hover { background: #2a8ab5; }
+        body.dark-mode .qibla-card { background: #1f1f1f; }
+        body.dark-mode .qibla-card h3 { color: #69b8db; }
+        body.dark-mode .qibla-card p { color: #999; }
+        body.dark-mode .qibla-bearing { color: #69b8db; }
+        body.dark-mode .qibla-close { background: #2a8ab5; }
+
+        /* === 8. Custom Themed Scrollbar === */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #e3f2fd; }
+        ::-webkit-scrollbar-thumb { background: #2a8ab5; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #1a5a7e; }
+        body.dark-mode::-webkit-scrollbar-track { background: #0d1b2a; }
+        body.dark-mode::-webkit-scrollbar-thumb { background: #2a8ab5; }
+        body { scrollbar-color: #2a8ab5 #e3f2fd; scrollbar-width: thin; }
+        body.dark-mode { scrollbar-color: #2a8ab5 #0d1b2a; }
+
+        /* === 9. Skeleton Shimmer for Granim === */
+        .header.granim-loading::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background: linear-gradient(
+                90deg,
+                rgba(255,255,255,0) 0%,
+                rgba(255,255,255,0.15) 50%,
+                rgba(255,255,255,0) 100%
+            );
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
         /* Reduced motion */
         @media (prefers-reduced-motion: reduce) {
             .prayer-card, .footer-section { animation: none !important; }
@@ -432,6 +611,18 @@
             .countdown-value { transition: none !important; }
             tbody tr { transition: none !important; }
             #granimCanvas, #orbCanvas { display: none !important; }
+            .flip-digit.flipping { animation: none !important; }
+            .lantern-icon svg .mosque-window-glow { animation: none !important; }
+            .header.granim-loading::before { animation: none !important; display: none !important; }
+            #eidConfettiCanvas { display: none !important; }
+        }
+
+        /* Print - hide new interactive elements */
+        @media print {
+            .ramadan-progress { display: none !important; }
+            .audio-btn { display: none !important; }
+            .qibla-btn, .qibla-overlay { display: none !important; }
+            #eidConfettiCanvas { display: none !important; }
         }
     </style>
 </head>
@@ -464,7 +655,7 @@
                     <circle cx="54" cy="8" r="2.5" fill="#e0e0ff"/>
                     <circle cx="55.2" cy="7" r="1.5" fill="#1a5a7e"/>
                     <!-- Grand arched entrance -->
-                    <path d="M44 82 L44 60 Q54 48 64 60 L64 82 Z" fill="#1a5a7e" opacity="0.45"/>
+                    <path class="mosque-window-glow" d="M44 82 L44 60 Q54 48 64 60 L64 82 Z" fill="#1a5a7e" opacity="0.45"/>
                     <!-- Side window arches -->
                     <path d="M30 72 L30 64 Q34 59 38 64 L38 72" fill="none" stroke="#e0e0ff" stroke-width="0.8" opacity="0.4"/>
                     <path d="M70 72 L70 64 Q74 59 78 64 L78 72" fill="none" stroke="#e0e0ff" stroke-width="0.8" opacity="0.4"/>
@@ -478,6 +669,11 @@
             <div class="contact-info">Tel: 01274 542027 | www.masjidquba.org | info@masjidquba.org</div>
             <div class="month-year">RAMADHAN 1447 | FEBRUARY - MARCH 2026</div>
             <div class="moon-sighting">Dates are subject to moon sighting confirmation</div>
+        </div>
+
+        <div class="ramadan-progress" id="ramadanProgress" style="display:none;">
+            <div class="ramadan-progress-fill" id="ramadanProgressFill"></div>
+            <div class="ramadan-progress-text" id="ramadanProgressText"></div>
         </div>
 
         <div class="countdown-section" id="countdownSection">
@@ -608,11 +804,50 @@
         </div>
     </div>
 
+    <button class="audio-btn" id="audioBtn" onclick="toggleAudioAlert()" title="Enable prayer chime">🔇</button>
     <button class="notify-btn" id="notifyBtn" onclick="toggleNotifications()" title="Enable Sehri/Iftar reminders">🔔</button>
     <button class="share-btn" onclick="shareWhatsApp()" title="Share on WhatsApp">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </button>
     <button class="dark-mode-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
+    <button class="qibla-btn" id="qiblaBtn" onclick="openQibla()" title="Qibla direction">🧭</button>
+
+    <!-- Qibla Compass Overlay -->
+    <div class="qibla-overlay" id="qiblaOverlay">
+        <div class="qibla-card">
+            <h3>Qibla Direction</h3>
+            <p>From Bradford to the Kaaba</p>
+            <div class="qibla-compass-wrap">
+                <svg class="qibla-compass-rose" id="qiblaCompass" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Outer circle -->
+                    <circle cx="100" cy="100" r="95" fill="none" stroke="#2a8ab5" stroke-width="2" opacity="0.3"/>
+                    <circle cx="100" cy="100" r="85" fill="none" stroke="#2a8ab5" stroke-width="1" opacity="0.15"/>
+                    <!-- Cardinal ticks -->
+                    <line x1="100" y1="8" x2="100" y2="20" stroke="#1a5a7e" stroke-width="2"/>
+                    <line x1="100" y1="180" x2="100" y2="192" stroke="#999" stroke-width="1.5"/>
+                    <line x1="8" y1="100" x2="20" y2="100" stroke="#999" stroke-width="1.5"/>
+                    <line x1="180" y1="100" x2="192" y2="100" stroke="#999" stroke-width="1.5"/>
+                    <!-- Cardinal labels -->
+                    <text x="100" y="38" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a5a7e">N</text>
+                    <text x="100" y="175" text-anchor="middle" font-size="12" fill="#999">S</text>
+                    <text x="33" y="105" text-anchor="middle" font-size="12" fill="#999">W</text>
+                    <text x="167" y="105" text-anchor="middle" font-size="12" fill="#999">E</text>
+                    <!-- Qibla arrow pointing ~119.7 degrees -->
+                    <g transform="rotate(119.7, 100, 100)">
+                        <line x1="100" y1="100" x2="100" y2="25" stroke="#2a8ab5" stroke-width="3" stroke-linecap="round"/>
+                        <polygon points="100,18 94,32 106,32" fill="#2a8ab5"/>
+                        <!-- Kaaba icon at tip -->
+                        <rect x="95" y="12" width="10" height="10" rx="1" fill="#1a5a7e" stroke="#2a8ab5" stroke-width="0.5"/>
+                    </g>
+                    <!-- Center dot -->
+                    <circle cx="100" cy="100" r="4" fill="#1a5a7e"/>
+                    <circle cx="100" cy="100" r="2" fill="white"/>
+                </svg>
+            </div>
+            <div class="qibla-bearing">Bearing: 119.7&deg; (ESE)</div>
+            <button class="qibla-close" onclick="closeQibla()">Close</button>
+        </div>
+    </div>
 
     <script>
         const timetableData = [
@@ -740,6 +975,7 @@
                 document.getElementById('minutes').textContent = '--';
                 document.getElementById('seconds').textContent = '--';
                 document.getElementById('nextPrayer').innerHTML = `<span class="next-prayer-time">Eid Mubarak! 🌙</span>`;
+                if (typeof fireEidConfetti === 'function') fireEidConfetti();
                 return;
             }
 
@@ -813,6 +1049,7 @@
             document.getElementById('minutes').textContent = '00';
             document.getElementById('seconds').textContent = '00';
             document.getElementById('nextPrayer').innerHTML = `<span class="next-prayer-time">Ramadan 1447 complete</span>`;
+            if (typeof fireEidConfetti === 'function') fireEidConfetti();
         }
 
         // Notifications
@@ -874,6 +1111,8 @@
             const btn = document.querySelector('.dark-mode-toggle');
             btn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
             localStorage.setItem('quba-darkMode', document.body.classList.contains('dark-mode'));
+            // Manual toggle disables auto dark mode
+            localStorage.setItem('quba-autoDark', 'false');
         }
 
         // Today View
@@ -942,22 +1181,262 @@
             }
         }
 
+        // === 6. Audio Alert (Web Audio API) ===
+        let audioAlertEnabled = localStorage.getItem('quba-audioAlert') === 'true';
+        let lastAudioNotification = '';
+
+        function toggleAudioAlert() {
+            audioAlertEnabled = !audioAlertEnabled;
+            localStorage.setItem('quba-audioAlert', audioAlertEnabled.toString());
+            updateAudioButton();
+            if (audioAlertEnabled) playChime(); // preview
+        }
+
+        function updateAudioButton() {
+            const btn = document.getElementById('audioBtn');
+            if (audioAlertEnabled) {
+                btn.classList.add('active');
+                btn.textContent = '🔊';
+                btn.title = 'Disable prayer chime';
+            } else {
+                btn.classList.remove('active');
+                btn.textContent = '🔇';
+                btn.title = 'Enable prayer chime';
+            }
+        }
+
+        function playChime() {
+            try {
+                const ctx = new (window.AudioContext || window.webkitAudioContext)();
+                const notes = [587, 740, 880]; // D5, F#5, A5
+                notes.forEach((freq, i) => {
+                    const osc = ctx.createOscillator();
+                    const gain = ctx.createGain();
+                    osc.type = 'sine';
+                    osc.frequency.value = freq;
+                    gain.gain.setValueAtTime(0.3, ctx.currentTime + i * 0.2);
+                    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + i * 0.2 + 0.2);
+                    osc.connect(gain);
+                    gain.connect(ctx.destination);
+                    osc.start(ctx.currentTime + i * 0.2);
+                    osc.stop(ctx.currentTime + i * 0.2 + 0.2);
+                });
+            } catch (e) { /* Web Audio not supported */ }
+        }
+
+        function checkAudioAlert() {
+            if (!audioAlertEnabled) return;
+            const todayData = getTodayData();
+            if (!todayData) return;
+            const now = new Date();
+            const currentMins = now.getHours() * 60 + now.getMinutes();
+            const [sehriH, sehriM] = todayData.sehri.split(':').map(Number);
+            const sehriMins = sehriH * 60 + sehriM;
+            const [iftarH, iftarM] = todayData.maghrib.split(':').map(Number);
+            const iftarMins = (iftarH < 12 ? iftarH + 12 : iftarH) * 60 + iftarM;
+            const key = now.toDateString();
+            if (currentMins === sehriMins - 15 && lastAudioNotification !== key + '-sehri') {
+                lastAudioNotification = key + '-sehri';
+                playChime();
+            }
+            if (currentMins === iftarMins - 15 && lastAudioNotification !== key + '-iftar') {
+                lastAudioNotification = key + '-iftar';
+                playChime();
+            }
+        }
+
+        // === 7. Qibla Compass ===
+        function openQibla() {
+            document.getElementById('qiblaOverlay').classList.add('visible');
+            // Request device orientation for mobile compass
+            if (typeof DeviceOrientationEvent !== 'undefined' && typeof DeviceOrientationEvent.requestPermission === 'function') {
+                DeviceOrientationEvent.requestPermission().then(function(state) {
+                    if (state === 'granted') startCompass();
+                }).catch(function() {});
+            } else if ('DeviceOrientationEvent' in window) {
+                startCompass();
+            }
+        }
+
+        function closeQibla() {
+            document.getElementById('qiblaOverlay').classList.remove('visible');
+            stopCompass();
+        }
+
+        let compassHandler = null;
+        function startCompass() {
+            compassHandler = function(e) {
+                let heading = e.alpha;
+                if (heading === null || heading === undefined) return;
+                // webkitCompassHeading for iOS
+                if (e.webkitCompassHeading !== undefined) heading = e.webkitCompassHeading;
+                else heading = 360 - heading;
+                const qiblaBearing = 119.7;
+                const rotation = qiblaBearing - heading;
+                document.getElementById('qiblaCompass').style.transform = 'rotate(' + (-heading) + 'deg)';
+            };
+            window.addEventListener('deviceorientation', compassHandler, true);
+        }
+
+        function stopCompass() {
+            if (compassHandler) {
+                window.removeEventListener('deviceorientation', compassHandler, true);
+                compassHandler = null;
+                document.getElementById('qiblaCompass').style.transform = '';
+            }
+        }
+
+        // Close qibla overlay on background click
+        document.addEventListener('click', function(e) {
+            if (e.target === document.getElementById('qiblaOverlay')) closeQibla();
+        });
+
+        // === 5. Auto Dark Mode at Maghrib ===
+        function checkAutoDark() {
+            if (localStorage.getItem('quba-autoDark') === 'false') return;
+            const todayData = getTodayData();
+            if (!todayData) return;
+            const now = new Date();
+            const currentMins = now.getHours() * 60 + now.getMinutes();
+            const [fajrH, fajrM] = todayData.fajr.split(':').map(Number);
+            const fajrMins = fajrH * 60 + fajrM;
+            const [maghribH, maghribM] = todayData.maghrib.split(':').map(Number);
+            const maghribMins = (maghribH < 12 ? maghribH + 12 : maghribH) * 60 + maghribM;
+            const isDark = document.body.classList.contains('dark-mode');
+            // After Maghrib or before Fajr -> dark mode
+            const shouldBeDark = currentMins >= maghribMins || currentMins < fajrMins;
+            if (shouldBeDark && !isDark) {
+                document.body.classList.add('dark-mode');
+                document.querySelector('.dark-mode-toggle').textContent = '☀️';
+                localStorage.setItem('quba-darkMode', 'true');
+            } else if (!shouldBeDark && isDark) {
+                document.body.classList.remove('dark-mode');
+                document.querySelector('.dark-mode-toggle').textContent = '🌙';
+                localStorage.setItem('quba-darkMode', 'false');
+            }
+        }
+
+        // === 4. Ramadan Progress Bar ===
+        function updateRamadanProgress() {
+            const bar = document.getElementById('ramadanProgress');
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            if (today < ramadanStart || today > ramadanEnd) {
+                bar.style.display = 'none';
+                return;
+            }
+            const todayData = getTodayData();
+            if (!todayData) { bar.style.display = 'none'; return; }
+            const dayNum = todayData.no;
+            const totalDays = 30;
+            const pct = Math.min((dayNum / totalDays) * 100, 100);
+            bar.style.display = '';
+            document.getElementById('ramadanProgressFill').style.width = pct + '%';
+            document.getElementById('ramadanProgressText').textContent = 'Day ' + dayNum + ' of ' + totalDays;
+        }
+
+        // === 3. Eid Confetti Burst ===
+        let eidConfettiFired = false;
+        function fireEidConfetti() {
+            if (eidConfettiFired) return;
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            eidConfettiFired = true;
+            const canvas = document.createElement('canvas');
+            canvas.id = 'eidConfettiCanvas';
+            canvas.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;z-index:999;pointer-events:none;';
+            document.body.appendChild(canvas);
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            const colors = ['#2a8ab5', '#e0e0ff', '#ffd54f', '#ffffff'];
+            const particles = [];
+            for (let i = 0; i < 150; i++) {
+                particles.push({
+                    x: canvas.width / 2 + (Math.random() - 0.5) * 100,
+                    y: 0,
+                    vx: (Math.random() - 0.5) * 8,
+                    vy: Math.random() * -12 - 2,
+                    color: colors[Math.floor(Math.random() * colors.length)],
+                    size: Math.random() * 6 + 3,
+                    rotation: Math.random() * 360,
+                    rotSpeed: (Math.random() - 0.5) * 10,
+                    gravity: 0.15 + Math.random() * 0.1,
+                    opacity: 1
+                });
+            }
+            const startTime = Date.now();
+            function animate() {
+                const elapsed = Date.now() - startTime;
+                if (elapsed > 5000) {
+                    canvas.remove();
+                    return;
+                }
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                particles.forEach(p => {
+                    p.x += p.vx;
+                    p.vy += p.gravity;
+                    p.y += p.vy;
+                    p.rotation += p.rotSpeed;
+                    if (elapsed > 3500) p.opacity = Math.max(0, 1 - (elapsed - 3500) / 1500);
+                    ctx.save();
+                    ctx.translate(p.x, p.y);
+                    ctx.rotate(p.rotation * Math.PI / 180);
+                    ctx.globalAlpha = p.opacity;
+                    ctx.fillStyle = p.color;
+                    ctx.fillRect(-p.size / 2, -p.size / 4, p.size, p.size / 2);
+                    ctx.restore();
+                });
+                requestAnimationFrame(animate);
+            }
+            requestAnimationFrame(animate);
+        }
+
+        // === 9. Skeleton Shimmer ===
+        // Add shimmer class to header before Granim loads
+        document.querySelector('.header').classList.add('granim-loading');
+
         document.addEventListener('DOMContentLoaded', () => {
+            // Apply stored dark mode first
             if (localStorage.getItem('quba-darkMode') === 'true') {
                 document.body.classList.add('dark-mode');
                 document.querySelector('.dark-mode-toggle').textContent = '☀️';
             }
+
+            // Auto dark mode (on load, if autoDark not explicitly false)
+            checkAutoDark();
+
             renderTable();
             updateCountdown();
             setInterval(updateCountdown, 1000);
             setInterval(checkNotifications, 30000);
             updateNotifyButton();
+            updateAudioButton();
+            setInterval(checkAudioAlert, 30000);
+
+            // Ramadan progress bar
+            updateRamadanProgress();
+
+            // Auto dark mode check every 60s
+            setInterval(checkAutoDark, 60000);
 
             document.querySelectorAll('.view-btn').forEach(btn => btn.addEventListener('click', () => setView(btn.dataset.view)));
             const todayData = getTodayData();
             if (!localStorage.getItem('quba-viewMode')) { currentView = todayData ? 'today' : 'full'; }
             setView(currentView);
             setInterval(() => { if (currentView === 'today') renderTodayView(); }, 60000);
+
+            // Check for Eid Mubarak state (post-Ramadan confetti)
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            const eidDay = new Date(ramadanEnd);
+            eidDay.setDate(eidDay.getDate() + 1);
+            if (today.getTime() === eidDay.getTime() || today > ramadanEnd) {
+                // Check if countdown shows Eid Mubarak
+                const label = document.getElementById('countdownLabel');
+                if (label && label.textContent.includes('Eid Mubarak')) {
+                    fireEidConfetti();
+                }
+            }
 
             // Register service worker for offline support
             if ('serviceWorker' in navigator) {
@@ -973,12 +1452,16 @@
         var canvas = document.getElementById('granimCanvas');
         if (!canvas) return;
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || window.innerWidth < 600) {
-            canvas.style.display = 'none'; return;
+            canvas.style.display = 'none';
+            document.querySelector('.header').classList.remove('granim-loading');
+            return;
         }
         var s = document.createElement('script');
         s.src = 'https://cdn.jsdelivr.net/npm/granim@2.0.0/dist/granim.min.js';
         s.async = true;
         s.onload = function() {
+            // Remove skeleton shimmer once Granim is ready
+            document.querySelector('.header').classList.remove('granim-loading');
             if (typeof Granim === 'undefined') { canvas.style.display = 'none'; return; }
             var isDark = document.body.classList.contains('dark-mode');
             var granimInstance = new Granim({
@@ -1005,7 +1488,7 @@
                     : [['#1a5a7e', '#2a8ab5'], ['#0d47a1', '#42a5f5'], ['#1565c0', '#26c6da']];
             };
         };
-        s.onerror = function() { canvas.style.display = 'none'; };
+        s.onerror = function() { canvas.style.display = 'none'; document.querySelector('.header').classList.remove('granim-loading'); };
         document.body.appendChild(s);
     })();
     </script>
@@ -1062,20 +1545,60 @@
     })();
     </script>
 
-    <!-- Countdown tick animation -->
+    <!-- Countdown tick + flip animation -->
     <script>
     (function() {
         var ids = ['hours', 'minutes', 'seconds', 'days'];
         var prev = {};
         ids.forEach(function(id) { prev[id] = ''; });
+
+        // Wrap each digit character in a flip-digit span
+        function wrapDigits(el) {
+            var text = el.textContent;
+            el.innerHTML = '';
+            for (var i = 0; i < text.length; i++) {
+                var span = document.createElement('span');
+                span.className = 'flip-digit';
+                span.textContent = text[i];
+                span.dataset.char = text[i];
+                el.appendChild(span);
+            }
+        }
+
+        // Initialize digit wrapping
+        setTimeout(function() {
+            ids.forEach(function(id) {
+                var el = document.getElementById(id);
+                if (el && el.textContent !== '--') wrapDigits(el);
+            });
+        }, 100);
+
         setInterval(function() {
             ids.forEach(function(id) {
                 var el = document.getElementById(id);
                 if (!el) return;
                 var val = el.textContent;
-                if (val !== prev[id] && prev[id] !== '') {
-                    el.classList.add('tick');
-                    setTimeout(function() { el.classList.remove('tick'); }, 200);
+                if (val !== prev[id]) {
+                    if (prev[id] !== '') {
+                        el.classList.add('tick');
+                        setTimeout(function() { el.classList.remove('tick'); }, 200);
+                    }
+                    // Re-wrap digits and flip changed ones
+                    var oldChars = prev[id].split('');
+                    var newChars = val.split('');
+                    el.innerHTML = '';
+                    for (var i = 0; i < newChars.length; i++) {
+                        var span = document.createElement('span');
+                        span.className = 'flip-digit';
+                        span.textContent = newChars[i];
+                        if (oldChars[i] !== undefined && oldChars[i] !== newChars[i]) {
+                            span.classList.add('flipping');
+                            (function(s) {
+                                setTimeout(function() { s.classList.remove('flipping'); }, 350);
+                            })(span);
+                        }
+                        el.appendChild(span);
+                    }
                 }
                 prev[id] = val;
             });
