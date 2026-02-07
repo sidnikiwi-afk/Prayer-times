@@ -321,17 +321,192 @@
             .container { box-shadow: none; }
             .dark-mode-toggle, .share-btn, .notify-btn, .countdown-section, .view-toggle, .today-view { display: none !important; }
             .today { background: #fff3cd !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            #granimCanvas, #fireflyCanvas { display: none !important; }
+            .header::after { display: none !important; }
+            .quran-icon { animation: none !important; filter: none !important; }
+            .prayer-card, .footer-section, .sunnah-item { animation: none !important; }
+            * { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+            tbody tr { transition: none !important; border-left: none !important; }
         }
         @media (max-width: 600px) {
             .countdown-item { min-width: 60px; padding: 8px 10px; }
             .footer-section { flex: 1 1 100%; }
+        }
+        /* === VISUAL ENHANCEMENTS === */
+
+        /* Header with Granim + arabesque pattern */
+        .header {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .header > * { position: relative; z-index: 2; }
+        .header::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            opacity: 0.05;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='0.8'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3Ccircle cx='30' cy='30' r='12'/%3E%3Cpath d='M30 10 Q40 20 30 30 Q20 20 30 10' /%3E%3Cpath d='M30 30 Q40 40 30 50 Q20 40 30 30' /%3E%3Cpath d='M10 30 Q20 20 30 30 Q20 40 10 30' /%3E%3Cpath d='M30 30 Q40 20 50 30 Q40 40 30 30' /%3E%3C/g%3E%3C/svg%3E");
+            background-size: 60px 60px;
+        }
+        body.dark-mode .header::after { opacity: 0.03; }
+
+        /* Granim canvas */
+        #granimCanvas {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* SVG Quran icon */
+        .quran-icon {
+            width: 58px; height: 58px;
+            margin: 0 auto 10px;
+            filter: drop-shadow(0 2px 8px rgba(255, 193, 7, 0.35));
+            animation: quranGlow 3s ease-in-out infinite alternate;
+        }
+        @keyframes quranGlow {
+            from { filter: drop-shadow(0 2px 8px rgba(255, 193, 7, 0.25)); }
+            to   { filter: drop-shadow(0 2px 14px rgba(255, 193, 7, 0.55)); }
+        }
+        .mosque-icon { display: none; }
+
+        /* Firefly particles in countdown */
+        .countdown-section { position: relative; overflow: hidden; }
+        #fireflyCanvas {
+            position: absolute;
+            inset: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        /* Enhanced prayer cards - bottom border accent */
+        .prayer-card {
+            border-bottom: 3px solid #c8e6c9;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+        .prayer-card:not(.passed):not(.active-prayer) {
+            border-bottom-color: #66bb6a;
+        }
+        .prayer-card.passed {
+            border-bottom-color: #ccc;
+        }
+        .prayer-card.active-prayer {
+            border-bottom: 4px solid #1b5e20;
+            box-shadow: 0 0 20px rgba(27, 94, 32, 0.2), 0 4px 16px rgba(27, 94, 32, 0.12);
+            transform: scale(1.015);
+        }
+        body.dark-mode .prayer-card {
+            border-bottom: 3px solid #37474f;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+        body.dark-mode .prayer-card:not(.passed):not(.active-prayer) {
+            border-bottom-color: #4caf50;
+        }
+        body.dark-mode .prayer-card.passed { border-bottom-color: #555; }
+        body.dark-mode .prayer-card.active-prayer {
+            border-bottom: 4px solid #66bb6a;
+            box-shadow: 0 0 20px rgba(102, 187, 106, 0.2), 0 4px 16px rgba(102, 187, 106, 0.1);
+        }
+
+        /* Countdown glow */
+        .countdown-value {
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.4), 0 0 40px rgba(255, 255, 255, 0.15);
+            transition: transform 0.2s ease;
+        }
+        .countdown-value.tick {
+            transform: scale(1.18);
+            text-shadow: 0 0 25px rgba(255, 255, 255, 0.6), 0 0 50px rgba(255, 255, 255, 0.25);
+        }
+        .countdown-item { border: 1px solid rgba(255, 255, 255, 0.15); }
+
+        /* Entrance animations */
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .prayer-card { animation: slideUp 0.4s ease-out both; }
+        .prayer-card:nth-child(1) { animation-delay: 0.05s; }
+        .prayer-card:nth-child(2) { animation-delay: 0.1s; }
+        .prayer-card:nth-child(3) { animation-delay: 0.15s; }
+        .prayer-card:nth-child(4) { animation-delay: 0.2s; }
+        .prayer-card:nth-child(5) { animation-delay: 0.25s; }
+        .prayer-card:nth-child(6) { animation-delay: 0.3s; }
+        .sunnah-item { animation: slideUp 0.4s ease-out both; }
+        .sunnah-item:nth-child(1) { animation-delay: 0.05s; }
+        .sunnah-item:nth-child(2) { animation-delay: 0.1s; }
+        .sunnah-item:nth-child(3) { animation-delay: 0.15s; }
+        .sunnah-item:nth-child(4) { animation-delay: 0.2s; }
+        .sunnah-item:nth-child(5) { animation-delay: 0.25s; }
+        .sunnah-item:nth-child(6) { animation-delay: 0.3s; }
+        .sunnah-item:nth-child(7) { animation-delay: 0.35s; }
+        .sunnah-item:nth-child(8) { animation-delay: 0.4s; }
+        .sunnah-item:nth-child(9) { animation-delay: 0.45s; }
+        .sunnah-item:nth-child(10) { animation-delay: 0.5s; }
+        .footer-section { animation: slideUp 0.5s ease-out both; }
+        .footer-section:nth-child(1) { animation-delay: 0.1s; }
+        .footer-section:nth-child(2) { animation-delay: 0.15s; }
+        .footer-section:nth-child(3) { animation-delay: 0.2s; }
+
+        /* Polished table hover */
+        tbody tr { transition: all 0.25s ease; border-left: 3px solid transparent; }
+        tbody tr:hover { transform: translateX(2px); border-left-color: #1b5e20; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+        body.dark-mode tbody tr:hover { border-left-color: #66bb6a; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+
+        /* Glass floating buttons */
+        .dark-mode-toggle, .share-btn, .notify-btn {
+            backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+        }
+        .dark-mode-toggle { background: rgba(27, 94, 32, 0.85); }
+        .share-btn { background: rgba(37, 211, 102, 0.85); }
+        .notify-btn { background: rgba(183, 28, 28, 0.85); }
+        .notify-btn.active { background: rgba(27, 94, 32, 0.85); }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            .prayer-card, .footer-section, .sunnah-item { animation: none !important; }
+            .quran-icon { animation: none !important; }
+            .countdown-value { transition: none !important; }
+            tbody tr { transition: none !important; }
+            #granimCanvas, #fireflyCanvas { display: none !important; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <div class="mosque-icon">🕌</div>
+            <canvas id="granimCanvas"></canvas>
+            <div class="quran-icon">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="bookGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#ffd54f"/>
+                            <stop offset="100%" stop-color="#ffb300"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- Book spine -->
+                    <rect x="48" y="20" width="4" height="55" rx="1" fill="#ffb300"/>
+                    <!-- Left page -->
+                    <path d="M48 20 Q30 22 20 28 L20 72 Q30 67 48 65 Z" fill="url(#bookGrad)" opacity="0.85"/>
+                    <!-- Right page -->
+                    <path d="M52 20 Q70 22 80 28 L80 72 Q70 67 52 65 Z" fill="url(#bookGrad)" opacity="0.75"/>
+                    <!-- Page lines left -->
+                    <line x1="28" y1="36" x2="44" y2="34" stroke="#1b5e20" stroke-width="0.5" opacity="0.3"/>
+                    <line x1="28" y1="42" x2="44" y2="40" stroke="#1b5e20" stroke-width="0.5" opacity="0.3"/>
+                    <line x1="28" y1="48" x2="44" y2="46" stroke="#1b5e20" stroke-width="0.5" opacity="0.3"/>
+                    <!-- Page lines right -->
+                    <line x1="56" y1="34" x2="72" y2="36" stroke="#1b5e20" stroke-width="0.5" opacity="0.3"/>
+                    <line x1="56" y1="40" x2="72" y2="42" stroke="#1b5e20" stroke-width="0.5" opacity="0.3"/>
+                    <line x1="56" y1="46" x2="72" y2="48" stroke="#1b5e20" stroke-width="0.5" opacity="0.3"/>
+                    <!-- Star above -->
+                    <polygon points="50,10 51.5,15 56,15.5 52.5,18 53.5,23 50,20.5 46.5,23 47.5,18 44,15.5 48.5,15" fill="#ffd54f" opacity="0.8"/>
+                </svg>
+            </div>
             <h1>AL MAHAD UL ISLAMI</h1>
             <div class="address">Dorset Street, Bradford, BD5 0LT</div>
             <div class="month-year">RAMADHAN 1447 | FEBRUARY - MARCH 2026</div>
@@ -339,6 +514,7 @@
         </div>
 
         <div class="countdown-section" id="countdownSection">
+            <canvas id="fireflyCanvas"></canvas>
             <div class="countdown-label" id="countdownLabel">Time until Iftar</div>
             <div class="countdown-display">
                 <div class="countdown-item" id="daysContainer" style="display: none;">
@@ -847,5 +1023,124 @@
         });
     </script>
     <script src="../nav.js"></script>
+
+    <!-- Granim.js - async loaded -->
+    <script>
+    (function() {
+        var canvas = document.getElementById('granimCanvas');
+        if (!canvas) return;
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || window.innerWidth < 600) {
+            canvas.style.display = 'none'; return;
+        }
+        var s = document.createElement('script');
+        s.src = 'https://cdn.jsdelivr.net/npm/granim@2.0.0/dist/granim.min.js';
+        s.async = true;
+        s.onload = function() {
+            if (typeof Granim === 'undefined') { canvas.style.display = 'none'; return; }
+            var isDark = document.body.classList.contains('dark-mode');
+            var granimInstance = new Granim({
+                element: '#granimCanvas',
+                direction: 'diagonal',
+                isPausedWhenNotInView: true,
+                stateTransitionSpeed: 500,
+                states: {
+                    "default-state": {
+                        gradients: isDark
+                            ? [['#0d1a0e', '#1a2e1b'], ['#162e17', '#0d1a0e'], ['#1a2e1b', '#0d1a0e']]
+                            : [['#1b5e20', '#388e3c'], ['#2e7d32', '#4caf50'], ['#1b5e20', '#43a047']],
+                        transitionSpeed: 4000,
+                    }
+                }
+            });
+            var origToggle = window.toggleDarkMode;
+            window.toggleDarkMode = function() {
+                origToggle();
+                var nowDark = document.body.classList.contains('dark-mode');
+                granimInstance.changeState('default-state');
+                granimInstance.states['default-state'].gradients = nowDark
+                    ? [['#0d1a0e', '#1a2e1b'], ['#162e17', '#0d1a0e'], ['#1a2e1b', '#0d1a0e']]
+                    : [['#1b5e20', '#388e3c'], ['#2e7d32', '#4caf50'], ['#1b5e20', '#43a047']];
+            };
+        };
+        s.onerror = function() { canvas.style.display = 'none'; };
+        document.body.appendChild(s);
+    })();
+    </script>
+
+    <!-- Floating firefly particles in countdown -->
+    <script>
+    (function() {
+        var canvas = document.getElementById('fireflyCanvas');
+        if (!canvas) return;
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { canvas.style.display = 'none'; return; }
+        var ctx = canvas.getContext('2d');
+        if (!ctx) { canvas.style.display = 'none'; return; }
+        var flies = [], w, h;
+        function resize() {
+            var rect = canvas.parentElement.getBoundingClientRect();
+            w = canvas.width = rect.width;
+            h = canvas.height = rect.height;
+            flies = [];
+            var count = Math.min(Math.floor(w * h / 2000), 50);
+            for (var i = 0; i < count; i++) {
+                flies.push({
+                    x: Math.random() * w,
+                    y: Math.random() * h,
+                    r: Math.random() * 1.5 + 0.5,
+                    vx: (Math.random() - 0.5) * 0.4,
+                    vy: (Math.random() - 0.5) * 0.4,
+                    phase: Math.random() * Math.PI * 2,
+                    speed: Math.random() * 0.002 + 0.001
+                });
+            }
+        }
+        resize();
+        window.addEventListener('resize', resize);
+        function draw(t) {
+            ctx.clearRect(0, 0, w, h);
+            for (var i = 0; i < flies.length; i++) {
+                var f = flies[i];
+                f.x += f.vx + Math.sin(t * 0.001 + f.phase) * 0.15;
+                f.y += f.vy + Math.cos(t * 0.001 + f.phase) * 0.15;
+                if (f.x < 0) f.x = w;
+                if (f.x > w) f.x = 0;
+                if (f.y < 0) f.y = h;
+                if (f.y > h) f.y = 0;
+                var alpha = 0.15 + 0.85 * ((Math.sin(t * f.speed + f.phase) + 1) / 2);
+                var grad = ctx.createRadialGradient(f.x, f.y, 0, f.x, f.y, f.r * 3);
+                grad.addColorStop(0, 'rgba(255, 213, 79, ' + alpha + ')');
+                grad.addColorStop(0.5, 'rgba(255, 179, 0, ' + (alpha * 0.4) + ')');
+                grad.addColorStop(1, 'rgba(255, 179, 0, 0)');
+                ctx.beginPath();
+                ctx.arc(f.x, f.y, f.r * 3, 0, Math.PI * 2);
+                ctx.fillStyle = grad;
+                ctx.fill();
+            }
+            requestAnimationFrame(draw);
+        }
+        requestAnimationFrame(draw);
+    })();
+    </script>
+
+    <!-- Countdown tick animation -->
+    <script>
+    (function() {
+        var ids = ['hours', 'minutes', 'seconds', 'days'];
+        var prev = {};
+        ids.forEach(function(id) { prev[id] = ''; });
+        setInterval(function() {
+            ids.forEach(function(id) {
+                var el = document.getElementById(id);
+                if (!el) return;
+                var val = el.textContent;
+                if (val !== prev[id] && prev[id] !== '') {
+                    el.classList.add('tick');
+                    setTimeout(function() { el.classList.remove('tick'); }, 200);
+                }
+                prev[id] = val;
+            });
+        }, 250);
+    })();
+    </script>
 </body>
 </html>

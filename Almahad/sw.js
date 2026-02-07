@@ -1,8 +1,9 @@
-const CACHE_NAME = 'ramadan-timetable-v4';
+const CACHE_NAME = 'ramadan-timetable-v5';
 const ASSETS = [
   '/Almahad/',
   '/Almahad/index.html',
-  '/Almahad/manifest.json'
+  '/Almahad/manifest.json',
+  'https://cdn.jsdelivr.net/npm/granim@2.0.0/dist/granim.min.js'
 ];
 
 self.addEventListener('install', event => {
