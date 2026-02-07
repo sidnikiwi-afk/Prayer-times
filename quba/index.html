@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masjid Quba - Ramadhan 1447 Timetable</title>
+    <meta name="description" content="Ramadan 1447 prayer timetable for Masjid Quba, Bradford">
+    <meta property="og:title" content="Masjid Quba - Ramadan 1447 Prayer Timetable">
+    <meta property="og:description" content="Masjid Quba, Bradford - Sehri, Iftar & prayer times with live countdown">
+    <meta property="og:url" content="https://sidnikiwi-afk.github.io/Prayer-times/quba/">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#1a5c2e">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Quba Times">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            color: #1a1a1a;
+            padding: 10px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            text-align: center;
+            padding: 20px 15px;
+            background: linear-gradient(135deg, #1a5c2e 0%, #2d8a47 100%);
+            color: white;
+        }
+        .mosque-icon { font-size: 50px; margin-bottom: 10px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); }
+        h1 { font-size: clamp(18px, 5vw, 28px); font-weight: bold; letter-spacing: 2px; margin-bottom: 5px; }
+        .address { font-size: clamp(11px, 3vw, 14px); opacity: 0.9; margin-bottom: 4px; }
+        .contact-info { font-size: clamp(10px, 2.5vw, 12px); opacity: 0.85; margin-bottom: 8px; }
+        .month-year {
+            font-size: clamp(14px, 4vw, 18px);
+            font-weight: 600;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+        .moon-sighting {
+            font-size: clamp(10px, 2.5vw, 12px);
+            margin-top: 8px;
+            opacity: 0.85;
+            font-style: italic;
+        }
+
+        /* Countdown Section */
+        .countdown-section {
+            background: linear-gradient(135deg, #8b0000 0%, #c41e3a 100%);
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .countdown-section.pre-ramadan {
+            background: linear-gradient(135deg, #1a5c2e 0%, #2d8a47 100%);
+        }
+        .countdown-label { font-size: 14px; margin-bottom: 8px; opacity: 0.9; }
+        .countdown-display { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .countdown-item {
+            background: rgba(255,255,255,0.15);
+            padding: 10px 15px;
+            border-radius: 8px;
+            min-width: 70px;
+        }
+        .countdown-value { font-size: clamp(24px, 6vw, 36px); font-weight: bold; }
+        .countdown-unit { font-size: 11px; text-transform: uppercase; opacity: 0.8; }
+        .next-prayer {
+            margin-top: 10px;
+            font-size: clamp(13px, 3.5vw, 16px);
+            font-weight: 600;
+            line-height: 1.6;
+        }
+        .next-prayer-time {
+            background: rgba(255,255,255,0.2);
+            padding: 3px 12px;
+            border-radius: 15px;
+            white-space: nowrap;
+            display: inline-block;
+        }
+
+        /* Dua Section */
+        .dua-section { display: flex; flex-wrap: wrap; font-size: 12px; }
+        .dua-box { flex: 1 1 250px; text-align: center; padding: 15px 10px; color: white; }
+        .dua-box.intention { background: #1a5c2e; }
+        .dua-box.completing { background: #8b0000; }
+        .dua-title { font-style: italic; font-size: 11px; margin-bottom: 5px; opacity: 0.9; }
+        .dua-arabic { font-size: 13px; margin-bottom: 3px; font-weight: 500; }
+        .dua-translation { font-style: italic; font-size: 10px; opacity: 0.85; }
+
+        /* Table Styles */
+        .table-container { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: clamp(10px, 2.5vw, 12px);
+            min-width: 700px;
+        }
+        thead tr:first-child th { padding: 10px 4px; font-weight: 600; color: white; }
+        .header-ramadan { background: #1a1a1a; }
+        .header-beginning { background: #1a5c2e; }
+        .header-jamaah { background: #8b0000; }
+        thead tr:nth-child(2) th {
+            background: #f0f0f0; color: #1a1a1a;
+            padding: 8px 4px; font-size: clamp(9px, 2vw, 11px);
+            border: 1px solid #ccc; position: sticky; top: 0; z-index: 10;
+        }
+        tbody tr { transition: all 0.3s ease; }
+        tbody tr:nth-child(odd) { background: #fafafa; }
+        tbody tr:nth-child(even) { background: white; }
+        tbody tr:hover { background: #e8f5e9 !important; }
+        td { padding: 8px 4px; text-align: center; border: 1px solid #ddd; }
+        .date-col { font-weight: 600; }
+        .friday { background: #ffe6e6 !important; }
+        .friday:hover { background: #ffcccc !important; }
+        .friday .day-col { color: #8b0000; font-weight: bold; }
+        .sehri-col { color: #8b0000; font-weight: bold; }
+        .iftari-col { font-weight: bold; color: #1a5c2e; }
+
+        /* Last 10 nights */
+        .last-ten { border-left: 3px solid #ffc107; }
+        .last-ten .no-col { color: #b8860b; font-weight: bold; }
+        .last-ten-badge {
+            display: inline-block; background: #ffc107; color: #1a1a1a;
+            font-size: 7px; padding: 1px 4px; border-radius: 8px;
+            margin-left: 3px; font-weight: bold; vertical-align: middle;
+        }
+        .odd-night { border-left: 3px solid #ff8c00; }
+        .odd-night .no-col { color: #ff8c00; font-weight: bold; }
+
+        /* Today's row */
+        .today {
+            background: linear-gradient(90deg, #fff3cd 0%, #ffeeba 100%) !important;
+            box-shadow: inset 0 0 0 2px #ffc107;
+            animation: pulse 2s infinite;
+        }
+        .today td { border-color: #ffc107; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.85; } }
+        .today-badge {
+            display: inline-block; background: #ffc107; color: #1a1a1a;
+            font-size: 8px; padding: 2px 6px; border-radius: 10px;
+            margin-left: 5px; font-weight: bold; vertical-align: middle;
+        }
+
+        /* Footer */
+        .footer { display: flex; flex-wrap: wrap; gap: 10px; padding: 15px; background: #f5f5f5; }
+        .footer-section { flex: 1 1 200px; text-align: center; padding: 10px; }
+        .eid-info { background: #1a5c2e; color: white; border-radius: 8px; }
+        .footer-section strong { color: #8b0000; }
+        .eid-info strong { color: #ffc107; }
+        .fitrana-box { background: white; border-radius: 8px; border: 2px solid #8b0000; }
+        .contact-box { background: white; border-radius: 8px; }
+
+        /* Floating buttons */
+        .dark-mode-toggle {
+            position: fixed; bottom: 20px; right: 20px;
+            background: #1a5c2e; color: white; border: none;
+            padding: 12px 15px; border-radius: 50px; cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2); font-size: 18px;
+            z-index: 100; transition: all 0.3s ease;
+        }
+        .dark-mode-toggle:hover { transform: scale(1.1); }
+        .share-btn {
+            position: fixed; bottom: 80px; right: 20px;
+            background: #25D366; color: white; border: none;
+            padding: 12px 15px; border-radius: 50px; cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2); font-size: 18px;
+            z-index: 100; transition: all 0.3s ease;
+        }
+        .share-btn:hover { transform: scale(1.1); }
+        .notify-btn {
+            position: fixed; bottom: 140px; right: 20px;
+            background: #8b0000; color: white; border: none;
+            padding: 12px 15px; border-radius: 50px; cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2); font-size: 18px;
+            z-index: 100; transition: all 0.3s ease;
+        }
+        .notify-btn:hover { transform: scale(1.1); }
+        .notify-btn.active { background: #1a5c2e; }
+
+        /* Dark mode */
+        body.dark-mode { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); }
+        body.dark-mode .container { background: #1f1f1f; color: #e0e0e0; }
+        body.dark-mode thead tr:nth-child(2) th { background: #2d2d2d; color: #e0e0e0; border-color: #444; }
+        body.dark-mode tbody tr:nth-child(odd) { background: #252525; }
+        body.dark-mode tbody tr:nth-child(even) { background: #1f1f1f; }
+        body.dark-mode tbody tr:hover { background: #2d4a3e !important; }
+        body.dark-mode td { border-color: #444; }
+        body.dark-mode .friday { background: #3d2525 !important; }
+        body.dark-mode .today { background: linear-gradient(90deg, #3d3520 0%, #4a4025 100%) !important; }
+        body.dark-mode .footer { background: #252525; }
+        body.dark-mode .fitrana-box, body.dark-mode .contact-box { background: #2d2d2d; color: #e0e0e0; }
+        body.dark-mode .sehri-col { color: #ff6b6b; }
+        body.dark-mode .iftari-col { color: #69db7c; }
+        body.dark-mode .last-ten-badge { background: #b8860b; color: white; }
+
+        /* Print */
+        @media print {
+            body { background: white !important; padding: 0; }
+            .container { box-shadow: none; }
+            .dark-mode-toggle, .share-btn, .notify-btn, .countdown-section { display: none !important; }
+            .today { background: #fff3cd !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            .countdown-item { min-width: 60px; padding: 8px 10px; }
+            .footer-section { flex: 1 1 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="mosque-icon">🕌</div>
+            <h1>MASJID QUBA</h1>
+            <div class="address">20 Quba Court (off Church Street), Bradford BD8 7LA</div>
+            <div class="contact-info">Tel: 01274 542027 | www.masjidquba.org | info@masjidquba.org</div>
+            <div class="month-year">RAMADHAN 1447 | FEBRUARY - MARCH 2026</div>
+            <div class="moon-sighting">Dates are subject to moon sighting confirmation</div>
+        </div>
+
+        <div class="countdown-section" id="countdownSection">
+            <div class="countdown-label" id="countdownLabel">Time until Iftar</div>
+            <div class="countdown-display">
+                <div class="countdown-item" id="daysContainer" style="display: none;">
+                    <div class="countdown-value" id="days">--</div>
+                    <div class="countdown-unit">Days</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="hours">--</div>
+                    <div class="countdown-unit">Hours</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="minutes">--</div>
+                    <div class="countdown-unit">Minutes</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="seconds">--</div>
+                    <div class="countdown-unit">Seconds</div>
+                </div>
+            </div>
+            <div class="next-prayer" id="nextPrayer"></div>
+        </div>
+
+        <div class="dua-section">
+            <div class="dua-box intention">
+                <div class="dua-title">Intention for fasting</div>
+                <div class="dua-arabic">Wa bisawmi ghadin nawaytu min shahri Ramadhan</div>
+                <div class="dua-translation">"I intend to keep the fast tomorrow in the month of Ramadhan."</div>
+            </div>
+            <div class="dua-box completing">
+                <div class="dua-title">Completing the Fast Du'a</div>
+                <div class="dua-arabic">Allahumma laka sumtu wa 'ala rizqika aftartu</div>
+                <div class="dua-translation">"O Allah! For You I have fasted and by what (food) You have blessed me with, have I broken it."</div>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table id="timetable">
+                <thead>
+                    <tr>
+                        <th colspan="4" class="header-ramadan">RAMADHAN</th>
+                        <th colspan="5" class="header-beginning">BEGINNING TIMES</th>
+                        <th colspan="5" class="header-jamaah">JAMAAT TIMES</th>
+                    </tr>
+                    <tr>
+                        <th>Date</th>
+                        <th>Day</th>
+                        <th>No</th>
+                        <th>Sehri</th>
+                        <th>Fajr</th>
+                        <th>Sunrise</th>
+                        <th>Zohar</th>
+                        <th>Asr</th>
+                        <th>Isha</th>
+                        <th>Fajr</th>
+                        <th>Zohar</th>
+                        <th>Asr</th>
+                        <th>Maghrib</th>
+                        <th>Isha</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer">
+            <div class="footer-section eid-info">
+                <strong>Eid Salah:</strong><br>
+                8:00 am
+            </div>
+            <div class="footer-section fitrana-box">
+                <strong>Sadaqatul Fitr:</strong><br>
+                £5.00 per person<br>
+                <em style="font-size: 11px;">Must be paid before Eid Salah</em>
+            </div>
+            <div class="footer-section contact-box">
+                <em>Magrib Azan will take place 5 min after Iftar</em><br>
+                <strong>01274 542027</strong>
+            </div>
+        </div>
+    </div>
+
+    <button class="notify-btn" id="notifyBtn" onclick="toggleNotifications()" title="Enable Sehri/Iftar reminders">🔔</button>
+    <button class="share-btn" onclick="shareWhatsApp()" title="Share on WhatsApp">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </button>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
+
+    <script>
+        const timetableData = [
+            { date: [2026, 2, 18], day: "Wed", no: 1, sehri: "5:34", fajr: "5:44", sunrise: "7:22", zuhr: "12:21", asr: "3:29", isha: "6:40", jFajr: "5:55", jZuhr: "1:00", jAsr: "4:00", maghrib: "5:26", jIsha: "7:45" },
+            { date: [2026, 2, 19], day: "Thu", no: 2, sehri: "5:32", fajr: "5:42", sunrise: "7:20", zuhr: "12:21", asr: "3:31", isha: "6:43", jFajr: "5:55", jZuhr: "1:00", jAsr: "4:00", maghrib: "5:28", jIsha: "7:45" },
+            { date: [2026, 2, 20], day: "Fri", no: 3, sehri: "5:30", fajr: "5:40", sunrise: "7:17", zuhr: "12:21", asr: "3:32", isha: "6:43", jFajr: "5:55", jZuhr: "1:00", jAsr: "4:00", maghrib: "5:30", jIsha: "7:45" },
+            { date: [2026, 2, 21], day: "Sat", no: 4, sehri: "5:28", fajr: "5:38", sunrise: "7:15", zuhr: "12:21", asr: "3:34", isha: "6:45", jFajr: "5:45", jZuhr: "1:00", jAsr: "4:15", maghrib: "5:32", jIsha: "7:45" },
+            { date: [2026, 2, 22], day: "Sun", no: 5, sehri: "5:26", fajr: "5:36", sunrise: "7:13", zuhr: "12:20", asr: "3:36", isha: "6:47", jFajr: "5:45", jZuhr: "1:00", jAsr: "4:15", maghrib: "5:34", jIsha: "7:45" },
+            { date: [2026, 2, 23], day: "Mon", no: 6, sehri: "5:24", fajr: "5:34", sunrise: "7:11", zuhr: "12:20", asr: "3:38", isha: "6:48", jFajr: "5:45", jZuhr: "1:00", jAsr: "4:15", maghrib: "5:36", jIsha: "7:45" },
+            { date: [2026, 2, 24], day: "Tue", no: 7, sehri: "5:22", fajr: "5:32", sunrise: "7:09", zuhr: "12:20", asr: "3:41", isha: "6:50", jFajr: "5:40", jZuhr: "1:00", jAsr: "4:15", maghrib: "5:38", jIsha: "7:45" },
+            { date: [2026, 2, 25], day: "Wed", no: 8, sehri: "5:20", fajr: "5:30", sunrise: "7:06", zuhr: "12:20", asr: "3:41", isha: "6:52", jFajr: "5:40", jZuhr: "1:00", jAsr: "4:15", maghrib: "5:40", jIsha: "7:45" },
+            { date: [2026, 2, 26], day: "Thu", no: 9, sehri: "5:18", fajr: "5:28", sunrise: "7:04", zuhr: "12:20", asr: "3:43", isha: "6:54", jFajr: "5:40", jZuhr: "1:00", jAsr: "4:15", maghrib: "5:42", jIsha: "7:45" },
+            { date: [2026, 2, 27], day: "Fri", no: 10, sehri: "5:15", fajr: "5:25", sunrise: "7:02", zuhr: "12:20", asr: "3:45", isha: "6:56", jFajr: "5:40", jZuhr: "1:00", jAsr: "4:15", maghrib: "5:44", jIsha: "7:45" },
+            { date: [2026, 2, 28], day: "Sat", no: 11, sehri: "5:13", fajr: "5:23", sunrise: "7:00", zuhr: "12:20", asr: "3:46", isha: "6:58", jFajr: "5:40", jZuhr: "1:00", jAsr: "4:15", maghrib: "5:46", jIsha: "7:45" },
+            { date: [2026, 3, 1], day: "Sun", no: 12, sehri: "5:09", fajr: "5:19", sunrise: "6:55", zuhr: "12:19", asr: "3:50", isha: "7:00", jFajr: "5:30", jZuhr: "1:00", jAsr: "4:30", maghrib: "5:46", jIsha: "7:45" },
+            { date: [2026, 3, 2], day: "Mon", no: 13, sehri: "5:06", fajr: "5:16", sunrise: "6:53", zuhr: "12:19", asr: "3:52", isha: "7:02", jFajr: "5:30", jZuhr: "1:00", jAsr: "4:30", maghrib: "5:49", jIsha: "7:45" },
+            { date: [2026, 3, 3], day: "Tue", no: 14, sehri: "5:04", fajr: "5:14", sunrise: "6:50", zuhr: "12:19", asr: "3:54", isha: "7:03", jFajr: "5:30", jZuhr: "1:00", jAsr: "4:30", maghrib: "5:52", jIsha: "7:45" },
+            { date: [2026, 3, 4], day: "Wed", no: 15, sehri: "5:02", fajr: "5:12", sunrise: "6:48", zuhr: "12:19", asr: "3:55", isha: "7:05", jFajr: "5:20", jZuhr: "1:00", jAsr: "4:30", maghrib: "5:54", jIsha: "7:45" },
+            { date: [2026, 3, 5], day: "Thu", no: 16, sehri: "4:59", fajr: "5:09", sunrise: "6:46", zuhr: "12:18", asr: "3:57", isha: "7:07", jFajr: "5:20", jZuhr: "1:00", jAsr: "4:30", maghrib: "5:56", jIsha: "7:45" },
+            { date: [2026, 3, 6], day: "Fri", no: 17, sehri: "4:57", fajr: "5:07", sunrise: "6:43", zuhr: "12:18", asr: "3:58", isha: "7:09", jFajr: "5:20", jZuhr: "1:00", jAsr: "4:30", maghrib: "5:58", jIsha: "7:45" },
+            { date: [2026, 3, 7], day: "Sat", no: 18, sehri: "4:54", fajr: "5:04", sunrise: "6:41", zuhr: "12:18", asr: "4:00", isha: "7:11", jFajr: "5:20", jZuhr: "1:00", jAsr: "4:30", maghrib: "6:00", jIsha: "7:45" },
+            { date: [2026, 3, 8], day: "Sun", no: 19, sehri: "4:52", fajr: "5:02", sunrise: "6:38", zuhr: "12:18", asr: "4:01", isha: "7:13", jFajr: "5:15", jZuhr: "1:00", jAsr: "4:45", maghrib: "6:02", jIsha: "7:45" },
+            { date: [2026, 3, 9], day: "Mon", no: 20, sehri: "4:49", fajr: "4:59", sunrise: "6:36", zuhr: "12:17", asr: "4:03", isha: "7:15", jFajr: "5:15", jZuhr: "1:00", jAsr: "4:45", maghrib: "6:04", jIsha: "7:45" },
+            { date: [2026, 3, 10], day: "Tue", no: 21, sehri: "4:47", fajr: "4:57", sunrise: "6:34", zuhr: "12:17", asr: "4:05", isha: "7:17", jFajr: "5:15", jZuhr: "1:00", jAsr: "4:45", maghrib: "6:06", jIsha: "7:45" },
+            { date: [2026, 3, 11], day: "Wed", no: 22, sehri: "4:45", fajr: "4:55", sunrise: "6:31", zuhr: "12:17", asr: "4:06", isha: "7:19", jFajr: "5:05", jZuhr: "1:00", jAsr: "4:45", maghrib: "6:08", jIsha: "7:45" },
+            { date: [2026, 3, 12], day: "Thu", no: 23, sehri: "4:42", fajr: "4:52", sunrise: "6:29", zuhr: "12:17", asr: "4:08", isha: "7:21", jFajr: "5:05", jZuhr: "1:00", jAsr: "4:45", maghrib: "6:10", jIsha: "7:45" },
+            { date: [2026, 3, 13], day: "Fri", no: 24, sehri: "4:39", fajr: "4:49", sunrise: "6:26", zuhr: "12:16", asr: "4:09", isha: "7:23", jFajr: "5:05", jZuhr: "1:00", jAsr: "4:45", maghrib: "6:12", jIsha: "7:45" },
+            { date: [2026, 3, 14], day: "Sat", no: 25, sehri: "4:37", fajr: "4:47", sunrise: "6:24", zuhr: "12:16", asr: "4:11", isha: "7:25", jFajr: "5:00", jZuhr: "1:00", jAsr: "5:00", maghrib: "6:14", jIsha: "8:00" },
+            { date: [2026, 3, 15], day: "Sun", no: 26, sehri: "4:34", fajr: "4:44", sunrise: "6:22", zuhr: "12:16", asr: "4:12", isha: "7:27", jFajr: "5:00", jZuhr: "1:00", jAsr: "5:00", maghrib: "6:16", jIsha: "8:00" },
+            { date: [2026, 3, 16], day: "Mon", no: 27, sehri: "4:32", fajr: "4:42", sunrise: "6:19", zuhr: "12:16", asr: "4:14", isha: "7:28", jFajr: "4:50", jZuhr: "1:00", jAsr: "5:00", maghrib: "6:18", jIsha: "8:00" },
+            { date: [2026, 3, 17], day: "Tue", no: 28, sehri: "4:29", fajr: "4:39", sunrise: "6:17", zuhr: "12:15", asr: "4:16", isha: "7:30", jFajr: "4:50", jZuhr: "1:00", jAsr: "5:00", maghrib: "6:20", jIsha: "8:00" },
+            { date: [2026, 3, 18], day: "Wed", no: 29, sehri: "4:26", fajr: "4:36", sunrise: "6:14", zuhr: "12:15", asr: "4:18", isha: "7:32", jFajr: "4:50", jZuhr: "1:00", jAsr: "5:00", maghrib: "6:22", jIsha: "8:00" },
+            { date: [2026, 3, 19], day: "Thu", no: 30, sehri: "4:24", fajr: "4:34", sunrise: "6:12", zuhr: "12:15", asr: "4:20", isha: "7:34", jFajr: "4:50", jZuhr: "1:00", jAsr: "5:00", maghrib: "6:24", jIsha: "8:00" },
+        ];
+
+        const ramadanStart = new Date(2026, 1, 18);
+        const ramadanEnd = new Date(2026, 2, 19);
+
+        function renderTable() {
+            const tbody = document.getElementById('tableBody');
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+
+            tbody.innerHTML = timetableData.map((row) => {
+                const rowDate = new Date(row.date[0], row.date[1] - 1, row.date[2]);
+                const isToday = rowDate.getTime() === today.getTime();
+                const isFriday = row.day === "Fri";
+                const isLastTen = row.no >= 21;
+                const isOddNight = row.no >= 21 && row.no % 2 === 1;
+
+                let rowClasses = [];
+                if (isToday) rowClasses.push('today');
+                else if (isFriday) rowClasses.push('friday');
+                if (isOddNight) rowClasses.push('odd-night');
+                else if (isLastTen) rowClasses.push('last-ten');
+
+                const todayBadge = isToday ? '<span class="today-badge">TODAY</span>' : '';
+                const lastTenBadge = isOddNight ? '<span class="last-ten-badge">ODD</span>' : '';
+
+                return `
+                    <tr class="${rowClasses.join(' ')}">
+                        <td class="date-col">${row.date[2]}${todayBadge}</td>
+                        <td class="day-col">${row.day}</td>
+                        <td class="no-col">${row.no}${lastTenBadge}</td>
+                        <td class="sehri-col">${row.sehri}</td>
+                        <td>${row.fajr}</td>
+                        <td>${row.sunrise}</td>
+                        <td>${row.zuhr}</td>
+                        <td>${row.asr}</td>
+                        <td>${row.isha}</td>
+                        <td>${row.jFajr}</td>
+                        <td>${row.jZuhr}</td>
+                        <td>${row.jAsr}</td>
+                        <td class="iftari-col">${row.maghrib}</td>
+                        <td>${row.jIsha}</td>
+                    </tr>
+                `;
+            }).join('');
+
+            const todayRow = document.querySelector('.today');
+            if (todayRow) {
+                setTimeout(() => todayRow.scrollIntoView({ behavior: 'smooth', block: 'center' }), 300);
+            }
+        }
+
+        function getTodayData() {
+            const today = new Date();
+            return timetableData.find(row => {
+                const rowDate = new Date(row.date[0], row.date[1] - 1, row.date[2]);
+                return rowDate.toDateString() === today.toDateString();
+            });
+        }
+
+        function updateCountdown() {
+            const now = new Date();
+            const todayData = getTodayData();
+            const countdownSection = document.getElementById('countdownSection');
+            const daysContainer = document.getElementById('daysContainer');
+
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+
+            if (today < ramadanStart) {
+                countdownSection.classList.add('pre-ramadan');
+                daysContainer.style.display = 'block';
+                const diff = ramadanStart - now;
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+                document.getElementById('countdownLabel').textContent = '🌙 Countdown to Ramadan 1447';
+                document.getElementById('days').textContent = days.toString().padStart(2, '0');
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+                document.getElementById('nextPrayer').innerHTML = `Ramadan begins <span class="next-prayer-time">Wed 18th February</span>`;
+                return;
+            }
+
+            if (today > ramadanEnd) {
+                countdownSection.classList.remove('pre-ramadan');
+                daysContainer.style.display = 'none';
+                document.getElementById('countdownLabel').textContent = 'Ramadan 1447 has ended';
+                document.getElementById('hours').textContent = '--';
+                document.getElementById('minutes').textContent = '--';
+                document.getElementById('seconds').textContent = '--';
+                document.getElementById('nextPrayer').innerHTML = `<span class="next-prayer-time">Eid Mubarak! 🌙</span>`;
+                return;
+            }
+
+            countdownSection.classList.remove('pre-ramadan');
+            daysContainer.style.display = 'none';
+
+            if (!todayData) {
+                document.getElementById('countdownLabel').textContent = 'Ramadan timetable for Feb 18 - Mar 19, 2026';
+                document.getElementById('hours').textContent = '--';
+                document.getElementById('minutes').textContent = '--';
+                document.getElementById('seconds').textContent = '--';
+                document.getElementById('nextPrayer').textContent = '';
+                return;
+            }
+
+            function toDate(timeStr, isPM) {
+                const [h, m] = timeStr.split(':').map(Number);
+                const d = new Date(now);
+                d.setHours(isPM && h < 12 ? h + 12 : h, m, 0, 0);
+                return d;
+            }
+
+            const events = [
+                { label: '🍽️ Sehri ends', time: toDate(todayData.sehri, false), display: todayData.sehri },
+                { label: '🕌 Fajr Jamaah', time: toDate(todayData.jFajr, false), display: todayData.jFajr },
+                { label: '☀️ Zohar begins', time: toDate(todayData.zuhr, false), display: todayData.zuhr },
+                { label: '🕌 Zohar Jamaah', time: toDate(todayData.jZuhr, true), display: todayData.jZuhr },
+                { label: '☀️ Asr begins', time: toDate(todayData.asr, true), display: todayData.asr },
+                { label: '🕌 Asr Jamaah', time: toDate(todayData.jAsr, true), display: todayData.jAsr },
+                { label: '🌅 Iftar', time: toDate(todayData.maghrib, true), display: todayData.maghrib },
+                { label: '☀️ Isha begins', time: toDate(todayData.isha, true), display: todayData.isha },
+                { label: '🕌 Isha Jamaah', time: toDate(todayData.jIsha, true), display: todayData.jIsha },
+            ];
+
+            const nextEvent = events.find(e => now < e.time);
+
+            if (nextEvent) {
+                const diff = nextEvent.time - now;
+                const hours = Math.floor(diff / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+                document.getElementById('countdownLabel').textContent = nextEvent.label;
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+                document.getElementById('nextPrayer').innerHTML = `${nextEvent.label.replace(/^\S+\s/, '')} at <span class="next-prayer-time">${nextEvent.display}</span>`;
+                return;
+            }
+
+            const tomorrowIndex = timetableData.indexOf(todayData) + 1;
+            if (tomorrowIndex < timetableData.length) {
+                const tmrw = timetableData[tomorrowIndex];
+                const [sH, sM] = tmrw.sehri.split(':').map(Number);
+                const sehriTmrw = new Date(now);
+                sehriTmrw.setDate(sehriTmrw.getDate() + 1);
+                sehriTmrw.setHours(sH, sM, 0, 0);
+                const diff = sehriTmrw - now;
+                const hours = Math.floor(diff / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+                document.getElementById('countdownLabel').textContent = '🍽️ Sehri ends tomorrow';
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+                document.getElementById('nextPrayer').innerHTML = `Sehri ends at <span class="next-prayer-time">${tmrw.sehri}</span>`;
+                return;
+            }
+
+            document.getElementById('countdownLabel').textContent = '✨ Eid Mubarak!';
+            document.getElementById('hours').textContent = '00';
+            document.getElementById('minutes').textContent = '00';
+            document.getElementById('seconds').textContent = '00';
+            document.getElementById('nextPrayer').innerHTML = `<span class="next-prayer-time">Ramadan 1447 complete</span>`;
+        }
+
+        // Notifications
+        let notificationsEnabled = localStorage.getItem('quba-notifications') === 'true';
+        let lastNotification = '';
+
+        function toggleNotifications() {
+            if (!('Notification' in window)) { alert('Your browser does not support notifications.'); return; }
+            if (notificationsEnabled) {
+                notificationsEnabled = false;
+                localStorage.setItem('quba-notifications', 'false');
+                updateNotifyButton();
+                return;
+            }
+            Notification.requestPermission().then(perm => {
+                if (perm === 'granted') {
+                    notificationsEnabled = true;
+                    localStorage.setItem('quba-notifications', 'true');
+                    new Notification('Reminders enabled', { body: 'You will be notified 15 minutes before Sehri ends and Iftar.' });
+                }
+                updateNotifyButton();
+            });
+        }
+
+        function updateNotifyButton() {
+            const btn = document.getElementById('notifyBtn');
+            if (notificationsEnabled) { btn.classList.add('active'); btn.title = 'Disable Sehri/Iftar reminders'; }
+            else { btn.classList.remove('active'); btn.title = 'Enable Sehri/Iftar reminders'; }
+        }
+
+        function checkNotifications() {
+            if (!notificationsEnabled) return;
+            const todayData = getTodayData();
+            if (!todayData) return;
+            const now = new Date();
+            const currentMins = now.getHours() * 60 + now.getMinutes();
+            const [sehriH, sehriM] = todayData.sehri.split(':').map(Number);
+            const sehriMins = sehriH * 60 + sehriM;
+            const [iftarH, iftarM] = todayData.maghrib.split(':').map(Number);
+            const iftarMins = (iftarH < 12 ? iftarH + 12 : iftarH) * 60 + iftarM;
+            const key = now.toDateString();
+            if (currentMins === sehriMins - 15 && lastNotification !== key + '-sehri') {
+                lastNotification = key + '-sehri';
+                new Notification('Sehri ending soon!', { body: `Sehri ends at ${todayData.sehri} - 15 minutes remaining.` });
+            }
+            if (currentMins === iftarMins - 15 && lastNotification !== key + '-iftar') {
+                lastNotification = key + '-iftar';
+                new Notification('Iftar in 15 minutes!', { body: `Iftar at ${todayData.maghrib} - almost time to break your fast.` });
+            }
+        }
+
+        function shareWhatsApp() {
+            const text = encodeURIComponent('Ramadan 1447 Prayer Timetable - Masjid Quba, Bradford\nhttps://sidnikiwi-afk.github.io/Prayer-times/quba/');
+            window.open('https://wa.me/?text=' + text, '_blank');
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            const btn = document.querySelector('.dark-mode-toggle');
+            btn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+            localStorage.setItem('quba-darkMode', document.body.classList.contains('dark-mode'));
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.getItem('quba-darkMode') === 'true') {
+                document.body.classList.add('dark-mode');
+                document.querySelector('.dark-mode-toggle').textContent = '☀️';
+            }
+            renderTable();
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+            setInterval(checkNotifications, 30000);
+            updateNotifyButton();
+        });
+    </script>
+</body>
+</html>
