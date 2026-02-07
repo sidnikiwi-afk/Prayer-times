@@ -2,7 +2,7 @@
   "name": "Shahjalal Islamic Society - Ramadan Timetable",
   "short_name": "Ramadan Times",
   "description": "Ramadan 1447 prayer timetable for Shahjalal Islamic Society, Bradford",
-  "start_url": "/Prayer-times/",
+  "start_url": "/Prayer-times/shahjalal/",
   "display": "standalone",
   "background_color": "#1a5c2e",
   "theme_color": "#1a5c2e",

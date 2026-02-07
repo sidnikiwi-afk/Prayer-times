@@ -1,8 +1,8 @@
-const CACHE_NAME = 'ramadan-timetable-v1';
+const CACHE_NAME = 'ramadan-timetable-v2';
 const ASSETS = [
-  '/Prayer-times/',
-  '/Prayer-times/index.html',
-  '/Prayer-times/manifest.json'
+  '/Prayer-times/shahjalal/',
+  '/Prayer-times/shahjalal/index.html',
+  '/Prayer-times/shahjalal/manifest.json'
 ];
 
 self.addEventListener('install', event => {
