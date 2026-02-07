@@ -2,10 +2,130 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=shahjalal/">
-    <title>Redirecting...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramadan 1447 Prayer Timetables - Bradford</title>
+    <meta name="description" content="Ramadan 1447 prayer timetables for mosques in Bradford">
+    <meta name="theme-color" content="#1a1a2e">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕌</text></svg>">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+        .icon { font-size: 64px; margin-bottom: 15px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3)); }
+        h1 {
+            font-size: clamp(22px, 6vw, 32px);
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            font-size: clamp(13px, 3.5vw, 16px);
+            opacity: 0.7;
+            margin-bottom: 30px;
+        }
+        .label {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.5;
+            margin-bottom: 15px;
+        }
+        .masjid-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .masjid-card {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 18px 20px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .masjid-card:hover {
+            background: rgba(255,255,255,0.15);
+            border-color: rgba(255,255,255,0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        .masjid-card:active { transform: translateY(0); }
+        .card-icon {
+            font-size: 36px;
+            flex-shrink: 0;
+        }
+        .card-info { text-align: left; flex: 1; }
+        .card-name {
+            font-size: clamp(15px, 4vw, 18px);
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+        .card-address {
+            font-size: clamp(11px, 2.8vw, 13px);
+            opacity: 0.6;
+        }
+        .card-colour {
+            width: 6px;
+            height: 40px;
+            border-radius: 3px;
+            flex-shrink: 0;
+        }
+        .card-arrow {
+            font-size: 20px;
+            opacity: 0.4;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+        .masjid-card:hover .card-arrow { opacity: 0.8; transform: translateX(3px); }
+        .footer {
+            margin-top: 40px;
+            font-size: 11px;
+            opacity: 0.3;
+        }
+    </style>
 </head>
 <body>
-    <p>Redirecting to <a href="shahjalal/">Shahjalal Islamic Society Timetable</a>...</p>
+    <div class="container">
+        <div class="icon">🌙</div>
+        <h1>RAMADAN 1447</h1>
+        <div class="subtitle">Prayer Timetables &bull; Bradford</div>
+        <div class="label">Select your masjid</div>
+        <div class="masjid-list">
+            <a href="shahjalal/" class="masjid-card">
+                <div class="card-colour" style="background: linear-gradient(to bottom, #1a5c2e, #2d8a47);"></div>
+                <div class="card-info">
+                    <div class="card-name">Shahjalal Islamic Society</div>
+                    <div class="card-address">149A Little Horton Lane, BD5 0HS</div>
+                </div>
+                <div class="card-arrow">&rsaquo;</div>
+            </a>
+            <a href="quba/" class="masjid-card">
+                <div class="card-colour" style="background: linear-gradient(to bottom, #1a5a7e, #2a8ab5);"></div>
+                <div class="card-info">
+                    <div class="card-name">Masjid Quba</div>
+                    <div class="card-address">20 Quba Court (off Church Street), BD8 7LA</div>
+                </div>
+                <div class="card-arrow">&rsaquo;</div>
+            </a>
+        </div>
+        <div class="footer">February &ndash; March 2026</div>
+    </div>
 </body>
 </html>
