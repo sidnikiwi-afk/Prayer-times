@@ -58,6 +58,8 @@ Prayer-times/
 - **Almahad**: Receiver: 456.62500
 
 ## Features (All Mosques)
+
+### Core Functionality
 - **Today View**: Card-based layout showing today's prayer times only, with pill toggle to switch to Full Timetable. Passed prayers dimmed with checkmark, next prayer highlighted with accent border + "NEXT" badge, tomorrow's Sehri/Iftar preview at bottom. Friday shows "Jumu'ah" instead of Zuhr. View preference saved to localStorage. Auto-refreshes every 60s. Defaults to "Today" during Ramadan, "Full Timetable" otherwise.
 - Live prayer-by-prayer countdown (Sehri > Fajr Jamaah > Zuhr > Zuhr Jamaah > Asr > Asr Jamaah > Iftar > Isha > Isha Jamaah > next Sehri)
 - Pre-Ramadan countdown with days display
@@ -74,9 +76,45 @@ Prayer-times/
 - Print-friendly (hides buttons, countdown, nav, today-view)
 - Moon sighting disclaimer in header
 
+### Visual Enhancements (All Mosques)
+- **Granim.js animated header**: Async-loaded from CDN, smooth gradient animation behind header. Cached by service worker for offline. Each mosque has unique color palette.
+- **Islamic geometric pattern overlay**: CSS `::after` on header with inline SVG data URI (star pattern / hexagonal / arabesque per mosque)
+- **Mosque building SVG icon**: Unique hand-crafted mosque SVG in header per mosque (see Themes below)
+- **Animated mosque icon**: Window glow pulse (`@keyframes`) + gentle float on the SVG
+- **Glassmorphism prayer cards**: `backdrop-filter: blur` + semi-transparent backgrounds in Today View
+- **Countdown flip animation**: 3D CSS flip on individual digits when they change
+- **Entrance animations**: `@keyframes slideUp` with staggered delays on cards, countdown, footer
+- **Enhanced table hover**: `translateX(2px)` + left-border accent + shadow lift
+- **Floating button glass effect**: `backdrop-filter: blur(8px)` on fixed buttons
+- **Custom themed scrollbar**: Per-mosque colors (WebKit + Firefox)
+- **Skeleton shimmer**: Loading animation on header while Granim initializes
+
+### Smart Features (All Mosques)
+- **Ramadan progress bar**: Thin bar below header showing "Day X of 30" with gradient fill. Auto-calculated from timetableData. Hidden outside Ramadan.
+- **Auto dark mode at Maghrib**: Automatically enables dark mode after Maghrib, disables after Fajr. Respects manual toggle (disables auto if user toggles manually). localStorage: `{prefix}-autoDark`
+- **Eid confetti burst**: 150 themed particles burst when "Eid Mubarak" state triggers. Canvas overlay, self-removes after 5s.
+- **Qibla compass**: Floating button (bottom-left) opens overlay with compass rose SVG. Arrow points 119.7° (Bradford → Ka'bah). Live compass on mobile via DeviceOrientationEvent, static bearing on desktop.
+
+### Progressive Enhancement
+- All visual effects respect `prefers-reduced-motion: reduce`
+- Print styles hide all interactive/decorative elements
+- Granim falls back to CSS gradient if CDN/WebGL fails
+- Qibla compass falls back to static bearing without device orientation
+- All features work offline via service worker
+
+### PWA & Assets
 - **PWA**: manifest.json + sw.js for offline support, installable (all mosques)
 - **OG image**: og-image.svg social preview (all mosques)
 - **QR poster**: poster.html for A4 printing (all mosques)
+- **Service worker**: Caches Granim.js CDN for offline (cache version: v5)
+
+### Themes Per Mosque
+
+| Mosque | SVG Icon | Pattern | Particle Effect | Card Accent | Confetti Colors |
+|--------|----------|---------|-----------------|-------------|-----------------|
+| Shahjalal | Grand mosque, 2 minarets (gold/amber) | Islamic star | Floating stars | Left border | Gold, teal, white, green |
+| Quba | Modern mosque, 1 dome+minaret (silver/blue) | Hexagonal | Rising light orbs | Top border | Blue, silver, gold, white |
+| Almahad | Triple-dome traditional (gold/green) | Arabesque floral | Golden fireflies | Bottom border | Green, gold, white, emerald |
 
 ### Shahjalal-Only Features
 - **Demo mode**: DEMO button (bottom-left), date picker + time slider to test countdown at any date/time
@@ -84,6 +122,14 @@ Prayer-times/
 ### Unique Sections
 - **Quba**: Programmes During Ramadan (Ml. Siraj Saleh, Ml. Ahmed Desai), live stream info
 - **Almahad**: "Some Sunnah of Ramadan" 10-item grid (Sahoor, Iftar, Taraweeh, Quran, etc.)
+
+### Landing Page (waqt.uk)
+- Granim.js animated background (deep blue/teal gradients)
+- Card hover effects with per-mosque border glow colors
+- Staggered entrance animations on cards
+- Subtle Islamic geometric star/octagon pattern overlay
+- Enhanced footer with "Ramadan 1447 | Bradford" context
+- Custom scrollbar, skeleton shimmer
 
 ## How to Add a New Mosque
 
@@ -96,11 +142,18 @@ Copy any existing `index.html` as a starting point, then update:
 - Header content (mosque name, address, contact info)
 - `timetableData` array with all 30 days of prayer times
 - Theme colors throughout CSS (search/replace the old color hex values)
-- localStorage keys (use unique prefix, e.g. `newmosque-darkMode`, `newmosque-notifications`, `newmosque-viewMode`)
+- localStorage keys (use unique prefix, e.g. `newmosque-darkMode`, `newmosque-notifications`, `newmosque-viewMode`, `newmosque-autoDark`)
 - WhatsApp share URL
 - Today View: CSS accent colors, `renderTodayView()`, `setView()`, localStorage key, toggle HTML
 - Footer content (Eid times, Fitrana, donation details, notices)
 - Any unique sections (programmes, sunnah, etc.)
+- Mosque SVG icon in header (unique design per mosque)
+- Granim.js color palettes (light + dark mode gradients)
+- Islamic geometric pattern overlay (choose unique pattern)
+- Particle effect canvas (choose unique style: stars/orbs/fireflies)
+- Prayer card accent direction (left/top/bottom border)
+- Confetti colors for Eid burst
+- Scrollbar theme colors
 - Add `<script src="../nav.js"></script>` before `</body>`
 
 ### 2. Add to nav.js
@@ -147,11 +200,11 @@ Asr begins → Asr Jamaah → Iftar → Isha begins → Isha Jamaah →
 After the last day's Isha Jamaah, shows "Eid Mubarak".
 
 ### localStorage Keys Per Mosque
-| Mosque | Dark Mode Key | Notifications Key | View Mode Key |
-|--------|--------------|-------------------|---------------|
-| Shahjalal | `darkMode` | `notifications` | `viewMode` |
-| Quba | `quba-darkMode` | `quba-notifications` | `quba-viewMode` |
-| Almahad | `almahad-darkMode` | `almahad-notifications` | `almahad-viewMode` |
+| Mosque | Dark Mode | Notifications | View Mode | Auto Dark |
+|--------|-----------|---------------|-----------|-----------|
+| Shahjalal | `darkMode` | `notifications` | `viewMode` | `shahjalal-autoDark` |
+| Quba | `quba-darkMode` | `quba-notifications` | `quba-viewMode` | `quba-autoDark` |
+| Almahad | `almahad-darkMode` | `almahad-notifications` | `almahad-viewMode` | `almahad-autoDark` |
 
 ### nav.js
 - Self-executing function that injects CSS, HTML, and event handlers
@@ -159,6 +212,10 @@ After the last day's Isha Jamaah, shows "Eid Mubarak".
 - Search filter works on name + address
 - Print media query hides nav
 - Dark mode aware (`body.dark-mode .masjid-nav`)
+
+### External Dependencies
+- **Granim.js v2.0.0** (`cdn.jsdelivr.net/npm/granim@2.0.0/dist/granim.min.js`) - animated gradient backgrounds. Loaded async, cached by service worker, falls back to CSS gradient if unavailable.
+- No other external JS libraries. All other effects are vanilla CSS/JS/SVG + Web Audio API.
 
 ### Data Source
 - Timetables transcribed from printed/JPEG posters provided by each mosque
