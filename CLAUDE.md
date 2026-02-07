@@ -34,7 +34,7 @@ Prayer-times/
 
 | Mosque | Folder | Address | Theme Colors | Eid Salah | Fitrana |
 |--------|--------|---------|-------------|-----------|--------|
-| Shahjalal Islamic Society | `shahjalal` | 149A Little Horton Lane, BD5 0HS | Green `#1a5c2e` / `#2d8a47` | 6:24am + 9:00am | £5.00 |
+| Shahjalal Islamic Society | `shahjalal` | 149A Little Horton Lane, BD5 0HS | Teal `#004d40` / `#00796b` | 6:24am + 9:00am | £5.00 |
 | Masjid Quba | `quba` | 20 Quba Court, BD8 7LA | Blue `#1a5a7e` / `#2a8ab5` | 8:00am | £5.00 |
 | Al Mahad Ul Islami | `Almahad` | Dorset Street, BD5 0LT | Green `#1b5e20` / `#388e3c` | 9:00am | £5.00 |
 
