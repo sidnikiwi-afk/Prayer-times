@@ -5,7 +5,7 @@ Ramadan 1447 (Feb-Mar 2026) interactive prayer timetables for mosques in Bradfor
 Hosted on GitHub Pages. Each mosque gets its own subfolder with a self-contained HTML page.
 
 - **Repo**: https://github.com/sidnikiwi-afk/Prayer-times
-- **Live**: https://sidnikiwi-afk.github.io/Prayer-times/
+- **Live**: https://waqt.uk/
 - **GitHub account**: sidnikiwi-afk
 
 ## File Structure
@@ -150,8 +150,8 @@ After the last day's Isha Jamaah, shows "Eid Mubarak".
 ### Deployment
 - GitHub Pages, deploy from branch (legacy mode), `master` branch
 - Push to `master` triggers automatic rebuild
-- Pages URL: `https://sidnikiwi-afk.github.io/Prayer-times/`
-- Custom domain: not yet configured
+- Custom domain: `waqt.uk` (Namecheap, A records + CNAME to GitHub)
+- Old URL `sidnikiwi-afk.github.io/Prayer-times/` redirects to `waqt.uk`
 
 ### Git Config
 - Repo: `sidnikiwi-afk/Prayer-times`
