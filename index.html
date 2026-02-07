@@ -429,6 +429,80 @@
             color: white;
         }
 
+        /* Demo mode controls */
+        .demo-toggle {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: #ff6b35;
+            color: white;
+            border: none;
+            padding: 12px 15px;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            font-size: 14px;
+            font-weight: bold;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+        .demo-toggle:hover { transform: scale(1.1); }
+        .demo-toggle.active { background: #e55a2b; }
+        .demo-panel {
+            display: none;
+            position: fixed;
+            bottom: 70px;
+            left: 20px;
+            background: white;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.25);
+            z-index: 100;
+            width: 300px;
+            font-size: 13px;
+        }
+        .demo-panel.open { display: block; }
+        .demo-panel h3 { margin: 0 0 10px; font-size: 14px; color: #ff6b35; }
+        .demo-panel label { display: block; font-weight: 600; margin: 8px 0 4px; color: #333; }
+        .demo-panel select, .demo-panel input[type="range"] { width: 100%; }
+        .demo-panel select { padding: 6px; border-radius: 6px; border: 1px solid #ccc; }
+        .demo-time-display {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff6b35;
+            margin: 5px 0;
+            font-family: monospace;
+        }
+        .demo-reset {
+            width: 100%;
+            margin-top: 10px;
+            padding: 8px;
+            background: #ff6b35;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .demo-reset:hover { background: #e55a2b; }
+        .demo-badge {
+            display: inline-block;
+            background: #ff6b35;
+            color: white;
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 10px;
+            margin-left: 8px;
+            font-weight: bold;
+            vertical-align: middle;
+            animation: pulse 2s infinite;
+        }
+        body.dark-mode .demo-panel { background: #2d2d2d; color: #e0e0e0; }
+        body.dark-mode .demo-panel h3 { color: #ff6b35; }
+        body.dark-mode .demo-panel label { color: #ccc; }
+        body.dark-mode .demo-panel select { background: #1f1f1f; color: #e0e0e0; border-color: #555; }
+
         /* Print styles */
         @media print {
             body {
@@ -441,7 +515,9 @@
             .dark-mode-toggle,
             .share-btn,
             .notify-btn,
-            .countdown-section {
+            .countdown-section,
+            .demo-toggle,
+            .demo-panel {
                 display: none !important;
             }
             .today {
@@ -555,6 +631,17 @@
         </div>
     </div>
 
+    <button class="demo-toggle" id="demoToggle" onclick="toggleDemoPanel()" title="Demo mode">DEMO</button>
+    <div class="demo-panel" id="demoPanel">
+        <h3>Demo Mode</h3>
+        <label for="demoDate">Date</label>
+        <select id="demoDate" onchange="onDemoDateChange()"></select>
+        <label for="demoTime">Time of Day</label>
+        <input type="range" id="demoTime" min="0" max="1439" value="720" oninput="onDemoTimeChange()">
+        <div class="demo-time-display" id="demoTimeDisplay">12:00</div>
+        <button class="demo-reset" onclick="resetDemo()">Reset to Live</button>
+    </div>
+
     <button class="notify-btn" id="notifyBtn" onclick="toggleNotifications()" title="Enable Sehri/Iftar reminders">🔔</button>
     <button class="share-btn" onclick="shareWhatsApp()" title="Share on WhatsApp">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -604,8 +691,7 @@
         // Render table
         function renderTable() {
             const tbody = document.getElementById('tableBody');
-            const today = new Date();
-            today.setHours(0, 0, 0, 0);
+            const today = getEffectiveToday();
 
             tbody.innerHTML = timetableData.map((row, index) => {
                 const rowDate = new Date(row.date[0], row.date[1] - 1, row.date[2]);
@@ -656,6 +742,8 @@
 
         // Get today's timetable entry
         function getTodayData() {
+            if (demoMode && demoDateIndex >= 0) return timetableData[demoDateIndex];
+            if (demoMode && demoDateIndex < 0) return null;
             const today = new Date();
             return timetableData.find(row => {
                 const rowDate = new Date(row.date[0], row.date[1] - 1, row.date[2]);
@@ -673,14 +761,13 @@
 
         // Update countdown
         function updateCountdown() {
-            const now = new Date();
+            const now = getEffectiveNow();
             const todayData = getTodayData();
             const countdownSection = document.getElementById('countdownSection');
             const daysContainer = document.getElementById('daysContainer');
 
             // Check if we're before Ramadan
-            const today = new Date();
-            today.setHours(0, 0, 0, 0);
+            const today = getEffectiveToday();
 
             if (today < ramadanStart) {
                 // Show countdown to Ramadan
@@ -872,6 +959,93 @@
             localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
         }
 
+        // Demo mode
+        let demoMode = false;
+        let demoDateIndex = -1;
+        let demoMinutes = 720; // minutes since midnight (default noon)
+
+        function getEffectiveNow() {
+            if (!demoMode) return new Date();
+            let d;
+            if (demoDateIndex === -2) {
+                d = new Date(2026, 1, 10); // Before Ramadan
+            } else if (demoDateIndex === -3) {
+                d = new Date(2026, 2, 25); // After Ramadan
+            } else if (demoDateIndex >= 0) {
+                const row = timetableData[demoDateIndex];
+                d = new Date(row.date[0], row.date[1] - 1, row.date[2]);
+            } else {
+                return new Date();
+            }
+            d.setHours(Math.floor(demoMinutes / 60), demoMinutes % 60, 30, 0);
+            return d;
+        }
+
+        function getEffectiveToday() {
+            const d = new Date(getEffectiveNow());
+            d.setHours(0, 0, 0, 0);
+            return d;
+        }
+
+        function toggleDemoPanel() {
+            const panel = document.getElementById('demoPanel');
+            const btn = document.getElementById('demoToggle');
+            panel.classList.toggle('open');
+            if (panel.classList.contains('open') && !demoMode) {
+                activateDemo();
+            }
+        }
+
+        function activateDemo() {
+            demoMode = true;
+            document.getElementById('demoToggle').classList.add('active');
+            document.getElementById('demoToggle').innerHTML = 'DEMO<span class="demo-badge">ON</span>';
+            renderTable();
+            updateCountdown();
+        }
+
+        function populateDemoDateSelect() {
+            const sel = document.getElementById('demoDate');
+            const opts = ['<option value="-2">Before Ramadan (Feb 10)</option>'];
+            timetableData.forEach((row, i) => {
+                const label = `${row.day} ${row.date[2]}/${row.date[1]} - Day ${row.no || 'Eid'}`;
+                opts.push(`<option value="${i}">${label}</option>`);
+            });
+            opts.push('<option value="-3">After Ramadan (Mar 25)</option>');
+            sel.innerHTML = opts.join('');
+        }
+
+        function onDemoDateChange() {
+            demoDateIndex = parseInt(document.getElementById('demoDate').value);
+            if (!demoMode) activateDemo();
+            renderTable();
+            updateCountdown();
+        }
+
+        function onDemoTimeChange() {
+            demoMinutes = parseInt(document.getElementById('demoTime').value);
+            const h = Math.floor(demoMinutes / 60);
+            const m = demoMinutes % 60;
+            document.getElementById('demoTimeDisplay').textContent =
+                h.toString().padStart(2, '0') + ':' + m.toString().padStart(2, '0');
+            if (!demoMode) activateDemo();
+            updateCountdown();
+        }
+
+        function resetDemo() {
+            demoMode = false;
+            demoDateIndex = -1;
+            demoMinutes = 720;
+            document.getElementById('demoToggle').classList.remove('active');
+            document.getElementById('demoToggle').textContent = 'DEMO';
+            document.getElementById('demoPanel').classList.remove('open');
+            document.getElementById('demoDate').value = '-2';
+            document.getElementById('demoTime').value = 720;
+            document.getElementById('demoTimeDisplay').textContent = '12:00';
+            renderTable();
+            updateCountdown();
+        }
+
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
             // Check saved dark mode preference
@@ -880,6 +1054,7 @@
                 document.querySelector('.dark-mode-toggle').textContent = '☀️';
             }
 
+            populateDemoDateSelect();
             renderTable();
             updateCountdown();
             setInterval(updateCountdown, 1000);
