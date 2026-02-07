@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ramadan-timetable-v3';
+const CACHE_NAME = 'ramadan-timetable-v4';
 const ASSETS = [
   '/shahjalal/',
   '/shahjalal/index.html',

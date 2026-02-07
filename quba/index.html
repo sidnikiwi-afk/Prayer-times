@@ -205,11 +205,85 @@
         body.dark-mode .iftari-col { color: #69b8db; }
         body.dark-mode .last-ten-badge { background: #b8860b; color: white; }
 
+        /* View Toggle */
+        .view-toggle {
+            display: flex;
+            justify-content: center;
+            padding: 12px 15px;
+            background: #f5f5f5;
+        }
+        .view-btn {
+            padding: 8px 24px;
+            border: 2px solid #1a5a7e;
+            background: transparent;
+            color: #1a5a7e;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            letter-spacing: 0.5px;
+        }
+        .view-btn:first-child { border-radius: 20px 0 0 20px; border-right: none; }
+        .view-btn:last-child { border-radius: 0 20px 20px 0; }
+        .view-btn.active { background: #1a5a7e; color: white; }
+        body.dark-mode .view-toggle { background: #252525; }
+        body.dark-mode .view-btn { border-color: #69b8db; color: #69b8db; }
+        body.dark-mode .view-btn.active { background: #69b8db; color: #1a1a1a; }
+
+        /* Today View */
+        .today-view { padding: 15px; }
+        .today-date-bar {
+            text-align: center; padding: 10px; font-size: 14px;
+            font-weight: 600; color: #1a5a7e;
+            border-bottom: 1px solid #eee; margin-bottom: 12px;
+        }
+        .today-cards { display: flex; flex-direction: column; gap: 10px; }
+        .prayer-card {
+            border-radius: 10px; padding: 14px 16px; background: #fafafa;
+            border: 2px solid transparent; transition: all 0.3s ease;
+        }
+        .prayer-card.passed { opacity: 0.45; }
+        .prayer-card.passed .prayer-card-name::after { content: ' \2713'; color: #1a5a7e; }
+        .prayer-card.active-prayer {
+            border-color: #1a5a7e;
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            box-shadow: 0 2px 12px rgba(26,90,126,0.15);
+        }
+        .prayer-card-header { display: flex; justify-content: space-between; align-items: center; }
+        .prayer-card-name { font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        .prayer-card-time { font-size: 22px; font-weight: 700; color: #1a5a7e; }
+        .prayer-card-details { display: flex; gap: 20px; margin-top: 6px; font-size: 12px; color: #666; }
+        .prayer-card-detail strong { color: #333; }
+        .next-badge {
+            display: inline-block; background: #1a5a7e; color: white;
+            font-size: 9px; padding: 2px 8px; border-radius: 10px;
+            font-weight: bold; text-transform: uppercase; letter-spacing: 1px;
+            margin-left: 8px; vertical-align: middle; animation: pulse 2s infinite;
+        }
+        .today-tomorrow {
+            margin-top: 15px; text-align: center; padding: 12px;
+            background: linear-gradient(135deg, #1a5a7e, #2a8ab5);
+            color: white; border-radius: 10px; font-size: 13px; font-weight: 600;
+        }
+        body.dark-mode .today-date-bar { color: #69b8db; border-bottom-color: #444; }
+        body.dark-mode .prayer-card { background: #252525; }
+        body.dark-mode .prayer-card.active-prayer { background: linear-gradient(135deg, #1a2e3c, #1f3a4a); border-color: #69b8db; }
+        body.dark-mode .prayer-card-time { color: #69b8db; }
+        body.dark-mode .prayer-card-details { color: #999; }
+        body.dark-mode .prayer-card-detail strong { color: #ccc; }
+        body.dark-mode .next-badge { background: #69b8db; color: #1a1a1a; }
+        body.dark-mode .prayer-card.passed .prayer-card-name::after { color: #69b8db; }
+        @media (min-width: 600px) {
+            .today-view { padding: 20px 30px; }
+            .prayer-card-name { font-size: 17px; }
+            .prayer-card-time { font-size: 26px; }
+        }
+
         /* Print */
         @media print {
             body { background: white !important; padding: 0; }
             .container { box-shadow: none; }
-            .dark-mode-toggle, .share-btn, .notify-btn, .countdown-section { display: none !important; }
+            .dark-mode-toggle, .share-btn, .notify-btn, .countdown-section, .view-toggle, .today-view { display: none !important; }
             .today { background: #fff3cd !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
         }
 
@@ -267,7 +341,18 @@
             </div>
         </div>
 
-        <div class="table-container">
+        <div class="view-toggle" id="viewToggle">
+            <button class="view-btn active" data-view="today">Today</button>
+            <button class="view-btn" data-view="full">Full Timetable</button>
+        </div>
+
+        <div class="today-view" id="todayView" style="display: none;">
+            <div class="today-date-bar" id="todayDateBar"></div>
+            <div class="today-cards" id="todayCards"></div>
+            <div class="today-tomorrow" id="todayTomorrow"></div>
+        </div>
+
+        <div class="table-container" id="tableContainer">
             <table id="timetable">
                 <thead>
                     <tr>
@@ -615,6 +700,72 @@
             localStorage.setItem('quba-darkMode', document.body.classList.contains('dark-mode'));
         }
 
+        // Today View
+        let currentView = localStorage.getItem('quba-viewMode') || 'today';
+
+        function renderTodayView() {
+            const todayData = getTodayData();
+            if (!todayData) {
+                document.getElementById('todayCards').innerHTML = '<div style="text-align:center;padding:30px;opacity:0.6;">No timetable data for today</div>';
+                document.getElementById('todayDateBar').textContent = '';
+                document.getElementById('todayTomorrow').style.display = 'none';
+                return;
+            }
+            const now = new Date();
+            const rowDate = new Date(todayData.date[0], todayData.date[1] - 1, todayData.date[2]);
+            const dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+            const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+            document.getElementById('todayDateBar').textContent =
+                `Day ${todayData.no || 'Eid'} of Ramadan  \u2022  ${dayNames[rowDate.getDay()]} ${rowDate.getDate()} ${monthNames[rowDate.getMonth()]} ${rowDate.getFullYear()}`;
+
+            function toDate24(timeStr, isPM) {
+                const [h, m] = timeStr.split(':').map(Number);
+                const d = new Date(now); d.setHours(isPM && h < 12 ? h + 12 : h, m, 0, 0); return d;
+            }
+            const isFriday = todayData.day === 'Fri';
+            const prayers = [
+                { name: 'Sehri', mainTime: todayData.sehri, isPM: false, details: [{label:'Fajr Start',value:todayData.fajr},{label:'Fajr Jamaah',value:todayData.jFajr}], eventTime: toDate24(todayData.sehri, false) },
+                { name: 'Sunrise', mainTime: todayData.sunrise, isPM: false, details: [], eventTime: toDate24(todayData.sunrise, false) },
+                { name: isFriday ? 'Jumu\'ah' : 'Zohar', mainTime: todayData.zuhr, isPM: false, details: [{label:'Jamaah',value:todayData.jZuhr}], eventTime: toDate24(todayData.zuhr, false) },
+                { name: 'Asr', mainTime: todayData.asr, isPM: true, details: [{label:'Jamaah',value:todayData.jAsr}], eventTime: toDate24(todayData.asr, true) },
+                { name: 'Iftar / Maghrib', mainTime: todayData.maghrib, isPM: true, details: [], eventTime: toDate24(todayData.maghrib, true) },
+                { name: 'Isha', mainTime: todayData.isha, isPM: true, details: [{label:'Jamaah',value:todayData.jIsha}], eventTime: toDate24(todayData.isha, true) }
+            ];
+            let nextIndex = -1;
+            for (let i = 0; i < prayers.length; i++) { if (now < prayers[i].eventTime) { nextIndex = i; break; } }
+            document.getElementById('todayCards').innerHTML = prayers.map((p, i) => {
+                const isPassed = nextIndex === -1 || i < nextIndex;
+                const isNext = i === nextIndex;
+                let cls = 'prayer-card';
+                if (isPassed && nextIndex !== -1) cls += ' passed';
+                if (isNext) cls += ' active-prayer';
+                const badge = isNext ? '<span class="next-badge">NEXT</span>' : '';
+                const details = p.details.length ? `<div class="prayer-card-details">${p.details.map(d=>`<div class="prayer-card-detail">${d.label} <strong>${d.value}</strong></div>`).join('')}</div>` : '';
+                return `<div class="${cls}"><div class="prayer-card-header"><div class="prayer-card-name">${p.name}${badge}</div><div class="prayer-card-time">${p.mainTime}</div></div>${details}</div>`;
+            }).join('');
+            const tomorrowIndex = timetableData.indexOf(todayData) + 1;
+            const tmrwEl = document.getElementById('todayTomorrow');
+            if (tomorrowIndex < timetableData.length) {
+                const tmrw = timetableData[tomorrowIndex];
+                tmrwEl.innerHTML = `Tomorrow: Sehri ends <strong>${tmrw.sehri}</strong> &nbsp;\u2022&nbsp; Iftar <strong>${tmrw.maghrib}</strong>`;
+                tmrwEl.style.display = '';
+            } else { tmrwEl.style.display = 'none'; }
+        }
+
+        function setView(view) {
+            currentView = view;
+            localStorage.setItem('quba-viewMode', view);
+            document.querySelectorAll('.view-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.view === view));
+            if (view === 'today') {
+                document.getElementById('todayView').style.display = '';
+                document.getElementById('tableContainer').style.display = 'none';
+                renderTodayView();
+            } else {
+                document.getElementById('todayView').style.display = 'none';
+                document.getElementById('tableContainer').style.display = '';
+            }
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             if (localStorage.getItem('quba-darkMode') === 'true') {
                 document.body.classList.add('dark-mode');
@@ -625,6 +776,12 @@
             setInterval(updateCountdown, 1000);
             setInterval(checkNotifications, 30000);
             updateNotifyButton();
+
+            document.querySelectorAll('.view-btn').forEach(btn => btn.addEventListener('click', () => setView(btn.dataset.view)));
+            const todayData = getTodayData();
+            if (!localStorage.getItem('quba-viewMode')) { currentView = todayData ? 'today' : 'full'; }
+            setView(currentView);
+            setInterval(() => { if (currentView === 'today') renderTodayView(); }, 60000);
         });
 
     </script>
