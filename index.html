@@ -94,8 +94,51 @@
             transition: all 0.3s ease;
         }
         .masjid-card:hover .card-arrow { opacity: 0.8; transform: translateX(3px); }
+        .submit-section {
+            margin-top: 35px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+        .submit-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.4;
+            margin-bottom: 12px;
+        }
+        .submit-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .submit-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.12);
+            background: rgba(255,255,255,0.06);
+            flex: 1 1 200px;
+            justify-content: center;
+        }
+        .submit-btn:hover {
+            background: rgba(255,255,255,0.12);
+            border-color: rgba(255,255,255,0.25);
+            transform: translateY(-1px);
+        }
+        .submit-btn .btn-icon { font-size: 18px; }
+        .submit-btn .btn-text { text-align: left; }
+        .submit-btn .btn-title { display: block; font-weight: 600; }
+        .submit-btn .btn-desc { display: block; font-size: 10px; opacity: 0.5; margin-top: 1px; }
         .footer {
-            margin-top: 40px;
+            margin-top: 25px;
             font-size: 11px;
             opacity: 0.3;
         }
@@ -109,7 +152,7 @@
         <div class="label">Select your masjid</div>
         <div class="masjid-list">
             <a href="shahjalal/" class="masjid-card">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #1a5c2e, #2d8a47);"></div>
+                <div class="card-colour" style="background: linear-gradient(to bottom, #004d40, #00796b);"></div>
                 <div class="card-info">
                     <div class="card-name">Shahjalal Islamic Society</div>
                     <div class="card-address">149A Little Horton Lane, BD5 0HS</div>
@@ -132,6 +175,25 @@
                 </div>
                 <div class="card-arrow">&rsaquo;</div>
             </a>
+        </div>
+        <div class="submit-section">
+            <div class="submit-label">Contribute</div>
+            <div class="submit-buttons">
+                <a href="FORM_LINK_HERE" target="_blank" class="submit-btn">
+                    <span class="btn-icon">&#x1F4CB;</span>
+                    <span class="btn-text">
+                        <span class="btn-title">Submit a Timetable</span>
+                        <span class="btn-desc">Upload your masjid's Ramadan timetable</span>
+                    </span>
+                </a>
+                <a href="FORM_LINK_HERE" target="_blank" class="submit-btn">
+                    <span class="btn-icon">&#x26A0;&#xFE0F;</span>
+                    <span class="btn-text">
+                        <span class="btn-title">Report an Error</span>
+                        <span class="btn-desc">Spotted a wrong time? Let us know</span>
+                    </span>
+                </a>
+            </div>
         </div>
         <div class="footer">February &ndash; March 2026</div>
     </div>
