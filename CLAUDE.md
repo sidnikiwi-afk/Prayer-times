@@ -25,9 +25,19 @@ Prayer-times/
 │   ├── qr-code.svg         # QR code for poster
 │   └── poster.html         # A4 printable QR poster
 ├── quba/
-│   └── index.html          # Masjid Quba timetable
+│   ├── index.html          # Masjid Quba timetable
+│   ├── manifest.json       # PWA manifest
+│   ├── sw.js               # Service worker (offline support)
+│   ├── og-image.svg        # Social preview image
+│   ├── qr-code.svg         # QR code for poster
+│   └── poster.html         # A4 printable QR poster
 └── Almahad/
-    └── index.html          # Al Mahad Ul Islami timetable
+    ├── index.html          # Al Mahad Ul Islami timetable
+    ├── manifest.json       # PWA manifest
+    ├── sw.js               # Service worker (offline support)
+    ├── og-image.svg        # Social preview image
+    ├── qr-code.svg         # QR code for poster
+    └── poster.html         # A4 printable QR poster
 ```
 
 ## Mosques
@@ -64,10 +74,12 @@ Prayer-times/
 - Print-friendly (hides buttons, countdown, nav, today-view)
 - Moon sighting disclaimer in header
 
+- **PWA**: manifest.json + sw.js for offline support, installable (all mosques)
+- **OG image**: og-image.svg social preview (all mosques)
+- **QR poster**: poster.html for A4 printing (all mosques)
+
 ### Shahjalal-Only Features
 - **Demo mode**: DEMO button (bottom-left), date picker + time slider to test countdown at any date/time
-- **PWA**: manifest.json + sw.js for offline support, installable
-- **QR poster**: poster.html for A4 printing
 
 ### Unique Sections
 - **Quba**: Programmes During Ramadan (Ml. Siraj Saleh, Ml. Ahmed Desai), live stream info

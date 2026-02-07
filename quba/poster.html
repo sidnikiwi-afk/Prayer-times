@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masjid Quba - QR Poster</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 210mm;
+            height: 297mm;
+            margin: 0 auto;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .poster {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20mm 15mm;
+        }
+
+        /* Blue header banner */
+        .banner {
+            width: 100%;
+            background: linear-gradient(135deg, #1a5a7e 0%, #2a8ab5 100%);
+            border-radius: 16px;
+            padding: 25px 30px;
+            text-align: center;
+            color: white;
+            margin-bottom: 15mm;
+        }
+        .mosque-icon {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+        .banner h1 {
+            font-size: 28px;
+            letter-spacing: 3px;
+            margin-bottom: 6px;
+        }
+        .banner .address {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+        .banner .month {
+            font-size: 20px;
+            font-weight: 600;
+            background: rgba(255,255,255,0.2);
+            padding: 6px 20px;
+            border-radius: 25px;
+            display: inline-block;
+        }
+
+        /* Scan prompt */
+        .scan-prompt {
+            text-align: center;
+            margin-bottom: 10mm;
+        }
+        .scan-prompt h2 {
+            font-size: 32px;
+            color: #1a5a7e;
+            margin-bottom: 5px;
+        }
+        .scan-prompt p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        /* QR code */
+        .qr-wrapper {
+            background: white;
+            border: 4px solid #1a5a7e;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 10mm;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        .qr-wrapper svg {
+            width: 70mm;
+            height: 70mm;
+        }
+
+        /* URL */
+        .url-box {
+            background: #f5f5f5;
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            padding: 12px 30px;
+            margin-bottom: 10mm;
+        }
+        .url-box code {
+            font-size: 14px;
+            color: #1a5a7e;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* Features list */
+        .features {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 12mm;
+        }
+        .feature {
+            text-align: center;
+            padding: 12px 18px;
+            background: #e1f0f7;
+            border-radius: 12px;
+            min-width: 130px;
+        }
+        .feature-icon {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+        .feature-text {
+            font-size: 12px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: auto;
+            text-align: center;
+            width: 100%;
+        }
+        .footer-divider {
+            width: 60%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #1a5a7e, transparent);
+            margin: 0 auto 15px;
+        }
+        .footer p {
+            font-size: 13px;
+            color: #888;
+        }
+        .footer .contact {
+            font-size: 15px;
+            color: #1a1a1a;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="poster">
+        <div class="banner">
+            <div class="mosque-icon">🕌</div>
+            <h1>MASJID QUBA</h1>
+            <div class="address">20 Quba Court (off Church Street), Bradford, BD8 7LA</div>
+            <div class="month">RAMADHAN 1447 | FEBRUARY - MARCH 2026</div>
+        </div>
+
+        <div class="scan-prompt">
+            <h2>Scan for Prayer Timetable</h2>
+            <p>View Sehri &amp; Iftar times with live countdown on your phone</p>
+        </div>
+
+        <div class="qr-wrapper">
+            <svg width="70mm" height="70mm" version="1.1" viewBox="0 0 33 33" xmlns="http://www.w3.org/2000/svg"><path d="M4,4H5V5H4zM5,4H6V5H5zM6,4H7V5H6zM7,4H8V5H7zM8,4H9V5H8zM9,4H10V5H9zM10,4H11V5H10zM12,4H13V5H12zM15,4H16V5H15zM16,4H17V5H16zM17,4H18V5H17zM22,4H23V5H22zM23,4H24V5H23zM24,4H25V5H24zM25,4H26V5H25zM26,4H27V5H26zM27,4H28V5H27zM28,4H29V5H28zM4,5H5V6H4zM10,5H11V6H10zM12,5H13V6H12zM13,5H14V6H13zM14,5H15V6H14zM16,5H17V6H16zM18,5H19V6H18zM20,5H21V6H20zM22,5H23V6H22zM28,5H29V6H28zM4,6H5V7H4zM6,6H7V7H6zM7,6H8V7H7zM8,6H9V7H8zM10,6H11V7H10zM14,6H15V7H14zM15,6H16V7H15zM16,6H17V7H16zM17,6H18V7H17zM19,6H20V7H19zM20,6H21V7H20zM22,6H23V7H22zM24,6H25V7H24zM25,6H26V7H25zM26,6H27V7H26zM28,6H29V7H28zM4,7H5V8H4zM6,7H7V8H6zM7,7H8V8H7zM8,7H9V8H8zM10,7H11V8H10zM14,7H15V8H14zM17,7H18V8H17zM18,7H19V8H18zM20,7H21V8H20zM22,7H23V8H22zM24,7H25V8H24zM25,7H26V8H25zM26,7H27V8H26zM28,7H29V8H28zM4,8H5V9H4zM6,8H7V9H6zM7,8H8V9H7zM8,8H9V9H8zM10,8H11V9H10zM12,8H13V9H12zM13,8H14V9H13zM14,8H15V9H14zM15,8H16V9H15zM17,8H18V9H17zM18,8H19V9H18zM22,8H23V9H22zM24,8H25V9H24zM25,8H26V9H25zM26,8H27V9H26zM28,8H29V9H28zM4,9H5V10H4zM10,9H11V10H10zM12,9H13V10H12zM15,9H16V10H15zM17,9H18V10H17zM20,9H21V10H20zM22,9H23V10H22zM28,9H29V10H28zM4,10H5V11H4zM5,10H6V11H5zM6,10H7V11H6zM7,10H8V11H7zM8,10H9V11H8zM9,10H10V11H9zM10,10H11V11H10zM12,10H13V11H12zM14,10H15V11H14zM16,10H17V11H16zM18,10H19V11H18zM20,10H21V11H20zM22,10H23V11H22zM23,10H24V11H23zM24,10H25V11H24zM25,10H26V11H25zM26,10H27V11H26zM27,10H28V11H27zM28,10H29V11H28zM12,11H13V12H12zM14,11H15V12H14zM15,11H16V12H15zM16,11H17V12H16zM19,11H20V12H19zM20,11H21V12H20zM4,12H5V13H4zM5,12H6V13H5zM6,12H7V13H6zM9,12H10V13H9zM10,12H11V13H10zM12,12H13V13H12zM13,12H14V13H13zM14,12H15V13H14zM20,12H21V13H20zM21,12H22V13H21zM22,12H23V13H22zM23,12H24V13H23zM24,12H25V13H24zM27,12H28V13H27zM28,12H29V13H28zM6,13H7V14H6zM8,13H9V14H8zM11,13H12V14H11zM13,13H14V14H13zM14,13H15V14H14zM19,13H20V14H19zM22,13H23V14H22zM23,13H24V14H23zM25,13H26V14H25zM27,13H28V14H27zM28,13H29V14H28zM4,14H5V15H4zM6,14H7V15H6zM7,14H8V15H7zM8,14H9V15H8zM9,14H10V15H9zM10,14H11V15H10zM12,14H13V15H12zM15,14H16V15H15zM17,14H18V15H17zM18,14H19V15H18zM19,14H20V15H19zM21,14H22V15H21zM22,14H23V15H22zM25,14H26V15H25zM26,14H27V15H26zM28,14H29V15H28zM4,15H5V16H4zM5,15H6V16H5zM6,15H7V16H6zM7,15H8V16H7zM13,15H14V16H13zM18,15H19V16H18zM19,15H20V16H19zM21,15H22V16H21zM23,15H24V16H23zM25,15H26V16H25zM5,16H6V17H5zM8,16H9V17H8zM10,16H11V17H10zM11,16H12V17H11zM12,16H13V17H12zM13,16H14V17H13zM15,16H16V17H15zM16,16H17V17H16zM18,16H19V17H18zM20,16H21V17H20zM22,16H23V17H22zM28,16H29V17H28zM6,17H7V18H6zM9,17H10V18H9zM11,17H12V18H11zM13,17H14V18H13zM16,17H17V18H16zM17,17H18V18H17zM19,17H20V18H19zM20,17H21V18H20zM21,17H22V18H21zM22,17H23V18H22zM23,17H24V18H23zM27,17H28V18H27zM28,17H29V18H28zM4,18H5V19H4zM5,18H6V19H5zM6,18H7V19H6zM7,18H8V19H7zM8,18H9V19H8zM9,18H10V19H9zM10,18H11V19H10zM11,18H12V19H11zM16,18H17V19H16zM19,18H20V19H19zM21,18H22V19H21zM22,18H23V19H22zM25,18H26V19H25zM26,18H27V19H26zM28,18H29V19H28zM7,19H8V20H7zM8,19H9V20H8zM12,19H13V20H12zM13,19H14V20H13zM14,19H15V20H14zM15,19H16V20H15zM16,19H17V20H16zM18,19H19V20H18zM20,19H21V20H20zM21,19H22V20H21zM23,19H24V20H23zM24,19H25V20H24zM25,19H26V20H25zM4,20H5V21H4zM5,20H6V21H5zM8,20H9V21H8zM9,20H10V21H9zM10,20H11V21H10zM12,20H13V21H12zM17,20H18V21H17zM18,20H19V21H18zM19,20H20V21H19zM20,20H21V21H20zM21,20H22V21H21zM22,20H23V21H22zM23,20H24V21H23zM24,20H25V21H24zM27,20H28V21H27zM12,21H13V22H12zM17,21H18V22H17zM19,21H20V22H19zM20,21H21V22H20zM24,21H25V22H24zM28,21H29V22H28zM4,22H5V23H4zM5,22H6V23H5zM6,22H7V23H6zM7,22H8V23H7zM8,22H9V23H8zM9,22H10V23H9zM10,22H11V23H10zM13,22H14V23H13zM15,22H16V23H15zM20,22H21V23H20zM22,22H23V23H22zM24,22H25V23H24zM28,22H29V23H28zM4,23H5V24H4zM10,23H11V24H10zM12,23H13V24H12zM13,23H14V24H13zM17,23H18V24H17zM19,23H20V24H19zM20,23H21V24H20zM24,23H25V24H24zM27,23H28V24H27zM4,24H5V25H4zM6,24H7V25H6zM7,24H8V25H7zM8,24H9V25H8zM10,24H11V25H10zM13,24H14V25H13zM14,24H15V25H14zM15,24H16V25H15zM16,24H17V25H16zM17,24H18V25H17zM19,24H20V25H19zM20,24H21V25H20zM21,24H22V25H21zM22,24H23V25H22zM23,24H24V25H23zM24,24H25V25H24zM28,24H29V25H28zM4,25H5V26H4zM6,25H7V26H6zM7,25H8V26H7zM8,25H9V26H8zM10,25H11V26H10zM13,25H14V26H13zM16,25H17V26H16zM20,25H21V26H20zM21,25H22V26H21zM24,25H25V26H24zM26,25H27V26H26zM27,25H28V26H27zM4,26H5V27H4zM6,26H7V27H6zM7,26H8V27H7zM8,26H9V27H8zM10,26H11V27H10zM12,26H13V27H12zM13,26H14V27H13zM16,26H17V27H16zM17,26H18V27H17zM18,26H19V27H18zM23,26H24V27H23zM24,26H25V27H24zM25,26H27V27H25zM27,26H28V27H27zM28,26H29V27H28zM4,27H5V28H4zM10,27H11V28H10zM12,27H13V28H12zM13,27H14V28H13zM15,27H16V28H15zM16,27H17V28H16zM18,27H19V28H18zM20,27H21V28H20zM21,27H22V28H21zM23,27H24V28H23zM24,27H25V28H24zM4,28H5V29H4zM5,28H6V29H5zM6,28H7V29H6zM7,28H8V29H7zM8,28H9V29H8zM9,28H10V29H9zM10,28H11V29H10zM12,28H13V29H12zM17,28H18V29H17zM18,28H19V29H18zM19,28H20V29H19zM20,28H21V29H20zM21,28H22V29H21zM22,28H23V29H22zM25,28H26V29H25zM28,28H29V29H28z" fill="#000000" fill-rule="nonzero" stroke="none" /></svg>
+        </div>
+
+        <div class="url-box">
+            <code>waqt.uk/quba</code>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">⏰</div>
+                <div class="feature-text">Live Sehri &amp;<br>Iftar Countdown</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🌙</div>
+                <div class="feature-text">Full Ramadan<br>Timetable</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🔔</div>
+                <div class="feature-text">Sehri &amp; Iftar<br>Reminders</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📱</div>
+                <div class="feature-text">Works on<br>Any Phone</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-divider"></div>
+            <p>Masjid Quba | 20 Quba Court (off Church Street), Bradford, BD8 7LA</p>
+            <div class="contact">Tel: 01274 542027 | masjidquba.org</div>
+        </div>
+    </div>
+</body>
+</html>

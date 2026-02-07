@@ -9,11 +9,14 @@
     <meta property="og:description" content="Masjid Quba, Bradford - Sehri, Iftar & prayer times with live countdown">
     <meta property="og:url" content="https://waqt.uk/quba/">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://waqt.uk/quba/og-image.svg">
     <meta name="theme-color" content="#1a5a7e">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Quba Times">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%231a5a7e' width='100' height='100' rx='20'/><text x='50' y='50' text-anchor='middle' dominant-baseline='central' font-size='60'>🌙</text></svg>">
+    <link rel="manifest" href="manifest.json">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -782,6 +785,11 @@
             if (!localStorage.getItem('quba-viewMode')) { currentView = todayData ? 'today' : 'full'; }
             setView(currentView);
             setInterval(() => { if (currentView === 'today') renderTodayView(); }, 60000);
+
+            // Register service worker for offline support
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('sw.js');
+            }
         });
 
     </script>
