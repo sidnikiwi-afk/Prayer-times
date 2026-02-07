@@ -877,18 +877,39 @@
         <div class="header">
             <canvas id="shaderCanvas"></canvas>
             <div class="mosque-icon-svg">
-                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
                     <defs>
-                        <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <linearGradient id="mosqueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
                             <stop offset="0%" stop-color="#ffd54f"/>
                             <stop offset="100%" stop-color="#ffb300"/>
                         </linearGradient>
                     </defs>
-                    <!-- Crescent moon -->
-                    <circle cx="50" cy="50" r="38" fill="url(#moonGrad)"/>
-                    <circle cx="62" cy="42" r="30" fill="#004d40"/>
-                    <!-- Star -->
-                    <polygon points="78,58 80.5,64 87,64.5 82,68.5 83.5,75 78,71 72.5,75 74,68.5 69,64.5 75.5,64" fill="url(#moonGrad)"/>
+                    <!-- Left minaret -->
+                    <rect x="15" y="30" width="8" height="52" rx="1" fill="url(#mosqueGrad)" opacity="0.8"/>
+                    <path d="M14 30 L19 18 L24 30" fill="url(#mosqueGrad)" opacity="0.9"/>
+                    <circle cx="19" cy="15" r="2.5" fill="#ffd54f"/>
+                    <line x1="19" y1="12.5" x2="19" y2="8" stroke="#ffd54f" stroke-width="1"/>
+                    <path d="M17 8 L19 4 L21 8" fill="#ffd54f"/>
+                    <!-- Right minaret -->
+                    <rect x="97" y="30" width="8" height="52" rx="1" fill="url(#mosqueGrad)" opacity="0.8"/>
+                    <path d="M96 30 L101 18 L106 30" fill="url(#mosqueGrad)" opacity="0.9"/>
+                    <circle cx="101" cy="15" r="2.5" fill="#ffd54f"/>
+                    <line x1="101" y1="12.5" x2="101" y2="8" stroke="#ffd54f" stroke-width="1"/>
+                    <path d="M99 8 L101 4 L103 8" fill="#ffd54f"/>
+                    <!-- Main body -->
+                    <rect x="28" y="50" width="64" height="32" rx="2" fill="url(#mosqueGrad)" opacity="0.7"/>
+                    <!-- Large central dome -->
+                    <ellipse cx="60" cy="50" rx="28" ry="22" fill="url(#mosqueGrad)" opacity="0.85"/>
+                    <!-- Dome crescent finial -->
+                    <line x1="60" y1="28" x2="60" y2="20" stroke="#ffd54f" stroke-width="1.2"/>
+                    <circle cx="60" cy="18" r="3" fill="#ffd54f"/>
+                    <circle cx="61.5" cy="17" r="2" fill="#004d40"/>
+                    <!-- Arched windows -->
+                    <path d="M42 72 L42 64 Q47 58 52 64 L52 72 Z" fill="#004d40" opacity="0.4"/>
+                    <path d="M55 72 L55 62 Q60 54 65 62 L65 72 Z" fill="#004d40" opacity="0.5"/>
+                    <path d="M68 72 L68 64 Q73 58 78 64 L78 72 Z" fill="#004d40" opacity="0.4"/>
+                    <!-- Base -->
+                    <rect x="25" y="82" width="70" height="4" rx="1" fill="url(#mosqueGrad)" opacity="0.6"/>
                 </svg>
             </div>
             <h1>SHAHJALAL ISLAMIC SOCIETY</h1>
@@ -1591,8 +1612,6 @@
                 granimInstance.states['default-state'].gradients = nowDark
                     ? [['#001a15', '#002620'], ['#003d33', '#001a2e'], ['#002620', '#003d33']]
                     : [['#004d40', '#00796b'], ['#00695c', '#00bcd4'], ['#005b4f', '#26a69a']];
-                var moonCircle = document.querySelector('.mosque-icon-svg circle:nth-child(3)');
-                if (moonCircle) moonCircle.setAttribute('fill', nowDark ? '#1a1a2e' : '#004d40');
             };
         };
         s.onerror = function() { canvas.style.display = 'none'; };

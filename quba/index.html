@@ -440,26 +440,37 @@
         <div class="header">
             <canvas id="granimCanvas"></canvas>
             <div class="lantern-icon">
-                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
                     <defs>
-                        <linearGradient id="lanternGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <linearGradient id="mosqueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
                             <stop offset="0%" stop-color="#e0e0ff"/>
                             <stop offset="100%" stop-color="#90caf9"/>
                         </linearGradient>
                     </defs>
-                    <!-- Hook -->
-                    <path d="M46 8 Q50 2 54 8" stroke="#e0e0ff" stroke-width="2" fill="none"/>
-                    <line x1="50" y1="8" x2="50" y2="18" stroke="#e0e0ff" stroke-width="2"/>
-                    <!-- Lantern top -->
-                    <path d="M38 18 L62 18 L58 28 L42 28 Z" fill="url(#lanternGrad)" opacity="0.9"/>
-                    <!-- Lantern body -->
-                    <rect x="40" y="28" width="20" height="35" rx="3" fill="url(#lanternGrad)" opacity="0.7"/>
-                    <!-- Glow inside -->
-                    <ellipse cx="50" cy="45" rx="6" ry="10" fill="#ffd54f" opacity="0.6"/>
-                    <!-- Lantern bottom -->
-                    <path d="M38 63 L62 63 L58 70 L42 70 Z" fill="url(#lanternGrad)" opacity="0.9"/>
-                    <!-- Star ornament -->
-                    <polygon points="50,74 51.5,77.5 55,78 52.5,80.5 53,84 50,82.5 47,84 47.5,80.5 45,78 48.5,77.5" fill="#ffd54f" opacity="0.8"/>
+                    <!-- Single slender minaret (right side) -->
+                    <rect x="92" y="28" width="7" height="54" rx="1" fill="url(#mosqueGrad)" opacity="0.75"/>
+                    <path d="M91 28 L95.5 14 L100 28" fill="url(#mosqueGrad)" opacity="0.85"/>
+                    <circle cx="95.5" cy="11.5" r="2" fill="#e0e0ff"/>
+                    <line x1="95.5" y1="9.5" x2="95.5" y2="5" stroke="#e0e0ff" stroke-width="1"/>
+                    <circle cx="95.5" cy="4" r="1.5" fill="#e0e0ff" opacity="0.7"/>
+                    <!-- Minaret balcony -->
+                    <rect x="89" y="42" width="13" height="2" rx="0.5" fill="url(#mosqueGrad)" opacity="0.6"/>
+                    <!-- Main building - modern clean -->
+                    <rect x="20" y="52" width="68" height="30" rx="2" fill="url(#mosqueGrad)" opacity="0.65"/>
+                    <!-- Single tall dome -->
+                    <path d="M25 52 Q54 10 83 52" fill="url(#mosqueGrad)" opacity="0.8"/>
+                    <!-- Dome finial -->
+                    <line x1="54" y1="18" x2="54" y2="10" stroke="#e0e0ff" stroke-width="1.2"/>
+                    <circle cx="54" cy="8" r="2.5" fill="#e0e0ff"/>
+                    <circle cx="55.2" cy="7" r="1.5" fill="#1a5a7e"/>
+                    <!-- Grand arched entrance -->
+                    <path d="M44 82 L44 60 Q54 48 64 60 L64 82 Z" fill="#1a5a7e" opacity="0.45"/>
+                    <!-- Side window arches -->
+                    <path d="M30 72 L30 64 Q34 59 38 64 L38 72" fill="none" stroke="#e0e0ff" stroke-width="0.8" opacity="0.4"/>
+                    <path d="M70 72 L70 64 Q74 59 78 64 L78 72" fill="none" stroke="#e0e0ff" stroke-width="0.8" opacity="0.4"/>
+                    <!-- Base platform -->
+                    <rect x="16" y="82" width="86" height="4" rx="1" fill="url(#mosqueGrad)" opacity="0.5"/>
+                    <rect x="42" y="86" width="24" height="2" rx="0.5" fill="url(#mosqueGrad)" opacity="0.4"/>
                 </svg>
             </div>
             <h1>MASJID QUBA</h1>
