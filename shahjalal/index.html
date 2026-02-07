@@ -1554,46 +1554,49 @@
     </script>
     <script src="../nav.js"></script>
 
-    <!-- Granim.js - smooth animated gradient behind header -->
-    <script src="https://cdn.jsdelivr.net/npm/granim@2.0.0/dist/granim.min.js"></script>
+    <!-- Granim.js - async loaded, never blocks page -->
     <script>
     (function() {
         var canvas = document.getElementById('shaderCanvas');
         if (!canvas) return;
-        var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        var mobile = window.innerWidth < 600;
-        if (reducedMotion || mobile) { canvas.style.display = 'none'; return; }
-        if (typeof Granim === 'undefined') { canvas.style.display = 'none'; return; }
-
-        var isDark = document.body.classList.contains('dark-mode');
-        var granimInstance = new Granim({
-            element: '#shaderCanvas',
-            direction: 'diagonal',
-            isPausedWhenNotInView: true,
-            stateTransitionSpeed: 500,
-            states: {
-                "default-state": {
-                    gradients: isDark
-                        ? [['#001a15', '#002620'], ['#003d33', '#001a2e'], ['#002620', '#003d33']]
-                        : [['#004d40', '#00796b'], ['#00695c', '#00bcd4'], ['#005b4f', '#26a69a']],
-                    transitionSpeed: 4000,
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || window.innerWidth < 600) {
+            canvas.style.display = 'none'; return;
+        }
+        var s = document.createElement('script');
+        s.src = 'https://cdn.jsdelivr.net/npm/granim@2.0.0/dist/granim.min.js';
+        s.async = true;
+        s.onload = function() {
+            if (typeof Granim === 'undefined') { canvas.style.display = 'none'; return; }
+            var isDark = document.body.classList.contains('dark-mode');
+            var granimInstance = new Granim({
+                element: '#shaderCanvas',
+                direction: 'diagonal',
+                isPausedWhenNotInView: true,
+                stateTransitionSpeed: 500,
+                states: {
+                    "default-state": {
+                        gradients: isDark
+                            ? [['#001a15', '#002620'], ['#003d33', '#001a2e'], ['#002620', '#003d33']]
+                            : [['#004d40', '#00796b'], ['#00695c', '#00bcd4'], ['#005b4f', '#26a69a']],
+                        transitionSpeed: 4000,
+                    }
                 }
-            }
-        });
-
-        // Update Granim on dark mode toggle
-        var origToggle = window.toggleDarkMode;
-        window.toggleDarkMode = function() {
-            origToggle();
-            var nowDark = document.body.classList.contains('dark-mode');
-            granimInstance.changeState('default-state');
-            granimInstance.states['default-state'].gradients = nowDark
-                ? [['#001a15', '#002620'], ['#003d33', '#001a2e'], ['#002620', '#003d33']]
-                : [['#004d40', '#00796b'], ['#00695c', '#00bcd4'], ['#005b4f', '#26a69a']];
-            // Update crescent moon inner circle to match
-            var moonCircle = document.querySelector('.mosque-icon-svg circle:nth-child(3)');
-            if (moonCircle) moonCircle.setAttribute('fill', nowDark ? '#1a1a2e' : '#004d40');
+            });
+            // Update Granim on dark mode toggle
+            var origToggle = window.toggleDarkMode;
+            window.toggleDarkMode = function() {
+                origToggle();
+                var nowDark = document.body.classList.contains('dark-mode');
+                granimInstance.changeState('default-state');
+                granimInstance.states['default-state'].gradients = nowDark
+                    ? [['#001a15', '#002620'], ['#003d33', '#001a2e'], ['#002620', '#003d33']]
+                    : [['#004d40', '#00796b'], ['#00695c', '#00bcd4'], ['#005b4f', '#26a69a']];
+                var moonCircle = document.querySelector('.mosque-icon-svg circle:nth-child(3)');
+                if (moonCircle) moonCircle.setAttribute('fill', nowDark ? '#1a1a2e' : '#004d40');
+            };
         };
+        s.onerror = function() { canvas.style.display = 'none'; };
+        document.body.appendChild(s);
     })();
     </script>
 
