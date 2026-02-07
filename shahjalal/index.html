@@ -640,6 +640,13 @@
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
             }
+            #shaderCanvas { display: none !important; }
+            .header { animation: none !important; }
+            .prayer-card,
+            .countdown-item,
+            .footer-section { animation: none !important; }
+            * { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+            tbody tr { transition: none !important; border-left: none !important; }
         }
 
         /* Mobile optimizations */
@@ -652,11 +659,164 @@
                 flex: 1 1 100%;
             }
         }
+
+        /* === VISUAL ENHANCEMENTS === */
+
+        /* 1a. Animated Gradient Header */
+        @property --grad-a { syntax: '<color>'; inherits: false; initial-value: #004d40; }
+        @property --grad-b { syntax: '<color>'; inherits: false; initial-value: #00796b; }
+        .header {
+            --grad-a: #004d40;
+            --grad-b: #00796b;
+            background: linear-gradient(135deg, var(--grad-a) 0%, var(--grad-b) 100%);
+            animation: headerBreath 8s ease-in-out infinite alternate;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .header > * { position: relative; z-index: 2; }
+        @keyframes headerBreath {
+            0%   { --grad-a: #004d40; --grad-b: #00796b; }
+            50%  { --grad-a: #00695c; --grad-b: #009688; }
+            100% { --grad-a: #004d40; --grad-b: #00897b; }
+        }
+
+        /* 1b. Glassmorphism Prayer Cards */
+        .prayer-card {
+            background: rgba(250, 250, 250, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 77, 64, 0.08);
+        }
+        .prayer-card.active-prayer {
+            box-shadow: 0 0 20px rgba(0, 77, 64, 0.2), 0 2px 12px rgba(0, 77, 64, 0.15);
+        }
+        body.dark-mode .prayer-card {
+            background: rgba(37, 37, 37, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(128, 203, 196, 0.1);
+        }
+        body.dark-mode .prayer-card.active-prayer {
+            box-shadow: 0 0 20px rgba(128, 203, 196, 0.15), 0 2px 12px rgba(128, 203, 196, 0.1);
+        }
+
+        /* 1c. Entrance Animations */
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .countdown-item {
+            animation: slideUp 0.5s ease-out both;
+        }
+        .countdown-item:nth-child(1) { animation-delay: 0.05s; }
+        .countdown-item:nth-child(2) { animation-delay: 0.1s; }
+        .countdown-item:nth-child(3) { animation-delay: 0.15s; }
+        .countdown-item:nth-child(4) { animation-delay: 0.2s; }
+        .prayer-card {
+            animation: slideUp 0.4s ease-out both;
+        }
+        .prayer-card:nth-child(1) { animation-delay: 0.05s; }
+        .prayer-card:nth-child(2) { animation-delay: 0.1s; }
+        .prayer-card:nth-child(3) { animation-delay: 0.15s; }
+        .prayer-card:nth-child(4) { animation-delay: 0.2s; }
+        .prayer-card:nth-child(5) { animation-delay: 0.25s; }
+        .prayer-card:nth-child(6) { animation-delay: 0.3s; }
+        .footer-section {
+            animation: slideUp 0.5s ease-out both;
+        }
+        .footer-section:nth-child(1) { animation-delay: 0.1s; }
+        .footer-section:nth-child(2) { animation-delay: 0.15s; }
+        .footer-section:nth-child(3) { animation-delay: 0.2s; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .countdown-item,
+            .prayer-card,
+            .footer-section {
+                animation: none !important;
+            }
+            .header {
+                animation: none !important;
+            }
+            .countdown-value {
+                transition: none !important;
+            }
+            tbody tr {
+                transition: none !important;
+            }
+        }
+
+        /* 1d. Enhanced Countdown Numbers */
+        .countdown-value {
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            transition: transform 0.2s ease;
+        }
+        .countdown-value.tick {
+            transform: scale(1.15);
+        }
+
+        /* 1e. Polished Table Hover */
+        tbody tr {
+            transition: all 0.25s ease;
+            border-left: 3px solid transparent;
+        }
+        tbody tr:hover {
+            transform: translateX(2px);
+            border-left-color: #004d40;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+        body.dark-mode tbody tr:hover {
+            border-left-color: #80cbc4;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 1f. Floating Button Glass Effect */
+        .dark-mode-toggle,
+        .share-btn,
+        .notify-btn {
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .dark-mode-toggle {
+            background: rgba(0, 77, 64, 0.85);
+        }
+        .share-btn {
+            background: rgba(37, 211, 102, 0.85);
+        }
+        .notify-btn {
+            background: rgba(139, 0, 0, 0.85);
+        }
+        .notify-btn.active {
+            background: rgba(0, 77, 64, 0.85);
+        }
+
+        /* 1g. View Toggle Transition */
+        .today-view,
+        .table-container {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .view-fade-enter {
+            opacity: 0;
+            transform: translateY(8px);
+        }
+
+        /* Paper Shader canvas */
+        #shaderCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.35;
+            pointer-events: none;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
+            <canvas id="shaderCanvas"></canvas>
             <div class="mosque-icon">🕌</div>
             <h1>SHAHJALAL ISLAMIC SOCIETY</h1>
             <div class="address">149A Little Horton Lane, Bradford, West Yorkshire, BD5 0HS</div>
@@ -1319,5 +1479,97 @@
 
     </script>
     <script src="../nav.js"></script>
+
+    <!-- Paper Shader - ambient mesh gradient behind header -->
+    <script type="module">
+        // Performance guards
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const isMobile = window.innerWidth < 600;
+
+        if (!prefersReducedMotion && !isMobile) {
+            import('https://esm.sh/paper-shaders@0.1.3')
+                .then(({ MeshGradient }) => {
+                    const canvas = document.getElementById('shaderCanvas');
+                    if (!canvas) return;
+                    try {
+                        const isDark = document.body.classList.contains('dark-mode');
+                        const gradient = new MeshGradient(canvas, {
+                            colors: isDark
+                                ? ['#001a15', '#002620', '#003d33', '#001a2e']
+                                : ['#004d40', '#00695c', '#009688', '#00796b'],
+                            speed: 0.15,
+                            seed: 42,
+                        });
+                        gradient.start();
+
+                        // Update colors on dark mode toggle
+                        const origToggle = window.toggleDarkMode;
+                        window.toggleDarkMode = function() {
+                            origToggle();
+                            const nowDark = document.body.classList.contains('dark-mode');
+                            gradient.setColors(nowDark
+                                ? ['#001a15', '#002620', '#003d33', '#001a2e']
+                                : ['#004d40', '#00695c', '#009688', '#00796b']
+                            );
+                        };
+                    } catch (e) {
+                        // WebGL not supported - CSS gradient stays as fallback
+                        canvas.style.display = 'none';
+                    }
+                })
+                .catch(() => {
+                    // CDN unavailable - CSS gradient stays as fallback
+                    const canvas = document.getElementById('shaderCanvas');
+                    if (canvas) canvas.style.display = 'none';
+                });
+        } else {
+            // Reduced motion or mobile - hide canvas
+            const canvas = document.getElementById('shaderCanvas');
+            if (canvas) canvas.style.display = 'none';
+        }
+    </script>
+
+    <!-- Countdown tick animation -->
+    <script>
+        (function() {
+            const ids = ['hours', 'minutes', 'seconds', 'days'];
+            const prev = {};
+            ids.forEach(id => prev[id] = '');
+
+            setInterval(() => {
+                ids.forEach(id => {
+                    const el = document.getElementById(id);
+                    if (!el) return;
+                    const val = el.textContent;
+                    if (val !== prev[id] && prev[id] !== '') {
+                        el.classList.add('tick');
+                        setTimeout(() => el.classList.remove('tick'), 200);
+                    }
+                    prev[id] = val;
+                });
+            }, 250);
+        })();
+    </script>
+
+    <!-- View transition animation -->
+    <script>
+        (function() {
+            const origSetView = window.setView;
+            if (!origSetView) return;
+            window.setView = function(view) {
+                const todayView = document.getElementById('todayView');
+                const tableContainer = document.getElementById('tableContainer');
+                const target = view === 'today' ? todayView : tableContainer;
+
+                target.classList.add('view-fade-enter');
+                origSetView(view);
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        target.classList.remove('view-fade-enter');
+                    });
+                });
+            };
+        })();
+    </script>
 </body>
 </html>
