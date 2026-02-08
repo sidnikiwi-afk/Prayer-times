@@ -9,6 +9,8 @@ const MASJIDS = [
     // Detect current mosque from URL
     const path = window.location.pathname;
     const currentFolder = MASJIDS.find(m => path.includes('/' + m.folder + '/'));
+    const isHome = !currentFolder;
+    const pathPrefix = isHome ? '' : '../';
 
     // Inject CSS
     const style = document.createElement('style');
@@ -76,7 +78,7 @@ const MASJIDS = [
     // Build nav HTML
     const items = MASJIDS.map(m => {
         const isActive = currentFolder && m.folder === currentFolder.folder;
-        return `<li><a href="../${m.folder}/"${isActive ? ' class="active"' : ''}><span class="nav-name">${m.name}</span><span class="nav-addr">${m.addr}</span></a></li>`;
+        return `<li><a href="${pathPrefix}${m.folder}/"${isActive ? ' class="active"' : ''}><span class="nav-name">${m.name}</span><span class="nav-addr">${m.addr}</span></a></li>`;
     }).join('');
 
     const nav = document.createElement('nav');
@@ -89,7 +91,7 @@ const MASJIDS = [
                 <div class="nav-dropdown" id="navDropdown">
                     <input type="text" class="nav-search" id="navSearch" placeholder="Search masjids...">
                     <ul class="nav-list" id="navList">${items}</ul>
-                    <a href="../" class="nav-all">View all masjids</a>
+                    ${isHome ? '' : '<a href="../" class="nav-all">View all masjids</a>'}
                 </div>
             </div>
         </div>

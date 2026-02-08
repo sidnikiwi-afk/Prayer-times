@@ -77,6 +77,20 @@
             100% { background-position: 0% 50%; }
         }
 
+        /* --- Nav bar (from nav.js) --- */
+        .masjid-nav {
+            position: relative;
+            z-index: 2;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.08) !important;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .nav-dropdown {
+            background: #16213e !important;
+            border-color: rgba(255,255,255,0.15) !important;
+        }
+
         /* --- Main Content --- */
         .container {
             max-width: 600px;
@@ -322,7 +336,8 @@
         @media print {
             #granimCanvas,
             .shimmer-overlay,
-            body::after {
+            body::after,
+            .masjid-nav {
                 display: none !important;
             }
             body {
@@ -403,6 +418,8 @@
             <div class="footer-context">February &ndash; March 2026</div>
         </div>
     </div>
+
+    <script src="nav.js"></script>
 
     <!-- Granim.js - loaded asynchronously -->
     <script>
