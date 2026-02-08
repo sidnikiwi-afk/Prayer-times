@@ -93,7 +93,7 @@ Prayer-times/
 - **Ramadan progress bar**: Thin bar below header showing "Day X of 30" with gradient fill. Auto-calculated from timetableData. Hidden outside Ramadan.
 - **Auto dark mode at Maghrib**: Automatically enables dark mode after Maghrib, disables after Fajr. Respects manual toggle (disables auto if user toggles manually). localStorage: `{prefix}-autoDark`
 - **Eid confetti burst**: 150 themed particles burst when "Eid Mubarak" state triggers. Canvas overlay, self-removes after 5s.
-- **Qibla compass**: Floating button (bottom-left) opens overlay with compass rose SVG. Arrow points 119.7° (Bradford → Ka'bah). Live compass on mobile via DeviceOrientationEvent, static bearing on desktop.
+- **Qibla compass**: Floating button (bottom-left) opens overlay with compass rose SVG. Arrow points 119.7° (Bradford → Ka'bah). Live compass on mobile via DeviceOrientationEvent (incl. `deviceorientationabsolute`), static bearing on desktop. **Standard implementation**: All mosques use the Shahjalal compass pattern (IIFE with `openQibla`/`closeQibla`/`closeQiblaOverlay` on window, `.qibla-overlay.open` toggle, `.qibla-compass`/`.qibla-compass-ring`/`.qibla-bearing-text` classes, `#qiblaSvg`/`#qiblaArrow`/`#qiblaKaaba` SVG IDs). New mosques should copy this pattern and only change theme colors.
 
 ### Progressive Enhancement
 - All visual effects respect `prefers-reduced-motion: reduce`

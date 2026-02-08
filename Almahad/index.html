@@ -553,48 +553,97 @@
 
         /* === FEATURE 7: Qibla Compass === */
         .qibla-btn {
-            position: fixed; bottom: 20px; left: 20px;
-            background: rgba(27, 94, 32, 0.85); color: white; border: none;
-            padding: 12px 15px; border-radius: 50px; cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2); font-size: 18px;
-            z-index: 100; transition: all 0.3s ease;
-            backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(27, 94, 32, 0.85);
+            color: white;
+            border: none;
+            padding: 12px 15px;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            font-size: 18px;
+            z-index: 100;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
         }
         .qibla-btn:hover { transform: scale(1.1); }
         .qibla-overlay {
-            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.7);
-            display: flex; align-items: center; justify-content: center;
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
             z-index: 10000;
-            opacity: 0; pointer-events: none;
-            transition: opacity 0.3s ease;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
         }
-        .qibla-overlay.visible { opacity: 1; pointer-events: auto; }
-        .qibla-compass-box {
-            background: white; border-radius: 20px; padding: 30px;
-            text-align: center; max-width: 320px; width: 90%;
+        .qibla-overlay.open { display: flex; }
+        .qibla-compass {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            max-width: 320px;
+            width: 90%;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             position: relative;
         }
-        body.dark-mode .qibla-compass-box { background: #1f1f1f; color: #e0e0e0; }
-        .qibla-compass-box h3 { color: #1b5e20; margin-bottom: 8px; font-size: 18px; }
-        body.dark-mode .qibla-compass-box h3 { color: #66bb6a; }
-        .qibla-compass-box p { font-size: 12px; color: #666; margin-bottom: 15px; }
-        body.dark-mode .qibla-compass-box p { color: #999; }
-        .qibla-compass-dial {
-            width: 200px; height: 200px;
+        .qibla-compass h3 {
+            color: #1b5e20;
+            margin: 0 0 5px;
+            font-size: 18px;
+        }
+        .qibla-compass .qibla-subtitle {
+            color: #666;
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+        .qibla-compass-ring {
+            width: 200px;
+            height: 200px;
             margin: 0 auto 15px;
             position: relative;
+            border-radius: 50%;
+            border: 3px solid #e8f5e9;
+            background: radial-gradient(circle, #f5f5f5 0%, #e8f5e9 100%);
         }
-        .qibla-compass-dial svg { width: 100%; height: 100%; }
-        .qibla-bearing { font-size: 14px; color: #1b5e20; font-weight: 600; }
-        body.dark-mode .qibla-bearing { color: #66bb6a; }
+        .qibla-compass-ring svg {
+            width: 100%;
+            height: 100%;
+        }
+        .qibla-bearing-text {
+            font-size: 14px;
+            color: #333;
+            font-weight: 600;
+        }
         .qibla-close {
-            position: absolute; top: 10px; right: 15px;
-            background: none; border: none; font-size: 22px;
-            cursor: pointer; color: #999; line-height: 1;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 22px;
+            cursor: pointer;
+            color: #999;
+            line-height: 1;
         }
         .qibla-close:hover { color: #333; }
+        body.dark-mode .qibla-compass {
+            background: #2d2d2d;
+            color: #e0e0e0;
+        }
+        body.dark-mode .qibla-compass h3 { color: #66bb6a; }
+        body.dark-mode .qibla-compass .qibla-subtitle { color: #999; }
+        body.dark-mode .qibla-compass-ring {
+            border-color: #37474f;
+            background: radial-gradient(circle, #1f1f1f 0%, #263238 100%);
+        }
+        body.dark-mode .qibla-bearing-text { color: #ccc; }
+        body.dark-mode .qibla-close { color: #777; }
         body.dark-mode .qibla-close:hover { color: #ccc; }
 
         /* === FEATURE 8: Custom Themed Scrollbar === */
@@ -867,40 +916,41 @@
         <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </button>
     <button class="dark-mode-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">&#x1F319;</button>
-    <button class="qibla-btn" id="qiblaBtn" onclick="openQibla()" title="Qibla direction">&#x1F9ED;</button>
-
-    <div class="qibla-overlay" id="qiblaOverlay" onclick="closeQibla(event)">
-        <div class="qibla-compass-box">
-            <button class="qibla-close" onclick="closeQibla(event)">&times;</button>
+    <button class="qibla-btn" id="qiblaBtn" onclick="openQibla()" title="Qibla direction">🧭</button>
+    <div class="qibla-overlay" id="qiblaOverlay" onclick="closeQiblaOverlay(event)">
+        <div class="qibla-compass" onclick="event.stopPropagation()">
+            <button class="qibla-close" onclick="closeQibla()">&times;</button>
             <h3>Qibla Direction</h3>
-            <p>From Bradford, UK to the Ka'bah</p>
-            <div class="qibla-compass-dial" id="qiblaCompassDial">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Outer ring -->
-                    <circle cx="100" cy="100" r="95" fill="none" stroke="#e8f5e9" stroke-width="2"/>
-                    <circle cx="100" cy="100" r="85" fill="none" stroke="#c8e6c9" stroke-width="1"/>
-                    <!-- Cardinal directions -->
-                    <text x="100" y="18" text-anchor="middle" fill="#1b5e20" font-size="14" font-weight="bold">N</text>
-                    <text x="100" y="196" text-anchor="middle" fill="#666" font-size="12">S</text>
-                    <text x="8" y="104" text-anchor="middle" fill="#666" font-size="12">W</text>
-                    <text x="192" y="104" text-anchor="middle" fill="#666" font-size="12">E</text>
-                    <!-- Degree ticks -->
-                    <line x1="100" y1="8" x2="100" y2="18" stroke="#1b5e20" stroke-width="2"/>
-                    <line x1="100" y1="182" x2="100" y2="192" stroke="#ccc" stroke-width="1"/>
-                    <line x1="8" y1="100" x2="18" y2="100" stroke="#ccc" stroke-width="1"/>
-                    <line x1="182" y1="100" x2="192" y2="100" stroke="#ccc" stroke-width="1"/>
-                    <!-- Inner compass rose -->
-                    <circle cx="100" cy="100" r="6" fill="#1b5e20"/>
-                    <!-- Qibla arrow - pointing ~119.7 degrees from north -->
+            <div class="qibla-subtitle">From Bradford, UK</div>
+            <div class="qibla-compass-ring" id="qiblaRing">
+                <svg viewBox="0 0 200 200" id="qiblaSvg">
+                    <!-- Compass rose -->
+                    <circle cx="100" cy="100" r="95" fill="none" stroke="#c8e6c9" stroke-width="1"/>
+                    <circle cx="100" cy="100" r="70" fill="none" stroke="#e0e0e0" stroke-width="0.5"/>
+                    <!-- Cardinal labels -->
+                    <text x="100" y="18" text-anchor="middle" font-size="12" font-weight="bold" fill="#1b5e20">N</text>
+                    <text x="188" y="104" text-anchor="middle" font-size="11" fill="#888">E</text>
+                    <text x="100" y="194" text-anchor="middle" font-size="11" fill="#888">S</text>
+                    <text x="14" y="104" text-anchor="middle" font-size="11" fill="#888">W</text>
+                    <!-- Tick marks -->
+                    <line x1="100" y1="8" x2="100" y2="16" stroke="#1b5e20" stroke-width="2"/>
+                    <line x1="192" y1="100" x2="184" y2="100" stroke="#ccc" stroke-width="1"/>
+                    <line x1="100" y1="192" x2="100" y2="184" stroke="#ccc" stroke-width="1"/>
+                    <line x1="8" y1="100" x2="16" y2="100" stroke="#ccc" stroke-width="1"/>
+                    <!-- Qibla arrow (119.7 degrees from north) -->
                     <g id="qiblaArrow" transform="rotate(119.7, 100, 100)">
-                        <line x1="100" y1="100" x2="100" y2="25" stroke="#388e3c" stroke-width="3" stroke-linecap="round"/>
-                        <polygon points="100,20 94,35 106,35" fill="#388e3c"/>
-                        <text x="100" y="48" text-anchor="middle" fill="#388e3c" font-size="10" font-weight="bold">QIBLA</text>
+                        <line x1="100" y1="100" x2="100" y2="25" stroke="#8b0000" stroke-width="2.5" stroke-linecap="round"/>
+                        <polygon points="100,20 94,36 106,36" fill="#8b0000"/>
+                        <circle cx="100" cy="100" r="5" fill="#1b5e20"/>
+                        <circle cx="100" cy="100" r="2" fill="white"/>
+                    </g>
+                    <!-- Kaaba icon at arrow tip -->
+                    <g id="qiblaKaaba" transform="rotate(119.7, 100, 100)">
+                        <rect x="95" y="12" width="10" height="10" rx="1" fill="#1a1a1a" transform="rotate(-119.7, 100, 17)"/>
                     </g>
                 </svg>
             </div>
-            <div class="qibla-bearing">Bearing: 119.7&deg; (ESE)</div>
-            <p id="qiblaLiveStatus" style="margin-top:8px;font-size:11px;color:#999;"></p>
+            <div class="qibla-bearing-text" id="qiblaBearingText">Qibla is 119.7&deg; from North (ESE)</div>
         </div>
     </div>
 
@@ -1244,66 +1294,89 @@
         }
 
         // === FEATURE 7: Qibla Compass ===
-        let qiblaOrientationHandler = null;
+        (function() {
+            const QIBLA_BEARING = 119.7;
+            let orientationWatching = false;
 
-        function openQibla() {
-            document.getElementById('qiblaOverlay').classList.add('visible');
-            // Try live compass on mobile
-            if (window.DeviceOrientationEvent) {
-                if (typeof DeviceOrientationEvent.requestPermission === 'function') {
-                    // iOS 13+
-                    DeviceOrientationEvent.requestPermission().then(function(resp) {
-                        if (resp === 'granted') startCompass();
-                        else document.getElementById('qiblaLiveStatus').textContent = 'Compass permission denied. Showing static bearing.';
-                    }).catch(function() {
-                        document.getElementById('qiblaLiveStatus').textContent = 'Showing static bearing.';
-                    });
-                } else {
-                    startCompass();
-                }
-            } else {
-                document.getElementById('qiblaLiveStatus').textContent = 'Compass not available. Showing static bearing.';
-            }
-        }
-
-        function startCompass() {
-            var gotReading = false;
-            qiblaOrientationHandler = function(e) {
-                var alpha = e.alpha; // Device heading
-                if (alpha === null || alpha === undefined) return;
-                gotReading = true;
-                var qiblaBearing = 119.7;
-                // Rotate the whole compass so N is at device north, arrow stays at qibla
-                var dialRotation = -alpha;
-                var arrowEl = document.getElementById('qiblaArrow');
-                if (arrowEl) {
-                    // Reset arrow to qibla bearing, rotate dial for device heading
-                    var dial = document.querySelector('#qiblaCompassDial svg');
-                    if (dial) dial.style.transform = 'rotate(' + dialRotation + 'deg)';
-                }
-                document.getElementById('qiblaLiveStatus').textContent = 'Live compass active. Point your device to follow the arrow.';
+            window.openQibla = function() {
+                document.getElementById('qiblaOverlay').classList.add('open');
+                startOrientation();
             };
-            window.addEventListener('deviceorientation', qiblaOrientationHandler);
-            setTimeout(function() {
-                if (!gotReading) {
-                    document.getElementById('qiblaLiveStatus').textContent = 'No compass data. Showing static bearing.';
-                }
-            }, 2000);
-        }
 
-        function closeQibla(e) {
-            if (e.target === document.getElementById('qiblaOverlay') || e.target.classList.contains('qibla-close')) {
-                document.getElementById('qiblaOverlay').classList.remove('visible');
-                if (qiblaOrientationHandler) {
-                    window.removeEventListener('deviceorientation', qiblaOrientationHandler);
-                    qiblaOrientationHandler = null;
+            window.closeQibla = function() {
+                document.getElementById('qiblaOverlay').classList.remove('open');
+            };
+
+            window.closeQiblaOverlay = function(e) {
+                if (e.target === document.getElementById('qiblaOverlay')) {
+                    closeQibla();
                 }
-                // Reset dial rotation
-                var dial = document.querySelector('#qiblaCompassDial svg');
-                if (dial) dial.style.transform = '';
-                document.getElementById('qiblaLiveStatus').textContent = '';
+            };
+
+            function startOrientation() {
+                if (orientationWatching) return;
+
+                if (typeof DeviceOrientationEvent !== 'undefined' &&
+                    typeof DeviceOrientationEvent.requestPermission === 'function') {
+                    DeviceOrientationEvent.requestPermission().then(function(state) {
+                        if (state === 'granted') {
+                            window.addEventListener('deviceorientationabsolute', handleOrientation, true);
+                            window.addEventListener('deviceorientation', handleOrientation, true);
+                            orientationWatching = true;
+                        }
+                    }).catch(function() {
+                        showStaticBearing();
+                    });
+                } else if ('DeviceOrientationEvent' in window) {
+                    window.addEventListener('deviceorientationabsolute', handleOrientation, true);
+                    window.addEventListener('deviceorientation', handleOrientation, true);
+                    orientationWatching = true;
+
+                    setTimeout(function() {
+                        if (!orientationWatching || !window._orientationReceived) {
+                            showStaticBearing();
+                        }
+                    }, 1500);
+                } else {
+                    showStaticBearing();
+                }
             }
-        }
+
+            window._orientationReceived = false;
+
+            function handleOrientation(event) {
+                window._orientationReceived = true;
+                let heading = null;
+
+                if (event.webkitCompassHeading !== undefined) {
+                    heading = event.webkitCompassHeading;
+                } else if (event.alpha !== null) {
+                    heading = event.absolute ? (360 - event.alpha) : event.alpha;
+                }
+
+                if (heading !== null) {
+                    const ring = document.getElementById('qiblaSvg');
+
+                    if (ring) {
+                        ring.style.transform = 'rotate(' + (-heading) + 'deg)';
+                        ring.style.transition = 'transform 0.3s ease-out';
+                    }
+
+                    const bearingText = document.getElementById('qiblaBearingText');
+                    if (bearingText) {
+                        const relBearing = ((QIBLA_BEARING - heading) % 360 + 360) % 360;
+                        bearingText.textContent = 'Qibla: ' + Math.round(relBearing) + '\u00B0 from you';
+                    }
+                }
+            }
+
+            function showStaticBearing() {
+                const bearingText = document.getElementById('qiblaBearingText');
+                if (bearingText) {
+                    bearingText.textContent = 'Qibla is 119.7\u00B0 from North (ESE)';
+                }
+            }
+        })();
 
         // === FEATURE 3: Eid Confetti Burst ===
         function launchEidConfetti() {
