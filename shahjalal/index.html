@@ -1309,6 +1309,25 @@
     <script>
         // Timetable data with full dates (year, month, day)
         const timetableData = [
+            // Pre-Ramadan February 2026
+            { date: [2026, 2, 1], day: "Sun", no: "", sehri: "", fajr: "6:13", sunrise: "7:55", zuhr: "12:20", asr: "2:57", isha: "6:19", jFajr: "7:00", jZuhr: "1:00", jAsr: "3:30", maghrib: "4:52", jIsha: "6:30" },
+            { date: [2026, 2, 2], day: "Mon", no: "", sehri: "", fajr: "6:11", sunrise: "7:53", zuhr: "12:21", asr: "2:59", isha: "6:21", jFajr: "7:00", jZuhr: "1:00", jAsr: "3:30", maghrib: "4:54", jIsha: "6:30" },
+            { date: [2026, 2, 3], day: "Tue", no: "", sehri: "", fajr: "6:10", sunrise: "7:51", zuhr: "12:21", asr: "3:01", isha: "6:22", jFajr: "7:00", jZuhr: "1:00", jAsr: "3:30", maghrib: "4:56", jIsha: "6:30" },
+            { date: [2026, 2, 4], day: "Wed", no: "", sehri: "", fajr: "6:09", sunrise: "7:49", zuhr: "12:21", asr: "3:03", isha: "6:24", jFajr: "7:00", jZuhr: "1:00", jAsr: "3:30", maghrib: "4:58", jIsha: "6:30" },
+            { date: [2026, 2, 5], day: "Thu", no: "", sehri: "", fajr: "6:07", sunrise: "7:48", zuhr: "12:21", asr: "3:05", isha: "6:26", jFajr: "7:00", jZuhr: "1:00", jAsr: "3:30", maghrib: "5:00", jIsha: "6:30" },
+            { date: [2026, 2, 6], day: "Fri", no: "", sehri: "", fajr: "6:05", sunrise: "7:46", zuhr: "12:21", asr: "3:07", isha: "6:28", jFajr: "7:00", jZuhr: "1:00", jAsr: "3:30", maghrib: "5:02", jIsha: "6:30" },
+            { date: [2026, 2, 7], day: "Sat", no: "", sehri: "", fajr: "6:04", sunrise: "7:44", zuhr: "12:21", asr: "3:08", isha: "6:30", jFajr: "7:00", jZuhr: "1:00", jAsr: "3:30", maghrib: "5:04", jIsha: "6:30" },
+            { date: [2026, 2, 8], day: "Sun", no: "", sehri: "", fajr: "6:02", sunrise: "7:42", zuhr: "12:21", asr: "3:10", isha: "6:31", jFajr: "7:00", jZuhr: "1:00", jAsr: "3:30", maghrib: "5:06", jIsha: "6:30" },
+            { date: [2026, 2, 9], day: "Mon", no: "", sehri: "", fajr: "6:01", sunrise: "7:40", zuhr: "12:21", asr: "3:12", isha: "6:32", jFajr: "7:00", jZuhr: "1:00", jAsr: "3:30", maghrib: "5:08", jIsha: "6:30" },
+            { date: [2026, 2, 10], day: "Tue", no: "", sehri: "", fajr: "5:59", sunrise: "7:38", zuhr: "12:21", asr: "3:14", isha: "6:33", jFajr: "7:00", jZuhr: "1:00", jAsr: "3:30", maghrib: "5:10", jIsha: "6:30" },
+            { date: [2026, 2, 11], day: "Wed", no: "", sehri: "", fajr: "5:57", sunrise: "7:36", zuhr: "12:21", asr: "3:16", isha: "6:34", jFajr: "6:45", jZuhr: "1:00", jAsr: "3:45", maghrib: "5:12", jIsha: "6:45" },
+            { date: [2026, 2, 12], day: "Thu", no: "", sehri: "", fajr: "5:55", sunrise: "7:34", zuhr: "12:21", asr: "3:18", isha: "6:35", jFajr: "6:45", jZuhr: "1:00", jAsr: "3:45", maghrib: "5:14", jIsha: "6:45" },
+            { date: [2026, 2, 13], day: "Fri", no: "", sehri: "", fajr: "5:54", sunrise: "7:32", zuhr: "12:21", asr: "3:20", isha: "6:35", jFajr: "6:45", jZuhr: "1:00", jAsr: "3:45", maghrib: "5:16", jIsha: "6:45" },
+            { date: [2026, 2, 14], day: "Sat", no: "", sehri: "", fajr: "5:52", sunrise: "7:30", zuhr: "12:21", asr: "3:21", isha: "6:36", jFajr: "6:45", jZuhr: "1:00", jAsr: "3:45", maghrib: "5:18", jIsha: "6:45" },
+            { date: [2026, 2, 15], day: "Sun", no: "", sehri: "", fajr: "5:50", sunrise: "7:28", zuhr: "12:21", asr: "3:23", isha: "6:37", jFajr: "6:45", jZuhr: "1:00", jAsr: "3:45", maghrib: "5:20", jIsha: "6:45" },
+            { date: [2026, 2, 16], day: "Mon", no: "", sehri: "", fajr: "5:48", sunrise: "7:26", zuhr: "12:21", asr: "3:25", isha: "6:38", jFajr: "6:45", jZuhr: "1:00", jAsr: "3:45", maghrib: "5:22", jIsha: "6:45" },
+            { date: [2026, 2, 17], day: "Tue", no: "", sehri: "", fajr: "5:46", sunrise: "7:24", zuhr: "12:21", asr: "3:27", isha: "6:39", jFajr: "6:45", jZuhr: "1:00", jAsr: "3:45", maghrib: "5:24", jIsha: "6:45" },
+            // Ramadan 1447
             { date: [2026, 2, 18], day: "Wed", no: 1, sehri: "5:39", fajr: "5:44", sunrise: "7:22", zuhr: "12:21", asr: "3:29", isha: "6:40", jFajr: "5:59", jZuhr: "1:00", jAsr: "4:00", maghrib: "5:26", jIsha: "7:30" },
             { date: [2026, 2, 19], day: "Thu", no: 2, sehri: "5:37", fajr: "5:42", sunrise: "7:20", zuhr: "12:21", asr: "3:31", isha: "6:41", jFajr: "5:57", jZuhr: "1:00", jAsr: "4:00", maghrib: "5:28", jIsha: "7:30" },
             { date: [2026, 2, 20], day: "Fri", no: 3, sehri: "5:35", fajr: "5:40", sunrise: "7:17", zuhr: "12:21", asr: "3:32", isha: "6:43", jFajr: "5:55", jZuhr: "1:00", jAsr: "4:00", maghrib: "5:30", jIsha: "7:30" },
@@ -1726,8 +1745,10 @@
             const dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
             const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
-            document.getElementById('todayDateBar').textContent =
-                `Day ${todayData.no || 'Eid'} of Ramadan  \u2022  ${dayNames[rowDate.getDay()]} ${rowDate.getDate()} ${monthNames[rowDate.getMonth()]} ${rowDate.getFullYear()}`;
+            const isRamadan = todayData.sehri && todayData.sehri !== "";
+            document.getElementById('todayDateBar').textContent = isRamadan
+                ? `Day ${todayData.no || 'Eid'} of Ramadan  \u2022  ${dayNames[rowDate.getDay()]} ${rowDate.getDate()} ${monthNames[rowDate.getMonth()]} ${rowDate.getFullYear()}`
+                : `${dayNames[rowDate.getDay()]} ${rowDate.getDate()} ${monthNames[rowDate.getMonth()]} ${rowDate.getFullYear()}`;
 
             function toDate24(timeStr, isPM) {
                 const [h, m] = timeStr.split(':').map(Number);
@@ -1738,7 +1759,13 @@
 
             const isFriday = todayData.day === 'Fri';
 
-            const prayers = [
+            function addMinutes(timeStr, mins) {
+                const [h, m] = timeStr.split(':').map(Number);
+                const totalMins = h * 60 + m + mins;
+                return `${Math.floor(totalMins / 60)}:${(totalMins % 60).toString().padStart(2, '0')}`;
+            }
+
+            const prayers = isRamadan ? [
                 { name: 'Sehri', mainTime: todayData.sehri, isPM: false, details: [
                     { label: 'Fajr Start', value: todayData.fajr },
                     { label: 'Fajr Jamaah', value: todayData.jFajr }
@@ -1751,6 +1778,23 @@
                     { label: 'Jamaah', value: todayData.jAsr }
                 ], eventTime: toDate24(todayData.asr, true) },
                 { name: 'Iftar / Maghrib', mainTime: todayData.maghrib, isPM: true, details: [], eventTime: toDate24(todayData.maghrib, true) },
+                { name: 'Isha', mainTime: todayData.isha, isPM: true, details: [
+                    { label: 'Jamaah', value: todayData.jIsha }
+                ], eventTime: toDate24(todayData.isha, true) }
+            ] : [
+                { name: 'Fajr', mainTime: todayData.fajr, isPM: false, details: [
+                    { label: 'Jamaah', value: todayData.jFajr }
+                ], eventTime: toDate24(todayData.fajr, false) },
+                { name: 'Sunrise', mainTime: todayData.sunrise, isPM: false, details: [
+                    { label: 'Ishraq', value: addMinutes(todayData.sunrise, 20) }
+                ], eventTime: toDate24(todayData.sunrise, false) },
+                { name: isFriday ? 'Jumu\'ah' : 'Zuhr', mainTime: todayData.zuhr, isPM: false, details: [
+                    { label: 'Jamaah', value: todayData.jZuhr }
+                ], eventTime: toDate24(todayData.zuhr, false) },
+                { name: 'Asr', mainTime: todayData.asr, isPM: true, details: [
+                    { label: 'Jamaah', value: todayData.jAsr }
+                ], eventTime: toDate24(todayData.asr, true) },
+                { name: 'Maghrib', mainTime: todayData.maghrib, isPM: true, details: [], eventTime: toDate24(todayData.maghrib, true) },
                 { name: 'Isha', mainTime: todayData.isha, isPM: true, details: [
                     { label: 'Jamaah', value: todayData.jIsha }
                 ], eventTime: toDate24(todayData.isha, true) }
@@ -1783,7 +1827,10 @@
             const tmrwEl = document.getElementById('todayTomorrow');
             if (tomorrowIndex < timetableData.length) {
                 const tmrw = timetableData[tomorrowIndex];
-                tmrwEl.innerHTML = `Tomorrow: Sehri ends <strong>${tmrw.sehri}</strong> &nbsp;\u2022&nbsp; Iftar <strong>${tmrw.maghrib}</strong>`;
+                const tmrwIsRamadan = tmrw.sehri && tmrw.sehri !== "";
+                tmrwEl.innerHTML = tmrwIsRamadan
+                    ? `Tomorrow: Sehri ends <strong>${tmrw.sehri}</strong> &nbsp;\u2022&nbsp; Iftar <strong>${tmrw.maghrib}</strong>`
+                    : `Tomorrow: Fajr <strong>${tmrw.fajr}</strong> &nbsp;\u2022&nbsp; Maghrib <strong>${tmrw.maghrib}</strong>`;
                 tmrwEl.style.display = '';
             } else {
                 tmrwEl.style.display = 'none';
