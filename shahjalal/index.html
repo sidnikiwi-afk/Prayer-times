@@ -1828,10 +1828,22 @@
             if (tomorrowIndex < timetableData.length) {
                 const tmrw = timetableData[tomorrowIndex];
                 const tmrwIsRamadan = tmrw.sehri && tmrw.sehri !== "";
-                tmrwEl.innerHTML = tmrwIsRamadan
-                    ? `Tomorrow: Sehri ends <strong>${tmrw.sehri}</strong> &nbsp;\u2022&nbsp; Iftar <strong>${tmrw.maghrib}</strong>`
-                    : `Tomorrow: Fajr <strong>${tmrw.fajr}</strong> &nbsp;\u2022&nbsp; Maghrib <strong>${tmrw.maghrib}</strong>`;
-                tmrwEl.style.display = '';
+                if (tmrwIsRamadan) {
+                    tmrwEl.innerHTML = `Tomorrow: Sehri ends <strong>${tmrw.sehri}</strong> &nbsp;\u2022&nbsp; Iftar <strong>${tmrw.maghrib}</strong>`;
+                    tmrwEl.style.display = '';
+                } else {
+                    const changes = [];
+                    if (todayData.jFajr !== tmrw.jFajr) changes.push(`Fajr <strong>${tmrw.jFajr}</strong>`);
+                    if (todayData.jZuhr !== tmrw.jZuhr) changes.push(`Zuhr <strong>${tmrw.jZuhr}</strong>`);
+                    if (todayData.jAsr !== tmrw.jAsr) changes.push(`Asr <strong>${tmrw.jAsr}</strong>`);
+                    if (todayData.jIsha !== tmrw.jIsha) changes.push(`Isha <strong>${tmrw.jIsha}</strong>`);
+                    if (changes.length) {
+                        tmrwEl.innerHTML = `Jamaah changes tomorrow: ${changes.join(' &nbsp;\u2022&nbsp; ')}`;
+                        tmrwEl.style.display = '';
+                    } else {
+                        tmrwEl.style.display = 'none';
+                    }
+                }
             } else {
                 tmrwEl.style.display = 'none';
             }
