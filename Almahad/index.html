@@ -198,6 +198,17 @@
         .eid-info strong { color: #ffc107; }
         .fitrana-box { background: white; border-radius: 8px; border: 2px solid #1b5e20; }
         .contact-box { background: white; border-radius: 8px; }
+        .contact-links {
+            display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 8px;
+        }
+        .contact-link {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 7px 16px; background: rgba(27, 94, 32, 0.08); border-radius: 20px;
+            color: #1b5e20; text-decoration: none; font-size: 13px; font-weight: 600;
+            letter-spacing: 0.5px; transition: all 0.2s ease;
+        }
+        .contact-link:hover { background: rgba(27, 94, 32, 0.15); transform: translateY(-1px); box-shadow: 0 2px 8px rgba(27, 94, 32, 0.15); }
+        .contact-link svg { width: 14px; height: 14px; flex-shrink: 0; }
 
         /* Floating buttons */
         .dark-mode-toggle {
@@ -238,6 +249,8 @@
         body.dark-mode .today { background: linear-gradient(90deg, #3d3520 0%, #4a4025 100%) !important; }
         body.dark-mode .footer { background: #252525; }
         body.dark-mode .fitrana-box, body.dark-mode .contact-box { background: #2d2d2d; color: #e0e0e0; }
+        body.dark-mode .contact-link { background: rgba(129, 199, 132, 0.12); color: #81c784; }
+        body.dark-mode .contact-link:hover { background: rgba(129, 199, 132, 0.2); box-shadow: 0 2px 8px rgba(129, 199, 132, 0.15); }
         body.dark-mode .sehri-col { color: #ff6b6b; }
         body.dark-mode .iftari-col { color: #66bb6a; }
         body.dark-mode .last-ten-badge { background: #b8860b; color: white; }
@@ -895,7 +908,10 @@
                 <em style="font-size: 11px;">Must be paid before Eid Salah</em>
             </div>
             <div class="footer-section contact-box">
-                <strong>Receiver Frequency:</strong> 456.62500
+                <em>Receiver Frequency</em>
+                <div class="contact-links">
+                    <span class="contact-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M3.24 6.15C2.51 6.43 2 7.17 2 8v12c0 1.1.89 2 2 2h16c1.11 0 2-.9 2-2V8c0-1.1-.89-2-2-2H8.3l8.26-3.34-.37-.92L3.24 6.15zM7 20c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm13-8h-2v-2h-2v2H4V8h16v4z"/></svg>456.62500</span>
+                </div>
             </div>
         </div>
 
@@ -1498,7 +1514,7 @@
 
             document.querySelectorAll('.view-btn').forEach(btn => btn.addEventListener('click', () => setView(btn.dataset.view)));
             const todayData = getTodayData();
-            if (!localStorage.getItem('almahad-viewMode')) { currentView = todayData ? 'today' : 'full'; }
+            if (!localStorage.getItem('almahad-viewMode')) { currentView = 'today'; }
             setView(currentView);
             setInterval(() => { if (currentView === 'today') renderTodayView(); }, 60000);
 

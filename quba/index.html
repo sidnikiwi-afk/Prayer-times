@@ -43,7 +43,21 @@
         .mosque-icon { font-size: 50px; margin-bottom: 10px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); }
         h1 { font-size: clamp(18px, 5vw, 28px); font-weight: bold; letter-spacing: 2px; margin-bottom: 5px; }
         .address { font-size: clamp(11px, 3vw, 14px); opacity: 0.9; margin-bottom: 4px; }
-        .contact-info { font-size: clamp(10px, 2.5vw, 12px); opacity: 0.85; margin-bottom: 8px; }
+        .contact-info { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-bottom: 8px; }
+        .contact-link {
+            display: inline-flex; align-items: center; gap: 5px;
+            padding: 5px 14px; background: rgba(255,255,255,0.12); border-radius: 20px;
+            color: rgba(255,255,255,0.9); text-decoration: none;
+            font-size: clamp(10px, 2.5vw, 12px); font-weight: 500; letter-spacing: 0.3px;
+            transition: all 0.2s ease; backdrop-filter: blur(4px);
+        }
+        .contact-link:hover { background: rgba(255,255,255,0.22); transform: translateY(-1px); }
+        .contact-link svg { width: 13px; height: 13px; flex-shrink: 0; }
+        .footer .contact-link {
+            background: rgba(26, 90, 126, 0.08); color: #1a5a7e;
+            padding: 7px 16px; font-size: 13px; font-weight: 600; letter-spacing: 0.5px;
+        }
+        .footer .contact-link:hover { background: rgba(26, 90, 126, 0.15); box-shadow: 0 2px 8px rgba(26, 90, 126, 0.15); }
         .month-year {
             font-size: clamp(14px, 4vw, 18px);
             font-weight: 600;
@@ -204,6 +218,8 @@
         body.dark-mode .today { background: linear-gradient(90deg, #3d3520 0%, #4a4025 100%) !important; }
         body.dark-mode .footer { background: #252525; }
         body.dark-mode .fitrana-box, body.dark-mode .contact-box { background: #2d2d2d; color: #e0e0e0; }
+        body.dark-mode .footer .contact-link { background: rgba(138, 180, 210, 0.12); color: #8ab4d2; }
+        body.dark-mode .footer .contact-link:hover { background: rgba(138, 180, 210, 0.2); box-shadow: 0 2px 8px rgba(138, 180, 210, 0.15); }
         body.dark-mode .sehri-col { color: #ff6b6b; }
         body.dark-mode .iftari-col { color: #69b8db; }
         body.dark-mode .last-ten-badge { background: #b8860b; color: white; }
@@ -675,7 +691,11 @@
             </div>
             <h1>MASJID QUBA</h1>
             <div class="address">20 Quba Court (off Church Street), Bradford BD8 7LA</div>
-            <div class="contact-info">Tel: 01274 542027 | www.masjidquba.org | info@masjidquba.org</div>
+            <div class="contact-info">
+                <a href="tel:01274542027" class="contact-link"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>01274 542027</a>
+                <a href="https://www.masjidquba.org" target="_blank" class="contact-link"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>masjidquba.org</a>
+                <a href="mailto:info@masjidquba.org" class="contact-link"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>info@masjidquba.org</a>
+            </div>
             <div class="month-year">RAMADHAN 1447 | FEBRUARY - MARCH 2026</div>
             <div class="moon-sighting">Dates are subject to moon sighting confirmation</div>
         </div>
@@ -1401,7 +1421,7 @@
 
             document.querySelectorAll('.view-btn').forEach(btn => btn.addEventListener('click', () => setView(btn.dataset.view)));
             const todayData = getTodayData();
-            if (!localStorage.getItem('quba-viewMode')) { currentView = todayData ? 'today' : 'full'; }
+            if (!localStorage.getItem('quba-viewMode')) { currentView = 'today'; }
             setView(currentView);
             setInterval(() => { if (currentView === 'today') renderTodayView(); }, 60000);
 

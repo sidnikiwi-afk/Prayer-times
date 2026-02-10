@@ -316,6 +316,37 @@
             background: white;
             border-radius: 8px;
         }
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 8px;
+        }
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 16px;
+            background: rgba(0, 77, 64, 0.08);
+            border-radius: 20px;
+            color: #004d40;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.2s ease;
+        }
+        .contact-link:hover {
+            background: rgba(0, 77, 64, 0.15);
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(0, 77, 64, 0.15);
+        }
+        .contact-link svg {
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+        }
 
         /* Dark mode toggle */
         .dark-mode-toggle {
@@ -414,6 +445,14 @@
         body.dark-mode .contact-box {
             background: #2d2d2d;
             color: #e0e0e0;
+        }
+        body.dark-mode .contact-link {
+            background: rgba(128, 203, 196, 0.12);
+            color: #80cbc4;
+        }
+        body.dark-mode .contact-link:hover {
+            background: rgba(128, 203, 196, 0.2);
+            box-shadow: 0 2px 8px rgba(128, 203, 196, 0.15);
         }
         body.dark-mode .sehri-col {
             color: #ff6b6b;
@@ -1239,8 +1278,11 @@
                 £5.00 PER PERSON
             </div>
             <div class="footer-section contact-box">
-                <em>Late night jamā'ah will be held.</em><br>
-                <strong>07903 582141 | 07867 607330</strong>
+                <em>Late night jamā'ah will be held.</em>
+                <div class="contact-links">
+                    <a href="tel:07903582141" class="contact-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>07903 582141</a>
+                    <a href="tel:07867607330" class="contact-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>07867 607330</a>
+                </div>
             </div>
         </div>
 
@@ -1891,7 +1933,7 @@
             });
             const todayData = getTodayData();
             if (!localStorage.getItem('viewMode')) {
-                currentView = todayData ? 'today' : 'full';
+                currentView = 'today';
             }
             setView(currentView);
             setInterval(() => { if (currentView === 'today') renderTodayView(); }, 60000);
