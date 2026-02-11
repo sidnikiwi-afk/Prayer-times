@@ -55,7 +55,7 @@ Prayer-times/
 | Shahjalal Islamic Society | `shahjalal` | 149A Little Horton Lane, BD5 0HS | Teal `#004d40` / `#00796b` | 6:24am + 9:00am | £5.00 |
 | Masjid Quba | `quba` | 20 Quba Court, BD8 7LA | Blue `#1a5a7e` / `#2a8ab5` | 8:00am | £5.00 |
 | Al Mahad Ul Islami | `Almahad` | Dorset Street, BD5 0LT | Green `#1b5e20` / `#388e3c` | 9:00am | £5.00 |
-| Tawakkulia Islamic Society | `Tawakkulia` | 48 Cornwall Road, BD8 7JN | Deep Orange `#bf360c` / `#e64a19` | 7:00am, 8:30am, 10:00am | £4.80 |
+| Tawakkulia Islamic Society | `Tawakkulia` | 48 Cornwall Road, BD8 7JN | Indigo `#1a237e` / `#3949ab` | 7:00am, 8:30am, 10:00am | £4.80 |
 
 ### Donation Details
 - **Shahjalal**: Not listed in timetable
@@ -127,7 +127,7 @@ Prayer-times/
 | Shahjalal | Grand mosque, 2 minarets (gold/amber) | Islamic star | Floating stars | Left border | Gold, teal, white, green |
 | Quba | Modern mosque, 1 dome+minaret (silver/blue) | Hexagonal | Rising light orbs | Top border | Blue, silver, gold, white |
 | Almahad | Triple-dome traditional (gold/green) | Arabesque floral | Golden fireflies | Bottom border | Green, gold, white, emerald |
-| Tawakkulia | Dual-minaret with side domes (warm orange) | Islamic star | Floating stars | Left border | Orange, gold, white, amber |
+| Tawakkulia | Dual-minaret with side domes (indigo) | Islamic star | Floating orbs | Left border | Indigo, light indigo, gold, white |
 
 ### Shahjalal-Only Features
 - **Demo mode**: DEMO button (bottom-left), date picker + time slider to test countdown at any date/time
