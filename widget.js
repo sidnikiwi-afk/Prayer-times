@@ -85,8 +85,8 @@ function buildWidget(mosqueName, entry, nextIdx) {
     const isNext = i === nextIdx;
     const beginsRaw = entry[p.begins] || "";
     const iqamahRaw = p.iqamah ? (entry[p.iqamah] || "") : "";
-    const begins24 = to24str(beginsRaw, p.pm);
-    const iqamah24 = p.iqamah ? to24str(iqamahRaw, p.pm) : "";
+    const begins24 = beginsRaw;
+    const iqamah24 = p.iqamah ? iqamahRaw : "";
 
     const row = w.addStack();
     row.setPadding(6, 8, 6, 0);
