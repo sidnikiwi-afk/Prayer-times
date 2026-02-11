@@ -17,13 +17,10 @@ const PRAYERS = [
   { label: "Isha", begins: "isha", iqamah: "jIsha", pm: true },
 ];
 
-const COLORS = {
-  bg: new Color("#1C1C1E"),
-  text: new Color("#FFFFFF"),
-  dimText: new Color("#ABABAB"),
-  highlight: new Color("#3A3A3C"),
-  headerText: new Color("#8E8E93"),
-};
+const BG = new Color("#000000");
+const WHITE = Color.white();
+const GREY = new Color("#8E8E93");
+const HIGHLIGHT = new Color("#3A3A3C");
 
 // --- Main ---
 const mosqueKey = (args.widgetParameter || "shahjalal").toLowerCase().trim();
@@ -38,7 +35,6 @@ try {
   todayEntry = findToday(data, today);
   if (todayEntry) cacheData(mosqueKey, todayEntry);
 } catch (e) {
-  // Network failed — try cache
   todayEntry = loadCache(mosqueKey);
 }
 
@@ -48,16 +44,78 @@ if (todayEntry) {
   widget = buildWidget(mosque.name, todayEntry, nextIdx);
 } else {
   widget = new ListWidget();
-  widget.backgroundColor = COLORS.bg;
+  widget.backgroundColor = BG;
   const t = widget.addText("No data available");
-  t.textColor = COLORS.text;
+  t.textColor = WHITE;
 }
 
 Script.setWidget(widget);
 if (!config.runsInWidget) await widget.presentMedium();
 Script.complete();
 
-// --- Functions ---
+// --- Build Widget ---
+
+function buildWidget(mosqueName, entry, nextIdx) {
+  const w = new ListWidget();
+  w.backgroundColor = BG;
+  w.setPadding(12, 16, 12, 16);
+
+  // Title
+  const title = w.addText(mosqueName);
+  title.font = Font.boldSystemFont(16);
+  title.textColor = WHITE;
+  title.centerAlignText();
+
+  w.addSpacer();
+
+  // Header
+  const hdr = w.addStack();
+  hdr.setPadding(0, 8, 0, 0);
+  addLabel(hdr, "Prayer", Font.mediumSystemFont(13), GREY);
+  hdr.addSpacer();
+  addLabel(hdr, "Begins", Font.mediumSystemFont(13), GREY);
+  hdr.addSpacer();
+  addLabel(hdr, "Iqamah", Font.mediumSystemFont(13), GREY);
+
+  w.addSpacer();
+
+  // Prayer rows
+  for (let i = 0; i < PRAYERS.length; i++) {
+    const p = PRAYERS[i];
+    const isNext = i === nextIdx;
+    const beginsRaw = entry[p.begins] || "";
+    const iqamahRaw = p.iqamah ? (entry[p.iqamah] || "") : "";
+    const begins24 = to24str(beginsRaw, p.pm);
+    const iqamah24 = p.iqamah ? to24str(iqamahRaw, p.pm) : "";
+
+    const row = w.addStack();
+    row.setPadding(6, 8, 6, 0);
+    row.cornerRadius = 8;
+    if (isNext) row.backgroundColor = HIGHLIGHT;
+
+    const font = Font.boldSystemFont(15);
+
+    addLabel(row, p.label, font, WHITE);
+    row.addSpacer();
+    addLabel(row, begins24, font, WHITE);
+    row.addSpacer();
+    addLabel(row, iqamah24, font, WHITE);
+
+    if (i < PRAYERS.length - 1) w.addSpacer();
+  }
+
+  w.addSpacer(4);
+  return w;
+}
+
+function addLabel(stack, text, font, color) {
+  const t = stack.addText(text);
+  t.font = font;
+  t.textColor = color;
+  t.lineLimit = 1;
+}
+
+// --- Data ---
 
 function parseTimetableData(html) {
   const match = html.match(
@@ -66,14 +124,11 @@ function parseTimetableData(html) {
   if (!match) return [];
 
   let jsonStr = "[" + match[1] + "]";
-  // Strip JS comments
   jsonStr = jsonStr.replace(/\/\/.*$/gm, "");
-  // Convert date arrays: date: [2026, 2, 18] → date: "2026-2-18"
   jsonStr = jsonStr.replace(
     /date:\s*\[(\d+),\s*(\d+),\s*(\d+)\]/g,
     'date: "$1-$2-$3"'
   );
-  // Quote unquoted keys (only after { or , to avoid matching inside strings)
   jsonStr = jsonStr.replace(/([{,])\s*(\w+)\s*:/g, '$1"$2":');
 
   try {
@@ -88,11 +143,18 @@ function findToday(data, now) {
   return data.find((d) => d.date === key) || null;
 }
 
-function to24(timeStr, isPm) {
+function to24mins(timeStr, isPm) {
   if (!timeStr) return 0;
   const [h, m] = timeStr.split(":").map(Number);
   if (isPm && h < 12) return (h + 12) * 60 + m;
   return h * 60 + m;
+}
+
+function to24str(timeStr, isPm) {
+  if (!timeStr) return "";
+  const [h, m] = timeStr.split(":").map(Number);
+  let h24 = isPm && h < 12 ? h + 12 : h;
+  return `${h24}:${String(m).padStart(2, "0")}`;
 }
 
 function getNextPrayerIndex(entry, now) {
@@ -100,76 +162,10 @@ function getNextPrayerIndex(entry, now) {
   for (let i = 0; i < PRAYERS.length; i++) {
     const p = PRAYERS[i];
     const field = p.iqamah || p.begins;
-    const mins = to24(entry[field], p.pm);
+    const mins = to24mins(entry[field], p.pm);
     if (mins > nowMins) return i;
   }
-  return -1; // All prayers passed
-}
-
-function buildWidget(mosqueName, entry, nextIdx) {
-  const w = new ListWidget();
-  w.backgroundColor = COLORS.bg;
-  w.setPadding(10, 16, 10, 16);
-
-  // Mosque name
-  const title = w.addText(mosqueName);
-  title.font = Font.boldSystemFont(16);
-  title.textColor = COLORS.text;
-  title.centerAlignText();
-
-  w.addSpacer(6);
-
-  // Header row
-  addRow(w, "Prayer", "Begins", "Iqamah", COLORS.headerText, Font.semiboldSystemFont(12), false);
-
-  w.addSpacer(2);
-
-  // Prayer rows
-  for (let i = 0; i < PRAYERS.length; i++) {
-    const p = PRAYERS[i];
-    const isNext = i === nextIdx;
-    const textColor = isNext ? COLORS.text : COLORS.dimText;
-    const font = isNext ? Font.semiboldSystemFont(14) : Font.regularSystemFont(14);
-    const beginsVal = entry[p.begins] || "";
-    const iqamahVal = p.iqamah ? (entry[p.iqamah] || "") : "";
-
-    addRow(w, p.label, beginsVal, iqamahVal, textColor, font, isNext);
-
-    if (i < PRAYERS.length - 1) w.addSpacer(0);
-  }
-
-  w.addSpacer();
-  return w;
-}
-
-function addRow(w, col1, col2, col3, color, font, highlight) {
-  const row = w.addStack();
-  row.setPadding(5, 8, 5, 8);
-  row.cornerRadius = 8;
-  if (highlight) row.backgroundColor = COLORS.highlight;
-
-  const c1 = row.addStack();
-  c1.size = new Size(100, 0);
-  const t1 = c1.addText(col1);
-  t1.font = font;
-  t1.textColor = color;
-  t1.lineLimit = 1;
-
-  row.addSpacer();
-
-  const t2 = row.addText(col2);
-  t2.font = font;
-  t2.textColor = color;
-  t2.lineLimit = 1;
-
-  row.addSpacer();
-
-  const c3 = row.addStack();
-  c3.addSpacer();
-  const t3 = c3.addText(col3);
-  t3.font = font;
-  t3.textColor = color;
-  t3.lineLimit = 1;
+  return -1;
 }
 
 // --- Cache ---
