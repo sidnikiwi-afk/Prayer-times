@@ -41,17 +41,19 @@ try {
   todayEntry = loadCache(mosqueKey);
 }
 
+let widget;
 if (todayEntry) {
   const nextIdx = getNextPrayerIndex(todayEntry, today);
-  const widget = buildWidget(mosque.name, todayEntry, nextIdx);
-  Script.setWidget(widget);
+  widget = buildWidget(mosque.name, todayEntry, nextIdx);
 } else {
-  const w = new ListWidget();
-  w.backgroundColor = COLORS.bg;
-  const t = w.addText("No data available");
+  widget = new ListWidget();
+  widget.backgroundColor = COLORS.bg;
+  const t = widget.addText("No data available");
   t.textColor = COLORS.text;
-  Script.setWidget(w);
 }
+
+Script.setWidget(widget);
+if (!config.runsInWidget) await widget.presentMedium();
 Script.complete();
 
 // --- Functions ---
