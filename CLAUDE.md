@@ -16,6 +16,7 @@ Prayer-times/
 ├── nav.js                  # Shared navigation dropdown (edit MASJIDS array here)
 ├── CNAME                   # Custom domain config (waqt.uk)
 ├── CLAUDE.md               # This file - project documentation
+├── widget.js               # Scriptable iOS home screen widget
 ├── .gitignore
 ├── shahjalal/
 │   ├── index.html          # Shahjalal Islamic Society timetable
@@ -75,6 +76,7 @@ Prayer-times/
 - Responsive mobile layout
 - Print-friendly (hides buttons, countdown, nav, today-view)
 - Moon sighting disclaimer in header
+- **iOS Widget (Scriptable)**: `widget.js` — medium home screen widget showing today's 6 prayers (Fajr, Ishraq, Dhuhr, Asr, Maghrib, Isha) with Begins/Iqamah columns. Fetches timetableData from waqt.uk, highlights next prayer, caches for offline. Widget parameter selects mosque: `shahjalal` (default), `quba`, `almahad`.
 
 ### Visual Enhancements (All Mosques)
 - **Granim.js animated header**: Async-loaded from CDN, smooth gradient animation behind header. Cached by service worker for offline. Each mosque has unique color palette.
