@@ -71,13 +71,10 @@ function buildWidget(mosqueName, entry, nextIdx) {
   // Header
   const hdr = w.addStack();
   hdr.setPadding(0, 8, 0, 0);
-  const hdrName = hdr.addStack();
-  hdrName.size = new Size(90, 0);
-  addLabel(hdrName, "Prayer", Font.mediumSystemFont(13), GREY);
+  addFixedCol(hdr, "Prayer", 90, Font.mediumSystemFont(13), GREY, "left");
+  addFixedCol(hdr, "Begins", 80, Font.mediumSystemFont(13), GREY, "center");
   hdr.addSpacer();
-  addLabel(hdr, "Begins", Font.mediumSystemFont(13), GREY);
-  hdr.addSpacer();
-  addLabel(hdr, "Iqamah", Font.mediumSystemFont(13), GREY);
+  addFixedCol(hdr, "Iqamah", 80, Font.mediumSystemFont(13), GREY, "center");
 
   w.addSpacer();
 
@@ -97,13 +94,10 @@ function buildWidget(mosqueName, entry, nextIdx) {
 
     const font = Font.boldSystemFont(15);
 
-    const nameCol = row.addStack();
-    nameCol.size = new Size(90, 0);
-    addLabel(nameCol, p.label, font, WHITE);
+    addFixedCol(row, p.label, 90, font, WHITE, "left");
+    addFixedCol(row, begins24, 80, font, WHITE, "center");
     row.addSpacer();
-    addLabel(row, begins24, font, WHITE);
-    row.addSpacer();
-    addLabel(row, iqamah24 || " ", font, WHITE);
+    addFixedCol(row, iqamah24, 80, font, WHITE, "center");
 
     if (i < PRAYERS.length - 1) w.addSpacer();
   }
@@ -117,6 +111,14 @@ function addLabel(stack, text, font, color) {
   t.font = font;
   t.textColor = color;
   t.lineLimit = 1;
+}
+
+function addFixedCol(stack, text, width, font, color, align) {
+  const col = stack.addStack();
+  col.size = new Size(width, 0);
+  if (align === "center" || align === "right") col.addSpacer();
+  addLabel(col, text || "", font, color);
+  if (align === "center" || align === "left") col.addSpacer();
 }
 
 // --- Data ---
