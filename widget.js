@@ -9,11 +9,12 @@ const MOSQUES = {
 };
 
 const PRAYERS = [
-  { label: "Fajr", adhan: "fajr", iqamah: "jFajr", pm: false },
-  { label: "Dhuhr", adhan: "zuhr", iqamah: "jZuhr", pm: true },
-  { label: "Asr", adhan: "asr", iqamah: "jAsr", pm: true },
-  { label: "Maghrib", adhan: "maghrib", iqamah: "maghrib", pm: true },
-  { label: "Isha", adhan: "isha", iqamah: "jIsha", pm: true },
+  { label: "Fajr", begins: "fajr", iqamah: "jFajr", pm: false },
+  { label: "Ishraq", begins: "sunrise", iqamah: null, pm: false },
+  { label: "Dhuhr", begins: "zuhr", iqamah: "jZuhr", pm: true },
+  { label: "Asr", begins: "asr", iqamah: "jAsr", pm: true },
+  { label: "Maghrib", begins: "maghrib", iqamah: "maghrib", pm: true },
+  { label: "Isha", begins: "isha", iqamah: "jIsha", pm: true },
 ];
 
 const COLORS = {
@@ -98,8 +99,9 @@ function getNextPrayerIndex(entry, now) {
   const nowMins = now.getHours() * 60 + now.getMinutes();
   for (let i = 0; i < PRAYERS.length; i++) {
     const p = PRAYERS[i];
-    const iqamahMins = to24(entry[p.iqamah], p.pm);
-    if (iqamahMins > nowMins) return i;
+    const field = p.iqamah || p.begins;
+    const mins = to24(entry[field], p.pm);
+    if (mins > nowMins) return i;
   }
   return -1; // All prayers passed
 }
@@ -107,55 +109,67 @@ function getNextPrayerIndex(entry, now) {
 function buildWidget(mosqueName, entry, nextIdx) {
   const w = new ListWidget();
   w.backgroundColor = COLORS.bg;
-  w.setPadding(12, 14, 12, 14);
+  w.setPadding(10, 16, 10, 16);
 
   // Mosque name
   const title = w.addText(mosqueName);
-  title.font = Font.semiboldSystemFont(14);
+  title.font = Font.boldSystemFont(16);
   title.textColor = COLORS.text;
   title.centerAlignText();
 
-  w.addSpacer(8);
+  w.addSpacer(6);
 
   // Header row
-  const header = w.addStack();
-  header.setPadding(0, 4, 4, 4);
-  addCell(header, "Prayer", 80, COLORS.headerText, Font.semiboldSystemFont(11), "left");
-  addCell(header, "Adhan", 65, COLORS.headerText, Font.semiboldSystemFont(11), "center");
-  addCell(header, "Iqamah", 65, COLORS.headerText, Font.semiboldSystemFont(11), "center");
+  addRow(w, "Prayer", "Begins", "Iqamah", COLORS.headerText, Font.semiboldSystemFont(12), false);
+
+  w.addSpacer(2);
 
   // Prayer rows
   for (let i = 0; i < PRAYERS.length; i++) {
     const p = PRAYERS[i];
     const isNext = i === nextIdx;
-
-    const row = w.addStack();
-    row.setPadding(4, 4, 4, 4);
-    row.cornerRadius = 6;
-    if (isNext) row.backgroundColor = COLORS.highlight;
-
     const textColor = isNext ? COLORS.text : COLORS.dimText;
-    const font = isNext
-      ? Font.semiboldSystemFont(13)
-      : Font.regularSystemFont(13);
+    const font = isNext ? Font.semiboldSystemFont(14) : Font.regularSystemFont(14);
+    const beginsVal = entry[p.begins] || "";
+    const iqamahVal = p.iqamah ? (entry[p.iqamah] || "") : "";
 
-    addCell(row, p.label, 80, textColor, font, "left");
-    addCell(row, entry[p.adhan] || "-", 65, textColor, font, "center");
-    addCell(row, entry[p.iqamah] || "-", 65, textColor, font, "center");
+    addRow(w, p.label, beginsVal, iqamahVal, textColor, font, isNext);
+
+    if (i < PRAYERS.length - 1) w.addSpacer(0);
   }
 
+  w.addSpacer();
   return w;
 }
 
-function addCell(stack, text, width, color, font, align) {
-  const cell = stack.addStack();
-  cell.size = new Size(width, 0);
-  if (align === "center") cell.addSpacer();
-  const t = cell.addText(text);
-  t.font = font;
-  t.textColor = color;
-  t.lineLimit = 1;
-  if (align === "center" || align === "right") cell.addSpacer();
+function addRow(w, col1, col2, col3, color, font, highlight) {
+  const row = w.addStack();
+  row.setPadding(5, 8, 5, 8);
+  row.cornerRadius = 8;
+  if (highlight) row.backgroundColor = COLORS.highlight;
+
+  const c1 = row.addStack();
+  c1.size = new Size(100, 0);
+  const t1 = c1.addText(col1);
+  t1.font = font;
+  t1.textColor = color;
+  t1.lineLimit = 1;
+
+  row.addSpacer();
+
+  const t2 = row.addText(col2);
+  t2.font = font;
+  t2.textColor = color;
+  t2.lineLimit = 1;
+
+  row.addSpacer();
+
+  const c3 = row.addStack();
+  c3.addSpacer();
+  const t3 = c3.addText(col3);
+  t3.font = font;
+  t3.textColor = color;
+  t3.lineLimit = 1;
 }
 
 // --- Cache ---
