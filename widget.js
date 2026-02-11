@@ -71,7 +71,9 @@ function buildWidget(mosqueName, entry, nextIdx) {
   // Header
   const hdr = w.addStack();
   hdr.setPadding(0, 8, 0, 0);
-  addLabel(hdr, "Prayer", Font.mediumSystemFont(13), GREY);
+  const hdrName = hdr.addStack();
+  hdrName.size = new Size(90, 0);
+  addLabel(hdrName, "Prayer", Font.mediumSystemFont(13), GREY);
   hdr.addSpacer();
   addLabel(hdr, "Begins", Font.mediumSystemFont(13), GREY);
   hdr.addSpacer();
@@ -95,11 +97,13 @@ function buildWidget(mosqueName, entry, nextIdx) {
 
     const font = Font.boldSystemFont(15);
 
-    addLabel(row, p.label, font, WHITE);
+    const nameCol = row.addStack();
+    nameCol.size = new Size(90, 0);
+    addLabel(nameCol, p.label, font, WHITE);
     row.addSpacer();
     addLabel(row, begins24, font, WHITE);
     row.addSpacer();
-    addLabel(row, iqamah24, font, WHITE);
+    addLabel(row, iqamah24 || " ", font, WHITE);
 
     if (i < PRAYERS.length - 1) w.addSpacer();
   }
