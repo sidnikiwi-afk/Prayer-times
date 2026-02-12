@@ -207,6 +207,7 @@
         .masjid-card:nth-child(2) { animation-delay: 0.2s; }
         .masjid-card:nth-child(3) { animation-delay: 0.3s; }
         .masjid-card:nth-child(4) { animation-delay: 0.4s; }
+        .masjid-card:nth-child(5) { animation-delay: 0.5s; }
 
         .masjid-card:hover {
             background: rgba(255,255,255,0.15);
@@ -230,6 +231,10 @@
         .masjid-card[data-mosque="tawakkulia"]:hover {
             border-left-color: #3949ab;
             box-shadow: 0 8px 25px rgba(0,0,0,0.15), -3px 0 12px rgba(57,73,171,0.3);
+        }
+        .masjid-card[data-mosque="salahadin"]:hover {
+            border-left-color: #9c2759;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15), -3px 0 12px rgba(156,39,89,0.3);
         }
 
         /* Mobile: use :active instead of :hover */
@@ -261,6 +266,10 @@
             .masjid-card[data-mosque="tawakkulia"]:active {
                 border-left-color: #3949ab;
                 box-shadow: 0 8px 25px rgba(0,0,0,0.15), -3px 0 12px rgba(57,73,171,0.3);
+            }
+            .masjid-card[data-mosque="salahadin"]:active {
+                border-left-color: #9c2759;
+                box-shadow: 0 8px 25px rgba(0,0,0,0.15), -3px 0 12px rgba(156,39,89,0.3);
             }
         }
 
@@ -454,6 +463,14 @@
                 <div class="card-info">
                     <div class="card-name">Tawakkulia Islamic Society</div>
                     <div class="card-address">48 Cornwall Road, BD8 7JN</div>
+                </div>
+                <div class="card-arrow">&rsaquo;</div>
+            </a>
+            <a href="Salahadin/" class="masjid-card" data-mosque="salahadin">
+                <div class="card-colour" style="background: linear-gradient(to bottom, #6a1b34, #9c2759);"></div>
+                <div class="card-info">
+                    <div class="card-name">Salahadin Mosque</div>
+                    <div class="card-address">62 Little Horton Lane, BD5 0BS</div>
                 </div>
                 <div class="card-arrow">&rsaquo;</div>
             </a>

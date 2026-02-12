@@ -4,6 +4,7 @@ const MASJIDS = [
     { name: 'Masjid Quba', addr: '20 Quba Court, BD8 7LA', folder: 'quba' },
     { name: 'Al Mahad Ul Islami', addr: 'Dorset Street, BD5 0LT', folder: 'Almahad' },
     { name: 'Tawakkulia Islamic Society', addr: '48 Cornwall Road, BD8 7JN', folder: 'Tawakkulia' },
+    { name: 'Salahadin Mosque', addr: '62 Little Horton Lane, BD5 0BS', folder: 'Salahadin' },
 ];
 
 (function() {

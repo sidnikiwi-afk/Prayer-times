@@ -1,0 +1,16 @@
+{
+  "name": "Salahadin Mosque - Ramadan Timetable",
+  "short_name": "Salahadin Times",
+  "description": "Ramadan 1447 prayer timetable for Salahadin Mosque, Bradford",
+  "start_url": "/Salahadin/",
+  "display": "standalone",
+  "background_color": "#6a1b34",
+  "theme_color": "#6a1b34",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%236a1b34' width='100' height='100' rx='20'/><text x='50' y='50' text-anchor='middle' dominant-baseline='central' font-size='60'>🌙</text></svg>",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

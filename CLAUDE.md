@@ -39,8 +39,15 @@ Prayer-times/
 │   ├── og-image.svg        # Social preview image
 │   ├── qr-code.svg         # QR code for poster
 │   └── poster.html         # A4 printable QR poster
-└── Tawakkulia/
-    ├── index.html          # Tawakkulia Islamic Society timetable
+├── Tawakkulia/
+│   ├── index.html          # Tawakkulia Islamic Society timetable
+│   ├── manifest.json       # PWA manifest
+│   ├── sw.js               # Service worker (offline support)
+│   ├── og-image.svg        # Social preview image
+│   ├── qr-code.svg         # QR code for poster
+│   └── poster.html         # A4 printable QR poster
+└── Salahadin/
+    ├── index.html          # Salahadin Mosque timetable
     ├── manifest.json       # PWA manifest
     ├── sw.js               # Service worker (offline support)
     ├── og-image.svg        # Social preview image
@@ -56,12 +63,14 @@ Prayer-times/
 | Masjid Quba | `quba` | 20 Quba Court, BD8 7LA | Blue `#1a5a7e` / `#2a8ab5` | 8:00am | £5.00 |
 | Al Mahad Ul Islami | `Almahad` | Dorset Street, BD5 0LT | Green `#1b5e20` / `#388e3c` | 9:00am | £5.00 |
 | Tawakkulia Islamic Society | `Tawakkulia` | 48 Cornwall Road, BD8 7JN | Indigo `#1a237e` / `#3949ab` | 7:00am, 8:30am, 10:00am | £4.80 |
+| Salahadin Mosque | `Salahadin` | 62 Little Horton Lane, BD5 0BS | Burgundy `#6a1b34` / `#9c2759` | TBA | £5.00 |
 
 ### Donation Details
 - **Shahjalal**: Not listed in timetable
 - **Quba**: Madressa Islamia Talimuddin, Barclays, Sort: 20-11-81, Acc: 90803383
 - **Almahad**: Al Mahadul Islami, Sort: 20-76-92, Acc: 13161595
 - **Tawakkulia**: Tawakkulia Jami Masjid, Sort: 56-00-36, Acc: 42345499
+- **Salahadin**: Barclays Bank, Sort: 20-11-88, Acc: 83561801
 
 ### Contact / Radio
 - **Quba**: Tel 01274 542027 | masjidquba.org | Receiver: 454.3500
@@ -128,6 +137,7 @@ Prayer-times/
 | Quba | Modern mosque, 1 dome+minaret (silver/blue) | Hexagonal | Rising light orbs | Top border | Blue, silver, gold, white |
 | Almahad | Triple-dome traditional (gold/green) | Arabesque floral | Golden fireflies | Bottom border | Green, gold, white, emerald |
 | Tawakkulia | Dual-minaret with side domes (indigo) | Islamic star | Floating orbs | Left border | Indigo, light indigo, gold, white |
+| Salahadin | Fortress-style, dual minarets, crenellations (burgundy) | Interlocking circles | Warm embers | Right border | Burgundy, rose, gold, white |
 
 ### Shahjalal-Only Features
 - **Demo mode**: DEMO button (bottom-left), date picker + time slider to test countdown at any date/time
@@ -136,6 +146,7 @@ Prayer-times/
 - **Quba**: Programmes During Ramadan (Ml. Siraj Saleh, Ml. Ahmed Desai), live stream info
 - **Almahad**: "Some Sunnah of Ramadan" 10-item grid (Sahoor, Iftar, Taraweeh, Quran, etc.)
 - **Tawakkulia**: Programmes During Ramadan (Taleem, Dars-e-Quran, Bangla Bayan, English Weekend Bayan, Quran Mashq, Late Night Taraweeh)
+- **Salahadin**: Full February timetable (pre-Ramadan + Ramadan), Jumu'ah info (Khutba 12:30, Salah 12:50)
 
 ### Landing Page (waqt.uk)
 - Granim.js animated background (deep blue/teal gradients)
@@ -220,6 +231,7 @@ After the last day's Isha Jamaah, shows "Eid Mubarak".
 | Quba | `quba-darkMode` | `quba-notifications` | `quba-viewMode` | `quba-autoDark` |
 | Almahad | `almahad-darkMode` | `almahad-notifications` | `almahad-viewMode` | `almahad-autoDark` |
 | Tawakkulia | `tawakkulia-darkMode` | `tawakkulia-notifications` | `tawakkulia-viewMode` | `tawakkulia-autoDark` |
+| Salahadin | `salahadin-darkMode` | `salahadin-notifications` | `salahadin-viewMode` | `salahadin-autoDark` |
 
 ### nav.js
 - Self-executing function that injects CSS, HTML, and event handlers
@@ -261,6 +273,7 @@ CNAME www   sidnikiwi-afk.github.io
 | Masjid Quba | `waqt.uk/quba/` |
 | Al Mahad Ul Islami | `waqt.uk/Almahad/` |
 | Tawakkulia Islamic Society | `waqt.uk/Tawakkulia/` |
+| Salahadin Mosque | `waqt.uk/Salahadin/` |
 
 ### Git Config
 - Repo: `sidnikiwi-afk/Prayer-times`
