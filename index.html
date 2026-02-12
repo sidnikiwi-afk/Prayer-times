@@ -434,7 +434,7 @@
         </div>
         <div class="no-results" id="noResults">No masjids found</div>
         <div class="masjid-list">
-            <a href="shahjalal/" class="masjid-card" data-mosque="shahjalal">
+            <a href="shahjalal/" class="masjid-card" data-mosque="shahjalal" data-tags="Bradford Little Horton">
                 <div class="card-colour" style="background: linear-gradient(to bottom, #004d40, #00796b);"></div>
                 <div class="card-info">
                     <div class="card-name">Shahjalal Islamic Society</div>
@@ -442,7 +442,7 @@
                 </div>
                 <div class="card-arrow">&rsaquo;</div>
             </a>
-            <a href="quba/" class="masjid-card" data-mosque="quba">
+            <a href="quba/" class="masjid-card" data-mosque="quba" data-tags="Bradford Manningham">
                 <div class="card-colour" style="background: linear-gradient(to bottom, #1a5a7e, #2a8ab5);"></div>
                 <div class="card-info">
                     <div class="card-name">Masjid Quba</div>
@@ -450,7 +450,7 @@
                 </div>
                 <div class="card-arrow">&rsaquo;</div>
             </a>
-            <a href="Almahad/" class="masjid-card" data-mosque="almahad">
+            <a href="Almahad/" class="masjid-card" data-mosque="almahad" data-tags="Bradford Little Horton">
                 <div class="card-colour" style="background: linear-gradient(to bottom, #1b5e20, #388e3c);"></div>
                 <div class="card-info">
                     <div class="card-name">Al Mahad Ul Islami</div>
@@ -458,7 +458,7 @@
                 </div>
                 <div class="card-arrow">&rsaquo;</div>
             </a>
-            <a href="Tawakkulia/" class="masjid-card" data-mosque="tawakkulia">
+            <a href="Tawakkulia/" class="masjid-card" data-mosque="tawakkulia" data-tags="Bradford Manningham">
                 <div class="card-colour" style="background: linear-gradient(to bottom, #1a237e, #3949ab);"></div>
                 <div class="card-info">
                     <div class="card-name">Tawakkulia Islamic Society</div>
@@ -466,7 +466,7 @@
                 </div>
                 <div class="card-arrow">&rsaquo;</div>
             </a>
-            <a href="Salahadin/" class="masjid-card" data-mosque="salahadin">
+            <a href="Salahadin/" class="masjid-card" data-mosque="salahadin" data-tags="Bradford Little Horton">
                 <div class="card-colour" style="background: linear-gradient(to bottom, #6a1b34, #9c2759);"></div>
                 <div class="card-info">
                     <div class="card-name">Salahadin Mosque</div>
@@ -516,7 +516,7 @@
             clearBtn.style.display = q ? 'block' : 'none';
             let visible = 0;
             cards.forEach(function(card) {
-                const text = card.textContent.toLowerCase();
+                const text = card.textContent.toLowerCase() + ' ' + (card.dataset.tags || '').toLowerCase();
                 const match = !q || text.includes(q);
                 card.style.display = match ? '' : 'none';
                 if (match) visible++;
