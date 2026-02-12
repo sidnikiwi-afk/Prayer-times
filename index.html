@@ -208,6 +208,7 @@
         .masjid-card:nth-child(3) { animation-delay: 0.3s; }
         .masjid-card:nth-child(4) { animation-delay: 0.4s; }
         .masjid-card:nth-child(5) { animation-delay: 0.5s; }
+        .masjid-card:nth-child(6) { animation-delay: 0.6s; }
 
         .masjid-card:hover {
             background: rgba(255,255,255,0.15);
@@ -235,6 +236,10 @@
         .masjid-card[data-mosque="salahadin"]:hover {
             border-left-color: #9c2759;
             box-shadow: 0 8px 25px rgba(0,0,0,0.15), -3px 0 12px rgba(156,39,89,0.3);
+        }
+        .masjid-card[data-mosque="abubakar"]:hover {
+            border-left-color: #7b1fa2;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15), -3px 0 12px rgba(123,31,162,0.3);
         }
 
         /* Mobile: use :active instead of :hover */
@@ -270,6 +275,10 @@
             .masjid-card[data-mosque="salahadin"]:active {
                 border-left-color: #9c2759;
                 box-shadow: 0 8px 25px rgba(0,0,0,0.15), -3px 0 12px rgba(156,39,89,0.3);
+            }
+            .masjid-card[data-mosque="abubakar"]:active {
+                border-left-color: #7b1fa2;
+                box-shadow: 0 8px 25px rgba(0,0,0,0.15), -3px 0 12px rgba(123,31,162,0.3);
             }
         }
 
@@ -471,6 +480,14 @@
                 <div class="card-info">
                     <div class="card-name">Salahadin Mosque</div>
                     <div class="card-address">62 Little Horton Lane, BD5 0BS</div>
+                </div>
+                <div class="card-arrow">&rsaquo;</div>
+            </a>
+            <a href="abubakar/" class="masjid-card" data-mosque="abubakar" data-tags="Bradford">
+                <div class="card-colour" style="background: linear-gradient(to bottom, #4a148c, #7b1fa2);"></div>
+                <div class="card-info">
+                    <div class="card-name">Masjid Abu Bakar</div>
+                    <div class="card-address">38 Steadman Terrace, BD3 9NB</div>
                 </div>
                 <div class="card-arrow">&rsaquo;</div>
             </a>
