@@ -1,10 +1,10 @@
 // Shared masjid navigation - edit this list to add/remove mosques
 const MASJIDS = [
-    { name: 'Shahjalal Islamic Society', addr: '149A Little Horton Lane, BD5 0HS', folder: 'shahjalal' },
-    { name: 'Masjid Quba', addr: '20 Quba Court, BD8 7LA', folder: 'quba' },
-    { name: 'Al Mahad Ul Islami', addr: 'Dorset Street, BD5 0LT', folder: 'Almahad' },
-    { name: 'Tawakkulia Islamic Society', addr: '48 Cornwall Road, BD8 7JN', folder: 'Tawakkulia' },
-    { name: 'Salahadin Mosque', addr: '62 Little Horton Lane, BD5 0BS', folder: 'Salahadin' },
+    { name: 'Shahjalal Islamic Society', addr: '149A Little Horton Lane, BD5 0HS', folder: 'shahjalal', tags: 'Bradford Little Horton' },
+    { name: 'Masjid Quba', addr: '20 Quba Court, BD8 7LA', folder: 'quba', tags: 'Bradford Manningham' },
+    { name: 'Al Mahad Ul Islami', addr: 'Dorset Street, BD5 0LT', folder: 'Almahad', tags: 'Bradford Little Horton' },
+    { name: 'Tawakkulia Islamic Society', addr: '48 Cornwall Road, BD8 7JN', folder: 'Tawakkulia', tags: 'Bradford Manningham' },
+    { name: 'Salahadin Mosque', addr: '62 Little Horton Lane, BD5 0BS', folder: 'Salahadin', tags: 'Bradford Little Horton' },
 ];
 
 (function() {
@@ -64,6 +64,7 @@ const MASJIDS = [
         }
         .nav-list .nav-name { font-size: 13px; }
         .nav-list .nav-addr { font-size: 10px; opacity: 0.45; margin-top: 1px; }
+        .nav-list .nav-tags { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
         .nav-all {
             display: block; text-align: center; padding: 8px;
             color: rgba(255,255,255,0.4); text-decoration: none;
@@ -80,7 +81,7 @@ const MASJIDS = [
     // Build nav HTML
     const items = MASJIDS.map(m => {
         const isActive = currentFolder && m.folder === currentFolder.folder;
-        return `<li><a href="${pathPrefix}${m.folder}/"${isActive ? ' class="active"' : ''}><span class="nav-name">${m.name}</span><span class="nav-addr">${m.addr}</span></a></li>`;
+        return `<li><a href="${pathPrefix}${m.folder}/"${isActive ? ' class="active"' : ''}><span class="nav-name">${m.name}</span><span class="nav-addr">${m.addr}</span>${m.tags ? '<span class="nav-tags">' + m.tags + '</span>' : ''}</a></li>`;
     }).join('');
 
     const nav = document.createElement('nav');
