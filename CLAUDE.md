@@ -53,8 +53,15 @@ Prayer-times/
 │   ├── og-image.svg        # Social preview image
 │   ├── qr-code.svg         # QR code for poster
 │   └── poster.html         # A4 printable QR poster
-└── abubakar/
-    ├── index.html          # Masjid Abu Bakar timetable
+├── abubakar/
+│   ├── index.html          # Masjid Abu Bakar timetable
+│   ├── manifest.json       # PWA manifest
+│   ├── sw.js               # Service worker (offline support)
+│   ├── og-image.svg        # Social preview image
+│   ├── qr-code.svg         # QR code for poster
+│   └── poster.html         # A4 printable QR poster
+└── iyma/
+    ├── index.html          # IYMA timetable
     ├── manifest.json       # PWA manifest
     ├── sw.js               # Service worker (offline support)
     ├── og-image.svg        # Social preview image
@@ -72,6 +79,7 @@ Prayer-times/
 | Tawakkulia Islamic Society | `Tawakkulia` | 48 Cornwall Road, BD8 7JN | Indigo `#1a237e` / `#3949ab` | 7:00am, 8:30am, 10:00am | £4.80 |
 | Salahadin Mosque | `Salahadin` | 62 Little Horton Lane, BD5 0BS | Burgundy `#6a1b34` / `#9c2759` | TBA | £5.00 |
 | Masjid Abu Bakar | `abubakar` | 38 Steadman Terrace, BD3 9NB | Purple `#4a148c` / `#7b1fa2` | — | — |
+| IYMA | `iyma` | 68 Idle Road, BD2 4NH | Dark Cyan `#006064` / `#00838f` | 9:00am | £5.00 |
 
 ### Donation Details
 - **Shahjalal**: Not listed in timetable
@@ -80,12 +88,14 @@ Prayer-times/
 - **Tawakkulia**: Tawakkulia Jami Masjid, Sort: 56-00-36, Acc: 42345499
 - **Salahadin**: Barclays Bank, Sort: 20-11-88, Acc: 83561801
 - **Abu Bakar**: Yorkshire Bank, Acc: 18330977, Sort: 05-03-23
+- **IYMA**: Imam Yusuf Motala Academy, Yorkshire Bank, Sort: 05-03-03, Acc: 71398073
 
 ### Contact / Radio
 - **Quba**: Tel 01274 542027 | masjidquba.org | Receiver: 454.3500
 - **Almahad**: Receiver: 456.62500
 - **Tawakkulia**: Tel 01274 734563 | tawakkulia.com | tjmasjid@outlook.com | Receiver: 455-650
 - **Abu Bakar**: Tel 01274 668343 | Receiver: 454.40625
+- **IYMA**: Tel 07771 635 480 | info@iyma.org.uk | www.iyma.org.uk
 
 ## Features (All Mosques)
 
@@ -149,6 +159,7 @@ Prayer-times/
 | Tawakkulia | Dual-minaret with side domes (indigo) | Islamic star | Floating orbs | Left border | Indigo, light indigo, gold, white |
 | Salahadin | Fortress-style, dual minarets, crenellations (burgundy) | Interlocking circles | Warm embers | Right border | Burgundy, rose, gold, white |
 | Abu Bakar | Modern mosque, 1 dome+minaret (purple) | Hexagonal | Rising light orbs | Top border | Purple, lavender, gold, white |
+| IYMA | Modern mosque, 1 dome+minaret (cyan) | Hexagonal | Rising light orbs | Top border | Cyan, teal, gold, white |
 
 ### Shahjalal-Only Features
 - **Demo mode**: DEMO button (bottom-left), date picker + time slider to test countdown at any date/time
@@ -159,6 +170,7 @@ Prayer-times/
 - **Tawakkulia**: Programmes During Ramadan (Taleem, Dars-e-Quran, Bangla Bayan, English Weekend Bayan, Quran Mashq, Late Night Taraweeh)
 - **Salahadin**: Full February timetable (pre-Ramadan + Ramadan), Jumu'ah info (Khutba 12:30, Salah 12:50)
 - **Abu Bakar**: No unique content sections
+- **IYMA**: Donation appeal banner (Phase 3 extension building project), parking notice
 
 ### Landing Page (waqt.uk)
 - Granim.js animated background (deep blue/teal gradients)
@@ -245,6 +257,7 @@ After the last day's Isha Jamaah, shows "Eid Mubarak".
 | Tawakkulia | `tawakkulia-darkMode` | `tawakkulia-notifications` | `tawakkulia-viewMode` | `tawakkulia-autoDark` |
 | Salahadin | `salahadin-darkMode` | `salahadin-notifications` | `salahadin-viewMode` | `salahadin-autoDark` |
 | Abu Bakar | `abubakar-darkMode` | `abubakar-notifications` | `abubakar-viewMode` | `abubakar-autoDark` |
+| IYMA | `iyma-darkMode` | `iyma-notifications` | `iyma-viewMode` | `iyma-autoDark` |
 
 ### nav.js
 - Self-executing function that injects CSS, HTML, and event handlers
@@ -288,6 +301,7 @@ CNAME www   sidnikiwi-afk.github.io
 | Tawakkulia Islamic Society | `waqt.uk/Tawakkulia/` |
 | Salahadin Mosque | `waqt.uk/Salahadin/` |
 | Masjid Abu Bakar | `waqt.uk/abubakar/` |
+| IYMA | `waqt.uk/iyma/` |
 
 ### Git Config
 - Repo: `sidnikiwi-afk/Prayer-times`

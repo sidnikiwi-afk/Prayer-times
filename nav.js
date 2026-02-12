@@ -6,6 +6,7 @@ const MASJIDS = [
     { name: 'Tawakkulia Islamic Society', addr: '48 Cornwall Road, BD8 7JN', folder: 'Tawakkulia', tags: 'Bradford Manningham' },
     { name: 'Salahadin Mosque', addr: '62 Little Horton Lane, BD5 0BS', folder: 'Salahadin', tags: 'Bradford Little Horton' },
     { name: 'Masjid Abu Bakar', addr: '38 Steadman Terrace, BD3 9NB', folder: 'abubakar', tags: 'Bradford' },
+    { name: 'IYMA', addr: '68 Idle Road, BD2 4NH', folder: 'iyma', tags: 'Bradford Idle' },
 ];
 
 (function() {
