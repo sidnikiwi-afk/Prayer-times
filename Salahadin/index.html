@@ -1277,11 +1277,32 @@
                 const tmrw = timetableData[tomorrowIndex];
                 const isRamadanTomorrow = tmrw.no !== undefined;
                 if (isRamadanTomorrow) {
-                    tmrwEl.innerHTML = `Tomorrow: Sehri ends <strong>${tmrw.fajr}</strong> &nbsp;\u2022&nbsp; Iftar <strong>${tmrw.maghrib}</strong>`;
+                    let html = `Tomorrow: Sehri ends <strong>${tmrw.fajr}</strong> &nbsp;\u2022&nbsp; Iftar <strong>${tmrw.maghrib}</strong>`;
+                    const ramChanges = [];
+                    if (todayData.jFajr !== tmrw.jFajr) ramChanges.push(`Fajr <strong>${tmrw.jFajr}</strong>`);
+                    if (todayData.jZuhr !== tmrw.jZuhr) ramChanges.push(`Zuhr <strong>${tmrw.jZuhr}</strong>`);
+                    if (todayData.jAsr !== tmrw.jAsr) ramChanges.push(`Asr <strong>${tmrw.jAsr}</strong>`);
+                    if (todayData.jMaghrib !== tmrw.jMaghrib) ramChanges.push(`Maghrib <strong>${tmrw.jMaghrib}</strong>`);
+                    if (todayData.jIsha !== tmrw.jIsha) ramChanges.push(`Isha <strong>${tmrw.jIsha}</strong>`);
+                    if (ramChanges.length) {
+                        html += `<br>Jamaah changes: ${ramChanges.join(' &nbsp;\u2022&nbsp; ')}`;
+                    }
+                    tmrwEl.innerHTML = html;
+                    tmrwEl.style.display = '';
                 } else {
-                    tmrwEl.innerHTML = `Tomorrow: Fajr <strong>${tmrw.fajr}</strong> &nbsp;\u2022&nbsp; Maghrib <strong>${tmrw.maghrib}</strong>`;
+                    const changes = [];
+                    if (todayData.jFajr !== tmrw.jFajr) changes.push(`Fajr <strong>${tmrw.jFajr}</strong>`);
+                    if (todayData.jZuhr !== tmrw.jZuhr) changes.push(`Zuhr <strong>${tmrw.jZuhr}</strong>`);
+                    if (todayData.jAsr !== tmrw.jAsr) changes.push(`Asr <strong>${tmrw.jAsr}</strong>`);
+                    if (todayData.jMaghrib !== tmrw.jMaghrib) changes.push(`Maghrib <strong>${tmrw.jMaghrib}</strong>`);
+                    if (todayData.jIsha !== tmrw.jIsha) changes.push(`Isha <strong>${tmrw.jIsha}</strong>`);
+                    if (changes.length) {
+                        tmrwEl.innerHTML = `Jamaah changes tomorrow: ${changes.join(' &nbsp;\u2022&nbsp; ')}`;
+                        tmrwEl.style.display = '';
+                    } else {
+                        tmrwEl.style.display = 'none';
+                    }
                 }
-                tmrwEl.style.display = '';
             } else { tmrwEl.style.display = 'none'; }
         }
 

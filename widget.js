@@ -10,7 +10,7 @@ const MOSQUES = {
 
 const PRAYERS = [
   { label: "Fajr", begins: "fajr", iqamah: "jFajr", pm: false },
-  { label: "Ishraq", begins: "sunrise", iqamah: null, pm: false },
+  { label: "Ishraq", begins: "sunrise", iqamah: null, pm: false, ishraq: true },
   { label: "Dhuhr", begins: "zuhr", iqamah: "jZuhr", pm: true },
   { label: "Asr", begins: "asr", iqamah: "jAsr", pm: true },
   { label: "Maghrib", begins: "maghrib", iqamah: "maghrib", pm: true },
@@ -85,7 +85,7 @@ function buildWidget(mosqueName, entry, nextIdx) {
     const beginsRaw = entry[p.begins] || "";
     const iqamahRaw = p.iqamah ? (entry[p.iqamah] || "") : "";
     const begins24 = beginsRaw;
-    const iqamah24 = p.iqamah ? iqamahRaw : "";
+    const iqamah24 = p.ishraq ? addMinutes(beginsRaw, 20) : (p.iqamah ? iqamahRaw : "");
 
     const row = w.addStack();
     row.setPadding(6, 8, 6, 0);
@@ -147,6 +147,13 @@ function parseTimetableData(html) {
 function findToday(data, now) {
   const key = `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}`;
   return data.find((d) => d.date === key) || null;
+}
+
+function addMinutes(timeStr, mins) {
+  if (!timeStr) return "";
+  const [h, m] = timeStr.split(":").map(Number);
+  const totalMins = h * 60 + m + mins;
+  return `${Math.floor(totalMins / 60)}:${(totalMins % 60).toString().padStart(2, "0")}`;
 }
 
 function to24mins(timeStr, isPm) {
