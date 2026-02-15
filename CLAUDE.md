@@ -60,8 +60,15 @@ Prayer-times/
 │   ├── og-image.svg        # Social preview image
 │   ├── qr-code.svg         # QR code for poster
 │   └── poster.html         # A4 printable QR poster
-└── iyma/
-    ├── index.html          # IYMA timetable
+├── iyma/
+│   ├── index.html          # IYMA timetable
+│   ├── manifest.json       # PWA manifest
+│   ├── sw.js               # Service worker (offline support)
+│   ├── og-image.svg        # Social preview image
+│   ├── qr-code.svg         # QR code for poster
+│   └── poster.html         # A4 printable QR poster
+└── JamiaMasjid/
+    ├── index.html          # Jamia Masjid timetable
     ├── manifest.json       # PWA manifest
     ├── sw.js               # Service worker (offline support)
     ├── og-image.svg        # Social preview image
@@ -80,6 +87,7 @@ Prayer-times/
 | Salahadin Mosque | `Salahadin` | 62 Little Horton Lane, BD5 0BS | Burgundy `#6a1b34` / `#9c2759` | TBA | £5.00 |
 | Masjid Abu Bakar | `abubakar` | 38 Steadman Terrace, BD3 9NB | Purple `#4a148c` / `#7b1fa2` | — | — |
 | IYMA | `iyma` | 68 Idle Road, BD2 4NH | Dark Cyan `#006064` / `#00838f` | 9:00am | £5.00 |
+| Jamia Masjid | `JamiaMasjid` | 28-32 Howard St, BD5 0BP | Brown/Amber `#4e342e` / `#795548` | TBA | TBA |
 
 ### Donation Details
 - **Shahjalal**: Not listed in timetable
@@ -89,6 +97,7 @@ Prayer-times/
 - **Salahadin**: Barclays Bank, Sort: 20-11-88, Acc: 83561801
 - **Abu Bakar**: Yorkshire Bank, Acc: 18330977, Sort: 05-03-23
 - **IYMA**: Imam Yusuf Motala Academy, Yorkshire Bank, Sort: 05-03-03, Acc: 71398073
+- **Jamia Masjid**: TBA
 
 ### Contact / Radio
 - **Quba**: Tel 01274 542027 | masjidquba.org | Receiver: 454.3500
@@ -96,11 +105,12 @@ Prayer-times/
 - **Tawakkulia**: Tel 01274 734563 | tawakkulia.com | tjmasjid@outlook.com | Receiver: 455-650
 - **Abu Bakar**: Tel 01274 668343 | Receiver: 454.40625
 - **IYMA**: Tel 07771 635 480 | info@iyma.org.uk | www.iyma.org.uk
+- **Jamia Masjid**: Tel 01274 724 819
 
 ## Features (All Mosques)
 
 ### Core Functionality
-- **Today View**: Card-based layout showing today's prayer times only, with pill toggle to switch to Full Timetable. Passed prayers dimmed with checkmark, next prayer highlighted with accent border + "NEXT" badge, tomorrow's Sehri/Iftar preview at bottom. Friday shows "Jumu'ah" instead of Zuhr. View preference saved to localStorage. Auto-refreshes every 60s. Defaults to "Today" during Ramadan, "Full Timetable" otherwise.
+- **Today View**: Card-based layout showing today's prayer times only, with pill toggle to switch to Full Timetable. Passed prayers dimmed with checkmark, next prayer highlighted with accent border + "NEXT" badge. Tomorrow preview at bottom: during Ramadan shows Sehri/Iftar times + any jamaah changes; outside Ramadan shows jamaah changes only (hidden if none). Friday shows "Jumu'ah" instead of Zuhr. View preference saved to localStorage. Auto-refreshes every 60s. Defaults to "Today" during Ramadan, "Full Timetable" otherwise.
 - Live prayer-by-prayer countdown (Sehri > Fajr Jamaah > Zuhr > Zuhr Jamaah > Asr > Asr Jamaah > Iftar > Isha > Isha Jamaah > next Sehri)
 - Pre-Ramadan countdown with days display
 - Post-Ramadan "Eid Mubarak" state
@@ -115,7 +125,7 @@ Prayer-times/
 - Responsive mobile layout
 - Print-friendly (hides buttons, countdown, nav, today-view)
 - Moon sighting disclaimer in header
-- **iOS Widget (Scriptable)**: `widget.js` — medium home screen widget showing today's 6 prayers (Fajr, Ishraq, Dhuhr, Asr, Maghrib, Isha) with Begins/Iqamah columns. Fetches timetableData from waqt.uk, highlights next prayer, caches for offline. Widget parameter selects mosque: `shahjalal` (default), `quba`, `almahad`.
+- **iOS Widget (Scriptable)**: `widget.js` — medium home screen widget showing today's 6 prayers (Fajr, Ishraq, Dhuhr, Asr, Maghrib, Isha) with Begins/Iqamah columns. Ishraq time calculated as sunrise + 20 minutes (matching Shahjalal). Fetches timetableData from waqt.uk, highlights next prayer, caches for offline. Widget parameter selects mosque: `shahjalal` (default), `quba`, `almahad`.
 
 ### Visual Enhancements (All Mosques)
 - **Granim.js animated header**: Async-loaded from CDN, smooth gradient animation behind header. Cached by service worker for offline. Each mosque has unique color palette.
@@ -160,6 +170,7 @@ Prayer-times/
 | Salahadin | Fortress-style, dual minarets, crenellations (burgundy) | Interlocking circles | Warm embers | Right border | Burgundy, rose, gold, white |
 | Abu Bakar | Modern mosque, 1 dome+minaret (purple) | Hexagonal | Rising light orbs | Top border | Purple, lavender, gold, white |
 | IYMA | Modern mosque, 1 dome+minaret (cyan) | Hexagonal | Rising light orbs | Top border | Cyan, teal, gold, white |
+| Jamia Masjid | Modern mosque, 1 dome+minaret (brown) | Hexagonal | Rising light orbs | Top border | Brown, tan, gold, white |
 
 ### Shahjalal-Only Features
 - **Demo mode**: DEMO button (bottom-left), date picker + time slider to test countdown at any date/time
@@ -171,6 +182,7 @@ Prayer-times/
 - **Salahadin**: Full February timetable (pre-Ramadan + Ramadan), Jumu'ah info (Khutba 12:30, Salah 12:50)
 - **Abu Bakar**: No unique content sections
 - **IYMA**: Donation appeal banner (Phase 3 extension building project), parking notice
+- **Jamia Masjid**: No unique content sections (note: Maghrib Salah commences 2 min after Iftar)
 
 ### Landing Page (waqt.uk)
 - Granim.js animated background (deep blue/teal gradients)
@@ -258,6 +270,7 @@ After the last day's Isha Jamaah, shows "Eid Mubarak".
 | Salahadin | `salahadin-darkMode` | `salahadin-notifications` | `salahadin-viewMode` | `salahadin-autoDark` |
 | Abu Bakar | `abubakar-darkMode` | `abubakar-notifications` | `abubakar-viewMode` | `abubakar-autoDark` |
 | IYMA | `iyma-darkMode` | `iyma-notifications` | `iyma-viewMode` | `iyma-autoDark` |
+| Jamia Masjid | `JamiaMasjid-darkMode` | `JamiaMasjid-notifications` | `JamiaMasjid-viewMode` | `JamiaMasjid-autoDark` |
 
 ### nav.js
 - Self-executing function that injects CSS, HTML, and event handlers
@@ -302,6 +315,7 @@ CNAME www   sidnikiwi-afk.github.io
 | Salahadin Mosque | `waqt.uk/Salahadin/` |
 | Masjid Abu Bakar | `waqt.uk/abubakar/` |
 | IYMA | `waqt.uk/iyma/` |
+| Jamia Masjid | `waqt.uk/JamiaMasjid/` |
 
 ### Git Config
 - Repo: `sidnikiwi-afk/Prayer-times`
