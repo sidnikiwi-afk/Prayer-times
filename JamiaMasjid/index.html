@@ -857,6 +857,23 @@
 
     <script>
         const timetableData = [
+            { date: [2026, 2, 1], day: "Sun", no: "", sehri: "", fajr: "6:13", sunrise: "7:55", zuhr: "12:21", asr: "2:57", isha: "5:55", jFajr: "7:00", jZuhr: "1:00", jAsr: "3:30", maghrib: "4:55", jIsha: "6:15" },
+            { date: [2026, 2, 2], day: "Mon", no: "", sehri: "", fajr: "6:11", sunrise: "7:53", zuhr: "12:21", asr: "2:59", isha: "5:57", jFajr: "7:00", jZuhr: "1:00", jAsr: "3:30", maghrib: "4:57", jIsha: "7:15" },
+            { date: [2026, 2, 3], day: "Tue", no: "", sehri: "", fajr: "6:10", sunrise: "7:51", zuhr: "12:21", asr: "3:01", isha: "5:59", jFajr: "7:00", jZuhr: "1:00", jAsr: "3:30", maghrib: "4:59", jIsha: "7:15" },
+            { date: [2026, 2, 4], day: "Wed", no: "", sehri: "", fajr: "6:09", sunrise: "7:49", zuhr: "12:21", asr: "3:03", isha: "6:01", jFajr: "7:00", jZuhr: "1:00", jAsr: "3:45", maghrib: "5:01", jIsha: "7:15" },
+            { date: [2026, 2, 5], day: "Thu", no: "", sehri: "", fajr: "6:07", sunrise: "7:48", zuhr: "12:21", asr: "3:05", isha: "6:03", jFajr: "7:00", jZuhr: "1:00", jAsr: "3:45", maghrib: "5:03", jIsha: "7:15" },
+            { date: [2026, 2, 6], day: "Fri", no: "", sehri: "", fajr: "6:05", sunrise: "7:46", zuhr: "12:21", asr: "3:07", isha: "6:05", jFajr: "7:00", jZuhr: "1:00", jAsr: "3:45", maghrib: "5:05", jIsha: "7:15" },
+            { date: [2026, 2, 7], day: "Sat", no: "", sehri: "", fajr: "6:04", sunrise: "7:44", zuhr: "12:21", asr: "3:08", isha: "6:07", jFajr: "7:00", jZuhr: "1:00", jAsr: "3:45", maghrib: "5:07", jIsha: "6:30" },
+            { date: [2026, 2, 8], day: "Sun", no: "", sehri: "", fajr: "6:02", sunrise: "7:42", zuhr: "12:21", asr: "3:10", isha: "6:09", jFajr: "7:00", jZuhr: "1:00", jAsr: "3:45", maghrib: "5:09", jIsha: "6:30" },
+            { date: [2026, 2, 9], day: "Mon", no: "", sehri: "", fajr: "6:01", sunrise: "7:40", zuhr: "12:21", asr: "3:12", isha: "6:11", jFajr: "7:00", jZuhr: "1:00", jAsr: "3:45", maghrib: "5:11", jIsha: "7:15" },
+            { date: [2026, 2, 10], day: "Tue", no: "", sehri: "", fajr: "5:59", sunrise: "7:38", zuhr: "12:21", asr: "3:14", isha: "6:13", jFajr: "7:00", jZuhr: "1:00", jAsr: "3:45", maghrib: "5:13", jIsha: "7:15" },
+            { date: [2026, 2, 11], day: "Wed", no: "", sehri: "", fajr: "5:57", sunrise: "7:36", zuhr: "12:21", asr: "3:16", isha: "6:15", jFajr: "7:00", jZuhr: "1:00", jAsr: "3:45", maghrib: "5:15", jIsha: "7:15" },
+            { date: [2026, 2, 12], day: "Thu", no: "", sehri: "", fajr: "5:55", sunrise: "7:34", zuhr: "12:21", asr: "3:18", isha: "6:17", jFajr: "7:00", jZuhr: "1:00", jAsr: "4:00", maghrib: "5:17", jIsha: "7:15" },
+            { date: [2026, 2, 13], day: "Fri", no: "", sehri: "", fajr: "5:54", sunrise: "7:32", zuhr: "12:21", asr: "3:20", isha: "6:19", jFajr: "7:00", jZuhr: "1:00", jAsr: "4:00", maghrib: "5:19", jIsha: "7:15" },
+            { date: [2026, 2, 14], day: "Sat", no: "", sehri: "", fajr: "5:52", sunrise: "7:30", zuhr: "12:21", asr: "3:21", isha: "6:21", jFajr: "7:00", jZuhr: "1:00", jAsr: "4:00", maghrib: "5:21", jIsha: "7:15" },
+            { date: [2026, 2, 15], day: "Sun", no: "", sehri: "", fajr: "5:50", sunrise: "7:28", zuhr: "12:21", asr: "3:23", isha: "6:23", jFajr: "7:00", jZuhr: "1:00", jAsr: "4:00", maghrib: "5:23", jIsha: "7:15" },
+            { date: [2026, 2, 16], day: "Mon", no: "", sehri: "", fajr: "5:48", sunrise: "7:26", zuhr: "12:21", asr: "3:25", isha: "6:25", jFajr: "7:00", jZuhr: "1:00", jAsr: "4:00", maghrib: "5:25", jIsha: "7:15" },
+            { date: [2026, 2, 17], day: "Tue", no: "", sehri: "", fajr: "5:46", sunrise: "7:24", zuhr: "12:21", asr: "3:27", isha: "6:27", jFajr: "6:45", jZuhr: "1:00", jAsr: "4:00", maghrib: "5:27", jIsha: "7:15" },
             { date: [2026, 2, 18], day: "Wed", no: 1, sehri: "5:39", fajr: "5:44", sunrise: "7:20", zuhr: "12:21", asr: "3:29", isha: "6:29", jFajr: "5:55", jZuhr: "1:00", jAsr: "4:00", maghrib: "5:27", jIsha: "7:30" },
             { date: [2026, 2, 19], day: "Thu", no: 2, sehri: "5:37", fajr: "5:42", sunrise: "7:17", zuhr: "12:21", asr: "3:31", isha: "6:31", jFajr: "5:55", jZuhr: "1:00", jAsr: "4:15", maghrib: "5:29", jIsha: "7:30" },
             { date: [2026, 2, 20], day: "Fri", no: 3, sehri: "5:35", fajr: "5:40", sunrise: "7:15", zuhr: "12:21", asr: "3:32", isha: "6:33", jFajr: "5:50", jZuhr: "1:00", jAsr: "4:15", maghrib: "5:31", jIsha: "7:30" },
