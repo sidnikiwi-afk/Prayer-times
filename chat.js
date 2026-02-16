@@ -127,6 +127,20 @@
         if (open) input.focus();
     }
 
+    // Adjust panel position when mobile keyboard opens
+    if (window.visualViewport) {
+        window.visualViewport.addEventListener('resize', function () {
+            if (!chatOpen) return;
+            var offset = window.innerHeight - window.visualViewport.height;
+            panel.style.bottom = (offset > 0 ? offset + 10 : 20) + 'px';
+        });
+        window.visualViewport.addEventListener('scroll', function () {
+            if (!chatOpen) return;
+            var offset = window.innerHeight - window.visualViewport.height;
+            panel.style.bottom = (offset > 0 ? offset + 10 : 20) + 'px';
+        });
+    }
+
     // --- Timetable context ---
     function getTodayRow(data) {
         var now = new Date();
