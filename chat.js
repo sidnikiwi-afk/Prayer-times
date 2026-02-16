@@ -12,7 +12,7 @@
         { name: 'IYMA', folder: 'iyma' },
         { name: 'Jamia Masjid', folder: 'JamiaMasjid' }
     ];
-    var SUGGESTIONS = ['Latest Isha?', 'Earliest Fajr?', 'Shortest fast?'];
+    var SUGGESTIONS = ['Latest Isha Jamaah?', 'Earliest Fajr Jamaah?'];
 
     var pathname = window.location.pathname;
     var currentMosque = MOSQUES.find(function (m) { return pathname.includes('/' + m.folder + '/'); });
