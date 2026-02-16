@@ -28,12 +28,12 @@
     style.textContent = '\
 .chat-btn{\
     position:fixed;bottom:140px;left:20px;width:50px;height:50px;border-radius:50%;\
-    background:' + themeColor + 'dd;color:#fff;border:none;font-size:22px;cursor:pointer;\
+    background:linear-gradient(135deg,#FFB300,#FF8F00);color:#fff;border:none;font-size:22px;cursor:pointer;\
     z-index:100;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);\
-    box-shadow:0 4px 15px rgba(0,0,0,.2);transition:all .3s ease;\
+    box-shadow:0 4px 15px rgba(255,179,0,.4);transition:all .3s ease;\
     display:flex;align-items:center;justify-content:center;\
 }\
-.chat-btn:hover{transform:scale(1.1)}\
+.chat-btn:hover{transform:scale(1.1);box-shadow:0 6px 20px rgba(255,179,0,.6)}\
 .chat-btn.open{display:none}\
 .chat-panel{\
     position:fixed;bottom:20px;left:20px;width:340px;max-height:480px;\
@@ -82,7 +82,7 @@
     // --- Build UI ---
     var btn = document.createElement('button');
     btn.className = 'chat-btn';
-    btn.textContent = '\u{1F916}';
+    btn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><circle cx="9" cy="10" r="1" fill="#fff" stroke="none"/><circle cx="15" cy="10" r="1" fill="#fff" stroke="none"/></svg>';
     btn.title = 'Ask about prayer times';
     btn.addEventListener('click', function () { toggle(true); });
     document.body.appendChild(btn);
