@@ -17,6 +17,7 @@ Prayer-times/
 ├── CNAME                   # Custom domain config (waqt.uk)
 ├── CLAUDE.md               # This file - project documentation
 ├── widget.js               # Scriptable iOS home screen widget
+├── chat.js                 # AI prayer times chatbot (loaded on all pages)
 ├── .gitignore
 ├── shahjalal/
 │   ├── index.html          # Shahjalal Islamic Society timetable
@@ -145,6 +146,7 @@ Prayer-times/
 - **Auto dark mode at Maghrib**: Automatically enables dark mode after Maghrib, disables after Fajr. Respects manual toggle (disables auto if user toggles manually). localStorage: `{prefix}-autoDark`
 - **Eid confetti burst**: 150 themed particles burst when "Eid Mubarak" state triggers. Canvas overlay, self-removes after 5s.
 - **Qibla compass**: Floating button (bottom-left) opens overlay with compass rose SVG. Arrow points 119.7° (Bradford → Ka'bah). Live compass on mobile via DeviceOrientationEvent (incl. `deviceorientationabsolute`), static bearing on desktop. **Standard implementation**: All mosques use the Shahjalal compass pattern (IIFE with `openQibla`/`closeQibla`/`closeQiblaOverlay` on window, `.qibla-overlay.open` toggle, `.qibla-compass`/`.qibla-compass-ring`/`.qibla-bearing-text` classes, `#qiblaSvg`/`#qiblaArrow`/`#qiblaKaaba` SVG IDs). New mosques should copy this pattern and only change theme colors.
+- **AI Prayer Assistant**: `chat.js` — floating gold chat button (bottom-left, above Qibla compass) on all pages. Opens glassmorphism chat panel. Sends questions + today's timetable context from all 8 mosques to n8n webhook (`/webhook/prayer-chat`), which calls GPT-4o-mini via OpenAI API. Suggestion chips: "Latest Isha Jamaah?", "Earliest Fajr Jamaah?". Header uses mosque's theme color. Mobile keyboard handling via `visualViewport` API. Session-only message history (not persisted). Context gathered by fetching each mosque's `index.html` and regex-extracting `timetableData`, cached per session.
 
 ### Progressive Enhancement
 - All visual effects respect `prefers-reduced-motion: reduce`
@@ -215,7 +217,7 @@ Copy any existing `index.html` as a starting point, then update:
 - Prayer card accent direction (left/top/bottom border)
 - Confetti colors for Eid burst
 - Scrollbar theme colors
-- Add `<script src="../nav.js"></script>` before `</body>`
+- Add `<script src="../nav.js"></script>` and `<script src="../chat.js"></script>` before `</body>`
 
 ### 2. Add to nav.js
 Add one line to the `MASJIDS` array:
@@ -281,6 +283,7 @@ After the last day's Isha Jamaah, shows "Eid Mubarak".
 
 ### External Dependencies
 - **Granim.js v2.0.0** (`cdn.jsdelivr.net/npm/granim@2.0.0/dist/granim.min.js`) - animated gradient backgrounds. Loaded async, cached by service worker, falls back to CSS gradient if unavailable.
+- **OpenAI GPT-4o-mini** (via n8n webhook proxy on Railway) - AI prayer times chatbot. n8n workflow "Prayer AI Chat" (ID: `eZayWM5UAKhF8RWA`), webhook path `/webhook/prayer-chat`. Uses Header Auth credential for OpenAI API key.
 - No other external JS libraries. All other effects are vanilla CSS/JS/SVG + Web Audio API.
 
 ### Data Source
