@@ -95,7 +95,7 @@
     <button class="chat-close">&times;</button>\
 </div>\
 <div class="chat-msgs" id="chatMsgs">\
-    <div class="chat-msg ai">Assalamu alaykum! Ask me anything about prayer times across Bradford mosques.</div>\
+    <div class="chat-msg ai">Assalamu alaykum! Ask me anything about prayer times.</div>\
 </div>\
 <div class="chat-chips" id="chatChips">' +
         SUGGESTIONS.map(function (s) { return '<button class="chat-chip">' + s + '</button>'; }).join('') +
