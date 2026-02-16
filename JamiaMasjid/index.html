@@ -904,7 +904,7 @@
             { date: [2026, 3, 17], day: "Tue", no: 28, sehri: "4:34", fajr: "4:39", sunrise: "6:16", zuhr: "12:15", asr: "4:16", isha: "7:23", jFajr: "4:50", jZuhr: "1:00", jAsr: "5:00", maghrib: "6:19", jIsha: "8:00" },
             { date: [2026, 3, 18], day: "Wed", no: 29, sehri: "4:31", fajr: "4:36", sunrise: "6:14", zuhr: "12:15", asr: "4:17", isha: "7:25", jFajr: "4:50", jZuhr: "1:00", jAsr: "5:00", maghrib: "6:21", jIsha: "8:00" },
             { date: [2026, 3, 19], day: "Thu", no: 30, sehri: "4:29", fajr: "4:34", sunrise: "6:12", zuhr: "12:15", asr: "4:19", isha: "7:27", jFajr: "4:45", jZuhr: "1:00", jAsr: "5:00", maghrib: "6:23", jIsha: "8:00" },
-            { date: [2026, 3, 20], day: "Fri", no: 1, sehri: "4:26", fajr: "4:31", sunrise: "6:09", zuhr: "12:15", asr: "4:20", isha: "7:29", jFajr: "5:45", jZuhr: "1:00", jAsr: "5:00", maghrib: "6:25", jIsha: "8:00" },
+            { date: [2026, 3, 20], day: "Fri", no: "", sehri: "", fajr: "4:31", sunrise: "6:09", zuhr: "12:15", asr: "4:20", isha: "7:29", jFajr: "5:45", jZuhr: "1:00", jAsr: "5:00", maghrib: "6:25", jIsha: "8:00" },
         ];
 
         const ramadanStart = new Date(2026, 1, 18);
@@ -1156,20 +1156,36 @@
             const rowDate = new Date(todayData.date[0], todayData.date[1] - 1, todayData.date[2]);
             const dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
             const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-            document.getElementById('todayDateBar').textContent =
-                `Day ${todayData.no || 'Eid'} of Ramadan  \u2022  ${dayNames[rowDate.getDay()]} ${rowDate.getDate()} ${monthNames[rowDate.getMonth()]} ${rowDate.getFullYear()}`;
+            const isRamadan = todayData.sehri && todayData.sehri !== "";
+            document.getElementById('todayDateBar').textContent = isRamadan
+                ? `Day ${todayData.no || 'Eid'} of Ramadan  \u2022  ${dayNames[rowDate.getDay()]} ${rowDate.getDate()} ${monthNames[rowDate.getMonth()]} ${rowDate.getFullYear()}`
+                : `${dayNames[rowDate.getDay()]} ${rowDate.getDate()} ${monthNames[rowDate.getMonth()]} ${rowDate.getFullYear()}`;
 
             function toDate24(timeStr, isPM) {
                 const [h, m] = timeStr.split(':').map(Number);
                 const d = new Date(now); d.setHours(isPM && h < 12 ? h + 12 : h, m, 0, 0); return d;
             }
             const isFriday = todayData.day === 'Fri';
-            const prayers = [
+
+            function addMinutes(timeStr, mins) {
+                const [h, m] = timeStr.split(':').map(Number);
+                const totalMins = h * 60 + m + mins;
+                return `${Math.floor(totalMins / 60)}:${(totalMins % 60).toString().padStart(2, '0')}`;
+            }
+
+            const prayers = isRamadan ? [
                 { name: 'Sehri', mainTime: todayData.sehri, isPM: false, details: [{label:'Fajr Start',value:todayData.fajr},{label:'Fajr Jamaah',value:todayData.jFajr}], eventTime: toDate24(todayData.sehri, false) },
                 { name: 'Sunrise', mainTime: todayData.sunrise, isPM: false, details: [], eventTime: toDate24(todayData.sunrise, false) },
                 { name: isFriday ? 'Jumu\'ah' : 'Zohar', mainTime: todayData.zuhr, isPM: false, details: [{label:'Jamaah',value:todayData.jZuhr}], eventTime: toDate24(todayData.zuhr, false) },
                 { name: 'Asr', mainTime: todayData.asr, isPM: true, details: [{label:'Jamaah',value:todayData.jAsr}], eventTime: toDate24(todayData.asr, true) },
                 { name: 'Iftar / Maghrib', mainTime: todayData.maghrib, isPM: true, details: [], eventTime: toDate24(todayData.maghrib, true) },
+                { name: 'Isha', mainTime: todayData.isha, isPM: true, details: [{label:'Jamaah',value:todayData.jIsha}], eventTime: toDate24(todayData.isha, true) }
+            ] : [
+                { name: 'Fajr', mainTime: todayData.fajr, isPM: false, details: [{label:'Jamaah',value:todayData.jFajr}], eventTime: toDate24(todayData.fajr, false) },
+                { name: 'Sunrise', mainTime: todayData.sunrise, isPM: false, details: [{label:'Ishraq',value:addMinutes(todayData.sunrise, 20)}], eventTime: toDate24(todayData.sunrise, false) },
+                { name: isFriday ? 'Jumu\'ah' : 'Zohar', mainTime: todayData.zuhr, isPM: false, details: [{label:'Jamaah',value:todayData.jZuhr}], eventTime: toDate24(todayData.zuhr, false) },
+                { name: 'Asr', mainTime: todayData.asr, isPM: true, details: [{label:'Jamaah',value:todayData.jAsr}], eventTime: toDate24(todayData.asr, true) },
+                { name: 'Maghrib', mainTime: todayData.maghrib, isPM: true, details: [], eventTime: toDate24(todayData.maghrib, true) },
                 { name: 'Isha', mainTime: todayData.isha, isPM: true, details: [{label:'Jamaah',value:todayData.jIsha}], eventTime: toDate24(todayData.isha, true) }
             ];
             let nextIndex = -1;
