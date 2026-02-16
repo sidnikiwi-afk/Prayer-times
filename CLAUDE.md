@@ -88,7 +88,7 @@ Prayer-times/
 | Salahadin Mosque | `Salahadin` | 62 Little Horton Lane, BD5 0BS | Burgundy `#6a1b34` / `#9c2759` | TBA | £5.00 |
 | Masjid Abu Bakar | `abubakar` | 38 Steadman Terrace, BD3 9NB | Purple `#4a148c` / `#7b1fa2` | — | — |
 | IYMA | `iyma` | 68 Idle Road, BD2 4NH | Dark Cyan `#006064` / `#00838f` | 9:00am | £5.00 |
-| Jamia Masjid | `JamiaMasjid` | 28-32 Howard St, BD5 0BP | Brown/Amber `#4e342e` / `#795548` | TBA | TBA |
+| Jamia Masjid | `JamiaMasjid` | 28-32 Howard St, BD5 0BP | Navy `#0d1b2a` / `#1b3a5c` | TBA | TBA |
 
 ### Donation Details
 - **Shahjalal**: Not listed in timetable
@@ -172,7 +172,7 @@ Prayer-times/
 | Salahadin | Fortress-style, dual minarets, crenellations (burgundy) | Interlocking circles | Warm embers | Right border | Burgundy, rose, gold, white |
 | Abu Bakar | Modern mosque, 1 dome+minaret (purple) | Hexagonal | Rising light orbs | Top border | Purple, lavender, gold, white |
 | IYMA | Modern mosque, 1 dome+minaret (cyan) | Hexagonal | Rising light orbs | Top border | Cyan, teal, gold, white |
-| Jamia Masjid | Modern mosque, 1 dome+minaret (brown) | Hexagonal | Rising light orbs | Top border | Brown, tan, gold, white |
+| Jamia Masjid | Modern mosque, 1 dome+minaret (navy) | Hexagonal | Rising light orbs | Top border | Navy, steel blue, gold, white |
 
 ### Shahjalal-Only Features
 - **Demo mode**: DEMO button (bottom-left), date picker + time slider to test countdown at any date/time
