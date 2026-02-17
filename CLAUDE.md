@@ -116,7 +116,7 @@ Prayer-times/
 - **Abu Bakar**: Tel 01274 668343 | Receiver: 454.40625
 - **IYMA**: Tel 07771 635 480 | info@iyma.org.uk | www.iyma.org.uk
 - **Jamia Masjid**: Tel 01274 724 819
-- **Masjid Taqwa**: www.masjidat-taqwa.co.uk
+- **Masjid Taqwa**: www.masjidat-taqwa.co.uk | Receiver: 456.787
 
 ## Features (All Mosques)
 
