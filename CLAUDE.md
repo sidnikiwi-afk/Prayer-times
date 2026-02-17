@@ -121,7 +121,7 @@ Prayer-times/
 ## Features (All Mosques)
 
 ### Core Functionality
-- **Today View**: Card-based layout showing today's prayer times only, with pill toggle to switch to Full Timetable. Passed prayers dimmed with checkmark, next prayer highlighted with accent border + "NEXT" badge. Tomorrow preview at bottom: during Ramadan shows Sehri/Iftar times + any jamaah changes; outside Ramadan shows jamaah changes only (hidden if none). Friday shows "Jumu'ah" instead of Zuhr. View preference saved to localStorage. Auto-refreshes every 60s. Defaults to "Today" during Ramadan, "Full Timetable" otherwise.
+- **Today View**: Card-based layout showing today's prayer times only, with pill toggle to switch to Full Timetable. Passed prayers dimmed with checkmark, next prayer highlighted with accent border + "NEXT" badge. Tomorrow preview at bottom: during Ramadan shows Sehri/Iftar times + any jamaah changes; outside Ramadan shows jamaah changes only (hidden if none). Friday shows "Jumu'ah" instead of Zuhr. View preference saved to localStorage. Auto-refreshes every 60s. Defaults to "Today" view always (user can switch; preference saved to localStorage).
 - Live prayer-by-prayer countdown (Sehri > Fajr Jamaah > Zuhr > Zuhr Jamaah > Asr > Asr Jamaah > Iftar > Isha > Isha Jamaah > next Sehri)
 - Pre-Ramadan countdown with days display
 - Post-Ramadan "Eid Mubarak" state
