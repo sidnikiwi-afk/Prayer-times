@@ -68,8 +68,15 @@ Prayer-times/
 │   ├── og-image.svg        # Social preview image
 │   ├── qr-code.svg         # QR code for poster
 │   └── poster.html         # A4 printable QR poster
-└── JamiaMasjid/
-    ├── index.html          # Jamia Masjid timetable
+├── JamiaMasjid/
+│   ├── index.html          # Jamia Masjid timetable
+│   ├── manifest.json       # PWA manifest
+│   ├── sw.js               # Service worker (offline support)
+│   ├── og-image.svg        # Social preview image
+│   ├── qr-code.svg         # QR code for poster
+│   └── poster.html         # A4 printable QR poster
+└── taqwa/
+    ├── index.html          # Masjid Taqwa timetable
     ├── manifest.json       # PWA manifest
     ├── sw.js               # Service worker (offline support)
     ├── og-image.svg        # Social preview image
@@ -89,6 +96,7 @@ Prayer-times/
 | Masjid Abu Bakar | `abubakar` | 38 Steadman Terrace, BD3 9NB | Purple `#4a148c` / `#7b1fa2` | — | — |
 | IYMA | `iyma` | 68 Idle Road, BD2 4NH | Dark Cyan `#006064` / `#00838f` | 9:00am | £5.00 |
 | Jamia Masjid | `JamiaMasjid` | 28-32 Howard St, BD5 0BP | Navy `#0d1b2a` / `#1b3a5c` | TBA | TBA |
+| Masjid Taqwa | `taqwa` | 807 Great Horton Road, BD7 4AG | Cobalt Blue `#0d47a1` / `#1976d2` | 6:30am, 9:30am | £5.00 |
 
 ### Donation Details
 - **Shahjalal**: Not listed in timetable
@@ -99,6 +107,7 @@ Prayer-times/
 - **Abu Bakar**: Yorkshire Bank, Acc: 18330977, Sort: 05-03-23
 - **IYMA**: Imam Yusuf Motala Academy, Yorkshire Bank, Sort: 05-03-03, Acc: 71398073
 - **Jamia Masjid**: TBA
+- **Masjid Taqwa**: Acc: 34495853, Sort: 40-13-15
 
 ### Contact / Radio
 - **Quba**: Tel 01274 542027 | masjidquba.org | Receiver: 454.3500
@@ -107,6 +116,7 @@ Prayer-times/
 - **Abu Bakar**: Tel 01274 668343 | Receiver: 454.40625
 - **IYMA**: Tel 07771 635 480 | info@iyma.org.uk | www.iyma.org.uk
 - **Jamia Masjid**: Tel 01274 724 819
+- **Masjid Taqwa**: www.masjidat-taqwa.co.uk
 
 ## Features (All Mosques)
 
@@ -273,6 +283,7 @@ After the last day's Isha Jamaah, shows "Eid Mubarak".
 | Abu Bakar | `abubakar-darkMode` | `abubakar-notifications` | `abubakar-viewMode` | `abubakar-autoDark` |
 | IYMA | `iyma-darkMode` | `iyma-notifications` | `iyma-viewMode` | `iyma-autoDark` |
 | Jamia Masjid | `JamiaMasjid-darkMode` | `JamiaMasjid-notifications` | `JamiaMasjid-viewMode` | `JamiaMasjid-autoDark` |
+| Masjid Taqwa | `taqwa-darkMode` | `taqwa-notifications` | `taqwa-viewMode` | `taqwa-autoDark` |
 
 ### nav.js
 - Self-executing function that injects CSS, HTML, and event handlers
@@ -319,6 +330,7 @@ CNAME www   sidnikiwi-afk.github.io
 | Masjid Abu Bakar | `waqt.uk/abubakar/` |
 | IYMA | `waqt.uk/iyma/` |
 | Jamia Masjid | `waqt.uk/JamiaMasjid/` |
+| Masjid Taqwa | `waqt.uk/taqwa/` |
 
 ### Git Config
 - Repo: `sidnikiwi-afk/Prayer-times`

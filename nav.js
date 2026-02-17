@@ -8,6 +8,7 @@ const MASJIDS = [
     { name: 'Masjid Abu Bakar', addr: '38 Steadman Terrace, BD3 9NB', folder: 'abubakar', tags: 'Bradford' },
     { name: 'IYMA', addr: '68 Idle Road, BD2 4NH', folder: 'iyma', tags: 'Bradford Idle' },
     { name: 'Jamia Masjid', addr: '28-32 Howard St, BD5 0BP', folder: 'JamiaMasjid', tags: 'Bradford' },
+    { name: 'Masjid Taqwa', addr: '807 Great Horton Road, BD7 4AG', folder: 'taqwa', tags: 'Bradford Great Horton' },
 ];
 
 (function() {
