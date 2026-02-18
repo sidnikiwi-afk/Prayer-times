@@ -1,0 +1,228 @@
+{
+  "masjid": "Masjid Ibraheem",
+  "address": "4 Woodview Rd, Leeds LS11 6LE",
+  "phone": "0113 270 9536",
+  "email": "masjidibraheemleed11@gmail.com",
+  "donation": "https://pay.easydonate.uk/masjidibraheem",
+  "account_number": "80015318",
+  "sort_code": "40-27-41",
+  "year": "Ramadan 2026",
+  "friday_prayer": "1st Jummah @ 01:00PM, 2nd Jummah @ 03:00PM",
+  "eid_ul_fitr": {
+    "first_jamaat": "9:00am (Men Only)",
+    "second_jamaat": "10:30am (Men & Women)"
+  },
+  "fitrana": "£5.00 per person",
+  "days": [
+    {
+      "ramadan_day": 1,
+      "date": "Wed, 18/2",
+      "sehri_end": "05:22",
+      "beginning": { "fajr": "05:22", "sunrise": "07:19", "zuhr": "12:24", "asr": "03:29", "maghrib": "05:27", "isha": "07:00" },
+      "jamaat": { "fajr": "05:42", "zuhr": "01:00", "asr": "04:15", "isha": "07:30" }
+    },
+    {
+      "ramadan_day": 2,
+      "date": "Thu, 19/2",
+      "sehri_end": "05:19",
+      "beginning": { "fajr": "05:19", "sunrise": "07:17", "zuhr": "12:24", "asr": "03:31", "maghrib": "05:29", "isha": "07:01" },
+      "jamaat": { "fajr": "05:39", "zuhr": "01:00", "asr": "04:15", "isha": "07:30" }
+    },
+    {
+      "ramadan_day": 3,
+      "date": "Fri, 20/2",
+      "sehri_end": "05:17",
+      "beginning": { "fajr": "05:17", "sunrise": "07:15", "zuhr": "12:24", "asr": "03:33", "maghrib": "05:31", "isha": "07:03" },
+      "jamaat": { "fajr": "05:37", "zuhr": "01:00", "asr": "04:15", "isha": "07:30" }
+    },
+    {
+      "ramadan_day": 4,
+      "date": "Sat, 21/2",
+      "sehri_end": "05:15",
+      "beginning": { "fajr": "05:15", "sunrise": "07:13", "zuhr": "12:24", "asr": "03:35", "maghrib": "05:33", "isha": "07:05" },
+      "jamaat": { "fajr": "05:35", "zuhr": "01:00", "asr": "04:15", "isha": "07:30" }
+    },
+    {
+      "ramadan_day": 5,
+      "date": "Sun, 22/2",
+      "sehri_end": "05:13",
+      "beginning": { "fajr": "05:13", "sunrise": "07:11", "zuhr": "12:24", "asr": "03:37", "maghrib": "05:35", "isha": "07:07" },
+      "jamaat": { "fajr": "05:33", "zuhr": "01:00", "asr": "04:15", "isha": "07:30" }
+    },
+    {
+      "ramadan_day": 6,
+      "date": "Mon, 23/2",
+      "sehri_end": "05:11",
+      "beginning": { "fajr": "05:11", "sunrise": "07:08", "zuhr": "12:24", "asr": "03:38", "maghrib": "05:37", "isha": "07:09" },
+      "jamaat": { "fajr": "05:31", "zuhr": "01:00", "asr": "04:30", "isha": "07:30" }
+    },
+    {
+      "ramadan_day": 7,
+      "date": "Tue, 24/2",
+      "sehri_end": "05:09",
+      "beginning": { "fajr": "05:09", "sunrise": "07:06", "zuhr": "12:23", "asr": "03:40", "maghrib": "05:39", "isha": "07:11" },
+      "jamaat": { "fajr": "05:29", "zuhr": "01:00", "asr": "04:30", "isha": "07:30" }
+    },
+    {
+      "ramadan_day": 8,
+      "date": "Wed, 25/2",
+      "sehri_end": "05:07",
+      "beginning": { "fajr": "05:07", "sunrise": "07:04", "zuhr": "12:23", "asr": "03:42", "maghrib": "05:41", "isha": "07:13" },
+      "jamaat": { "fajr": "05:27", "zuhr": "01:00", "asr": "04:30", "isha": "07:30" }
+    },
+    {
+      "ramadan_day": 9,
+      "date": "Thu, 26/2",
+      "sehri_end": "05:05",
+      "beginning": { "fajr": "05:05", "sunrise": "07:02", "zuhr": "12:23", "asr": "03:44", "maghrib": "05:43", "isha": "07:14" },
+      "jamaat": { "fajr": "05:25", "zuhr": "01:00", "asr": "04:30", "isha": "07:30" }
+    },
+    {
+      "ramadan_day": 10,
+      "date": "Fri, 27/2",
+      "sehri_end": "05:02",
+      "beginning": { "fajr": "05:02", "sunrise": "06:59", "zuhr": "12:23", "asr": "03:45", "maghrib": "05:45", "isha": "07:16" },
+      "jamaat": { "fajr": "05:22", "zuhr": "01:00", "asr": "04:30", "isha": "07:30" }
+    },
+    {
+      "ramadan_day": 11,
+      "date": "Sat, 28/2",
+      "sehri_end": "05:00",
+      "beginning": { "fajr": "05:00", "sunrise": "06:57", "zuhr": "12:23", "asr": "03:47", "maghrib": "05:47", "isha": "07:18" },
+      "jamaat": { "fajr": "05:20", "zuhr": "01:00", "asr": "04:30", "isha": "07:30" }
+    },
+    {
+      "ramadan_day": 12,
+      "date": "Sun, 1/3",
+      "sehri_end": "04:58",
+      "beginning": { "fajr": "04:58", "sunrise": "06:55", "zuhr": "12:23", "asr": "03:49", "maghrib": "05:48", "isha": "07:20" },
+      "jamaat": { "fajr": "05:18", "zuhr": "01:00", "asr": "04:30", "isha": "07:30" }
+    },
+    {
+      "ramadan_day": 13,
+      "date": "Mon, 2/3",
+      "sehri_end": "04:55",
+      "beginning": { "fajr": "04:55", "sunrise": "06:52", "zuhr": "12:22", "asr": "03:50", "maghrib": "05:50", "isha": "07:22" },
+      "jamaat": { "fajr": "05:15", "zuhr": "01:00", "asr": "04:30", "isha": "07:45" }
+    },
+    {
+      "ramadan_day": 14,
+      "date": "Tue, 3/3",
+      "sehri_end": "04:53",
+      "beginning": { "fajr": "04:53", "sunrise": "06:50", "zuhr": "12:22", "asr": "03:52", "maghrib": "05:52", "isha": "07:24" },
+      "jamaat": { "fajr": "05:13", "zuhr": "01:00", "asr": "04:30", "isha": "07:45" }
+    },
+    {
+      "ramadan_day": 15,
+      "date": "Wed, 4/3",
+      "sehri_end": "04:51",
+      "beginning": { "fajr": "04:51", "sunrise": "06:48", "zuhr": "12:22", "asr": "03:54", "maghrib": "05:54", "isha": "07:26" },
+      "jamaat": { "fajr": "05:11", "zuhr": "01:00", "asr": "04:30", "isha": "07:45" }
+    },
+    {
+      "ramadan_day": 16,
+      "date": "Thu, 5/3",
+      "sehri_end": "04:48",
+      "beginning": { "fajr": "04:48", "sunrise": "06:45", "zuhr": "12:22", "asr": "03:55", "maghrib": "05:56", "isha": "07:28" },
+      "jamaat": { "fajr": "05:08", "zuhr": "01:00", "asr": "04:30", "isha": "07:45" }
+    },
+    {
+      "ramadan_day": 17,
+      "date": "Fri, 6/3",
+      "sehri_end": "04:46",
+      "beginning": { "fajr": "04:46", "sunrise": "06:43", "zuhr": "12:22", "asr": "03:57", "maghrib": "05:58", "isha": "07:30" },
+      "jamaat": { "fajr": "05:06", "zuhr": "01:00", "asr": "04:30", "isha": "07:45" }
+    },
+    {
+      "ramadan_day": 18,
+      "date": "Sat, 7/3",
+      "sehri_end": "04:43",
+      "beginning": { "fajr": "04:43", "sunrise": "06:40", "zuhr": "12:21", "asr": "03:59", "maghrib": "06:00", "isha": "07:32" },
+      "jamaat": { "fajr": "05:03", "zuhr": "01:00", "asr": "04:30", "isha": "07:45" }
+    },
+    {
+      "ramadan_day": 19,
+      "date": "Sun, 8/3",
+      "sehri_end": "04:41",
+      "beginning": { "fajr": "04:41", "sunrise": "06:38", "zuhr": "12:21", "asr": "04:00", "maghrib": "06:02", "isha": "07:34" },
+      "jamaat": { "fajr": "05:01", "zuhr": "01:00", "asr": "04:30", "isha": "07:45" }
+    },
+    {
+      "ramadan_day": 20,
+      "date": "Mon, 9/3",
+      "sehri_end": "04:38",
+      "beginning": { "fajr": "04:38", "sunrise": "06:36", "zuhr": "12:21", "asr": "04:02", "maghrib": "06:04", "isha": "07:36" },
+      "jamaat": { "fajr": "04:58", "zuhr": "01:00", "asr": "04:45", "isha": "08:00" }
+    },
+    {
+      "ramadan_day": 21,
+      "date": "Tue, 10/3",
+      "sehri_end": "04:36",
+      "beginning": { "fajr": "04:36", "sunrise": "06:33", "zuhr": "12:21", "asr": "04:04", "maghrib": "06:06", "isha": "07:38" },
+      "jamaat": { "fajr": "04:56", "zuhr": "01:00", "asr": "04:45", "isha": "08:00" }
+    },
+    {
+      "ramadan_day": 22,
+      "date": "Wed, 11/3",
+      "sehri_end": "04:33",
+      "beginning": { "fajr": "04:33", "sunrise": "06:31", "zuhr": "12:20", "asr": "04:05", "maghrib": "06:08", "isha": "07:40" },
+      "jamaat": { "fajr": "04:53", "zuhr": "01:00", "asr": "04:45", "isha": "08:00" }
+    },
+    {
+      "ramadan_day": 23,
+      "date": "Thu, 12/3",
+      "sehri_end": "04:30",
+      "beginning": { "fajr": "04:30", "sunrise": "06:28", "zuhr": "12:20", "asr": "04:07", "maghrib": "06:10", "isha": "07:42" },
+      "jamaat": { "fajr": "04:50", "zuhr": "01:00", "asr": "04:45", "isha": "08:00" }
+    },
+    {
+      "ramadan_day": 24,
+      "date": "Fri, 13/3",
+      "sehri_end": "04:28",
+      "beginning": { "fajr": "04:28", "sunrise": "06:26", "zuhr": "12:20", "asr": "04:08", "maghrib": "06:11", "isha": "07:44" },
+      "jamaat": { "fajr": "04:48", "zuhr": "01:00", "asr": "04:45", "isha": "08:00" }
+    },
+    {
+      "ramadan_day": 25,
+      "date": "Sat, 14/3",
+      "sehri_end": "04:25",
+      "beginning": { "fajr": "04:25", "sunrise": "06:24", "zuhr": "12:19", "asr": "04:10", "maghrib": "06:13", "isha": "07:46" },
+      "jamaat": { "fajr": "04:45", "zuhr": "01:00", "asr": "04:45", "isha": "08:00" }
+    },
+    {
+      "ramadan_day": 26,
+      "date": "Sun, 15/3",
+      "sehri_end": "04:22",
+      "beginning": { "fajr": "04:22", "sunrise": "06:21", "zuhr": "12:19", "asr": "04:11", "maghrib": "06:15", "isha": "07:48" },
+      "jamaat": { "fajr": "04:42", "zuhr": "01:00", "asr": "04:45", "isha": "08:00" }
+    },
+    {
+      "ramadan_day": 27,
+      "date": "Mon, 16/3",
+      "sehri_end": "04:20",
+      "beginning": { "fajr": "04:20", "sunrise": "06:19", "zuhr": "12:19", "asr": "04:13", "maghrib": "06:17", "isha": "07:50" },
+      "jamaat": { "fajr": "04:40", "zuhr": "01:00", "asr": "05:00", "isha": "08:15" }
+    },
+    {
+      "ramadan_day": 28,
+      "date": "Tue, 17/3",
+      "sehri_end": "04:17",
+      "beginning": { "fajr": "04:17", "sunrise": "06:16", "zuhr": "12:19", "asr": "04:15", "maghrib": "06:19", "isha": "07:52" },
+      "jamaat": { "fajr": "04:37", "zuhr": "01:00", "asr": "05:00", "isha": "08:15" }
+    },
+    {
+      "ramadan_day": 29,
+      "date": "Wed, 18/3",
+      "sehri_end": "04:14",
+      "beginning": { "fajr": "04:14", "sunrise": "06:14", "zuhr": "12:18", "asr": "04:16", "maghrib": "06:21", "isha": "07:54" },
+      "jamaat": { "fajr": "04:34", "zuhr": "01:00", "asr": "05:00", "isha": "08:15" }
+    },
+    {
+      "ramadan_day": 30,
+      "date": "Thu, 19/3",
+      "sehri_end": "04:11",
+      "beginning": { "fajr": "04:11", "sunrise": "06:11", "zuhr": "12:18", "asr": "04:18", "maghrib": "06:23", "isha": "07:56" },
+      "jamaat": { "fajr": "04:31", "zuhr": "01:00", "asr": "05:00", "isha": "08:15" }
+    }
+  ]
+}
