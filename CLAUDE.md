@@ -252,6 +252,7 @@ Source data in `Masjids/<Name>/data.json`. Regenerate with `python Masjids/gener
 | Abu Bakar | Modern mosque, 1 dome+minaret (purple) | Hexagonal | Rising light orbs | Top border | Purple, lavender, gold, white |
 | IYMA | Modern mosque, 1 dome+minaret (cyan) | Hexagonal | Rising light orbs | Top border | Cyan, teal, gold, white |
 | Jamia Masjid | Modern mosque, 1 dome+minaret (navy) | Hexagonal | Rising light orbs | Top border | Navy, steel blue, gold, white |
+| Masjid Ibraheem (Leeds) | Modern mosque, 1 dome+minaret (orange) | Hexagonal | Rising light orbs | Top border | Deep orange, amber, gold, white |
 
 ### Shahjalal-Only Features
 - **Demo mode**: DEMO button (bottom-left), date picker + time slider to test countdown at any date/time
@@ -264,6 +265,7 @@ Source data in `Masjids/<Name>/data.json`. Regenerate with `python Masjids/gener
 - **Abu Bakar**: No unique content sections
 - **IYMA**: Donation appeal banner (Phase 3 extension building project), parking notice
 - **Jamia Masjid**: No unique content sections (note: Maghrib Salah commences 2 min after Iftar)
+- **Masjid Ibraheem**: No unique content sections. Friday Prayer: 1st Jummah 1pm / 2nd Jummah 3pm (in footer)
 
 ### Landing Page (waqt.uk)
 - Granim.js animated background (deep blue/teal gradients)
@@ -435,6 +437,7 @@ After the last day's Isha Jamaah, shows "Eid Mubarak".
 | IYMA | `iyma-darkMode` | `iyma-notifications` | `iyma-viewMode` | `iyma-autoDark` |
 | Jamia Masjid | `JamiaMasjid-darkMode` | `JamiaMasjid-notifications` | `JamiaMasjid-viewMode` | `JamiaMasjid-autoDark` |
 | Masjid Taqwa | `taqwa-darkMode` | `taqwa-notifications` | `taqwa-viewMode` | `taqwa-autoDark` |
+| Masjid Ibraheem | `ibrahim-darkMode` | `ibrahim-notifications` | `ibrahim-viewMode` | `ibrahim-autoDark` |
 
 ### nav.js
 - Self-executing function that injects CSS, HTML, and event handlers
@@ -484,6 +487,7 @@ CNAME www   sidnikiwi-afk.github.io
 | IYMA | `waqt.uk/iyma/` |
 | Jamia Masjid | `waqt.uk/JamiaMasjid/` |
 | Masjid Taqwa | `waqt.uk/taqwa/` |
+| Masjid Ibraheem (Leeds) | `waqt.uk/ibrahim/` |
 
 **Batch mosques** (37 total, all at `waqt.uk/<prefix>/`): alabrar, alamin, alhidaya, alhikmah, alhidaayah, almustaqeem, azharulmadaaris, baitulilm, darulmahmood, doha, firdaws, iqra, abuhanifa, farooqiah, madnimasjid, abbasiya, darulirfan, abdullahbinmasood, masjidali, masjidayesha, masjidbilal, masjidhamza, masjidhusain, ibraheem, namirah, masjidnoor, noorulislam, nusratul, farooqia, masjidumar, masjidusman, raashideen, musallasalaam, ahlebayt, shipley, wibseybuttershaw, wibsey
 
