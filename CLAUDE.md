@@ -83,6 +83,13 @@ Prayer-times/
     ├── og-image.svg        # Social preview image
     ├── qr-code.svg         # QR code for poster
     └── poster.html         # A4 printable QR poster
+└── ibrahim/
+    ├── index.html          # Masjid Ibraheem (Leeds) timetable
+    ├── manifest.json       # PWA manifest
+    ├── sw.js               # Service worker (offline support)
+    ├── og-image.svg        # Social preview image
+    ├── qr-code.svg         # QR code for poster
+    └── poster.html         # A4 printable QR poster
 # ... plus 37 batch-generated mosque folders (alabrar/, alamin/, alhidaya/, etc.)
 # See "Batch Mosque Generation" section below for the full list and workflow.
 Masjids/                    # Source data for batch-generated mosques
@@ -108,6 +115,7 @@ Masjids/                    # Source data for batch-generated mosques
 | IYMA | `iyma` | 68 Idle Road, BD2 4NH | Dark Cyan `#006064` / `#00838f` | 9:00am | £5.00 |
 | Jamia Masjid | `JamiaMasjid` | 28-32 Howard St, BD5 0BP | Navy `#0d1b2a` / `#1b3a5c` | TBA | TBA |
 | Masjid Taqwa | `taqwa` | 807 Great Horton Road, BD7 4AG | Cobalt Blue `#0d47a1` / `#1976d2` | 6:30am, 9:30am | £5.00 |
+| Masjid Ibraheem | `ibrahim` | 4 Woodview Rd, Beeston, Leeds LS11 6LE | Deep Orange `#bf360c` / `#e64a19` | 9:00am (Men), 10:30am (Men & Women) | £5.00 |
 
 ### Donation Details
 - **Shahjalal**: Not listed in timetable
@@ -119,6 +127,7 @@ Masjids/                    # Source data for batch-generated mosques
 - **IYMA**: Imam Yusuf Motala Academy, Yorkshire Bank, Sort: 05-03-03, Acc: 71398073
 - **Jamia Masjid**: TBA
 - **Masjid Taqwa**: Acc: 34495853, Sort: 40-13-15
+- **Masjid Ibraheem**: Acc: 80015318, Sort: 40-27-41 | pay.easydonate.uk/masjidibraheem
 
 ### Contact / Radio
 - **Quba**: Tel 01274 542027 | masjidquba.org | Receiver: 454.3500
@@ -128,6 +137,7 @@ Masjids/                    # Source data for batch-generated mosques
 - **IYMA**: Tel 07771 635 480 | info@iyma.org.uk | www.iyma.org.uk
 - **Jamia Masjid**: Tel 01274 724 819
 - **Masjid Taqwa**: www.masjidat-taqwa.co.uk | Receiver: 456.787
+- **Masjid Ibraheem**: Tel 0113 270 9536 | masjidibraheemleeds.com | masjidibraheemleeds11@gmail.com
 
 ### Batch-Generated Mosques (Ramadan 1447 – added Feb 2026)
 

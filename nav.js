@@ -46,6 +46,7 @@ const MASJIDS = [
     { name: 'Shipley Islamic & Education Centre -Jam-e-Masjid- (S.I.E.C)', addr: 'Aireville Road, Bradford, West Yorkshire, BD9 4HH', folder: 'shipley', tags: 'Bradford' },
     { name: 'Wibsey & Buttershaw Islamic Learning Centre / Dawah Centre', addr: 'The Cooperville Centre, Bellerby Brow, Bradford, BD6 3JY', folder: 'wibseybuttershaw', tags: 'Bradford' },
     { name: 'Wibsey Musalla', addr: '75 Odsal Road, Wibsey, BD6 1PN', folder: 'wibsey', tags: 'Bradford Wibsey' },
+    { name: 'Masjid Ibraheem', addr: '4 Woodview Rd, Beeston, Leeds LS11 6LE', folder: 'ibrahim', tags: 'Leeds Beeston' },
 ];
 
 (function() {
