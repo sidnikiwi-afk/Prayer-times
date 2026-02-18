@@ -83,6 +83,14 @@ Prayer-times/
     ├── og-image.svg        # Social preview image
     ├── qr-code.svg         # QR code for poster
     └── poster.html         # A4 printable QR poster
+# ... plus 37 batch-generated mosque folders (alabrar/, alamin/, alhidaya/, etc.)
+# See "Batch Mosque Generation" section below for the full list and workflow.
+Masjids/                    # Source data for batch-generated mosques
+├── generate.py             # Batch HTML generator (uses abubakar/ as template)
+├── gen_pwa.py              # Batch PWA asset generator (manifest, sw, og-image, poster)
+├── validate.py             # Data validation script (row count, dates, times)
+└── <Mosque Name>/
+    └── data.json           # Per-mosque config and timetable data
 ```
 
 ## Mosques
@@ -118,6 +126,54 @@ Prayer-times/
 - **IYMA**: Tel 07771 635 480 | info@iyma.org.uk | www.iyma.org.uk
 - **Jamia Masjid**: Tel 01274 724 819
 - **Masjid Taqwa**: www.masjidat-taqwa.co.uk | Receiver: 456.787
+
+### Batch-Generated Mosques (Ramadan 1447 – added Feb 2026)
+
+These 37 mosques were added in bulk using the `Masjids/` batch generation workflow.
+All use the `abubakar/` template, purple theme (`#4a148c`/`#7b1fa2`), dark green landing cards.
+Source data in `Masjids/<Name>/data.json`. Regenerate with `python Masjids/generate.py` then copy outputs.
+
+| Mosque | Folder | Address |
+|--------|--------|---------|
+| Al Abrar Academy | `alabrar` | 10-20 Heap Lane, Bradford, BD3 0DT |
+| Al Amin Islamic Society / Jamia Masjid & Madrasa | `alamin` | Kensington Street, Keighley, BD21 1HZ |
+| Al Hidaya Academy | `alhidaya` | Chapel Lane (Off Highgate Road), Queensbury, BD13 1EG |
+| Masjid Al Hikmah & Learning Centre | `alhikmah` | 181A Barkerend Rd, Bradford, BD3 9AP |
+| Al-Hidaayah Foundation | `alhidaayah` | Bridge Street, Keighley, BD21 1AA |
+| Al-Mustaqeem Education and Community Centre | `almustaqeem` | 4 Central Avenue, Bradford, BD5 0PB |
+| Azharul Madaaris | `azharulmadaaris` | 102 Princeville Road, Lidget Green, Bradford, BD7 2AR |
+| Madrasah Baitul Ilm | `baitulilm` | 4 St Johns Court, Square Street, Bradford, BD4 7NP |
+| Darul Mahmood | `darulmahmood` | 21 St. Mary's Road, Bradford, BD8 7LR |
+| Doha Mosque | `doha` | 13-15 Claremont, Bradford, BD7 1BG |
+| Firdaws Islamic Centre / Firdaws Mosque | `firdaws` | Males: Guy Street; Females: 75 Edward Street, Bradford, BD4 7BB |
+| Iqra Masjid | `iqra` | Off Farriers Croft, King's Road, Bradford, BD2 1ET |
+| Jamia Abu Hanifa Madrassa | `abuhanifa` | 35 Hustler Street, Undercliffe, BD3 0PS |
+| Jamiah Farooqiah | `farooqiah` | 432 Barkerend Road, Bradford, BD3 8QJ |
+| Madni Masjid (West Bowling Islamic Society) | `madnimasjid` | 133 Newton Street, BD5 7BJ |
+| Madrasa Abbasiya | `abbasiya` | 1D Moor Park Drive, Bradford, BD3 7ER |
+| Markazi Masjid Darul Irfan | `darulirfan` | 1 Little Cross St, BD5 8AD |
+| Masjid Abdullah-bin-Masood | `abdullahbinmasood` | 14 Lynthorne Road, Frizinghall, Bradford |
+| Masjid Ali | `masjidali` | 228 Parkside Road, Bradford, BD5 8PW |
+| Masjid Ayesha | `masjidayesha` | 2 Thornacre Road, Manningham, BD18 1JY |
+| Masjid Bilal | `masjidbilal` | 1-3 Drummond Rd, Bradford, BD8 8DA |
+| Masjid Hamza | `masjidhamza` | 42 Woodview Terrace, BD8 7AH |
+| Masjid Husain | `masjidhusain` | 203 Allerton Road, BD15 7RD |
+| Masjid Ibraheem & Education Centre | `ibraheem` | Lower Rushton Road, Bradford, BD3 8PX |
+| Masjid Namirah / Madrasah Ta'limul Quran | `namirah` | 8-10 Hanover Square, Bradford, BD1 3BY |
+| Masjid Noor | `masjidnoor` | 62 Toller Lane, Bradford, BD8 9DA |
+| Masjid Noorul Islam | `noorulislam` | 58-62 St Margaret's Road, Bradford, BD7 3AE |
+| Nusrat-ul-Islam Masjid | `nusratul` | Preston Street, Bradford, BD7 1DD |
+| Khanqah Naqshbandia Masjid Farooqia | `farooqia` | 28 Gondal Court, Bradford, BD5 9JW |
+| Masjid-e-Umar | `masjidumar` | 184 Durham Road, Bradford, BD8 9HU |
+| Masjid-e-Usman / Madrassa Khaliliya | `masjidusman` | 57 Upper Seymour St, Bradford, BD3 9LJ |
+| Masjidur Raashideen | `raashideen` | 14 Farfield Street, Bradford, BD9 5AS |
+| Musalla Salaam | `musallasalaam` | 191 Pasture Lane, Clayton, Bradford, BD7 2SQ |
+| PYC Masjid Ahle Bayt | `ahlebayt` | Mount Street, Bradford, BD3 9SR |
+| Shipley Islamic & Education Centre | `shipley` | Aireville Road, Bradford, BD9 4HH |
+| Wibsey & Buttershaw Islamic Learning Centre | `wibseybuttershaw` | The Cooperville Centre, Bellerby Brow, Bradford, BD6 3JY |
+| Wibsey Musalla | `wibsey` | 75 Odsal Road, Wibsey, BD6 1PN |
+
+**Note on Doha Mosque**: Timetable has 29 rows starting Feb 19 (their confirmed Ramadan start date differs by one day — moon sighted a day later).
 
 ## Features (All Mosques)
 
@@ -257,6 +313,59 @@ git commit -m "Add New Mosque timetable"
 git push
 ```
 
+## Batch Mosque Generation (Masjids/ folder)
+
+For adding many mosques at once without hand-coding each HTML file.
+
+### data.json schema
+```json
+{
+  "name": "Mosque Full Name",
+  "short_name": "Short Name",
+  "prefix": "urlslug",
+  "address": "Street, City, Postcode",
+  "phone": "01274 123456",
+  "phone_display": "01274 123 456",
+  "notes": "Maghrib Salah commences after Iftar",
+  "eid_info": "7:30am | 9:00am | 10:30am",
+  "fitrana": "£5.00 per person",
+  "donation_info": "Bank Name | Sort: 00-00-00 | Acc: 00000000",
+  "website": "https://example.com",
+  "receiver_freq": "454.40625",
+  "timetable": [
+    { "date": [2026, 2, 18], "day": "Wed", "no": 1,
+      "sehri": "5:39", "fajr": "5:44", "sunrise": "7:20",
+      "zuhr": "12:35", "asr": "3:45", "maghrib": "5:26",
+      "isha": "7:30", "jFajr": "7:00", "jZuhr": "1:15",
+      "jAsr": "4:00", "jIsha": "8:00" }
+  ]
+}
+```
+
+### Workflow
+1. Create `Masjids/<Name>/data.json` with timetable data
+2. Validate: `python Masjids/validate.py` (checks row count, dates, day names, time format)
+3. Generate HTML: `python Masjids/generate.py` → writes `Masjids/<Name>/index.html`
+4. Copy to root: copy each `Masjids/<Name>/index.html` → `<prefix>/index.html`
+5. Generate PWA assets: `python Masjids/gen_pwa.py` → writes manifest.json, sw.js, og-image.svg, poster.html
+6. Update nav.js (MASJIDS array) and index.html (landing page cards)
+7. Push all changes
+
+### generate.py internals
+- Uses `abubakar/index.html` as template
+- Replaces: title/meta tags, URLs, header text, address, phone, localStorage prefix, timetableData, footer
+- **timetableData replacement**: Uses `str.index()` with markers `'const timetableData = ['` and `'\n        ];'` — NOT regex (regex with `.*?` was buggy: non-greedy match stopped at first `]` inside `date: [2026, 2, 18]`)
+- Optional sections: receiver_freq, donation_info (removed if not present in data.json)
+
+### Data validation checks
+- 30 rows (29 acceptable for mosques with confirmed later Ramadan start)
+- Date sequence: Feb 18 → Mar 19
+- Day-of-week matches actual date
+- Ramadan day numbers 1–30 sequential
+- Time format uses `:` not `.`
+- Time sanity ranges (sehri 4-6am, fajr 4-6am, maghrib 4-6pm, isha 6-9pm)
+- Day names: Mon/Tue/Wed/Thu/Fri/Sat/Sun (not UPPERCASE, not Thur/Tues)
+
 ## Technical Notes
 
 ### Time Parsing
@@ -322,6 +431,8 @@ CNAME www   sidnikiwi-afk.github.io
 ```
 
 ### URLs
+**Original 9 mosques** (hand-crafted, unique themes):
+
 | Page | URL |
 |------|-----|
 | Landing page | `waqt.uk` |
@@ -334,6 +445,8 @@ CNAME www   sidnikiwi-afk.github.io
 | IYMA | `waqt.uk/iyma/` |
 | Jamia Masjid | `waqt.uk/JamiaMasjid/` |
 | Masjid Taqwa | `waqt.uk/taqwa/` |
+
+**Batch mosques** (37 total, all at `waqt.uk/<prefix>/`): alabrar, alamin, alhidaya, alhikmah, alhidaayah, almustaqeem, azharulmadaaris, baitulilm, darulmahmood, doha, firdaws, iqra, abuhanifa, farooqiah, madnimasjid, abbasiya, darulirfan, abdullahbinmasood, masjidali, masjidayesha, masjidbilal, masjidhamza, masjidhusain, ibraheem, namirah, masjidnoor, noorulislam, nusratul, farooqia, masjidumar, masjidusman, raashideen, musallasalaam, ahlebayt, shipley, wibseybuttershaw, wibsey
 
 ### Git Config
 - Repo: `sidnikiwi-afk/Prayer-times`
