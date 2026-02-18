@@ -92,6 +92,8 @@ Prayer-times/
     └── poster.html         # A4 printable QR poster
 # ... plus 37 batch-generated mosque folders (alabrar/, alamin/, alhidaya/, etc.)
 # See "Batch Mosque Generation" section below for the full list and workflow.
+scripts/
+└── patch_timetables.py     # Applies Fixes 4 & 5 to 10 original hand-crafted mosque pages
 Masjids/                    # Source data for batch-generated mosques
 ├── generate.py             # Batch HTML generator (uses abubakar/ as template, applies colors)
 ├── gen_pwa.py              # Batch PWA asset generator (manifest, sw, og-image, poster)
@@ -190,7 +192,7 @@ Source data in `Masjids/<Name>/data.json`. Regenerate with `python Masjids/gener
 ## Features (All Mosques)
 
 ### Core Functionality
-- **Today View**: Card-based layout showing today's prayer times only, with pill toggle to switch to Full Timetable. Passed prayers dimmed with checkmark, next prayer highlighted with accent border + "NEXT" badge. Tomorrow preview at bottom: during Ramadan shows Sehri/Iftar times + any jamaah changes; outside Ramadan shows jamaah changes only (hidden if none). Friday shows "Jumu'ah" instead of Zuhr. View preference saved to localStorage. Auto-refreshes every 60s. Defaults to "Today" view always (user can switch; preference saved to localStorage).
+- **Today View**: Card-based layout showing today's prayer times only, with pill toggle to switch to Full Timetable. Passed prayers dimmed with checkmark, next prayer highlighted with accent border + "NEXT" badge. Highlight cutoff uses Jamaah times (e.g. Sehri stays highlighted until Fajr Jamaah, Zohar until Zuhr Jamaah, Asr until Asr Jamaah, Isha until Isha Jamaah). Post-Isha wrap: after Isha Jamaah passes, wraps to index 0 so Sehri/Fajr shows as NEXT instead of all prayers going grey (uses `isWrapped` variable). Tomorrow preview at bottom: during Ramadan shows Sehri/Iftar times + any jamaah changes; outside Ramadan shows jamaah changes only (hidden if none). Friday shows "Jumu'ah" instead of Zuhr. View preference saved to localStorage. Auto-refreshes every 60s. Defaults to "Today" view always (user can switch; preference saved to localStorage).
 - Live prayer-by-prayer countdown (Sehri > Fajr Jamaah > Zuhr > Zuhr Jamaah > Asr > Asr Jamaah > Iftar > Isha > Isha Jamaah > next Sehri)
 - Pre-Ramadan countdown with days display
 - Post-Ramadan "Eid Mubarak" state
@@ -225,7 +227,7 @@ Source data in `Masjids/<Name>/data.json`. Regenerate with `python Masjids/gener
 - **Auto dark mode at Maghrib**: Automatically enables dark mode after Maghrib, disables after Fajr. Respects manual toggle (disables auto if user toggles manually). localStorage: `{prefix}-autoDark`
 - **Eid confetti burst**: 150 themed particles burst when "Eid Mubarak" state triggers. Canvas overlay, self-removes after 5s.
 - **Qibla compass**: Floating button (bottom-left) opens overlay with compass rose SVG. Arrow points 119.7° (Bradford → Ka'bah). Live compass on mobile via DeviceOrientationEvent (incl. `deviceorientationabsolute`), static bearing on desktop. **Standard implementation**: All mosques use the Shahjalal compass pattern (IIFE with `openQibla`/`closeQibla`/`closeQiblaOverlay` on window, `.qibla-overlay.open` toggle, `.qibla-compass`/`.qibla-compass-ring`/`.qibla-bearing-text` classes, `#qiblaSvg`/`#qiblaArrow`/`#qiblaKaaba` SVG IDs). New mosques should copy this pattern and only change theme colors.
-- **AI Prayer Assistant**: `chat.js` — floating gold chat button (bottom-left, above Qibla compass) on all pages. Opens glassmorphism chat panel. Sends questions + today's timetable context from all 8 mosques to n8n webhook (`/webhook/prayer-chat`), which calls GPT-4o-mini via OpenAI API. Suggestion chips: "Latest Isha Jamaah?", "Earliest Fajr Jamaah?". Header uses mosque's theme color. Mobile keyboard handling via `visualViewport` API. Session-only message history (not persisted). Context gathered by fetching each mosque's `index.html` and regex-extracting `timetableData`, cached per session.
+- **AI Prayer Assistant**: `chat.js` — floating gold chat button (bottom-left, above Qibla compass) on all pages. Opens glassmorphism chat panel. Includes STATIC_INFO variable with mosque programmes/events (Quba tarawih, Tawakkulia daily programmes, IYMA donation appeal, Jamia Masjid maghrib notice) appended to timetable context. Sends questions + full context from all mosques to n8n webhook (`/webhook/prayer-chat`), which calls GPT-4o-mini via OpenAI API (system prompt includes spelling variations: jummah, jamaah, sehri, taraweeh, witr, asr, iftar; max_tokens=350). Suggestion chips: "Latest Isha Jamaah?", "Earliest Fajr Jamaah?". Header uses mosque's theme color. Mobile keyboard handling via `visualViewport` API. Session-only message history (not persisted). Context gathered by fetching each mosque's `index.html` and regex-extracting `timetableData`, cached per session.
 
 ### Progressive Enhancement
 - All visual effects respect `prefers-reduced-motion: reduce`
@@ -272,7 +274,7 @@ Source data in `Masjids/<Name>/data.json`. Regenerate with `python Masjids/gener
 - Card hover effects with per-mosque border glow colors
 - Staggered entrance animations on cards
 - Subtle Islamic geometric star/octagon pattern overlay
-- Enhanced footer with "Ramadan 1447 | Bradford" context
+- Enhanced footer with "Ramadan 1447 | UK" context
 - Custom scrollbar, skeleton shimmer
 
 ## How to Add a New Mosque
@@ -339,6 +341,7 @@ For adding many mosques at once without hand-coding each HTML file.
 | `gen_pwa.py` | Generates `manifest.json`, `sw.js`, `og-image.svg`, `poster.html` |
 | `update_landing.py` | Updates landing page card gradients to match each mosque's `color1`/`color2` |
 | `validate.py` | Data validation (row count, dates, day names, time format) |
+| `scripts/patch_timetables.py` | Applies highlight fixes (Jamaah-based cutoff + post-Isha wrap) to the 10 original hand-crafted mosque pages |
 
 ### data.json schema
 ```json
@@ -442,8 +445,9 @@ After the last day's Isha Jamaah, shows "Eid Mubarak".
 ### nav.js
 - Self-executing function that injects CSS, HTML, and event handlers
 - Detects active mosque from URL path
-- Search filter works on name + address
+- Search filter works on name + address (search is inside the dropdown, opened by clicking mosque name; magnifying glass icon on nav button)
 - Print media query hides nav
+- **Apostrophe escaping**: Mosque names/addresses containing apostrophes (Mary's, King's, Ta'limul, Margaret's) must use `\&#39;` in the MASJIDS array addr strings, otherwise unescaped quotes break the JS template literal and crash nav.js on every page
 - Dark mode aware (`body.dark-mode .masjid-nav`)
 
 ### External Dependencies
