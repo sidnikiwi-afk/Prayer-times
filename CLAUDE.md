@@ -42,6 +42,7 @@ Prayer-times/
 │   └── poster.html         # A4 printable QR poster
 ├── Tawakkulia/
 │   ├── index.html          # Tawakkulia Islamic Society timetable
+│   ├── ramadan_timetable.json # Source timetable data (JSON)
 │   ├── manifest.json       # PWA manifest
 │   ├── sw.js               # Service worker (offline support)
 │   ├── og-image.svg        # Social preview image
@@ -169,7 +170,7 @@ Prayer-times/
 - **PWA**: manifest.json + sw.js for offline support, installable (all mosques)
 - **OG image**: og-image.svg social preview (all mosques)
 - **QR poster**: poster.html for A4 printing (all mosques)
-- **Service worker**: Caches Granim.js CDN for offline (cache version: v5)
+- **Service worker**: Caches Granim.js CDN for offline (cache version: v6)
 
 ### Themes Per Mosque
 
@@ -190,7 +191,7 @@ Prayer-times/
 ### Unique Sections
 - **Quba**: Programmes During Ramadan (Ml. Siraj Saleh, Ml. Ahmed Desai), live stream info
 - **Almahad**: "Some Sunnah of Ramadan" 10-item grid (Sahoor, Iftar, Taraweeh, Quran, etc.)
-- **Tawakkulia**: Programmes During Ramadan (Taleem, Dars-e-Quran, Bangla Bayan, English Weekend Bayan, Quran Mashq, Late Night Taraweeh)
+- **Tawakkulia**: Programmes During Ramadan (Taleem, Dars-e-Quran, Bangla Bayan, English Weekend Bayan, Quran Mashq, Late Night Taraweeh). Has separate `iftar` (sunset) and `maghrib` (jamaah) fields in timetableData — other mosques use `maghrib` for both. Source data in `ramadan_timetable.json`.
 - **Salahadin**: Full February timetable (pre-Ramadan + Ramadan), Jumu'ah info (Khutba 12:30, Salah 12:50)
 - **Abu Bakar**: No unique content sections
 - **IYMA**: Donation appeal banner (Phase 3 extension building project), parking notice
@@ -267,10 +268,12 @@ git push
 ### Countdown Sequence
 ```
 Sehri ends → Fajr Jamaah → Zuhr begins → Zuhr Jamaah →
-Asr begins → Asr Jamaah → Iftar → Isha begins → Isha Jamaah →
+Asr begins → Asr Jamaah → Iftar → Maghrib Jamaah* → Isha begins → Isha Jamaah →
 (next day's Sehri) → loop
 ```
 After the last day's Isha Jamaah, shows "Eid Mubarak".
+
+*Maghrib Jamaah step only on Tawakkulia (has separate iftar/sunset and maghrib jamaah times).
 
 ### localStorage Keys Per Mosque
 | Mosque | Dark Mode | Notifications | View Mode | Auto Dark |
