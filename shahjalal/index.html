@@ -1807,35 +1807,35 @@
                 { name: 'Sehri', mainTime: todayData.sehri, isPM: false, details: [
                     { label: 'Fajr Start', value: todayData.fajr },
                     { label: 'Fajr Jamaah', value: todayData.jFajr }
-                ], eventTime: toDate24(todayData.sehri, false) },
+                ], eventTime: toDate24(todayData.jFajr, false) },
                 { name: 'Sunrise', mainTime: todayData.sunrise, isPM: false, details: [], eventTime: toDate24(todayData.sunrise, false) },
                 { name: isFriday ? 'Jumu\'ah' : 'Zuhr', mainTime: todayData.zuhr, isPM: false, details: [
                     { label: 'Jamaah', value: todayData.jZuhr }
-                ], eventTime: toDate24(todayData.zuhr, false) },
+                ], eventTime: toDate24(todayData.jZuhr, true) },
                 { name: 'Asr', mainTime: todayData.asr, isPM: true, details: [
                     { label: 'Jamaah', value: todayData.jAsr }
-                ], eventTime: toDate24(todayData.asr, true) },
+                ], eventTime: toDate24(todayData.jAsr, true) },
                 { name: 'Iftar / Maghrib', mainTime: todayData.maghrib, isPM: true, details: [], eventTime: toDate24(todayData.maghrib, true) },
                 { name: 'Isha', mainTime: todayData.isha, isPM: true, details: [
                     { label: 'Jamaah', value: todayData.jIsha }
-                ], eventTime: toDate24(todayData.isha, true) }
+                ], eventTime: toDate24(todayData.jIsha, true) }
             ] : [
                 { name: 'Fajr', mainTime: todayData.fajr, isPM: false, details: [
                     { label: 'Jamaah', value: todayData.jFajr }
-                ], eventTime: toDate24(todayData.fajr, false) },
+                ], eventTime: toDate24(todayData.jFajr, false) },
                 { name: 'Sunrise', mainTime: todayData.sunrise, isPM: false, details: [
                     { label: 'Ishraq', value: addMinutes(todayData.sunrise, 20) }
                 ], eventTime: toDate24(todayData.sunrise, false) },
                 { name: isFriday ? 'Jumu\'ah' : 'Zuhr', mainTime: todayData.zuhr, isPM: false, details: [
                     { label: 'Jamaah', value: todayData.jZuhr }
-                ], eventTime: toDate24(todayData.zuhr, false) },
+                ], eventTime: toDate24(todayData.jZuhr, true) },
                 { name: 'Asr', mainTime: todayData.asr, isPM: true, details: [
                     { label: 'Jamaah', value: todayData.jAsr }
-                ], eventTime: toDate24(todayData.asr, true) },
+                ], eventTime: toDate24(todayData.jAsr, true) },
                 { name: 'Maghrib', mainTime: todayData.maghrib, isPM: true, details: [], eventTime: toDate24(todayData.maghrib, true) },
                 { name: 'Isha', mainTime: todayData.isha, isPM: true, details: [
                     { label: 'Jamaah', value: todayData.jIsha }
-                ], eventTime: toDate24(todayData.isha, true) }
+                ], eventTime: toDate24(todayData.jIsha, true) }
             ];
 
             // Find next prayer
@@ -1843,13 +1843,15 @@
             for (let i = 0; i < prayers.length; i++) {
                 if (now < prayers[i].eventTime) { nextIndex = i; break; }
             }
+            const isWrapped = nextIndex === -1;
+            if (isWrapped) nextIndex = 0;
 
             document.getElementById('todayCards').innerHTML = prayers.map((p, i) => {
-                const isPassed = nextIndex === -1 || i < nextIndex;
+                const isPassed = isWrapped ? (i !== 0) : (i < nextIndex);
                 const isNext = i === nextIndex;
 
                 let cls = 'prayer-card';
-                if (isPassed && nextIndex !== -1) cls += ' passed';
+                if (isPassed) cls += ' passed';
                 if (isNext) cls += ' active-prayer';
 
                 const badge = isNext ? '<span class="next-badge">NEXT</span>' : '';

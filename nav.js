@@ -110,7 +110,7 @@ const MASJIDS = [
             background: rgba(255,255,255,0.05); color: white;
             font-size: 13px; outline: none; border-radius: 8px 8px 0 0;
         }
-        .nav-search::placeholder { color: rgba(255,255,255,0.3); }
+        .nav-search::placeholder { color: rgba(255,255,255,0.6); }
         .nav-list { list-style: none; padding: 4px 0; }
         .nav-list li { display: flex; align-items: center; }
         .nav-list a {
@@ -135,10 +135,10 @@ const MASJIDS = [
         .nav-item-star:hover { color: rgba(255,255,255,0.4); }
         .nav-item-star.active { color: #ffc107; }
         .nav-fav-star {
-            color: rgba(255,255,255,0.3); cursor: pointer; font-size: 18px;
+            color: rgba(255,255,255,0.55); cursor: pointer; font-size: 20px;
             transition: all 0.2s ease; user-select: none; line-height: 1;
         }
-        .nav-fav-star:hover { color: rgba(255,255,255,0.6); }
+        .nav-fav-star:hover { color: rgba(255,255,255,0.85); }
         .nav-fav-star.active { color: #ffc107; }
         .nav-favs-btn {
             display: flex; align-items: center; gap: 5px;

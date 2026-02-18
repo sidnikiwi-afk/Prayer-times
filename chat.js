@@ -161,6 +161,15 @@
         return s;
     }
 
+    var STATIC_INFO = [
+        'Programmes & Events:',
+        '- Masjid Quba: Tarawih programme with ML. Siraj Saleh (Thursdays) and ML. Ahmed Desai. Live stream available.',
+        '- Tawakkulia Islamic Society: Daily Taleem & Dars-e-Quran after Fajr, Bangla Bayan (Wednesday nights), English Weekend Bayan (Sat/Sun after Zuhr), Quran Mashq sessions, Late Night Taraweeh.',
+        '- IYMA: Phase 3 extension building project donation appeal. Limited parking.',
+        '- Jamia Masjid: Maghrib Salah commences 2 minutes after Iftar.',
+        '- All mosques open for Taraweeh after Isha Jamaah throughout Ramadan.'
+    ].join('\n');
+
     function getContext() {
         if (contextCache) return Promise.resolve(contextCache);
 
@@ -187,6 +196,8 @@
 
         return Promise.all(fetches).then(function (results) {
             results.forEach(function (r) { if (r) lines.push(r); });
+            lines.push('');
+            lines.push(STATIC_INFO);
             contextCache = lines.join('\n');
             return contextCache;
         });
