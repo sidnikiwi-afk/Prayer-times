@@ -65,7 +65,12 @@ def generate(config_path):
         timetable_js += f'jIsha: "{row["jIsha"]}"'
         timetable_js += " },\n"
     timetable_js += "        ]"
-    html = re.sub(r'const timetableData = \[.*?\]', timetable_js, html, flags=re.DOTALL)
+    # Find the full timetableData block using line markers (not regex, to avoid matching nested brackets)
+    start_marker = 'const timetableData = ['
+    end_marker = '\n        ];'
+    start_idx = html.index(start_marker)
+    end_idx = html.index(end_marker, start_idx) + len(end_marker)
+    html = html[:start_idx] + timetable_js + ';' + html[end_idx:]
 
     # === FOOTER ===
     # Replace footer content
