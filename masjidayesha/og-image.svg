@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a148c"/>
+      <stop offset="100%" style="stop-color:#7b1fa2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="600" y="200" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="100" fill="white">&#x1F54C;</text>
+  <text x="600" y="320" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="40" font-weight="bold" fill="white" letter-spacing="2">MASJID AYESHA</text>
+  <text x="600" y="390" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="26" fill="white" opacity="0.9">2 Thornacre Road, Manningham, BD18 1JY</text>
+  <text x="600" y="470" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="34" font-weight="600" fill="white">
+    <tspan fill="#ffc107">RAMADHAN 1447</tspan> | FEBRUARY - MARCH 2026
+  </text>
+  <text x="600" y="540" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="24" fill="white" opacity="0.8" font-style="italic">Prayer Timetable with Live Countdown</text>
+</svg>

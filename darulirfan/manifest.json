@@ -1,0 +1,16 @@
+{
+  "name": "Markazi Masjid Darul Irfan - Ramadan Timetable",
+  "short_name": "Darul Irfan Times",
+  "description": "Ramadan 1447 prayer timetable for Markazi Masjid Darul Irfan, Bradford",
+  "start_url": "/darulirfan/",
+  "display": "standalone",
+  "background_color": "#4a148c",
+  "theme_color": "#4a148c",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%234a148c' width='100' height='100' rx='20'/><text x='50' y='50' text-anchor='middle' dominant-baseline='central' font-size='60'>🌙</text></svg>",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
