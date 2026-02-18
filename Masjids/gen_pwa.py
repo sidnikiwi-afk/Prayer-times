@@ -6,8 +6,6 @@ ROOT = 'G:/My Drive/Work/Prayer-times'
 MASJIDS_DIR = os.path.join(ROOT, 'Masjids')
 EXISTING_ADDRESSES = {'807 Great Horton Road'}
 EXISTING_PREFIXES = {'shahjalal','quba','almahad','tawakkulia','salahadin','abubakar','iyma','JamiaMasjid','taqwa'}
-COLOR1 = '#4a148c'
-COLOR2 = '#7b1fa2'
 
 data_files = sorted(glob.glob(os.path.join(MASJIDS_DIR, '*', 'data.json')))
 count = 0
@@ -19,6 +17,8 @@ for df in data_files:
     address = d.get('address', '')
     short_name = d.get('short_name', name)
     phone = d.get('phone', '')
+    COLOR1 = d.get('color1', '#4a148c')
+    COLOR2 = d.get('color2', '#7b1fa2')
 
     if prefix in EXISTING_PREFIXES or any(ea in address for ea in EXISTING_ADDRESSES):
         continue

@@ -5,6 +5,58 @@ import json, re, os, glob
 TEMPLATE_PATH = os.path.join(os.path.dirname(__file__), '..', 'abubakar', 'index.html')
 MASJIDS_DIR = os.path.dirname(__file__)
 
+# Template (abubakar) purple palette — replaced with mosque-specific colors
+TEMPLATE_COLORS = [
+    '#4a148c',  # primary dark   (30 uses)
+    '#7b1fa2',  # primary medium (12 uses)
+    '#6a1b9a',  # mid dark       ( 2 uses)
+    '#311b92',  # deep dark      ( 2 uses)
+    '#ce93d8',  # light secondary(16 uses)
+    '#e8d5f5',  # very light     ( 9 uses)
+    '#f3e5f5',  # palest tint    ( 4 uses)
+    '#ba68c8',  # medium-light   ( 1 use)
+    '#ab47bc',  # medium         ( 2 uses)
+    '#e040fb',  # bright accent  ( 2 uses)
+]
+
+def hex_to_rgb(h):
+    h = h.lstrip('#')
+    return tuple(int(h[i:i+2], 16) for i in (0, 2, 4))
+
+def rgb_to_hex(r, g, b):
+    return '#{:02x}{:02x}{:02x}'.format(int(round(r)), int(round(g)), int(round(b)))
+
+def blend(h1, h2, t):
+    r1, g1, b1 = hex_to_rgb(h1)
+    r2, g2, b2 = hex_to_rgb(h2)
+    return rgb_to_hex(r1*(1-t)+r2*t, g1*(1-t)+g2*t, b1*(1-t)+b2*t)
+
+def lighten(h, amount):
+    return blend(h, '#ffffff', amount)
+
+def darken(h, amount):
+    return blend(h, '#000000', amount)
+
+def build_palette(c1, c2):
+    """Return list of (old_color, new_color) for TEMPLATE_COLORS, in order."""
+    return [
+        (TEMPLATE_COLORS[0], c1),                      # primary dark
+        (TEMPLATE_COLORS[1], c2),                      # primary medium
+        (TEMPLATE_COLORS[2], blend(c1, c2, 0.4)),      # mid dark
+        (TEMPLATE_COLORS[3], darken(c1, 0.15)),        # deep dark
+        (TEMPLATE_COLORS[4], lighten(c2, 0.55)),       # light secondary
+        (TEMPLATE_COLORS[5], lighten(c1, 0.78)),       # very light primary
+        (TEMPLATE_COLORS[6], lighten(c1, 0.88)),       # palest tint
+        (TEMPLATE_COLORS[7], lighten(c2, 0.38)),       # medium-light secondary
+        (TEMPLATE_COLORS[8], lighten(c2, 0.22)),       # medium secondary
+        (TEMPLATE_COLORS[9], c2),                      # bright accent → use c2
+    ]
+
+def apply_colors(html, c1, c2):
+    for old, new in build_palette(c1, c2):
+        html = html.replace(old, new)
+    return html
+
 def generate(config_path):
     with open(TEMPLATE_PATH, 'r', encoding='utf-8') as f:
         html = f.read()
@@ -15,6 +67,12 @@ def generate(config_path):
     folder = os.path.dirname(config_path)
     prefix = config.get("prefix", re.sub(r'[^a-z0-9]', '', name.lower()))
     address = config["address"]
+
+    # === THEME COLORS ===
+    color1 = config.get("color1", "#4a148c")
+    color2 = config.get("color2", "#7b1fa2")
+    if color1 != "#4a148c" or color2 != "#7b1fa2":
+        html = apply_colors(html, color1, color2)
     short_name = config.get("short_name", name.split(" ")[-1] if len(name.split()) > 2 else name)
     phone = config.get("phone", "")
     phone_display = config.get("phone_display", phone)

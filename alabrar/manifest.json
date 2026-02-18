@@ -4,8 +4,8 @@
   "description": "Ramadan 1447 prayer timetable for Al Abrar Academy, Bradford",
   "start_url": "/alabrar/",
   "display": "standalone",
-  "background_color": "#4a148c",
-  "theme_color": "#4a148c",
+  "background_color": "#1a3a2e",
+  "theme_color": "#1a3a2e",
   "icons": [
     {
       "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%234a148c' width='100' height='100' rx='20'/><text x='50' y='50' text-anchor='middle' dominant-baseline='central' font-size='60'>🌙</text></svg>",
