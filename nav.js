@@ -96,7 +96,9 @@ const MASJIDS = [
             transition: all 0.2s ease; user-select: none;
         }
         .nav-current:hover { background: rgba(255,255,255,0.18); }
-        .nav-current::after { content: '\\25BE'; font-size: 10px; opacity: 0.6; margin-left: 2px; }
+        .nav-current::after { content: ''; }
+        .nav-search-icon { opacity: 0.5; flex-shrink: 0; margin-left: 4px; }
+        .nav-current:hover .nav-search-icon { opacity: 0.9; }
         .nav-dropdown {
             display: none; position: absolute; top: calc(100% + 6px); left: 0;
             background: #1a1a2e; border: 1px solid rgba(255,255,255,0.15);
@@ -197,9 +199,9 @@ const MASJIDS = [
         '<div class="nav-left">' +
             '<span class="nav-label">Masjid</span>' +
             '<div class="nav-selector">' +
-                '<div class="nav-current" id="navToggle">' + (currentFolder ? currentFolder.name : 'Select Masjid') + '</div>' +
+                '<div class="nav-current" id="navToggle">' + (currentFolder ? currentFolder.name : 'Select Masjid') + '<svg class="nav-search-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>' +
                 '<div class="nav-dropdown" id="navDropdown">' +
-                    '<input type="text" class="nav-search" id="navSearch" placeholder="Search masjids...">' +
+                    '<input type="text" class="nav-search" id="navSearch" placeholder="&#128269; Search or switch masjid...">' +
                     '<ul class="nav-list" id="navList">' + items + '</ul>' +
                     (isHome ? '' : '<a href="../" class="nav-all">View all masjids</a>') +
                 '</div>' +
