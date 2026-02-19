@@ -1,0 +1,49 @@
+{
+  "mosque": {
+    "name": "West Leeds Jamia Masjid",
+    "address": "Town Street, Armley, Leeds, LS12 3JG",
+    "email": "westleedsjamiamasjid@gmail.com",
+    "phone": "07801 997 364",
+    "charityNumber": "1204572",
+    "jummah": {
+      "summer": "13:35",
+      "winter": "12:35"
+    },
+    "notes": [
+      "The first of Ramadan will be according to the moonsighting",
+      "Uniting the Ummah"
+    ]
+  },
+  "ramadan2026": [
+    {"date":"18 Feb","ramadan":1,"sehriEnds":"05:40","sunrise":"07:19","zuhr":"12:25","asr":"03:30","isha":"06:57","fajarJamaat":"06:00","zuhrJamaat":"12:35","asrJamaat":"04:00","magrib":"05:25","ishaJamaat":"07:45"},
+    {"date":"19 Feb","ramadan":2,"sehriEnds":"05:37","sunrise":"07:17","zuhr":"12:25","asr":"03:32","isha":"06:59","fajarJamaat":"05:57","zuhrJamaat":"12:35","asrJamaat":"04:00","magrib":"05:27","ishaJamaat":"07:45"},
+    {"date":"20 Feb","ramadan":3,"sehriEnds":"05:35","sunrise":"07:15","zuhr":"12:25","asr":"03:34","isha":"07:01","fajarJamaat":"05:55","zuhrJamaat":"12:35","asrJamaat":"04:00","magrib":"05:29","ishaJamaat":"07:45"},
+    {"date":"21 Feb","ramadan":4,"sehriEnds":"05:33","sunrise":"07:13","zuhr":"12:25","asr":"03:35","isha":"07:02","fajarJamaat":"05:53","zuhrJamaat":"12:35","asrJamaat":"04:00","magrib":"05:31","ishaJamaat":"07:45"},
+    {"date":"22 Feb","ramadan":5,"sehriEnds":"05:31","sunrise":"07:11","zuhr":"12:25","asr":"03:37","isha":"07:04","fajarJamaat":"05:51","zuhrJamaat":"12:35","asrJamaat":"04:00","magrib":"05:33","ishaJamaat":"07:45"},
+    {"date":"23 Feb","ramadan":6,"sehriEnds":"05:29","sunrise":"07:08","zuhr":"12:25","asr":"03:39","isha":"07:06","fajarJamaat":"05:49","zuhrJamaat":"12:35","asrJamaat":"04:00","magrib":"05:35","ishaJamaat":"07:45"},
+    {"date":"24 Feb","ramadan":7,"sehriEnds":"05:26","sunrise":"07:06","zuhr":"12:25","asr":"03:41","isha":"07:08","fajarJamaat":"05:46","zuhrJamaat":"12:35","asrJamaat":"04:00","magrib":"05:37","ishaJamaat":"07:45"},
+    {"date":"25 Feb","ramadan":8,"sehriEnds":"05:24","sunrise":"07:04","zuhr":"12:25","asr":"03:42","isha":"07:09","fajarJamaat":"05:44","zuhrJamaat":"12:35","asrJamaat":"04:30","magrib":"05:39","ishaJamaat":"07:45"},
+    {"date":"26 Feb","ramadan":9,"sehriEnds":"05:22","sunrise":"07:02","zuhr":"12:24","asr":"03:44","isha":"07:11","fajarJamaat":"05:42","zuhrJamaat":"12:35","asrJamaat":"04:30","magrib":"05:41","ishaJamaat":"07:45"},
+    {"date":"27 Feb","ramadan":10,"sehriEnds":"05:20","sunrise":"06:59","zuhr":"12:24","asr":"03:46","isha":"07:13","fajarJamaat":"05:40","zuhrJamaat":"12:35","asrJamaat":"04:30","magrib":"05:43","ishaJamaat":"07:45"},
+    {"date":"28 Feb","ramadan":11,"sehriEnds":"05:17","sunrise":"06:57","zuhr":"12:24","asr":"03:48","isha":"07:15","fajarJamaat":"05:37","zuhrJamaat":"12:35","asrJamaat":"04:30","magrib":"05:45","ishaJamaat":"08:00"},
+    {"date":"1 Mar","ramadan":12,"sehriEnds":"05:15","sunrise":"06:55","zuhr":"12:24","asr":"03:49","isha":"07:18","fajarJamaat":"05:35","zuhrJamaat":"12:35","asrJamaat":"04:30","magrib":"05:47","ishaJamaat":"08:00"},
+    {"date":"2 Mar","ramadan":13,"sehriEnds":"05:13","sunrise":"06:52","zuhr":"12:24","asr":"03:51","isha":"07:18","fajarJamaat":"05:33","zuhrJamaat":"12:35","asrJamaat":"04:30","magrib":"05:49","ishaJamaat":"08:00"},
+    {"date":"3 Mar","ramadan":14,"sehriEnds":"05:10","sunrise":"06:50","zuhr":"12:23","asr":"03:53","isha":"07:19","fajarJamaat":"05:30","zuhrJamaat":"12:35","asrJamaat":"04:30","magrib":"05:51","ishaJamaat":"08:00"},
+    {"date":"4 Mar","ramadan":15,"sehriEnds":"05:08","sunrise":"06:48","zuhr":"12:23","asr":"03:54","isha":"07:20","fajarJamaat":"05:28","zuhrJamaat":"12:35","asrJamaat":"04:30","magrib":"05:53","ishaJamaat":"08:00"},
+    {"date":"5 Mar","ramadan":16,"sehriEnds":"05:06","sunrise":"06:45","zuhr":"12:23","asr":"03:56","isha":"07:21","fajarJamaat":"05:26","zuhrJamaat":"12:35","asrJamaat":"04:30","magrib":"05:55","ishaJamaat":"08:00"},
+    {"date":"6 Mar","ramadan":17,"sehriEnds":"05:03","sunrise":"06:43","zuhr":"12:23","asr":"03:58","isha":"07:23","fajarJamaat":"05:23","zuhrJamaat":"12:35","asrJamaat":"04:30","magrib":"05:57","ishaJamaat":"08:00"},
+    {"date":"7 Mar","ramadan":18,"sehriEnds":"05:01","sunrise":"06:41","zuhr":"12:22","asr":"03:59","isha":"07:24","fajarJamaat":"05:21","zuhrJamaat":"12:35","asrJamaat":"04:30","magrib":"05:58","ishaJamaat":"08:00"},
+    {"date":"8 Mar","ramadan":19,"sehriEnds":"04:58","sunrise":"06:38","zuhr":"12:22","asr":"04:01","isha":"07:26","fajarJamaat":"05:18","zuhrJamaat":"12:35","asrJamaat":"04:30","magrib":"06:00","ishaJamaat":"08:00"},
+    {"date":"9 Mar","ramadan":20,"sehriEnds":"04:56","sunrise":"06:36","zuhr":"12:22","asr":"04:02","isha":"07:27","fajarJamaat":"05:16","zuhrJamaat":"12:35","asrJamaat":"04:30","magrib":"06:02","ishaJamaat":"08:00"},
+    {"date":"10 Mar","ramadan":21,"sehriEnds":"04:54","sunrise":"06:33","zuhr":"12:22","asr":"04:04","isha":"07:29","fajarJamaat":"05:14","zuhrJamaat":"12:35","asrJamaat":"05:00","magrib":"06:04","ishaJamaat":"08:00"},
+    {"date":"11 Mar","ramadan":22,"sehriEnds":"04:51","sunrise":"06:31","zuhr":"12:21","asr":"04:06","isha":"07:32","fajarJamaat":"05:11","zuhrJamaat":"12:35","asrJamaat":"05:00","magrib":"06:06","ishaJamaat":"08:00"},
+    {"date":"12 Mar","ramadan":23,"sehriEnds":"04:49","sunrise":"06:29","zuhr":"12:21","asr":"04:07","isha":"07:33","fajarJamaat":"05:09","zuhrJamaat":"12:35","asrJamaat":"05:00","magrib":"06:08","ishaJamaat":"08:00"},
+    {"date":"13 Mar","ramadan":24,"sehriEnds":"04:46","sunrise":"06:26","zuhr":"12:21","asr":"04:09","isha":"07:34","fajarJamaat":"05:06","zuhrJamaat":"12:35","asrJamaat":"05:00","magrib":"06:10","ishaJamaat":"08:00"},
+    {"date":"14 Mar","ramadan":25,"sehriEnds":"04:44","sunrise":"06:24","zuhr":"12:21","asr":"04:10","isha":"07:35","fajarJamaat":"05:04","zuhrJamaat":"12:35","asrJamaat":"05:00","magrib":"06:12","ishaJamaat":"08:00"},
+    {"date":"15 Mar","ramadan":26,"sehriEnds":"04:42","sunrise":"06:21","zuhr":"12:20","asr":"04:12","isha":"07:37","fajarJamaat":"05:02","zuhrJamaat":"12:35","asrJamaat":"05:00","magrib":"06:14","ishaJamaat":"08:00"},
+    {"date":"16 Mar","ramadan":27,"sehriEnds":"04:39","sunrise":"06:19","zuhr":"12:20","asr":"04:13","isha":"07:39","fajarJamaat":"04:59","zuhrJamaat":"12:35","asrJamaat":"05:00","magrib":"06:15","ishaJamaat":"08:00"},
+    {"date":"17 Mar","ramadan":28,"sehriEnds":"04:39","sunrise":"06:16","zuhr":"12:20","asr":"04:15","isha":"07:39","fajarJamaat":"04:59","zuhrJamaat":"12:35","asrJamaat":"05:00","magrib":"06:17","ishaJamaat":"08:00"},
+    {"date":"18 Mar","ramadan":29,"sehriEnds":"04:37","sunrise":"06:14","zuhr":"12:20","asr":"04:16","isha":"07:40","fajarJamaat":"04:57","zuhrJamaat":"12:35","asrJamaat":"05:00","magrib":"06:19","ishaJamaat":"08:00"},
+    {"date":"19 Mar","ramadan":30,"sehriEnds":"04:34","sunrise":"06:12","zuhr":"12:19","asr":"04:18","isha":"07:42","fajarJamaat":"04:54","zuhrJamaat":"12:35","asrJamaat":"05:00","magrib":"06:21","ishaJamaat":"08:00"}
+  ]
+}
