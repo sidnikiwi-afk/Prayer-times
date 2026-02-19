@@ -90,7 +90,7 @@ Prayer-times/
     ├── og-image.svg        # Social preview image
     ├── qr-code.svg         # QR code for poster
     └── poster.html         # A4 printable QR poster
-# ... plus 37 batch-generated mosque folders (alabrar/, alamin/, alhidaya/, etc.)
+# ... plus 38 batch-generated mosque folders (alabrar/, alamin/, alhidaya/, westleeds/, etc.)
 # See "Batch Mosque Generation" section below for the full list and workflow.
 scripts/
 └── patch_timetables.py     # Applies Fixes 4 & 5 to 10 original hand-crafted mosque pages
@@ -140,10 +140,11 @@ Masjids/                    # Source data for batch-generated mosques
 - **Jamia Masjid**: Tel 01274 724 819
 - **Masjid Taqwa**: www.masjidat-taqwa.co.uk | Receiver: 456.787
 - **Masjid Ibraheem**: Tel 0113 270 9536 | masjidibraheemleeds.com | masjidibraheemleeds11@gmail.com
+- **West Leeds Jamia Masjid**: Tel 07801 997 364 | westleedsjamiamasjid@gmail.com
 
 ### Batch-Generated Mosques (Ramadan 1447 – added Feb 2026)
 
-These 37 mosques were added in bulk using the `Masjids/` batch generation workflow.
+These 38 mosques were added in bulk using the `Masjids/` batch generation workflow.
 Each has a **unique color theme** stored in `color1`/`color2` fields of its `data.json` — all 10 purple shades from the abubakar template are fully replaced with per-mosque derived colors (dark, medium, light variants, tints).
 Source data in `Masjids/<Name>/data.json`. Regenerate with `python Masjids/generate.py` then copy outputs.
 
@@ -185,6 +186,7 @@ Source data in `Masjids/<Name>/data.json`. Regenerate with `python Masjids/gener
 | PYC Masjid Ahle Bayt | `ahlebayt` | Mount Street, Bradford, BD3 9SR | Islamic blue |
 | Shipley Islamic & Education Centre | `shipley` | Aireville Road, Bradford, BD9 4HH | Teal |
 | Wibsey & Buttershaw Islamic Learning Centre | `wibseybuttershaw` | The Cooperville Centre, Bellerby Brow, Bradford, BD6 3JY | Purple-navy |
+| West Leeds Jamia Masjid | `westleeds` | Town Street, Armley, Leeds, LS12 3JG | Charcoal/Graphite |
 | Wibsey Musalla | `wibsey` | 75 Odsal Road, Wibsey, BD6 1PN | Purple-grey |
 
 **Note on Doha Mosque**: Timetable has 29 rows starting Feb 19 (their confirmed Ramadan start date differs by one day — moon sighted a day later).
@@ -494,7 +496,7 @@ CNAME www   sidnikiwi-afk.github.io
 | Masjid Taqwa | `waqt.uk/taqwa/` |
 | Masjid Ibraheem (Leeds) | `waqt.uk/ibrahim/` |
 
-**Batch mosques** (37 total, all at `waqt.uk/<prefix>/`): alabrar, alamin, alhidaya, alhikmah, alhidaayah, almustaqeem, azharulmadaaris, baitulilm, darulmahmood, doha, firdaws, iqra, abuhanifa, farooqiah, madnimasjid, abbasiya, darulirfan, abdullahbinmasood, masjidali, masjidayesha, masjidbilal, masjidhamza, masjidhusain, ibraheem, namirah, masjidnoor, noorulislam, nusratul, farooqia, masjidumar, masjidusman, raashideen, musallasalaam, ahlebayt, shipley, wibseybuttershaw, wibsey
+**Batch mosques** (38 total, all at `waqt.uk/<prefix>/`): alabrar, alamin, alhidaya, alhikmah, alhidaayah, almustaqeem, azharulmadaaris, baitulilm, darulmahmood, doha, firdaws, iqra, abuhanifa, farooqiah, madnimasjid, abbasiya, darulirfan, abdullahbinmasood, masjidali, masjidayesha, masjidbilal, masjidhamza, masjidhusain, ibraheem, namirah, masjidnoor, noorulislam, nusratul, farooqia, masjidumar, masjidusman, raashideen, musallasalaam, ahlebayt, shipley, westleeds, wibseybuttershaw, wibsey
 
 ### Git Config
 - Repo: `sidnikiwi-afk/Prayer-times`

@@ -1,14 +1,14 @@
 {
   "name": "West Leeds Jamia Masjid - Ramadan Timetable",
   "short_name": "West Leeds Times",
-  "description": "Ramadan 1447 prayer timetable for West Leeds Jamia Masjid, Bradford",
+  "description": "Ramadan 1447 prayer timetable for West Leeds Jamia Masjid, Leeds",
   "start_url": "/westleeds/",
   "display": "standalone",
   "background_color": "#263238",
   "theme_color": "#263238",
   "icons": [
     {
-      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%234a148c' width='100' height='100' rx='20'/><text x='50' y='50' text-anchor='middle' dominant-baseline='central' font-size='60'>🌙</text></svg>",
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23263238' width='100' height='100' rx='20'/><text x='50' y='50' text-anchor='middle' dominant-baseline='central' font-size='60'>🌙</text></svg>",
       "sizes": "any",
       "type": "image/svg+xml"
     }
