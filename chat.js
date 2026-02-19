@@ -1,3 +1,6 @@
+// Google Analytics 4
+(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-9DPJ6NR37M';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function g(){dataLayer.push(arguments)}g('js',new Date());g('config','G-9DPJ6NR37M');})();
+
 (function () {
     'use strict';
 
