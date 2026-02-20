@@ -455,7 +455,7 @@ After the last day's Isha Jamaah, shows "Eid Mubarak".
 ### External Dependencies
 - **Granim.js v2.0.0** (`cdn.jsdelivr.net/npm/granim@2.0.0/dist/granim.min.js`) - animated gradient backgrounds. Loaded async, cached by service worker, falls back to CSS gradient if unavailable.
 - **OpenAI GPT-4o-mini** (via n8n webhook proxy on Railway) - AI prayer times chatbot. n8n workflow "Prayer AI Chat" (ID: `eZayWM5UAKhF8RWA`), webhook path `/webhook/prayer-chat`. Uses Header Auth credential for OpenAI API key.
-- **Google Analytics 4** (`G-9DPJ6NR37M`) - injected dynamically via `chat.js` (covers all 48 pages). Dashboard: `analytics.google.com`.
+- **Google Analytics 4** (`G-9DPJ6NR37M`) - injected dynamically via `chat.js` (covers all 49 pages). Dashboard: `analytics.google.com`.
 - No other external JS libraries. All other effects are vanilla CSS/JS/SVG + Web Audio API.
 
 ### Data Source
