@@ -15,7 +15,7 @@
         { name: 'IYMA', folder: 'iyma' },
         { name: 'Jamia Masjid', folder: 'JamiaMasjid' }
     ];
-    var SUGGESTIONS = ['Latest Isha Jamaah?', 'Earliest Fajr Jamaah?'];
+    var SUGGESTIONS = ['Latest Isha Jama\'ah?', 'Earliest Fajr Jama\'ah?'];
 
     var pathname = window.location.pathname;
     var currentMosque = MOSQUES.find(function (m) { return pathname.includes('/' + m.folder + '/'); });
@@ -39,7 +39,7 @@
 .chat-btn:hover{transform:scale(1.1);box-shadow:0 6px 20px rgba(255,179,0,.6)}\
 .chat-btn.open{display:none}\
 .chat-panel{\
-    position:fixed;bottom:20px;left:20px;width:340px;max-height:480px;\
+    position:fixed;bottom:20px;left:20px;width:340px;max-height:min(480px,calc(100dvh - 80px));\
     background:rgba(30,30,45,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);\
     border-radius:20px;border:1px solid rgba(255,255,255,.1);\
     box-shadow:0 8px 32px rgba(0,0,0,.4);z-index:10001;\
@@ -78,7 +78,7 @@
     display:flex;align-items:center;justify-content:center;transition:opacity .2s;\
 }\
 .chat-send:disabled{opacity:.4;cursor:default}\
-@media(max-width:400px){.chat-panel{left:10px;right:10px;width:auto;bottom:10px}}\
+@media(max-width:400px){.chat-panel{left:10px;right:10px;width:auto;bottom:10px;max-height:min(480px,calc(100dvh - 60px))}}\
 ';
     document.head.appendChild(style);
 
@@ -132,16 +132,14 @@
 
     // Adjust panel position when mobile keyboard opens
     if (window.visualViewport) {
-        window.visualViewport.addEventListener('resize', function () {
+        function adjustForKeyboard() {
             if (!chatOpen) return;
             var offset = window.innerHeight - window.visualViewport.height;
             panel.style.bottom = (offset > 0 ? offset + 10 : 20) + 'px';
-        });
-        window.visualViewport.addEventListener('scroll', function () {
-            if (!chatOpen) return;
-            var offset = window.innerHeight - window.visualViewport.height;
-            panel.style.bottom = (offset > 0 ? offset + 10 : 20) + 'px';
-        });
+            panel.style.maxHeight = offset > 0 ? (window.visualViewport.height - 20) + 'px' : '';
+        }
+        window.visualViewport.addEventListener('resize', adjustForKeyboard);
+        window.visualViewport.addEventListener('scroll', adjustForKeyboard);
     }
 
     // --- Timetable context ---
@@ -154,12 +152,12 @@
 
     function formatRow(name, row) {
         if (!row) return name + ': No data for today';
-        var s = name + ': Sehri ' + row.sehri + ', Fajr ' + row.fajr + ' (Jamaah ' + row.jFajr + ')';
+        var s = name + ': Sehri ' + row.sehri + ', Fajr ' + row.fajr + ' (Jama\'ah ' + row.jFajr + ')';
         s += ', Sunrise ' + row.sunrise;
-        s += ', Zuhr ' + row.zuhr + ' (Jamaah ' + (row.jZuhl || row.jZuhr) + ')';
-        s += ', Asr ' + row.asr + ' (Jamaah ' + row.jAsr + ')';
+        s += ', Zuhr ' + row.zuhr + ' (Jama\'ah ' + (row.jZuhl || row.jZuhr) + ')';
+        s += ', Asr ' + row.asr + ' (Jama\'ah ' + row.jAsr + ')';
         s += ', Maghrib ' + row.maghrib;
-        s += ', Isha ' + row.isha + ' (Jamaah ' + row.jIsha + ')';
+        s += ', Isha ' + row.isha + ' (Jama\'ah ' + row.jIsha + ')';
         if (row.no) s += ', Ramadan Day ' + row.no;
         return s;
     }
@@ -170,7 +168,7 @@
         '- Tawakkulia Islamic Society: Daily Taleem & Dars-e-Quran after Fajr, Bangla Bayan (Wednesday nights), English Weekend Bayan (Sat/Sun after Zuhr), Quran Mashq sessions, Late Night Taraweeh.',
         '- IYMA: Phase 3 extension building project donation appeal. Limited parking.',
         '- Jamia Masjid: Maghrib Salah commences 2 minutes after Iftar.',
-        '- All mosques open for Taraweeh after Isha Jamaah throughout Ramadan.'
+        '- All mosques open for Taraweeh after Isha Jama\'ah throughout Ramadan.'
     ].join('\n');
 
     function getContext() {

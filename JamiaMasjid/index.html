@@ -14,8 +14,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Jamia Times">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>">
-    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%234e342e' width='100' height='100' rx='20'/><text x='50' y='50' text-anchor='middle' dominant-baseline='central' font-size='60'>🌙</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%234e342e' width='100' height='100' rx='20'/><path d='M30 55 Q50 20 70 55 Z' fill='white' opacity='0.95'/><rect x='22' y='35' width='6' height='40' rx='1' fill='white' opacity='0.9'/><polygon points='22,35 25,25 28,35' fill='white' opacity='0.9'/><rect x='72' y='35' width='6' height='40' rx='1' fill='white' opacity='0.9'/><polygon points='72,35 75,25 78,35' fill='white' opacity='0.9'/><rect x='30' y='55' width='40' height='20' fill='white' opacity='0.9'/><path d='M44 75 L44 62 Q50 56 56 62 L56 75 Z' fill='%234e342e' opacity='0.8'/><circle cx='50' cy='28' r='5' fill='white'/><circle cx='52' cy='27' r='4' fill='%234e342e'/></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%234e342e' width='100' height='100' rx='20'/><path d='M30 55 Q50 20 70 55 Z' fill='white' opacity='0.95'/><rect x='22' y='35' width='6' height='40' rx='1' fill='white' opacity='0.9'/><polygon points='22,35 25,25 28,35' fill='white' opacity='0.9'/><rect x='72' y='35' width='6' height='40' rx='1' fill='white' opacity='0.9'/><polygon points='72,35 75,25 78,35' fill='white' opacity='0.9'/><rect x='30' y='55' width='40' height='20' fill='white' opacity='0.9'/><path d='M44 75 L44 62 Q50 56 56 62 L56 75 Z' fill='%234e342e' opacity='0.8'/><circle cx='50' cy='28' r='5' fill='white'/><circle cx='52' cy='27' r='4' fill='%234e342e'/></svg>">
     <link rel="manifest" href="manifest.json">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -814,6 +814,8 @@
             <a href="https://forms.gle/W6W57QjbAgz8CzYn9" target="_blank" style="color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 10px; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">&#x1F4CB; Submit a Timetable</a>
             <span style="color: rgba(255,255,255,0.15);">|</span>
             <a href="https://forms.gle/W6W57QjbAgz8CzYn9" target="_blank" style="color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 10px; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">&#x26A0;&#xFE0F; Report an Error</a>
+            <span style="color: rgba(255,255,255,0.15);">|</span>
+            <a href="poster.html" target="_blank" style="color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 10px; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">&#x1F5A8;&#xFE0F; Download QR Poster</a>
         </div>
     </div>
 
@@ -1024,14 +1026,14 @@
 
             const events = [
                 { label: '🍽️ Sehri ends', time: toDate(todayData.sehri, false), display: todayData.sehri },
-                { label: '🕌 Fajr Jamaah', time: toDate(todayData.jFajr, false), display: todayData.jFajr },
+                { label: '🕌 Fajr Jama\'ah', time: toDate(todayData.jFajr, false), display: todayData.jFajr },
                 { label: '☀️ Zohar begins', time: toDate(todayData.zuhr, false), display: todayData.zuhr },
-                { label: '🕌 Zohar Jamaah', time: toDate(todayData.jZuhr, true), display: todayData.jZuhr },
+                { label: '🕌 Zohar Jama\'ah', time: toDate(todayData.jZuhr, true), display: todayData.jZuhr },
                 { label: '☀️ Asr begins', time: toDate(todayData.asr, true), display: todayData.asr },
-                { label: '🕌 Asr Jamaah', time: toDate(todayData.jAsr, true), display: todayData.jAsr },
+                { label: '🕌 Asr Jama\'ah', time: toDate(todayData.jAsr, true), display: todayData.jAsr },
                 { label: '🌅 Iftar', time: toDate(todayData.maghrib, true), display: todayData.maghrib },
                 { label: '☀️ Isha begins', time: toDate(todayData.isha, true), display: todayData.isha },
-                { label: '🕌 Isha Jamaah', time: toDate(todayData.jIsha, true), display: todayData.jIsha },
+                { label: '🕌 Isha Jama\'ah', time: toDate(todayData.jIsha, true), display: todayData.jIsha },
             ];
 
             const nextEvent = events.find(e => now < e.time);
@@ -1174,19 +1176,19 @@
             }
 
             const prayers = isRamadan ? [
-                { name: 'Sehri', mainTime: todayData.sehri, isPM: false, details: [{label:'Fajr Start',value:todayData.fajr},{label:'Fajr Jamaah',value:todayData.jFajr}], eventTime: toDate24(todayData.jFajr, false) },
+                { name: 'Sehri', mainTime: todayData.sehri, isPM: false, details: [{label:'Fajr Start',value:todayData.fajr},{label:'Fajr Jama\'ah',value:todayData.jFajr}], eventTime: toDate24(todayData.jFajr, false) },
                 { name: 'Sunrise', mainTime: todayData.sunrise, isPM: false, details: [], eventTime: toDate24(todayData.sunrise, false) },
-                { name: isFriday ? 'Jumu\'ah' : 'Zohar', mainTime: todayData.zuhr, isPM: false, details: [{label:'Jamaah',value:todayData.jZuhr}], eventTime: toDate24(todayData.jZuhr, true) },
-                { name: 'Asr', mainTime: todayData.asr, isPM: true, details: [{label:'Jamaah',value:todayData.jAsr}], eventTime: toDate24(todayData.jAsr, true) },
+                { name: isFriday ? 'Jumu\'ah' : 'Zohar', mainTime: todayData.zuhr, isPM: false, details: [{label:'Jama\'ah',value:todayData.jZuhr}], eventTime: toDate24(todayData.jZuhr, true) },
+                { name: 'Asr', mainTime: todayData.asr, isPM: true, details: [{label:'Jama\'ah',value:todayData.jAsr}], eventTime: toDate24(todayData.jAsr, true) },
                 { name: 'Iftar / Maghrib', mainTime: todayData.maghrib, isPM: true, details: [], eventTime: toDate24(todayData.maghrib, true) },
-                { name: 'Isha', mainTime: todayData.isha, isPM: true, details: [{label:'Jamaah',value:todayData.jIsha}], eventTime: toDate24(todayData.jIsha, true) }
+                { name: 'Isha', mainTime: todayData.isha, isPM: true, details: [{label:'Jama\'ah',value:todayData.jIsha}], eventTime: toDate24(todayData.jIsha, true) }
             ] : [
-                { name: 'Fajr', mainTime: todayData.fajr, isPM: false, details: [{label:'Jamaah',value:todayData.jFajr}], eventTime: toDate24(todayData.fajr, false) },
+                { name: 'Fajr', mainTime: todayData.fajr, isPM: false, details: [{label:'Jama\'ah',value:todayData.jFajr}], eventTime: toDate24(todayData.fajr, false) },
                 { name: 'Sunrise', mainTime: todayData.sunrise, isPM: false, details: [{label:'Ishraq',value:addMinutes(todayData.sunrise, 20)}], eventTime: toDate24(todayData.sunrise, false) },
-                { name: isFriday ? 'Jumu\'ah' : 'Zohar', mainTime: todayData.zuhr, isPM: false, details: [{label:'Jamaah',value:todayData.jZuhr}], eventTime: toDate24(todayData.jZuhr, true) },
-                { name: 'Asr', mainTime: todayData.asr, isPM: true, details: [{label:'Jamaah',value:todayData.jAsr}], eventTime: toDate24(todayData.jAsr, true) },
+                { name: isFriday ? 'Jumu\'ah' : 'Zohar', mainTime: todayData.zuhr, isPM: false, details: [{label:'Jama\'ah',value:todayData.jZuhr}], eventTime: toDate24(todayData.jZuhr, true) },
+                { name: 'Asr', mainTime: todayData.asr, isPM: true, details: [{label:'Jama\'ah',value:todayData.jAsr}], eventTime: toDate24(todayData.jAsr, true) },
                 { name: 'Maghrib', mainTime: todayData.maghrib, isPM: true, details: [], eventTime: toDate24(todayData.maghrib, true) },
-                { name: 'Isha', mainTime: todayData.isha, isPM: true, details: [{label:'Jamaah',value:todayData.jIsha}], eventTime: toDate24(todayData.jIsha, true) }
+                { name: 'Isha', mainTime: todayData.isha, isPM: true, details: [{label:'Jama\'ah',value:todayData.jIsha}], eventTime: toDate24(todayData.jIsha, true) }
             ];
             let nextIndex = -1;
             for (let i = 0; i < prayers.length; i++) { if (now < prayers[i].eventTime) { nextIndex = i; break; } }
@@ -1215,7 +1217,7 @@
                     if (todayData.jAsr !== tmrw.jAsr) ramChanges.push(`Asr <strong>${tmrw.jAsr}</strong>`);
                     if (todayData.jIsha !== tmrw.jIsha) ramChanges.push(`Isha <strong>${tmrw.jIsha}</strong>`);
                     if (ramChanges.length) {
-                        html += `<br>Jamaah changes: ${ramChanges.join(' &nbsp;\u2022&nbsp; ')}`;
+                        html += `<br>Jama'ah changes: ${ramChanges.join(' &nbsp;\u2022&nbsp; ')}`;
                     }
                     tmrwEl.innerHTML = html;
                     tmrwEl.style.display = '';
@@ -1226,7 +1228,7 @@
                     if (todayData.jAsr !== tmrw.jAsr) changes.push(`Asr <strong>${tmrw.jAsr}</strong>`);
                     if (todayData.jIsha !== tmrw.jIsha) changes.push(`Isha <strong>${tmrw.jIsha}</strong>`);
                     if (changes.length) {
-                        tmrwEl.innerHTML = `Jamaah changes tomorrow: ${changes.join(' &nbsp;\u2022&nbsp; ')}`;
+                        tmrwEl.innerHTML = `Jama'ah changes tomorrow: ${changes.join(' &nbsp;\u2022&nbsp; ')}`;
                         tmrwEl.style.display = '';
                     } else {
                         tmrwEl.style.display = 'none';

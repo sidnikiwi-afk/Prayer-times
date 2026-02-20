@@ -145,7 +145,22 @@ def generate(config_path):
         footer_html += f'                <strong>Sadaqatul Fitr</strong><br>{fitrana}\n'
         footer_html += '            </div>\n'
     footer_html += '        </div>'
-    html = re.sub(r'<div class="footer">.*?</div>\s*</div>\s*</div>', footer_html + '\n        </div>', html, count=1, flags=re.DOTALL)
+    # Replace only the .footer div (from <div class="footer"> to its matching </div>\n        </div>)
+    footer_start = html.index('<div class="footer">')
+    # The footer section ends with </div>\n        </div> (inner section + outer footer)
+    # Count nested divs to find the matching close
+    depth = 0
+    i = footer_start
+    while i < len(html):
+        if html[i:i+4] == '<div':
+            depth += 1
+        elif html[i:i+6] == '</div>':
+            depth -= 1
+            if depth == 0:
+                footer_end = i + 6
+                break
+        i += 1
+    html = html[:footer_start] + footer_html + html[footer_end:]
 
     # Actually, simpler: just replace the footer section only
     # The above regex is fragile. Let me use a marker approach instead.

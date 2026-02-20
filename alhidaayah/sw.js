@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ramadan-timetable-v5';
+const CACHE_NAME = 'ramadan-timetable-v6';
 const ASSETS = [
   '/alhidaayah/',
   '/alhidaayah/index.html',

@@ -8,7 +8,7 @@
   "theme_color": "#1a5a7e",
   "icons": [
     {
-      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%231a5a7e' width='100' height='100' rx='20'/><text x='50' y='50' text-anchor='middle' dominant-baseline='central' font-size='60'>🌙</text></svg>",
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%231a5a7e' width='100' height='100' rx='20'/><path d='M30 55 Q50 20 70 55 Z' fill='white' opacity='0.95'/><rect x='22' y='35' width='6' height='40' rx='1' fill='white' opacity='0.9'/><polygon points='22,35 25,25 28,35' fill='white' opacity='0.9'/><rect x='72' y='35' width='6' height='40' rx='1' fill='white' opacity='0.9'/><polygon points='72,35 75,25 78,35' fill='white' opacity='0.9'/><rect x='30' y='55' width='40' height='20' fill='white' opacity='0.9'/><path d='M44 75 L44 62 Q50 56 56 62 L56 75 Z' fill='%231a5a7e' opacity='0.8'/><circle cx='50' cy='28' r='5' fill='white'/><circle cx='52' cy='27' r='4' fill='%231a5a7e'/></svg>",
       "sizes": "any",
       "type": "image/svg+xml"
     }

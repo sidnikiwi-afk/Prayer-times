@@ -14,8 +14,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Masjid Usman Times">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>">
-    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%234a148c' width='100' height='100' rx='20'/><text x='50' y='50' text-anchor='middle' dominant-baseline='central' font-size='60'>🌙</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%234a148c' width='100' height='100' rx='20'/><path d='M30 55 Q50 20 70 55 Z' fill='white' opacity='0.95'/><rect x='22' y='35' width='6' height='40' rx='1' fill='white' opacity='0.9'/><polygon points='22,35 25,25 28,35' fill='white' opacity='0.9'/><rect x='72' y='35' width='6' height='40' rx='1' fill='white' opacity='0.9'/><polygon points='72,35 75,25 78,35' fill='white' opacity='0.9'/><rect x='30' y='55' width='40' height='20' fill='white' opacity='0.9'/><path d='M44 75 L44 62 Q50 56 56 62 L56 75 Z' fill='%234a148c' opacity='0.8'/><circle cx='50' cy='28' r='5' fill='white'/><circle cx='52' cy='27' r='4' fill='%234a148c'/></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%234a148c' width='100' height='100' rx='20'/><path d='M30 55 Q50 20 70 55 Z' fill='white' opacity='0.95'/><rect x='22' y='35' width='6' height='40' rx='1' fill='white' opacity='0.9'/><polygon points='22,35 25,25 28,35' fill='white' opacity='0.9'/><rect x='72' y='35' width='6' height='40' rx='1' fill='white' opacity='0.9'/><polygon points='72,35 75,25 78,35' fill='white' opacity='0.9'/><rect x='30' y='55' width='40' height='20' fill='white' opacity='0.9'/><path d='M44 75 L44 62 Q50 56 56 62 L56 75 Z' fill='%234a148c' opacity='0.8'/><circle cx='50' cy='28' r='5' fill='white'/><circle cx='52' cy='27' r='4' fill='%234a148c'/></svg>">
     <link rel="manifest" href="manifest.json">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -805,7 +805,61 @@
                 <strong>Sadaqatul Fitr</strong><br>£3.00 per person (collected before Eid Salah)
             </div>
         </div>
+
+        <div style="background: #2c2c6c; color: white; padding: 12px 15px; text-align: center; font-size: 12px;">
+            <span>Radio Receiver Frequency: <strong>454.75000</strong></span>
         </div>
+
+        <div style="background: #1a1a1a; color: white; padding: 12px 15px; text-align: center; font-size: 11px;">
+            Account Name: Masjid E Usman and Madrassa Khaliliya, Sort Code: 77-14-08, Account No: 38587750
+        </div>
+
+        <div style="background: #1a1a2e; padding: 10px 15px; text-align: center; font-size: 12px;">
+            <a href="https://forms.gle/W6W57QjbAgz8CzYn9" target="_blank" style="color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 10px; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">&#x1F4CB; Submit a Timetable</a>
+            <span style="color: rgba(255,255,255,0.15);">|</span>
+            <a href="https://forms.gle/W6W57QjbAgz8CzYn9" target="_blank" style="color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 10px; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">&#x26A0;&#xFE0F; Report an Error</a>
+            <span style="color: rgba(255,255,255,0.15);">|</span>
+            <a href="poster.html" target="_blank" style="color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 10px; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">&#x1F5A8;&#xFE0F; Download QR Poster</a>
+        </div>
+    </div>
+
+    <button class="qibla-btn" id="qiblaBtn" onclick="openQibla()" title="Qibla direction">🧭</button>
+    <div class="qibla-overlay" id="qiblaOverlay" onclick="closeQiblaOverlay(event)">
+        <div class="qibla-compass" onclick="event.stopPropagation()">
+            <button class="qibla-close" onclick="closeQibla()">&times;</button>
+            <h3>Qibla Direction</h3>
+            <div class="qibla-subtitle">From Bradford, UK</div>
+            <div class="qibla-compass-ring" id="qiblaRing">
+                <svg viewBox="0 0 200 200" id="qiblaSvg">
+                    <!-- Compass rose -->
+                    <circle cx="100" cy="100" r="95" fill="none" stroke="#d1c4e9" stroke-width="1"/>
+                    <circle cx="100" cy="100" r="70" fill="none" stroke="#e0e0e0" stroke-width="0.5"/>
+                    <!-- Cardinal labels -->
+                    <text x="100" y="18" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a2020">N</text>
+                    <text x="188" y="104" text-anchor="middle" font-size="11" fill="#888">E</text>
+                    <text x="100" y="194" text-anchor="middle" font-size="11" fill="#888">S</text>
+                    <text x="14" y="104" text-anchor="middle" font-size="11" fill="#888">W</text>
+                    <!-- Tick marks -->
+                    <line x1="100" y1="8" x2="100" y2="16" stroke="#1a2020" stroke-width="2"/>
+                    <line x1="192" y1="100" x2="184" y2="100" stroke="#ccc" stroke-width="1"/>
+                    <line x1="100" y1="192" x2="100" y2="184" stroke="#ccc" stroke-width="1"/>
+                    <line x1="8" y1="100" x2="16" y2="100" stroke="#ccc" stroke-width="1"/>
+                    <!-- Qibla arrow (119.7 degrees from north) -->
+                    <g id="qiblaArrow" transform="rotate(119.7, 100, 100)">
+                        <line x1="100" y1="100" x2="100" y2="25" stroke="#8b0000" stroke-width="2.5" stroke-linecap="round"/>
+                        <polygon points="100,20 94,36 106,36" fill="#8b0000"/>
+                        <circle cx="100" cy="100" r="5" fill="#1a2020"/>
+                        <circle cx="100" cy="100" r="2" fill="white"/>
+                    </g>
+                    <!-- Kaaba icon at arrow tip -->
+                    <g id="qiblaKaaba" transform="rotate(119.7, 100, 100)">
+                        <rect x="95" y="12" width="10" height="10" rx="1" fill="#1a1a1a" transform="rotate(-119.7, 100, 17)"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="qibla-bearing-text" id="qiblaBearingText">Qibla is 119.7&deg; from North (ESE)</div>
+        </div>
+    </div>
 
     <script>
         const timetableData = [
@@ -958,14 +1012,14 @@
 
             const events = [
                 { label: '🍽️ Sehri ends', time: toDate(todayData.sehri, false), display: todayData.sehri },
-                { label: '🕌 Fajr Jamaah', time: toDate(todayData.jFajr, false), display: todayData.jFajr },
+                { label: '🕌 Fajr Jama\'ah', time: toDate(todayData.jFajr, false), display: todayData.jFajr },
                 { label: '☀️ Zohar begins', time: toDate(todayData.zuhr, false), display: todayData.zuhr },
-                { label: '🕌 Zohar Jamaah', time: toDate(todayData.jZuhr, true), display: todayData.jZuhr },
+                { label: '🕌 Zohar Jama\'ah', time: toDate(todayData.jZuhr, true), display: todayData.jZuhr },
                 { label: '☀️ Asr begins', time: toDate(todayData.asr, true), display: todayData.asr },
-                { label: '🕌 Asr Jamaah', time: toDate(todayData.jAsr, true), display: todayData.jAsr },
+                { label: '🕌 Asr Jama\'ah', time: toDate(todayData.jAsr, true), display: todayData.jAsr },
                 { label: '🌅 Iftar', time: toDate(todayData.maghrib, true), display: todayData.maghrib },
                 { label: '☀️ Isha begins', time: toDate(todayData.isha, true), display: todayData.isha },
-                { label: '🕌 Isha Jamaah', time: toDate(todayData.jIsha, true), display: todayData.jIsha },
+                { label: '🕌 Isha Jama\'ah', time: toDate(todayData.jIsha, true), display: todayData.jIsha },
             ];
 
             const nextEvent = events.find(e => now < e.time);
@@ -1099,12 +1153,12 @@
             }
             const isFriday = todayData.day === 'Fri';
             const prayers = [
-                { name: 'Sehri', mainTime: todayData.sehri, isPM: false, details: [{label:'Fajr Start',value:todayData.fajr},{label:'Fajr Jamaah',value:todayData.jFajr}], eventTime: toDate24(todayData.jFajr, false) },
+                { name: 'Sehri', mainTime: todayData.sehri, isPM: false, details: [{label:'Fajr Start',value:todayData.fajr},{label:'Fajr Jama\'ah',value:todayData.jFajr}], eventTime: toDate24(todayData.jFajr, false) },
                 { name: 'Sunrise', mainTime: todayData.sunrise, isPM: false, details: [], eventTime: toDate24(todayData.sunrise, false) },
-                { name: isFriday ? 'Jumu\'ah' : 'Zohar', mainTime: todayData.zuhr, isPM: false, details: [{label:'Jamaah',value:todayData.jZuhr}], eventTime: toDate24(todayData.jZuhr, true) },
-                { name: 'Asr', mainTime: todayData.asr, isPM: true, details: [{label:'Jamaah',value:todayData.jAsr}], eventTime: toDate24(todayData.jAsr, true) },
+                { name: isFriday ? 'Jumu\'ah' : 'Zohar', mainTime: todayData.zuhr, isPM: false, details: [{label:'Jama\'ah',value:todayData.jZuhr}], eventTime: toDate24(todayData.jZuhr, true) },
+                { name: 'Asr', mainTime: todayData.asr, isPM: true, details: [{label:'Jama\'ah',value:todayData.jAsr}], eventTime: toDate24(todayData.jAsr, true) },
                 { name: 'Iftar / Maghrib', mainTime: todayData.maghrib, isPM: true, details: [], eventTime: toDate24(todayData.maghrib, true) },
-                { name: 'Isha', mainTime: todayData.isha, isPM: true, details: [{label:'Jamaah',value:todayData.jIsha}], eventTime: toDate24(todayData.jIsha, true) }
+                { name: 'Isha', mainTime: todayData.isha, isPM: true, details: [{label:'Jama\'ah',value:todayData.jIsha}], eventTime: toDate24(todayData.jIsha, true) }
             ];
             let nextIndex = -1;
             for (let i = 0; i < prayers.length; i++) { if (now < prayers[i].eventTime) { nextIndex = i; break; } }
@@ -1133,7 +1187,7 @@
                     if (todayData.jAsr !== tmrw.jAsr) ramChanges.push(`Asr <strong>${tmrw.jAsr}</strong>`);
                     if (todayData.jIsha !== tmrw.jIsha) ramChanges.push(`Isha <strong>${tmrw.jIsha}</strong>`);
                     if (ramChanges.length) {
-                        html += `<br>Jamaah changes: ${ramChanges.join(' &nbsp;\u2022&nbsp; ')}`;
+                        html += `<br>Jama'ah changes: ${ramChanges.join(' &nbsp;\u2022&nbsp; ')}`;
                     }
                     tmrwEl.innerHTML = html;
                     tmrwEl.style.display = '';
@@ -1144,7 +1198,7 @@
                     if (todayData.jAsr !== tmrw.jAsr) changes.push(`Asr <strong>${tmrw.jAsr}</strong>`);
                     if (todayData.jIsha !== tmrw.jIsha) changes.push(`Isha <strong>${tmrw.jIsha}</strong>`);
                     if (changes.length) {
-                        tmrwEl.innerHTML = `Jamaah changes tomorrow: ${changes.join(' &nbsp;\u2022&nbsp; ')}`;
+                        tmrwEl.innerHTML = `Jama'ah changes tomorrow: ${changes.join(' &nbsp;\u2022&nbsp; ')}`;
                         tmrwEl.style.display = '';
                     } else {
                         tmrwEl.style.display = 'none';

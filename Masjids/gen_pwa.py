@@ -1,11 +1,74 @@
 #!/usr/bin/env python3
+"""Generate PWA assets for batch mosques: manifest.json, sw.js, og-image.svg, poster.html, qr-code.svg"""
 import json, glob, os, sys
+import qrcode
+import qrcode.image.svg
 sys.stdout.reconfigure(encoding='utf-8')
 
 ROOT = 'G:/My Drive/Work/Prayer-times'
 MASJIDS_DIR = os.path.join(ROOT, 'Masjids')
 EXISTING_ADDRESSES = {'807 Great Horton Road'}
 EXISTING_PREFIXES = {'shahjalal','quba','almahad','tawakkulia','salahadin','abubakar','iyma','JamiaMasjid','taqwa'}
+
+# Mosque silhouette SVG icon (path-based, renders on all platforms including iOS)
+# White mosque on colored rounded-rect background
+def mosque_icon_svg(color_hex):
+    """Returns a data URI SVG of a mosque silhouette on a colored background."""
+    c = color_hex.replace('#', '%23')
+    return (
+        "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>"
+        f"<rect fill='{c}' width='100' height='100' rx='20'/>"
+        # Dome
+        "<path d='M30 55 Q50 20 70 55 Z' fill='white' opacity='0.95'/>"
+        # Minaret left
+        "<rect x='22' y='35' width='6' height='40' rx='1' fill='white' opacity='0.9'/>"
+        "<polygon points='22,35 25,25 28,35' fill='white' opacity='0.9'/>"
+        # Minaret right
+        "<rect x='72' y='35' width='6' height='40' rx='1' fill='white' opacity='0.9'/>"
+        "<polygon points='72,35 75,25 78,35' fill='white' opacity='0.9'/>"
+        # Base/wall
+        "<rect x='30' y='55' width='40' height='20' fill='white' opacity='0.9'/>"
+        # Door
+        "<path d='M44 75 L44 62 Q50 56 56 62 L56 75 Z' fill='" + c.replace('%23', '#') + "' opacity='0.8'/>"
+        # Crescent on dome
+        "<circle cx='50' cy='28' r='5' fill='white'/>"
+        "<circle cx='52' cy='27' r='4' fill='" + c.replace('%23', '#') + "'/>"
+        "</svg>"
+    )
+
+def mosque_icon_data_uri(color_hex):
+    """Returns a data:image/svg+xml URI for use in manifest and link tags."""
+    c_uri = color_hex.replace('#', '%23')
+    # Build raw SVG for manifest (using %23 for #)
+    svg = (
+        "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>"
+        f"<rect fill='{c_uri}' width='100' height='100' rx='20'/>"
+        f"<path d='M30 55 Q50 20 70 55 Z' fill='white' opacity='0.95'/>"
+        f"<rect x='22' y='35' width='6' height='40' rx='1' fill='white' opacity='0.9'/>"
+        f"<polygon points='22,35 25,25 28,35' fill='white' opacity='0.9'/>"
+        f"<rect x='72' y='35' width='6' height='40' rx='1' fill='white' opacity='0.9'/>"
+        f"<polygon points='72,35 75,25 78,35' fill='white' opacity='0.9'/>"
+        f"<rect x='30' y='55' width='40' height='20' fill='white' opacity='0.9'/>"
+        f"<path d='M44 75 L44 62 Q50 56 56 62 L56 75 Z' fill='{c_uri}' opacity='0.8'/>"
+        f"<circle cx='50' cy='28' r='5' fill='white'/>"
+        f"<circle cx='52' cy='27' r='4' fill='{c_uri}'/>"
+        "</svg>"
+    )
+    return f"data:image/svg+xml,{svg}"
+
+def generate_qr_svg(url):
+    """Generate QR code as SVG string using qrcode library."""
+    factory = qrcode.image.svg.SvgPathImage
+    qr = qrcode.QRCode(version=None, error_correction=qrcode.constants.ERROR_CORRECT_M, box_size=10, border=2)
+    qr.add_data(url)
+    qr.make(fit=True)
+    img = qr.make_image(image_factory=factory)
+    # Get SVG as string
+    import io
+    buf = io.BytesIO()
+    img.save(buf)
+    return buf.getvalue().decode('utf-8')
+
 
 data_files = sorted(glob.glob(os.path.join(MASJIDS_DIR, '*', 'data.json')))
 count = 0
@@ -27,6 +90,8 @@ for df in data_files:
     if not os.path.isdir(target_dir):
         continue
 
+    icon_uri = mosque_icon_data_uri(COLOR1)
+
     # manifest.json
     manifest = {
         "name": f"{name} - Ramadan Timetable",
@@ -37,7 +102,7 @@ for df in data_files:
         "background_color": COLOR1,
         "theme_color": COLOR1,
         "icons": [{
-            "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%234a148c' width='100' height='100' rx='20'/><text x='50' y='50' text-anchor='middle' dominant-baseline='central' font-size='60'>\U0001f319</text></svg>",
+            "src": icon_uri,
             "sizes": "any",
             "type": "image/svg+xml"
         }]
@@ -47,7 +112,7 @@ for df in data_files:
 
     # sw.js
     sw_lines = [
-        f"const CACHE_NAME = 'ramadan-timetable-v5';",
+        f"const CACHE_NAME = 'ramadan-timetable-v6';",
         f"const ASSETS = [",
         f"  '/{prefix}/',",
         f"  '/{prefix}/index.html',",
@@ -110,10 +175,20 @@ for df in data_files:
     with open(os.path.join(target_dir, 'og-image.svg'), 'w', encoding='utf-8') as f:
         f.write('\n'.join(og_lines))
 
-    # poster.html
+    # qr-code.svg
+    qr_url = f'https://waqt.uk/{prefix}/'
+    qr_svg = generate_qr_svg(qr_url)
+    with open(os.path.join(target_dir, 'qr-code.svg'), 'w', encoding='utf-8') as f:
+        f.write(qr_svg)
+
+    # poster.html (with embedded QR code)
     phone_line = f'<div class="contact">Tel: {phone}</div>' if phone else ''
     name_html = name.replace('&', '&amp;')
     addr_html = address.replace('&', '&amp;')
+    # Inline the QR SVG (strip XML declaration if present)
+    qr_inline = qr_svg
+    if qr_inline.startswith('<?xml'):
+        qr_inline = qr_inline[qr_inline.index('?>') + 2:].strip()
     poster_lines = [
         '<!DOCTYPE html>',
         '<html lang="en">',
@@ -135,7 +210,7 @@ for df in data_files:
         f'        .scan-prompt h2 {{ font-size: 32px; color: {COLOR1}; margin-bottom: 5px; }}',
         '        .scan-prompt p { font-size: 18px; color: #555; }',
         f'        .qr-wrapper {{ background: white; border: 4px solid {COLOR1}; border-radius: 20px; padding: 20px; margin-bottom: 10mm; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }}',
-        '        .qr-wrapper img, .qr-wrapper svg { width: 70mm; height: 70mm; }',
+        '        .qr-wrapper svg { width: 70mm; height: 70mm; }',
         '        .url-box { background: #f5f5f5; border: 2px solid #ddd; border-radius: 12px; padding: 12px 30px; margin-bottom: 10mm; }',
         f'        .url-box code {{ font-size: 14px; color: {COLOR1}; font-weight: 600; letter-spacing: 0.5px; }}',
         '        .features { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-bottom: 12mm; }',
@@ -162,7 +237,7 @@ for df in data_files:
         '            <p>View Sehri &amp; Iftar times with live countdown on your phone</p>',
         '        </div>',
         '        <div class="qr-wrapper">',
-        '            <div style="width:70mm;height:70mm;display:flex;align-items:center;justify-content:center;font-size:14px;color:#999;border:2px dashed #ccc;border-radius:10px;">QR code will be generated</div>',
+        f'            {qr_inline}',
         '        </div>',
         '        <div class="url-box">',
         f'            <code>waqt.uk/{prefix}</code>',
@@ -188,4 +263,4 @@ for df in data_files:
     count += 1
     print(f'  {prefix}/')
 
-print(f'\nDone: {count} mosques x 4 files = {count*4} files generated')
+print(f'\nDone: {count} mosques x 5 files = {count*5} files generated')
