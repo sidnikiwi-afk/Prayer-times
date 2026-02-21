@@ -1,0 +1,75 @@
+{
+  "mosque": {
+    "name": "Madrasah Baitul Ilm",
+    "arabicName": "مدرسة بيت العلم",
+    "subtitle": "House of Knowledge",
+    "website": "www.madrasahbaitulilm.co.uk",
+    "address": "4 St Johns Court, Square Street, Bradford, BD4 7NP",
+    "phone": "07742253475",
+    "email": "baitulilm30@gmail.com",
+    "hijriYear": 1447,
+    "jummah": "13:00",
+    "eidSalaah": {
+      "time": "10:00",
+      "bayan": "09:30"
+    },
+    "sadaqatulFitr": {
+      "amount": "£4.80",
+      "per": "person"
+    },
+    "donation": {
+      "accountName": "S Uddin",
+      "accountNumber": "82900678",
+      "sortCode": "090127",
+      "reference": "Ramadan 2026"
+    },
+    "classes": {
+      "sistersDawrah": "Hadith Weekdays, 7:30PM to 9:45PM, Online",
+      "hifzAndAlimiyah": "Weekdays, Boys & Girls, 5PM to 7PM",
+      "maktabClasses": "Boys & Girls, Mon-Fri, 5PM to 7PM",
+      "sanataynClass": {
+        "sisters": "Sat 10AM to 12PM",
+        "brothers": "Tues & Wed 7:30 to 9PM"
+      },
+      "islamicAdvice": "Islamic Advice and Fatwa Department",
+      "nikahServices": true
+    },
+    "sponsors": ["Kayes", "Chakolot", "Al Arafat", "Power On Utility"],
+    "notes": [
+      "Open for enrolment"
+    ]
+  },
+  "ramadan2026": [
+    {"date":"17 Feb","day":"TUE","ramadan":null,"sehriEnd":"05:41","iftar":"05:24","isha":"07:15","sunrise":"07:24","fajr":"05:46","zuhr":"12:21","asr":"03:27","ishaBeginning":"06:39"},
+    {"date":"18 Feb","day":"WED","ramadan":1,"sehriEnd":"05:39","iftar":"05:26","isha":"07:15","sunrise":"07:22","fajr":"05:44","zuhr":"12:21","asr":"03:29","ishaBeginning":"06:40"},
+    {"date":"19 Feb","day":"THU","ramadan":2,"sehriEnd":"05:37","iftar":"05:28","isha":"07:15","sunrise":"07:20","fajr":"05:42","zuhr":"12:21","asr":"03:31","ishaBeginning":"06:41"},
+    {"date":"20 Feb","day":"FRI","ramadan":3,"sehriEnd":"05:35","iftar":"05:30","isha":"07:15","sunrise":"07:17","fajr":"05:40","zuhr":"12:21","asr":"03:32","ishaBeginning":"06:43"},
+    {"date":"21 Feb","day":"SAT","ramadan":4,"sehriEnd":"05:33","iftar":"05:32","isha":"07:15","sunrise":"07:15","fajr":"05:38","zuhr":"12:21","asr":"03:34","ishaBeginning":"06:45"},
+    {"date":"22 Feb","day":"SUN","ramadan":5,"sehriEnd":"05:31","iftar":"05:34","isha":"07:15","sunrise":"07:13","fajr":"05:36","zuhr":"12:20","asr":"03:36","ishaBeginning":"06:47"},
+    {"date":"23 Feb","day":"MON","ramadan":6,"sehriEnd":"05:29","iftar":"05:36","isha":"07:15","sunrise":"07:11","fajr":"05:34","zuhr":"12:20","asr":"03:38","ishaBeginning":"06:48"},
+    {"date":"24 Feb","day":"TUE","ramadan":7,"sehriEnd":"05:27","iftar":"05:38","isha":"07:15","sunrise":"07:09","fajr":"05:32","zuhr":"12:20","asr":"03:39","ishaBeginning":"06:50"},
+    {"date":"25 Feb","day":"WED","ramadan":8,"sehriEnd":"05:25","iftar":"05:40","isha":"07:15","sunrise":"07:06","fajr":"05:30","zuhr":"12:20","asr":"03:41","ishaBeginning":"06:52"},
+    {"date":"26 Feb","day":"THU","ramadan":9,"sehriEnd":"05:23","iftar":"05:42","isha":"07:15","sunrise":"07:04","fajr":"05:28","zuhr":"12:20","asr":"03:43","ishaBeginning":"06:54"},
+    {"date":"27 Feb","day":"FRI","ramadan":10,"sehriEnd":"05:20","iftar":"05:44","isha":"07:15","sunrise":"07:02","fajr":"05:25","zuhr":"12:20","asr":"03:45","ishaBeginning":"06:56"},
+    {"date":"28 Feb","day":"SAT","ramadan":11,"sehriEnd":"05:18","iftar":"05:46","isha":"07:15","sunrise":"07:00","fajr":"05:23","zuhr":"12:20","asr":"03:46","ishaBeginning":"06:58"},
+    {"date":"1 Mar","day":"SUN","ramadan":12,"sehriEnd":"05:14","iftar":"05:46","isha":"07:15","sunrise":"06:55","fajr":"05:19","zuhr":"12:19","asr":"03:50","ishaBeginning":"07:00"},
+    {"date":"2 Mar","day":"MON","ramadan":13,"sehriEnd":"05:11","iftar":"05:49","isha":"07:15","sunrise":"06:53","fajr":"05:16","zuhr":"12:19","asr":"03:52","ishaBeginning":"07:02"},
+    {"date":"3 Mar","day":"TUE","ramadan":14,"sehriEnd":"05:09","iftar":"05:52","isha":"07:15","sunrise":"06:50","fajr":"05:14","zuhr":"12:19","asr":"03:53","ishaBeginning":"07:03"},
+    {"date":"4 Mar","day":"WED","ramadan":15,"sehriEnd":"05:07","iftar":"05:54","isha":"07:30","sunrise":"06:48","fajr":"05:12","zuhr":"12:19","asr":"03:55","ishaBeginning":"07:05"},
+    {"date":"5 Mar","day":"THU","ramadan":16,"sehriEnd":"05:04","iftar":"05:56","isha":"07:30","sunrise":"06:46","fajr":"05:09","zuhr":"12:18","asr":"03:57","ishaBeginning":"07:07"},
+    {"date":"6 Mar","day":"FRI","ramadan":17,"sehriEnd":"05:02","iftar":"05:58","isha":"07:30","sunrise":"06:43","fajr":"05:07","zuhr":"12:18","asr":"03:58","ishaBeginning":"07:09"},
+    {"date":"7 Mar","day":"SAT","ramadan":18,"sehriEnd":"04:59","iftar":"06:00","isha":"07:30","sunrise":"06:41","fajr":"05:04","zuhr":"12:18","asr":"04:00","ishaBeginning":"07:11"},
+    {"date":"8 Mar","day":"SUN","ramadan":19,"sehriEnd":"04:57","iftar":"06:02","isha":"07:30","sunrise":"06:38","fajr":"05:02","zuhr":"12:18","asr":"04:01","ishaBeginning":"07:13"},
+    {"date":"9 Mar","day":"MON","ramadan":20,"sehriEnd":"04:54","iftar":"06:04","isha":"07:30","sunrise":"06:36","fajr":"04:59","zuhr":"12:17","asr":"04:03","ishaBeginning":"07:15"},
+    {"date":"10 Mar","day":"TUE","ramadan":21,"sehriEnd":"04:52","iftar":"06:06","isha":"07:30","sunrise":"06:34","fajr":"04:57","zuhr":"12:17","asr":"04:05","ishaBeginning":"07:17"},
+    {"date":"11 Mar","day":"WED","ramadan":22,"sehriEnd":"04:50","iftar":"06:08","isha":"07:30","sunrise":"06:31","fajr":"04:55","zuhr":"12:17","asr":"04:06","ishaBeginning":"07:19"},
+    {"date":"12 Mar","day":"THU","ramadan":23,"sehriEnd":"04:47","iftar":"06:10","isha":"KHATME QURAN","sunrise":"06:29","fajr":"04:52","zuhr":"12:17","asr":"04:08","ishaBeginning":"07:21"},
+    {"date":"13 Mar","day":"FRI","ramadan":24,"sehriEnd":"04:44","iftar":"06:12","isha":"07:30","sunrise":"06:26","fajr":"04:49","zuhr":"12:16","asr":"04:09","ishaBeginning":"07:24"},
+    {"date":"14 Mar","day":"SAT","ramadan":25,"sehriEnd":"04:42","iftar":"06:14","isha":"07:30","sunrise":"06:24","fajr":"04:47","zuhr":"12:16","asr":"04:11","ishaBeginning":"07:25"},
+    {"date":"15 Mar","day":"SUN","ramadan":26,"sehriEnd":"04:39","iftar":"06:16","isha":"07:30","sunrise":"06:22","fajr":"04:44","zuhr":"12:16","asr":"04:12","ishaBeginning":"07:27"},
+    {"date":"16 Mar","day":"MON","ramadan":27,"sehriEnd":"04:37","iftar":"06:18","isha":"07:30","sunrise":"06:19","fajr":"04:42","zuhr":"12:16","asr":"04:14","ishaBeginning":"07:28"},
+    {"date":"17 Mar","day":"TUE","ramadan":28,"sehriEnd":"04:34","iftar":"06:20","isha":"07:30","sunrise":"06:17","fajr":"04:39","zuhr":"12:15","asr":"04:16","ishaBeginning":"07:30"},
+    {"date":"18 Mar","day":"WED","ramadan":29,"sehriEnd":"04:31","iftar":"06:22","isha":"07:30","sunrise":"06:14","fajr":"04:36","zuhr":"12:15","asr":"04:18","ishaBeginning":"07:32"},
+    {"date":"19 Mar","day":"THU","ramadan":30,"sehriEnd":"04:29","iftar":"06:24","isha":"07:30","sunrise":"06:12","fajr":"04:34","zuhr":"12:15","asr":"04:20","ishaBeginning":"07:34"}
+  ]
+}
