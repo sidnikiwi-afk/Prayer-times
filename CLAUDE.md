@@ -279,6 +279,168 @@ Source data in `Masjids/<Name>/data.json`. Regenerate with `python Masjids/gener
 - Enhanced footer with "Ramadan 1447 | UK" context
 - Custom scrollbar, skeleton shimmer
 
+## Timetable Submission Automation
+
+Automated workflow to extract prayer times from mosque submissions via AI vision, validate data, and commit to repo.
+
+### Architecture
+
+**Flow**: Google Drive → Apps Script Watcher → n8n Processor → Dual AI Vision → Postgres → Telegram Approval → GitHub Commit
+
+### Components
+
+#### 1. Google Apps Script Watcher
+- **Script**: `apps_script_watcher.js` (also saved at `G:\My Drive\Work\apps-script-watcher/`)
+- **Script ID**: `1l2m3vt8sZOTPCGII3C5b3AGx-jdcWm1RHghWIIJRfY8j_4P66KmFb4fd`
+- **Trigger**: Every 1 minute (time-driven)
+- **Watches**: Drive folder `1khMM9ZH_J7HH7Dcx4uRMdNP-S2mPoOAN8Xy52iwQz7pmqYEg0XXSAPppxCGn9novB2rPBmVc`
+- **Purpose**: Sends new file IDs to n8n webhook (workaround for Railway's broken Google Drive polling trigger)
+- **Deduplication**: Tracks processed files in Script Properties
+- **Setup**: Run `setup()` once in Apps Script editor to create trigger
+
+#### 2. n8n Workflow: "Timetable Submission Processor"
+- **ID**: `If9GquKXNqlINPMn` (ACTIVE)
+- **Webhook**: POST `https://primary-production-64370.up.railway.app/webhook/timetable-submission`
+- **Payload**: `{fileId: string, fileName: string, mimeType: string, createdDate: string}`
+- **Steps**:
+  1. Webhook trigger receives file metadata
+  2. Google Drive Download (using n8n credential `IIwzOJaw01epsSRq`)
+  3. Dual AI extraction (parallel):
+     - Claude Vision via Anthropic API (credential `pBI2VZprhG0vSJ60`)
+     - OpenAI Vision via GPT-4o (credential `MkQvVYaqpmHI70cs`)
+  4. Validation: JSON parse, row count (expect 30), required fields
+  5. Best score selection (Claude typically 100/100, OpenAI unreliable)
+  6. Postgres INSERT to `timetable_submissions` (credential `pSxR0FEFIyRJHnfX`)
+  7. Telegram notification with Approve/Reject inline buttons (bot `0g52BTf7dqjmIV2Y`)
+  8. Webhook response: `{success: true, id: uuid}`
+
+#### 3. n8n Workflow: "Timetable Approval Handler"
+- **ID**: `yAenh4XW0VfJPPW0` (ACTIVE)
+- **Trigger**: Telegram callback_query
+- **Steps**:
+  - **Approve path**:
+    1. Parse callback data (`approve:{uuid}`)
+    2. Postgres lookup: SELECT final_json, mosque_name FROM timetable_submissions WHERE id = uuid
+    3. GitHub commit: Write `Masjids/<mosque_name>/data.json` via GitHub API (credential `35rydgNWU8PRT4oH`)
+    4. Update Postgres: SET status = 'approved'
+    5. Telegram edit message: Confirmation with mosque name + commit SHA
+  - **Reject path**:
+    1. Update Postgres: SET status = 'rejected'
+    2. Telegram edit message: Rejection notice
+
+#### 4. Postgres Table: `timetable_submissions`
+```sql
+CREATE TABLE IF NOT EXISTS timetable_submissions (
+  id UUID PRIMARY KEY,
+  mosque_name TEXT,
+  submitter TEXT,
+  file_name TEXT,
+  drive_file_id TEXT,
+  claude_json JSONB,
+  openai_json JSONB,
+  final_json JSONB,
+  validation_notes TEXT,
+  status TEXT DEFAULT 'pending',
+  created_at TIMESTAMP DEFAULT NOW()
+);
+```
+
+#### 5. Telegram Bot
+- **Name**: `Waqt_timetable_bot`
+- **Token**: `8238602157:AAG2fKf3kzOlK8RW51QVI2Oq02sq_aWnvJ8`
+- **Chat ID**: `1578762040`
+- **Message format**:
+  ```
+  New timetable submitted: [Mosque Name]
+  File: [filename.jpg]
+  Claude score: [X/100]
+  OpenAI score: [Y/100]
+  Validation: [notes]
+  ```
+  [Approve] [Reject] buttons
+
+#### 6. Manual Test Script
+- **Path**: `test_submission.py`
+- **Usage**: `python test_submission.py path/to/timetable.jpg`
+- **Steps**: Read image → Claude Vision → OpenAI Vision → Validate → Postgres INSERT → Telegram notify
+- **Test results** (2026-02-22):
+  - Claude Vision: 100/100 (perfect JSON extraction)
+  - OpenAI Vision: 0/100 (failed JSON parse)
+
+### AI Vision Prompts
+
+**System**: Extract 30-day Ramadan prayer timetable from image. Return JSON only.
+
+**Expected schema**:
+```json
+{
+  "name": "Full Mosque Name",
+  "short_name": "Short Name",
+  "prefix": "urlslug",
+  "address": "Street, City, Postcode",
+  "color1": "#1a3a2e",
+  "color2": "#2d6a4f",
+  "timetable": [
+    {
+      "date": [2026, 2, 18],
+      "day": "Wed",
+      "no": 1,
+      "sehri": "5:39",
+      "fajr": "5:44",
+      "sunrise": "7:20",
+      "zuhr": "12:35",
+      "asr": "3:45",
+      "maghrib": "5:26",
+      "isha": "7:30",
+      "jFajr": "7:00",
+      "jZuhr": "1:15",
+      "jAsr": "4:00",
+      "jIsha": "8:00"
+    }
+  ]
+}
+```
+
+### Validation Rules
+
+- Row count: 30 (29 acceptable for mosques with confirmed later Ramadan start)
+- Date sequence: Feb 18 → Mar 19
+- Time format: `HH:MM` (colon, not dot)
+- Required fields: mosque name, prefix, address, timetable array
+- Scoring: +10 per field populated, max 100
+
+### Known Issues
+
+- **n8n Google Drive credential scope**: May not have access to submissions folder. Apps Script sends file IDs but n8n returns 404 on download. Need to verify which Google account the n8n Drive credential uses and grant access.
+
+### Post-Approval Workflow
+
+After Telegram approval, commit to GitHub manually:
+
+```bash
+cd Prayer-times
+git pull
+python Masjids/generate.py          # Generates index.html from data.json
+# Copy Masjids/<Name>/index.html to <prefix>/index.html
+python Masjids/gen_pwa.py           # Generates manifest, sw, og-image, poster
+# Edit nav.js MASJIDS array if new mosque
+python Masjids/update_landing.py    # Updates landing page card gradients
+git add .
+git commit -m "Add [Mosque Name] timetable (automated submission)"
+git push
+```
+
+### Credentials Created (n8n)
+
+| Name | Type | ID | Purpose |
+|------|------|-----|---------|
+| Waqt Timetable Bot | telegramApi | `0g52BTf7dqjmIV2Y` | Telegram notifications |
+| Anthropic API Key | httpHeaderAuth | `pBI2VZprhG0vSJ60` | Claude Vision API |
+| GitHub PAT | httpHeaderAuth | `35rydgNWU8PRT4oH` | Commit to repo |
+| Google Drive account | googleDrive | `IIwzOJaw01epsSRq` | Download submissions |
+| OpenAi account | openAi | `MkQvVYaqpmHI70cs` | OpenAI Vision API |
+| Postgres account | postgres | `pSxR0FEFIyRJHnfX` | Database storage |
+
 ## How to Add a New Mosque
 
 ### 1. Create the timetable
