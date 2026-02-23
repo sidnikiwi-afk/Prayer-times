@@ -311,22 +311,12 @@ Automated workflow to extract prayer times from mosque submissions via AI vision
   4. Validation: JSON parse, row count (expect 30), required fields
   5. Best score selection (Claude typically 100/100, OpenAI unreliable)
   6. Postgres INSERT to `timetable_submissions` (credential `pSxR0FEFIyRJHnfX`)
-  7. Telegram notification with Approve/Reject inline buttons (bot `0g52BTf7dqjmIV2Y`)
+  7. Telegram notification (no approve/reject buttons -- manual `/add-mosque` workflow)
   8. Webhook response: `{success: true, id: uuid}`
 
-#### 3. n8n Workflow: "Timetable Approval Handler"
-- **ID**: `yAenh4XW0VfJPPW0` (ACTIVE)
-- **Trigger**: Telegram callback_query
-- **Steps**:
-  - **Approve path**:
-    1. Parse callback data (`approve:{uuid}`)
-    2. Postgres lookup: SELECT final_json, mosque_name FROM timetable_submissions WHERE id = uuid
-    3. GitHub commit: Write `Masjids/<mosque_name>/data.json` via GitHub API (credential `35rydgNWU8PRT4oH`)
-    4. Update Postgres: SET status = 'approved'
-    5. Telegram edit message: Confirmation with mosque name + commit SHA
-  - **Reject path**:
-    1. Update Postgres: SET status = 'rejected'
-    2. Telegram edit message: Rejection notice
+#### 3. n8n Workflow: "Timetable Approval Handler" (NOT IN USE)
+- **ID**: `yAenh4XW0VfJPPW0`
+- **Note**: Approve/reject buttons were removed. Mosque addition is done manually via `/add-mosque` skill, pulling data from Postgres `timetable_submissions` table.
 
 #### 4. Postgres Table: `timetable_submissions`
 ```sql
@@ -357,7 +347,6 @@ CREATE TABLE IF NOT EXISTS timetable_submissions (
   OpenAI score: [Y/100]
   Validation: [notes]
   ```
-  [Approve] [Reject] buttons
 
 #### 6. Manual Test Script
 - **Path**: `test_submission.py`
@@ -409,13 +398,22 @@ CREATE TABLE IF NOT EXISTS timetable_submissions (
 - Required fields: mosque name, prefix, address, timetable array
 - Scoring: +10 per field populated, max 100
 
-### Known Issues
+### Status: FULLY WORKING (tested 2026-02-22)
 
-- **n8n Google Drive credential scope**: May not have access to submissions folder. Apps Script sends file IDs but n8n returns 404 on download. Need to verify which Google account the n8n Drive credential uses and grant access.
+End-to-end test passed: real submission (Shahidur Rahman / IQRA Masjid) -- Apps Script detected file, webhook fired, both AIs scored 100/100, stored in Postgres, Telegram notification sent. All 11 nodes succeeded.
+
+**Fixes applied:**
+- **Google Drive credential**: Authenticated as `sidni@localcardoctor.com`. Submissions folder shared with this account (Viewer access) to fix 404 download error.
+- **Binary data**: n8n Code node `bin.data` returns a reference ID in newer n8n versions. Fixed to `await this.helpers.getBinaryDataBuffer(0, binaryKey)` then `.toString('base64')` for actual image data.
+- **Telegram expression**: `Send Telegram` node was reading `$json.telegramBody` which was null (upstream `Store Submission` Postgres INSERT only returns `{id}`). Fixed to `$node["Prepare Store & Notify"].json.telegramBody`.
+- **$input fix**: `Prepare AI Requests` node had `\.first()` instead of `$input.first()` (bash `$` escaping artifact).
+
+**Design decisions:**
+- No approve/reject inline keyboard buttons -- just Telegram notifications. When ready to add a mosque, run `/add-mosque` manually and pull data from Postgres.
 
 ### Post-Approval Workflow
 
-After Telegram approval, commit to GitHub manually:
+After Telegram notification, add mosque manually:
 
 ```bash
 cd Prayer-times
@@ -437,7 +435,7 @@ git push
 | Waqt Timetable Bot | telegramApi | `0g52BTf7dqjmIV2Y` | Telegram notifications |
 | Anthropic API Key | httpHeaderAuth | `pBI2VZprhG0vSJ60` | Claude Vision API |
 | GitHub PAT | httpHeaderAuth | `35rydgNWU8PRT4oH` | Commit to repo |
-| Google Drive account | googleDrive | `IIwzOJaw01epsSRq` | Download submissions |
+| Google Drive account | googleDrive | `IIwzOJaw01epsSRq` | Download submissions (auth: `sidni@localcardoctor.com`) |
 | OpenAi account | openAi | `MkQvVYaqpmHI70cs` | OpenAI Vision API |
 | Postgres account | postgres | `pSxR0FEFIyRJHnfX` | Database storage |
 
