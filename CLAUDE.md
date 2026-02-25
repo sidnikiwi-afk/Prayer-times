@@ -305,8 +305,10 @@ Automated workflow to extract prayer times from mosque submissions via AI vision
 - **Trigger**: Every 1 minute (time-driven)
 - **Watches**: Drive folder `1khMM9ZH_J7HH7Dcx4uRMdNP-S2mPoOAN8Xy52iwQz7pmqYEg0XXSAPppxCGn9novB2rPBmVc`
 - **Purpose**: Sends new file IDs to n8n webhook (workaround for Railway's broken Google Drive polling trigger)
-- **Deduplication**: Tracks processed files in Script Properties
+- **Deduplication**: Marks files as processed in Script Properties BEFORE sending webhook (prevents duplicates since webhook takes ~3 min but trigger runs every 1 min)
 - **Setup**: Run `setup()` once in Apps Script editor to create trigger
+- **Deploy via CLI**: `cd apps-script-watcher && clasp push` (logged in as `sidni.kiwi@gmail.com`)
+- **Local clasp project**: `G:\My Drive\Work\apps-script-watcher/` (Code.js + appsscript.json + .clasp.json)
 
 #### 2. n8n Workflow: "Timetable Submission Processor"
 - **ID**: `If9GquKXNqlINPMn` (ACTIVE)
@@ -417,6 +419,7 @@ End-to-end test passed: real submission (Shahidur Rahman / IQRA Masjid) -- Apps 
 - **Binary data**: n8n Code node `bin.data` returns a reference ID in newer n8n versions. Fixed to `await this.helpers.getBinaryDataBuffer(0, binaryKey)` then `.toString('base64')` for actual image data.
 - **Telegram expression**: `Send Telegram` node was reading `$json.telegramBody` which was null (upstream `Store Submission` Postgres INSERT only returns `{id}`). Fixed to `$node["Prepare Store & Notify"].json.telegramBody`.
 - **$input fix**: `Prepare AI Requests` node had `\.first()` instead of `$input.first()` (bash `$` escaping artifact).
+- **Duplicate submissions**: Apps Script marked files as processed AFTER the webhook response (which takes ~3 min). During that time, 3 more 1-minute triggers fired sending the same file. Fixed by marking files as processed BEFORE the `UrlFetchApp.fetch()` call.
 
 **Design decisions:**
 - No approve/reject inline keyboard buttons -- just Telegram notifications. When ready to add a mosque, run `/add-mosque` manually and pull data from Postgres.
