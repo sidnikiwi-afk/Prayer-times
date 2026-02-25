@@ -73,8 +73,12 @@ function checkForNewFiles() {
     const fileName = file.getName();
     if (fileName.toUpperCase().startsWith('TEST')) continue;
 
-    // New file found! Send to webhook
+    // New file found! Mark as processed FIRST to prevent duplicates
+    // (webhook takes ~3 min to respond, but trigger runs every 1 min)
     Logger.log('New file: ' + fileName + ' (' + fileId + ')');
+    processed[fileId] = true;
+    newCount++;
+    props.setProperty('processedFiles', JSON.stringify(processed));
 
     try {
       const response = UrlFetchApp.fetch(WEBHOOK_URL, {
@@ -92,20 +96,11 @@ function checkForNewFiles() {
       const code = response.getResponseCode();
       Logger.log('Webhook response: ' + code + ' - ' + response.getContentText().substring(0, 200));
 
-      // Mark as processed regardless of response (avoid infinite retries)
-      processed[fileId] = true;
-      newCount++;
-
     } catch (e) {
       Logger.log('Error sending to webhook: ' + e.message);
-      // Don't mark as processed - will retry next minute
+      // File already marked processed - won't retry automatically.
+      // Use testWithLatestFile() to manually re-trigger if needed.
     }
-  }
-
-  // Save updated processed list
-  if (newCount > 0) {
-    props.setProperty('processedFiles', JSON.stringify(processed));
-    Logger.log('Processed ' + newCount + ' new file(s)');
   }
 }
 

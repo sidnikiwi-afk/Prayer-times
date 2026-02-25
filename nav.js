@@ -49,6 +49,7 @@ const MASJIDS = [
     { name: 'Shahjalal Jami Masjid & Jamia Qurania', addr: 'Temple Row, Keighley, BD21 2AH', folder: 'sjmkeighley', tags: 'Keighley' },
     { name: 'Masjid Ibraheem', addr: '4 Woodview Rd, Beeston, Leeds LS11 6LE', folder: 'ibrahim', tags: 'Leeds Beeston' },
     { name: 'West Leeds Jamia Masjid', addr: 'Town Street, Armley, Leeds, LS12 3JG', folder: 'westleeds', tags: 'Leeds Armley' },
+    { name: 'Masjid-Ul-Aqsa & Islamic Centre', addr: '135 Windsor Road, Coppice, Oldham OL8 1RG', folder: 'aqsa', tags: 'Oldham' },
 ];
 
 (function() {
