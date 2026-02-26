@@ -12,7 +12,8 @@ Hosted on GitHub Pages. Each mosque gets its own subfolder with a self-contained
 ## File Structure
 ```
 Prayer-times/
-├── index.html              # Landing page - mosque selector (waqt.uk)
+├── index.html              # Landing page - mosque selector (waqt.uk), JS-rendered from directory.json
+├── directory.json          # Single source of truth for all mosques (name, address, postcode, city, slug, colors, has_timetable)
 ├── nav.js                  # Shared navigation dropdown (edit MASJIDS array here)
 ├── CNAME                   # Custom domain config (waqt.uk)
 ├── CLAUDE.md               # This file - project documentation
@@ -105,7 +106,7 @@ Masjids/                    # Source data for batch-generated mosques
 ├── generate.py             # Batch HTML generator (uses abubakar/ as template, applies colors)
 ├── gen_pwa.py              # Batch PWA asset generator (manifest, sw, og-image, poster)
 ├── apply_colors.py         # Assigns color1/color2 to each data.json
-├── update_landing.py       # Updates landing page card gradients to match mosque colors
+├── update_landing.py       # LEGACY - no longer needed (homepage reads from directory.json)
 ├── validate.py             # Data validation script (row count, dates, times)
 └── <Mosque Name>/
     └── data.json           # Per-mosque config, timetable data, and color1/color2
@@ -282,12 +283,18 @@ Source data in `Masjids/<Name>/data.json`. Regenerate with `python Masjids/gener
 - **Masjid Ibraheem**: No unique content sections. Friday Prayer: 1st Jummah 1pm / 2nd Jummah 3pm (in footer)
 
 ### Landing Page (waqt.uk)
+- **Data-driven**: All mosque cards rendered from `directory.json` via JS (no hardcoded HTML cards)
+- **Timetables / Directory toggle**: Pill-shaped glassmorphism switch. Timetables view (default) shows mosques with prayer times. Directory view shows all mosques including those without timetables.
+- **Location sorting**: Pin icon in search bar → requests browser geolocation → geocodes postcodes via Postcodes.io bulk API (free, no key) → sorts by nearest → shows distance badges (e.g. "0.3 mi"). Coordinates cached in localStorage (30-day TTL). States: grey (default), teal+pulse (active), red (error/denied).
+- **City sections**: Mosques grouped under collapsible city headers (Bradford, Keighley, Leeds, Oldham). First/nearest city expanded, rest collapsed. Reorders by proximity when location active.
+- **Directory cards**: Pin icon opens Google Maps directions. Timetable cards link to timetable page + show pin icon in directory view.
+- **Search**: Filters across both views and city sections, hides empty sections, updates city counts.
 - Granim.js animated background (deep blue/teal gradients)
-- Card hover effects with per-mosque border glow colors
-- Staggered entrance animations on cards
+- Staggered entrance animations on first load only
 - Subtle Islamic geometric star/octagon pattern overlay
 - Enhanced footer with "Ramadan 1447 | UK" context
 - Custom scrollbar, skeleton shimmer
+- Accessible: aria-labels, aria-expanded, role=button on city headers, 44px touch targets
 
 ## Timetable Submission Automation
 
@@ -435,7 +442,7 @@ python Masjids/generate.py          # Generates index.html from data.json
 # Copy Masjids/<Name>/index.html to <prefix>/index.html
 python Masjids/gen_pwa.py           # Generates manifest, sw, og-image, poster
 # Edit nav.js MASJIDS array if new mosque
-python Masjids/update_landing.py    # Updates landing page card gradients
+# Add entry to directory.json (name, address, postcode, city, slug, colors, has_timetable, tags)
 git add .
 git commit -m "Add [Mosque Name] timetable (automated submission)"
 git push
@@ -484,22 +491,26 @@ Add one line to the `MASJIDS` array:
 ```
 This automatically updates the nav dropdown on ALL timetable pages.
 
-### 3. Add to landing page
-Add a card to `index.html`:
-```html
-<a href="NewMosque/" class="masjid-card">
-    <div class="card-colour" style="background: linear-gradient(to bottom, #COLOR1, #COLOR2);"></div>
-    <div class="card-info">
-        <div class="card-name">New Mosque Name</div>
-        <div class="card-address">Street, Postcode</div>
-    </div>
-    <div class="card-arrow">&rsaquo;</div>
-</a>
+### 3. Add to directory.json
+Add an entry to the `mosques` array in `directory.json`:
+```json
+{
+  "name": "New Mosque Name",
+  "address": "Street Address",
+  "postcode": "BD5 0XX",
+  "city": "Bradford",
+  "has_timetable": true,
+  "slug": "newmosque",
+  "color1": "#COLOR1",
+  "color2": "#COLOR2",
+  "tags": "Area Name"
+}
 ```
+For directory-only mosques (no timetable page), set `"has_timetable": false` and `"slug": null`.
 
 ### 4. Commit and push
 ```bash
-git add NewMosque/index.html nav.js index.html
+git add NewMosque/index.html nav.js directory.json
 git commit -m "Add New Mosque timetable"
 git push
 ```
@@ -514,7 +525,7 @@ For adding many mosques at once without hand-coding each HTML file.
 | `apply_colors.py` | Assigns `color1`/`color2` to each `data.json` from the curated palette |
 | `generate.py` | Generates `index.html` per mosque from abubakar template |
 | `gen_pwa.py` | Generates `manifest.json`, `sw.js`, `og-image.svg`, `poster.html` |
-| `update_landing.py` | Updates landing page card gradients to match each mosque's `color1`/`color2` |
+| `update_landing.py` | LEGACY - no longer needed (homepage reads from `directory.json`) |
 | `validate.py` | Data validation (row count, dates, day names, time format) |
 | `scripts/patch_timetables.py` | Applies highlight fixes (Jamaah-based cutoff + post-Isha wrap) to the 10 original hand-crafted mosque pages |
 
@@ -551,9 +562,11 @@ For adding many mosques at once without hand-coding each HTML file.
 3. Generate HTML: `python Masjids/generate.py` → writes `Masjids/<Name>/index.html`
 4. Copy to root: copy each `Masjids/<Name>/index.html` → `<prefix>/index.html`
 5. Generate PWA assets: `python Masjids/gen_pwa.py` → writes manifest.json, sw.js, og-image.svg, poster.html
-6. Update landing cards: `python Masjids/update_landing.py` → updates card gradient colors in index.html
+6. Add entry to `directory.json` (name, address, postcode, city, slug, colors, has_timetable, tags)
 7. Update nav.js (MASJIDS array) if adding new mosques
 8. Push all changes
+
+**Note:** `update_landing.py` is no longer needed — the homepage reads from `directory.json` directly.
 
 ### generate.py internals
 - Uses `abubakar/index.html` as template
