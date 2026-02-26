@@ -888,11 +888,11 @@
                         distHtml = '<span class="card-distance">' + m._distance.toFixed(1) + ' mi</span>';
                     }
 
-                    // Build Google Maps destination: address+postcode > lat,lon > name+city
+                    // Build Google Maps destination: lat,lon (exact) > address+postcode > postcode > name+city
                     var mapDest;
-                    if (m.address && m.postcode) mapDest = m.address + ', ' + m.postcode;
+                    if (m.lat && m.lon) mapDest = m.lat + ',' + m.lon;
+                    else if (m.address && m.postcode) mapDest = m.address + ', ' + m.postcode;
                     else if (m.postcode) mapDest = m.postcode;
-                    else if (m.lat && m.lon) mapDest = m.lat + ',' + m.lon;
                     else mapDest = m.name + ', ' + (m.city || 'UK');
                     var mapsUrl = 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(mapDest);
 
