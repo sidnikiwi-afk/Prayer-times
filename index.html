@@ -388,6 +388,27 @@
             border-radius: 10px;
         }
 
+        /* --- Type Badge (Prayer Room / Community Centre) --- */
+        .card-type-badge {
+            display: inline-block;
+            font-size: 9px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-left: 6px;
+            vertical-align: middle;
+        }
+        .card-type-badge.prayer-room {
+            background: rgba(255,193,7,0.15);
+            color: #ffc107;
+        }
+        .card-type-badge.community-centre {
+            background: rgba(33,150,243,0.15);
+            color: #64b5f6;
+        }
+
         /* --- Directory-only card pin icon --- */
         .card-pin {
             display: flex;
@@ -867,16 +888,36 @@
                         distHtml = '<span class="card-distance">' + m._distance.toFixed(1) + ' mi</span>';
                     }
 
+                    // Build Google Maps destination: address+postcode > lat,lon > name+city
+                    var mapDest;
+                    if (m.address && m.postcode) mapDest = m.address + ', ' + m.postcode;
+                    else if (m.postcode) mapDest = m.postcode;
+                    else if (m.lat && m.lon) mapDest = m.lat + ',' + m.lon;
+                    else mapDest = m.name + ', ' + (m.city || 'UK');
+                    var mapsUrl = 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(mapDest);
+
+                    // Display address: show what we have
+                    var displayAddr = '';
+                    if (m.address && m.postcode) displayAddr = m.address + ', ' + m.postcode;
+                    else if (m.address) displayAddr = m.address;
+                    else if (m.postcode) displayAddr = m.postcode;
+                    else displayAddr = m.city || '';
+
+                    // Type badge for non-mosques
+                    var typeBadge = '';
+                    if (m.type === 'prayer_room') typeBadge = '<span class="card-type-badge prayer-room">Prayer Room</span>';
+                    else if (m.type === 'community_centre') typeBadge = '<span class="card-type-badge community-centre">Community Centre</span>';
+
+                    var pinSvg = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>';
+
                     if (m.has_timetable) {
                         html += '<a href="' + m.slug + '/" class="masjid-card" data-mosque="' + escapeHtml(m.slug) + '" data-tags="' + escapeHtml(m.city + ' ' + (m.tags || '')) + '"' + animStyle + '>';
                         if (currentView === 'directory') {
-                            html += '<span class="card-pin" onclick="event.preventDefault();event.stopPropagation();window.open(\'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(m.address + ', ' + m.postcode) + '\',\'_blank\')" title="Get directions">';
-                            html += '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>';
-                            html += '</span>';
+                            html += '<span class="card-pin" onclick="event.preventDefault();event.stopPropagation();window.open(\'' + mapsUrl + '\',\'_blank\')" title="Get directions">' + pinSvg + '</span>';
                         } else {
                             html += '<div class="card-colour" style="background:linear-gradient(to bottom,' + m.color1 + ',' + m.color2 + ')"></div>';
                         }
-                        html += '<div class="card-info"><div class="card-name">' + escapeHtml(m.name) + '</div><div class="card-address">' + escapeHtml(m.address + ', ' + m.postcode) + '</div></div>';
+                        html += '<div class="card-info"><div class="card-name">' + escapeHtml(m.name) + typeBadge + '</div><div class="card-address">' + escapeHtml(displayAddr) + '</div></div>';
                         html += distHtml;
                         if (currentView === 'timetables') {
                             html += '<div class="card-arrow">&rsaquo;</div>';
@@ -885,10 +926,8 @@
                     } else {
                         // Directory-only card
                         html += '<div class="masjid-card directory-only" data-tags="' + escapeHtml(m.city + ' ' + (m.tags || '')) + '"' + animStyle + '>';
-                        html += '<a class="card-pin" href="https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(m.address + ', ' + m.postcode) + '" target="_blank" title="Get directions">';
-                        html += '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>';
-                        html += '</a>';
-                        html += '<div class="card-info"><div class="card-name">' + escapeHtml(m.name) + '</div><div class="card-address">' + escapeHtml(m.address + ', ' + m.postcode) + '</div></div>';
+                        html += '<a class="card-pin" href="' + mapsUrl + '" target="_blank" title="Get directions">' + pinSvg + '</a>';
+                        html += '<div class="card-info"><div class="card-name">' + escapeHtml(m.name) + typeBadge + '</div><div class="card-address">' + escapeHtml(displayAddr) + '</div></div>';
                         html += distHtml;
                         html += '</div>';
                     }
