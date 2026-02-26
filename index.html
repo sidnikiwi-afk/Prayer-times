@@ -848,10 +848,11 @@
             hasRendered = true;
             var html = '';
             var cardIndex = 0;
-            cityOrder.forEach(function(city) {
+            cityOrder.forEach(function(city, cityIndex) {
                 var mosquesList = cityMap[city];
-                html += '<div class="city-section" data-city="' + escapeHtml(city) + '">';
-                html += '<div class="city-header" role="button" aria-expanded="true" tabindex="0" onclick="var s=this.parentElement;s.classList.toggle(\'collapsed\');this.setAttribute(\'aria-expanded\',!s.classList.contains(\'collapsed\'))">';
+                var isCollapsed = cityIndex > 0;
+                html += '<div class="city-section' + (isCollapsed ? ' collapsed' : '') + '" data-city="' + escapeHtml(city) + '">';
+                html += '<div class="city-header" role="button" aria-expanded="' + (!isCollapsed) + '" tabindex="0" onclick="var s=this.parentElement;s.classList.toggle(\'collapsed\');this.setAttribute(\'aria-expanded\',!s.classList.contains(\'collapsed\'))">';
                 html += '<span class="city-name">' + escapeHtml(city) + '</span>';
                 html += '<span class="city-count">(' + mosquesList.length + ')</span>';
                 html += '<span class="city-line"></span>';
