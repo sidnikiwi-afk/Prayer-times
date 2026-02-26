@@ -80,7 +80,7 @@
         /* --- Search Bar --- */
         .search-bar {
             width: 100%;
-            padding: 12px 18px 12px 40px;
+            padding: 12px 44px 12px 40px;
             border-radius: 10px;
             border: 1px solid rgba(255,255,255,0.12);
             background: rgba(255,255,255,0.08);
@@ -109,13 +109,19 @@
             left: 14px;
             top: 50%;
             transform: translateY(-50%);
-            font-size: 15px;
             opacity: 0.35;
             pointer-events: none;
+            display: flex;
+            align-items: center;
+        }
+        .search-icon svg {
+            width: 15px;
+            height: 15px;
+            color: rgba(255,255,255,0.5);
         }
         .search-clear {
             position: absolute;
-            right: 12px;
+            right: 38px;
             top: 50%;
             transform: translateY(-50%);
             background: none;
@@ -124,10 +130,48 @@
             font-size: 18px;
             cursor: pointer;
             display: none;
-            padding: 0 4px;
-            line-height: 1;
+            width: 44px;
+            height: 44px;
+            line-height: 44px;
+            text-align: center;
+            padding: 0;
         }
         .search-clear:hover { color: rgba(255,255,255,0.7); }
+
+        /* --- Location Pin Button (inside search bar) --- */
+        .location-btn {
+            position: absolute;
+            right: 4px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+        .location-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: rgba(255,255,255,0.35);
+            transition: fill 0.3s ease;
+        }
+        .location-btn:hover svg { fill: rgba(255,255,255,0.6); }
+        .location-btn.active svg { fill: #00bfa5; }
+        .location-btn.active {
+            animation: locationPulse 2s ease-in-out infinite;
+        }
+        @keyframes locationPulse {
+            0%, 100% { transform: translateY(-50%) scale(1); }
+            50% { transform: translateY(-50%) scale(1.15); }
+        }
+        .location-btn.error svg { fill: #ef5350; }
+
         .no-results {
             display: none;
             padding: 20px;
@@ -178,13 +222,96 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             opacity: 0.5;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             animation: fadeIn 0.6s ease 0.2s both;
         }
+
+        /* --- Toggle Pill --- */
+        .view-toggle {
+            display: inline-flex;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 25px;
+            padding: 3px;
+            margin-bottom: 15px;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            animation: fadeIn 0.6s ease 0.2s both;
+        }
+        .view-toggle button {
+            padding: 8px 20px;
+            border: none;
+            border-radius: 22px;
+            background: transparent;
+            color: rgba(255,255,255,0.5);
+            font-size: 13px;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+        .view-toggle button.active {
+            background: rgba(0,191,165,0.25);
+            color: #00bfa5;
+            box-shadow: 0 2px 8px rgba(0,191,165,0.15);
+        }
+        .view-toggle button:not(.active):hover {
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* --- City Section --- */
+        .city-section {
+            margin-bottom: 8px;
+        }
+        .city-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 4px;
+            cursor: pointer;
+            user-select: none;
+            transition: opacity 0.2s ease;
+        }
+        .city-header:hover { opacity: 0.8; }
+        .city-name {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            opacity: 0.5;
+        }
+        .city-count {
+            font-size: 11px;
+            opacity: 0.3;
+        }
+        .city-chevron {
+            margin-left: auto;
+            font-size: 12px;
+            opacity: 0.3;
+            transition: transform 0.3s ease;
+        }
+        .city-section.collapsed .city-chevron {
+            transform: rotate(-90deg);
+        }
+        .city-section.collapsed .city-cards {
+            display: none;
+        }
+        .city-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .city-line {
+            flex: 1;
+            height: 1px;
+            background: rgba(255,255,255,0.08);
+        }
+
         .masjid-list {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 0;
         }
 
         /* --- Card Styles & Hover Effects --- */
@@ -200,61 +327,14 @@
             color: white;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             border-left: 3px solid transparent;
-            /* Stagger animation - overridden per card */
-            animation: slideUp 0.5s ease both;
+            animation: slideUp 0.4s ease both;
         }
-        .masjid-card:nth-child(1) { animation-delay: 0.1s; }
-        .masjid-card:nth-child(2) { animation-delay: 0.2s; }
-        .masjid-card:nth-child(3) { animation-delay: 0.3s; }
-        .masjid-card:nth-child(4) { animation-delay: 0.4s; }
-        .masjid-card:nth-child(5) { animation-delay: 0.5s; }
-        .masjid-card:nth-child(6) { animation-delay: 0.6s; }
-        .masjid-card:nth-child(7) { animation-delay: 0.7s; }
-        .masjid-card:nth-child(8) { animation-delay: 0.8s; }
-        .masjid-card:nth-child(9) { animation-delay: 0.9s; }
 
         .masjid-card:hover {
             background: rgba(255,255,255,0.15);
             border-color: rgba(255,255,255,0.25);
             transform: scale(1.03);
             box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-        /* Per-mosque left border glow on hover */
-        .masjid-card[data-mosque="shahjalal"]:hover {
-            border-left-color: #00796b;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15), -3px 0 12px rgba(0,121,107,0.3);
-        }
-        .masjid-card[data-mosque="quba"]:hover {
-            border-left-color: #2a8ab5;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15), -3px 0 12px rgba(42,138,181,0.3);
-        }
-        .masjid-card[data-mosque="almahad"]:hover {
-            border-left-color: #388e3c;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15), -3px 0 12px rgba(56,142,60,0.3);
-        }
-        .masjid-card[data-mosque="tawakkulia"]:hover {
-            border-left-color: #3949ab;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15), -3px 0 12px rgba(57,73,171,0.3);
-        }
-        .masjid-card[data-mosque="salahadin"]:hover {
-            border-left-color: #9c2759;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15), -3px 0 12px rgba(156,39,89,0.3);
-        }
-        .masjid-card[data-mosque="abubakar"]:hover {
-            border-left-color: #7b1fa2;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15), -3px 0 12px rgba(123,31,162,0.3);
-        }
-        .masjid-card[data-mosque="iyma"]:hover {
-            border-left-color: #00838f;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15), -3px 0 12px rgba(0,131,143,0.3);
-        }
-        .masjid-card[data-mosque="JamiaMasjid"]:hover {
-            border-left-color: #1b3a5c;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15), -3px 0 12px rgba(27,58,92,0.3);
-        }
-        .masjid-card[data-mosque="taqwa"]:hover {
-            border-left-color: #1976d2;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15), -3px 0 12px rgba(25,118,210,0.3);
         }
 
         /* Mobile: use :active instead of :hover */
@@ -271,46 +351,10 @@
                 transform: scale(1.03);
                 box-shadow: 0 8px 25px rgba(0,0,0,0.15);
             }
-            .masjid-card[data-mosque="shahjalal"]:active {
-                border-left-color: #00796b;
-                box-shadow: 0 8px 25px rgba(0,0,0,0.15), -3px 0 12px rgba(0,121,107,0.3);
-            }
-            .masjid-card[data-mosque="quba"]:active {
-                border-left-color: #2a8ab5;
-                box-shadow: 0 8px 25px rgba(0,0,0,0.15), -3px 0 12px rgba(42,138,181,0.3);
-            }
-            .masjid-card[data-mosque="almahad"]:active {
-                border-left-color: #388e3c;
-                box-shadow: 0 8px 25px rgba(0,0,0,0.15), -3px 0 12px rgba(56,142,60,0.3);
-            }
-            .masjid-card[data-mosque="tawakkulia"]:active {
-                border-left-color: #3949ab;
-                box-shadow: 0 8px 25px rgba(0,0,0,0.15), -3px 0 12px rgba(57,73,171,0.3);
-            }
-            .masjid-card[data-mosque="salahadin"]:active {
-                border-left-color: #9c2759;
-                box-shadow: 0 8px 25px rgba(0,0,0,0.15), -3px 0 12px rgba(156,39,89,0.3);
-            }
-            .masjid-card[data-mosque="abubakar"]:active {
-                border-left-color: #7b1fa2;
-                box-shadow: 0 8px 25px rgba(0,0,0,0.15), -3px 0 12px rgba(123,31,162,0.3);
-            }
-            .masjid-card[data-mosque="iyma"]:active {
-                border-left-color: #00838f;
-                box-shadow: 0 8px 25px rgba(0,0,0,0.15), -3px 0 12px rgba(0,131,143,0.3);
-            }
-            .masjid-card[data-mosque="JamiaMasjid"]:active {
-                border-left-color: #1b3a5c;
-                box-shadow: 0 8px 25px rgba(0,0,0,0.15), -3px 0 12px rgba(27,58,92,0.3);
-            }
         }
 
         .masjid-card:active { transform: scale(0.99); }
-        .card-icon {
-            font-size: 36px;
-            flex-shrink: 0;
-        }
-        .card-info { text-align: left; flex: 1; }
+        .card-info { text-align: left; flex: 1; min-width: 0; }
         .card-name {
             font-size: clamp(15px, 4vw, 18px);
             font-weight: 600;
@@ -333,6 +377,52 @@
             transition: all 0.3s ease;
         }
         .masjid-card:hover .card-arrow { opacity: 0.8; transform: translateX(3px); }
+
+        /* --- Distance Badge --- */
+        .card-distance {
+            font-size: 11px;
+            opacity: 0.5;
+            white-space: nowrap;
+            flex-shrink: 0;
+            background: rgba(255,255,255,0.08);
+            padding: 3px 8px;
+            border-radius: 10px;
+        }
+
+        /* --- Directory-only card pin icon --- */
+        .card-pin {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            flex-shrink: 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .card-pin:hover {
+            background: rgba(0,191,165,0.2);
+        }
+        .card-pin svg {
+            width: 16px;
+            height: 16px;
+            fill: rgba(255,255,255,0.5);
+        }
+        .card-pin:hover svg { fill: #00bfa5; }
+
+        /* --- Directory card (no timetable) --- */
+        .masjid-card.directory-only {
+            cursor: default;
+        }
+        .masjid-card.directory-only:hover {
+            transform: none;
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.1);
+            box-shadow: none;
+        }
 
         /* --- Submit / Contribute Section --- */
         .submit-section {
@@ -416,13 +506,16 @@
 
         /* --- Prefers Reduced Motion --- */
         @media (prefers-reduced-motion: reduce) {
-            .icon, h1, .subtitle, .label, .masjid-card, .submit-section, .footer {
+            .icon, h1, .subtitle, .label, .masjid-card, .submit-section, .footer, .view-toggle, .search-wrap {
                 animation: none !important;
             }
             .masjid-card {
                 transition: background 0.15s ease, border-color 0.15s ease !important;
             }
             .shimmer-overlay {
+                animation: none !important;
+            }
+            .location-btn.active {
                 animation: none !important;
             }
         }
@@ -459,413 +552,24 @@
         <h1>RAMADAN 1447</h1>
         <div class="subtitle">Prayer Timetables &bull; UK</div>
         <div class="label">Select your masjid</div>
+
+        <!-- Toggle: Timetables / Directory -->
+        <div class="view-toggle" id="viewToggle" role="group" aria-label="View mode">
+            <button class="active" data-view="timetables" aria-pressed="true">Timetables</button>
+            <button data-view="directory" aria-pressed="false">Directory</button>
+        </div>
+
         <div class="search-wrap">
-            <span class="search-icon">&#x1F50D;</span>
-            <input type="text" class="search-bar" id="masjidSearch" placeholder="Search by name, area or postcode..." autocomplete="off">
-            <button class="search-clear" id="searchClear">&times;</button>
+            <span class="search-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.5"/><line x1="16.65" y1="16.65" x2="21" y2="21" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></span>
+            <input type="text" class="search-bar" id="masjidSearch" placeholder="Search by name, area or postcode..." autocomplete="off" aria-label="Search mosques">
+            <button class="search-clear" id="searchClear" aria-label="Clear search">&times;</button>
+            <button class="location-btn" id="locationBtn" aria-label="Sort by nearest location" title="Sort by nearest">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </button>
         </div>
         <div class="no-results" id="noResults">No masjids found</div>
-        <div class="masjid-list">
-            <a href="shahjalal/" class="masjid-card" data-mosque="shahjalal" data-tags="Bradford Little Horton">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #004d40, #00796b);"></div>
-                <div class="card-info">
-                    <div class="card-name">Shahjalal Islamic Society</div>
-                    <div class="card-address">149A Little Horton Lane, BD5 0HS</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="quba/" class="masjid-card" data-mosque="quba" data-tags="Bradford Manningham">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #1a5a7e, #2a8ab5);"></div>
-                <div class="card-info">
-                    <div class="card-name">Masjid Quba</div>
-                    <div class="card-address">20 Quba Court (off Church Street), BD8 7LA</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="Almahad/" class="masjid-card" data-mosque="almahad" data-tags="Bradford Little Horton">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #1b5e20, #388e3c);"></div>
-                <div class="card-info">
-                    <div class="card-name">Al Mahad Ul Islami</div>
-                    <div class="card-address">Dorset Street, BD5 0LT</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="Tawakkulia/" class="masjid-card" data-mosque="tawakkulia" data-tags="Bradford Manningham">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #1a237e, #3949ab);"></div>
-                <div class="card-info">
-                    <div class="card-name">Tawakkulia Islamic Society</div>
-                    <div class="card-address">48 Cornwall Road, BD8 7JN</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="Salahadin/" class="masjid-card" data-mosque="salahadin" data-tags="Bradford Little Horton">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #6a1b34, #9c2759);"></div>
-                <div class="card-info">
-                    <div class="card-name">Salahadin Mosque</div>
-                    <div class="card-address">62 Little Horton Lane, BD5 0BS</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="abubakar/" class="masjid-card" data-mosque="abubakar" data-tags="Bradford">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #4a148c, #7b1fa2);"></div>
-                <div class="card-info">
-                    <div class="card-name">Masjid Abu Bakar</div>
-                    <div class="card-address">38 Steadman Terrace, BD3 9NB</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="iyma/" class="masjid-card" data-mosque="iyma" data-tags="Bradford Idle">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #006064, #00838f);"></div>
-                <div class="card-info">
-                    <div class="card-name">IYMA</div>
-                    <div class="card-address">68 Idle Road, BD2 4NH</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="JamiaMasjid/" class="masjid-card" data-mosque="JamiaMasjid" data-tags="Bradford">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #0d1b2a, #1b3a5c);"></div>
-                <div class="card-info">
-                    <div class="card-name">Jamia Masjid</div>
-                    <div class="card-address">28-32 Howard St, BD5 0BP</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="taqwa/" class="masjid-card" data-mosque="taqwa" data-tags="Bradford Great Horton">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #0d47a1, #1976d2);"></div>
-                <div class="card-info">
-                    <div class="card-name">Masjid Taqwa</div>
-                    <div class="card-address">807 Great Horton Road, BD7 4AG</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="alabrar/" class="masjid-card" data-mosque="alabrar" data-tags="Bradford">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #1a3a2e, #2d6a4f);"></div>
-                <div class="card-info">
-                    <div class="card-name">Al Abrar Academy</div>
-                    <div class="card-address">10-20 Heap Lane, Bradford, BD3 0DT</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="alamin/" class="masjid-card" data-mosque="alamin" data-tags="Bradford Keighley">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #0a2d6b, #1a5ab0);"></div>
-                <div class="card-info">
-                    <div class="card-name">Al Amin Islamic Society / Jamia Masjid &amp; Madrasa</div>
-                    <div class="card-address">Kensington Street, Keighley, BD21 1HZ</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="alhidaya/" class="masjid-card" data-mosque="alhidaya" data-tags="Bradford Queensbury">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #1b4a1e, #2e7d32);"></div>
-                <div class="card-info">
-                    <div class="card-name">Al Hidaya Academy</div>
-                    <div class="card-address">Chapel Lane (Off Highgate Road), Queensbury, BD13 1EG</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="alhikmah/" class="masjid-card" data-mosque="alhikmah" data-tags="Bradford">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #3d1f00, #7a3d00);"></div>
-                <div class="card-info">
-                    <div class="card-name">Masjid Al Hikmah &amp; Learning Centre</div>
-                    <div class="card-address">181A Barkerend Rd, Bradford, BD3 9AP</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="alhidaayah/" class="masjid-card" data-mosque="alhidaayah" data-tags="Bradford Keighley">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #1c2c5e, #3949ab);"></div>
-                <div class="card-info">
-                    <div class="card-name">Al-Hidaayah Foundation</div>
-                    <div class="card-address">Bridge Street, Keighley, BD21 1AA</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="almustaqeem/" class="masjid-card" data-mosque="almustaqeem" data-tags="Bradford">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #4a0d2a, #8b1a52);"></div>
-                <div class="card-info">
-                    <div class="card-name">Al-Mustaqeem Education and Community Centre</div>
-                    <div class="card-address">4 Central Avenue, Bradford, BD5 0PB</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="azharulmadaaris/" class="masjid-card" data-mosque="azharulmadaaris" data-tags="Bradford Lidget Green Great Horton">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #00363a, #006064);"></div>
-                <div class="card-info">
-                    <div class="card-name">Azharul Madaaris</div>
-                    <div class="card-address">102 Princeville Road, Lidget Green, Bradford, BD7 2AR</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="baitulilm/" class="masjid-card" data-mosque="baitulilm" data-tags="Bradford">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #0f2027, #1a3a5c);"></div>
-                <div class="card-info">
-                    <div class="card-name">Madrasah Baitul Ilm</div>
-                    <div class="card-address">4 St Johns Court, Square Street, Bradford, BD4 7NP</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="darulmahmood/" class="masjid-card" data-mosque="darulmahmood" data-tags="Bradford">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #2d3a0a, #4f6b1a);"></div>
-                <div class="card-info">
-                    <div class="card-name">Darul Mahmood</div>
-                    <div class="card-address">21 St. Mary's Road, Bradford, BD8 7LR</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="doha/" class="masjid-card" data-mosque="doha" data-tags="Bradford Great Horton">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #5c0a2e, #991f5e);"></div>
-                <div class="card-info">
-                    <div class="card-name">Doha Mosque (مسجد الدوحة)</div>
-                    <div class="card-address">13-15 Claremont, Bradford, BD7 1BG</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="firdaws/" class="masjid-card" data-mosque="firdaws" data-tags="Bradford">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #0f3d2e, #1b6b4a);"></div>
-                <div class="card-info">
-                    <div class="card-name">Firdaws Islamic Centre / Firdaws Mosque</div>
-                    <div class="card-address">Males: Guy Street; Females: 75 Edward Street, Bradford, BD4 7BB</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="iqra/" class="masjid-card" data-mosque="iqra" data-tags="Bradford Idle">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #0d2747, #1565c0);"></div>
-                <div class="card-info">
-                    <div class="card-name">Iqra Masjid</div>
-                    <div class="card-address">Off Farriers Croft, King's Road, Bradford, BD2 1ET</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="abuhanifa/" class="masjid-card" data-mosque="abuhanifa" data-tags="Bradford Undercliffe">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #2a1800, #5c3600);"></div>
-                <div class="card-info">
-                    <div class="card-name">Jamia Abu Hanifa Madrassa</div>
-                    <div class="card-address">35 Hustler Street, Undercliffe, BD3 0PS</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="farooqiah/" class="masjid-card" data-mosque="farooqiah" data-tags="Bradford">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #1c3a47, #2e6a7a);"></div>
-                <div class="card-info">
-                    <div class="card-name">Jamiah Farooqiah</div>
-                    <div class="card-address">432 Barkerend Road, Bradford, BD3 8QJ</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="madnimasjid/" class="masjid-card" data-mosque="madnimasjid" data-tags="Bradford">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #3d2800, #7a5500);"></div>
-                <div class="card-info">
-                    <div class="card-name">Madni Masjid (West Bowling Islamic Society)</div>
-                    <div class="card-address">133 Newton Street, BD5 7BJ</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="abbasiya/" class="masjid-card" data-mosque="abbasiya" data-tags="Bradford">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #1a0f3d, #332080);"></div>
-                <div class="card-info">
-                    <div class="card-name">Madrasa Abbasiya</div>
-                    <div class="card-address">1D Moor Park Drive, Bradford, BD3 7ER</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="darulirfan/" class="masjid-card" data-mosque="darulirfan" data-tags="Bradford">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #2e1500, #5c2d00);"></div>
-                <div class="card-info">
-                    <div class="card-name">Markazi Masjid Darul Irfan</div>
-                    <div class="card-address">1 Little Cross St, BD5 8AD</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="abdullahbinmasood/" class="masjid-card" data-mosque="abdullahbinmasood" data-tags="Bradford Frizinghall">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #1a253d, #2d4070);"></div>
-                <div class="card-info">
-                    <div class="card-name">Masjid Abdullah-bin-Masood (R.A.)</div>
-                    <div class="card-address">14 Lynthorne Road, Frizinghall, Bradford</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="masjidali/" class="masjid-card" data-mosque="masjidali" data-tags="Bradford">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #5c0011, #9c1928);"></div>
-                <div class="card-info">
-                    <div class="card-name">Masjid Ali</div>
-                    <div class="card-address">228 Parkside Road, Bradford, BD5 8PW</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="masjidayesha/" class="masjid-card" data-mosque="masjidayesha" data-tags="Bradford Manningham">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #4a1a35, #8b3366);"></div>
-                <div class="card-info">
-                    <div class="card-name">Masjid Ayesha</div>
-                    <div class="card-address">2 Thornacre Road, Manningham, BD18 1JY</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="masjidbilal/" class="masjid-card" data-mosque="masjidbilal" data-tags="Bradford">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #0a2e35, #1a5566);"></div>
-                <div class="card-info">
-                    <div class="card-name">Masjid Bilal</div>
-                    <div class="card-address">1-3 Drummond Rd, Bradford, BD8 8DA</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="masjidhamza/" class="masjid-card" data-mosque="masjidhamza" data-tags="Bradford">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #3d1500, #7a2d00);"></div>
-                <div class="card-info">
-                    <div class="card-name">Masjid Hamza</div>
-                    <div class="card-address">42 Woodview Terrace, BD8 7AH</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="masjidhusain/" class="masjid-card" data-mosque="masjidhusain" data-tags="Bradford">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #1a0f5e, #3025a0);"></div>
-                <div class="card-info">
-                    <div class="card-name">Masjid Husain</div>
-                    <div class="card-address">203 Allerton Road, BD15 7RD</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="ibraheem/" class="masjid-card" data-mosque="ibraheem" data-tags="Bradford">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #1f3d1a, #3a7030);"></div>
-                <div class="card-info">
-                    <div class="card-name">Masjid Ibraheem &amp; Education Centre</div>
-                    <div class="card-address">Lower Rushton Road, Bradford, BD3 8PX</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="namirah/" class="masjid-card" data-mosque="namirah" data-tags="Bradford">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #3d1a40, #7a3580);"></div>
-                <div class="card-info">
-                    <div class="card-name">Masjid Namirah / Madrasah Ta'limul Quran</div>
-                    <div class="card-address">8-10 Hanover Square, Bradford, West Yorkshire, BD1 3BY</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="masjidnoor/" class="masjid-card" data-mosque="masjidnoor" data-tags="Bradford">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #003d4d, #006b8a);"></div>
-                <div class="card-info">
-                    <div class="card-name">Masjid Noor</div>
-                    <div class="card-address">62 Toller Lane, Bradford, West Yorkshire, BD8 9DA</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="noorulislam/" class="masjid-card" data-mosque="noorulislam" data-tags="Bradford Great Horton">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #0a3d30, #1a6b5a);"></div>
-                <div class="card-info">
-                    <div class="card-name">Masjid Noorul Islam</div>
-                    <div class="card-address">58-62 St Margaret's Road, Bradford, BD7 3AE</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="nusratul/" class="masjid-card" data-mosque="nusratul" data-tags="Bradford Great Horton">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #3a0a55, #6b1a9c);"></div>
-                <div class="card-info">
-                    <div class="card-name">Nusrat-ul-Islam Masjid</div>
-                    <div class="card-address">Preston Street, Bradford, BD7 1DD</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="farooqia/" class="masjid-card" data-mosque="farooqia" data-tags="Bradford">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #2a3a00, #4f7000);"></div>
-                <div class="card-info">
-                    <div class="card-name">Khanqah Naqshbandia Masjid Farooqia</div>
-                    <div class="card-address">28 Gondal Court, Bradford, BD5 9JW</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="masjidumar/" class="masjid-card" data-mosque="masjidumar" data-tags="Bradford">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #0d2045, #1a3a85);"></div>
-                <div class="card-info">
-                    <div class="card-name">Masjid-e-Umar</div>
-                    <div class="card-address">184 Durham Road, Bradford, BD8 9HU</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="masjidusman/" class="masjid-card" data-mosque="masjidusman" data-tags="Bradford">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #1a2020, #2d4444);"></div>
-                <div class="card-info">
-                    <div class="card-name">Masjid ~ E ~ Usman / Madrassa Khaliliya</div>
-                    <div class="card-address">57 Upper Seymour St, Bradford, BD3 9LJ</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="raashideen/" class="masjid-card" data-mosque="raashideen" data-tags="Bradford">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #3d0a15, #6d1a28);"></div>
-                <div class="card-info">
-                    <div class="card-name">Masjidur Raashideen</div>
-                    <div class="card-address">14 Farfield Street, Bradford, BD9 5AS</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="musallasalaam/" class="masjid-card" data-mosque="musallasalaam" data-tags="Bradford Clayton Great Horton">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #1a3020, #2d5a3a);"></div>
-                <div class="card-info">
-                    <div class="card-name">Musalla Salaam</div>
-                    <div class="card-address">191 Pasture Lane, Clayton, Bradford, BD7 2SQ</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="ahlebayt/" class="masjid-card" data-mosque="ahlebayt" data-tags="Bradford">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #0a2a5e, #1a4d9c);"></div>
-                <div class="card-info">
-                    <div class="card-name">PYC Masjid Ahle Bayt</div>
-                    <div class="card-address">Mount Street, Bradford, BD3 9SR</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="shipley/" class="masjid-card" data-mosque="shipley" data-tags="Bradford">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #003d3d, #006b6b);"></div>
-                <div class="card-info">
-                    <div class="card-name">Shipley Islamic &amp; Education Centre -Jam-e-Masjid- (S.I.E.C)</div>
-                    <div class="card-address">Aireville Road, Bradford, West Yorkshire, BD9 4HH</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="wibseybuttershaw/" class="masjid-card" data-mosque="wibseybuttershaw" data-tags="Bradford">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #1a1530, #2d2760);"></div>
-                <div class="card-info">
-                    <div class="card-name">Wibsey &amp; Buttershaw Islamic Learning Centre / Dawah Centre</div>
-                    <div class="card-address">The Cooperville Centre, Bellerby Brow, Bradford, BD6 3JY</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="wibsey/" class="masjid-card" data-mosque="wibsey" data-tags="Bradford Wibsey">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #2a1a3d, #4a306b);"></div>
-                <div class="card-info">
-                    <div class="card-name">Wibsey Musalla</div>
-                    <div class="card-address">75 Odsal Road, Wibsey, BD6 1PN</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="sjmkeighley/" class="masjid-card" data-mosque="sjmkeighley" data-tags="Keighley">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #4a3000, #b8860b);"></div>
-                <div class="card-info">
-                    <div class="card-name">Shahjalal Jami Masjid & Jamia Qurania</div>
-                    <div class="card-address">Temple Row, Keighley, BD21 2AH</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="ibrahim/" class="masjid-card" data-mosque="ibrahim" data-tags="Leeds Beeston">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #bf360c, #e64a19);"></div>
-                <div class="card-info">
-                    <div class="card-name">Masjid Ibraheem</div>
-                    <div class="card-address">4 Woodview Rd, Beeston, Leeds LS11 6LE</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="westleeds/" class="masjid-card" data-mosque="westleeds" data-tags="Leeds Armley">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #263238, #455a64);"></div>
-                <div class="card-info">
-                    <div class="card-name">West Leeds Jamia Masjid</div>
-                    <div class="card-address">Town Street, Armley, Leeds, LS12 3JG</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
-            <a href="aqsa/" class="masjid-card" data-mosque="aqsa" data-tags="Oldham">
-                <div class="card-colour" style="background: linear-gradient(to bottom, #5d1020, #8b2040);"></div>
-                <div class="card-info">
-                    <div class="card-name">Masjid-Ul-Aqsa &amp; Islamic Centre</div>
-                    <div class="card-address">135 Windsor Road, Coppice, Oldham OL8 1RG</div>
-                </div>
-                <div class="card-arrow">&rsaquo;</div>
-            </a>
+        <div class="masjid-list" id="masjidList">
+            <!-- Cards rendered by JS from directory.json -->
         </div>
         <div class="submit-section">
             <div class="submit-label">Contribute</div>
@@ -895,32 +599,353 @@
         </div>
     </div>
 
-    <!-- Search filter -->
+    <!-- Main app logic -->
     <script>
     (function() {
-        const search = document.getElementById('masjidSearch');
-        const clearBtn = document.getElementById('searchClear');
-        const cards = document.querySelectorAll('.masjid-card');
-        const noResults = document.getElementById('noResults');
+        // --- State ---
+        var mosques = [];
+        var currentView = 'timetables'; // 'timetables' or 'directory'
+        var userLat = null;
+        var userLng = null;
+        var geocodeCache = {};
+        var locationActive = false;
 
-        search.addEventListener('input', function() {
-            const q = this.value.toLowerCase().trim();
-            clearBtn.style.display = q ? 'block' : 'none';
-            let visible = 0;
-            cards.forEach(function(card) {
-                const text = card.textContent.toLowerCase() + ' ' + (card.dataset.tags || '').toLowerCase();
-                const match = !q || text.includes(q);
-                card.style.display = match ? '' : 'none';
-                if (match) visible++;
+        var listEl = document.getElementById('masjidList');
+        var searchEl = document.getElementById('masjidSearch');
+        var clearBtn = document.getElementById('searchClear');
+        var noResults = document.getElementById('noResults');
+        var locationBtn = document.getElementById('locationBtn');
+        var toggleBtns = document.querySelectorAll('#viewToggle button');
+
+        // --- Load directory.json ---
+        fetch('directory.json')
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                mosques = data.mosques;
+                loadGeocodeCache();
+                render();
+            })
+            .catch(function() {
+                listEl.innerHTML = '<div style="padding:20px;opacity:0.4;">Failed to load mosque directory</div>';
             });
-            noResults.style.display = visible === 0 ? 'block' : 'none';
+
+        // --- Toggle ---
+        var hasRendered = false;
+        toggleBtns.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                currentView = this.dataset.view;
+                toggleBtns.forEach(function(b) {
+                    b.classList.remove('active');
+                    b.setAttribute('aria-pressed', 'false');
+                });
+                this.classList.add('active');
+                this.setAttribute('aria-pressed', 'true');
+                render();
+            });
+        });
+
+        // --- Search ---
+        searchEl.addEventListener('input', function() {
+            var q = this.value.toLowerCase().trim();
+            clearBtn.style.display = q ? 'block' : 'none';
+            filterCards(q);
         });
 
         clearBtn.addEventListener('click', function() {
-            search.value = '';
-            search.dispatchEvent(new Event('input'));
-            search.focus();
+            searchEl.value = '';
+            searchEl.dispatchEvent(new Event('input'));
+            searchEl.focus();
         });
+
+        // --- Location ---
+        locationBtn.addEventListener('click', function() {
+            if (locationActive) {
+                // Turn off location
+                locationActive = false;
+                userLat = null;
+                userLng = null;
+                locationBtn.classList.remove('active');
+                locationBtn.title = 'Sort by nearest';
+                render();
+                return;
+            }
+
+            if (!navigator.geolocation) {
+                locationBtn.classList.add('error');
+                setTimeout(function() { locationBtn.classList.remove('error'); }, 2000);
+                return;
+            }
+
+            locationBtn.title = 'Getting location...';
+            navigator.geolocation.getCurrentPosition(
+                function(pos) {
+                    userLat = pos.coords.latitude;
+                    userLng = pos.coords.longitude;
+                    locationActive = true;
+                    locationBtn.classList.add('active');
+                    locationBtn.classList.remove('error');
+                    locationBtn.title = 'Location active (tap to turn off)';
+                    geocodeAndRender();
+                },
+                function() {
+                    locationBtn.classList.add('error');
+                    locationBtn.title = 'Location denied';
+                    setTimeout(function() {
+                        locationBtn.classList.remove('error');
+                        locationBtn.title = 'Sort by nearest';
+                    }, 3000);
+                },
+                { enableHighAccuracy: false, timeout: 10000 }
+            );
+        });
+
+        // --- Geocoding (Postcodes.io) ---
+        var GEOCODE_CACHE_KEY = 'waqt-geocode-cache';
+        var GEOCODE_TTL = 30 * 24 * 60 * 60 * 1000; // 30 days
+
+        function loadGeocodeCache() {
+            try {
+                var stored = JSON.parse(localStorage.getItem(GEOCODE_CACHE_KEY));
+                if (stored && stored.expires > Date.now()) {
+                    geocodeCache = stored.data;
+                }
+            } catch(e) {}
+        }
+
+        function saveGeocodeCache() {
+            try {
+                localStorage.setItem(GEOCODE_CACHE_KEY, JSON.stringify({
+                    data: geocodeCache,
+                    expires: Date.now() + GEOCODE_TTL
+                }));
+            } catch(e) {}
+        }
+
+        function geocodeAndRender() {
+            // Find postcodes not yet cached
+            var uncached = [];
+            mosques.forEach(function(m) {
+                if (m.postcode && !geocodeCache[m.postcode]) {
+                    uncached.push(m.postcode);
+                }
+            });
+
+            if (uncached.length === 0) {
+                render();
+                return;
+            }
+
+            // Postcodes.io allows up to 100 per request
+            var batches = [];
+            for (var i = 0; i < uncached.length; i += 100) {
+                batches.push(uncached.slice(i, i + 100));
+            }
+
+            var pending = batches.length;
+            batches.forEach(function(batch) {
+                fetch('https://api.postcodes.io/postcodes', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ postcodes: batch })
+                })
+                .then(function(r) { return r.json(); })
+                .then(function(data) {
+                    if (data.result) {
+                        data.result.forEach(function(item) {
+                            if (item.result) {
+                                geocodeCache[item.query] = {
+                                    lat: item.result.latitude,
+                                    lng: item.result.longitude
+                                };
+                            }
+                        });
+                    }
+                    saveGeocodeCache();
+                    pending--;
+                    if (pending === 0) render();
+                })
+                .catch(function() {
+                    pending--;
+                    if (pending === 0) render();
+                });
+            });
+        }
+
+        // --- Haversine distance (miles) ---
+        function haversine(lat1, lng1, lat2, lng2) {
+            var R = 3958.8; // Earth radius in miles
+            var dLat = (lat2 - lat1) * Math.PI / 180;
+            var dLng = (lng2 - lng1) * Math.PI / 180;
+            var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+                    Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+                    Math.sin(dLng/2) * Math.sin(dLng/2);
+            return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+        }
+
+        function getMosqueDistance(m) {
+            if (!locationActive || !userLat || !geocodeCache[m.postcode]) return null;
+            var geo = geocodeCache[m.postcode];
+            return haversine(userLat, userLng, geo.lat, geo.lng);
+        }
+
+        // --- Render ---
+        function render() {
+            var filtered = mosques;
+            if (currentView === 'timetables') {
+                filtered = mosques.filter(function(m) { return m.has_timetable; });
+            }
+
+            // Calculate distances
+            filtered.forEach(function(m) {
+                m._distance = getMosqueDistance(m);
+            });
+
+            // Group by city
+            var cityMap = {};
+            var cityOrder = [];
+            filtered.forEach(function(m) {
+                if (!cityMap[m.city]) {
+                    cityMap[m.city] = [];
+                    cityOrder.push(m.city);
+                }
+                cityMap[m.city].push(m);
+            });
+
+            // Sort mosques within each city
+            cityOrder.forEach(function(city) {
+                if (locationActive) {
+                    cityMap[city].sort(function(a, b) {
+                        if (a._distance === null && b._distance === null) return 0;
+                        if (a._distance === null) return 1;
+                        if (b._distance === null) return -1;
+                        return a._distance - b._distance;
+                    });
+                } else {
+                    cityMap[city].sort(function(a, b) {
+                        return a.name.localeCompare(b.name);
+                    });
+                }
+            });
+
+            // Sort cities: by nearest mosque if location active, else alphabetical with Bradford first
+            if (locationActive) {
+                cityOrder.sort(function(a, b) {
+                    var aDist = cityMap[a][0] ? cityMap[a][0]._distance : Infinity;
+                    var bDist = cityMap[b][0] ? cityMap[b][0]._distance : Infinity;
+                    if (aDist === null) aDist = Infinity;
+                    if (bDist === null) bDist = Infinity;
+                    return aDist - bDist;
+                });
+            } else {
+                cityOrder.sort(function(a, b) {
+                    if (a === 'Bradford') return -1;
+                    if (b === 'Bradford') return 1;
+                    return a.localeCompare(b);
+                });
+            }
+
+            // Build HTML
+            var animate = !hasRendered;
+            hasRendered = true;
+            var html = '';
+            var cardIndex = 0;
+            cityOrder.forEach(function(city) {
+                var mosquesList = cityMap[city];
+                html += '<div class="city-section" data-city="' + escapeHtml(city) + '">';
+                html += '<div class="city-header" role="button" aria-expanded="true" tabindex="0" onclick="var s=this.parentElement;s.classList.toggle(\'collapsed\');this.setAttribute(\'aria-expanded\',!s.classList.contains(\'collapsed\'))">';
+                html += '<span class="city-name">' + escapeHtml(city) + '</span>';
+                html += '<span class="city-count">(' + mosquesList.length + ')</span>';
+                html += '<span class="city-line"></span>';
+                html += '<span class="city-chevron">&#9660;</span>';
+                html += '</div>';
+                html += '<div class="city-cards">';
+
+                mosquesList.forEach(function(m) {
+                    var animStyle = animate ? ' style="animation-delay:' + Math.min(cardIndex * 0.03, 0.5) + 's"' : ' style="animation:none"';
+                    var distHtml = '';
+                    if (m._distance !== null) {
+                        distHtml = '<span class="card-distance">' + m._distance.toFixed(1) + ' mi</span>';
+                    }
+
+                    if (m.has_timetable) {
+                        html += '<a href="' + m.slug + '/" class="masjid-card" data-mosque="' + escapeHtml(m.slug) + '" data-tags="' + escapeHtml(m.city + ' ' + (m.tags || '')) + '"' + animStyle + '>';
+                        if (currentView === 'directory') {
+                            html += '<span class="card-pin" onclick="event.preventDefault();event.stopPropagation();window.open(\'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(m.address + ', ' + m.postcode) + '\',\'_blank\')" title="Get directions">';
+                            html += '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>';
+                            html += '</span>';
+                        } else {
+                            html += '<div class="card-colour" style="background:linear-gradient(to bottom,' + m.color1 + ',' + m.color2 + ')"></div>';
+                        }
+                        html += '<div class="card-info"><div class="card-name">' + escapeHtml(m.name) + '</div><div class="card-address">' + escapeHtml(m.address + ', ' + m.postcode) + '</div></div>';
+                        html += distHtml;
+                        if (currentView === 'timetables') {
+                            html += '<div class="card-arrow">&rsaquo;</div>';
+                        }
+                        html += '</a>';
+                    } else {
+                        // Directory-only card
+                        html += '<div class="masjid-card directory-only" data-tags="' + escapeHtml(m.city + ' ' + (m.tags || '')) + '"' + animStyle + '>';
+                        html += '<a class="card-pin" href="https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(m.address + ', ' + m.postcode) + '" target="_blank" title="Get directions">';
+                        html += '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>';
+                        html += '</a>';
+                        html += '<div class="card-info"><div class="card-name">' + escapeHtml(m.name) + '</div><div class="card-address">' + escapeHtml(m.address + ', ' + m.postcode) + '</div></div>';
+                        html += distHtml;
+                        html += '</div>';
+                    }
+                    cardIndex++;
+                });
+
+                html += '</div></div>';
+            });
+
+            listEl.innerHTML = html;
+
+            // Re-apply search filter if active
+            var q = searchEl.value.toLowerCase().trim();
+            if (q) filterCards(q);
+        }
+
+        function filterCards(q) {
+            var sections = listEl.querySelectorAll('.city-section');
+            var totalVisible = 0;
+
+            sections.forEach(function(section) {
+                var cards = section.querySelectorAll('.masjid-card');
+                var sectionVisible = 0;
+
+                cards.forEach(function(card) {
+                    var text = card.textContent.toLowerCase() + ' ' + (card.dataset.tags || '').toLowerCase();
+                    var match = !q || text.includes(q);
+                    card.style.display = match ? '' : 'none';
+                    if (match) sectionVisible++;
+                });
+
+                // Hide entire city section if no matches
+                section.style.display = sectionVisible === 0 ? 'none' : '';
+                // Update city count for visible
+                var countEl = section.querySelector('.city-count');
+                if (countEl && q) {
+                    countEl.textContent = '(' + sectionVisible + ')';
+                }
+                totalVisible += sectionVisible;
+            });
+
+            noResults.style.display = totalVisible === 0 ? 'block' : 'none';
+
+            // Reset counts when search cleared
+            if (!q) {
+                sections.forEach(function(section) {
+                    var cards = section.querySelectorAll('.masjid-card');
+                    var countEl = section.querySelector('.city-count');
+                    if (countEl) countEl.textContent = '(' + cards.length + ')';
+                });
+            }
+        }
+
+        function escapeHtml(str) {
+            if (!str) return '';
+            return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+        }
     })();
     </script>
 
