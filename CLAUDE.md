@@ -125,7 +125,7 @@ Masjids/                    # Source data for batch-generated mosques
 | Jamia Masjid | `JamiaMasjid` | 28-32 Howard St, BD5 0BP | Navy `#0d1b2a` / `#1b3a5c` | TBA | TBA |
 | Masjid Taqwa | `taqwa` | 807 Great Horton Road, BD7 4AG | Cobalt Blue `#0d47a1` / `#1976d2` | 6:30am, 9:30am | £5.00 |
 | Masjid Ibraheem | `ibrahim` | 4 Woodview Rd, Beeston, Leeds LS11 6LE | Deep Orange `#bf360c` / `#e64a19` | 9:00am (Men), 10:30am (Men & Women) | £5.00 |
-| Masjid-Ul-Aqsa & Islamic Centre | `aqsa` | 135 Windsor Road, Coppice, Oldham OL8 1RG | Wine Red `#5d1020` / `#8b2040` | TBA | TBA |
+| Masjid-Ul-Aqsa & Islamic Centre | `aqsa` | 135 Windsor Road, Coppice, Oldham OL8 1RG | Wine Red `#5d1020` / `#8b2040` | TBA | £5.00 |
 
 ### Donation Details
 - **Shahjalal**: Not listed in timetable
