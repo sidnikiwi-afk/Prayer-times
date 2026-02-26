@@ -1,32 +1,15 @@
 [
   {
-    "name": "Masjid-at-Tauwheed Mosque",
-    "city": "Great Yarmouth",
-    "query": "Masjid-at-Tauwheed Mosque Great Yarmouth mosque UK",
-    "found": {
-      "address": "39 Northgate Street",
-      "phone": "",
-      "website": "https://masjidtauwheed.co.uk/",
-      "postcode": "NR30 1BH"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
-  },
-  {
     "name": "Haverhill Mosque",
     "city": "West Suffolk",
     "query": "Haverhill Mosque West Suffolk mosque UK",
     "found": {
       "address": "",
       "phone": "",
-      "website": "https://haverhill-tc.gov.uk/opening-of-haverhills-new-mosque/",
+      "website": "https://haverhillmca.org/",
       "postcode": "CB9 8HF"
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Qadria Jilania Islamic (S+E) Centre",
@@ -38,10 +21,7 @@
       "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=1857",
       "postcode": "M13 0WU"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Faizan E Islam Centre",
@@ -50,42 +30,10 @@
     "found": {
       "address": "",
       "phone": "",
-      "website": "https://fiot.co.uk/",
-      "postcode": ""
+      "website": "https://faizaneislam.com/",
+      "postcode": "M16 0WZ"
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Jam-E-Masjid-Bilal",
-    "city": "Kirklees",
-    "query": "Jam-E-Masjid-Bilal Kirklees mosque UK",
-    "found": {
-      "address": "245 Yews Hill Road",
-      "phone": "",
-      "website": "https://jamia-masjid-bilal-1.wheree.com/",
-      "postcode": "HD4 5DE"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
-  },
-  {
-    "name": "Khizra mosque",
-    "city": "Manchester",
-    "query": "Khizra mosque Manchester mosque UK",
-    "found": {
-      "address": "425 Cheetham Hill Road",
-      "phone": "",
-      "website": "https://www.khizramosque.org/",
-      "postcode": "M8 0PF"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Jamia Mosque",
@@ -97,9 +45,7 @@
       "website": "https://manchestercentralmosque.org/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Prayer Room (Liverpool)",
@@ -111,22 +57,20 @@
       "website": "https://www.liverpoolmuslimsociety.org.uk/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Darus-salam",
     "city": "Manchester",
     "query": "Darus-salam Manchester mosque UK",
     "found": {
-      "address": "",
+      "address": "47 Slade Lane",
       "phone": "",
-      "website": "https://darussalammosque.org/prayer-times/",
-      "postcode": ""
+      "website": "https://darussalammosque.org/",
+      "postcode": "M13 0QJ"
     },
     "updated": [
-      "web"
+      "addr"
     ]
   },
   {
@@ -139,25 +83,7 @@
       "website": "https://micuk.uk/en/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Masjid al Furqan",
-    "city": "Stoke-on-Trent",
-    "query": "Masjid al Furqan Stoke-on-Trent mosque UK",
-    "found": {
-      "address": "105 Roundwell Street",
-      "phone": "01782823777",
-      "website": "https://masjidfurqan.co.uk/",
-      "postcode": "ST6 5AW"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Minhaj-ul-Qur'an Central Mosque",
@@ -169,9 +95,7 @@
       "website": "https://manchestercentralmosque.org/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Arrahman ManchesterIslamic Cultural Association",
@@ -183,37 +107,20 @@
       "website": "https://masjid-arrahman.com/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Hough End Hall Academy",
-    "city": "Manchester",
-    "query": "Hough End Hall Academy Manchester mosque UK",
-    "found": {
-      "address": "95 Nell Lane",
-      "phone": "",
-      "website": "https://prayersconnect.com/mosques/82637933-hough-end-hall-academy-mosque-manchester-england-united-kingdom",
-      "postcode": "M21 7RL"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Markaz Al-Takwa",
     "city": "Manchester",
     "query": "Markaz Al-Takwa Manchester mosque UK",
     "found": {
-      "address": "",
+      "address": "230 Plymouth Grove",
       "phone": "",
       "website": "https://markazaltaqwa.net/",
-      "postcode": ""
+      "postcode": "M13 0AS"
     },
     "updated": [
-      "web"
+      "addr"
     ]
   },
   {
@@ -226,9 +133,7 @@
       "website": "https://manchestercentralmosque.org/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Keele University Islamic Centre",
@@ -237,27 +142,10 @@
     "found": {
       "address": "",
       "phone": "",
-      "website": "https://keelesu.com/activities/society/islamic/",
+      "website": "https://www.keele.ac.uk/students/campuslifeandcommunity/faith/islamiccentre/",
       "postcode": "ST5 5BJ"
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Khizra Mosque",
-    "city": "Manchester",
-    "query": "Khizra Mosque Manchester mosque UK",
-    "found": {
-      "address": "425 Cheetham Hill Road",
-      "phone": "",
-      "website": "https://www.khizramosque.org/",
-      "postcode": "M8 0PF"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Shahporan Masjid",
@@ -269,25 +157,7 @@
       "website": "https://www.shahporanmosque.org/",
       "postcode": "M13 0TA"
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Stoke-on-Trent Muslim Welfare and Community Centre",
-    "city": "Stoke-on-Trent",
-    "query": "Stoke-on-Trent Muslim Welfare and Community Centre Stoke-on-Trent mosque UK",
-    "found": {
-      "address": "20 Bedford Road",
-      "phone": "01782 280364",
-      "website": "https://citycentralmosque.org/en/",
-      "postcode": "ST1 4PL"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Al-Rahma Mosque",
@@ -299,9 +169,7 @@
       "website": "https://www.liverpoolmuslimsociety.org.uk/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Shah Jalal Mosque",
@@ -309,14 +177,11 @@
     "query": "Shah Jalal Mosque Cheshire West and Chester mosque UK",
     "found": {
       "address": "",
-      "phone": "01244665872",
-      "website": "https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/5131266/contact-information",
+      "phone": "07903 826357",
+      "website": "https://www.chestermosque.org/",
       "postcode": "CH1 5LT"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "City Central Mosque",
@@ -328,41 +193,7 @@
       "website": "https://citycentralmosque.org/en/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Zakariyya Jaam'e Masjid",
-    "city": "Bolton",
-    "query": "Zakariyya Jaam'e Masjid Bolton mosque UK",
-    "found": {
-      "address": "20 Peace Street",
-      "phone": "",
-      "website": "https://www.zakariyyamasjid.co.uk/",
-      "postcode": "BL3 5LJ"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
-  },
-  {
-    "name": "Cheadle Masjid",
-    "city": "",
-    "query": "Cheadle Masjid mosque UK",
-    "found": {
-      "address": "377 Wilmslow Road",
-      "phone": "0161 437 1093",
-      "website": "https://cheadlemasjid.org/",
-      "postcode": "SK8 3NP"
-    },
-    "updated": [
-      "addr",
-      "pc",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Masjid-e-Noorul Islam",
@@ -372,27 +203,9 @@
       "address": "",
       "phone": "",
       "website": "https://www.mnibolton.com/",
-      "postcode": "BL1 3QH"
+      "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Makki Masjid",
-    "city": "Bolton",
-    "query": "Makki Masjid Bolton mosque UK",
-    "found": {
-      "address": "110 Eskrick Street",
-      "phone": "01204 524200",
-      "website": "https://www.makkimasjid.org.uk/",
-      "postcode": "BL1 3EN"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Taiyabah Masjid",
@@ -404,9 +217,7 @@
       "website": "https://www.taiyabahmasjid.com/",
       "postcode": "BL1 8HD"
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Felicity House",
@@ -418,9 +229,7 @@
       "website": "https://www.greensvilletrust.org/mm_locations.php",
       "postcode": "L15 4HT"
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Masjid E Ghosia",
@@ -432,9 +241,7 @@
       "website": "https://ghosia.co.uk/",
       "postcode": "BL3 6SX"
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Madrasatul Imam Muhammad Zakariya",
@@ -446,40 +253,7 @@
       "website": "https://www.zakariyyamasjid.co.uk/",
       "postcode": "BL1 8LX"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "Ashrafia Mosque",
-    "city": "Bolton",
-    "query": "Ashrafia Mosque Bolton mosque UK",
-    "found": {
-      "address": "52 Gibraltar Street",
-      "phone": "",
-      "website": "https://x.com/AshrafiaMasjid",
-      "postcode": "BL3 5ED"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
-  },
-  {
-    "name": "Madinah Masjid",
-    "city": "Bolton",
-    "query": "Madinah Masjid Bolton mosque UK",
-    "found": {
-      "address": "3 Gower Street",
-      "phone": "",
-      "website": "https://madanimasjidbolton.co.uk/home-style-4/",
-      "postcode": "BL1 4BG"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Masjid Ahl Al-Sunnah",
@@ -488,28 +262,10 @@
     "found": {
       "address": "",
       "phone": "",
-      "website": "https://www.mapquest.com/gb/england/masjid-ahl-al-sunnah-524719841",
+      "website": "https://mamissionuk.com/",
       "postcode": "BL1 8DE"
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Shahjalal Mosque and Islamic Centre",
-    "city": "Manchester",
-    "query": "Shahjalal Mosque and Islamic Centre Manchester mosque UK",
-    "found": {
-      "address": "1A Eileen Grove",
-      "phone": "01616132123",
-      "website": "https://shahjalalmosque.org/",
-      "postcode": "M14 5WE"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Neeli Mosque",
@@ -521,9 +277,7 @@
       "website": "https://www.neelimosque.com/",
       "postcode": "OL11 1JL"
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "St Michaels Mount (inman Trust)",
@@ -535,10 +289,7 @@
       "website": "https://www.sthelensmosque.co.uk/",
       "postcode": "WA9 5AU"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Masjid Omar Mukhtar",
@@ -550,24 +301,7 @@
       "website": "https://mosquefinder.co.uk/masjid-omar-mukhtar.html",
       "postcode": "L8 2XP"
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Elland Masjid",
-    "city": "Calderdale",
-    "query": "Elland Masjid Calderdale mosque UK",
-    "found": {
-      "address": "34 Elizabeth Street",
-      "phone": "",
-      "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=819",
-      "postcode": "HX5 0JH"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Masjid Umar",
@@ -577,133 +311,9 @@
       "address": "",
       "phone": "",
       "website": "https://www.ymasheffield.org/",
-      "postcode": ""
+      "postcode": "S4 7AH"
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Noor Al Hadi Mosque",
-    "city": "Sheffield",
-    "query": "Noor Al Hadi Mosque Sheffield mosque UK",
-    "found": {
-      "address": "275 Staniforth Road",
-      "phone": "0114 244 6179",
-      "website": "https://en.masjidway.com/masjid/3370/prayer",
-      "postcode": "S9 3FP"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "Markazi Jamia Masjid Riza Islamic Centre",
-    "city": "Kirklees",
-    "query": "Markazi Jamia Masjid Riza Islamic Centre Kirklees mosque UK",
-    "found": {
-      "address": "129 Halifax Old Road",
-      "phone": "",
-      "website": "https://masjidriza.com/",
-      "postcode": "HD2 2RP"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
-  },
-  {
-    "name": "Chesterfield Muslim Association",
-    "city": "Chesterfield",
-    "query": "Chesterfield Muslim Association Chesterfield mosque UK",
-    "found": {
-      "address": "29 Newbold Road",
-      "phone": "07405886946",
-      "website": "https://www.muslimwelfarechesterfield.com/",
-      "postcode": "S41 7PG"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "Jamia Mosque Gulzar-e-Habib",
-    "city": "Sheffield",
-    "query": "Jamia Mosque Gulzar-e-Habib Sheffield mosque UK",
-    "found": {
-      "address": "48 Ribstone Road",
-      "phone": "",
-      "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=2200",
-      "postcode": "S9 3AY"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
-  },
-  {
-    "name": "Masjid Al Khair",
-    "city": "Sheffield",
-    "query": "Masjid Al Khair Sheffield mosque UK",
-    "found": {
-      "address": "23 Rothay Road",
-      "phone": "",
-      "website": "https://mosquefinder.co.uk/masjid-al-khair.html",
-      "postcode": "S4 8BD"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
-  },
-  {
-    "name": "Makki Madani Masjid",
-    "city": "Kirklees",
-    "query": "Makki Madani Masjid Kirklees mosque UK",
-    "found": {
-      "address": "31 Kertland Street",
-      "phone": "",
-      "website": "https://communitydirectory.kirklees.gov.uk/communityDirectory/organisationdetails.aspx?orgid=1589",
-      "postcode": "WF12 9PU"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
-  },
-  {
-    "name": "Faizan e Madinah",
-    "city": "Kirklees",
-    "query": "Faizan e Madinah Kirklees mosque UK",
-    "found": {
-      "address": "75 New North Road",
-      "phone": "",
-      "website": "https://www.yorkshire.com/huddersfield/community/mosques/faizan-e-madinah-education-centre-huddersfield?srsltid=AfmBOopQYTW1Z5ziKlluloOK99J0iLGgoSir0hVmUAUYRImNTN_XYuCv",
-      "postcode": ""
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
-  },
-  {
-    "name": "Baitut Tawheed Masjid",
-    "city": "Kirklees",
-    "query": "Baitut Tawheed Masjid Kirklees mosque UK",
-    "found": {
-      "address": "25 Netherfield Road",
-      "phone": "",
-      "website": "https://communitydirectory.kirklees.gov.uk/communityDirectory/organisationdetails.aspx?orgid=4592",
-      "postcode": "WF13 3JY"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Madni Masjid",
@@ -715,9 +325,7 @@
       "website": "https://www.madnijamiamasjid.com/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Darul Ilm",
@@ -729,40 +337,7 @@
       "website": "https://darulilm.org.uk/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Shah Jalal Masjid",
-    "city": "Kirklees",
-    "query": "Shah Jalal Masjid Kirklees mosque UK",
-    "found": {
-      "address": "85 Fenton Road",
-      "phone": "01484 450183",
-      "website": "https://communitydirectory.kirklees.gov.uk/communityDirectory/organisationdetails.aspx?orgid=2183",
-      "postcode": "HD1 3RY"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "Faizan-e-Madinah",
-    "city": "Kirklees",
-    "query": "Faizan-e-Madinah Kirklees mosque UK",
-    "found": {
-      "address": "75 New North Road",
-      "phone": "",
-      "website": "https://www.yorkshire.com/huddersfield/community/mosques/faizan-e-madinah-education-centre-huddersfield?srsltid=AfmBOorN_QtrMBHgsog3FY-7G3i-2dKYxMlUQDP7wqmqJnnbY-loFCpa",
-      "postcode": ""
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Masjid As-Salaam",
@@ -774,9 +349,7 @@
       "website": "https://masjidsalaam.co.uk/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Islamic Tarbiyah Academy",
@@ -785,28 +358,10 @@
     "found": {
       "address": "",
       "phone": "",
-      "website": "https://islamictarbiyah.com/ita-time-table/",
-      "postcode": ""
+      "website": "https://communitydirectory.kirklees.gov.uk/communityDirectory/organisationdetails.aspx?orgid=5034",
+      "postcode": "WF13 2RB"
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Masjid Uthman",
-    "city": "Kirklees",
-    "query": "Masjid Uthman Kirklees mosque UK",
-    "found": {
-      "address": "34a Mallinson Street",
-      "phone": "07968 554203",
-      "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=17080301",
-      "postcode": "WF13 4NA"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Abu Bakr Siddique Masjid",
@@ -818,25 +373,7 @@
       "website": "https://abu-bakr.yolasite.com/",
       "postcode": "WF1 1JG"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "Medina Mosque",
-    "city": "Sheffield",
-    "query": "Medina Mosque Sheffield mosque UK",
-    "found": {
-      "address": "24 Wolseley Road",
-      "phone": "",
-      "website": "https://www.madinamasjid.org.uk/",
-      "postcode": "S8 0ZU"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Wakefield Central Mosque",
@@ -848,10 +385,7 @@
       "website": "https://wakefieldcentralmosque.co.uk/",
       "postcode": "WF1 4PG"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Makki Jamia Mosque",
@@ -863,10 +397,7 @@
       "website": "https://www.makkimosquesheffield.com/",
       "postcode": "S8 9TH"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Masjid Salahuddin",
@@ -875,28 +406,10 @@
     "found": {
       "address": "",
       "phone": "",
-      "website": "https://www.yorkshire.com/dewsbury/community/mosques/masjid-salahuddin-dewsbury?srsltid=AfmBOoqvEKpPuLcCbtRq3-EEldvKNvNVQsg6pswHp9iMgHbJmeAwn8Ku",
-      "postcode": ""
+      "website": "https://www.yorkshire.com/dewsbury/community/mosques/masjid-salahuddin-dewsbury?srsltid=AfmBOoo7ff7s2gTs6eJ3u4FtP_B6y3xu4KGweXwGqN3BsSm2P60LeQga",
+      "postcode": "WF13 1RB"
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Aaliyah Mosque",
-    "city": "Sheffield",
-    "query": "Aaliyah Mosque Sheffield mosque UK",
-    "found": {
-      "address": "9 Roundel Street",
-      "phone": "0114 261 8162",
-      "website": "https://www.mosquedirectory.co.uk/mosques/england/south-yorkshire/sheffield/darnall/Aaliyah-Mosque-and-Islamic-Centre-Darnall-Sheffield-South-Yorkshire/2919",
-      "postcode": "S9 3LE"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Jamia Mosque",
@@ -908,9 +421,7 @@
       "website": "https://www.jamiamasjiduec.org.uk/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Al-Huda Academy",
@@ -918,12 +429,12 @@
     "query": "Al-Huda Academy Sheffield mosque UK",
     "found": {
       "address": "",
-      "phone": "",
-      "website": "https://masjidhudasheff.com/",
-      "postcode": ""
+      "phone": "0114 243 8000",
+      "website": "https://www.yorkshire.com/carbrook/community/mosques/al-huda-academy?srsltid=AfmBOor8NIEgDlAOG6buzkIZRP0vK2ELlw6QBNi5rV1jIq9KxJlWqMh8",
+      "postcode": "S9 3FY"
     },
     "updated": [
-      "web"
+      "tel"
     ]
   },
   {
@@ -936,10 +447,7 @@
       "website": "https://elahimasjid.com/",
       "postcode": "S9 3ES"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Madani Education Centre",
@@ -948,12 +456,10 @@
     "found": {
       "address": "",
       "phone": "",
-      "website": "https://www.yorkshire.com/carbrook/community/mosques/madani-education-centre?srsltid=AfmBOor0TWGfnbSgY--8p032zU8DKrbxHzgsT5fmB1kxug3roldDf2Th",
+      "website": "https://www.yorkshire.com/carbrook/community/mosques/madani-education-centre?srsltid=AfmBOopS2vXp-YrWRBVaetEdqPa1AE9N3YecPTGbbkA9HM7oTdB2WL79",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Hanfia Masjid",
@@ -962,12 +468,10 @@
     "found": {
       "address": "",
       "phone": "",
-      "website": "https://www.yorkshire.com/carbrook/community/mosques/hanfia-masjid-and-islamic-cultural-centre?srsltid=AfmBOoqxeCEDVPLupjbTPlz30gd3go5kxmQszy9vkAjVplU2gjD3mg9N",
+      "website": "https://masjidbox.com/prayer-times/hanfia-masjid-and-islamic-cultural-centre",
       "postcode": "S9 1RQ"
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Yorkshire Muslim Academy",
@@ -979,41 +483,7 @@
       "website": "https://www.ymasheffield.org/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Fatima Community Centre",
-    "city": "Sheffield",
-    "query": "Fatima Community Centre Sheffield mosque UK",
-    "found": {
-      "address": "105 Brunswick Road",
-      "phone": "01142166813",
-      "website": "https://mosquefinder.co.uk/fatima-community-centre.html",
-      "postcode": "S3 9LR"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "Dar Ul Aloom Saddiqia",
-    "city": "Sheffield",
-    "query": "Dar Ul Aloom Saddiqia Sheffield mosque UK",
-    "found": {
-      "address": "24 Burngreave Road",
-      "phone": "01142701034",
-      "website": "https://www.yorkshire.com/sheffield/community/mosques/dar-ul-uloom-siddiqia-masjid?srsltid=AfmBOoqUMefXmsuoVxidsdFUq5ou9LlWTbFAFGdkG7DFsT-T1xmoPRXE",
-      "postcode": "S3 9DD"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Masjid E Madani",
@@ -1025,54 +495,7 @@
       "website": "https://www.madnijamiamasjid.com/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Jamia Dar Ul Uloom Qadiria Jillania Centre",
-    "city": "Sheffield",
-    "query": "Jamia Dar Ul Uloom Qadiria Jillania Centre Sheffield mosque UK",
-    "found": {
-      "address": "482 Barnsley Road",
-      "phone": "",
-      "website": "https://find-and-update.company-information.service.gov.uk/company/12405108/officers",
-      "postcode": "S3 9DD"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
-  },
-  {
-    "name": "Madrassa Tul Madinah",
-    "city": "Sheffield",
-    "query": "Madrassa Tul Madinah Sheffield mosque UK",
-    "found": {
-      "address": "24 Wolseley Road",
-      "phone": "",
-      "website": "https://www.madinamasjid.org.uk/",
-      "postcode": "S8 0ZU"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
-  },
-  {
-    "name": "Masjid Risalah",
-    "city": "Sheffield",
-    "query": "Masjid Risalah Sheffield mosque UK",
-    "found": {
-      "address": "51 Montgomery Terrace Road",
-      "phone": "",
-      "website": "https://www.yorkshire.com/sheffield/community/mosques/masjid-risalah?srsltid=AfmBOoqb87TCwsOEpTElqA0WVn2kx9JPmXbhvhs-JESt9JUMl9k9U-ro",
-      "postcode": "S6 3BW"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Markazi Mosque",
@@ -1084,25 +507,7 @@
       "website": "https://communitydirectory.kirklees.gov.uk/communityDirectory/organisationdetails.aspx?orgid=677",
       "postcode": "WF12 9NG"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "Masjid e Zakaria",
-    "city": "Kirklees",
-    "query": "Masjid e Zakaria Kirklees mosque UK",
-    "found": {
-      "address": "2 Chapel Street",
-      "phone": "",
-      "website": "https://www.zakariamasjid.org.uk/",
-      "postcode": "WF12 9NQ"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Jemia Mosque",
@@ -1110,27 +515,12 @@
     "query": "Jemia Mosque Rotherham mosque UK",
     "found": {
       "address": "",
-      "phone": "",
+      "phone": "07988807885",
       "website": "https://jamiamasjidabubakr.co.uk/",
       "postcode": "S65 1RN"
     },
     "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Jamia Masjid Gulzar-E-Madina",
-    "city": "Kirklees",
-    "query": "Jamia Masjid Gulzar-E-Madina Kirklees mosque UK",
-    "found": {
-      "address": "3 High Street",
-      "phone": "",
-      "website": "https://communitydirectory.kirklees.gov.uk/communityDirectory/organisationdetails.aspx?orgid=1596",
-      "postcode": "WF13 2PU"
-    },
-    "updated": [
-      "addr",
-      "web"
+      "tel"
     ]
   },
   {
@@ -1140,12 +530,10 @@
     "found": {
       "address": "",
       "phone": "",
-      "website": "https://www.yorkshire.com/rotherham/community/mosques/faizan-e-madinah-rotherham?srsltid=AfmBOorGZR9Z89ALmWHxN067luqHO9YxZLfyke2OGvppvJ9S9MzKF5jO",
+      "website": "https://www.yorkshire.com/rotherham/community/mosques/faizan-e-madinah-rotherham?srsltid=AfmBOoqqJoyrrg2dbdApQ6BVjI2q8mVfasfeZZTacIOdp0X3f8aVWll_",
       "postcode": "BD3 9LE"
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Jamia Masjid Noor-Ul-Huda",
@@ -1154,28 +542,10 @@
     "found": {
       "address": "",
       "phone": "",
-      "website": "https://www.yorkshire.com/rotherham/community/mosques/jamia-masjid-noor-ul-huda?srsltid=AfmBOort8rdiSZqi6adiBD9LocCAmF9pQtT6yWOcENBgx-vTL7l2AsBK",
+      "website": "https://www.yorkshire.com/rotherham/community/mosques/jamia-masjid-noor-ul-huda?srsltid=AfmBOop7zwHJoB-pGnQ19mp6iBskQS8lmAyEYIM2Pbfk6bqNOKcDYyvv",
       "postcode": "S61 1DL"
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Markazul Uloom Al Islamiyya",
-    "city": "Rotherham",
-    "query": "Markazul Uloom Al Islamiyya Rotherham mosque UK",
-    "found": {
-      "address": "33 Ridge Road",
-      "phone": "01709378832",
-      "website": "https://m-u-a.com/",
-      "postcode": "S65 1NS"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Jamia Masjid Abu Bakr Mosque",
@@ -1187,9 +557,7 @@
       "website": "https://jamiamasjidabubakr.co.uk/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Sheffield Grand Mosque",
@@ -1198,12 +566,10 @@
     "found": {
       "address": "",
       "phone": "",
-      "website": "https://emaantrust.mosqueprayertimes.org/",
+      "website": "https://sheffieldgrandmosque.co.uk/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Baitul Mukarram Jame Masjid",
@@ -1211,14 +577,11 @@
     "query": "Baitul Mukarram Jame Masjid Sheffield mosque UK",
     "found": {
       "address": "",
-      "phone": "01142582280",
+      "phone": "07810 444686",
       "website": "https://baitulmukarramjamemasjid.com/",
       "postcode": "S2 4NB"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Raza-E-Mustafa Mosque",
@@ -1227,25 +590,23 @@
     "found": {
       "address": "",
       "phone": "",
-      "website": "https://www.yorkshire.com/rotherham/community/mosques/raza-e-mustafa?srsltid=AfmBOoow2_JWPrAe1m0G51RDZwsIUHqy9fyd-EwWpD9sPXGV4aup06Hx",
+      "website": "https://www.yorkshire.com/rotherham/community/mosques/raza-e-mustafa?srsltid=AfmBOopTA79gVx_9HCEPAHgUb6ikTmMJ5aTGcml9XSYHeuJOJCT0fFni",
       "postcode": "S60 3NP"
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Muslim Welfare House",
     "city": "Sheffield",
     "query": "Muslim Welfare House Sheffield mosque UK",
     "found": {
-      "address": "",
+      "address": "12 Severn Road",
       "phone": "",
       "website": "https://mwhs.org.uk/",
-      "postcode": ""
+      "postcode": "S10 2SU"
     },
     "updated": [
-      "web"
+      "addr"
     ]
   },
   {
@@ -1258,10 +619,7 @@
       "website": "https://masjidhudasheff.com/",
       "postcode": "S3 7WT"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Jamia Masjid Ghausia",
@@ -1273,24 +631,7 @@
       "website": "https://en.masjidway.com/masjid/3355/prayer",
       "postcode": "S5 6HH"
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Jamia Masjid Abu Bakr Siddique",
-    "city": "Kirklees",
-    "query": "Jamia Masjid Abu Bakr Siddique Kirklees mosque UK",
-    "found": {
-      "address": "2 Ernest Street",
-      "phone": "",
-      "website": "https://abubakrmasjid.com/",
-      "postcode": "WF13 1PR"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Jamia Sulthainia Mosque",
@@ -1302,24 +643,7 @@
       "website": "https://www.sultaniadoncaster.co.uk/",
       "postcode": "DN4 5BQ"
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Masjid Uthman",
-    "city": "Rotherham",
-    "query": "Masjid Uthman Rotherham mosque UK",
-    "found": {
-      "address": "50 Milton Road",
-      "phone": "",
-      "website": "https://www.yorkshire.com/rotherham/community/mosques/masjid-uthman?srsltid=AfmBOoq0rv5aXtkr5_4dlHCM1wnTh08CroOaOdXEzESuIZMM4XgcYbGQ",
-      "postcode": "S65 1QS"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Masjid Al-Salam",
@@ -1331,26 +655,7 @@
       "website": "https://prayersconnect.com/mosques/82663236-masjid-al-salaam-rotherham-england-united-kingdom",
       "postcode": "S65 1RD"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "Ferham Islamic Cultural Centre",
-    "city": "Rotherham",
-    "query": "Ferham Islamic Cultural Centre Rotherham mosque UK",
-    "found": {
-      "address": "59 Holmes Lane",
-      "phone": "07894413789",
-      "website": "https://www.yorkshire.com/rotherham/community/mosques/ferham-islamic-cultural-centre?srsltid=AfmBOorYHuA4-t9DbTlmGnt8tdwklmY6lyW3gYnHAO16QovoDiGq7MK7",
-      "postcode": "S61 1BH"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Al-Shafeey Centre",
@@ -1359,74 +664,10 @@
     "found": {
       "address": "",
       "phone": "",
-      "website": "https://www.yorkshire.com/darnall/community/mosques/al-shafeey-centre?srsltid=AfmBOopYabwP1Pl8Yx097cZ2F1n1FHv5iSduMorbDAI1-s-TCOMs6t0i",
-      "postcode": "S9 4RX"
+      "website": "https://www.yorkshire.com/darnall/community/mosques/al-shafeey-centre?srsltid=AfmBOoqOmqHQD-TvfncvdSWj6CFehDlBMSJASsdhGo8CENTSl_T2TZrh",
+      "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Madni Jamia Masjid",
-    "city": "Sheffield",
-    "query": "Madni Jamia Masjid Sheffield mosque UK",
-    "found": {
-      "address": "24 Wolseley Road",
-      "phone": "",
-      "website": "https://www.madnijamiamasjid.com/",
-      "postcode": "S8 0ZU"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
-  },
-  {
-    "name": "Masjid Sunnah",
-    "city": "Sheffield",
-    "query": "Masjid Sunnah Sheffield mosque UK",
-    "found": {
-      "address": "18 Kirk Street",
-      "phone": "01142724600",
-      "website": "https://masjidsunnahsheffield.co.uk/",
-      "postcode": "S4 7JX"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "At-Taqwa Centre",
-    "city": "Sheffield",
-    "query": "At-Taqwa Centre Sheffield mosque UK",
-    "found": {
-      "address": "33 Andover Street",
-      "phone": "0114 278 7488",
-      "website": "https://attaqwa-masjid.co.uk/",
-      "postcode": "S3 9EE"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "Jamia Masjid Ghausia",
-    "city": "Kirklees",
-    "query": "Jamia Masjid Ghausia Kirklees mosque UK",
-    "found": {
-      "address": "73 Victoria Road",
-      "phone": "",
-      "website": "https://masjidghausia.org/",
-      "postcode": "HD1 3RT"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Islam Dewsbury",
@@ -1438,24 +679,7 @@
       "website": "https://islamdewsbury.org.uk/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Raza Education Centre",
-    "city": "Kirklees",
-    "query": "Raza Education Centre Kirklees mosque UK",
-    "found": {
-      "address": "399 Lees Hall Road",
-      "phone": "",
-      "website": "https://mosquefinder.co.uk/raza-education-centre.html",
-      "postcode": "WF12 9HB"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Masjid E Noor",
@@ -1464,12 +688,10 @@
     "found": {
       "address": "",
       "phone": "",
-      "website": "https://communitydirectory.kirklees.gov.uk/communityDirectory/organisationdetails.aspx?orgid=1630",
-      "postcode": "WF17 7RN"
+      "website": "https://www.masjid-noor.org/",
+      "postcode": "HD1 3JQ"
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Faizan E Madina Jamia Masjid",
@@ -1478,28 +700,10 @@
     "found": {
       "address": "",
       "phone": "",
-      "website": "https://mawaqit.net/en/m/faizan-e-madina-huddersfield-huddersfield-hd1-5nd-united-kingdom",
+      "website": "https://prayersconnect.com/mosques/82601062-faizan-e-madina-jamia-masjid-dewsbury-england-united-kingdom",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Masjid Usman",
-    "city": "Kirklees",
-    "query": "Masjid Usman Kirklees mosque UK",
-    "found": {
-      "address": "32 Upper George Street",
-      "phone": "01484 420029",
-      "website": "https://masjid-usman-1.wheree.com/",
-      "postcode": "HD1 4AW"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Madni Jamia Masjid",
@@ -1511,9 +715,7 @@
       "website": "https://www.madnijamiamasjid.com/",
       "postcode": "WF13 1DZ"
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Masjid Al Hidayah",
@@ -1525,9 +727,7 @@
       "website": "https://masjidalhidayah.co.uk/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Masjid Heera",
@@ -1539,9 +739,7 @@
       "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=703",
       "postcode": "WF12 9BX"
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Madrassah Islamiyah",
@@ -1550,12 +748,10 @@
     "found": {
       "address": "",
       "phone": "",
-      "website": "https://mpit.org.uk/madrassah-islamiyah/",
+      "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=2774",
       "postcode": "WF17 7NQ"
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Markazi Jamia Masjid Anwar-e-Madina",
@@ -1567,42 +763,7 @@
       "website": "https://communitydirectory.kirklees.gov.uk/communityDirectory/organisationdetails.aspx?orgid=1595",
       "postcode": "HD1 6EN"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "Masjid Ibrahim",
-    "city": "Kirklees",
-    "query": "Masjid Ibrahim Kirklees mosque UK",
-    "found": {
-      "address": "62 Halifax Old Road",
-      "phone": "01484535280",
-      "website": "https://communitydirectory.kirklees.gov.uk/communityDirectory/organisationdetails.aspx?orgid=1380",
-      "postcode": "HD1 6HG"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "Naqshbandiyya Mujaddadiyya Aslamiy",
-    "city": "Kirklees",
-    "query": "Naqshbandiyya Mujaddadiyya Aslamiy Kirklees mosque UK",
-    "found": {
-      "address": "130 North Road",
-      "phone": "07869 435562",
-      "website": "https://naqshbandiyya-mujaddadiyya-aslamiyya-spiritual-community-cen.wheree.com/",
-      "postcode": "WF13 3AQ"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Masjid Omar",
@@ -1612,11 +773,9 @@
       "address": "",
       "phone": "",
       "website": "https://www.masjidomar.org.uk/",
-      "postcode": ""
+      "postcode": "HD1 5HT"
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Masjid e Umar",
@@ -1625,12 +784,10 @@
     "found": {
       "address": "",
       "phone": "",
-      "website": "https://www.masjidomar.org.uk/",
+      "website": "https://www.masjideumar.co.uk/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Masjid Ghausia",
@@ -1642,9 +799,7 @@
       "website": "https://masjidghausia.org/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Masjid Iman",
@@ -1653,44 +808,10 @@
     "found": {
       "address": "",
       "phone": "01924 409786",
-      "website": "https://communitydirectory.kirklees.gov.uk/communityDirectory/organisationdetails.aspx?orgid=6696",
-      "postcode": ""
+      "website": "https://www.muslimgiving.org/imancommunityassociation",
+      "postcode": "WF16 0HR"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "Jamia Masjid Ghausia",
-    "city": "Kirklees",
-    "query": "Jamia Masjid Ghausia Kirklees mosque UK",
-    "found": {
-      "address": "73 Victoria Road",
-      "phone": "",
-      "website": "https://masjidghausia.org/",
-      "postcode": "HD1 3RT"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
-  },
-  {
-    "name": "Al Madina Jamia Mosque",
-    "city": "Leeds",
-    "query": "Al Madina Jamia Mosque Leeds mosque UK",
-    "found": {
-      "address": "31 Brudenell Grove",
-      "phone": "0113 275 2535",
-      "website": "https://makkahmosque.co.uk/publication/re-opening-of-al-madina-jamia-mosque/",
-      "postcode": "LS6 1HR"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Jamia Mosque Tabligh-ul-Islam",
@@ -1698,12 +819,12 @@
     "query": "Jamia Mosque Tabligh-ul-Islam Bradford mosque UK",
     "found": {
       "address": "",
-      "phone": "",
+      "phone": "012 7473 2958",
       "website": "https://mawaqit.net/en/m/jamiyat-tabligh-ul-islam-bradford-bd5-7te-united-kingdom",
-      "postcode": ""
+      "postcode": "BD1 3RU"
     },
     "updated": [
-      "web"
+      "tel"
     ]
   },
   {
@@ -1713,40 +834,24 @@
     "found": {
       "address": "",
       "phone": "",
-      "website": "https://students.leeds.ac.uk/faith-based-support/doc/prayer-contemplation-faith-based-support",
+      "website": "https://www.yorkshire.com/leeds/community/mosques/green-room-1?srsltid=AfmBOopdfxLmQ9IM5HTjtt4QchzxjyyrqVE3lUbsYFvLXwR2tz7pPKRA",
       "postcode": "LS2 9JT"
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "UKIM Iqra Centre Leeds",
-    "city": "Leeds",
-    "query": "UKIM Iqra Centre Leeds Leeds mosque UK",
-    "found": {
-      "address": "6 Carr Manor Crescent",
-      "phone": "",
-      "website": "https://www.iqracentre.org.uk/",
-      "postcode": ""
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Madrassa Mahmoodia",
     "city": "Bradford",
     "query": "Madrassa Mahmoodia Bradford mosque UK",
     "found": {
-      "address": "",
-      "phone": "",
+      "address": "26a Mill Road",
+      "phone": "07980 548142",
       "website": "https://mosquefinder.co.uk/madrassa-mahmoodia.html",
-      "postcode": "BD5 0DQ"
+      "postcode": "WF13 2HH"
     },
     "updated": [
-      "web"
+      "addr",
+      "tel"
     ]
   },
   {
@@ -1759,25 +864,7 @@
       "website": "https://www.madinatalzahra.co.uk/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Al-Mustafa Centre",
-    "city": "Bradford",
-    "query": "Al-Mustafa Centre Bradford mosque UK",
-    "found": {
-      "address": "249 Kensington Street",
-      "phone": "01274 780452",
-      "website": "https://almustafacentre.org/",
-      "postcode": "BD8 9RE"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Harrogate Islamic Association",
@@ -1789,9 +876,7 @@
       "website": "https://harrogatemuslims.org/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Leeds Swahili Cultural Community",
@@ -1803,25 +888,7 @@
       "website": "https://www.osmondthorpelane.co.uk/",
       "postcode": "LS9 9EG"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "Shipley Masjid Association",
-    "city": "Bradford",
-    "query": "Shipley Masjid Association Bradford mosque UK",
-    "found": {
-      "address": "5 Windsor Court",
-      "phone": "",
-      "website": "http://shipleymasjid.co.uk/",
-      "postcode": "BD18 3EA"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Al-Towbah Islamic Centre",
@@ -1833,10 +900,7 @@
       "website": "https://www.al-towbahislamiccentre.co.uk/",
       "postcode": "LS8 5AJ"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Faizan-e-Madina",
@@ -1848,25 +912,7 @@
       "website": "https://mawaqit.net/en/m/faizan-e-madina-halifax-hx1-4jx-united-kingdom",
       "postcode": "BD3 9LE"
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Islamic Mission College",
-    "city": "Bradford",
-    "query": "Islamic Mission College Bradford mosque UK",
-    "found": {
-      "address": "84 Queens Road",
-      "phone": "01254689609",
-      "website": "https://www.ukim.org/branches/north-england/",
-      "postcode": "BB1 1QG"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Healey Musallah",
@@ -1878,9 +924,7 @@
       "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=1609",
       "postcode": "WF16 9ND"
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Jami al-Imam Ahmed Raza Khan Barelwi",
@@ -1892,9 +936,7 @@
       "website": "https://mapcarta.com/N13129934750",
       "postcode": "LS7 3EN"
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Masjid Ar-Rashideen",
@@ -1903,27 +945,10 @@
     "found": {
       "address": "",
       "phone": "",
-      "website": "https://www.yorkshire.com/batley/community/mosques/masjid-ar-rashideen?srsltid=AfmBOoq64KZ5SsapZU5oHTECBoCLClb2w7R-LSRcGbsGV5T61xawXEMd",
+      "website": "https://www.yorkshire.com/batley/community/mosques/masjid-ar-rashideen?srsltid=AfmBOopI9u4538GaP8MkyRGiZehmqdTj64CvtJ1AVP8UrYTqhjEpyGd6",
       "postcode": "WF17 8LT"
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "The Al Noor",
-    "city": "Leeds",
-    "query": "The Al Noor Leeds mosque UK",
-    "found": {
-      "address": "40 Cowper Mount",
-      "phone": "",
-      "website": "https://mosquefinder.co.uk/the-al-noor-leeds.html",
-      "postcode": "LS9 7BB"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Al-Rahmah Faith Centre",
@@ -1935,24 +960,7 @@
       "website": "https://www.alrahmah.org.uk/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Al Madina Jam-e Masjid",
-    "city": "Leeds",
-    "query": "Al Madina Jam-e Masjid Leeds mosque UK",
-    "found": {
-      "address": "12 Rawson Place",
-      "phone": "",
-      "website": "https://prayersconnect.com/mosques/82626760-al-madina-jam-e-masjid-leeds-england-united-kingdom",
-      "postcode": "LS11 5JN"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Islam Halifax",
@@ -1964,9 +972,7 @@
       "website": "https://www.islamhalifax.com/",
       "postcode": "HX1 5DW"
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Al-Hashim Academy",
@@ -1978,25 +984,7 @@
       "website": "https://www.alhashimacademy.co.uk/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Masjid e Mahmoodiya",
-    "city": "Kirklees",
-    "query": "Masjid e Mahmoodiya Kirklees mosque UK",
-    "found": {
-      "address": "26a Mill Road",
-      "phone": "07980 548142",
-      "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=604",
-      "postcode": "WF13 2HH"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Abu Huraira Masjid",
@@ -2008,24 +996,7 @@
       "website": "https://jamiamasjidabuhuraira.co.uk/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Makkah Masjid Mosque",
-    "city": "Leeds",
-    "query": "Makkah Masjid Mosque Leeds mosque UK",
-    "found": {
-      "address": "36 Thornville Road",
-      "phone": "",
-      "website": "https://makkahmosque.co.uk/",
-      "postcode": "LS6 1JY"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Markazi Jamia Mosque",
@@ -2037,9 +1008,7 @@
       "website": "https://www.bradfordgrandmosque.co.uk/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Bradford Central Mosque",
@@ -2048,12 +1017,10 @@
     "found": {
       "address": "",
       "phone": "",
-      "website": "https://www.bradfordgrandmosque.co.uk/",
+      "website": "https://www.bradfordcentralmosque.org/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Jamia Masjid Hanfia Mosque",
@@ -2065,25 +1032,7 @@
       "website": "https://en.masjidway.com/masjid/3108/prayer",
       "postcode": "BD8 8AW"
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "The IslamBradford Centre",
-    "city": "Bradford",
-    "query": "The IslamBradford Centre Bradford mosque UK",
-    "found": {
-      "address": "1 City Road",
-      "phone": "07708 523 883",
-      "website": "https://islambradford.com/",
-      "postcode": ""
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Markazi Jamia Masjid Bilal",
@@ -2095,9 +1044,7 @@
       "website": "https://bilalmasjid.org.uk/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Central Jamia Mosque & Madrisa (Highfield Branch)",
@@ -2106,28 +1053,10 @@
     "found": {
       "address": "",
       "phone": "",
-      "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=893",
+      "website": "https://mapcarta.com/W197062685",
       "postcode": "BD21 2AT"
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Firdaws Mosque",
-    "city": "Bradford",
-    "query": "Firdaws Mosque Bradford mosque UK",
-    "found": {
-      "address": "75 Edward Street",
-      "phone": "07476476662",
-      "website": "https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/5158029/contact-information",
-      "postcode": "BD4 7BB"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Adam Masjid",
@@ -2139,24 +1068,7 @@
       "website": "https://uk.thedawoodibohras.com/bradford/",
       "postcode": "BD8 9AR"
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Al-Hikam Institute",
-    "city": "Bradford",
-    "query": "Al-Hikam Institute Bradford mosque UK",
-    "found": {
-      "address": "12 Bull Royd Lane",
-      "phone": "",
-      "website": "https://alhikaminstitute.co.uk/",
-      "postcode": "BD8 0LJ"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Jamiyat Tabligh-Ul-Islam Mosque",
@@ -2164,28 +1076,12 @@
     "query": "Jamiyat Tabligh-Ul-Islam Mosque Bradford mosque UK",
     "found": {
       "address": "",
-      "phone": "",
-      "website": "https://mawaqit.net/en/m/jamiyat-tabligh-ul-islam-bradford-bd5-7te-united-kingdom",
-      "postcode": "BD7 2ED"
+      "phone": "012 7473 2958",
+      "website": "https://www.victorstreetmasjid.co.uk/",
+      "postcode": "BD7 1NX"
     },
     "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Jamia Masjid Ghousia",
-    "city": "Leeds",
-    "query": "Jamia Masjid Ghousia Leeds mosque UK",
-    "found": {
-      "address": "7 Brooklyn Terrace",
-      "phone": "01132790172",
-      "website": "https://mosquefinder.co.uk/jamia-masjid-ghousia-leeds.html",
-      "postcode": "LS12 2BX"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
+      "tel"
     ]
   },
   {
@@ -2198,9 +1094,7 @@
       "website": "https://www.jamiatulmadinauk.net/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Faizan e Madina Masjid",
@@ -2212,25 +1106,7 @@
       "website": "https://wembleylondonproject.co.uk/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Masjid Usman",
-    "city": "Bradford",
-    "query": "Masjid Usman Bradford mosque UK",
-    "found": {
-      "address": "57 Upper Seymour Street",
-      "phone": "01274 720089",
-      "website": "https://www.yorkshire.com/bradford/community/mosques/masjid-usman?srsltid=AfmBOorEIs_GY8et77Kzdbzm2SksQjrnhnfeeX81UliOBUXnt3VKCAKl",
-      "postcode": "BD3 9LJ"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Al-Jamia Suffa-Tul-Islam Grand Mosque",
@@ -2242,9 +1118,7 @@
       "website": "https://www.bradfordgrandmosque.co.uk/",
       "postcode": "BD5 0LD"
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Masjid Nur",
@@ -2256,26 +1130,7 @@
       "website": "https://masjidnoorbradford.co.uk/",
       "postcode": "BD9 6LH"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "Ghousia Mosque",
-    "city": "Bradford",
-    "query": "Ghousia Mosque Bradford mosque UK",
-    "found": {
-      "address": "389 Leeds Road",
-      "phone": "07791 416643",
-      "website": "https://mosquefinder.co.uk/jamia-ghausia-mehria.html",
-      "postcode": "BD3 9LY"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Masjid Hilal",
@@ -2284,13 +1139,10 @@
     "found": {
       "address": "",
       "phone": "07894 332846",
-      "website": "https://www.mosquedirectory.co.uk/mosques/england/west-yorkshire/batley/kirklees/Hilal-Islamic-Centre-&-Masjid/3668",
+      "website": "https://www.hilalbcs.org/",
       "postcode": "WF17 7JU"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "The Lingfield Centre",
@@ -2302,25 +1154,7 @@
       "website": "https://www.thelingfieldcentre.org.uk/",
       "postcode": "LS17 7EL"
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Jumma Masjid",
-    "city": "Kirklees",
-    "query": "Jumma Masjid Kirklees mosque UK",
-    "found": {
-      "address": "206 Bradford Road",
-      "phone": "01924 430105",
-      "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=47",
-      "postcode": "WF13 2HD"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "South Leeds Al Noor",
@@ -2329,12 +1163,10 @@
     "found": {
       "address": "",
       "phone": "",
-      "website": "https://www.mosquepay.co.uk/4397/south-leeds-al-noor",
+      "website": "https://mapy.com/en/?source=osm&id=1250513151",
       "postcode": "LS11 8BG"
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Kashmir Muslims Welfare Associatian Leeds",
@@ -2346,9 +1178,7 @@
       "website": "https://jamiamasjidabuhuraira.co.uk/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Al-Amin Masjid",
@@ -2360,9 +1190,7 @@
       "website": "https://mosquefinder.co.uk/al-amin-mosque-leeds.html",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Shahjalal Jamia Masjid",
@@ -2374,10 +1202,7 @@
       "website": "https://www.shahjalalmasjidleeds.co.uk/",
       "postcode": "LS8 4JH"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Central Jamia Masjid Al-Haramain",
@@ -2389,23 +1214,20 @@
       "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=688",
       "postcode": "WF16 9HZ"
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Makki Mosque",
     "city": "Kirklees",
     "query": "Makki Mosque Kirklees mosque UK",
     "found": {
-      "address": "",
+      "address": "31 Kertland Street",
       "phone": "01924 235920",
       "website": "https://communitydirectory.kirklees.gov.uk/communityDirectory/organisationdetails.aspx?orgid=1590",
       "postcode": "WF16 9LH"
     },
     "updated": [
-      "tel",
-      "web"
+      "addr"
     ]
   },
   {
@@ -2416,12 +1238,9 @@
       "address": "",
       "phone": "01924 409786",
       "website": "https://communitydirectory.kirklees.gov.uk/communityDirectory/organisationdetails.aspx?orgid=6696",
-      "postcode": "WF16 9LQ"
+      "postcode": "WF16 0HR"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Madina Masjid",
@@ -2433,9 +1252,7 @@
       "website": "https://mpit.org.uk/",
       "postcode": "WF17 7NQ"
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Madressa Islamiyah",
@@ -2447,9 +1264,7 @@
       "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=2774",
       "postcode": "WF17 7NQ"
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Madressa Islamiyah (Old Madressah)",
@@ -2461,37 +1276,20 @@
       "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=2774",
       "postcode": "WF17 7NQ"
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Jamia Masjid Ghousia",
     "city": "Calderdale",
     "query": "Jamia Masjid Ghousia Calderdale mosque UK",
     "found": {
-      "address": "",
+      "address": "49 Rhodes Street",
       "phone": "",
-      "website": "https://jamia-masjid-ghousia-halifax.wheree.com/",
-      "postcode": ""
+      "website": "https://masjidbox.com/prayer-times/jamia-masjid-ghousia",
+      "postcode": "HX1 5DE"
     },
     "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Jamia Masjid Ya Rasool Allah",
-    "city": "Bradford",
-    "query": "Jamia Masjid Ya Rasool Allah Bradford mosque UK",
-    "found": {
-      "address": "84 Leeds Old Road",
-      "phone": "",
-      "website": "https://prayersconnect.com/mosques/82628249-jamia-masjid-ya-rasool-allah-bradford-england-united-kingdom",
-      "postcode": "BD3 8HX"
-    },
-    "updated": [
-      "addr",
-      "web"
+      "addr"
     ]
   },
   {
@@ -2504,10 +1302,7 @@
       "website": "https://www.muhammadimasjid.co.uk/",
       "postcode": "BD8 7RZ"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Muhammadi Masjid",
@@ -2519,26 +1314,7 @@
       "website": "https://www.muhammadimasjid.co.uk/",
       "postcode": "BD8 7RZ"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "Masjid As-Sunnah",
-    "city": "Bradford",
-    "query": "Masjid As-Sunnah Bradford mosque UK",
-    "found": {
-      "address": "3 Paternoster Lane",
-      "phone": "01274 501736",
-      "website": "https://albaseerah.com/",
-      "postcode": "BD7 3DS"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "AICP Sunniyy Centre",
@@ -2550,9 +1326,7 @@
       "website": "https://aicp.org.uk/halifax/",
       "postcode": "HX1 5JY"
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Astana Aliya Naqeebiya",
@@ -2564,40 +1338,7 @@
       "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=414",
       "postcode": "BD7 1BQ"
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Masjid Nimrah",
-    "city": "Bradford",
-    "query": "Masjid Nimrah Bradford mosque UK",
-    "found": {
-      "address": "8 Hanover Square",
-      "phone": "01274 733439",
-      "website": "https://mosquefinder.co.uk/masjid-nimra.html",
-      "postcode": "BD1 3BY"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "Madinatul Uloom",
-    "city": "Bradford",
-    "query": "Madinatul Uloom Bradford mosque UK",
-    "found": {
-      "address": "14 Nesfield Street",
-      "phone": "",
-      "website": "https://www.yorkshire.com/bradford/community/mosques/madinatul-uloom-islamic-center-jamea-mosque?srsltid=AfmBOoqm-vqFaQeS6aTs3XYyrUWN7zgV6FHnCf4EvM4YJRG0Ov_WUr7q",
-      "postcode": "BD1 3ET"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Jamia Masjid Faizan E Attar",
@@ -2606,43 +1347,10 @@
     "found": {
       "address": "",
       "phone": "",
-      "website": "https://www.yorkshire.com/bradford/community/mosques/faizan-e-attar-masjid-bd1-madrassah-tul-madina-dawat-e-islami-uk?srsltid=AfmBOorBad2Vhex0hwaIKM4ITnz0zE0f_1vR0qDTwCOsMcueseHNZDGh",
-      "postcode": ""
+      "website": "https://www.yorkshire.com/bradford/community/mosques/faizan-e-attar-masjid-bd1-madrassah-tul-madina-dawat-e-islami-uk?srsltid=AfmBOopx-UL4MFk5MQWT5GuKrhTp9zlGF5VvB7dGr2e5mieVoxj8FPqT",
+      "postcode": "BD1 5JD"
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Tawakkulia Jamia Masjid & Islamia Madrasa",
-    "city": "Bradford",
-    "query": "Tawakkulia Jamia Masjid & Islamia Madrasa Bradford mosque UK",
-    "found": {
-      "address": "48 Cornwall Road",
-      "phone": "",
-      "website": "https://www.tawakkulia.com/masjid/",
-      "postcode": "BD8 7JN"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
-  },
-  {
-    "name": "Masjid Nusrat Ul Islam",
-    "city": "Bradford",
-    "query": "Masjid Nusrat Ul Islam Bradford mosque UK",
-    "found": {
-      "address": "98 Preston Street",
-      "phone": "01274 575919",
-      "website": "https://www.mosquedirectory.co.uk/mosques/england/west-yorkshire/bradford/listerhills/Nusrat-e-Islami-Mosque-Bradford-West-Yorkshire/1209",
-      "postcode": "BD7 1JE"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Central Jamia Mosque",
@@ -2654,55 +1362,7 @@
       "website": "https://www.bradfordgrandmosque.co.uk/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Ghausia Mehria",
-    "city": "Bradford",
-    "query": "Ghausia Mehria Bradford mosque UK",
-    "found": {
-      "address": "389 Leeds Road",
-      "phone": "07791 416643",
-      "website": "https://www.mosquedirectory.co.uk/mosques/england/west-yorkshire/bradford/bradford-moor/Jamia-Ghausia-Mehria-Bradford-West-Yorkshire/3499",
-      "postcode": "BD3 9LY"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "Ghausia Chistia",
-    "city": "Bradford",
-    "query": "Ghausia Chistia Bradford mosque UK",
-    "found": {
-      "address": "39 Undercliffe Lane",
-      "phone": "",
-      "website": "https://prayersconnect.com/mosques/82683953-ghausia-chistia-islamic-trust-acadamy-bradford-england-united-kingdom",
-      "postcode": ""
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
-  },
-  {
-    "name": "Jamia Muhammadiyah Qadriyah",
-    "city": "Bradford",
-    "query": "Jamia Muhammadiyah Qadriyah Bradford mosque UK",
-    "found": {
-      "address": "179 Otley Road",
-      "phone": "",
-      "website": "https://mosquefinder.co.uk/jamia-muhammadiyah-qadriyah.html",
-      "postcode": "BD3 0HX"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Jamiyat Tabligh-ul-Islam Mosque",
@@ -2711,27 +1371,23 @@
     "found": {
       "address": "",
       "phone": "012 7473 2958",
-      "website": "https://mawaqit.net/en/m/jamiyat-tabligh-ul-islam-bradford-bd5-7te-united-kingdom",
+      "website": "https://www.victorstreetmasjid.co.uk/",
       "postcode": "BD7 2ED"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Tabligh-ul-Islam Mosque",
     "city": "Bradford",
     "query": "Tabligh-ul-Islam Mosque Bradford mosque UK",
     "found": {
-      "address": "",
-      "phone": "012 7473 2958",
-      "website": "https://www.accessable.co.uk/city-of-bradford-metropolitan-district-council/access-guides/jamiyat-tabligh-ul-islam-bradford-central-mosque",
-      "postcode": "BD1 3RU"
+      "address": "1 Northside Terrace",
+      "phone": "07808 321950",
+      "website": "https://www.victorstreetmasjid.co.uk/",
+      "postcode": "BD7 1NX"
     },
     "updated": [
-      "tel",
-      "web"
+      "addr"
     ]
   },
   {
@@ -2744,39 +1400,7 @@
       "website": "https://www.alhuda-masjid.co.uk/",
       "postcode": "BD7 2AA"
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Jamia Masjid Milat E Islamia",
-    "city": "Bradford",
-    "query": "Jamia Masjid Milat E Islamia Bradford mosque UK",
-    "found": {
-      "address": "15 Ivanhoe Road",
-      "phone": "",
-      "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=449",
-      "postcode": "BD7 3HY"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
-  },
-  {
-    "name": "UKIM Byron Masjid",
-    "city": "Bradford",
-    "query": "UKIM Byron Masjid Bradford mosque UK",
-    "found": {
-      "address": "3 Byron Street",
-      "phone": "",
-      "website": "https://www.ukim.org/branches/north-england/",
-      "postcode": "BD3 0AD"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Masjid-E-Quba",
@@ -2785,12 +1409,10 @@
     "found": {
       "address": "",
       "phone": "",
-      "website": "https://www.yorkshire.com/bradford/community/mosques/-masjid-e-quba?srsltid=AfmBOorp1ImUQ9GljhQX3tMDjJf17zkEc5napMzgf31VGL1ldraAXNfG",
+      "website": "https://www.yorkshire.com/bradford/community/mosques/-masjid-e-quba?srsltid=AfmBOooLjqtVf89WxGRZbBwXRwfE6aDlOYOB-HKENH1oGeyIJYWGJZsZ",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Jamia Abu Hanifa Mosque",
@@ -2802,9 +1424,7 @@
       "website": "https://mabuhanifa.org.uk/",
       "postcode": "BD3 0PP"
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Jamiyat Tabligh-ul-Islam Mosque",
@@ -2813,13 +1433,10 @@
     "found": {
       "address": "",
       "phone": "012 7473 2958",
-      "website": "https://mawaqit.net/en/m/jamiyat-tabligh-ul-islam-bradford-bd5-7te-united-kingdom",
-      "postcode": "BD7 1NX"
+      "website": "https://www.victorstreetmasjid.co.uk/",
+      "postcode": "BD1 3RU"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Jamia Mosque Tabbligh-Ul-Islam",
@@ -2827,14 +1444,11 @@
     "query": "Jamia Mosque Tabbligh-Ul-Islam Bradford mosque UK",
     "found": {
       "address": "",
-      "phone": "07455715298",
-      "website": "https://mawaqit.net/en/m/jamiyat-tabligh-ul-islam-bradford-bd5-7te-united-kingdom",
-      "postcode": "BD1 3RU"
+      "phone": "",
+      "website": "https://www.victorstreetmasjid.co.uk/",
+      "postcode": ""
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Jamiya Masjid Tabligh-Ul-Islam",
@@ -2846,24 +1460,7 @@
       "website": "https://www.victorstreetmasjid.co.uk/",
       "postcode": "BD7 1NX"
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Al-Hira Islamic Markaz",
-    "city": "Bradford",
-    "query": "Al-Hira Islamic Markaz Bradford mosque UK",
-    "found": {
-      "address": "4 Marsh Street",
-      "phone": "",
-      "website": "https://alhiraislamiccentre.org/",
-      "postcode": "BD5 9NE"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Sultan Bahu Masjid",
@@ -2875,39 +1472,7 @@
       "website": "https://sultanbahubradford.co.uk/prayertimes/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Girlington Muslim Welfare Association",
-    "city": "Bradford",
-    "query": "Girlington Muslim Welfare Association Bradford mosque UK",
-    "found": {
-      "address": "182a Durham Road",
-      "phone": "",
-      "website": "https://www.masjid-e-umar.com/",
-      "postcode": "BD8 9HU"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
-  },
-  {
-    "name": "Masjid Umar",
-    "city": "Bradford",
-    "query": "Masjid Umar Bradford mosque UK",
-    "found": {
-      "address": "182a Durham Road",
-      "phone": "",
-      "website": "https://www.masjid-e-umar.com/",
-      "postcode": "BD8 9HU"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Jamiyat Tabligh-Ul-Islam Mosque",
@@ -2916,13 +1481,10 @@
     "found": {
       "address": "",
       "phone": "012 7473 2958",
-      "website": "https://mawaqit.net/en/m/jamiyat-tabligh-ul-islam-bradford-bd5-7te-united-kingdom",
-      "postcode": "BD7 2ED"
+      "website": "https://www.victorstreetmasjid.co.uk/",
+      "postcode": "BD1 3RU"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Mazhar E-Islam Ghousia",
@@ -2931,12 +1493,10 @@
     "found": {
       "address": "",
       "phone": "",
-      "website": "https://www.yorkshire.com/wibsey/community/mosques/mazhar-e-islam-ghousia?srsltid=AfmBOorQlSh_wz_uIAVSicstboihSDvjuKt5TxMVAoiibHpSqlAa2vKR",
+      "website": "https://www.yorkshire.com/wibsey/community/mosques/mazhar-e-islam-ghousia?srsltid=AfmBOor2V_9g7m1c8ox-Dib165rHCkdcNR_pvw9q5IDI8ad6iLwq6I2n",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Umm ul Qura Islamic Centre",
@@ -2948,24 +1508,7 @@
       "website": "https://ummulqura.org.uk/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Madrassah Misbahul Uloom",
-    "city": "Bradford",
-    "query": "Madrassah Misbahul Uloom Bradford mosque UK",
-    "found": {
-      "address": "27 Temple Street",
-      "phone": "",
-      "website": "https://prayersconnect.com/mosques/82602165-madrassah-misbahul-uloom-bradford-england-united-kingdom",
-      "postcode": "BD9 4PR"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Islamic Center Auradey Naziria",
@@ -2975,26 +1518,9 @@
       "address": "",
       "phone": "",
       "website": "https://prayersconnect.com/mosques/82688579-islamic-center-auradey-naziria-bradford-england-united-kingdom",
-      "postcode": ""
+      "postcode": "BD8 9PA"
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Jamia Usmania Mosque",
-    "city": "Bradford",
-    "query": "Jamia Usmania Mosque Bradford mosque UK",
-    "found": {
-      "address": "394 Heaton Road",
-      "phone": "",
-      "website": "https://jamiausmaniamosque.org/",
-      "postcode": "BD9 4RR"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Noor-ul-Islam Mosque",
@@ -3006,26 +1532,7 @@
       "website": "http://www.masjidnoorulislam.co.uk/",
       "postcode": "BD7 3AE"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "Shipley Masjid",
-    "city": "Bradford",
-    "query": "Shipley Masjid Bradford mosque UK",
-    "found": {
-      "address": "5 Windsor Court",
-      "phone": "07438 082359",
-      "website": "http://shipleymasjid.co.uk/",
-      "postcode": "BD18 3DL"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Jamiyat Tabligh-Ul-Islam Mosque",
@@ -3034,13 +1541,10 @@
     "found": {
       "address": "",
       "phone": "012 7473 2958",
-      "website": "https://www.victorstreetmasjid.co.uk/",
+      "website": "https://mawaqit.net/en/m/jamiyat-tabligh-ul-islam-bradford-bd5-7te-united-kingdom",
       "postcode": "BD7 2ED"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Masjid-At-Taqwa",
@@ -3052,25 +1556,7 @@
       "website": "https://masjidat-taqwa.co.uk/",
       "postcode": "BD7 4AG"
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Jamia Masjid Shan-E-Islam",
-    "city": "Bradford",
-    "query": "Jamia Masjid Shan-E-Islam Bradford mosque UK",
-    "found": {
-      "address": "80 Beamsley Road",
-      "phone": "07895 982345",
-      "website": "https://shaneislam.co.uk/",
-      "postcode": "BD18 2DR"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Faizan E Raza Masjid",
@@ -3079,58 +1565,10 @@
     "found": {
       "address": "",
       "phone": "",
-      "website": "https://www.yorkshire.com/wibsey/community/mosques/faizan-e-raza-masjid-bd6-dawat-e-islami-uk?srsltid=AfmBOorNzPEQjmkxplqYY00NeW6XtwZcid0KzXTQqSaEl0JKeeLFYBqz",
+      "website": "https://www.yorkshire.com/wibsey/community/mosques/faizan-e-raza-masjid-bd6-dawat-e-islami-uk?srsltid=AfmBOorNvMRd2oXLEvHB62bMqsM4kU10LMp1meNf2zNux2kdGToaOGoN",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Bayt Al Qaim Centre",
-    "city": "Bradford",
-    "query": "Bayt Al Qaim Centre Bradford mosque UK",
-    "found": {
-      "address": "145 Bolton Lane",
-      "phone": "",
-      "website": "https://www.baqic.co.uk/",
-      "postcode": "BD2 4AT"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
-  },
-  {
-    "name": "Jamia Masjid Naqshbandia Aslamia",
-    "city": "Bradford",
-    "query": "Jamia Masjid Naqshbandia Aslamia Bradford mosque UK",
-    "found": {
-      "address": "63 Tile Street",
-      "phone": "",
-      "website": "https://naqshbandiaaslamiabradford.org.uk/",
-      "postcode": "BD8 8NX"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
-  },
-  {
-    "name": "Masjid E Hamza",
-    "city": "Bradford",
-    "query": "Masjid E Hamza Bradford mosque UK",
-    "found": {
-      "address": "42 Woodview Terrace",
-      "phone": "01264 491088",
-      "website": "https://en.masjidway.com/masjid/3053/prayer",
-      "postcode": "BD8 7AH"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Mohiuddin Institute",
@@ -3142,40 +1580,7 @@
       "website": "https://www.mohiuddintrust.com/project/mohiuddin-islamic-centres/",
       "postcode": "BD5 0LD"
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Jaamiah Khatamur Rabiyeen",
-    "city": "Bradford",
-    "query": "Jaamiah Khatamur Rabiyeen Bradford mosque UK",
-    "found": {
-      "address": "17 Spring Gardens",
-      "phone": "01274 733150",
-      "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=196",
-      "postcode": "BD1 3EJ"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "Sufat-ul-Islam Association",
-    "city": "Bradford",
-    "query": "Sufat-ul-Islam Association Bradford mosque UK",
-    "found": {
-      "address": "158 Sunbridge Road",
-      "phone": "",
-      "website": "https://www.bradfordgrandmosque.co.uk/",
-      "postcode": "BD1 2HA"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Bradford Islamic Centre",
@@ -3187,9 +1592,7 @@
       "website": "https://www.bradfordgrandmosque.co.uk/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Madrasah Abdullah Bin Masood",
@@ -3198,13 +1601,10 @@
     "found": {
       "address": "",
       "phone": "01274 959259",
-      "website": "https://www.yorkshire.com/saltaire/community/mosques/madrasah-abdullah-bin-masood-ra?srsltid=AfmBOopAFdxbCWUl_oiSpgsEh6_tIYEUccskd0QRMNITHEB589cSi-OX",
+      "website": "https://www.yorkshire.com/saltaire/community/mosques/madrasah-abdullah-bin-masood-ra?srsltid=AfmBOorr6eQ0uuJGBEsJlyqr4UmQnF1CN_MsRw0d6rL0FaeNmdihBvt7",
       "postcode": "BD9 4EZ"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Faizan e Makkah Masjid",
@@ -3216,84 +1616,20 @@
       "website": "https://mawaqit.net/en/m/faizan-e-makkah-bradford-bd9-5ab-united-kingdom-1",
       "postcode": "BD9 5AB"
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Jalalabad Islamic Association",
-    "city": "Bradford",
-    "query": "Jalalabad Islamic Association Bradford mosque UK",
-    "found": {
-      "address": "1 Barlow Street",
-      "phone": "01274 722941",
-      "website": "https://www.mosquedirectory.co.uk/mosques/england/west-yorkshire/bradford/bradford-central/Jalalabad-Islamic-Centre-&-Jamia-Mosque-Bradford-West-Yorkshire/537",
-      "postcode": "BD3 9DD"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "Jamia Muhammadia",
-    "city": "Bradford",
-    "query": "Jamia Muhammadia Bradford mosque UK",
-    "found": {
-      "address": "96 Lapage Street",
-      "phone": "",
-      "website": "https://muhammadia.org.uk/",
-      "postcode": "BD3 8AU"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
-  },
-  {
-    "name": "Jamia Islamia Rizvia Mosque",
-    "city": "Bradford",
-    "query": "Jamia Islamia Rizvia Mosque Bradford mosque UK",
-    "found": {
-      "address": "119 Southfield Lane",
-      "phone": "07861385685",
-      "website": "https://www.yorkshire.com/wibsey/community/mosques/jamia-islamia-rizvia-mosque?srsltid=AfmBOorYA1YsSgcRped-WJCsvgVcCV7-p95hzSjTNFS4au_fTwxR7EXl",
-      "postcode": "BD5 9HQ"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Al-Amin Masjid",
     "city": "Bradford",
     "query": "Al-Amin Masjid Bradford mosque UK",
     "found": {
-      "address": "",
+      "address": "53 Kensington Street",
       "phone": "",
       "website": "https://en.masjidway.com/masjid/3048/prayer",
       "postcode": "BD3 8QZ"
     },
     "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Makki Masjid",
-    "city": "Leeds",
-    "query": "Makki Masjid Leeds mosque UK",
-    "found": {
-      "address": "36 Thornville Road",
-      "phone": "",
-      "website": "https://makkimasjid.co.uk/",
-      "postcode": "LS6 1JY"
-    },
-    "updated": [
-      "addr",
-      "web"
+      "addr"
     ]
   },
   {
@@ -3301,13 +1637,14 @@
     "city": "Calderdale",
     "query": "Al Jamia Al Zahra Calderdale mosque UK",
     "found": {
-      "address": "",
-      "phone": "",
+      "address": "18 Francis Street",
+      "phone": "01422 380540",
       "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=820",
       "postcode": "HX1 5JY"
     },
     "updated": [
-      "web"
+      "addr",
+      "tel"
     ]
   },
   {
@@ -3320,25 +1657,7 @@
       "website": "https://mapcarta.com/W1428114531",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Pakistan Muslim Welfare Society",
-    "city": "Kirklees",
-    "query": "Pakistan Muslim Welfare Society Kirklees mosque UK",
-    "found": {
-      "address": "1 Whitaker Street",
-      "phone": "01924 472215",
-      "website": "https://communitydirectory.kirklees.gov.uk/communityDirectory/organisationdetails.aspx?orgid=1379",
-      "postcode": "WF17 5AQ"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Madresah Taleemudeen",
@@ -3347,12 +1666,10 @@
     "found": {
       "address": "",
       "phone": "",
-      "website": "https://www.yorkshire.com/batley/community/mosques/madresah-taleemudeen?srsltid=AfmBOoo_-aDVTs8RgUZ_o6Stl7JAZGsSHVcaGFEfGxMRhEk9HlksFCB4",
+      "website": "https://communitydirectory.kirklees.gov.uk/communityDirectory/organisationdetails.aspx?orgid=1368",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Ummah Masjid",
@@ -3364,40 +1681,7 @@
       "website": "https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/5168118/full-print",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Masjid Al-Hira",
-    "city": "Kirklees",
-    "query": "Masjid Al-Hira Kirklees mosque UK",
-    "found": {
-      "address": "2 William Street",
-      "phone": "",
-      "website": "https://communitydirectory.kirklees.gov.uk/communityDirectory/organisationdetails.aspx?orgid=6697",
-      "postcode": "WF12 9BX"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
-  },
-  {
-    "name": "Madressa-E-Zinatul Islam",
-    "city": "Kirklees",
-    "query": "Madressa-E-Zinatul Islam Kirklees mosque UK",
-    "found": {
-      "address": "78 Taylor Street",
-      "phone": "01924 445456",
-      "website": "https://communitydirectory.kirklees.gov.uk/communityDirectory/organisationdetails.aspx?orgid=151",
-      "postcode": "WF17 5BA"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Makki Masjid",
@@ -3409,41 +1693,7 @@
       "website": "https://mawaqit.net/en/makki-masjid-halifax",
       "postcode": "HX1 3XN"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "Faizan e Madina",
-    "city": "Leeds",
-    "query": "Faizan e Madina Leeds mosque UK",
-    "found": {
-      "address": "62 Francis Street",
-      "phone": "",
-      "website": "https://dawateislami.co.uk/projects/faizan-e-madina-leeds",
-      "postcode": "LS7 4BU"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
-  },
-  {
-    "name": "Jamia Ghausia Madressa",
-    "city": "Kirklees",
-    "query": "Jamia Ghausia Madressa Kirklees mosque UK",
-    "found": {
-      "address": "1 Whitaker Street",
-      "phone": "07878613091",
-      "website": "https://masjidghausia.org/",
-      "postcode": "WF17 5AQ"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Abuzahra Mosque",
@@ -3455,24 +1705,7 @@
       "website": "https://abu-zahra-foundation.wheree.com/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Madinah Mosque",
-    "city": "Bradford",
-    "query": "Madinah Mosque Bradford mosque UK",
-    "found": {
-      "address": "101 Thornbury Road",
-      "phone": "",
-      "website": "https://www.madinatalzahra.co.uk/",
-      "postcode": "BD3 8SA"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Madrasah Ghosia",
@@ -3481,27 +1714,10 @@
     "found": {
       "address": "",
       "phone": "",
-      "website": "https://www.yorkshire.com/halifax/community/mosques/madrasah-ghosia-islamic-center-hanson-lane-halifax?srsltid=AfmBOoqeoMjXuy9-XAK0aSNASQPLKKfI2B3Z89WnbAA2JAQbaZGv9dK_",
+      "website": "https://www.yorkshire.com/halifax/community/mosques/madrasah-ghosia-islamic-center-hanson-lane-halifax?srsltid=AfmBOoo2kxzZVoMOwAkanYEjrlN-jNscnUbPHYrSjrYsADgxLpn4k4-I",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Jamia Al Saeed",
-    "city": "Kirklees",
-    "query": "Jamia Al Saeed Kirklees mosque UK",
-    "found": {
-      "address": "160 Bromley Street",
-      "phone": "",
-      "website": "https://communitydirectory.kirklees.gov.uk/communityDirectory/organisationdetails.aspx?orgid=4652",
-      "postcode": "WF17 6LB"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Jami' Masjid Noorani",
@@ -3510,28 +1726,10 @@
     "found": {
       "address": "",
       "phone": "",
-      "website": "http://nooranimasjid.co.uk/",
+      "website": "https://www.halifaxcourier.co.uk/news/people/new-state-of-the-art-mosque-for-halifax-approved-5371765",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Masjid Taqwa Park Road",
-    "city": "Kirklees",
-    "query": "Masjid Taqwa Park Road Kirklees mosque UK",
-    "found": {
-      "address": "13 Park Road",
-      "phone": "07974 412347",
-      "website": "https://www.yorkshire.com/batley/community/mosques/masjid-taqwa-park-road?srsltid=AfmBOoqQBkr0a2Xtkk7TnWiMu4DYw_ccjXpfAnxCaxIMZKv3A0y6XFd1",
-      "postcode": "WF17 5LP"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Dawatal Islam Mosque",
@@ -3543,40 +1741,7 @@
       "website": "https://dawatalislambatley.org.uk/",
       "postcode": "WF17 6PE"
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Madressa Islamia Mosque",
-    "city": "Hyndburn",
-    "query": "Madressa Islamia Mosque Hyndburn mosque UK",
-    "found": {
-      "address": "2 Segar Street",
-      "phone": "",
-      "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=356",
-      "postcode": "BB6 7DR"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
-  },
-  {
-    "name": "Ghousia Masjid mosque",
-    "city": "Hyndburn",
-    "query": "Ghousia Masjid mosque Hyndburn mosque UK",
-    "found": {
-      "address": "1 Park Street",
-      "phone": "01254 236281",
-      "website": "http://www.grjmasjid.co.uk/",
-      "postcode": "BB6 7BP"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Masjid-al-Momineen",
@@ -3584,12 +1749,12 @@
     "query": "Masjid-al-Momineen Blackburn mosque UK",
     "found": {
       "address": "",
-      "phone": "",
+      "phone": "01254691538",
       "website": "https://www.al-momineen.org/",
-      "postcode": ""
+      "postcode": "BB1 6LX"
     },
     "updated": [
-      "web"
+      "tel"
     ]
   },
   {
@@ -3602,9 +1767,7 @@
       "website": "https://www.al-huda.org.uk/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Masjide Moorul",
@@ -3613,12 +1776,10 @@
     "found": {
       "address": "",
       "phone": "",
-      "website": "https://masjide-noorul-islam-blackburn.wheree.com/",
-      "postcode": ""
+      "website": "https://mymasjid.uk/live/masjidenoorulislam",
+      "postcode": "BB1 1TG"
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Gausia Madrassah",
@@ -3630,42 +1791,7 @@
       "website": "https://www.mosquedirectory.co.uk/mosques/england/lancashire/nelson/pendle/Ghausia-Madrassah-Nelson-Lancashire/3497",
       "postcode": "BB9 7LU"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "Labbayak Ya RasoolAllah Masjid",
-    "city": "Pendle",
-    "query": "Labbayak Ya RasoolAllah Masjid Pendle mosque UK",
-    "found": {
-      "address": "39 Brunswick Street",
-      "phone": "07437 445853",
-      "website": "https://www.mosquedirectory.co.uk/mosques/england/lancashire/nelson/pendle/Labbayk-Ya-Rasool-Masjid-Nelson-Lancashire/3518",
-      "postcode": "BB9 9DY"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "Baitul Mukarram Mosque & Islamic Center",
-    "city": "Rossendale",
-    "query": "Baitul Mukarram Mosque & Islamic Center Rossendale mosque UK",
-    "found": {
-      "address": "3 Union Street",
-      "phone": "01706 223940",
-      "website": "https://www.mosquedirectory.co.uk/mosques/england/lancashire/rossendale/haslingden/Bait-ul-Mukarram-Mosque-and-Islamic-Centre-Haslingden-Rossendale-Lancashire/155",
-      "postcode": "BB4 5QD"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Khanqah",
@@ -3677,9 +1803,7 @@
       "website": "https://www.khanqahblackburn.co.uk/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Foresterhill Mosque",
@@ -3689,11 +1813,9 @@
       "address": "",
       "phone": "",
       "website": "https://prayersconnect.com/mosques/82640831-foresterhill-mosque-aberdeen-scotland-united-kingdom",
-      "postcode": "AB25 2ZN"
+      "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Craigavon Mosque",
@@ -3705,9 +1827,7 @@
       "website": "https://prayersconnect.com/mosques/82638556-craigavon-mosque-craigavon-northern-ireland-united-kingdom",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Razvia Masjid",
@@ -3719,10 +1839,7 @@
       "website": "https://www.razviamosque.co.uk/",
       "postcode": "SO14 0BH"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Bournemouth Islamic Centre & Central Mosque",
@@ -3734,10 +1851,7 @@
       "website": "https://masjidbox.com/prayer-times/bournemouth-islamic-centre-and-central-mosque",
       "postcode": "BH2 6JJ"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Bashir Ahmed Masjid",
@@ -3749,40 +1863,7 @@
       "website": "https://www.bashirahmedmasjid.co.uk/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Bournemouth Jamei Mosque",
-    "city": "Bournemouth",
-    "query": "Bournemouth Jamei Mosque Bournemouth mosque UK",
-    "found": {
-      "address": "2C Cranmer Road",
-      "phone": "",
-      "website": "https://www.bournemouthjameimosque.co.uk/",
-      "postcode": "BH9 1JT"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
-  },
-  {
-    "name": "Bilal Mosque",
-    "city": "Cardiff",
-    "query": "Bilal Mosque Cardiff mosque UK",
-    "found": {
-      "address": "63 Severn Road",
-      "phone": "029 2039 7640",
-      "website": "https://www.mosquedirectory.co.uk/mosques/wales/glamorgan/cardiff/canton/Jamia-Masjid-Bilal-Canton-Cardiff-Glamorgan/616",
-      "postcode": "CF11 9EA"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Noor El Islam Mosque",
@@ -3794,9 +1875,7 @@
       "website": "https://mawaqit.net/en/m/cardiffmosque",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Trowbridge Mosque",
@@ -3808,52 +1887,20 @@
       "website": "https://www.trowbridgemasjid.org/",
       "postcode": "BA14 7AD"
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Shah Jalal Jame Masjid",
     "city": "Bristol",
     "query": "Shah Jalal Jame Masjid Bristol mosque UK",
     "found": {
-      "address": "",
+      "address": "470 Stapleton Road",
       "phone": "",
       "website": "https://shahjalalmosquebristol.co.uk/",
-      "postcode": ""
+      "postcode": "BS5 6PE"
     },
     "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Masjid Abubakr",
-    "city": "Cardiff",
-    "query": "Masjid Abubakr Cardiff mosque UK",
-    "found": {
-      "address": "2A Clydach Street",
-      "phone": "",
-      "website": "https://mawaqit.net/en/masjid-abubakr-cardiff-cf11-7af-united-kingdom",
-      "postcode": "CF11 7AE"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
-  },
-  {
-    "name": "Madina Mosque",
-    "city": "Cardiff",
-    "query": "Madina Mosque Cardiff mosque UK",
-    "found": {
-      "address": "13 Lucas Street",
-      "phone": "",
-      "website": "https://www.madinamosquecardiff.co.uk/",
-      "postcode": "CF24 4NZ"
-    },
-    "updated": [
-      "addr",
-      "web"
+      "addr"
     ]
   },
   {
@@ -3866,10 +1913,7 @@
       "website": "https://madnicardiff.co.uk/",
       "postcode": "CF24 4SE"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Rabbaniah Islamic Cultural Centre",
@@ -3881,9 +1925,7 @@
       "website": "https://mawaqit.net/en/rabbaniah-islamic-cultural-centre-cardiff-cf11-6qp-united-kingdom",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Al-Ikhlas Centre",
@@ -3895,54 +1937,20 @@
       "website": "https://alikhlas.org.uk/",
       "postcode": ""
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "Exeter Mosque",
-    "city": "Exeter",
-    "query": "Exeter Mosque Exeter mosque UK",
-    "found": {
-      "address": "15 York Road",
-      "phone": "",
-      "website": "https://exetermosque.org.uk/",
-      "postcode": "EX4 6PG"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
-  },
-  {
-    "name": "Masjid Albirr",
-    "city": "Warwick",
-    "query": "Masjid Albirr Warwick mosque UK",
-    "found": {
-      "address": "79 Maybury Road",
-      "phone": "01843 229 484",
-      "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=2801",
-      "postcode": "GU21 5JH"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Jamia Masjid St Ives Mosque",
     "city": "Huntingdonshire",
     "query": "Jamia Masjid St Ives Mosque Huntingdonshire mosque UK",
     "found": {
-      "address": "",
+      "address": "22 Needingworth Road",
       "phone": "",
-      "website": "https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/5220945/full-print",
-      "postcode": ""
+      "website": "https://www.huntingdonjamiamosque.com/",
+      "postcode": "PE27 5JN"
     },
     "updated": [
-      "web"
+      "addr"
     ]
   },
   {
@@ -3955,9 +1963,7 @@
       "website": "https://masjidbox.com/prayer-times/hanfia-ghousia-masjid",
       "postcode": "MK40 4JT"
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Boston Mosque & Islamic Centre",
@@ -3969,9 +1975,7 @@
       "website": "https://bostonmosque.org/",
       "postcode": "PE21 9BU"
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Beaumont Leys Muslims",
@@ -3983,9 +1987,7 @@
       "website": "https://blmuslims.org/",
       "postcode": "LE4 0SU"
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "DMU Prayer room",
@@ -3997,24 +1999,19 @@
       "website": "https://www.dmu.ac.uk/current-students/student-support/wellbeing-disability/chaplaincy-spiritual-support/muslim-chaplaincy/prayer-rooms.aspx",
       "postcode": "LE2 7GZ"
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "UoN Prayer Room (Xu Yafen Building)",
     "city": "",
-    "query": "UoN Prayer Room (Xu Yafen Building) mosque UK",
+    "query": "UoN Prayer Room (Xu Yafen Building) NG7 2TU mosque UK",
     "found": {
       "address": "",
       "phone": "",
       "website": "https://www.nottingham.ac.uk/chaplaincy/prayer-rooms-and-faith-spaces/prayer-meeting-rooms.aspx",
       "postcode": "NG7 2TU"
     },
-    "updated": [
-      "pc",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "UoN Prayer Room Portland Building",
@@ -4026,9 +2023,7 @@
       "website": "https://www.nottsisoc.co.uk/prayer-rooms/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "NTU Prayer Room",
@@ -4040,9 +2035,7 @@
       "website": "https://www.ntu.ac.uk/about-us/faith-and-chaplaincy/places-of-worship",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Masjid-E-Bilaal",
@@ -4050,61 +2043,11 @@
     "query": "Masjid-E-Bilaal Nottingham mosque UK",
     "found": {
       "address": "",
-      "phone": "0115 947 3910",
+      "phone": "",
       "website": "https://masjidebilaal.co.uk/",
       "postcode": "NG7 2ET"
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "Faiz e Raza",
-    "city": "Leicester",
-    "query": "Faiz e Raza Leicester mosque UK",
-    "found": {
-      "address": "341 Humberstone Road",
-      "phone": "",
-      "website": "https://www.faizerazaacademy.org.uk/",
-      "postcode": "LE5 3DF"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
-  },
-  {
-    "name": "Thornaby Mosque",
-    "city": "Stockton-on-Tees",
-    "query": "Thornaby Mosque Stockton-on-Tees mosque UK",
-    "found": {
-      "address": "129 Westbury Street",
-      "phone": "01642 641218",
-      "website": "https://en.masjidway.com/masjid/3144/prayer",
-      "postcode": "TS17 6NF"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "Shahjal Mosque",
-    "city": "Newcastle upon Tyne",
-    "query": "Shahjal Mosque Newcastle upon Tyne mosque UK",
-    "found": {
-      "address": "26 Sceptre Street",
-      "phone": "07951762689",
-      "website": "https://shahjalalmasjids.co.uk/",
-      "postcode": "NE4 6PR"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "New Abu Bakr Mosque",
@@ -4116,40 +2059,7 @@
       "website": "https://abubakr.org.uk/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Sunderland Jami-Masjid",
-    "city": "Sunderland",
-    "query": "Sunderland Jami-Masjid Sunderland mosque UK",
-    "found": {
-      "address": "75 Chester Road",
-      "phone": "01915658708",
-      "website": "https://mosquefinder.co.uk/sunderland-central-jami-mosque.html",
-      "postcode": "SR2 7PN"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "Heaton Mosque & Islamic Centre",
-    "city": "Newcastle upon Tyne",
-    "query": "Heaton Mosque & Islamic Centre Newcastle upon Tyne mosque UK",
-    "found": {
-      "address": "1 Rothbury Terrace",
-      "phone": "",
-      "website": "https://www.newcastlemosque.co.uk/",
-      "postcode": "NE6 5XH"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Newcasyle Central Mosque",
@@ -4157,105 +2067,12 @@
     "query": "Newcasyle Central Mosque Newcastle upon Tyne mosque UK",
     "found": {
       "address": "",
-      "phone": "",
+      "phone": "01912730262",
       "website": "https://www.newcastlecentralmosque.com/",
-      "postcode": ""
+      "postcode": "NE4 8RQ"
     },
     "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Islamic Prayer Rooms",
-    "city": "County Durham",
-    "query": "Islamic Prayer Rooms County Durham mosque UK",
-    "found": {
-      "address": "177 South Road",
-      "phone": "",
-      "website": "https://www.durham.ac.uk/colleges-and-student-experience/student-support-and-wellbeing/faith-support/islam/",
-      "postcode": ""
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
-  },
-  {
-    "name": "Hendon Jami Masjid",
-    "city": "Sunderland",
-    "query": "Hendon Jami Masjid Sunderland mosque UK",
-    "found": {
-      "address": "2 Salisbury Street",
-      "phone": "",
-      "website": "https://find-and-update.company-information.service.gov.uk/company/14833058",
-      "postcode": "SR1 2QR"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
-  },
-  {
-    "name": "Masjid-E-Ali Ibn Abu Talib",
-    "city": "Middlesbrough",
-    "query": "Masjid-E-Ali Ibn Abu Talib Middlesbrough mosque UK",
-    "found": {
-      "address": "11 Granville Road",
-      "phone": "",
-      "website": "https://www.yorkshire.com/middlesbrough/community/mosques/masjid-e-ali-ibn-abu-talib?srsltid=AfmBOopPmy375YG6A35BZdLn3Wri44TxbJih7Doh2KPsgwkhcEhXq8CP",
-      "postcode": "TS1 3PF"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
-  },
-  {
-    "name": "Masjid-E-Nomira",
-    "city": "Redcar and Cleveland",
-    "query": "Masjid-E-Nomira Redcar and Cleveland mosque UK",
-    "found": {
-      "address": "44 Middlesbrough Road",
-      "phone": "07762 572690",
-      "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=2636",
-      "postcode": "TS6 6LZ"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "Madrisa Zia-Ul-Quran",
-    "city": "Middlesbrough",
-    "query": "Madrisa Zia-Ul-Quran Middlesbrough mosque UK",
-    "found": {
-      "address": "2a Bow Street",
-      "phone": "01642 230408",
-      "website": "https://www.masjidziaulquran11.com/",
-      "postcode": "TS1 4BT"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "South Bank Mosque",
-    "city": "Redcar and Cleveland",
-    "query": "South Bank Mosque Redcar and Cleveland mosque UK",
-    "found": {
-      "address": "3 South Terrace",
-      "phone": "07762 572690",
-      "website": "https://mcbplatform-production.up.railway.app/org-finder/organization/1486",
-      "postcode": "TS6 6HW"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
+      "tel"
     ]
   },
   {
@@ -4268,71 +2085,7 @@
       "website": "https://ntbca.org.uk/",
       "postcode": "NE26 2AU"
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Baitul Ma'mur Jame-E- Masjid and Islamic Center",
-    "city": "South Tyneside",
-    "query": "Baitul Ma'mur Jame-E- Masjid and Islamic Center South Tyneside mosque UK",
-    "found": {
-      "address": "50 Baring Street",
-      "phone": "0191 456 4663",
-      "website": "https://www.mosquedirectory.co.uk/mosques/england/newcastle-upon-tyne/tyne-and-wear/south-shields/Baitul-Mamur-Jame-e-Masjid-and-Islamic-Center/2869",
-      "postcode": "NE33 2DR"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "Islamic Cultural Centre",
-    "city": "Denbighshire",
-    "query": "Islamic Cultural Centre Denbighshire mosque UK",
-    "found": {
-      "address": "30 Water Street",
-      "phone": "01745 360467",
-      "website": "https://rhylmasjid.com/files/",
-      "postcode": "LL18 1SS"
-    },
-    "updated": [
-      "addr",
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "Galler Turkish Mosque",
-    "city": "Denbighshire",
-    "query": "Galler Turkish Mosque Denbighshire mosque UK",
-    "found": {
-      "address": "180 Vale Road",
-      "phone": "",
-      "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=14051010",
-      "postcode": "LL18 2PD"
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
-  },
-  {
-    "name": "Idara Taleem ul Quran",
-    "city": "Edinburgh",
-    "query": "Idara Taleem ul Quran Edinburgh mosque UK",
-    "found": {
-      "address": "10 Temple Park",
-      "phone": "",
-      "website": "https://www.polwarth-masjid.co.uk/",
-      "postcode": ""
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "IQRA Academy",
@@ -4344,24 +2097,7 @@
       "website": "https://iqraacademy.org/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Anwar-E-Madina Mosque and Community Centre",
-    "city": "Edinburgh",
-    "query": "Anwar-E-Madina Mosque and Community Centre Edinburgh mosque UK",
-    "found": {
-      "address": "45 Annadale Street",
-      "phone": "",
-      "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=751",
-      "postcode": ""
-    },
-    "updated": [
-      "addr",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Dar Al-Arqam",
@@ -4373,9 +2109,7 @@
       "website": "http://www.dar-alarqam.org/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Khazra Central Mosque",
@@ -4387,22 +2121,20 @@
       "website": "https://www.masjidkhazra.org/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Glasgow Central Mosque",
     "city": "Glasgow",
     "query": "Glasgow Central Mosque Glasgow mosque UK",
     "found": {
-      "address": "",
+      "address": "1 Mosque Avenue",
       "phone": "",
       "website": "https://centralmosque.co.uk/",
-      "postcode": ""
+      "postcode": "G5 9TA"
     },
     "updated": [
-      "web"
+      "addr"
     ]
   },
   {
@@ -4415,22 +2147,2019 @@
       "website": "https://kirkcaldycentralmosque.org.uk/",
       "postcode": ""
     },
+    "updated": []
+  },
+  {
+    "name": "Shahjalal Jame Masjid Euston Mosque",
+    "city": "Camden",
+    "query": "Shahjalal Jame Masjid Euston Mosque Camden mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://shahjalaljamemasjid.com/",
+      "postcode": "NW1 2BU"
+    },
     "updated": [
       "web"
     ]
   },
   {
-    "name": "The Ali Reza Islamic Centre",
-    "city": "Chelmsford",
-    "query": "The Ali Reza Islamic Centre Chelmsford mosque UK",
+    "name": "Ezzeitouna",
+    "city": "Ealing",
+    "query": "Ezzeitouna Ealing mosque UK",
+    "found": {
+      "address": "",
+      "phone": "02087406344",
+      "website": "https://www.ezzeitouna.com/",
+      "postcode": "W3 7UD"
+    },
+    "updated": [
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Indonesian Islamic Centre",
+    "city": "Brent",
+    "query": "Indonesian Islamic Centre Brent mosque UK",
     "found": {
       "address": "",
       "phone": "",
-      "website": "https://www.essexjamaat.org.uk/",
-      "postcode": "CM1 1PE"
+      "website": "https://iic-london.com/",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Husseini mosque",
+    "city": "Ealing",
+    "query": "Husseini mosque Ealing mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://uk.thedawoodibohras.com/london/",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Northwood Hills Masjid and Commnity Centre",
+    "city": "Hillingdon",
+    "query": "Northwood Hills Masjid and Commnity Centre Hillingdon mosque UK",
+    "found": {
+      "address": "",
+      "phone": "07716 756677",
+      "website": "https://ironaid.org/",
+      "postcode": "HA6 1NL"
+    },
+    "updated": [
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Masjid Imam Ali",
+    "city": "Brent",
+    "query": "Masjid Imam Ali Brent mosque UK",
+    "found": {
+      "address": "858 Harrow Road",
+      "phone": "020 8908 1525",
+      "website": "https://www.masjidimamalias.org/",
+      "postcode": "HA0 2PX"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "West London Islamic Centre & Greenford Mosque",
+    "city": "Ealing",
+    "query": "West London Islamic Centre & Greenford Mosque Ealing mosque UK",
+    "found": {
+      "address": "7 Bridges Place",
+      "phone": "0207 736 4255",
+      "website": "https://www.wlicgreenfordmosque.com/",
+      "postcode": "SW6 4HW"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Hayes Welfare Association & Abdulla Masjid",
+    "city": "Hillingdon",
+    "query": "Hayes Welfare Association & Abdulla Masjid Hillingdon mosque UK",
+    "found": {
+      "address": "",
+      "phone": "07742 754 383",
+      "website": "https://hayeswelfareassociation.co.uk/",
+      "postcode": "UB3 1TF"
+    },
+    "updated": [
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Al Falah Islamic Education Centre",
+    "city": "Hillingdon",
+    "query": "Al Falah Islamic Education Centre Hillingdon mosque UK",
+    "found": {
+      "address": "",
+      "phone": "01895 742836",
+      "website": "https://www.alfalahcentre.org/donation/timetable/",
+      "postcode": ""
+    },
+    "updated": [
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Uxbridge Muslim Community Centre",
+    "city": "Hillingdon",
+    "query": "Uxbridge Muslim Community Centre Hillingdon mosque UK",
+    "found": {
+      "address": "5 Cowley Mill Road",
+      "phone": "",
+      "website": "https://www.uxbridgemasjid.org.uk/",
+      "postcode": "UB8 2QB"
+    },
+    "updated": [
+      "addr",
+      "web"
+    ]
+  },
+  {
+    "name": "Uxbridge Eyup Sultan Masjid",
+    "city": "Hillingdon",
+    "query": "Uxbridge Eyup Sultan Masjid Hillingdon mosque UK",
+    "found": {
+      "address": "5 Cowley Mill Road",
+      "phone": "07525 429510",
+      "website": "https://www.uxbridgemasjid.org.uk/",
+      "postcode": "UB8 2QB"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "As Sabr",
+    "city": "Tower Hamlets",
+    "query": "As Sabr Tower Hamlets mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://www.towerhamletsmosques.co.uk/albarakah/sabr/",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Masjid Ilyas",
+    "city": "",
+    "query": "Masjid Ilyas mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://masjidilyas.org/",
+      "postcode": "SL1 3DW"
     },
     "updated": [
       "pc",
+      "web"
+    ]
+  },
+  {
+    "name": "Said Nursi Camii",
+    "city": "Haringey",
+    "query": "Said Nursi Camii Haringey mosque UK",
+    "found": {
+      "address": "",
+      "phone": "020 8801 3077",
+      "website": "https://nce.org.uk/",
+      "postcode": ""
+    },
+    "updated": [
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Globe Town Mosque",
+    "city": "Tower Hamlets",
+    "query": "Globe Town Mosque Tower Hamlets mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://www.towerhamletsmosques.co.uk/globetownmasjid/",
+      "postcode": "E2 0RN"
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Chadwell Heath Muslim Centre",
+    "city": "Redbridge",
+    "query": "Chadwell Heath Muslim Centre Redbridge mosque UK",
+    "found": {
+      "address": "",
+      "phone": "02035832324",
+      "website": "https://www.chadwellheathmuslimcentre.co.uk/",
+      "postcode": "RM6 4AU"
+    },
+    "updated": [
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Poplar Central Mosque",
+    "city": "Tower Hamlets",
+    "query": "Poplar Central Mosque Tower Hamlets mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://www.towerhamletsmosques.co.uk/poplarcentralmasjid/",
+      "postcode": "E14 0EG"
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Qurani Murkuz",
+    "city": "Redbridge",
+    "query": "Qurani Murkuz Redbridge mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://www.redbridge.gov.uk/discover/directory/south-woodford-muslim-community-centre-qurani-murkuz-trust",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Masjid Yousuf",
+    "city": "Newham",
+    "query": "Masjid Yousuf Newham mosque UK",
+    "found": {
+      "address": "328 Romford Road",
+      "phone": "",
+      "website": "https://www.mosques.london/newham/66",
+      "postcode": "E7 8BS"
+    },
+    "updated": [
+      "addr",
+      "web"
+    ]
+  },
+  {
+    "name": "Forest Gate Mosque",
+    "city": "Newham",
+    "query": "Forest Gate Mosque Newham mosque UK",
+    "found": {
+      "address": "451 Romford Road",
+      "phone": "020 8555 6258",
+      "website": "https://www.mosquedirectory.co.uk/mosques/England/London/newham/forest-gate/forest-gate-mosque-forest-gate-newham/339",
+      "postcode": "E7 8AB"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "North London Mosque",
+    "city": "Hackney",
+    "query": "North London Mosque Hackney mosque UK",
+    "found": {
+      "address": "72 Cazenove Road",
+      "phone": "",
+      "website": "https://www.suleymaniye.org/",
+      "postcode": "E5 9QD"
+    },
+    "updated": [
+      "addr",
+      "web"
+    ]
+  },
+  {
+    "name": "Dar al Aloom Qadmia Jilamia",
+    "city": "Waltham Forest",
+    "query": "Dar al Aloom Qadmia Jilamia Waltham Forest mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://dqj.org.uk/",
+      "postcode": "E17 9NG"
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Suleymaniye Mosque",
+    "city": "Hackney",
+    "query": "Suleymaniye Mosque Hackney mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://www.suleymaniye.org/",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Gilwell Mosque",
+    "city": "Epping Forest",
+    "query": "Gilwell Mosque Epping Forest mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://ukmsf.org/about-us/gilwell-mosque/",
+      "postcode": "E4 7QW"
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Aziziye Mosque and Community Centre",
+    "city": "Hackney",
+    "query": "Aziziye Mosque and Community Centre Hackney mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://www.aziziye.org.uk/",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Chingford Islamic and Cultural Centre",
+    "city": "Waltham Forest",
+    "query": "Chingford Islamic and Cultural Centre Waltham Forest mosque UK",
+    "found": {
+      "address": "92 Chingford Mount Road",
+      "phone": "020 8523 5826",
+      "website": "https://chingfordmosque.com/",
+      "postcode": "E4 9AA"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Lea Bridge Road Mosque",
+    "city": "Waltham Forest",
+    "query": "Lea Bridge Road Mosque Waltham Forest mosque UK",
+    "found": {
+      "address": "",
+      "phone": "020 8539 4282",
+      "website": "https://www.wfia.org.uk/",
+      "postcode": ""
+    },
+    "updated": [
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Leyton Jamia Masjid",
+    "city": "Waltham Forest",
+    "query": "Leyton Jamia Masjid Waltham Forest mosque UK",
+    "found": {
+      "address": "326 High Road",
+      "phone": "020 8532 8858",
+      "website": "https://mctleyton.org.uk/",
+      "postcode": "E10 5PW"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Dagenham Aishah Islamic Centre",
+    "city": "Barking and Dagenham",
+    "query": "Dagenham Aishah Islamic Centre Barking and Dagenham mosque UK",
+    "found": {
+      "address": "1 Selinas Lane",
+      "phone": "",
+      "website": "https://aishahislamiccentre.org/",
+      "postcode": "RM8 1QH"
+    },
+    "updated": [
+      "addr",
+      "web"
+    ]
+  },
+  {
+    "name": "Al Huda - Cultural Centre and Mosque",
+    "city": "Tower Hamlets",
+    "query": "Al Huda - Cultural Centre and Mosque Tower Hamlets mosque UK",
+    "found": {
+      "address": "91 Mile End Road",
+      "phone": "0207 7809495",
+      "website": "https://www.alhudamosque.com/",
+      "postcode": "E14UJ"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Newbury Park Masjid",
+    "city": "",
+    "query": "Newbury Park Masjid mosque UK",
+    "found": {
+      "address": "117 Oaks Lane",
+      "phone": "",
+      "website": "https://newburyparkmasjid.org.uk/",
+      "postcode": "IG2 7PY"
+    },
+    "updated": [
+      "addr",
+      "pc",
+      "web"
+    ]
+  },
+  {
+    "name": "Balham Mosque",
+    "city": "Wandsworth",
+    "query": "Balham Mosque Wandsworth mosque UK",
+    "found": {
+      "address": "145 Upper Tooting Road",
+      "phone": "020 3409 8054",
+      "website": "https://www.balhammosque.org/",
+      "postcode": "SW17 7TJ"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Tooting Islamic Centre",
+    "city": "Wandsworth",
+    "query": "Tooting Islamic Centre Wandsworth mosque UK",
+    "found": {
+      "address": "145 Upper Tooting Road",
+      "phone": "",
+      "website": "https://www.balhammosque.org/",
+      "postcode": "SW17 7TJ"
+    },
+    "updated": [
+      "addr",
+      "web"
+    ]
+  },
+  {
+    "name": "Brixton Hill Islamic Centre",
+    "city": "Lambeth",
+    "query": "Brixton Hill Islamic Centre Lambeth mosque UK",
+    "found": {
+      "address": "228A Brixton Hill",
+      "phone": "02035839729",
+      "website": "https://www.bhic.org.uk/",
+      "postcode": "SW2 1HE"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "North Brixton Islamic Cultural Centre",
+    "city": "Lambeth",
+    "query": "North Brixton Islamic Cultural Centre Lambeth mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://nbicc.org.uk/",
+      "postcode": "SE5 9QH"
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Makkah Masjid Mitcham",
+    "city": "Merton",
+    "query": "Makkah Masjid Mitcham Merton mosque UK",
+    "found": {
+      "address": "226 London Road",
+      "phone": "020 8254 5826",
+      "website": "https://www.makkah-masjid-mitcham.org/",
+      "postcode": "CR4 3HD"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Al-Madina Mitcham Islamic Centre",
+    "city": "Merton",
+    "query": "Al-Madina Mitcham Islamic Centre Merton mosque UK",
+    "found": {
+      "address": "201a Streatham Road",
+      "phone": "020 8679 3481",
+      "website": "https://almadina.cfsites.org/",
+      "postcode": "CR4 2AJ"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Al Muzzamil Mosque",
+    "city": "Wandsworth",
+    "query": "Al Muzzamil Mosque Wandsworth mosque UK",
+    "found": {
+      "address": "",
+      "phone": "07956030037",
+      "website": "http://gattonmosque.co.uk/",
+      "postcode": ""
+    },
+    "updated": [
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Taj Daar e Madina",
+    "city": "Wandsworth",
+    "query": "Taj Daar e Madina Wandsworth mosque UK",
+    "found": {
+      "address": "89 Mitcham Road",
+      "phone": "",
+      "website": "https://tdmtooting.com/",
+      "postcode": "SW17 9PD"
+    },
+    "updated": [
+      "addr",
+      "web"
+    ]
+  },
+  {
+    "name": "West Norwood Islamic Centre",
+    "city": "Lambeth",
+    "query": "West Norwood Islamic Centre Lambeth mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://westnorwoodmosque.com/",
+      "postcode": "SE27 9NW"
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Feltham Masjid",
+    "city": "Hounslow",
+    "query": "Feltham Masjid Hounslow mosque UK",
+    "found": {
+      "address": "102 Hounslow Road",
+      "phone": "",
+      "website": "https://hounslowmasjid.co.uk/",
+      "postcode": "TW14 0AX"
+    },
+    "updated": [
+      "addr",
+      "web"
+    ]
+  },
+  {
+    "name": "Croydon Mosque & Islamic Centre",
+    "city": "Croydon",
+    "query": "Croydon Mosque & Islamic Centre Croydon mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://www.croydonmosque.com/",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Surrey Muslim Centre",
+    "city": "Runnymede",
+    "query": "Surrey Muslim Centre Runnymede mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://surreymuslimcentre.com/",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Brixton Mosque",
+    "city": "Lambeth",
+    "query": "Brixton Mosque Lambeth mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://brixtonmasjid.co.uk/",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Heathrow Jamia Masjid",
+    "city": "Hounslow",
+    "query": "Heathrow Jamia Masjid Hounslow mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://heathrowjamiamasjid.co.uk/",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Ashford & Staines Community Centre",
+    "city": "Spelthorne",
+    "query": "Ashford & Staines Community Centre Spelthorne mosque UK",
+    "found": {
+      "address": "778 London Road",
+      "phone": "01784 463073",
+      "website": "https://ascc.uk.com/",
+      "postcode": "TW14 8RU"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Faizan-E-Jumu'ah Masjid",
+    "city": "Hounslow",
+    "query": "Faizan-E-Jumu'ah Masjid Hounslow mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://hounslowmasjid.co.uk/",
+      "postcode": "TW3 3RP"
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Kingston Mosque",
+    "city": "Kingston upon Thames",
+    "query": "Kingston Mosque Kingston upon Thames mosque UK",
+    "found": {
+      "address": "",
+      "phone": "020 8549 5315",
+      "website": "https://www.kingstonmosque.org/",
+      "postcode": "KT2 6EJ"
+    },
+    "updated": [
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Camberwell Islamic Centre",
+    "city": "Southwark",
+    "query": "Camberwell Islamic Centre Southwark mosque UK",
+    "found": {
+      "address": "",
+      "phone": "0204207878",
+      "website": "https://camberwellislamiccentre.co.uk/",
+      "postcode": "SE5 0ED"
+    },
+    "updated": [
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Nasrul-Lahi-i-Fathi Society of Nigeria",
+    "city": "Southwark",
+    "query": "Nasrul-Lahi-i-Fathi Society of Nigeria Southwark mosque UK",
+    "found": {
+      "address": "33 Pages Walk",
+      "phone": "",
+      "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=2634",
+      "postcode": "SE1 4SB"
+    },
+    "updated": [
+      "addr",
+      "web"
+    ]
+  },
+  {
+    "name": "Peckham High Street Islamic Centre",
+    "city": "Southwark",
+    "query": "Peckham High Street Islamic Centre Southwark mosque UK",
+    "found": {
+      "address": "120 Peckham High Street",
+      "phone": "020 7635 0088",
+      "website": "https://www.phsicc.org/",
+      "postcode": "SE15 5ED"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Docklands Community Centre",
+    "city": "Tower Hamlets",
+    "query": "Docklands Community Centre Tower Hamlets mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://www.towerhamletsmosques.co.uk/dco/docklands-community/",
+      "postcode": "E14 8PJ"
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Dartford Masjid",
+    "city": "Dartford",
+    "query": "Dartford Masjid Dartford mosque UK",
+    "found": {
+      "address": "2 Westgate Road",
+      "phone": "",
+      "website": "https://dmic.co.uk/",
+      "postcode": "DA1 2AR"
+    },
+    "updated": [
+      "addr",
+      "web"
+    ]
+  },
+  {
+    "name": "Ghausia Mosque Trust",
+    "city": "Birmingham",
+    "query": "Ghausia Mosque Trust Birmingham mosque UK",
+    "found": {
+      "address": "234 Slade Road",
+      "phone": "",
+      "website": "https://en.masjidway.com/masjid/2597/prayer",
+      "postcode": "B23 7RH"
+    },
+    "updated": [
+      "addr",
+      "web"
+    ]
+  },
+  {
+    "name": "Jami Madina Ashiful Loom Masjid",
+    "city": "Birmingham",
+    "query": "Jami Madina Ashiful Loom Masjid Birmingham mosque UK",
+    "found": {
+      "address": "123 Main Street",
+      "phone": "",
+      "website": "https://www.madinatululoommasjid.com/",
+      "postcode": "B6 6NA"
+    },
+    "updated": [
+      "addr",
+      "web"
+    ]
+  },
+  {
+    "name": "Central Mosque",
+    "city": "Walsall",
+    "query": "Central Mosque Walsall mosque UK",
+    "found": {
+      "address": "41 Selborne Street",
+      "phone": "01922 620649",
+      "website": "https://masjidbox.com/prayer-times/walsall-central-mosque",
+      "postcode": "WS1 2JN"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Faizan -e-Mustafa Educational Centre",
+    "city": "Birmingham",
+    "query": "Faizan -e-Mustafa Educational Centre Birmingham mosque UK",
+    "found": {
+      "address": "97 Drews Lane",
+      "phone": "",
+      "website": "https://masjidbox.com/prayer-times/faizan-e-rasool-education-centre-1691602740401",
+      "postcode": "B8 2QE"
+    },
+    "updated": [
+      "addr",
+      "web"
+    ]
+  },
+  {
+    "name": "Spiritual Centre Maddrassa Naqshbandiyya Nawabiyya Aslamiyya Birmingham",
+    "city": "Birmingham",
+    "query": "Spiritual Centre Maddrassa Naqshbandiyya Nawabiyya Aslamiyya Birmingham Birmingham mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=103",
+      "postcode": "B9 4TS"
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Maktaba Tul Madina Dawat-E-Islami",
+    "city": "Birmingham",
+    "query": "Maktaba Tul Madina Dawat-E-Islami Birmingham mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://dawateislami.co.uk/",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Madrassa At Tawhad",
+    "city": "Birmingham",
+    "query": "Madrassa At Tawhad Birmingham mosque UK",
+    "found": {
+      "address": "20 Green Lane",
+      "phone": "07866600840",
+      "website": "https://www.mjah.org.uk/our-affiliates/",
+      "postcode": "B9 5DB"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Sultan Bahu Centre",
+    "city": "Birmingham",
+    "query": "Sultan Bahu Centre Birmingham mosque UK",
+    "found": {
+      "address": "962 Alum Rock Road",
+      "phone": "01212463953",
+      "website": "https://mawaqit.net/en/sultan-bahu-centre-birmingham-b8-2ls-united-kingdom",
+      "postcode": "B8 2LS"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Ghamkol Sharif",
+    "city": "Birmingham",
+    "query": "Ghamkol Sharif Birmingham mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://gsmosque.org/",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Jamia Mosque Amir-e-Millat",
+    "city": "Birmingham",
+    "query": "Jamia Mosque Amir-e-Millat Birmingham mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://en.masjidway.com/masjid/2690/prayer",
+      "postcode": "B11 4RU"
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Ukim Jamia Masjid",
+    "city": "Birmingham",
+    "query": "Ukim Jamia Masjid Birmingham mosque UK",
+    "found": {
+      "address": "8 Ludlow Road",
+      "phone": "01213269930",
+      "website": "https://www.jamimosque.org.uk/",
+      "postcode": "B8 3BY"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Muslim Students House Masjid",
+    "city": "Birmingham",
+    "query": "Muslim Students House Masjid Birmingham mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://www.mshuk.org/",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Zia ul Quran Jamia Mosque",
+    "city": "Birmingham",
+    "query": "Zia ul Quran Jamia Mosque Birmingham mosque UK",
+    "found": {
+      "address": "233 St Saviours Road",
+      "phone": "",
+      "website": "https://ziaulquranmasjid.org.uk/",
+      "postcode": "B8 1EP"
+    },
+    "updated": [
+      "addr",
+      "web"
+    ]
+  },
+  {
+    "name": "Bordesley Green Islamic Centre",
+    "city": "Birmingham",
+    "query": "Bordesley Green Islamic Centre Birmingham mosque UK",
+    "found": {
+      "address": "",
+      "phone": "01217666371",
+      "website": "https://en.masjidway.com/masjid/2681/prayer",
+      "postcode": "B9 4TS"
+    },
+    "updated": [
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Jami Masjid & Islamic Centre",
+    "city": "Birmingham",
+    "query": "Jami Masjid & Islamic Centre Birmingham mosque UK",
+    "found": {
+      "address": "527 Coventry Road",
+      "phone": "",
+      "website": "",
+      "postcode": "B10 0LL"
+    },
+    "updated": [
+      "addr"
+    ]
+  },
+  {
+    "name": "Dar Ul Irfan",
+    "city": "Birmingham",
+    "query": "Dar Ul Irfan Birmingham mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://prayersconnect.com/mosques/82622215-dar-ul-irfan-birmingham-birmingham-england-united-kingdom",
+      "postcode": "B9 4QP"
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Witton Islamic Centre",
+    "city": "Birmingham",
+    "query": "Witton Islamic Centre Birmingham mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "http://wittonislamiccentre.org.uk/",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Aston Mosque & Community Centre",
+    "city": "Birmingham",
+    "query": "Aston Mosque & Community Centre Birmingham mosque UK",
+    "found": {
+      "address": "125 Mansfield Road",
+      "phone": "0121 820 7575",
+      "website": "https://www.astonmasjid.com/",
+      "postcode": "B6 6DA"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Al-Hijrah Mosque",
+    "city": "Birmingham",
+    "query": "Al-Hijrah Mosque Birmingham mosque UK",
+    "found": {
+      "address": "71 Hobmoor Road",
+      "phone": "0121 766 5454",
+      "website": "https://alhijrahtrust.org/",
+      "postcode": "B10 9AZ"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Qamarul Islam Mosque",
+    "city": "Birmingham",
+    "query": "Qamarul Islam Mosque Birmingham mosque UK",
+    "found": {
+      "address": "170 Fosbrooke Road",
+      "phone": "",
+      "website": "https://masjidqamarulislam.co.uk/",
+      "postcode": "B10 9JP"
+    },
+    "updated": [
+      "addr",
+      "web"
+    ]
+  },
+  {
+    "name": "Bangladeshi Islamic Centre & Jami Mosque",
+    "city": "Birmingham",
+    "query": "Bangladeshi Islamic Centre & Jami Mosque Birmingham mosque UK",
+    "found": {
+      "address": "527 Coventry Road",
+      "phone": "",
+      "website": "https://www.jamimosque.org.uk/",
+      "postcode": "B10 0LL"
+    },
+    "updated": [
+      "addr",
+      "web"
+    ]
+  },
+  {
+    "name": "Jamia Mosque and Islamic Welfare Association Lozells",
+    "city": "Birmingham",
+    "query": "Jamia Mosque and Islamic Welfare Association Lozells Birmingham mosque UK",
+    "found": {
+      "address": "217 Lozells Road",
+      "phone": "0121 523 0624",
+      "website": "https://www.fncbham.org.uk/the-bangladeshi-islamic-centre-and-jami-mosque/",
+      "postcode": "B19 2AZ"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Jalalabad Sunni Jame Masjid & Islamic Community Centre",
+    "city": "Birmingham",
+    "query": "Jalalabad Sunni Jame Masjid & Islamic Community Centre Birmingham mosque UK",
+    "found": {
+      "address": "57 Albert Road",
+      "phone": "07910 033901",
+      "website": "https://jalalabadmosque.org/",
+      "postcode": "B6 5NE"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Shahjalal (R:) Sunnia Mosque & Islamic Community Centre",
+    "city": "Birmingham",
+    "query": "Shahjalal (R:) Sunnia Mosque & Islamic Community Centre Birmingham mosque UK",
+    "found": {
+      "address": "108 Ettington Road",
+      "phone": "01213260337",
+      "website": "https://ssmasjid.co.uk/",
+      "postcode": "B6 6EB"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Masjid Faizal Islam",
+    "city": "Birmingham",
+    "query": "Masjid Faizal Islam Birmingham mosque UK",
+    "found": {
+      "address": "330 Witton Road",
+      "phone": "07812 372352",
+      "website": "https://www.mosquedirectory.co.uk/mosques/england/west-midlands/birmingham/aston/Masjid-Madrassa-Faizul-Islam-Aston-Aston-Birmingham/996",
+      "postcode": "B6 6PD"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Makii Marjid & Madrassa",
+    "city": "Birmingham",
+    "query": "Makii Marjid & Madrassa Birmingham mosque UK",
+    "found": {
+      "address": "75 Stafford Road",
+      "phone": "01215517417",
+      "website": "https://www.makkimasjid.org.uk/prayer-times",
+      "postcode": "B21 9DU"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Bangladeshi Islamic Association Centre",
+    "city": "Sandwell",
+    "query": "Bangladeshi Islamic Association Centre Sandwell mosque UK",
+    "found": {
+      "address": "",
+      "phone": "0121 558 8204",
+      "website": "https://bicentre.org.uk/",
+      "postcode": "WS10 9AD"
+    },
+    "updated": [
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Masjid-e-Baitul Amaan",
+    "city": "Sandwell",
+    "query": "Masjid-e-Baitul Amaan Sandwell mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://masjidbaitulamaan.org.uk/",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Mosque & Islamic Centre",
+    "city": "Sandwell",
+    "query": "Mosque & Islamic Centre Sandwell mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://westbromjamimasjid.co.uk/",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Jamia Mosque Blackheath",
+    "city": "Dudley",
+    "query": "Jamia Mosque Blackheath Dudley mosque UK",
+    "found": {
+      "address": "150 Malt Mill Lane",
+      "phone": "07906893060",
+      "website": "https://www.blackheathjamiamosque.co.uk/",
+      "postcode": "B62 8JA"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Madina Education Trust",
+    "city": "Sandwell",
+    "query": "Madina Education Trust Sandwell mosque UK",
+    "found": {
+      "address": "",
+      "phone": "0121 556 7790",
+      "website": "https://www.sandwell.gov.uk/informationpoint/directory-record/2266/madina-education-trust",
+      "postcode": ""
+    },
+    "updated": [
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Zaouia islamiya 'alaouia",
+    "city": "Birmingham",
+    "query": "Zaouia islamiya 'alaouia Birmingham mosque UK",
+    "found": {
+      "address": "294 Edward Road",
+      "phone": "0121 440 1758",
+      "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=183",
+      "postcode": "B5 7PH"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Handsworth Mosque & IslamicCentre",
+    "city": "Birmingham",
+    "query": "Handsworth Mosque & IslamicCentre Birmingham mosque UK",
+    "found": {
+      "address": "23 Booth Street",
+      "phone": "01215513049",
+      "website": "https://www.handsworthjamemasjid.org.uk/",
+      "postcode": "B21 0NG"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Dudley Central Mosque",
+    "city": "Dudley",
+    "query": "Dudley Central Mosque Dudley mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/4037156",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Darus Salam Masjid & Bangladeshi Islamic Centre",
+    "city": "Walsall",
+    "query": "Darus Salam Masjid & Bangladeshi Islamic Centre Walsall mosque UK",
+    "found": {
+      "address": "48 Cook Street",
+      "phone": "",
+      "website": "https://darus-salam-masjid.themasjidapp.org/",
+      "postcode": "WS2 8NF"
+    },
+    "updated": [
+      "addr",
+      "web"
+    ]
+  },
+  {
+    "name": "Jamia Masjid Anwar-Ul-Uloom",
+    "city": "Sandwell",
+    "query": "Jamia Masjid Anwar-Ul-Uloom Sandwell mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "http://smethwickjamiamosque.co.uk/",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Wednesbury Central Mosque",
+    "city": "Sandwell",
+    "query": "Wednesbury Central Mosque Sandwell mosque UK",
+    "found": {
+      "address": "",
+      "phone": "0121 505 3957",
+      "website": "https://themasjidapp.org/wednesbury-central-mosque",
+      "postcode": "WS10 9AD"
+    },
+    "updated": [
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Sandwell Grand Masjid",
+    "city": "Sandwell",
+    "query": "Sandwell Grand Masjid Sandwell mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://sandwellgrandmasjid.org/",
+      "postcode": "B70 8NT"
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Markazi Jamia Masjid Gulzar-e-Habib Mosque",
+    "city": "Sandwell",
+    "query": "Markazi Jamia Masjid Gulzar-e-Habib Mosque Sandwell mosque UK",
+    "found": {
+      "address": "47a Dartmouth Street",
+      "phone": "",
+      "website": "https://markazi-jamia-masjid-gulzar-e-habib.wheree.com/",
+      "postcode": "B70 8BX"
+    },
+    "updated": [
+      "addr",
+      "web"
+    ]
+  },
+  {
+    "name": "Netherton Islamic Trust Masjid",
+    "city": "Dudley",
+    "query": "Netherton Islamic Trust Masjid Dudley mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://nit.org.uk/",
+      "postcode": "DY2 9BH"
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Jamie Mosque and Bangladesh Islamic Centre",
+    "city": "St Albans",
+    "query": "Jamie Mosque and Bangladesh Islamic Centre St Albans mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://stalbansjamiemasjid.org/",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Al-Jalal Masjid",
+    "city": "Luton",
+    "query": "Al-Jalal Masjid Luton mosque UK",
+    "found": {
+      "address": "314 Biscot Road",
+      "phone": "01582 411744",
+      "website": "https://aljalalmasjid.org/",
+      "postcode": "LU3 1AZ"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Baitul Abraar Jami Masjir",
+    "city": "Luton",
+    "query": "Baitul Abraar Jami Masjir Luton mosque UK",
+    "found": {
+      "address": "366 Leagrave Road",
+      "phone": "",
+      "website": "https://jamialuton.org/",
+      "postcode": "LU3 1RF"
+    },
+    "updated": [
+      "addr",
+      "web"
+    ]
+  },
+  {
+    "name": "Masjid Al-Hira (Sunni)",
+    "city": "Luton",
+    "query": "Masjid Al-Hira (Sunni) Luton mosque UK",
+    "found": {
+      "address": "7 Beechwood Road",
+      "phone": "01582848529",
+      "website": "https://alhiraluton.org.uk/",
+      "postcode": "LU4 8RR"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Suffa-tul-islam",
+    "city": "Luton",
+    "query": "Suffa-tul-islam Luton mosque UK",
+    "found": {
+      "address": "129 Bradley Road",
+      "phone": "",
+      "website": "https://suffatulislamluton.co.uk/",
+      "postcode": "LU4 8SW"
+    },
+    "updated": [
+      "addr",
+      "web"
+    ]
+  },
+  {
+    "name": "Zakariya Masjid",
+    "city": "Luton",
+    "query": "Zakariya Masjid Luton mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://zakariyamasjid.org.uk/",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Jamia Al-Alkbaria",
+    "city": "Luton",
+    "query": "Jamia Al-Alkbaria Luton mosque UK",
+    "found": {
+      "address": "241 Selbourne Road",
+      "phone": "01582561452",
+      "website": "https://prayersconnect.com/mosques/82645475-jamia-al-akbaria-luton-england-united-kingdom",
+      "postcode": "LU4 8NP"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Luton Central Mosque",
+    "city": "Luton",
+    "query": "Luton Central Mosque Luton mosque UK",
+    "found": {
+      "address": "12 Westbourne Road",
+      "phone": "",
+      "website": "https://lutoncentralmosque.org/",
+      "postcode": "LU4 8JD"
+    },
+    "updated": [
+      "addr",
+      "web"
+    ]
+  },
+  {
+    "name": "Jalalabad Jame Masjid",
+    "city": "Luton",
+    "query": "Jalalabad Jame Masjid Luton mosque UK",
+    "found": {
+      "address": "38 Leagrave Road",
+      "phone": "",
+      "website": "https://www.jalalabadmasjid.org.uk/mobile/",
+      "postcode": "LU4 8HZ"
+    },
+    "updated": [
+      "addr",
+      "web"
+    ]
+  },
+  {
+    "name": "Hockwell Ring Masjid",
+    "city": "Luton",
+    "query": "Hockwell Ring Masjid Luton mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://hockwellringmasjid.org.uk/",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Masjid Al-Ghurabaa",
+    "city": "Luton",
+    "query": "Masjid Al-Ghurabaa Luton mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://lutonislamiccentre.com/",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Laud Worship Rooms",
+    "city": "Canterbury",
+    "query": "Laud Worship Rooms Canterbury mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://canterburymosque.co.uk/",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Gatwick Muslim Centre",
+    "city": "Reigate and Banstead",
+    "query": "Gatwick Muslim Centre Reigate and Banstead mosque UK",
+    "found": {
+      "address": "53 High Street",
+      "phone": "01293786176",
+      "website": "https://gbica.org/",
+      "postcode": "RH6 7BN"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Islamic Prayer Room",
+    "city": "Guildford",
+    "query": "Islamic Prayer Room Guildford mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://surreyislamiccenter.com/",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "University of Sussex Mosque",
+    "city": "Brighton and Hove",
+    "query": "University of Sussex Mosque Brighton and Hove mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://masjidbox.com/prayer-times/university-of-sussex-prayer-room",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Dorking Mosque",
+    "city": "Mole Valley",
+    "query": "Dorking Mosque Mole Valley mosque UK",
+    "found": {
+      "address": "15 Hart Road",
+      "phone": "01306 889648",
+      "website": "http://dorkingmosque.co.uk/",
+      "postcode": "RH4 1JS"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Canterbury Islamic Centre",
+    "city": "Canterbury",
+    "query": "Canterbury Islamic Centre Canterbury mosque UK",
+    "found": {
+      "address": "1 Giles Lane",
+      "phone": "",
+      "website": "https://canterburymosque.co.uk/",
+      "postcode": "CT2 7LT"
+    },
+    "updated": [
+      "addr",
+      "web"
+    ]
+  },
+  {
+    "name": "Crawley Mosque",
+    "city": "Crawley",
+    "query": "Crawley Mosque Crawley mosque UK",
+    "found": {
+      "address": "157 London Road",
+      "phone": "0800 208 8605",
+      "website": "https://crawleymasjid.co.uk/",
+      "postcode": "RH10 9TA"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Langley Green Islamic Centre & Mosque",
+    "city": "Crawley",
+    "query": "Langley Green Islamic Centre & Mosque Crawley mosque UK",
+    "found": {
+      "address": "157 London Road",
+      "phone": "07410308603",
+      "website": "https://crawleymasjid.co.uk/",
+      "postcode": "RH10 9TA"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Eastbourne Mosque",
+    "city": "Eastbourne",
+    "query": "Eastbourne Mosque Eastbourne mosque UK",
+    "found": {
+      "address": "40a Ashford Square",
+      "phone": "",
+      "website": "https://www.eastbournemosque.com/",
+      "postcode": "BN21 3TX"
+    },
+    "updated": [
+      "addr",
+      "web"
+    ]
+  },
+  {
+    "name": "Jaffria Islamic Centre",
+    "city": "Manchester",
+    "query": "Jaffria Islamic Centre Manchester mosque UK",
+    "found": {
+      "address": "404 Moss Lane",
+      "phone": "",
+      "website": "https://jaffaria.org.uk/",
+      "postcode": "M14 4PX"
+    },
+    "updated": [
+      "addr",
+      "web"
+    ]
+  },
+  {
+    "name": "Prayer Room",
+    "city": "Liverpool",
+    "query": "Prayer Room Liverpool mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://www.liverpoolmuslimsociety.org.uk/",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Hussain Islamic Academy",
+    "city": "Bradford",
+    "query": "Hussain Islamic Academy Bradford mosque UK",
+    "found": {
+      "address": "203 Allerton Road",
+      "phone": "",
+      "website": "https://hussainiabradford.com/",
+      "postcode": "BD15 7RD"
+    },
+    "updated": [
+      "addr",
+      "web"
+    ]
+  },
+  {
+    "name": "Masjid Doha",
+    "city": "",
+    "query": "Masjid Doha mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://dohamosque.co.uk/",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Jamiyat Tabligh-ul-Islam",
+    "city": "Bradford",
+    "query": "Jamiyat Tabligh-ul-Islam Bradford mosque UK",
+    "found": {
+      "address": "",
+      "phone": "012 7473 2958",
+      "website": "https://mawaqit.net/en/m/jamiyat-tabligh-ul-islam-bradford-bd5-7te-united-kingdom",
+      "postcode": "BD7 1NX"
+    },
+    "updated": [
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Imam Yusuf Motala Academy",
+    "city": "Bradford",
+    "query": "Imam Yusuf Motala Academy Bradford mosque UK",
+    "found": {
+      "address": "",
+      "phone": "07771 635480",
+      "website": "https://masjidbox.com/prayer-times/imam-yusuf-motala-academy",
+      "postcode": "BD2 4NH"
+    },
+    "updated": [
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Al Mahadul Islami",
+    "city": "Bradford",
+    "query": "Al Mahadul Islami Bradford mosque UK",
+    "found": {
+      "address": "",
+      "phone": "01274575600",
+      "website": "https://www.yorkshire.com/wibsey/community/mosques/al-mahadul-islami?srsltid=AfmBOoq-U005U4SKpl14W07dPPUxvb4rrOH7UrOLECGX0H_the3VpCQM",
+      "postcode": "BD5 7PE"
+    },
+    "updated": [
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Masjid Ibraheem Education Center",
+    "city": "Bradford",
+    "query": "Masjid Ibraheem Education Center Bradford mosque UK",
+    "found": {
+      "address": "",
+      "phone": "07832673712",
+      "website": "https://miec.co.uk/",
+      "postcode": "BD3 8PX"
+    },
+    "updated": [
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Al Abrar Academy Masjid",
+    "city": "Bradford",
+    "query": "Al Abrar Academy Masjid Bradford mosque UK",
+    "found": {
+      "address": "20 Heap Lane",
+      "phone": "",
+      "website": "https://alabraracademy.org/",
+      "postcode": "BD3 0DT"
+    },
+    "updated": [
+      "addr",
+      "web"
+    ]
+  },
+  {
+    "name": "Al Hikmah",
+    "city": "Bradford",
+    "query": "Al Hikmah Bradford mosque UK",
+    "found": {
+      "address": "12 Bull Royd Lane",
+      "phone": "",
+      "website": "https://alhikaminstitute.co.uk/",
+      "postcode": "BD8 0LJ"
+    },
+    "updated": [
+      "addr",
+      "web"
+    ]
+  },
+  {
+    "name": "Madrassah Jamiah Farooqiah",
+    "city": "Bradford",
+    "query": "Madrassah Jamiah Farooqiah Bradford mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://farooqiah.co.uk/",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Scarborough Islamic Centre",
+    "city": "North Yorkshire",
+    "query": "Scarborough Islamic Centre North Yorkshire mosque UK",
+    "found": {
+      "address": "62 Roscoe Street",
+      "phone": "01723448356",
+      "website": "https://www.scarbislam.com/home",
+      "postcode": "YO12 7BY"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Lampeter Campus Mosque",
+    "city": "Ceredigion",
+    "query": "Lampeter Campus Mosque Ceredigion mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=903",
+      "postcode": "SA48 7AW"
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Telford Central Mosque",
+    "city": "Telford and Wrekin",
+    "query": "Telford Central Mosque Telford and Wrekin mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://www.telfordcentralmosque.com/",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Aberystwyth Masjid",
+    "city": "Ceredigion",
+    "query": "Aberystwyth Masjid Ceredigion mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://aberystwyth-masjid.wheree.com/",
+      "postcode": "SY23 1EZ"
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Bethel Chapel",
+    "city": "Swansea",
+    "query": "Bethel Chapel Swansea mosque UK",
+    "found": {
+      "address": "",
+      "phone": "07808203990",
+      "website": "https://www.walesonline.co.uk/news/wales-news/new-islamic-faith-centre-taking-33358155",
+      "postcode": "SA2 9AS"
+    },
+    "updated": [
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Hamad Bin Khalifa Islamic Centre",
+    "city": "Pembrokeshire",
+    "query": "Hamad Bin Khalifa Islamic Centre Pembrokeshire mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://www.milfordwaterfront.co.uk/shops-restaurants-things-to-do/hamad-bin-khalifa-islamic-centre/",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Dundee Central Mosque",
+    "city": "Dundee City",
+    "query": "Dundee Central Mosque Dundee City mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://www.dundeeislamicsociety.com/",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Jamia Masjid Bilal",
+    "city": "Dundee City",
+    "query": "Jamia Masjid Bilal Dundee City mosque UK",
+    "found": {
+      "address": "7 Dura Street",
+      "phone": "01382 226913",
+      "website": "https://www.siccdundee.co.uk/",
+      "postcode": "DD4 6RU"
+    },
+    "updated": [
+      "addr",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Dundalk Islamic Culture Centre",
+    "city": "",
+    "query": "Dundalk Islamic Culture Centre mosque UK",
+    "found": {
+      "address": "67 Park Street",
+      "phone": "",
+      "website": "https://dundalkmuslimcommunity.com/",
+      "postcode": ""
+    },
+    "updated": [
+      "addr",
+      "web"
+    ]
+  },
+  {
+    "name": "Chatham Mosque",
+    "city": "Medway",
+    "query": "Chatham Mosque Medway mosque UK",
+    "found": {
+      "address": "22A Chatham Hill",
+      "phone": "",
+      "website": "https://www.chathamhillmosque.co.uk/",
+      "postcode": ""
+    },
+    "updated": [
+      "addr",
+      "web"
+    ]
+  },
+  {
+    "name": "Sittingbourne Islamic Cultural Centre",
+    "city": "Swale",
+    "query": "Sittingbourne Islamic Cultural Centre Swale mosque UK",
+    "found": {
+      "address": "14 Hawthorn Road",
+      "phone": "",
+      "website": "https://sittingbourne-islamic-cultural-centre.wheree.com/",
+      "postcode": "ME10 1AT"
+    },
+    "updated": [
+      "addr",
       "web"
     ]
   },
@@ -4439,13 +4168,14 @@
     "city": "Manchester",
     "query": "The Eccles and Salford Islamic Society Manchester mosque UK",
     "found": {
-      "address": "",
-      "phone": "",
+      "address": "5 Liverpool Road",
+      "phone": "01617892609",
       "website": "https://ecclesmosque.org.uk/",
-      "postcode": ""
+      "postcode": "M30 0WB"
     },
     "updated": [
-      "web"
+      "pc",
+      "tel"
     ]
   },
   {
@@ -4458,40 +4188,7 @@
       "website": "http://www.wirraldeencentre.org.uk/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Abdullah Quilliam Mosque",
-    "city": "Liverpool",
-    "query": "Abdullah Quilliam Mosque Liverpool mosque UK",
-    "found": {
-      "address": "12 Brougham Terrace",
-      "phone": "",
-      "website": "https://www.abdullahquilliam.org/",
-      "postcode": "L6 1AE"
-    },
-    "updated": [
-      "pc",
-      "web"
-    ]
-  },
-  {
-    "name": "Masjid-e-Salaam",
-    "city": "Bolton",
-    "query": "Masjid-e-Salaam Bolton mosque UK",
-    "found": {
-      "address": "49 Watling Street",
-      "phone": "01772 788447",
-      "website": "https://masjidesalaam.com/",
-      "postcode": "PR2 8EA"
-    },
-    "updated": [
-      "pc",
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Wrexham Islamic Cultural Centre",
@@ -4503,84 +4200,7 @@
       "website": "https://wrexhammosque.co.uk/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Masjid al-Furqan (Leigh Mosque)",
-    "city": "Leigh",
-    "query": "Masjid al-Furqan (Leigh Mosque) Leigh mosque UK",
-    "found": {
-      "address": "",
-      "phone": "",
-      "website": "https://www.masjidalfurqanleigh.co.uk/",
-      "postcode": "WN7 1BH"
-    },
-    "updated": [
-      "pc",
-      "web"
-    ]
-  },
-  {
-    "name": "Jamia Masjid Madni",
-    "city": "Halifax",
-    "query": "Jamia Masjid Madni Halifax mosque UK",
-    "found": {
-      "address": "",
-      "phone": "",
-      "website": "https://mawaqit.net/en/m/jamia-masjid-madni-halifax-hx1-5le-united-kingdom",
-      "postcode": "HX1 5LE"
-    },
-    "updated": [
-      "pc",
-      "web"
-    ]
-  },
-  {
-    "name": "Masjid e Bilaal",
-    "city": "Blackburn",
-    "query": "Masjid e Bilaal Blackburn mosque UK",
-    "found": {
-      "address": "63 Cedar Street",
-      "phone": "",
-      "website": "https://mosquefinder.co.uk/masjid-bilal-blackburn.html",
-      "postcode": "BB1 9TT"
-    },
-    "updated": [
-      "pc",
-      "web"
-    ]
-  },
-  {
-    "name": "Masjid Nimra",
-    "city": "Nelson",
-    "query": "Masjid Nimra Nelson mosque UK",
-    "found": {
-      "address": "42 Bankhouse Road",
-      "phone": "",
-      "website": "https://mosquefinder.co.uk/masjid-nimra-nelson.html",
-      "postcode": "BB9 7RA"
-    },
-    "updated": [
-      "pc",
-      "web"
-    ]
-  },
-  {
-    "name": "Markazi Jamia Ghausia Masjid",
-    "city": "Nelson",
-    "query": "Markazi Jamia Ghausia Masjid Nelson mosque UK",
-    "found": {
-      "address": "",
-      "phone": "",
-      "website": "https://www.mosquedirectory.co.uk/mosques/england/lancashire/nelson/newchurch/Markazi-Jamia-Ghousi-Mosque-Nelson-Lancashire/892",
-      "postcode": "BB9 7LU"
-    },
-    "updated": [
-      "pc",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Inverness Masjid",
@@ -4592,40 +4212,7 @@
       "website": "https://invernessmasjid.uk/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Taqwah Mosque",
-    "city": "Southampton",
-    "query": "Taqwah Mosque Southampton mosque UK",
-    "found": {
-      "address": "162 Northam Road",
-      "phone": "02380 986498",
-      "website": "https://www.mosquedirectory.co.uk/mosques/england/hampshire/southampton/northam/Taqwah-Mosque-Northam-Southampton-Hampshire/3397",
-      "postcode": "SO14 0QF"
-    },
-    "updated": [
-      "pc",
-      "tel",
-      "web"
-    ]
-  },
-  {
-    "name": "Easton Jamia Masjid",
-    "city": "Bristol",
-    "query": "Easton Jamia Masjid Bristol mosque UK",
-    "found": {
-      "address": "",
-      "phone": "",
-      "website": "https://eastonjamiamasjid.co.uk/",
-      "postcode": "BS5 6JH"
-    },
-    "updated": [
-      "pc",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Bristol Jamia Mosque",
@@ -4637,24 +4224,7 @@
       "website": "https://bristoljamiamosque.co.uk/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Greenbank Masjid",
-    "city": "Bristol",
-    "query": "Greenbank Masjid Bristol mosque UK",
-    "found": {
-      "address": "",
-      "phone": "",
-      "website": "https://greenbankbristol.org/",
-      "postcode": "BS5 6HE"
-    },
-    "updated": [
-      "pc",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Masjid At-Tawheed",
@@ -4666,10 +4236,7 @@
       "website": "https://tawheedcardiff.org/",
       "postcode": ""
     },
-    "updated": [
-      "tel",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Cranfield University Mosque",
@@ -4678,27 +4245,10 @@
     "found": {
       "address": "",
       "phone": "",
-      "website": "https://mawaqit.net/en/m/cranfield-islamic-society-mosque-cranfield-bedford",
+      "website": "https://www.cranfield.ac.uk/study/life-on-campus/worship",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
-  },
-  {
-    "name": "Bedford Al Falaah Islamic Centre",
-    "city": "Bedford",
-    "query": "Bedford Al Falaah Islamic Centre Bedford mosque UK",
-    "found": {
-      "address": "127 Midland Road",
-      "phone": "",
-      "website": "https://masjidbox.com/prayer-times/bedford-islamic-centre",
-      "postcode": "MK40 1DE"
-    },
-    "updated": [
-      "pc",
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Al Azhar Mosque",
@@ -4710,9 +4260,7 @@
       "website": "https://alazharsouthshields.com/",
       "postcode": ""
     },
-    "updated": [
-      "web"
-    ]
+    "updated": []
   },
   {
     "name": "Sarajia Islamic Center",
@@ -4720,8 +4268,32 @@
     "query": "Sarajia Islamic Center Bathgate mosque UK",
     "found": {
       "address": "",
-      "phone": "01506 635380",
+      "phone": "",
       "website": "https://www.bathgatemosque.com/",
+      "postcode": ""
+    },
+    "updated": []
+  },
+  {
+    "name": "Zia Ul Quran Centre",
+    "city": "Glasgow",
+    "query": "Zia Ul Quran Centre Glasgow mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://ziaulquranscotland.com/",
+      "postcode": ""
+    },
+    "updated": []
+  },
+  {
+    "name": "Islamic Cultural Centre Neasden",
+    "city": "London",
+    "query": "Islamic Cultural Centre Neasden London mosque UK",
+    "found": {
+      "address": "",
+      "phone": "07961039786",
+      "website": "https://neasdenmosque.co.uk/",
       "postcode": ""
     },
     "updated": [
@@ -4730,16 +4302,305 @@
     ]
   },
   {
-    "name": "Zia Ul Quran Centre",
-    "city": "Glasgow",
-    "query": "Zia Ul Quran Centre Glasgow mosque UK",
+    "name": "White City Musalla",
+    "city": "London",
+    "query": "White City Musalla London mosque UK",
     "found": {
-      "address": "257 Kenmure Street",
+      "address": "95 Bloemfontein Road",
+      "phone": "07732 574742",
+      "website": "https://www.fic.org.uk/",
+      "postcode": "W12 7DA"
+    },
+    "updated": [
+      "pc",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Masjid e Yusuf",
+    "city": "London",
+    "query": "Masjid e Yusuf London mosque UK",
+    "found": {
+      "address": "",
       "phone": "",
-      "website": "https://ziaulquranscotland.com/",
+      "website": "https://masjideyusuf.org/",
+      "postcode": "N19 4EB"
+    },
+    "updated": [
+      "pc",
+      "web"
+    ]
+  },
+  {
+    "name": "Masjid Khalil",
+    "city": "London",
+    "query": "Masjid Khalil London mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://masjidalkhalil.co.uk/",
       "postcode": ""
     },
     "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Al-Hudaa Islamic Prayer Group",
+    "city": "London",
+    "query": "Al-Hudaa Islamic Prayer Group London mosque UK",
+    "found": {
+      "address": "91 Mile End Road",
+      "phone": "07946 555167",
+      "website": "https://www.alhudamosque.com/",
+      "postcode": "E14UJ"
+    },
+    "updated": [
+      "pc",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Shacklewell Lane Mosque",
+    "city": "London",
+    "query": "Shacklewell Lane Mosque London mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://www.masjidramadan.org/",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Masjid Taha",
+    "city": "London",
+    "query": "Masjid Taha London mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://masjidtaha.com/",
+      "postcode": "E15 2JG"
+    },
+    "updated": [
+      "pc",
+      "web"
+    ]
+  },
+  {
+    "name": "Markazul Uloom",
+    "city": "London",
+    "query": "Markazul Uloom London mosque UK",
+    "found": {
+      "address": "15 Shacklewell Lane",
+      "phone": "",
+      "website": "https://masjidbox.com/prayer-times/markazul-uloom-mosque",
+      "postcode": "E8 2LR"
+    },
+    "updated": [
+      "pc",
+      "web"
+    ]
+  },
+  {
+    "name": "Valide Sultan Mosque",
+    "city": "London",
+    "query": "Valide Sultan Mosque London mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://londonvalidesultan.org/about-us/opening-hours/",
+      "postcode": "N16 9EX"
+    },
+    "updated": [
+      "pc",
+      "web"
+    ]
+  },
+  {
+    "name": "East End Islamic Centre (Maktab Building)",
+    "city": "London",
+    "query": "East End Islamic Centre (Maktab Building) London mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://eastendislamic.co.uk/",
+      "postcode": ""
+    },
+    "updated": [
+      "web"
+    ]
+  },
+  {
+    "name": "Masjid-e-Owais-e-Qarni",
+    "city": "Ilford",
+    "query": "Masjid-e-Owais-e-Qarni Ilford mosque UK",
+    "found": {
+      "address": "107 Belgrave Road",
+      "phone": "02085186329",
+      "website": "https://www.belgravemasjid.org.uk/",
+      "postcode": "IG1 3LG"
+    },
+    "updated": [
+      "pc",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Darul Ummah Goresbrook",
+    "city": "Dagenham",
+    "query": "Darul Ummah Goresbrook Dagenham mosque UK",
+    "found": {
+      "address": "36 Maplestead Road",
+      "phone": "07478 401 602",
+      "website": "https://darulummahgoresbrook.org.uk/",
+      "postcode": "RM9 4XR"
+    },
+    "updated": [
+      "pc",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Mosque of the Embassy of Qatar",
+    "city": "London",
+    "query": "Mosque of the Embassy of Qatar London mosque UK",
+    "found": {
+      "address": "30 Collingham Gardens",
+      "phone": "",
+      "website": "https://www.mosquedirectory.co.uk/mosques/england/london/kensington-and-chelsea/earls-court/The-Mosque-of-Qatar-Embassy-Earls-Court-South-Kensington-London/1414",
+      "postcode": "SW5 0HN"
+    },
+    "updated": [
+      "pc",
+      "web"
+    ]
+  },
+  {
+    "name": "Lambeth Masjid Progressive Community Centre",
+    "city": "London",
+    "query": "Lambeth Masjid Progressive Community Centre London mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://lambethmasjid.org/",
+      "postcode": "SE5 9QH"
+    },
+    "updated": [
+      "pc",
+      "web"
+    ]
+  },
+  {
+    "name": "Epsom & Ewell Islamic Society",
+    "city": "Epsom",
+    "query": "Epsom & Ewell Islamic Society Epsom mosque UK",
+    "found": {
+      "address": "",
+      "phone": "",
+      "website": "https://eeis.co.uk/",
+      "postcode": "KT19 8TU"
+    },
+    "updated": [
+      "pc",
+      "web"
+    ]
+  },
+  {
+    "name": "Jamiat-ul-Muslimin",
+    "city": "Birmingham",
+    "query": "Jamiat-ul-Muslimin Birmingham mosque UK",
+    "found": {
+      "address": "28 Tennyson Road",
+      "phone": "0121 773 6094",
+      "website": "https://www.jamimosque.org.uk/",
+      "postcode": "B10 0HA"
+    },
+    "updated": [
+      "pc",
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Luton Turkish Community Centre",
+    "city": "Luton",
+    "query": "Luton Turkish Community Centre Luton mosque UK",
+    "found": {
+      "address": "58 Dumfries Street",
+      "phone": "",
+      "website": "https://www.lutonturkishcenter.co.uk/",
+      "postcode": "LU1 5BS"
+    },
+    "updated": [
+      "pc",
+      "web"
+    ]
+  },
+  {
+    "name": "Al Falah Community Centre",
+    "city": "Luton",
+    "query": "Al Falah Community Centre Luton mosque UK",
+    "found": {
+      "address": "340 Dunstable Road",
+      "phone": "",
+      "website": "https://alfalahmasjidluton.com/",
+      "postcode": "LU4 8JS"
+    },
+    "updated": [
+      "pc",
+      "web"
+    ]
+  },
+  {
+    "name": "Bury Park Masjid",
+    "city": "Luton",
+    "query": "Bury Park Masjid Luton mosque UK",
+    "found": {
+      "address": "27 Bury Park Road",
+      "phone": "",
+      "website": "https://buryparkmasjid.co.uk/",
+      "postcode": "LU1 1HB"
+    },
+    "updated": [
+      "pc",
+      "web"
+    ]
+  },
+  {
+    "name": "Muslim Prayer Rooms",
+    "city": "Dundee",
+    "query": "Muslim Prayer Rooms Dundee mosque UK",
+    "found": {
+      "address": "",
+      "phone": "01382 220 308",
+      "website": "https://www.dundeeislamicsociety.com/",
+      "postcode": ""
+    },
+    "updated": [
+      "tel",
+      "web"
+    ]
+  },
+  {
+    "name": "Tayside Islamic Centre",
+    "city": "Dundee",
+    "query": "Tayside Islamic Centre Dundee mosque UK",
+    "found": {
+      "address": "96A Victoria Road",
+      "phone": "01382 224817",
+      "website": "https://time.my-masjid.com/timingscreen/16aca530-c200-4859-9b8c-63f1daf3e9d7",
+      "postcode": "DD1 2NP"
+    },
+    "updated": [
+      "pc",
+      "tel",
       "web"
     ]
   }
