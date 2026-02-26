@@ -39,8 +39,8 @@
       "color2": "#388e3c",
       "tags": "Little Horton",
       "type": "mosque",
-      "lat": 53.779003,
-      "lon": -1.764709
+      "lat": 53.778617,
+      "lon": -1.764944
     },
     {
       "name": "Tawakkulia Islamic Society",
@@ -67,8 +67,8 @@
       "color2": "#9c2759",
       "tags": "Little Horton",
       "type": "mosque",
-      "lat": 53.788851,
-      "lon": -1.75878
+      "lat": 53.788351,
+      "lon": -1.759277
     },
     {
       "name": "Masjid Abu Bakar",
@@ -81,8 +81,8 @@
       "color2": "#7b1fa2",
       "tags": "",
       "type": "mosque",
-      "lat": 53.793103,
-      "lon": -1.729535
+      "lat": 53.793439,
+      "lon": -1.728364
     },
     {
       "name": "IYMA",
@@ -109,8 +109,8 @@
       "color2": "#1b3a5c",
       "tags": "",
       "type": "mosque",
-      "lat": 53.789284,
-      "lon": -1.759597
+      "lat": 53.789632,
+      "lon": -1.759851
     },
     {
       "name": "Masjid Taqwa",
@@ -165,8 +165,8 @@
       "color2": "#2e7d32",
       "tags": "Queensbury",
       "type": "mosque",
-      "lat": 53.771159,
-      "lon": -1.823696
+      "lat": 53.770447,
+      "lon": -1.823733
     },
     {
       "name": "Masjid Al Hikmah & Learning Centre",
@@ -193,8 +193,8 @@
       "color2": "#3949ab",
       "tags": "",
       "type": "mosque",
-      "lat": 53.865097,
-      "lon": -1.910722
+      "lat": 53.865045,
+      "lon": -1.911568
     },
     {
       "name": "Al-Mustaqeem Education and Community Centre",
@@ -235,8 +235,8 @@
       "color2": "#1a3a5c",
       "tags": "",
       "type": "mosque",
-      "lat": 53.78592,
-      "lon": -1.736851
+      "lat": 53.786309,
+      "lon": -1.737115
     },
     {
       "name": "Darul Mahmood",
@@ -291,8 +291,8 @@
       "color2": "#1565c0",
       "tags": "Idle",
       "type": "mosque",
-      "lat": 53.817517,
-      "lon": -1.747119
+      "lat": 53.817582,
+      "lon": -1.748063
     },
     {
       "name": "Jamia Abu Hanifa Madrassa",
@@ -347,8 +347,8 @@
       "color2": "#332080",
       "tags": "",
       "type": "mosque",
-      "lat": 53.80146,
-      "lon": -1.716895
+      "lat": 53.801252,
+      "lon": -1.718454
     },
     {
       "name": "Markazi Masjid Darul Irfan",
@@ -403,8 +403,8 @@
       "color2": "#8b3366",
       "tags": "Manningham",
       "type": "mosque",
-      "lat": 53.829603,
-      "lon": -1.754642
+      "lat": 53.828576,
+      "lon": -1.75448
     },
     {
       "name": "Masjid Bilal",
@@ -417,8 +417,8 @@
       "color2": "#1a5566",
       "tags": "",
       "type": "mosque",
-      "lat": 53.804068,
-      "lon": -1.772693
+      "lat": 53.802733,
+      "lon": -1.772676
     },
     {
       "name": "Masjid Hamza",
@@ -487,8 +487,8 @@
       "color2": "#006b8a",
       "tags": "",
       "type": "mosque",
-      "lat": 53.806068,
-      "lon": -1.784906
+      "lat": 53.805972,
+      "lon": -1.783621
     },
     {
       "name": "Masjid Noorul Islam",
@@ -501,8 +501,8 @@
       "color2": "#1a6b5a",
       "tags": "Great Horton",
       "type": "mosque",
-      "lat": 53.788983,
-      "lon": -1.775855
+      "lat": 53.788528,
+      "lon": -1.775304
     },
     {
       "name": "Nusrat-ul-Islam Masjid",
@@ -543,8 +543,8 @@
       "color2": "#1a3a85",
       "tags": "",
       "type": "mosque",
-      "lat": 53.802807,
-      "lon": -1.785985
+      "lat": 53.802197,
+      "lon": -1.78579
     },
     {
       "name": "Masjid ~ E ~ Usman / Madrassa Khaliliya",
@@ -571,8 +571,8 @@
       "color2": "#6d1a28",
       "tags": "",
       "type": "mosque",
-      "lat": 53.808888,
-      "lon": -1.78401
+      "lat": 53.808889,
+      "lon": -1.783932
     },
     {
       "name": "Musalla Salaam",
@@ -655,8 +655,8 @@
       "color2": "#b8860b",
       "tags": "",
       "type": "mosque",
-      "lat": 53.866688,
-      "lon": -1.910506
+      "lat": 53.866689,
+      "lon": -1.910477
     },
     {
       "name": "Masjid Ibraheem",
@@ -669,8 +669,8 @@
       "color2": "#e64a19",
       "tags": "Beeston",
       "type": "mosque",
-      "lat": 53.772746,
-      "lon": -1.549747
+      "lat": 53.773146,
+      "lon": -1.548764
     },
     {
       "name": "West Leeds Jamia Masjid",
@@ -697,8 +697,8 @@
       "color2": "#8b2040",
       "tags": "",
       "type": "mosque",
-      "lat": 53.531835,
-      "lon": -2.122884
+      "lat": 53.53249,
+      "lon": -2.123738
     },
     {
       "name": "Chelmsford Mosque",
@@ -711,8 +711,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 51.73066,
-      "lon": 0.47405
+      "lat": 51.730648,
+      "lon": 0.474042
     },
     {
       "name": "Ely Islamic Centre",
@@ -725,8 +725,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.396879,
-      "lon": 0.267463
+      "lat": 52.396807,
+      "lon": 0.26741
     },
     {
       "name": "Tendring Deen Education Centre",
@@ -739,8 +739,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 51.791701,
-      "lon": 1.149742
+      "lat": 51.791626,
+      "lon": 1.149772
     },
     {
       "name": "Norwich and Norfolk Community Centre",
@@ -753,8 +753,8 @@
       "color2": null,
       "tags": "",
       "type": "community_centre",
-      "lat": 52.635545,
-      "lon": 1.266511
+      "lat": 52.635414,
+      "lon": 1.266827
     },
     {
       "name": "Masjid Al Ikhlas & Cambridge Islamic Centre",
@@ -767,8 +767,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.197989,
-      "lon": 0.13855
+      "lat": 52.198761,
+      "lon": 0.138886
     },
     {
       "name": "The Ihsan Mosque and Islamic Centre",
@@ -781,8 +781,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.626447,
-      "lon": 1.288461
+      "lat": 52.6272,
+      "lon": 1.289037
     },
     {
       "name": "Ipswich & Suffolk Bangladeshi Muslim Community Centre and Mosque",
@@ -795,8 +795,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.056226,
-      "lon": 1.160243
+      "lat": 52.05592,
+      "lon": 1.16009
     },
     {
       "name": "Omar Faruque Mosque and Cultural Centre",
@@ -809,8 +809,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.232498,
-      "lon": 0.136182
+      "lat": 52.232025,
+      "lon": 0.135754
     },
     {
       "name": "Masjid-at-Tauwheed Mosque",
@@ -823,8 +823,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.613168,
-      "lon": 1.726505
+      "lat": 52.613346,
+      "lon": 1.726519
     },
     {
       "name": "Shah Jalal Masjid",
@@ -837,8 +837,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.056425,
-      "lon": 1.164911
+      "lat": 52.056472,
+      "lon": 1.165483
     },
     {
       "name": "Hethersett Masjid",
@@ -851,8 +851,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.602301,
-      "lon": 1.178437
+      "lat": 52.60228,
+      "lon": 1.177991
     },
     {
       "name": "Cambridge Central Mosque",
@@ -865,8 +865,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.197,
-      "lon": 0.15138
+      "lat": 52.197343,
+      "lon": 0.152376
     },
     {
       "name": "The Ali Reza Islamic Centre",
@@ -878,7 +878,9 @@
       "color1": null,
       "color2": null,
       "tags": "",
-      "type": "mosque"
+      "type": "mosque",
+      "lat": 51.738157,
+      "lon": 0.476598
     },
     {
       "name": "Muslim Prayer Room",
@@ -891,8 +893,8 @@
       "color2": null,
       "tags": "",
       "type": "prayer_room",
-      "lat": 52.200835,
-      "lon": 0.110824
+      "lat": 52.201064,
+      "lon": 0.110239
     },
     {
       "name": "Haverhill Mosque",
@@ -905,8 +907,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.082473,
-      "lon": 0.432238
+      "lat": 52.082285,
+      "lon": 0.431606
     },
     {
       "name": "Khanqah Naqshbandia",
@@ -919,8 +921,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.432843,
-      "lon": -2.208827
+      "lat": 53.432963,
+      "lon": -2.208824
     },
     {
       "name": "Qadria Jilania Islamic (S+E) Centre",
@@ -933,8 +935,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.457256,
-      "lon": -2.203224
+      "lat": 53.456971,
+      "lon": -2.202974
     },
     {
       "name": "The Eccles and Salford Islamic Society",
@@ -946,7 +948,9 @@
       "color1": null,
       "color2": null,
       "tags": "",
-      "type": "mosque"
+      "type": "mosque",
+      "lat": 53.483027,
+      "lon": -2.345246
     },
     {
       "name": "Muslim Youth Foundation (MYF)",
@@ -959,8 +963,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.484031,
-      "lon": -2.237861
+      "lat": 53.483983,
+      "lon": -2.237442
     },
     {
       "name": "Faizan E Islam Centre",
@@ -973,8 +977,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.45587,
-      "lon": -2.283697
+      "lat": 53.455919,
+      "lon": -2.283539
     },
     {
       "name": "Jamia Masjid Abu-Bakr & Islamic Centre",
@@ -987,8 +991,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.642584,
-      "lon": -1.806321
+      "lat": 53.643008,
+      "lon": -1.807128
     },
     {
       "name": "Jam-E-Masjid-Bilal",
@@ -1001,8 +1005,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.636296,
-      "lon": -1.802932
+      "lat": 53.635848,
+      "lon": -1.802595
     },
     {
       "name": "Khizra mosque",
@@ -1015,8 +1019,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.505651,
-      "lon": -2.236474
+      "lat": 53.505419,
+      "lon": -2.237242
     },
     {
       "name": "Jamia Mosque",
@@ -1029,8 +1033,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.510544,
-      "lon": -2.243754
+      "lat": 53.510555,
+      "lon": -2.243196
     },
     {
       "name": "Prayer Room (Liverpool)",
@@ -1057,8 +1061,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.451884,
-      "lon": -2.196167
+      "lat": 53.451944,
+      "lon": -2.196544
     },
     {
       "name": "Manchester Islamic Centre",
@@ -1071,8 +1075,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.499369,
-      "lon": -2.173743
+      "lat": 53.499323,
+      "lon": -2.173136
     },
     {
       "name": "Masjid al Furqan",
@@ -1085,8 +1089,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.059676,
-      "lon": -2.212136
+      "lat": 53.059728,
+      "lon": -2.211544
     },
     {
       "name": "Minhaj-ul-Qur'an Central Mosque",
@@ -1099,8 +1103,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.452326,
-      "lon": -2.257065
+      "lat": 53.452389,
+      "lon": -2.258014
     },
     {
       "name": "Stockport Islamic Centre",
@@ -1113,8 +1117,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.40094,
-      "lon": -2.158181
+      "lat": 53.401209,
+      "lon": -2.157379
     },
     {
       "name": "Markaz Dar-ul-ehsan Manchester",
@@ -1127,8 +1131,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.495808,
-      "lon": -2.241484
+      "lat": 53.495949,
+      "lon": -2.241423
     },
     {
       "name": "Manchester Islamic Centre",
@@ -1141,8 +1145,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.471189,
-      "lon": -2.237277
+      "lat": 53.471153,
+      "lon": -2.237123
     },
     {
       "name": "European Islamic Centre & Mosque",
@@ -1155,8 +1159,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.528704,
-      "lon": -2.134551
+      "lat": 53.528264,
+      "lon": -2.134827
     },
     {
       "name": "Arrahman ManchesterIslamic Cultural Association",
@@ -1169,8 +1173,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.454608,
-      "lon": -2.248932
+      "lat": 53.454368,
+      "lon": -2.248508
     },
     {
       "name": "Cavendish Prayer Rooms",
@@ -1183,8 +1187,8 @@
       "color2": null,
       "tags": "",
       "type": "prayer_room",
-      "lat": 53.469325,
-      "lon": -2.238608
+      "lat": 53.469566,
+      "lon": -2.239438
     },
     {
       "name": "Hough End Hall Academy",
@@ -1197,8 +1201,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.435545,
-      "lon": -2.264792
+      "lat": 53.435752,
+      "lon": -2.265115
     },
     {
       "name": "Abu Bakar Mosque",
@@ -1211,8 +1215,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.471343,
-      "lon": -2.222243
+      "lat": 53.471515,
+      "lon": -2.222619
     },
     {
       "name": "Westwood Mosque",
@@ -1225,8 +1229,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.543922,
-      "lon": -2.13315
+      "lat": 53.54398,
+      "lon": -2.133094
     },
     {
       "name": "Markaz Al-Takwa",
@@ -1239,8 +1243,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.461132,
-      "lon": -2.212686
+      "lat": 53.46132,
+      "lon": -2.213598
     },
     {
       "name": "Manchester Central Mosque & Islamic Cultural Centre",
@@ -1253,8 +1257,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.45518,
-      "lon": -2.218726
+      "lat": 53.455709,
+      "lon": -2.218977
     },
     {
       "name": "Keele University Islamic Centre",
@@ -1267,8 +1271,8 @@
       "color2": null,
       "tags": "",
       "type": "prayer_room",
-      "lat": 53.004786,
-      "lon": -2.271355
+      "lat": 53.005301,
+      "lon": -2.27225
     },
     {
       "name": "Khizra Mosque",
@@ -1281,8 +1285,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.505136,
-      "lon": -2.238069
+      "lat": 53.505556,
+      "lon": -2.237622
     },
     {
       "name": "Shahporan Masjid",
@@ -1295,8 +1299,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.450617,
-      "lon": -2.201536
+      "lat": 53.45088,
+      "lon": -2.201854
     },
     {
       "name": "Wirral Deen Centre",
@@ -1308,7 +1312,9 @@
       "color1": null,
       "color2": null,
       "tags": "",
-      "type": "mosque"
+      "type": "mosque",
+      "lat": 53.385356,
+      "lon": -3.032384
     },
     {
       "name": "Masjid-E-Hidayah",
@@ -1321,8 +1327,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.461304,
-      "lon": -2.274199
+      "lat": 53.46117,
+      "lon": -2.275117
     },
     {
       "name": "Stoke-on-Trent Muslim Welfare and Community Centre",
@@ -1335,8 +1341,8 @@
       "color2": null,
       "tags": "",
       "type": "community_centre",
-      "lat": 53.017705,
-      "lon": -2.18623
+      "lat": 53.017597,
+      "lon": -2.186617
     },
     {
       "name": "Al-Rahma Mosque",
@@ -1349,8 +1355,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.394088,
-      "lon": -2.96049
+      "lat": 53.394305,
+      "lon": -2.960648
     },
     {
       "name": "City Jamia Masjid",
@@ -1363,8 +1369,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.462005,
-      "lon": -2.206997
+      "lat": 53.461918,
+      "lon": -2.207753
     },
     {
       "name": "Shah Jalal Mosque",
@@ -1377,8 +1383,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.19959,
-      "lon": -2.925327
+      "lat": 53.199007,
+      "lon": -2.924491
     },
     {
       "name": "City Central Mosque",
@@ -1391,8 +1397,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.018663,
-      "lon": -2.17717
+      "lat": 53.018353,
+      "lon": -2.176968
     },
     {
       "name": "NMC Centre & Masjid",
@@ -1406,7 +1412,7 @@
       "tags": "",
       "type": "mosque",
       "lat": 53.26225,
-      "lon": -2.50478
+      "lon": -2.50618
     },
     {
       "name": "Da'watul Islam Mosque",
@@ -1419,8 +1425,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.65034,
-      "lon": -2.623371
+      "lat": 53.649571,
+      "lon": -2.62255
     },
     {
       "name": "Medina Mosque & Islamic Centre",
@@ -1433,8 +1439,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.529082,
-      "lon": -2.116465
+      "lat": 53.529188,
+      "lon": -2.117046
     },
     {
       "name": "Masjid-e-Noor",
@@ -1447,8 +1453,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.460207,
-      "lon": -2.262233
+      "lat": 53.460751,
+      "lon": -2.26313
     },
     {
       "name": "Masjid Imdadia",
@@ -1461,8 +1467,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.461116,
-      "lon": -2.265477
+      "lat": 53.460966,
+      "lon": -2.26649
     },
     {
       "name": "Zakaria Mosque",
@@ -1475,8 +1481,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.448203,
-      "lon": -2.260037
+      "lat": 53.448096,
+      "lon": -2.258919
     },
     {
       "name": "Shair-e-Rabbani Mosque",
@@ -1489,8 +1495,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.447415,
-      "lon": -2.262832
+      "lat": 53.447365,
+      "lon": -2.262905
     },
     {
       "name": "Madina Masjid & Community Centre",
@@ -1503,8 +1509,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.446133,
-      "lon": -2.189771
+      "lat": 53.446,
+      "lon": -2.19031
     },
     {
       "name": "Abdullah Quilliam Mosque",
@@ -1516,7 +1522,9 @@
       "color1": null,
       "color2": null,
       "tags": "",
-      "type": "mosque"
+      "type": "mosque",
+      "lat": 53.414288,
+      "lon": -2.960513
     },
     {
       "name": "Manchester Islamic Centre & Didsbury Mosque",
@@ -1529,8 +1537,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.423369,
-      "lon": -2.246071
+      "lat": 53.4228,
+      "lon": -2.246672
     },
     {
       "name": "Zakariyya Jaam'e Masjid",
@@ -1543,8 +1551,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.568404,
-      "lon": -2.440925
+      "lat": 53.568551,
+      "lon": -2.441698
     },
     {
       "name": "Al-Rahman Mosque",
@@ -1557,8 +1565,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.566622,
-      "lon": -2.448969
+      "lat": 53.565809,
+      "lon": -2.447276
     },
     {
       "name": "Cheadle Masjid",
@@ -1570,7 +1578,9 @@
       "color1": null,
       "color2": null,
       "tags": "",
-      "type": "mosque"
+      "type": "mosque",
+      "lat": 53.359326,
+      "lon": -2.219511
     },
     {
       "name": "Masjid-e-Noorul Islam",
@@ -1583,8 +1593,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.58984,
-      "lon": -2.43148
+      "lat": 53.589754,
+      "lon": -2.431428
     },
     {
       "name": "Makki Masjid",
@@ -1597,8 +1607,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.591417,
-      "lon": -2.44263
+      "lat": 53.591179,
+      "lon": -2.443363
     },
     {
       "name": "Sughra Mosque",
@@ -1611,8 +1621,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.554873,
-      "lon": -2.40113
+      "lat": 53.554871,
+      "lon": -2.401148
     },
     {
       "name": "Bilal Masjid",
@@ -1625,8 +1635,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.62047,
-      "lon": -2.145804
+      "lat": 53.620919,
+      "lon": -2.145365
     },
     {
       "name": "Jamia Madina Masjid",
@@ -1639,8 +1649,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.583011,
-      "lon": -2.445548
+      "lat": 53.583051,
+      "lon": -2.445175
     },
     {
       "name": "Masjid Al-Jamia Darul Quran",
@@ -1653,8 +1663,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.565793,
-      "lon": -2.439871
+      "lat": 53.565829,
+      "lon": -2.440626
     },
     {
       "name": "Makkah Masjid",
@@ -1667,8 +1677,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.565519,
-      "lon": -2.428514
+      "lat": 53.566121,
+      "lon": -2.428651
     },
     {
       "name": "Masjid Al Falah",
@@ -1681,8 +1691,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.574298,
-      "lon": -2.441575
+      "lat": 53.574045,
+      "lon": -2.441726
     },
     {
       "name": "Masjid-e-Usman",
@@ -1695,8 +1705,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.593988,
-      "lon": -2.435193
+      "lat": 53.593932,
+      "lon": -2.436095
     },
     {
       "name": "Jamia Alavia Bolton",
@@ -1709,8 +1719,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.575446,
-      "lon": -2.417348
+      "lat": 53.5751,
+      "lon": -2.416061
     },
     {
       "name": "Taiyabah Masjid",
@@ -1723,8 +1733,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.592033,
-      "lon": -2.431411
+      "lat": 53.59208,
+      "lon": -2.431409
     },
     {
       "name": "Masjid Al Aqsa",
@@ -1737,8 +1747,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.576155,
-      "lon": -2.449946
+      "lat": 53.575795,
+      "lon": -2.451295
     },
     {
       "name": "Masjid-e-Salaam",
@@ -1763,8 +1773,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.460958,
-      "lon": -2.251228
+      "lat": 53.460865,
+      "lon": -2.251822
     },
     {
       "name": "Salaam Community Centre and Masjid",
@@ -1777,8 +1787,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.457721,
-      "lon": -2.252052
+      "lat": 53.457689,
+      "lon": -2.251737
     },
     {
       "name": "Felicity House",
@@ -1791,8 +1801,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.401278,
-      "lon": -2.922974
+      "lat": 53.400995,
+      "lon": -2.92256
     },
     {
       "name": "Masjid E Ghosia",
@@ -1805,8 +1815,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.565229,
-      "lon": -2.444017
+      "lat": 53.565137,
+      "lon": -2.443835
     },
     {
       "name": "Madrasatul Imam Muhammad Zakariya",
@@ -1819,8 +1829,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.593388,
-      "lon": -2.429688
+      "lat": 53.592911,
+      "lon": -2.429156
     },
     {
       "name": "Ashton Central Mosque",
@@ -1833,8 +1843,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.492713,
-      "lon": -2.087502
+      "lat": 53.492518,
+      "lon": -2.086644
     },
     {
       "name": "Ashrafia Mosque",
@@ -1847,8 +1857,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.5737,
-      "lon": -2.443019
+      "lat": 53.573964,
+      "lon": -2.443266
     },
     {
       "name": "Madinah Masjid",
@@ -1861,8 +1871,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.581533,
-      "lon": -2.434431
+      "lat": 53.581487,
+      "lon": -2.434922
     },
     {
       "name": "Masjid Ahl Al-Sunnah",
@@ -1875,8 +1885,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.593744,
-      "lon": -2.443032
+      "lat": 53.593776,
+      "lon": -2.44254
     },
     {
       "name": "Masjid Tooba",
@@ -1889,8 +1899,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.529057,
-      "lon": -2.645471
+      "lat": 53.528829,
+      "lon": -2.645649
     },
     {
       "name": "Wrexham Islamic Cultural Centre",
@@ -1902,7 +1912,9 @@
       "color1": null,
       "color2": null,
       "tags": "",
-      "type": "mosque"
+      "type": "mosque",
+      "lat": 53.048165,
+      "lon": -2.997303
     },
     {
       "name": "Warrington Islamic Association",
@@ -1914,7 +1926,9 @@
       "color1": null,
       "color2": null,
       "tags": "",
-      "type": "mosque"
+      "type": "mosque",
+      "lat": 53.397795,
+      "lon": -2.612673
     },
     {
       "name": "Oldham Central Masjid and Islamic Centre",
@@ -1927,8 +1941,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.54542,
-      "lon": -2.128265
+      "lat": 53.545037,
+      "lon": -2.127855
     },
     {
       "name": "Shahjalal Mosque and Islamic Centre",
@@ -1941,8 +1955,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.450897,
-      "lon": -2.225901
+      "lat": 53.451084,
+      "lon": -2.226203
     },
     {
       "name": "Madressa Taleem-ul-Quran and Qurtaba Masjid",
@@ -1955,8 +1969,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.541077,
-      "lon": -2.090226
+      "lat": 53.541594,
+      "lon": -2.091258
     },
     {
       "name": "Neeli Mosque",
@@ -1969,8 +1983,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.608812,
-      "lon": -2.152882
+      "lat": 53.608663,
+      "lon": -2.152449
     },
     {
       "name": "Shahjalal Mosque",
@@ -1983,8 +1997,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.093728,
-      "lon": -2.443255
+      "lat": 53.093942,
+      "lon": -2.443095
     },
     {
       "name": "Jamia-Tul-Muntazir Manchester",
@@ -1997,8 +2011,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.499627,
-      "lon": -2.242078
+      "lat": 53.49873,
+      "lon": -2.242188
     },
     {
       "name": "Jamia Mosque Noor-E-Islam",
@@ -2011,8 +2025,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.533991,
-      "lon": -2.132289
+      "lat": 53.534408,
+      "lon": -2.132169
     },
     {
       "name": "Werneth Jamia Mosque",
@@ -2025,8 +2039,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.533002,
-      "lon": -2.13292
+      "lat": 53.532683,
+      "lon": -2.133108
     },
     {
       "name": "Masjid al-Furqan (Leigh Mosque)",
@@ -2038,7 +2052,9 @@
       "color1": null,
       "color2": null,
       "tags": "",
-      "type": "mosque"
+      "type": "mosque",
+      "lat": 53.498053,
+      "lon": -2.51406
     },
     {
       "name": "Oldham Mosque & Islamic Centre",
@@ -2051,8 +2067,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.542689,
-      "lon": -2.126416
+      "lat": 53.542683,
+      "lon": -2.126301
     },
     {
       "name": "Al-Khasra Masjid",
@@ -2065,8 +2081,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.546038,
-      "lon": -2.121883
+      "lat": 53.546075,
+      "lon": -2.121981
     },
     {
       "name": "Jamia Islamia Ghousia Masjid",
@@ -2079,8 +2095,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.532819,
-      "lon": -2.135333
+      "lat": 53.532261,
+      "lon": -2.135642
     },
     {
       "name": "Madrassa Taleemul Islam Markazi Masjid",
@@ -2093,8 +2109,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.532483,
-      "lon": -2.138878
+      "lat": 53.532538,
+      "lon": -2.138945
     },
     {
       "name": "St Michaels Mount (inman Trust)",
@@ -2107,8 +2123,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.426875,
-      "lon": -2.731298
+      "lat": 53.426895,
+      "lon": -2.731288
     },
     {
       "name": "Bilal Jamia Mosque",
@@ -2121,8 +2137,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.541412,
-      "lon": -2.087903
+      "lat": 53.542086,
+      "lon": -2.088393
     },
     {
       "name": "Masjid Hayat Un Nabi",
@@ -2135,8 +2151,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.533987,
-      "lon": -2.127778
+      "lat": 53.533997,
+      "lon": -2.127757
     },
     {
       "name": "Masjid Omar Mukhtar",
@@ -2149,8 +2165,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.395475,
-      "lon": -2.957919
+      "lat": 53.395698,
+      "lon": -2.957934
     },
     {
       "name": "Ross Street Masjid",
@@ -2163,8 +2179,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.536248,
-      "lon": -2.123485
+      "lat": 53.536101,
+      "lon": -2.12276
     },
     {
       "name": "Nagina Jamia Masjid",
@@ -2177,8 +2193,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.535565,
-      "lon": -2.123196
+      "lat": 53.535655,
+      "lon": -2.123892
     },
     {
       "name": "Jamay Masjid Muhammadia Saifia",
@@ -2191,8 +2207,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.537471,
-      "lon": -2.104145
+      "lat": 53.537441,
+      "lon": -2.10418
     },
     {
       "name": "Jalalabad Jamay Masjid",
@@ -2205,8 +2221,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.536743,
-      "lon": -2.103495
+      "lat": 53.536971,
+      "lon": -2.103021
     },
     {
       "name": "Greengate Jamia Mosque",
@@ -2219,8 +2235,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.538812,
-      "lon": -2.101855
+      "lat": 53.539076,
+      "lon": -2.101885
     },
     {
       "name": "Shahjalal Mosque & Islamic Centre",
@@ -2233,8 +2249,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.534479,
-      "lon": -2.121609
+      "lat": 53.534236,
+      "lon": -2.121279
     },
     {
       "name": "Jamia Mohl-Ul-Islam Siddiquia",
@@ -2247,8 +2263,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.531358,
-      "lon": -2.114751
+      "lat": 53.531604,
+      "lon": -2.1147
     },
     {
       "name": "Oldham Madani Academy",
@@ -2261,8 +2277,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.549878,
-      "lon": -2.128233
+      "lat": 53.548854,
+      "lon": -2.126606
     },
     {
       "name": "Al-Madina Islamic Educational and Cultural Centre",
@@ -2275,8 +2291,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.536458,
-      "lon": -2.100688
+      "lat": 53.535932,
+      "lon": -2.100717
     },
     {
       "name": "Madina Masjid & Islamic Centre",
@@ -2289,8 +2305,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.549615,
-      "lon": -2.121788
+      "lat": 53.549601,
+      "lon": -2.121817
     },
     {
       "name": "Nusratul Islam Masjid",
@@ -2303,8 +2319,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.536667,
-      "lon": -2.098168
+      "lat": 53.53644,
+      "lon": -2.098238
     },
     {
       "name": "Jamia Masjid Azmat E Islam",
@@ -2317,8 +2333,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.53727,
-      "lon": -2.096435
+      "lat": 53.537426,
+      "lon": -2.096724
     },
     {
       "name": "Madinatul Ilm",
@@ -2331,8 +2347,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.537945,
-      "lon": -2.096165
+      "lat": 53.538696,
+      "lon": -2.096552
     },
     {
       "name": "Markazi Jamia Masjid Mohra Sharif",
@@ -2345,8 +2361,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.52951,
-      "lon": -2.110899
+      "lat": 53.529456,
+      "lon": -2.111037
     },
     {
       "name": "Shahparan Chadderton Central Mosque",
@@ -2359,8 +2375,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.549683,
-      "lon": -2.13344
+      "lat": 53.550088,
+      "lon": -2.133247
     },
     {
       "name": "Elland Masjid",
@@ -2373,8 +2389,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.682755,
-      "lon": -1.838568
+      "lat": 53.682819,
+      "lon": -1.838354
     },
     {
       "name": "The Eden Centre",
@@ -2387,8 +2403,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.631191,
-      "lon": -1.814191
+      "lat": 53.631569,
+      "lon": -1.813835
     },
     {
       "name": "Jamia Mosque, Dar-ul-Aloom Naqshbandia and Community Welfare Centre",
@@ -2401,8 +2417,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.535969,
-      "lon": -2.093565
+      "lat": 53.535958,
+      "lon": -2.095107
     },
     {
       "name": "Masjid Umar",
@@ -2415,8 +2431,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.404027,
-      "lon": -1.456686
+      "lat": 53.404444,
+      "lon": -1.456533
     },
     {
       "name": "Noor Al Hadi Mosque",
@@ -2429,8 +2445,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.389437,
-      "lon": -1.427597
+      "lat": 53.389675,
+      "lon": -1.427442
     },
     {
       "name": "Markazi Jamia Masjid Riza Islamic Centre",
@@ -2443,8 +2459,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.659457,
-      "lon": -1.786028
+      "lat": 53.659176,
+      "lon": -1.786277
     },
     {
       "name": "Chesterfield Muslim Association",
@@ -2457,8 +2473,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.239742,
-      "lon": -1.428395
+      "lat": 53.239734,
+      "lon": -1.428367
     },
     {
       "name": "Jamia Mosque Gulzar-e-Habib",
@@ -2471,8 +2487,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.3873,
-      "lon": -1.422438
+      "lat": 53.387279,
+      "lon": -1.422478
     },
     {
       "name": "Masjid Al Khair",
@@ -2485,8 +2501,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.40756,
-      "lon": -1.433596
+      "lat": 53.407738,
+      "lon": -1.433481
     },
     {
       "name": "Makki Madani Masjid",
@@ -2499,8 +2515,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.687091,
-      "lon": -1.632533
+      "lat": 53.686718,
+      "lon": -1.632794
     },
     {
       "name": "Faizan e Madinah",
@@ -2513,8 +2529,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.65164,
-      "lon": -1.792891
+      "lat": 53.651207,
+      "lon": -1.792951
     },
     {
       "name": "Baitut Tawheed Masjid",
@@ -2527,8 +2543,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.677829,
-      "lon": -1.661589
+      "lat": 53.677891,
+      "lon": -1.661407
     },
     {
       "name": "Madni Masjid",
@@ -2541,8 +2557,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.693403,
-      "lon": -1.630343
+      "lat": 53.693419,
+      "lon": -1.63037
     },
     {
       "name": "Darul Ilm",
@@ -2555,8 +2571,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.674621,
-      "lon": -1.637258
+      "lat": 53.674681,
+      "lon": -1.636905
     },
     {
       "name": "Shah Jalal Masjid",
@@ -2569,8 +2585,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.636392,
-      "lon": -1.795809
+      "lat": 53.6366,
+      "lon": -1.795441
     },
     {
       "name": "Faizan-e-Madinah",
@@ -2583,8 +2599,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.678217,
-      "lon": -1.665279
+      "lat": 53.678263,
+      "lon": -1.665122
     },
     {
       "name": "Masjid As-Salaam",
@@ -2597,8 +2613,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.686959,
-      "lon": -1.613228
+      "lat": 53.687362,
+      "lon": -1.612628
     },
     {
       "name": "Islamic Tarbiyah Academy",
@@ -2611,8 +2627,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.69064,
-      "lon": -1.640876
+      "lat": 53.690934,
+      "lon": -1.641141
     },
     {
       "name": "Masjid Uthman",
@@ -2625,8 +2641,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.697844,
-      "lon": -1.64854
+      "lat": 53.698081,
+      "lon": -1.649058
     },
     {
       "name": "Abu Bakr Siddique Masjid",
@@ -2639,8 +2655,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.673742,
-      "lon": -1.497654
+      "lat": 53.673445,
+      "lon": -1.496716
     },
     {
       "name": "Medina Mosque",
@@ -2653,8 +2669,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.364446,
-      "lon": -1.4739
+      "lat": 53.364152,
+      "lon": -1.473369
     },
     {
       "name": "Wakefield Central Mosque",
@@ -2667,8 +2683,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.680492,
-      "lon": -1.487203
+      "lat": 53.679984,
+      "lon": -1.487575
     },
     {
       "name": "Jamia Sawafia Mosque",
@@ -2681,8 +2697,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.681521,
-      "lon": -1.485995
+      "lat": 53.681505,
+      "lon": -1.485996
     },
     {
       "name": "Jamia Mosque",
@@ -2695,8 +2711,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.687382,
-      "lon": -1.492662
+      "lat": 53.687629,
+      "lon": -1.49243
     },
     {
       "name": "Makki Jamia Mosque",
@@ -2709,8 +2725,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.358788,
-      "lon": -1.473053
+      "lat": 53.358667,
+      "lon": -1.47312
     },
     {
       "name": "Masjid Salahuddin",
@@ -2724,7 +2740,7 @@
       "tags": "",
       "type": "mosque",
       "lat": 53.694159,
-      "lon": -1.627625
+      "lon": -1.627668
     },
     {
       "name": "Aaliyah Mosque",
@@ -2737,8 +2753,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.391421,
-      "lon": -1.432532
+      "lat": 53.391447,
+      "lon": -1.432662
     },
     {
       "name": "Jamia Mosque",
@@ -2751,8 +2767,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.394249,
-      "lon": -1.429983
+      "lat": 53.394237,
+      "lon": -1.430737
     },
     {
       "name": "Al-Huda Academy",
@@ -2765,8 +2781,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.388839,
-      "lon": -1.426462
+      "lat": 53.388308,
+      "lon": -1.425957
     },
     {
       "name": "Elahi Jame Mosque",
@@ -2779,8 +2795,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.389482,
-      "lon": -1.423837
+      "lat": 53.389349,
+      "lon": -1.423898
     },
     {
       "name": "Markazi Jamia",
@@ -2793,8 +2809,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.390443,
-      "lon": -1.414321
+      "lat": 53.390003,
+      "lon": -1.416064
     },
     {
       "name": "Madani Education Centre",
@@ -2807,8 +2823,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.413679,
-      "lon": -1.398055
+      "lat": 53.414006,
+      "lon": -1.397952
     },
     {
       "name": "Hanfia Masjid",
@@ -2821,8 +2837,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.416524,
-      "lon": -1.397293
+      "lat": 53.416454,
+      "lon": -1.398202
     },
     {
       "name": "Yorkshire Muslim Academy",
@@ -2835,8 +2851,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.405043,
-      "lon": -1.43727
+      "lat": 53.404553,
+      "lon": -1.437934
     },
     {
       "name": "Masjid Abu Bakr",
@@ -2849,8 +2865,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.411077,
-      "lon": -1.397219
+      "lat": 53.410967,
+      "lon": -1.396111
     },
     {
       "name": "Grimesthorpe Academy",
@@ -2863,8 +2879,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.398292,
-      "lon": -1.454669
+      "lat": 53.397919,
+      "lon": -1.454555
     },
     {
       "name": "Fatima Community Centre",
@@ -2877,8 +2893,8 @@
       "color2": null,
       "tags": "",
       "type": "community_centre",
-      "lat": 53.391173,
-      "lon": -1.460609
+      "lat": 53.391535,
+      "lon": -1.460855
     },
     {
       "name": "Dar Ul Aloom Saddiqia",
@@ -2891,8 +2907,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.393912,
-      "lon": -1.459958
+      "lat": 53.39382,
+      "lon": -1.45956
     },
     {
       "name": "Masjid E Madani",
@@ -2905,8 +2921,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.687711,
-      "lon": -1.656513
+      "lat": 53.687809,
+      "lon": -1.656013
     },
     {
       "name": "Jamia Dar Ul Uloom Qadiria Jillania Centre",
@@ -2919,8 +2935,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.406556,
-      "lon": -1.45351
+      "lat": 53.406308,
+      "lon": -1.452953
     },
     {
       "name": "Madrassa Tul Madinah",
@@ -2933,8 +2949,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.412842,
-      "lon": -1.444298
+      "lat": 53.412867,
+      "lon": -1.444242
     },
     {
       "name": "Masjid Risalah",
@@ -2947,8 +2963,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.389252,
-      "lon": -1.481579
+      "lat": 53.389322,
+      "lon": -1.481623
     },
     {
       "name": "Markazi Mosque",
@@ -2961,8 +2977,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.681651,
-      "lon": -1.628659
+      "lat": 53.681009,
+      "lon": -1.628132
     },
     {
       "name": "Masjid e Zakaria",
@@ -2975,8 +2991,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.684186,
-      "lon": -1.63162
+      "lat": 53.683993,
+      "lon": -1.631223
     },
     {
       "name": "Jemia Mosque",
@@ -2989,8 +3005,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.430904,
-      "lon": -1.363858
+      "lat": 53.431067,
+      "lon": -1.36434
     },
     {
       "name": "Jamia Masjid Gulzar-E-Madina",
@@ -3003,8 +3019,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.689831,
-      "lon": -1.63784
+      "lat": 53.689433,
+      "lon": -1.639002
     },
     {
       "name": "Barnsley Muslim Community Centre",
@@ -3017,8 +3033,8 @@
       "color2": null,
       "tags": "",
       "type": "community_centre",
-      "lat": 53.552295,
-      "lon": -1.502564
+      "lat": 53.55267,
+      "lon": -1.502984
     },
     {
       "name": "Faizan-e-Madina Lincoln Islamic Centre & Mosque",
@@ -3031,8 +3047,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.239051,
-      "lon": -0.509273
+      "lat": 53.239047,
+      "lon": -0.509263
     },
     {
       "name": "Faizan E Madinah",
@@ -3045,8 +3061,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.425885,
-      "lon": -1.356514
+      "lat": 53.426284,
+      "lon": -1.35649
     },
     {
       "name": "Jamia Masjid Noor-Ul-Huda",
@@ -3059,8 +3075,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.429818,
-      "lon": -1.383033
+      "lat": 53.429692,
+      "lon": -1.383591
     },
     {
       "name": "Markazul Uloom Al Islamiyya",
@@ -3073,8 +3089,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.434073,
-      "lon": -1.34474
+      "lat": 53.434061,
+      "lon": -1.345118
     },
     {
       "name": "Jamia Masjid Abu Bakr Mosque",
@@ -3087,8 +3103,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.437544,
-      "lon": -1.350016
+      "lat": 53.437613,
+      "lon": -1.349606
     },
     {
       "name": "Jamia Masjid Noor",
@@ -3101,8 +3117,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.639201,
-      "lon": -1.798714
+      "lat": 53.639119,
+      "lon": -1.797672
     },
     {
       "name": "Al Markaz Ul Islami",
@@ -3115,8 +3131,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.678798,
-      "lon": -1.516276
+      "lat": 53.678935,
+      "lon": -1.51537
     },
     {
       "name": "Masjid Zakariya",
@@ -3129,8 +3145,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.667455,
-      "lon": -1.477811
+      "lat": 53.66731,
+      "lon": -1.478117
     },
     {
       "name": "Madina Masjid",
@@ -3143,8 +3159,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.668603,
-      "lon": -1.479325
+      "lat": 53.668733,
+      "lon": -1.479425
     },
     {
       "name": "Ilaahi Masjid",
@@ -3157,8 +3173,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.69783,
-      "lon": -1.63768
+      "lat": 53.69814,
+      "lon": -1.637951
     },
     {
       "name": "Sheffield Grand Mosque",
@@ -3171,8 +3187,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.404638,
-      "lon": -1.441066
+      "lat": 53.404606,
+      "lon": -1.440963
     },
     {
       "name": "Baitul Mukarram Jame Masjid",
@@ -3185,8 +3201,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.365701,
-      "lon": -1.473148
+      "lat": 53.365558,
+      "lon": -1.473441
     },
     {
       "name": "Raza-E-Mustafa Mosque",
@@ -3199,8 +3215,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.415721,
-      "lon": -1.325853
+      "lat": 53.415321,
+      "lon": -1.324713
     },
     {
       "name": "Quba Education Centre",
@@ -3213,8 +3229,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.393955,
-      "lon": -1.426799
+      "lat": 53.394265,
+      "lon": -1.426968
     },
     {
       "name": "Muslim Welfare House",
@@ -3227,8 +3243,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.379446,
-      "lon": -1.496385
+      "lat": 53.379442,
+      "lon": -1.496506
     },
     {
       "name": "Al-Huda Islamic Centre",
@@ -3241,8 +3257,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.375668,
-      "lon": -1.483096
+      "lat": 53.37544,
+      "lon": -1.483277
     },
     {
       "name": "Jamia Masjid Ghausia",
@@ -3255,8 +3271,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.407859,
-      "lon": -1.449462
+      "lat": 53.40816,
+      "lon": -1.449584
     },
     {
       "name": "Al-Rahman Mosque",
@@ -3269,8 +3285,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.393655,
-      "lon": -1.456758
+      "lat": 53.393201,
+      "lon": -1.457845
     },
     {
       "name": "Masjid Mohammed",
@@ -3283,8 +3299,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.392207,
-      "lon": -1.454777
+      "lat": 53.391008,
+      "lon": -1.458149
     },
     {
       "name": "Hanfia Masjid",
@@ -3297,8 +3313,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.63227,
-      "lon": -1.797961
+      "lat": 53.632488,
+      "lon": -1.797588
     },
     {
       "name": "Jamia Masjid Abu Bakr Siddique",
@@ -3311,7 +3327,7 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.693624,
+      "lat": 53.693626,
       "lon": -1.625979
     },
     {
@@ -3325,8 +3341,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.515423,
-      "lon": -1.115945
+      "lat": 53.515353,
+      "lon": -1.115409
     },
     {
       "name": "Firth Park Mosque",
@@ -3339,8 +3355,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.418264,
-      "lon": -1.444769
+      "lat": 53.4188,
+      "lon": -1.445727
     },
     {
       "name": "Masjid Uthman",
@@ -3353,8 +3369,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.438215,
-      "lon": -1.346167
+      "lat": 53.437908,
+      "lon": -1.345997
     },
     {
       "name": "Masjid Al-Salam",
@@ -3367,8 +3383,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.439602,
-      "lon": -1.34333
+      "lat": 53.439915,
+      "lon": -1.342384
     },
     {
       "name": "Ferham Islamic Cultural Centre",
@@ -3381,8 +3397,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.427928,
-      "lon": -1.377236
+      "lat": 53.427978,
+      "lon": -1.376928
     },
     {
       "name": "Al-Shafeey Centre",
@@ -3395,8 +3411,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.388601,
-      "lon": -1.42003
+      "lat": 53.388172,
+      "lon": -1.419347
     },
     {
       "name": "Madni Jamia Masjid",
@@ -3409,8 +3425,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.407624,
-      "lon": -1.435596
+      "lat": 53.407304,
+      "lon": -1.436012
     },
     {
       "name": "Masjid Sunnah",
@@ -3423,8 +3439,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.392408,
-      "lon": -1.455436
+      "lat": 53.392474,
+      "lon": -1.455039
     },
     {
       "name": "At-Taqwa Centre",
@@ -3437,8 +3453,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.39236,
-      "lon": -1.460639
+      "lat": 53.392601,
+      "lon": -1.460808
     },
     {
       "name": "Jamia Masjid Ghausia",
@@ -3451,8 +3467,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.637337,
-      "lon": -1.790934
+      "lat": 53.637267,
+      "lon": -1.791646
     },
     {
       "name": "Islam Dewsbury",
@@ -3465,8 +3481,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.68235,
-      "lon": -1.649183
+      "lat": 53.682463,
+      "lon": -1.648824
     },
     {
       "name": "Raza Education Centre",
@@ -3479,8 +3495,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.671679,
-      "lon": -1.639115
+      "lat": 53.671509,
+      "lon": -1.639657
     },
     {
       "name": "Masjid E Noor",
@@ -3493,8 +3509,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.671199,
-      "lon": -1.638014
+      "lat": 53.67164,
+      "lon": -1.637889
     },
     {
       "name": "Faizan E Madina Jamia Masjid",
@@ -3507,8 +3523,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.687693,
-      "lon": -1.6535
+      "lat": 53.687754,
+      "lon": -1.653954
     },
     {
       "name": "Masjid Usman",
@@ -3521,8 +3537,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.646232,
-      "lon": -1.789287
+      "lat": 53.646517,
+      "lon": -1.789448
     },
     {
       "name": "Madni Jamia Masjid",
@@ -3535,8 +3551,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.636188,
-      "lon": -1.791968
+      "lat": 53.63619,
+      "lon": -1.791949
     },
     {
       "name": "Masjid Al Hidayah",
@@ -3549,8 +3565,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.679729,
-      "lon": -1.631992
+      "lat": 53.679524,
+      "lon": -1.631607
     },
     {
       "name": "Masjid Heera",
@@ -3563,8 +3579,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.678855,
-      "lon": -1.637419
+      "lat": 53.678846,
+      "lon": -1.637476
     },
     {
       "name": "Madrassah Islamiyah",
@@ -3577,8 +3593,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.681187,
-      "lon": -1.629874
+      "lat": 53.681043,
+      "lon": -1.630561
     },
     {
       "name": "Markazi Jamia Masjid Anwar-e-Madina",
@@ -3591,8 +3607,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.658075,
-      "lon": -1.782616
+      "lat": 53.658192,
+      "lon": -1.782397
     },
     {
       "name": "Masjid Ibrahim",
@@ -3605,8 +3621,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.658467,
-      "lon": -1.785246
+      "lat": 53.658243,
+      "lon": -1.784866
     },
     {
       "name": "Naqshbandiyya Mujaddadiyya Aslamiy",
@@ -3619,8 +3635,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.682149,
-      "lon": -1.669926
+      "lat": 53.682276,
+      "lon": -1.669197
     },
     {
       "name": "Masjid Omar",
@@ -3633,8 +3649,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.6586,
-      "lon": -1.789422
+      "lat": 53.658613,
+      "lon": -1.789345
     },
     {
       "name": "Masjid e Umar",
@@ -3647,8 +3663,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.683365,
-      "lon": -1.627902
+      "lat": 53.683558,
+      "lon": -1.627366
     },
     {
       "name": "Masjid Ghausia",
@@ -3661,8 +3677,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.683728,
-      "lon": -1.63176
+      "lat": 53.683394,
+      "lon": -1.631917
     },
     {
       "name": "Masjid Iman",
@@ -3675,8 +3691,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.649299,
-      "lon": -1.79027
+      "lat": 53.649481,
+      "lon": -1.790505
     },
     {
       "name": "Jamia Masjid Ghausia",
@@ -3689,8 +3705,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.679952,
-      "lon": -1.66522
+      "lat": 53.679791,
+      "lon": -1.664977
     },
     {
       "name": "Al Madina Jamia Mosque",
@@ -3703,8 +3719,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.811642,
-      "lon": -1.568223
+      "lat": 53.811301,
+      "lon": -1.567958
     },
     {
       "name": "Jamia Mosque Tabligh-ul-Islam",
@@ -3717,8 +3733,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.790654,
-      "lon": -1.770549
+      "lat": 53.790936,
+      "lon": -1.771251
     },
     {
       "name": "Leeds Islamic Centre",
@@ -3731,8 +3747,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.812433,
-      "lon": -1.525509
+      "lat": 53.813234,
+      "lon": -1.52549
     },
     {
       "name": "The Green Room",
@@ -3745,8 +3761,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.803364,
-      "lon": -1.553459
+      "lat": 53.804,
+      "lon": -1.55311
     },
     {
       "name": "Lincoln Green Mosque",
@@ -3759,8 +3775,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.803837,
-      "lon": -1.529205
+      "lat": 53.804482,
+      "lon": -1.528235
     },
     {
       "name": "UKIM Iqra Centre Leeds",
@@ -3773,8 +3789,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.835861,
-      "lon": -1.549984
+      "lat": 53.835794,
+      "lon": -1.549838
     },
     {
       "name": "Madrassa Mahmoodia",
@@ -3787,8 +3803,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.789808,
-      "lon": -1.760657
+      "lat": 53.789577,
+      "lon": -1.760905
     },
     {
       "name": "Madinat Al-Zahra Grand Mosque",
@@ -3801,8 +3817,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.778492,
-      "lon": -1.789416
+      "lat": 53.778487,
+      "lon": -1.790067
     },
     {
       "name": "Al-Mustafa Centre",
@@ -3815,8 +3831,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.798149,
-      "lon": -1.789683
+      "lat": 53.797727,
+      "lon": -1.789638
     },
     {
       "name": "Harrogate Islamic Association",
@@ -3829,8 +3845,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.989643,
-      "lon": -1.538263
+      "lat": 53.98965,
+      "lon": -1.53824
     },
     {
       "name": "Leeds Swahili Cultural Community",
@@ -3843,8 +3859,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.796471,
-      "lon": -1.499121
+      "lat": 53.796423,
+      "lon": -1.499572
     },
     {
       "name": "Shipley Masjid Association",
@@ -3857,8 +3873,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.835218,
-      "lon": -1.781398
+      "lat": 53.835222,
+      "lon": -1.781409
     },
     {
       "name": "Al-Towbah Islamic Centre",
@@ -3871,8 +3887,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.8139,
-      "lon": -1.521392
+      "lat": 53.813305,
+      "lon": -1.521497
     },
     {
       "name": "Faizan-e-Madina",
@@ -3885,8 +3901,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.72318,
-      "lon": -1.881484
+      "lat": 53.722619,
+      "lon": -1.881473
     },
     {
       "name": "Islamic Mission College",
@@ -3899,8 +3915,8 @@
       "color2": null,
       "tags": "",
       "type": "community_centre",
-      "lat": 53.790654,
-      "lon": -1.770549
+      "lat": 53.791035,
+      "lon": -1.770817
     },
     {
       "name": "Healey Musallah",
@@ -3913,8 +3929,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.709932,
-      "lon": -1.660256
+      "lat": 53.709582,
+      "lon": -1.660316
     },
     {
       "name": "Jami al-Imam Ahmed Raza Khan Barelwi",
@@ -3927,8 +3943,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.814639,
-      "lon": -1.533154
+      "lat": 53.814817,
+      "lon": -1.533522
     },
     {
       "name": "Masjid Ar-Rashideen",
@@ -3941,8 +3957,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.71941,
-      "lon": -1.643571
+      "lat": 53.71982,
+      "lon": -1.643202
     },
     {
       "name": "The Al Noor",
@@ -3955,8 +3971,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.809468,
-      "lon": -1.510007
+      "lat": 53.809303,
+      "lon": -1.510335
     },
     {
       "name": "Al-Rahmah Faith Centre",
@@ -3969,8 +3985,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.810802,
-      "lon": -1.535687
+      "lat": 53.810441,
+      "lon": -1.535668
     },
     {
       "name": "Al Madina Jam-e Masjid",
@@ -3983,8 +3999,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.775817,
-      "lon": -1.544358
+      "lat": 53.775754,
+      "lon": -1.544439
     },
     {
       "name": "Islam Halifax",
@@ -3997,8 +4013,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.72341,
-      "lon": -1.869329
+      "lat": 53.723597,
+      "lon": -1.869305
     },
     {
       "name": "Al-Hashim Academy",
@@ -4011,8 +4027,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.712732,
-      "lon": -1.634704
+      "lat": 53.712632,
+      "lon": -1.634745
     },
     {
       "name": "Masjid e Mahmoodiya",
@@ -4025,8 +4041,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.709028,
-      "lon": -1.631524
+      "lat": 53.70943,
+      "lon": -1.632079
     },
     {
       "name": "Abu Huraira Masjid",
@@ -4039,8 +4055,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.775507,
-      "lon": -1.552692
+      "lat": 53.775265,
+      "lon": -1.552459
     },
     {
       "name": "Leeds Grand Mosque",
@@ -4053,8 +4069,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.806518,
-      "lon": -1.568048
+      "lat": 53.806466,
+      "lon": -1.568144
     },
     {
       "name": "Upper Soothill Islamic Centre",
@@ -4067,8 +4083,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.716573,
-      "lon": -1.593349
+      "lat": 53.715925,
+      "lon": -1.593665
     },
     {
       "name": "Makkah Masjid Mosque",
@@ -4081,8 +4097,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.810978,
-      "lon": -1.57353
+      "lat": 53.811002,
+      "lon": -1.573004
     },
     {
       "name": "Markazi Jamia Mosque",
@@ -4095,8 +4111,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.870312,
-      "lon": -1.901723
+      "lat": 53.870489,
+      "lon": -1.90229
     },
     {
       "name": "Bradford Central Mosque",
@@ -4109,8 +4125,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.798381,
-      "lon": -1.759971
+      "lat": 53.797907,
+      "lon": -1.760135
     },
     {
       "name": "Jamia Masjid Hanfia Mosque",
@@ -4123,8 +4139,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.805967,
-      "lon": -1.769539
+      "lat": 53.805719,
+      "lon": -1.769663
     },
     {
       "name": "The IslamBradford Centre",
@@ -4137,8 +4153,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.798364,
-      "lon": -1.764905
+      "lat": 53.79813,
+      "lon": -1.764464
     },
     {
       "name": "Markazi Jamia Masjid Bilal",
@@ -4151,8 +4167,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.812407,
-      "lon": -1.514316
+      "lat": 53.812807,
+      "lon": -1.513751
     },
     {
       "name": "Jamia Masjid Madni",
@@ -4164,7 +4180,9 @@
       "color1": null,
       "color2": null,
       "tags": "",
-      "type": "mosque"
+      "type": "mosque",
+      "lat": 53.723185,
+      "lon": -1.872258
     },
     {
       "name": "Jamia Masjid Ahl-e-hadith",
@@ -4177,8 +4195,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.719913,
-      "lon": -1.885873
+      "lat": 53.719758,
+      "lon": -1.88579
     },
     {
       "name": "Central Jamia Mosque & Madrisa (Highfield Branch)",
@@ -4191,8 +4209,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.868639,
-      "lon": -1.910943
+      "lat": 53.868678,
+      "lon": -1.910467
     },
     {
       "name": "Firdaws Mosque",
@@ -4205,8 +4223,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.787885,
-      "lon": -1.747888
+      "lat": 53.788584,
+      "lon": -1.748157
     },
     {
       "name": "Adam Masjid",
@@ -4219,8 +4237,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.79785,
-      "lon": -1.78346
+      "lat": 53.797728,
+      "lon": -1.782914
     },
     {
       "name": "Al-Hikam Institute",
@@ -4233,8 +4251,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.799994,
-      "lon": -1.796551
+      "lat": 53.799742,
+      "lon": -1.796084
     },
     {
       "name": "Markaz Al-Furqaan",
@@ -4247,8 +4265,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.830355,
-      "lon": -1.780633
+      "lat": 53.831052,
+      "lon": -1.78388
     },
     {
       "name": "Jamiyat Tabligh-Ul-Islam Mosque",
@@ -4261,8 +4279,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.816434,
-      "lon": -1.808136
+      "lat": 53.816861,
+      "lon": -1.807155
     },
     {
       "name": "Jamia Masjid Ghousia",
@@ -4275,8 +4293,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.795967,
-      "lon": -1.585994
+      "lat": 53.795652,
+      "lon": -1.585944
     },
     {
       "name": "Jami'ah-tul-Madinah",
@@ -4289,8 +4307,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.79429,
-      "lon": -1.733535
+      "lat": 53.793889,
+      "lon": -1.732306
     },
     {
       "name": "Faizan e Madina Masjid",
@@ -4302,7 +4320,9 @@
       "color1": null,
       "color2": null,
       "tags": "",
-      "type": "mosque"
+      "type": "mosque",
+      "lat": 53.794158,
+      "lon": -1.731796
     },
     {
       "name": "Masjid Usman",
@@ -4315,8 +4335,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.793766,
-      "lon": -1.736361
+      "lat": 53.793763,
+      "lon": -1.736006
     },
     {
       "name": "Al-Jamia Suffa-Tul-Islam Grand Mosque",
@@ -4330,7 +4350,7 @@
       "tags": "",
       "type": "mosque",
       "lat": 53.78436,
-      "lon": -1.769187
+      "lon": -1.769308
     },
     {
       "name": "Masjid Nur",
@@ -4343,8 +4363,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.816202,
-      "lon": -1.803277
+      "lat": 53.815673,
+      "lon": -1.803589
     },
     {
       "name": "Jame Masjid & Madrassa Salafia",
@@ -4357,8 +4377,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.958977,
-      "lon": -2.031698
+      "lat": 53.95921,
+      "lon": -2.031725
     },
     {
       "name": "Madni Jamia Masjid",
@@ -4371,8 +4391,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.795781,
-      "lon": -1.717373
+      "lat": 53.796001,
+      "lon": -1.718513
     },
     {
       "name": "Ghousia Mosque",
@@ -4385,8 +4405,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.873985,
-      "lon": -1.909015
+      "lat": 53.874379,
+      "lon": -1.909005
     },
     {
       "name": "Masjid Hilal",
@@ -4399,8 +4419,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.701695,
-      "lon": -1.634845
+      "lat": 53.701477,
+      "lon": -1.635044
     },
     {
       "name": "Cemetery Lodge Prayer Room",
@@ -4413,8 +4433,8 @@
       "color2": null,
       "tags": "",
       "type": "prayer_room",
-      "lat": 53.807974,
-      "lon": -1.553334
+      "lat": 53.809325,
+      "lon": -1.556366
     },
     {
       "name": "The Lingfield Centre",
@@ -4427,8 +4447,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.849574,
-      "lon": -1.544593
+      "lat": 53.849623,
+      "lon": -1.545146
     },
     {
       "name": "Majid-e-Hamza Mosque",
@@ -4441,8 +4461,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.717357,
-      "lon": -2.095638
+      "lat": 53.717587,
+      "lon": -2.094785
     },
     {
       "name": "Jame Masjid",
@@ -4455,8 +4475,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.70235,
-      "lon": -1.631295
+      "lat": 53.702893,
+      "lon": -1.631124
     },
     {
       "name": "Jumma Masjid",
@@ -4469,8 +4489,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.700873,
-      "lon": -1.630611
+      "lat": 53.701264,
+      "lon": -1.630567
     },
     {
       "name": "South Leeds Al Noor",
@@ -4483,8 +4503,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.77796,
-      "lon": -1.55734
+      "lat": 53.777966,
+      "lon": -1.556972
     },
     {
       "name": "Kashmir Muslims Welfare Associatian Leeds",
@@ -4497,8 +4517,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.776392,
-      "lon": -1.553654
+      "lat": 53.776455,
+      "lon": -1.553315
     },
     {
       "name": "Al-Amin Masjid",
@@ -4511,8 +4531,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.815514,
-      "lon": -1.536456
+      "lat": 53.815178,
+      "lon": -1.53619
     },
     {
       "name": "Baab Ul Ilm Centre",
@@ -4525,8 +4545,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.849662,
-      "lon": -1.525637
+      "lat": 53.849968,
+      "lon": -1.524593
     },
     {
       "name": "Shahjalal Jamia Masjid",
@@ -4539,8 +4559,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.817419,
-      "lon": -1.520182
+      "lat": 53.817089,
+      "lon": -1.520038
     },
     {
       "name": "Central Jamia Masjid Al-Haramain",
@@ -4553,8 +4573,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.711186,
-      "lon": -1.675108
+      "lat": 53.710992,
+      "lon": -1.674464
     },
     {
       "name": "Makki Mosque",
@@ -4567,8 +4587,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.70935,
-      "lon": -1.674077
+      "lat": 53.709632,
+      "lon": -1.674246
     },
     {
       "name": "Kanzul Iman",
@@ -4581,8 +4601,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.70849,
-      "lon": -1.675189
+      "lat": 53.708415,
+      "lon": -1.674864
     },
     {
       "name": "Madina Masjid",
@@ -4595,8 +4615,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.709376,
-      "lon": -1.636399
+      "lat": 53.709405,
+      "lon": -1.63642
     },
     {
       "name": "Madressa Islamiyah",
@@ -4609,8 +4629,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.710242,
-      "lon": -1.637331
+      "lat": 53.710125,
+      "lon": -1.63624
     },
     {
       "name": "Madressa Islamiyah (Old Madressah)",
@@ -4623,8 +4643,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.709704,
-      "lon": -1.637987
+      "lat": 53.70984,
+      "lon": -1.637389
     },
     {
       "name": "Jamia Masjid Ghousia",
@@ -4637,8 +4657,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.722908,
-      "lon": -1.870149
+      "lat": 53.723137,
+      "lon": -1.870555
     },
     {
       "name": "Al-Amin Jame Masjid & Madrasha",
@@ -4651,8 +4671,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.79716,
-      "lon": -1.722935
+      "lat": 53.797506,
+      "lon": -1.724024
     },
     {
       "name": "Jamia Masjid Ya Rasool Allah",
@@ -4665,8 +4685,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.799781,
-      "lon": -1.713991
+      "lat": 53.799628,
+      "lon": -1.714582
     },
     {
       "name": "Muhammadi Masjid",
@@ -4679,8 +4699,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.803485,
-      "lon": -1.764072
+      "lat": 53.803389,
+      "lon": -1.7647
     },
     {
       "name": "Muhammadi Masjid",
@@ -4693,8 +4713,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.872763,
-      "lon": -1.909155
+      "lat": 53.873224,
+      "lon": -1.908762
     },
     {
       "name": "Masjid As-Sunnah",
@@ -4707,8 +4727,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.781564,
-      "lon": -1.783589
+      "lat": 53.781158,
+      "lon": -1.783766
     },
     {
       "name": "AICP Sunniyy Centre",
@@ -4721,8 +4741,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.721726,
-      "lon": -1.874926
+      "lat": 53.721574,
+      "lon": -1.874829
     },
     {
       "name": "Astana Aliya Naqeebiya",
@@ -4735,8 +4755,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.790335,
-      "lon": -1.763568
+      "lat": 53.78999,
+      "lon": -1.763092
     },
     {
       "name": "Masjid Nimrah",
@@ -4749,8 +4769,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.800456,
-      "lon": -1.75961
+      "lat": 53.800337,
+      "lon": -1.760291
     },
     {
       "name": "Madinatul Uloom",
@@ -4763,8 +4783,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.801082,
-      "lon": -1.758058
+      "lat": 53.800983,
+      "lon": -1.7584
     },
     {
       "name": "Jamia Masjid Faizan E Attar",
@@ -4777,8 +4797,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.794597,
-      "lon": -1.74252
+      "lat": 53.79498,
+      "lon": -1.741672
     },
     {
       "name": "Tawakkulia Jamia Masjid & Islamia Madrasa",
@@ -4791,8 +4811,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.802216,
-      "lon": -1.758628
+      "lat": 53.802575,
+      "lon": -1.758139
     },
     {
       "name": "Masjid Nusrat Ul Islam",
@@ -4805,8 +4825,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.794402,
-      "lon": -1.770756
+      "lat": 53.794432,
+      "lon": -1.770764
     },
     {
       "name": "Central Jamia Mosque",
@@ -4819,8 +4839,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.803986,
-      "lon": -1.767607
+      "lat": 53.804055,
+      "lon": -1.767021
     },
     {
       "name": "Ghausia Mehria",
@@ -4833,8 +4853,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.792107,
-      "lon": -1.729981
+      "lat": 53.792423,
+      "lon": -1.730058
     },
     {
       "name": "Ghausia Chistia",
@@ -4847,8 +4867,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.803177,
-      "lon": -1.740797
+      "lat": 53.803159,
+      "lon": -1.739802
     },
     {
       "name": "Jamia Muhammadiyah Qadriyah",
@@ -4861,8 +4881,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.802525,
-      "lon": -1.743124
+      "lat": 53.802866,
+      "lon": -1.743076
     },
     {
       "name": "Jamiyat Tabligh-ul-Islam Mosque",
@@ -4875,8 +4895,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.794751,
-      "lon": -1.73508
+      "lat": 53.794539,
+      "lon": -1.73507
     },
     {
       "name": "Tabligh-ul-Islam Mosque",
@@ -4889,8 +4909,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.788209,
-      "lon": -1.78996
+      "lat": 53.78795,
+      "lon": -1.789647
     },
     {
       "name": "Al Huda Masjid",
@@ -4903,8 +4923,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.790893,
-      "lon": -1.778198
+      "lat": 53.791125,
+      "lon": -1.777844
     },
     {
       "name": "Jamia Masjid Milat E Islamia",
@@ -4917,8 +4937,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.786142,
-      "lon": -1.775263
+      "lat": 53.786428,
+      "lon": -1.7761
     },
     {
       "name": "UKIM Byron Masjid",
@@ -4931,8 +4951,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.798438,
-      "lon": -1.731869
+      "lat": 53.798397,
+      "lon": -1.732355
     },
     {
       "name": "Masjid-E-Quba",
@@ -4945,8 +4965,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.807213,
-      "lon": -1.767498
+      "lat": 53.807012,
+      "lon": -1.767878
     },
     {
       "name": "Jamia Abu Hanifa Mosque",
@@ -4959,8 +4979,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.802886,
-      "lon": -1.735287
+      "lat": 53.802562,
+      "lon": -1.73531
     },
     {
       "name": "Jamiyat Tabligh-ul-Islam Mosque",
@@ -4973,8 +4993,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.782314,
-      "lon": -1.736008
+      "lat": 53.782482,
+      "lon": -1.735598
     },
     {
       "name": "Jamia Mosque Tabbligh-Ul-Islam",
@@ -4987,8 +5007,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.776701,
-      "lon": -1.759532
+      "lat": 53.776795,
+      "lon": -1.758893
     },
     {
       "name": "Jamiya Masjid Tabligh-Ul-Islam",
@@ -5001,8 +5021,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.77652,
-      "lon": -1.763661
+      "lat": 53.776835,
+      "lon": -1.76328
     },
     {
       "name": "Al-Hira Islamic Markaz",
@@ -5015,8 +5035,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.775652,
-      "lon": -1.76101
+      "lat": 53.775673,
+      "lon": -1.761601
     },
     {
       "name": "Sultan Bahu Masjid",
@@ -5029,8 +5049,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.781182,
-      "lon": -1.780798
+      "lat": 53.781503,
+      "lon": -1.781126
     },
     {
       "name": "Girlington Muslim Welfare Association",
@@ -5043,8 +5063,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.802266,
-      "lon": -1.785062
+      "lat": 53.801855,
+      "lon": -1.785687
     },
     {
       "name": "Masjid Umar",
@@ -5057,8 +5077,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.776097,
-      "lon": -1.772555
+      "lat": 53.776398,
+      "lon": -1.772723
     },
     {
       "name": "Jamiyat Tabligh-Ul-Islam Mosque",
@@ -5071,8 +5091,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.805277,
-      "lon": -1.785244
+      "lat": 53.805541,
+      "lon": -1.7845
     },
     {
       "name": "Mazhar E-Islam Ghousia",
@@ -5085,8 +5105,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.779118,
-      "lon": -1.782585
+      "lat": 53.778928,
+      "lon": -1.782141
     },
     {
       "name": "Umm ul Qura Islamic Centre",
@@ -5099,8 +5119,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.793639,
-      "lon": -1.720226
+      "lat": 53.793275,
+      "lon": -1.72003
     },
     {
       "name": "Madrassah Misbahul Uloom",
@@ -5113,8 +5133,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.810785,
-      "lon": -1.779415
+      "lat": 53.810721,
+      "lon": -1.779297
     },
     {
       "name": "Islamic Center Auradey Naziria",
@@ -5127,8 +5147,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.80585,
-      "lon": -1.788931
+      "lat": 53.805266,
+      "lon": -1.788721
     },
     {
       "name": "Sayyidah Aminah Jamia Masjid",
@@ -5141,8 +5161,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.806818,
-      "lon": -1.721308
+      "lat": 53.806969,
+      "lon": -1.721199
     },
     {
       "name": "Jamia Usmania Mosque",
@@ -5155,8 +5175,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.812696,
-      "lon": -1.782487
+      "lat": 53.812788,
+      "lon": -1.783071
     },
     {
       "name": "Noor-ul-Islam Mosque",
@@ -5169,8 +5189,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.805823,
-      "lon": -1.718536
+      "lat": 53.805885,
+      "lon": -1.718609
     },
     {
       "name": "Shipley Masjid",
@@ -5183,8 +5203,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.82097,
-      "lon": -1.775199
+      "lat": 53.820902,
+      "lon": -1.774743
     },
     {
       "name": "Jamiyat Tabligh-Ul-Islam Mosque",
@@ -5197,8 +5217,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.821198,
-      "lon": -1.772236
+      "lat": 53.821163,
+      "lon": -1.772768
     },
     {
       "name": "Masjid-At-Taqwa",
@@ -5211,8 +5231,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.775023,
-      "lon": -1.795215
+      "lat": 53.775343,
+      "lon": -1.795578
     },
     {
       "name": "Jamia Masjid Shan-E-Islam",
@@ -5225,8 +5245,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.821436,
-      "lon": -1.77424
+      "lat": 53.821933,
+      "lon": -1.774159
     },
     {
       "name": "Faizan E Raza Masjid",
@@ -5239,8 +5259,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.768459,
-      "lon": -1.788086
+      "lat": 53.768481,
+      "lon": -1.788095
     },
     {
       "name": "Bayt Al Qaim Centre",
@@ -5253,8 +5273,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.811114,
-      "lon": -1.745502
+      "lat": 53.811371,
+      "lon": -1.745725
     },
     {
       "name": "Jamia Masjid Naqshbandia Aslamia",
@@ -5267,8 +5287,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.802817,
-      "lon": -1.776419
+      "lat": 53.802388,
+      "lon": -1.776534
     },
     {
       "name": "Masjid E Hamza",
@@ -5281,8 +5301,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.809279,
-      "lon": -1.762399
+      "lat": 53.809389,
+      "lon": -1.762064
     },
     {
       "name": "Mohiuddin Institute",
@@ -5295,8 +5315,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.801192,
-      "lon": -1.76331
+      "lat": 53.801322,
+      "lon": -1.762568
     },
     {
       "name": "Jaamiah Khatamur Rabiyeen",
@@ -5309,8 +5329,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.800876,
-      "lon": -1.758059
+      "lat": 53.800778,
+      "lon": -1.758324
     },
     {
       "name": "Sufat-ul-Islam Association",
@@ -5323,8 +5343,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.795879,
-      "lon": -1.762672
+      "lat": 53.79575,
+      "lon": -1.762911
     },
     {
       "name": "Bradford Islamic Centre",
@@ -5337,8 +5357,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.804824,
-      "lon": -1.763685
+      "lat": 53.80508,
+      "lon": -1.763926
     },
     {
       "name": "Madrasah Abdullah Bin Masood",
@@ -5351,8 +5371,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.819969,
-      "lon": -1.773473
+      "lat": 53.819748,
+      "lon": -1.773302
     },
     {
       "name": "Faizan e Makkah Masjid",
@@ -5365,8 +5385,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.807652,
-      "lon": -1.78098
+      "lat": 53.807233,
+      "lon": -1.78161
     },
     {
       "name": "Jalalabad Islamic Association",
@@ -5379,8 +5399,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.797049,
-      "lon": -1.733441
+      "lat": 53.797359,
+      "lon": -1.733521
     },
     {
       "name": "Jamia Muhammadia",
@@ -5393,8 +5413,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.794779,
-      "lon": -1.72327
+      "lat": 53.794753,
+      "lon": -1.722753
     },
     {
       "name": "Jamia Islamia Rizvia Mosque",
@@ -5407,8 +5427,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.776568,
-      "lon": -1.779001
+      "lat": 53.776814,
+      "lon": -1.778146
     },
     {
       "name": "Al-Amin Masjid",
@@ -5421,8 +5441,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.861802,
-      "lon": -1.915625
+      "lat": 53.86174,
+      "lon": -1.915233
     },
     {
       "name": "Makki Masjid",
@@ -5435,8 +5455,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.808667,
-      "lon": -1.568299
+      "lat": 53.80843,
+      "lon": -1.568841
     },
     {
       "name": "Al Jamia Al Zahra",
@@ -5449,8 +5469,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.722023,
-      "lon": -1.875592
+      "lat": 53.721983,
+      "lon": -1.875617
     },
     {
       "name": "Jeelaaniyy Building",
@@ -5463,8 +5483,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.722067,
-      "lon": -1.874304
+      "lat": 53.722051,
+      "lon": -1.874847
     },
     {
       "name": "Pakistan Muslim Welfare Society",
@@ -5477,8 +5497,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.710686,
-      "lon": -1.629843
+      "lat": 53.710742,
+      "lon": -1.629331
     },
     {
       "name": "Madresah Taleemudeen",
@@ -5491,8 +5511,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.70343,
-      "lon": -1.63177
+      "lat": 53.703252,
+      "lon": -1.630844
     },
     {
       "name": "Ummah Masjid",
@@ -5505,8 +5525,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.712477,
-      "lon": -1.633615
+      "lat": 53.71242,
+      "lon": -1.633313
     },
     {
       "name": "Masjid Al-Hira",
@@ -5519,8 +5539,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.706601,
-      "lon": -1.655284
+      "lat": 53.706317,
+      "lon": -1.655265
     },
     {
       "name": "Madressa-E-Zinatul Islam",
@@ -5533,8 +5553,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.709197,
-      "lon": -1.630932
+      "lat": 53.70922,
+      "lon": -1.631245
     },
     {
       "name": "Makki Masjid",
@@ -5547,8 +5567,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.719034,
-      "lon": -1.878859
+      "lat": 53.718884,
+      "lon": -1.878464
     },
     {
       "name": "Faizan e Madina",
@@ -5561,8 +5581,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.813588,
-      "lon": -1.528716
+      "lat": 53.81359,
+      "lon": -1.528244
     },
     {
       "name": "Jamia Ghausia Madressa",
@@ -5575,8 +5595,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.707422,
-      "lon": -1.641203
+      "lat": 53.707006,
+      "lon": -1.641218
     },
     {
       "name": "Abuzahra Mosque",
@@ -5589,8 +5609,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.867715,
-      "lon": -1.914184
+      "lat": 53.867731,
+      "lon": -1.913723
     },
     {
       "name": "Madinah Mosque",
@@ -5603,8 +5623,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.868181,
-      "lon": -1.911415
+      "lat": 53.868128,
+      "lon": -1.912033
     },
     {
       "name": "Madrasah Ghosia",
@@ -5617,8 +5637,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.725163,
-      "lon": -1.878099
+      "lat": 53.725248,
+      "lon": -1.878638
     },
     {
       "name": "Jamia Al Saeed",
@@ -5631,8 +5651,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.70296,
-      "lon": -1.625124
+      "lat": 53.703602,
+      "lon": -1.62526
     },
     {
       "name": "Jami' Masjid Noorani",
@@ -5645,8 +5665,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.721031,
-      "lon": -1.889961
+      "lat": 53.721023,
+      "lon": -1.890215
     },
     {
       "name": "Masjid Taqwa Park Road",
@@ -5659,8 +5679,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.715595,
-      "lon": -1.630209
+      "lat": 53.715616,
+      "lon": -1.629865
     },
     {
       "name": "Dawatal Islam Mosque",
@@ -5673,8 +5693,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.714123,
-      "lon": -1.622237
+      "lat": 53.713579,
+      "lon": -1.622378
     },
     {
       "name": "Blackpool Central Mosque",
@@ -5687,8 +5707,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.808564,
-      "lon": -3.044867
+      "lat": 53.808349,
+      "lon": -3.044986
     },
     {
       "name": "Madressa Islamia Mosque",
@@ -5701,8 +5721,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.784177,
-      "lon": -2.406899
+      "lat": 53.783903,
+      "lon": -2.406649
     },
     {
       "name": "Ghousia Masjid mosque",
@@ -5715,8 +5735,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.785615,
-      "lon": -2.399066
+      "lat": 53.785694,
+      "lon": -2.398629
     },
     {
       "name": "Raza Mosque",
@@ -5729,8 +5749,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 54.045828,
-      "lon": -2.805885
+      "lat": 54.04548,
+      "lon": -2.805306
     },
     {
       "name": "Masjid Al-Hidayah",
@@ -5743,8 +5763,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.755231,
-      "lon": -2.481055
+      "lat": 53.755086,
+      "lon": -2.480649
     },
     {
       "name": "Masjid-al-Momineen",
@@ -5757,8 +5777,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.757096,
-      "lon": -2.468563
+      "lat": 53.757324,
+      "lon": -2.469048
     },
     {
       "name": "Masjid e Sajedeen",
@@ -5771,8 +5791,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.758116,
-      "lon": -2.467467
+      "lat": 53.758412,
+      "lon": -2.467703
     },
     {
       "name": "Raza Jamia Masjid",
@@ -5785,8 +5805,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.751738,
-      "lon": -2.382836
+      "lat": 53.751842,
+      "lon": -2.379586
     },
     {
       "name": "Masjid Tauheedul Islam",
@@ -5799,8 +5819,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.753938,
-      "lon": -2.485241
+      "lat": 53.753266,
+      "lon": -2.485456
     },
     {
       "name": "Makki Masjid",
@@ -5813,8 +5833,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.752761,
-      "lon": -2.482922
+      "lat": 53.755074,
+      "lon": -2.483978
     },
     {
       "name": "Masjid-e-Noor",
@@ -5827,8 +5847,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.765011,
-      "lon": -2.695261
+      "lat": 53.765477,
+      "lon": -2.694602
     },
     {
       "name": "Raza Masjid",
@@ -5841,8 +5861,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.76587,
-      "lon": -2.695958
+      "lat": 53.765863,
+      "lon": -2.695978
     },
     {
       "name": "Noorani Masjid",
@@ -5855,8 +5875,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.777132,
-      "lon": -2.712836
+      "lat": 53.77732,
+      "lon": -2.710752
     },
     {
       "name": "Masjid e Salaam",
@@ -5869,8 +5889,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.777878,
-      "lon": -2.703744
+      "lat": 53.77793,
+      "lon": -2.701872
     },
     {
       "name": "Leamington Road Mosque",
@@ -5883,8 +5903,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.75107,
-      "lon": -2.500843
+      "lat": 53.750668,
+      "lon": -2.501614
     },
     {
       "name": "Masjid e Bilaal",
@@ -5909,8 +5929,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 54.045878,
-      "lon": -2.792935
+      "lat": 54.046289,
+      "lon": -2.792289
     },
     {
       "name": "City Mosque Preston",
@@ -5923,8 +5943,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.763733,
-      "lon": -2.698775
+      "lat": 53.763164,
+      "lon": -2.698411
     },
     {
       "name": "Al-Huda",
@@ -5937,8 +5957,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.756008,
-      "lon": -2.697857
+      "lat": 53.755682,
+      "lon": -2.6976
     },
     {
       "name": "Masjide Moorul",
@@ -5951,8 +5971,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.744981,
-      "lon": -2.463819
+      "lat": 53.744293,
+      "lon": -2.466989
     },
     {
       "name": "Masjid Nimra",
@@ -5964,7 +5984,9 @@
       "color1": null,
       "color2": null,
       "tags": "",
-      "type": "mosque"
+      "type": "mosque",
+      "lat": 53.840843,
+      "lon": -2.206481
     },
     {
       "name": "Gausia Madrassah",
@@ -5977,8 +5999,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.837236,
-      "lon": -2.205339
+      "lat": 53.837362,
+      "lon": -2.205684
     },
     {
       "name": "Labbayak Ya RasoolAllah Masjid",
@@ -5991,8 +6013,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.832538,
-      "lon": -2.208826
+      "lat": 53.832488,
+      "lon": -2.208933
     },
     {
       "name": "Markazi Jamia Ghausia Masjid",
@@ -6004,7 +6026,9 @@
       "color1": null,
       "color2": null,
       "tags": "",
-      "type": "mosque"
+      "type": "mosque",
+      "lat": 53.839048,
+      "lon": -2.215974
     },
     {
       "name": "Baitul Mukarram Mosque & Islamic Center",
@@ -6017,8 +6041,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.706973,
-      "lon": -2.326741
+      "lat": 53.707062,
+      "lon": -2.326059
     },
     {
       "name": "Masjid Al-Mustafa",
@@ -6031,8 +6055,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.835715,
-      "lon": -2.206593
+      "lat": 53.835609,
+      "lon": -2.206736
     },
     {
       "name": "Muhammadi Masjid",
@@ -6045,8 +6069,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.836332,
-      "lon": -2.208328
+      "lat": 53.836515,
+      "lon": -2.207739
     },
     {
       "name": "Jamea Masjid",
@@ -6059,8 +6083,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.754912,
-      "lon": -2.693047
+      "lat": 53.755188,
+      "lon": -2.691804
     },
     {
       "name": "Khanqah",
@@ -6073,8 +6097,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.75834,
-      "lon": -2.465346
+      "lat": 53.758383,
+      "lon": -2.463874
     },
     {
       "name": "Inverness Masjid",
@@ -6086,7 +6110,9 @@
       "color1": null,
       "color2": null,
       "tags": "",
-      "type": "mosque"
+      "type": "mosque",
+      "lat": 57.483357,
+      "lon": -4.230681
     },
     {
       "name": "Foresterhill Mosque",
@@ -6099,8 +6125,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 57.154266,
-      "lon": -2.131713
+      "lat": 57.15432,
+      "lon": -2.131396
     },
     {
       "name": "Elgin Mosque",
@@ -6113,8 +6139,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 57.646744,
-      "lon": -3.318418
+      "lat": 57.646872,
+      "lon": -3.31792
     },
     {
       "name": "Stornoway Masjid",
@@ -6127,8 +6153,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 58.207863,
-      "lon": -6.384457
+      "lat": 58.207937,
+      "lon": -6.384006
     },
     {
       "name": "Aberdeen Mosque & Islamic Centre",
@@ -6141,8 +6167,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 57.150132,
-      "lon": -2.092677
+      "lat": 57.150389,
+      "lon": -2.091538
     },
     {
       "name": "Syed Shah Mustafa Jame Masjid",
@@ -6155,8 +6181,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 57.143685,
-      "lon": -2.100857
+      "lat": 57.143215,
+      "lon": -2.100941
     },
     {
       "name": "Masjid Alhikmah & Community Centre",
@@ -6169,8 +6195,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 57.153901,
-      "lon": -2.098422
+      "lat": 57.154097,
+      "lon": -2.097397
     },
     {
       "name": "Arbroath Islamic Community Centre",
@@ -6183,8 +6209,8 @@
       "color2": null,
       "tags": "",
       "type": "community_centre",
-      "lat": 56.566708,
-      "lon": -2.578698
+      "lat": 56.566868,
+      "lon": -2.579429
     },
     {
       "name": "Craigavon Mosque",
@@ -6197,8 +6223,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 54.447958,
-      "lon": -6.372147
+      "lat": 54.448655,
+      "lon": -6.371557
     },
     {
       "name": "Belfast Islamic Centre",
@@ -6211,8 +6237,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 54.582688,
-      "lon": -5.941643
+      "lat": 54.582409,
+      "lon": -5.942091
     },
     {
       "name": "Shahjahal Mosque and Islamic Centre Southampton",
@@ -6225,8 +6251,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 50.911246,
-      "lon": -1.40034
+      "lat": 50.910411,
+      "lon": -1.399234
     },
     {
       "name": "Taqwah Mosque",
@@ -6238,7 +6264,9 @@
       "color1": null,
       "color2": null,
       "tags": "",
-      "type": "mosque"
+      "type": "mosque",
+      "lat": 50.911257,
+      "lon": -1.387285
     },
     {
       "name": "Razvia Masjid",
@@ -6251,8 +6279,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 50.909766,
-      "lon": -1.399249
+      "lat": 50.909389,
+      "lon": -1.39962
     },
     {
       "name": "Bournemouth Islamic Centre & Central Mosque",
@@ -6265,8 +6293,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 50.721477,
-      "lon": -1.880179
+      "lat": 50.72182,
+      "lon": -1.88009
     },
     {
       "name": "Bashir Ahmed Masjid",
@@ -6279,8 +6307,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 50.922649,
-      "lon": -1.395114
+      "lat": 50.923077,
+      "lon": -1.394889
     },
     {
       "name": "The Abu Bakr Jamia Masjid",
@@ -6293,8 +6321,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 50.909811,
-      "lon": -1.395778
+      "lat": 50.909917,
+      "lon": -1.397437
     },
     {
       "name": "Masjid Ar-Rahmah",
@@ -6307,8 +6335,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 50.912868,
-      "lon": -1.392353
+      "lat": 50.912436,
+      "lon": -1.39238
     },
     {
       "name": "Basingstoke Mosque",
@@ -6321,8 +6349,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 51.263503,
-      "lon": -1.092315
+      "lat": 51.263496,
+      "lon": -1.092306
     },
     {
       "name": "Winchester Islamic Centre",
@@ -6335,8 +6363,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 51.069629,
-      "lon": -1.314757
+      "lat": 51.069382,
+      "lon": -1.314768
     },
     {
       "name": "Bournemouth Jamei Mosque",
@@ -6349,8 +6377,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 50.74266,
-      "lon": -1.876624
+      "lat": 50.742482,
+      "lon": -1.87705
     },
     {
       "name": "Portsmouth Hafiziah Madrasah",
@@ -6363,8 +6391,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 50.785579,
-      "lon": -1.084083
+      "lat": 50.785679,
+      "lon": -1.084249
     },
     {
       "name": "Poole Mosque",
@@ -6377,8 +6405,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 50.727981,
-      "lon": -1.926364
+      "lat": 50.727903,
+      "lon": -1.926641
     },
     {
       "name": "Portsmouth Muslim Academy",
@@ -6391,8 +6419,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 50.8068,
-      "lon": -1.087245
+      "lat": 50.806808,
+      "lon": -1.087321
     },
     {
       "name": "Al Mahdi Centre",
@@ -6405,8 +6433,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 50.875826,
-      "lon": -1.217954
+      "lat": 50.876332,
+      "lon": -1.21775
     },
     {
       "name": "Salisbury Central Masjid",
@@ -6419,8 +6447,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 51.072348,
-      "lon": -1.806027
+      "lat": 51.072502,
+      "lon": -1.806369
     },
     {
       "name": "Portsmouth Central Masjid",
@@ -6433,8 +6461,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 50.797922,
-      "lon": -1.07906
+      "lat": 50.797927,
+      "lon": -1.077354
     },
     {
       "name": "Portsmouth Jami Mosque",
@@ -6447,8 +6475,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 50.793632,
-      "lon": -1.080123
+      "lat": 50.794141,
+      "lon": -1.079864
     },
     {
       "name": "Kingswood Masjid",
@@ -6461,8 +6489,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 51.461808,
-      "lon": -2.508253
+      "lat": 51.461824,
+      "lon": -2.507468
     },
     {
       "name": "Bath Islamic Centre and Mosque",
@@ -6475,8 +6503,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 51.380279,
-      "lon": -2.357339
+      "lat": 51.380001,
+      "lon": -2.357332
     },
     {
       "name": "IQRA Community Centre",
@@ -6489,8 +6517,8 @@
       "color2": null,
       "tags": "",
       "type": "community_centre",
-      "lat": 51.585368,
-      "lon": -2.979777
+      "lat": 51.584647,
+      "lon": -2.978109
     },
     {
       "name": "Newport Central Jam'e Masjid",
@@ -6503,8 +6531,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 51.584981,
-      "lon": -2.996814
+      "lat": 51.584893,
+      "lon": -2.996907
     },
     {
       "name": "East Newport Islamic Cultural Centre",
@@ -6517,8 +6545,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 51.590033,
-      "lon": -2.987412
+      "lat": 51.590049,
+      "lon": -2.98746
     },
     {
       "name": "Newport Diyanet Education Community Centre",
@@ -6531,8 +6559,8 @@
       "color2": null,
       "tags": "",
       "type": "community_centre",
-      "lat": 51.573153,
-      "lon": -2.989933
+      "lat": 51.572817,
+      "lon": -2.990462
     },
     {
       "name": "Dawat-e-Islami Faizan-e-Madina",
@@ -6545,8 +6573,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 51.591441,
-      "lon": -2.983574
+      "lat": 51.590826,
+      "lon": -2.983386
     },
     {
       "name": "Jaima Ala Abba Community Center",
@@ -6559,8 +6587,8 @@
       "color2": null,
       "tags": "",
       "type": "community_centre",
-      "lat": 51.593016,
-      "lon": -2.978036
+      "lat": 51.589676,
+      "lon": -2.979807
     },
     {
       "name": "Imam Ali Centre",
@@ -6573,8 +6601,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 51.465347,
-      "lon": -3.167101
+      "lat": 51.465506,
+      "lon": -3.167078
     },
     {
       "name": "Easton Jamia Masjid",
@@ -6586,7 +6614,9 @@
       "color1": null,
       "color2": null,
       "tags": "",
-      "type": "mosque"
+      "type": "mosque",
+      "lat": 51.467208,
+      "lon": -2.564549
     },
     {
       "name": "Bilal Mosque",
@@ -6599,8 +6629,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 51.484021,
-      "lon": -3.20027
+      "lat": 51.4837,
+      "lon": -3.200282
     },
     {
       "name": "Noor El Islam Mosque",
@@ -6613,8 +6643,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 51.472849,
-      "lon": -3.173153
+      "lat": 51.472808,
+      "lon": -3.173287
     },
     {
       "name": "Bristol Jamia Mosque",
@@ -6626,7 +6656,9 @@
       "color1": null,
       "color2": null,
       "tags": "",
-      "type": "mosque"
+      "type": "mosque",
+      "lat": 51.44216,
+      "lon": -2.581561
     },
     {
       "name": "Trowbridge Mosque",
@@ -6639,8 +6671,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 51.31597,
-      "lon": -2.203164
+      "lat": 51.316,
+      "lon": -2.202684
     },
     {
       "name": "Bridgwater Islamic Centre",
@@ -6653,8 +6685,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 51.126834,
-      "lon": -3.004124
+      "lat": 51.126969,
+      "lon": -3.003616
     },
     {
       "name": "Bristol Central Mosque",
@@ -6667,8 +6699,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 51.46216,
-      "lon": -2.563042
+      "lat": 51.461979,
+      "lon": -2.562714
     },
     {
       "name": "Shah Jalal Jame Masjid",
@@ -6681,8 +6713,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 51.470508,
-      "lon": -2.564095
+      "lat": 51.470722,
+      "lon": -2.56402
     },
     {
       "name": "Jalalabad Islamic Centre",
@@ -6695,8 +6727,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 51.473036,
-      "lon": -2.55818
+      "lat": 51.472913,
+      "lon": -2.558383
     },
     {
       "name": "Greenbank Masjid",
@@ -6708,7 +6740,9 @@
       "color1": null,
       "color2": null,
       "tags": "",
-      "type": "mosque"
+      "type": "mosque",
+      "lat": 51.467846,
+      "lon": -2.557771
     },
     {
       "name": "Tawfiq Masjid & Centre",
@@ -6721,8 +6755,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 51.453394,
-      "lon": -2.562935
+      "lat": 51.453432,
+      "lon": -2.562876
     },
     {
       "name": "Al-Baseera Bristol Centre",
@@ -6735,8 +6769,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 51.459108,
-      "lon": -2.580465
+      "lat": 51.459157,
+      "lon": -2.579858
     },
     {
       "name": "Hazrat Bilal Centre",
@@ -6749,8 +6783,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 51.469115,
-      "lon": -2.57692
+      "lat": 51.469015,
+      "lon": -2.57763
     },
     {
       "name": "Shahporan",
@@ -6763,8 +6797,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 51.495059,
-      "lon": -2.574367
+      "lat": 51.495151,
+      "lon": -2.574277
     },
     {
       "name": "Dar Ul-Isra",
@@ -6777,8 +6811,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 51.490083,
-      "lon": -3.176173
+      "lat": 51.489577,
+      "lon": -3.175303
     },
     {
       "name": "Masjid At-Tawheed",
@@ -6790,7 +6824,9 @@
       "color1": null,
       "color2": null,
       "tags": "",
-      "type": "mosque"
+      "type": "mosque",
+      "lat": 51.470288,
+      "lon": -3.185443
     },
     {
       "name": "Masjid Abubakr",
@@ -6803,8 +6839,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 51.468262,
-      "lon": -3.182206
+      "lat": 51.46842,
+      "lon": -3.181846
     },
     {
       "name": "Madina Mosque",
@@ -6817,8 +6853,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 51.495959,
-      "lon": -3.175748
+      "lat": 51.495969,
+      "lon": -3.17573
     },
     {
       "name": "Qur'an Academy",
@@ -6831,8 +6867,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 51.472868,
-      "lon": -2.530448
+      "lat": 51.47329,
+      "lon": -2.530896
     },
     {
       "name": "Dawat E Islami Shaftesbury",
@@ -6845,8 +6881,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 51.592469,
-      "lon": -2.998133
+      "lat": 51.594168,
+      "lon": -2.996153
     },
     {
       "name": "Madni Mosque",
@@ -6859,8 +6895,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 51.495999,
-      "lon": -3.171802
+      "lat": 51.495845,
+      "lon": -3.171743
     },
     {
       "name": "Taunton and Somerset Islamic Centre",
@@ -6873,8 +6909,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 51.014711,
-      "lon": -3.107194
+      "lat": 51.014723,
+      "lon": -3.107097
     },
     {
       "name": "Rabbaniah Islamic Cultural Centre",
@@ -6887,8 +6923,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 51.474963,
-      "lon": -3.186425
+      "lat": 51.474782,
+      "lon": -3.186885
     },
     {
       "name": "Al-Ikhlas Centre",
@@ -6901,8 +6937,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 51.488178,
-      "lon": -3.154375
+      "lat": 51.488059,
+      "lon": -3.154753
     },
     {
       "name": "Exeter Mosque",
@@ -6915,8 +6951,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 50.729169,
-      "lon": -3.525104
+      "lat": 50.729205,
+      "lon": -3.525063
     },
     {
       "name": "Islamic Centre of Plymouth and Cornwall",
@@ -6929,8 +6965,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 50.377056,
-      "lon": -4.14091
+      "lat": 50.377035,
+      "lon": -4.14118
     },
     {
       "name": "Masjid Albirr",
@@ -6943,8 +6979,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.285617,
-      "lon": -1.52896
+      "lat": 52.285841,
+      "lon": -1.529241
     },
     {
       "name": "Banbury Makkah Masjid (Spiritual Centre)",
@@ -6957,8 +6993,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.063422,
-      "lon": -1.346174
+      "lat": 52.063307,
+      "lon": -1.346198
     },
     {
       "name": "Al-Madina Jami Masjid",
@@ -6971,8 +7007,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.196362,
-      "lon": -2.210801
+      "lat": 52.196438,
+      "lon": -2.210765
     },
     {
       "name": "Banbury Madni Masjid",
@@ -6985,8 +7021,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.061809,
-      "lon": -1.326505
+      "lat": 52.061785,
+      "lon": -1.325055
     },
     {
       "name": "Turkish Community Centre",
@@ -6999,8 +7035,8 @@
       "color2": null,
       "tags": "",
       "type": "community_centre",
-      "lat": 52.196886,
-      "lon": -2.219128
+      "lat": 52.197292,
+      "lon": -2.2192
     },
     {
       "name": "Jalalabad Muslim Association",
@@ -7013,8 +7049,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.191008,
-      "lon": -2.212897
+      "lat": 52.191318,
+      "lon": -2.212748
     },
     {
       "name": "Derby Jamia Mosque",
@@ -7027,8 +7063,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.899085,
-      "lon": -1.486921
+      "lat": 52.899026,
+      "lon": -1.485937
     },
     {
       "name": "Shah jalal Mosque & Centre",
@@ -7041,8 +7077,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.777575,
-      "lon": -1.203271
+      "lat": 52.778097,
+      "lon": -1.205677
     },
     {
       "name": "The Markfield Mosque",
@@ -7055,8 +7091,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.6765,
-      "lon": -1.271637
+      "lat": 52.677459,
+      "lon": -1.272473
     },
     {
       "name": "Central Jamia Masjid Rizvia",
@@ -7069,8 +7105,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.796047,
-      "lon": -1.644181
+      "lat": 52.796975,
+      "lon": -1.64365
     },
     {
       "name": "Al Karam Trust Mosque",
@@ -7083,8 +7119,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.065325,
-      "lon": -0.788768
+      "lat": 52.065242,
+      "lon": -0.789213
     },
     {
       "name": "Jamia Masjid St Ives Mosque",
@@ -7097,8 +7133,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.325134,
-      "lon": -0.068555
+      "lat": 52.325102,
+      "lon": -0.06862
     },
     {
       "name": "Jamia Masjid Gulshani Baghdad",
@@ -7111,8 +7147,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.132751,
-      "lon": -0.485441
+      "lat": 52.132248,
+      "lon": -0.485055
     },
     {
       "name": "Gulzare Medina Masjid Islamic Welfare Trust",
@@ -7125,8 +7161,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.259269,
-      "lon": -0.849621
+      "lat": 52.258296,
+      "lon": -0.849338
     },
     {
       "name": "Kettering Muslim Association",
@@ -7139,7 +7175,7 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.388372,
+      "lat": 52.388525,
       "lon": -0.727464
     },
     {
@@ -7153,8 +7189,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.247984,
-      "lon": -0.876558
+      "lat": 52.247579,
+      "lon": -0.877017
     },
     {
       "name": "Cranfield University Mosque",
@@ -7166,7 +7202,9 @@
       "color1": null,
       "color2": null,
       "tags": "",
-      "type": "prayer_room"
+      "type": "prayer_room",
+      "lat": 52.07438,
+      "lon": -0.627077
     },
     {
       "name": "South Bedford Islamic Centre",
@@ -7179,8 +7217,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.123556,
-      "lon": -0.465579
+      "lat": 52.123842,
+      "lon": -0.465621
     },
     {
       "name": "Bedford Al Falaah Islamic Centre",
@@ -7192,7 +7230,9 @@
       "color1": null,
       "color2": null,
       "tags": "",
-      "type": "mosque"
+      "type": "mosque",
+      "lat": 52.136318,
+      "lon": -0.473469
     },
     {
       "name": "Bangladesh Islamic Mission & Jamee Mosjid",
@@ -7205,8 +7245,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.134191,
-      "lon": -0.473031
+      "lat": 52.134199,
+      "lon": -0.473678
     },
     {
       "name": "Jamia Masjid Hanfia Ghousia",
@@ -7219,8 +7259,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.132727,
-      "lon": -0.4829
+      "lat": 52.132613,
+      "lon": -0.483291
     },
     {
       "name": "AL-Jamat-Ul-Muslimin of Bangladesh",
@@ -7233,8 +7273,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.24344,
-      "lon": -0.899053
+      "lat": 52.243384,
+      "lon": -0.898902
     },
     {
       "name": "Bedford Central Jamee Masjid",
@@ -7247,8 +7287,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.136745,
-      "lon": -0.473791
+      "lat": 52.136989,
+      "lon": -0.474504
     },
     {
       "name": "Corby Central Masjid",
@@ -7261,8 +7301,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.487852,
-      "lon": -0.696629
+      "lat": 52.487793,
+      "lon": -0.697638
     },
     {
       "name": "Shahjalal Jame Mosque",
@@ -7275,8 +7315,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.302877,
-      "lon": -0.685432
+      "lat": 52.302833,
+      "lon": -0.687342
     },
     {
       "name": "Islah-Ul-Muslimeen",
@@ -7289,8 +7329,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.302699,
-      "lon": -0.688003
+      "lat": 52.302877,
+      "lon": -0.686836
     },
     {
       "name": "Goldington Islamic Centre",
@@ -7303,8 +7343,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.1401,
-      "lon": -0.452444
+      "lat": 52.140057,
+      "lon": -0.452599
     },
     {
       "name": "Daarul Huda",
@@ -7317,8 +7357,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.125367,
-      "lon": -0.471331
+      "lat": 52.124921,
+      "lon": -0.471374
     },
     {
       "name": "Baital Ma'mur Jami Masjid",
@@ -7331,8 +7371,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.241201,
-      "lon": -0.917445
+      "lat": 52.241018,
+      "lon": -0.917905
     },
     {
       "name": "Al-Haramain Mosque and Education Centre",
@@ -7345,8 +7385,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.130324,
-      "lon": -0.467407
+      "lat": 52.130315,
+      "lon": -0.467397
     },
     {
       "name": "Masjid Al Ansar",
@@ -7359,8 +7399,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.652681,
-      "lon": -1.094732
+      "lat": 52.653565,
+      "lon": -1.096775
     },
     {
       "name": "Darul Ihsaan",
@@ -7373,8 +7413,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.639925,
-      "lon": -1.068172
+      "lat": 52.640202,
+      "lon": -1.068388
     },
     {
       "name": "Shah Jahan Mosque",
@@ -7387,8 +7427,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.965447,
-      "lon": -1.168931
+      "lat": 52.965604,
+      "lon": -1.16807
     },
     {
       "name": "Lenton Muslim Centre",
@@ -7401,8 +7441,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.954963,
-      "lon": -1.172392
+      "lat": 52.954457,
+      "lon": -1.171803
     },
     {
       "name": "Shah Jalal Masjiid",
@@ -7415,8 +7455,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.963022,
-      "lon": -1.170526
+      "lat": 52.963045,
+      "lon": -1.170075
     },
     {
       "name": "Boston Mosque & Islamic Centre",
@@ -7429,8 +7469,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.984402,
-      "lon": -0.018851
+      "lat": 52.984669,
+      "lon": -0.018781
     },
     {
       "name": "Masjid (Long Eaton)",
@@ -7443,8 +7483,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.900825,
-      "lon": -1.276745
+      "lat": 52.901057,
+      "lon": -1.277235
     },
     {
       "name": "Gulzar e Madina",
@@ -7457,8 +7497,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.632405,
-      "lon": -1.113413
+      "lat": 52.634132,
+      "lon": -1.113307
     },
     {
       "name": "Karimia Masjid & Institute",
@@ -7471,8 +7511,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.969683,
-      "lon": -1.167838
+      "lat": 52.97002,
+      "lon": -1.166223
     },
     {
       "name": "Madani",
@@ -7485,8 +7525,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.62637,
-      "lon": -1.101051
+      "lat": 52.627853,
+      "lon": -1.098771
     },
     {
       "name": "Masjid Fatima Zahra",
@@ -7499,8 +7539,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.627242,
-      "lon": -1.106943
+      "lat": 52.626632,
+      "lon": -1.107018
     },
     {
       "name": "Jamia Masjid Sultania",
@@ -7513,8 +7553,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.950769,
-      "lon": -1.126511
+      "lat": 52.951181,
+      "lon": -1.125502
     },
     {
       "name": "QMC Prayer Room Level 3",
@@ -7527,8 +7567,8 @@
       "color2": null,
       "tags": "",
       "type": "prayer_room",
-      "lat": 52.94382,
-      "lon": -1.185953
+      "lat": 52.944155,
+      "lon": -1.185451
     },
     {
       "name": "Masjid al Quba",
@@ -7541,8 +7581,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.639102,
-      "lon": -1.121657
+      "lat": 52.638691,
+      "lon": -1.121668
     },
     {
       "name": "Beaumont Leys Muslims",
@@ -7555,8 +7595,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.658031,
-      "lon": -1.163325
+      "lat": 52.661578,
+      "lon": -1.152381
     },
     {
       "name": "Darul Arqam",
@@ -7569,8 +7609,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.648905,
-      "lon": -1.080708
+      "lat": 52.648364,
+      "lon": -1.081384
     },
     {
       "name": "DMU Prayer room",
@@ -7583,8 +7623,8 @@
       "color2": null,
       "tags": "",
       "type": "prayer_room",
-      "lat": 52.630006,
-      "lon": -1.141637
+      "lat": 52.630513,
+      "lon": -1.140599
     },
     {
       "name": "Knighton Education Centre",
@@ -7597,8 +7637,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.612252,
-      "lon": -1.124586
+      "lat": 52.612709,
+      "lon": -1.124484
     },
     {
       "name": "Muhaddith e Azam Community Centre",
@@ -7611,8 +7651,8 @@
       "color2": null,
       "tags": "",
       "type": "community_centre",
-      "lat": 52.644654,
-      "lon": -1.105643
+      "lat": 52.644607,
+      "lon": -1.107695
     },
     {
       "name": "UoN Prayer Room (Xu Yafen Building)",
@@ -7637,8 +7677,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.652635,
-      "lon": -1.070179
+      "lat": 52.653543,
+      "lon": -1.067874
     },
     {
       "name": "Tawakul",
@@ -7651,8 +7691,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.631598,
-      "lon": -1.101683
+      "lat": 52.631274,
+      "lon": -1.102021
     },
     {
       "name": "UoN Prayer Room Portland Building",
@@ -7664,7 +7704,9 @@
       "color1": null,
       "color2": null,
       "tags": "",
-      "type": "prayer_room"
+      "type": "prayer_room",
+      "lat": 52.938161,
+      "lon": -1.19433
     },
     {
       "name": "NTU Prayer Room",
@@ -7677,8 +7719,8 @@
       "color2": null,
       "tags": "",
       "type": "prayer_room",
-      "lat": 52.957804,
-      "lon": -1.157065
+      "lat": 52.957771,
+      "lon": -1.156822
     },
     {
       "name": "Nottingham Islamic Centre",
@@ -7691,8 +7733,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.957557,
-      "lon": -1.1426
+      "lat": 52.957609,
+      "lon": -1.142744
     },
     {
       "name": "Jamia Mosque Derby",
@@ -7705,8 +7747,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.909966,
-      "lon": -1.475358
+      "lat": 52.910104,
+      "lon": -1.476444
     },
     {
       "name": "Masjid Al-Farooq",
@@ -7719,8 +7761,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.913773,
-      "lon": -1.480532
+      "lat": 52.913742,
+      "lon": -1.480565
     },
     {
       "name": "Islamic Centre Derby",
@@ -7733,8 +7775,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.917252,
-      "lon": -1.476326
+      "lat": 52.91724,
+      "lon": -1.476307
     },
     {
       "name": "Masjid Salaam",
@@ -7747,8 +7789,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.908108,
-      "lon": -1.477967
+      "lat": 52.907894,
+      "lon": -1.478297
     },
     {
       "name": "Meadows Muslim Centre",
@@ -7761,8 +7803,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.937566,
-      "lon": -1.144141
+      "lat": 52.937404,
+      "lon": -1.143991
     },
     {
       "name": "Jamiat Ahl-e-Hadith & Al-Furquan Education Centre",
@@ -7775,8 +7817,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.906943,
-      "lon": -1.489222
+      "lat": 52.906927,
+      "lon": -1.489091
     },
     {
       "name": "Masjid Ul Imam Il Bukhari",
@@ -7789,8 +7831,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.657967,
-      "lon": -1.122181
+      "lat": 52.657847,
+      "lon": -1.121789
     },
     {
       "name": "Masjid Taybah",
@@ -7803,8 +7845,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.918294,
-      "lon": -1.205305
+      "lat": 52.918915,
+      "lon": -1.204935
     },
     {
       "name": "Abu Bakr As-Saddique Mosque",
@@ -7817,8 +7859,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.952047,
-      "lon": -1.171823
+      "lat": 52.951997,
+      "lon": -1.171809
     },
     {
       "name": "Masjid Al Huda",
@@ -7831,8 +7873,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.642729,
-      "lon": -1.127082
+      "lat": 52.642762,
+      "lon": -1.127106
     },
     {
       "name": "Jameah Fatimiah Mosque",
@@ -7845,8 +7887,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.970386,
-      "lon": -1.165635
+      "lat": 52.970663,
+      "lon": -1.164263
     },
     {
       "name": "Baytul 'Ilm",
@@ -7859,8 +7901,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.641154,
-      "lon": -1.108788
+      "lat": 52.640024,
+      "lon": -1.108328
     },
     {
       "name": "Loughborough Mosque and Islamic Cultural Association",
@@ -7873,8 +7915,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.768861,
-      "lon": -1.19885
+      "lat": 52.769543,
+      "lon": -1.198147
     },
     {
       "name": "Markaz Quba",
@@ -7887,8 +7929,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.629184,
-      "lon": -1.119092
+      "lat": 52.628576,
+      "lon": -1.118847
     },
     {
       "name": "Masjid Al-Furqan",
@@ -7901,8 +7943,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.641128,
-      "lon": -1.123405
+      "lat": 52.640791,
+      "lon": -1.125749
     },
     {
       "name": "Jamia Masjid Sultania And Education Centre",
@@ -7915,8 +7957,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.951839,
-      "lon": -1.126534
+      "lat": 52.951987,
+      "lon": -1.12594
     },
     {
       "name": "Beeston Muslim Centre",
@@ -7929,8 +7971,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.928069,
-      "lon": -1.204471
+      "lat": 52.927773,
+      "lon": -1.204811
     },
     {
       "name": "Grantham Islamic Centre",
@@ -7943,8 +7985,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.913071,
-      "lon": -0.642255
+      "lat": 52.912796,
+      "lon": -0.641504
     },
     {
       "name": "Basford Culture Centre",
@@ -7957,8 +7999,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.979284,
-      "lon": -1.171838
+      "lat": 52.97942,
+      "lon": -1.172435
     },
     {
       "name": "Jami Masjid",
@@ -7971,8 +8013,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.970981,
-      "lon": -1.173516
+      "lat": 52.970928,
+      "lon": -1.17383
     },
     {
       "name": "Madina Madrassa & Spiritual Centre",
@@ -7985,8 +8027,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.575407,
-      "lon": -0.254145
+      "lat": 52.57695,
+      "lon": -0.254378
     },
     {
       "name": "Al Zahra Foundation",
@@ -7999,8 +8041,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.947705,
-      "lon": -1.173141
+      "lat": 52.947236,
+      "lon": -1.173522
     },
     {
       "name": "Abu Huraira",
@@ -8013,8 +8055,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.641386,
-      "lon": -1.093147
+      "lat": 52.641467,
+      "lon": -1.094034
     },
     {
       "name": "Faizan-e-Madina Mosque",
@@ -8027,8 +8069,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.579251,
-      "lon": -0.249018
+      "lat": 52.58033,
+      "lon": -0.248977
     },
     {
       "name": "Nottingham Alevi Cultural Centre & Cemevi",
@@ -8041,8 +8083,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.955384,
-      "lon": -1.135558
+      "lat": 52.955208,
+      "lon": -1.13574
     },
     {
       "name": "Masjid Al-Kharza",
@@ -8055,8 +8097,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.986423,
-      "lon": -1.179835
+      "lat": 52.98641,
+      "lon": -1.180188
     },
     {
       "name": "Muslim Cultural Centre Wollaton",
@@ -8069,8 +8111,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.957342,
-      "lon": -1.19411
+      "lat": 52.956545,
+      "lon": -1.193901
     },
     {
       "name": "Masjid us Sunnah",
@@ -8083,8 +8125,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.615229,
-      "lon": -1.124719
+      "lat": 52.616885,
+      "lon": -1.126097
     },
     {
       "name": "Jamia Islamia Education Centre",
@@ -8097,8 +8139,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.963358,
-      "lon": -1.169716
+      "lat": 52.963324,
+      "lon": -1.169743
     },
     {
       "name": "Jame Masjid (Leicester)",
@@ -8111,8 +8153,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.636123,
-      "lon": -1.105683
+      "lat": 52.636934,
+      "lon": -1.105215
     },
     {
       "name": "Furqan",
@@ -8125,8 +8167,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.630817,
-      "lon": -1.106589
+      "lat": 52.631463,
+      "lon": -1.106148
     },
     {
       "name": "Masjid e Aisha",
@@ -8139,8 +8181,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.630977,
-      "lon": -1.109925
+      "lat": 52.630951,
+      "lon": -1.109693
     },
     {
       "name": "Masjid Tabuk & Evington Muslim Centre",
@@ -8153,8 +8195,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.623204,
-      "lon": -1.103213
+      "lat": 52.62287,
+      "lon": -1.102906
     },
     {
       "name": "Masjid an Noor",
@@ -8167,8 +8209,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.634328,
-      "lon": -1.111985
+      "lat": 52.63426,
+      "lon": -1.110135
     },
     {
       "name": "Masjid al Falah & Islamic Educational Trust",
@@ -8181,8 +8223,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.635554,
-      "lon": -1.114886
+      "lat": 52.635199,
+      "lon": -1.115005
     },
     {
       "name": "Tajdaar e Madina",
@@ -8195,8 +8237,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.636037,
-      "lon": -1.115822
+      "lat": 52.635988,
+      "lon": -1.116868
     },
     {
       "name": "Masjid e Usman",
@@ -8209,8 +8251,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.637337,
-      "lon": -1.114141
+      "lat": 52.636886,
+      "lon": -1.113312
     },
     {
       "name": "Leicester Central Mosque",
@@ -8223,8 +8265,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.63155,
-      "lon": -1.122872
+      "lat": 52.632287,
+      "lon": -1.121575
     },
     {
       "name": "Masjid Ar-Rahman",
@@ -8237,8 +8279,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.632477,
-      "lon": -1.117002
+      "lat": 52.632214,
+      "lon": -1.116517
     },
     {
       "name": "Leicester Mosque",
@@ -8251,8 +8293,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.62895,
-      "lon": -1.112936
+      "lat": 52.629324,
+      "lon": -1.112616
     },
     {
       "name": "Masjid e Usmani",
@@ -8265,8 +8307,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.6323,
-      "lon": -1.095935
+      "lat": 52.633918,
+      "lon": -1.099235
     },
     {
       "name": "Jamia Masjid-e-Bilal",
@@ -8279,8 +8321,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.625891,
-      "lon": -1.101932
+      "lat": 52.626784,
+      "lon": -1.10177
     },
     {
       "name": "Masjid al Ameen",
@@ -8293,8 +8335,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.60051,
-      "lon": -1.085161
+      "lat": 52.599662,
+      "lon": -1.084579
     },
     {
       "name": "Masjid at-Taqwa Islamic Education Centre",
@@ -8307,8 +8349,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.641353,
-      "lon": -1.105296
+      "lat": 52.641874,
+      "lon": -1.105396
     },
     {
       "name": "Hafsah Islamic Centre",
@@ -8321,8 +8363,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.63823,
-      "lon": -1.106113
+      "lat": 52.638389,
+      "lon": -1.105703
     },
     {
       "name": "Masjid-e-Baitul Mukaram",
@@ -8335,8 +8377,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.628883,
-      "lon": -1.113632
+      "lat": 52.628728,
+      "lon": -1.11355
     },
     {
       "name": "Madrasa-e-Anjuman-e-Ghousia Mosque",
@@ -8349,8 +8391,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.631008,
-      "lon": -1.116544
+      "lat": 52.630426,
+      "lon": -1.117372
     },
     {
       "name": "Madressah-e-Rahimiyah",
@@ -8363,8 +8405,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.634544,
-      "lon": -1.109661
+      "lat": 52.634991,
+      "lon": -1.109457
     },
     {
       "name": "Jamia Sufiya",
@@ -8377,8 +8419,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.629167,
-      "lon": -1.117999
+      "lat": 52.628955,
+      "lon": -1.118272
     },
     {
       "name": "The Peace Centre",
@@ -8391,8 +8433,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.638234,
-      "lon": -1.056785
+      "lat": 52.638219,
+      "lon": -1.056775
     },
     {
       "name": "Majles-e-Dawat Ul Haq",
@@ -8405,8 +8447,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.629992,
-      "lon": -1.111644
+      "lat": 52.630116,
+      "lon": -1.110821
     },
     {
       "name": "Dar Es Salam",
@@ -8419,8 +8461,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.628234,
-      "lon": -1.116954
+      "lat": 52.628224,
+      "lon": -1.116996
     },
     {
       "name": "Al Bayaan Arabic Foundation",
@@ -8433,8 +8475,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.651723,
-      "lon": -1.126401
+      "lat": 52.655175,
+      "lon": -1.125539
     },
     {
       "name": "Masjid Mu'adh ibn Jabal",
@@ -8447,8 +8489,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.632199,
-      "lon": -1.072326
+      "lat": 52.632993,
+      "lon": -1.072058
     },
     {
       "name": "Hamidiye Camii",
@@ -8461,8 +8503,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.636537,
-      "lon": -1.140993
+      "lat": 52.635922,
+      "lon": -1.140985
     },
     {
       "name": "Hajra Masjid",
@@ -8475,8 +8517,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.639044,
-      "lon": -1.121126
+      "lat": 52.639036,
+      "lon": -1.121279
     },
     {
       "name": "Noor ul Islam",
@@ -8489,8 +8531,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.63203,
-      "lon": -1.099428
+      "lat": 52.6317,
+      "lon": -1.099369
     },
     {
       "name": "UKIM - Leicester Islamic Centre",
@@ -8503,8 +8545,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.631098,
-      "lon": -1.103274
+      "lat": 52.631473,
+      "lon": -1.104269
     },
     {
       "name": "Darus Salam Mosque",
@@ -8517,8 +8559,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.627167,
-      "lon": -1.105349
+      "lat": 52.627145,
+      "lon": -1.105298
     },
     {
       "name": "Mosque Al-Noor",
@@ -8531,8 +8573,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.977369,
-      "lon": -0.030627
+      "lat": 52.977626,
+      "lon": -0.030203
     },
     {
       "name": "Masjid Ghousia",
@@ -8545,8 +8587,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.584495,
-      "lon": -0.250994
+      "lat": 52.585417,
+      "lon": -0.251504
     },
     {
       "name": "Masjid Khadijah and Islamic Centre",
@@ -8559,7 +8601,7 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.583256,
+      "lat": 52.583449,
       "lon": -0.248062
     },
     {
@@ -8573,8 +8615,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.577299,
-      "lon": -0.247089
+      "lat": 52.57774,
+      "lon": -0.247267
     },
     {
       "name": "Masjid Muhammed",
@@ -8587,8 +8629,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.663543,
-      "lon": -1.090294
+      "lat": 52.663914,
+      "lon": -1.089537
     },
     {
       "name": "Masjid-E-Bilaal",
@@ -8601,8 +8643,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.947394,
-      "lon": -1.174903
+      "lat": 52.947411,
+      "lon": -1.174335
     },
     {
       "name": "Masjid At-Taqwa",
@@ -8615,8 +8657,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.641937,
-      "lon": -1.106452
+      "lat": 52.641856,
+      "lon": -1.104768
     },
     {
       "name": "Faiz e Raza",
@@ -8629,8 +8671,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.641476,
-      "lon": -1.107348
+      "lat": 52.641735,
+      "lon": -1.10773
     },
     {
       "name": "Salahaddin Community Centre",
@@ -8643,8 +8685,8 @@
       "color2": null,
       "tags": "",
       "type": "community_centre",
-      "lat": 52.56414,
-      "lon": -0.247982
+      "lat": 52.565149,
+      "lon": -0.249443
     },
     {
       "name": "Masjid Adam",
@@ -8657,8 +8699,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.596947,
-      "lon": -1.080112
+      "lat": 52.59694,
+      "lon": -1.081147
     },
     {
       "name": "Masjid E Abdullah ibn Mas'ud",
@@ -8671,8 +8713,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.604299,
-      "lon": -1.139777
+      "lat": 52.603938,
+      "lon": -1.139895
     },
     {
       "name": "Baytul Ihsaan",
@@ -8685,8 +8727,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 52.660114,
-      "lon": -1.066738
+      "lat": 52.660183,
+      "lon": -1.067141
     },
     {
       "name": "Kotku Mosque",
@@ -8699,8 +8741,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 54.970728,
-      "lon": -1.647841
+      "lat": 54.97057,
+      "lon": -1.648626
     },
     {
       "name": "Thornaby Mosque",
@@ -8713,8 +8755,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 54.553243,
-      "lon": -1.298529
+      "lat": 54.55292,
+      "lon": -1.298755
     },
     {
       "name": "Jamie Mosque & Islamic Society of Darlington",
@@ -8727,8 +8769,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 54.529371,
-      "lon": -1.556598
+      "lat": 54.529741,
+      "lon": -1.556579
     },
     {
       "name": "Newcastle Tawheed Islamic Centre",
@@ -8741,8 +8783,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 54.970332,
-      "lon": -1.644517
+      "lat": 54.970153,
+      "lon": -1.6454
     },
     {
       "name": "Jamia Masjid Usman-e-Ghani",
@@ -8755,8 +8797,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 54.558263,
-      "lon": -1.319828
+      "lat": 54.557999,
+      "lon": -1.319505
     },
     {
       "name": "Shahjal Mosque",
@@ -8769,8 +8811,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 54.971258,
-      "lon": -1.638557
+      "lat": 54.971245,
+      "lon": -1.638405
     },
     {
       "name": "New Abu Bakr Mosque",
@@ -8783,8 +8825,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 54.5758,
-      "lon": -1.247417
+      "lat": 54.576228,
+      "lon": -1.248169
     },
     {
       "name": "Tees Valley Muslim Community Centre",
@@ -8797,8 +8839,8 @@
       "color2": null,
       "tags": "",
       "type": "community_centre",
-      "lat": 54.547049,
-      "lon": -1.3251
+      "lat": 54.547116,
+      "lon": -1.324872
     },
     {
       "name": "Dar-ul Islam Central Mosque",
@@ -8811,8 +8853,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 54.570414,
-      "lon": -1.229852
+      "lat": 54.570492,
+      "lon": -1.231181
     },
     {
       "name": "Masjid Awliya Allah",
@@ -8825,8 +8867,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 54.95609,
-      "lon": -1.60409
+      "lat": 54.956196,
+      "lon": -1.60335
     },
     {
       "name": "Bilal Jamia Masjid",
@@ -8839,8 +8881,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 54.968935,
-      "lon": -1.640046
+      "lat": 54.96918,
+      "lon": -1.640053
     },
     {
       "name": "Sunderland Jami-Masjid",
@@ -8853,8 +8895,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 54.902573,
-      "lon": -1.397441
+      "lat": 54.902607,
+      "lon": -1.397511
     },
     {
       "name": "Al Azhar Mosque",
@@ -8866,7 +8908,9 @@
       "color1": null,
       "color2": null,
       "tags": "",
-      "type": "mosque"
+      "type": "mosque",
+      "lat": 54.990234,
+      "lon": -1.440035
     },
     {
       "name": "Masjid e Anwaar e Madinah",
@@ -8879,8 +8923,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 54.9048,
-      "lon": -1.400714
+      "lat": 54.905847,
+      "lon": -1.401214
     },
     {
       "name": "Heaton Mosque & Islamic Centre",
@@ -8893,8 +8937,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 54.985445,
-      "lon": -1.581878
+      "lat": 54.985807,
+      "lon": -1.581649
     },
     {
       "name": "Newcasyle Central Mosque",
@@ -8907,8 +8951,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 54.973586,
-      "lon": -1.648144
+      "lat": 54.973573,
+      "lon": -1.647305
     },
     {
       "name": "Islamic Prayer Rooms",
@@ -8921,8 +8965,8 @@
       "color2": null,
       "tags": "",
       "type": "prayer_room",
-      "lat": 54.765799,
-      "lon": -1.575872
+      "lat": 54.765803,
+      "lon": -1.575841
     },
     {
       "name": "Farooq-e-Azam Mosque & Islamic Centre",
@@ -8935,8 +8979,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 54.560161,
-      "lon": -1.318528
+      "lat": 54.559679,
+      "lon": -1.318471
     },
     {
       "name": "Hendon Jami Masjid",
@@ -8949,8 +8993,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 54.902422,
-      "lon": -1.376312
+      "lat": 54.902093,
+      "lon": -1.376861
     },
     {
       "name": "Masjid Maryam",
@@ -8963,8 +9007,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 54.551654,
-      "lon": -1.249206
+      "lat": 54.551621,
+      "lon": -1.249208
     },
     {
       "name": "Jamia Masjid Al-Madina",
@@ -8977,8 +9021,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 54.568486,
-      "lon": -1.230476
+      "lat": 54.5683,
+      "lon": -1.231096
     },
     {
       "name": "Masjid-E-Ali Ibn Abu Talib",
@@ -8991,8 +9035,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 54.567864,
-      "lon": -1.23884
+      "lat": 54.567986,
+      "lon": -1.238448
     },
     {
       "name": "Masjid-E-Nomira",
@@ -9005,8 +9049,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 54.579935,
-      "lon": -1.178539
+      "lat": 54.579626,
+      "lon": -1.178694
     },
     {
       "name": "Madrisa Zia-Ul-Quran",
@@ -9019,8 +9063,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 54.570414,
-      "lon": -1.24269
+      "lat": 54.57049,
+      "lon": -1.243112
     },
     {
       "name": "South Bank Mosque",
@@ -9033,8 +9077,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 54.578541,
-      "lon": -1.174312
+      "lat": 54.578266,
+      "lon": -1.173816
     },
     {
       "name": "North Tyneside Bangladeshi Community Association & Mosque",
@@ -9047,8 +9091,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 55.042841,
-      "lon": -1.440736
+      "lat": 55.042643,
+      "lon": -1.440874
     },
     {
       "name": "Gosforth Prayer Hall",
@@ -9061,8 +9105,8 @@
       "color2": null,
       "tags": "",
       "type": "prayer_room",
-      "lat": 55.008976,
-      "lon": -1.607637
+      "lat": 55.009782,
+      "lon": -1.614613
     },
     {
       "name": "Baitul Ma'mur Jame-E- Masjid and Islamic Center",
@@ -9075,8 +9119,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 55.001493,
-      "lon": -1.428632
+      "lat": 55.00131,
+      "lon": -1.429016
     },
     {
       "name": "Whitley Bay Islamic Cultural Centre and Masjid",
@@ -9089,8 +9133,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 55.035812,
-      "lon": -1.454164
+      "lat": 55.035819,
+      "lon": -1.454156
     },
     {
       "name": "Denbigh Mosque",
@@ -9103,8 +9147,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.183603,
-      "lon": -3.418179
+      "lat": 53.183668,
+      "lon": -3.418209
     },
     {
       "name": "Islamic Cultural Centre",
@@ -9117,8 +9161,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.320255,
-      "lon": -3.493314
+      "lat": 53.320074,
+      "lon": -3.4932
     },
     {
       "name": "Galler Turkish Mosque",
@@ -9131,8 +9175,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 53.316003,
-      "lon": -3.477463
+      "lat": 53.31561,
+      "lon": -3.478139
     },
     {
       "name": "Idara Taleem ul Quran",
@@ -9145,8 +9189,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 55.938489,
-      "lon": -3.218332
+      "lat": 55.938417,
+      "lon": -3.218234
     },
     {
       "name": "Sarajia Islamic Center",
@@ -9158,7 +9202,9 @@
       "color1": null,
       "color2": null,
       "tags": "",
-      "type": "mosque"
+      "type": "mosque",
+      "lat": 55.900666,
+      "lon": -3.642196
     },
     {
       "name": "Al Furqan Mosque",
@@ -9171,8 +9217,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 55.871661,
-      "lon": -4.271636
+      "lat": 55.871469,
+      "lon": -4.271888
     },
     {
       "name": "Zia Ul Quran Centre",
@@ -9184,7 +9230,9 @@
       "color1": null,
       "color2": null,
       "tags": "",
-      "type": "mosque"
+      "type": "mosque",
+      "lat": 55.839365,
+      "lon": -4.273673
     },
     {
       "name": "Niddrie Masjid",
@@ -9197,8 +9245,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 55.935828,
-      "lon": -3.129837
+      "lat": 55.935921,
+      "lon": -3.129926
     },
     {
       "name": "Portobello Mosque",
@@ -9211,8 +9259,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 55.955073,
-      "lon": -3.121094
+      "lat": 55.955209,
+      "lon": -3.119216
     },
     {
       "name": "Borders Islamic Society",
@@ -9225,8 +9273,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 55.618517,
-      "lon": -2.812783
+      "lat": 55.618698,
+      "lon": -2.812877
     },
     {
       "name": "Edinburgh Central Mosque",
@@ -9239,8 +9287,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 55.94527,
-      "lon": -3.186426
+      "lat": 55.94501,
+      "lon": -3.18584
     },
     {
       "name": "Anware Madina Mosque",
@@ -9253,8 +9301,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 55.900513,
-      "lon": -3.499416
+      "lat": 55.901808,
+      "lon": -3.498637
     },
     {
       "name": "IQRA Academy",
@@ -9267,8 +9315,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 55.929705,
-      "lon": -3.16868
+      "lat": 55.930138,
+      "lon": -3.167836
     },
     {
       "name": "Al-Tawheed Mosque",
@@ -9281,8 +9329,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 55.842214,
-      "lon": -4.177452
+      "lat": 55.841776,
+      "lon": -4.177727
     },
     {
       "name": "Mohiuddin Jamia Masjid & Education Centre",
@@ -9295,8 +9343,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 55.972537,
-      "lon": -3.175404
+      "lat": 55.972194,
+      "lon": -3.175206
     },
     {
       "name": "Anwar-E-Madina Mosque and Community Centre",
@@ -9309,8 +9357,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 55.960164,
-      "lon": -3.184895
+      "lat": 55.960565,
+      "lon": -3.185271
     },
     {
       "name": "Dar Al-Arqam",
@@ -9323,8 +9371,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 55.944419,
-      "lon": -3.200074
+      "lat": 55.944491,
+      "lon": -3.200154
     },
     {
       "name": "Central Scotland Islamic Centre",
@@ -9337,8 +9385,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 56.113561,
-      "lon": -3.932871
+      "lat": 56.113462,
+      "lon": -3.932998
     },
     {
       "name": "Khazra Central Mosque",
@@ -9351,8 +9399,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 55.840166,
-      "lon": -4.260582
+      "lat": 55.840494,
+      "lon": -4.260515
     },
     {
       "name": "Islamic Society of Airdrie & Coatbridge",
@@ -9365,8 +9413,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 55.862214,
-      "lon": -4.004976
+      "lat": 55.861287,
+      "lon": -4.005065
     },
     {
       "name": "Glasgow Central Mosque",
@@ -9379,8 +9427,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 55.85254,
-      "lon": -4.251827
+      "lat": 55.852444,
+      "lon": -4.250952
     },
     {
       "name": "Airdrie & Coatbridge Islamic Centre",
@@ -9393,8 +9441,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 55.865979,
-      "lon": -3.985609
+      "lat": 55.866655,
+      "lon": -3.984934
     },
     {
       "name": "Broomhouse Mosque",
@@ -9407,8 +9455,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 55.92874,
-      "lon": -3.277629
+      "lat": 55.928407,
+      "lon": -3.27709
     },
     {
       "name": "Madinah Masjid & Community Centre",
@@ -9421,8 +9469,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 55.875138,
-      "lon": -3.105299
+      "lat": 55.875315,
+      "lon": -3.105012
     },
     {
       "name": "Green Dome Mosque",
@@ -9435,8 +9483,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 56.070583,
-      "lon": -3.460888
+      "lat": 56.070678,
+      "lon": -3.460672
     },
     {
       "name": "Blackhall Mosque",
@@ -9449,8 +9497,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 55.962027,
-      "lon": -3.258014
+      "lat": 55.96124,
+      "lon": -3.2576
     },
     {
       "name": "Kirkcaldy Central Mosque",
@@ -9463,8 +9511,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 56.130897,
-      "lon": -3.175082
+      "lat": 56.130888,
+      "lon": -3.175097
     },
     {
       "name": "Islamic Education Trust Cumbernauld",
@@ -9477,8 +9525,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 55.958118,
-      "lon": -4.01338
+      "lat": 55.958757,
+      "lon": -4.012038
     },
     {
       "name": "Falkirk Central Mosque",
@@ -9491,8 +9539,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 55.997943,
-      "lon": -3.780751
+      "lat": 55.997957,
+      "lon": -3.780746
     },
     {
       "name": "Livingston Masjid & Islamic Centre",
@@ -9505,8 +9553,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 55.90117,
-      "lon": -3.567194
+      "lat": 55.901277,
+      "lon": -3.567583
     },
     {
       "name": "Clarkston Community Centre",
@@ -9519,8 +9567,8 @@
       "color2": null,
       "tags": "",
       "type": "community_centre",
-      "lat": 55.794652,
-      "lon": -4.272861
+      "lat": 55.795005,
+      "lon": -4.272725
     },
     {
       "name": "Dunfermline Islamic Centre",
@@ -9533,8 +9581,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 56.069874,
-      "lon": -3.436332
+      "lat": 56.069981,
+      "lon": -3.435614
     },
     {
       "name": "East Renfrewshire Islamic Centre",
@@ -9547,8 +9595,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 55.769719,
-      "lon": -4.336172
+      "lat": 55.769689,
+      "lon": -4.33665
     },
     {
       "name": "Tantallon Road Mosque",
@@ -9561,8 +9609,8 @@
       "color2": null,
       "tags": "",
       "type": "mosque",
-      "lat": 55.825412,
-      "lon": -4.282765
+      "lat": 55.825653,
+      "lon": -4.282598
     }
   ]
 }
