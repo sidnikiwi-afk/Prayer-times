@@ -687,6 +687,20 @@
       "lon": -1.598459
     },
     {
+      "name": "Makki Masjid & Madrassah",
+      "address": "1 Vicarage Road",
+      "postcode": "LS6 1NX",
+      "city": "Leeds",
+      "has_timetable": true,
+      "slug": "makkimasjidmadrassah",
+      "color1": "#1a3a2e",
+      "color2": "#2d6a4f",
+      "tags": "Headingley",
+      "type": "mosque",
+      "lat": 53.822,
+      "lon": -1.576
+    },
+    {
       "name": "Masjid-Ul-Aqsa & Islamic Centre",
       "address": "135 Windsor Road, Coppice",
       "postcode": "OL8 1RG",

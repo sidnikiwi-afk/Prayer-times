@@ -1,7 +1,8 @@
 # Prayer-times Project
 
 ## Overview
-Ramadan 1447 (Feb-Mar 2026) interactive prayer timetables for mosques in Bradford.
+Prayer timetable web app for UK mosques (50 with timetables, 1000+ in directory).
+Ramadan 1447 (Feb-Mar 2026) + year-round prayer times. Cities: Bradford, Leeds, Keighley, Oldham, and more.
 Hosted on GitHub Pages. Each mosque gets its own subfolder with a self-contained HTML page.
 
 - **Repo**: https://github.com/sidnikiwi-afk/Prayer-times
@@ -151,11 +152,12 @@ Masjids/                    # Source data for batch-generated mosques
 - **Masjid Taqwa**: www.masjidat-taqwa.co.uk | Receiver: 456.787
 - **Masjid Ibraheem**: Tel 0113 270 9536 | masjidibraheemleeds.com | masjidibraheemleeds11@gmail.com
 - **West Leeds Jamia Masjid**: Tel 07801 997 364 | westleedsjamiamasjid@gmail.com
+- **Makki Masjid & Madrassah**: Tel 0113 245 6501 | www.makkimasjid.co.uk | Queries: 07827 295201
 - **Masjid-Ul-Aqsa**: Tel 0161 633 0327 | www.masjidulaqsa.org.uk
 
 ### Batch-Generated Mosques (Ramadan 1447 – added Feb 2026)
 
-These 38 mosques were added in bulk using the `Masjids/` batch generation workflow.
+These 41 mosques were added in bulk using the `Masjids/` batch generation workflow.
 Each has a **unique color theme** stored in `color1`/`color2` fields of its `data.json` — all 10 purple shades from the abubakar template are fully replaced with per-mosque derived colors (dark, medium, light variants, tints).
 Source data in `Masjids/<Name>/data.json`. Regenerate with `python Masjids/generate.py` then copy outputs.
 
@@ -199,6 +201,9 @@ Source data in `Masjids/<Name>/data.json`. Regenerate with `python Masjids/gener
 | Wibsey & Buttershaw Islamic Learning Centre | `wibseybuttershaw` | The Cooperville Centre, Bellerby Brow, Bradford, BD6 3JY | Purple-navy |
 | West Leeds Jamia Masjid | `westleeds` | Town Street, Armley, Leeds, LS12 3JG | Charcoal/Graphite |
 | Wibsey Musalla | `wibsey` | 75 Odsal Road, Wibsey, BD6 1PN | Purple-grey |
+| Shahjalal Jami Masjid & Jamia Qurania | `sjmkeighley` | Temple Row, Keighley, BD21 2AH | Dark gold/Goldenrod |
+| Jamia Masjid - Howard Street | `JamiaMasjid` | 28-32 Howard St, BD5 0BP | (shares JamiaMasjid page) |
+| Makki Masjid & Madrassah | `makkimasjidmadrassah` | 1 Vicarage Road, Leeds, LS6 1NX | Dark green `#1a3a2e` / `#2d6a4f` |
 
 **Note on Doha Mosque**: Timetable has 29 rows starting Feb 19 (their confirmed Ramadan start date differs by one day — moon sighted a day later).
 
@@ -327,15 +332,26 @@ Automated workflow to extract prayer times from mosque submissions via AI vision
   3. Dual AI extraction (parallel):
      - Claude Vision via Anthropic API (credential `pBI2VZprhG0vSJ60`)
      - OpenAI Vision via GPT-4o (credential `MkQvVYaqpmHI70cs`)
-  4. Validation: JSON parse, row count (expect 30), required fields
+  4. Validation: JSON parse, row count (variable by period: 30 for Ramadan, 28-31 for monthly, 360+ for annual), required fields
   5. Best score selection (Claude typically 100/100, OpenAI unreliable)
   6. Postgres INSERT to `timetable_submissions` (credential `pSxR0FEFIyRJHnfX`)
-  7. Telegram notification (no approve/reject buttons -- manual `/add-mosque` workflow)
+  7. Telegram notification with Approve/Reject inline keyboard buttons (timetable submissions) or Acknowledged button (non-timetable submissions)
   8. Webhook response: `{success: true, id: uuid}`
+- **Submission types**: AI classifies each submission as: `timetable` (with period: ramadan/monthly/annual/custom), `error_report`, `jumuah`, `eid`, `event`, `other`
+- **Non-timetable handling**: Error reports, Eid info, Jumu'ah times, events get type-specific Telegram notifications and are stored in Postgres for manual review
 
-#### 3. n8n Workflow: "Timetable Approval Handler" (NOT IN USE)
-- **ID**: `yAenh4XW0VfJPPW0`
-- **Note**: Approve/reject buttons were removed. Mosque addition is done manually via `/add-mosque` skill, pulling data from Postgres `timetable_submissions` table.
+#### 3. n8n Workflow: "Timetable Approval Handler" (ACTIVE)
+- **ID**: `yAenh4XW0VfJPPW0` (20 nodes)
+- **Trigger**: Telegram callback query (inline keyboard button press)
+- **Approve path** (13 nodes):
+  1. Telegram Callback → Parse Callback → Route Action (IF)
+  2. Fetch Submission (Postgres by ID) → Prepare GitHub Commit (Code: builds filePath, base64Content, validates data)
+  3. Check Valid (IF: routes errors to notification path)
+  4. Get File SHA (HTTP GET to GitHub Contents API, continueOnFail) → Build Commit Body (Code: includes SHA if file exists, for updates vs creates)
+  5. Commit to GitHub (HTTP PUT) → Update DB Status → Prepare Approve Msg → Answer Approve Callback + Send Approve Confirm
+- **Reject path**: Prepare Reject Msg → Update DB Rejected → Answer Reject Callback + Send Reject Confirm
+- **Error path** (from Check Valid false): Prepare Error Msg → Answer Error Callback + Send Error Telegram
+- **Key fixes**: Handles existing files (gets SHA first), validates data before commit attempt, error notifications on invalid data
 
 #### 4. Postgres Table: `timetable_submissions`
 ```sql
@@ -377,7 +393,7 @@ CREATE TABLE IF NOT EXISTS timetable_submissions (
 
 ### AI Vision Prompts
 
-**System**: Extract 30-day Ramadan prayer timetable from image. Return JSON only.
+**System**: Extract prayer timetable from image. Classify submission type (timetable with period ramadan/monthly/annual/custom, error_report, jumuah, eid, event, other). Return JSON only.
 
 **Expected schema**:
 ```json
@@ -411,15 +427,15 @@ CREATE TABLE IF NOT EXISTS timetable_submissions (
 
 ### Validation Rules
 
-- Row count: 30 (29 acceptable for mosques with confirmed later Ramadan start)
-- Date sequence: Feb 18 → Mar 19
+- Row count: Variable by period — 29-30 for Ramadan, 28-31 for monthly, 360+ for annual, flexible for custom
+- Date sequence: Validated as sequential (not hardcoded to specific dates)
 - Time format: `HH:MM` (colon, not dot)
-- Required fields: mosque name, prefix, address, timetable array
-- Scoring: +10 per field populated, max 100
+- Required fields: mosque name, prefix, address, timetable array (for timetable type); identifier field (for non-timetable types)
+- Scoring: +10 per field populated, max 100. Non-timetable submissions score 90 if identifier present, 50 if not
 
-### Status: FULLY WORKING (tested 2026-02-22)
+### Status: FULLY WORKING (tested 2026-02-27)
 
-End-to-end test passed: real submission (Shahidur Rahman / IQRA Masjid) -- Apps Script detected file, webhook fired, both AIs scored 100/100, stored in Postgres, Telegram notification sent. All 11 nodes succeeded.
+End-to-end test passed: Submission Processor (11 nodes) + Approval Handler (20 nodes) both working. Tested with Jamia Masjid Howard Street submission — AI extracted, validated, stored in Postgres, Telegram Approve button pressed, GitHub commit succeeded (including SHA lookup for existing file update). Also tested non-timetable submission (Eid info image) — correctly classified and notified.
 
 **Fixes applied:**
 - **Google Drive credential**: Authenticated as `sidni@localcardoctor.com`. Submissions folder shared with this account (Viewer access) to fix 404 download error.
@@ -427,13 +443,17 @@ End-to-end test passed: real submission (Shahidur Rahman / IQRA Masjid) -- Apps 
 - **Telegram expression**: `Send Telegram` node was reading `$json.telegramBody` which was null (upstream `Store Submission` Postgres INSERT only returns `{id}`). Fixed to `$node["Prepare Store & Notify"].json.telegramBody`.
 - **$input fix**: `Prepare AI Requests` node had `\.first()` instead of `$input.first()` (bash `$` escaping artifact).
 - **Duplicate submissions**: Apps Script marked files as processed AFTER the webhook response (which takes ~3 min). During that time, 3 more 1-minute triggers fired sending the same file. Fixed by marking files as processed BEFORE the `UrlFetchApp.fetch()` call.
+- **Empty drive_file_id**: Submission Processor used `item.json.id` for Drive file ID, but the Google Drive download node doesn't return `id` in json output. Fixed to `$('Webhook').first().json.body.fileId` to get it from the original webhook payload.
+- **Approval Handler 404 on empty filePath**: When final_json had no valid timetable data, Prepare GitHub Commit returned error but workflow continued to Commit node with empty URL. Fixed by adding Check Valid IF node that routes errors to Telegram notification path.
+- **Approval Handler 422 "sha wasn't supplied"**: When file already existed on GitHub, PUT without SHA failed. Fixed by adding Get File SHA (HTTP GET, continueOnFail) before commit, and Build Commit Body that includes SHA if file exists.
 
 **Design decisions:**
-- No approve/reject inline keyboard buttons -- just Telegram notifications. When ready to add a mosque, run `/add-mosque` manually and pull data from Postgres.
+- Telegram inline keyboard with Approve/Reject buttons for timetable submissions. Approve commits data.json to GitHub repo via API. Non-timetable submissions (Eid, Jumu'ah, etc.) get an Acknowledged button.
+- After approval, still run `/add-mosque` manually to generate full HTML page, PWA assets, and update nav/directory.
 
 ### Post-Approval Workflow
 
-After Telegram notification, add mosque manually:
+After Telegram approval commits data.json to GitHub, generate the full page:
 
 ```bash
 cd Prayer-times
@@ -642,7 +662,7 @@ After the last day's Isha Jamaah, shows "Eid Mubarak".
 ### External Dependencies
 - **Granim.js v2.0.0** (`cdn.jsdelivr.net/npm/granim@2.0.0/dist/granim.min.js`) - animated gradient backgrounds. Loaded async, cached by service worker, falls back to CSS gradient if unavailable.
 - **OpenAI GPT-4o-mini** (via n8n webhook proxy on Railway) - AI prayer times chatbot. n8n workflow "Prayer AI Chat" (ID: `eZayWM5UAKhF8RWA`), webhook path `/webhook/prayer-chat`. Uses Header Auth credential for OpenAI API key.
-- **Google Analytics 4** (`G-9DPJ6NR37M`) - injected dynamically via `chat.js` (covers all 50 pages). Dashboard: `analytics.google.com`.
+- **Google Analytics 4** (`G-9DPJ6NR37M`) - injected dynamically via `chat.js` (covers all timetable pages). Dashboard: `analytics.google.com`.
 - No other external JS libraries. All other effects are vanilla CSS/JS/SVG + Web Audio API.
 
 ### Data Source
@@ -667,7 +687,7 @@ CNAME www   sidnikiwi-afk.github.io
 ```
 
 ### URLs
-**Original 9 mosques** (hand-crafted, unique themes):
+**Original 12 mosques** (hand-crafted, unique themes):
 
 | Page | URL |
 |------|-----|
@@ -684,7 +704,7 @@ CNAME www   sidnikiwi-afk.github.io
 | Masjid Ibraheem (Leeds) | `waqt.uk/ibrahim/` |
 | Masjid-Ul-Aqsa (Oldham) | `waqt.uk/aqsa/` |
 
-**Batch mosques** (38 total, all at `waqt.uk/<prefix>/`): alabrar, alamin, alhidaya, alhikmah, alhidaayah, almustaqeem, azharulmadaaris, baitulilm, darulmahmood, doha, firdaws, iqra, abuhanifa, farooqiah, madnimasjid, abbasiya, darulirfan, abdullahbinmasood, masjidali, masjidayesha, masjidbilal, masjidhamza, masjidhusain, ibraheem, namirah, masjidnoor, noorulislam, nusratul, farooqia, masjidumar, masjidusman, raashideen, musallasalaam, ahlebayt, shipley, westleeds, wibseybuttershaw, wibsey
+**Batch mosques** (41 total, all at `waqt.uk/<prefix>/`): alabrar, alamin, alhidaya, alhikmah, alhidaayah, almustaqeem, azharulmadaaris, baitulilm, darulmahmood, doha, firdaws, iqra, abuhanifa, farooqiah, madnimasjid, abbasiya, darulirfan, abdullahbinmasood, masjidali, masjidayesha, masjidbilal, masjidhamza, masjidhusain, ibraheem, namirah, masjidnoor, noorulislam, nusratul, farooqia, masjidumar, masjidusman, raashideen, musallasalaam, ahlebayt, shipley, westleeds, wibseybuttershaw, wibsey, sjmkeighley, masjidtaqwa, makkimasjidmadrassah
 
 ### Git Config
 - Repo: `sidnikiwi-afk/Prayer-times`
