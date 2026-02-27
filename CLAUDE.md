@@ -123,7 +123,7 @@ Masjids/                    # Source data for batch-generated mosques
 | Salahadin Mosque | `Salahadin` | 62 Little Horton Lane, BD5 0BS | Burgundy `#6a1b34` / `#9c2759` | TBA | £5.00 |
 | Masjid Abu Bakar | `abubakar` | 38 Steadman Terrace, BD3 9NB | Purple `#4a148c` / `#7b1fa2` | — | — |
 | IYMA | `iyma` | 68 Idle Road, BD2 4NH | Dark Cyan `#006064` / `#00838f` | 9:00am | £5.00 |
-| Jamia Masjid | `JamiaMasjid` | 28-32 Howard St, BD5 0BP | Navy `#0d1b2a` / `#1b3a5c` | TBA | TBA |
+| Jamia Masjid | `JamiaMasjid` | 28-32 Howard St, BD5 0BP | Navy `#0d1b2a` / `#1b3a5c` | 6:30am, 9:30am | £4.00 |
 | Masjid Taqwa | `taqwa` | 807 Great Horton Road, BD7 4AG | Cobalt Blue `#0d47a1` / `#1976d2` | 6:30am, 9:30am | £5.00 |
 | Masjid Ibraheem | `ibrahim` | 4 Woodview Rd, Beeston, Leeds LS11 6LE | Deep Orange `#bf360c` / `#e64a19` | 9:00am (Men), 10:30am (Men & Women) | £5.00 |
 | Masjid-Ul-Aqsa & Islamic Centre | `aqsa` | 135 Windsor Road, Coppice, Oldham OL8 1RG | Wine Red `#5d1020` / `#8b2040` | TBA | £5.00 |
