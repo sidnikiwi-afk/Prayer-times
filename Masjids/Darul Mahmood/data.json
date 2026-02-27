@@ -6,7 +6,7 @@
   "phone_display": "",
   "notes": "Maghrib Azan will be given 5 minutes after Iftar.",
   "eid_info": "9:30 AM",
-  "fitrana": "\u00c2\u00a35.00 per person",
+  "fitrana": "Â£5.00 per person",
   "donation_info": "NatWest Bank PLC, \"Islamic Tarbiyyah Centre CIC\", Sort Code: 01-07-93, Account: 53213548",
   "receiver_freq": "",
   "website": "",
@@ -30,7 +30,7 @@
       "jAsr": "4:00",
       "jIsha": "7:45",
       "day": "Wed",
-      "fajr": "5:32"
+      "fajr": "5:22"
     },
     {
       "date": [
@@ -47,7 +47,7 @@
       "sunrise": "7:19",
       "jFajr": "5:30",
       "day": "Thu",
-      "fajr": "5:30",
+      "fajr": "5:20",
       "jZuhr": "12:45",
       "jAsr": "4:00",
       "jIsha": "7:45"
@@ -67,7 +67,7 @@
       "sunrise": "7:16",
       "jFajr": "5:28",
       "day": "Fri",
-      "fajr": "5:28",
+      "fajr": "5:18",
       "jZuhr": "1:00",
       "jAsr": "4:00",
       "jIsha": "7:45"
@@ -87,7 +87,7 @@
       "sunrise": "7:14",
       "jFajr": "5:26",
       "day": "Sat",
-      "fajr": "5:26",
+      "fajr": "5:16",
       "jZuhr": "12:45",
       "jAsr": "4:00",
       "jIsha": "7:45"
@@ -107,7 +107,7 @@
       "sunrise": "7:12",
       "jFajr": "5:24",
       "day": "Sun",
-      "fajr": "5:24",
+      "fajr": "5:14",
       "jZuhr": "12:45",
       "jAsr": "4:00",
       "jIsha": "7:45"
@@ -127,7 +127,7 @@
       "sunrise": "7:10",
       "jFajr": "5:22",
       "day": "Mon",
-      "fajr": "5:22",
+      "fajr": "5:12",
       "jZuhr": "12:45",
       "jAsr": "4:00",
       "jIsha": "7:45"
@@ -147,7 +147,7 @@
       "sunrise": "7:07",
       "jFajr": "5:20",
       "day": "Tue",
-      "fajr": "5:20",
+      "fajr": "5:10",
       "jZuhr": "12:45",
       "jAsr": "4:00",
       "jIsha": "7:45"
@@ -167,7 +167,7 @@
       "sunrise": "7:05",
       "jFajr": "5:18",
       "day": "Wed",
-      "fajr": "5:18",
+      "fajr": "5:08",
       "jZuhr": "12:45",
       "jAsr": "4:00",
       "jIsha": "7:45"
@@ -187,7 +187,7 @@
       "sunrise": "7:03",
       "jFajr": "5:15",
       "day": "Thu",
-      "fajr": "5:15",
+      "fajr": "5:05",
       "jZuhr": "12:45",
       "jAsr": "4:00",
       "jIsha": "7:45"
@@ -207,7 +207,7 @@
       "sunrise": "7:01",
       "jFajr": "5:13",
       "day": "Fri",
-      "fajr": "5:13",
+      "fajr": "5:03",
       "jZuhr": "1:00",
       "jAsr": "4:00",
       "jIsha": "7:45"
@@ -227,7 +227,7 @@
       "sunrise": "6:58",
       "jFajr": "5:11",
       "day": "Sat",
-      "fajr": "5:11",
+      "fajr": "5:01",
       "jZuhr": "12:45",
       "jAsr": "4:00",
       "jIsha": "7:45"
@@ -248,7 +248,7 @@
       "jFajr": "5:08",
       "jAsr": "4:30",
       "day": "Sun",
-      "fajr": "5:08",
+      "fajr": "4:58",
       "jZuhr": "12:45",
       "jIsha": "7:45"
     },
@@ -267,7 +267,7 @@
       "sunrise": "6:54",
       "jFajr": "5:06",
       "day": "Mon",
-      "fajr": "5:06",
+      "fajr": "4:56",
       "jZuhr": "12:45",
       "jAsr": "4:30",
       "jIsha": "7:45"
@@ -287,7 +287,7 @@
       "sunrise": "6:51",
       "jFajr": "5:04",
       "day": "Tue",
-      "fajr": "5:04",
+      "fajr": "4:54",
       "jZuhr": "12:45",
       "jAsr": "4:30",
       "jIsha": "7:45"
@@ -307,7 +307,7 @@
       "sunrise": "6:49",
       "jFajr": "5:01",
       "day": "Wed",
-      "fajr": "5:01",
+      "fajr": "4:51",
       "jZuhr": "12:45",
       "jAsr": "4:30",
       "jIsha": "7:45"
@@ -327,7 +327,7 @@
       "sunrise": "6:47",
       "jFajr": "4:59",
       "day": "Thu",
-      "fajr": "4:59",
+      "fajr": "4:49",
       "jZuhr": "12:45",
       "jAsr": "4:30",
       "jIsha": "7:45"
@@ -347,7 +347,7 @@
       "sunrise": "6:44",
       "jFajr": "4:56",
       "day": "Fri",
-      "fajr": "4:56",
+      "fajr": "4:46",
       "jZuhr": "1:00",
       "jAsr": "4:30",
       "jIsha": "7:45"
@@ -367,7 +367,7 @@
       "sunrise": "6:42",
       "jFajr": "4:54",
       "day": "Sat",
-      "fajr": "4:54",
+      "fajr": "4:44",
       "jZuhr": "12:45",
       "jAsr": "4:30",
       "jIsha": "7:45"
@@ -388,7 +388,7 @@
       "jFajr": "4:51",
       "jIsha": "8:00",
       "day": "Sun",
-      "fajr": "4:51",
+      "fajr": "4:41",
       "jZuhr": "12:45",
       "jAsr": "4:30"
     },
@@ -407,7 +407,7 @@
       "sunrise": "6:37",
       "jFajr": "4:49",
       "day": "Mon",
-      "fajr": "4:49",
+      "fajr": "4:39",
       "jZuhr": "12:45",
       "jAsr": "4:30",
       "jIsha": "8:00"
@@ -427,7 +427,7 @@
       "sunrise": "6:35",
       "jFajr": "4:46",
       "day": "Tue",
-      "fajr": "4:46",
+      "fajr": "4:36",
       "jZuhr": "12:45",
       "jAsr": "4:30",
       "jIsha": "8:00"
@@ -447,7 +447,7 @@
       "sunrise": "6:32",
       "jFajr": "4:44",
       "day": "Wed",
-      "fajr": "4:44",
+      "fajr": "4:34",
       "jZuhr": "12:45",
       "jAsr": "4:30",
       "jIsha": "8:00"
@@ -467,7 +467,7 @@
       "sunrise": "6:30",
       "jFajr": "4:41",
       "day": "Thu",
-      "fajr": "4:41",
+      "fajr": "4:31",
       "jZuhr": "12:45",
       "jAsr": "4:30",
       "jIsha": "8:00"
@@ -487,7 +487,7 @@
       "sunrise": "6:27",
       "jFajr": "4:39",
       "day": "Fri",
-      "fajr": "4:39",
+      "fajr": "4:29",
       "jZuhr": "1:00",
       "jAsr": "4:30",
       "jIsha": "8:00"
@@ -507,7 +507,7 @@
       "sunrise": "6:25",
       "jFajr": "4:36",
       "day": "Sat",
-      "fajr": "4:36",
+      "fajr": "4:26",
       "jZuhr": "12:45",
       "jAsr": "4:30",
       "jIsha": "8:00"
@@ -529,7 +529,7 @@
       "jAsr": "5:00",
       "jIsha": "8:15",
       "day": "Sun",
-      "fajr": "4:33",
+      "fajr": "4:23",
       "jZuhr": "12:45"
     },
     {
@@ -547,7 +547,7 @@
       "sunrise": "6:20",
       "jFajr": "4:31",
       "day": "Mon",
-      "fajr": "4:31",
+      "fajr": "4:21",
       "jZuhr": "12:45",
       "jAsr": "5:00",
       "jIsha": "8:15"
@@ -567,7 +567,7 @@
       "sunrise": "6:18",
       "jFajr": "4:28",
       "day": "Tue",
-      "fajr": "4:28",
+      "fajr": "4:18",
       "jZuhr": "12:45",
       "jAsr": "5:00",
       "jIsha": "8:15"
@@ -587,7 +587,7 @@
       "sunrise": "6:15",
       "jFajr": "4:25",
       "day": "Wed",
-      "fajr": "4:25",
+      "fajr": "4:15",
       "jZuhr": "12:45",
       "jAsr": "5:00",
       "jIsha": "8:15"
@@ -607,7 +607,7 @@
       "sunrise": "6:13",
       "jFajr": "4:22",
       "day": "Thu",
-      "fajr": "4:22",
+      "fajr": "4:12",
       "jZuhr": "12:45",
       "jAsr": "5:00",
       "jIsha": "8:15"
