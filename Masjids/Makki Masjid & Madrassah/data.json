@@ -1,0 +1,619 @@
+{
+  "name": "Makki Masjid & Madrassah",
+  "type": "timetable",
+  "year": 2026,
+  "month": "",
+  "notes": "Jummah Prayer at 1:00pm. Online Timetable: www.makkimasjid.co.uk",
+  "phone": "07827 295201",
+  "period": "ramadan",
+  "address": "1 Vicarage Road, LS6 1NX, Leeds",
+  "fitrana": "",
+  "eid_info": "",
+  "timetable": [
+    {
+      "no": 1,
+      "asr": "3:30",
+      "day": "Wed",
+      "date": [
+        2026,
+        2,
+        18
+      ],
+      "fajr": "",
+      "isha": "7:30",
+      "jAsr": "4:15",
+      "zuhr": "12:25",
+      "jFajr": "6:00",
+      "jIsha": "",
+      "jZuhr": "1:00",
+      "sehri": "5:40",
+      "maghrib": "5:25",
+      "sunrise": "7:19"
+    },
+    {
+      "no": 2,
+      "asr": "3:32",
+      "day": "Thu",
+      "date": [
+        2026,
+        2,
+        19
+      ],
+      "fajr": "",
+      "isha": "",
+      "jAsr": "",
+      "zuhr": "12:25",
+      "jFajr": "",
+      "jIsha": "",
+      "jZuhr": "",
+      "sehri": "5:37",
+      "maghrib": "5:27",
+      "sunrise": "7:17"
+    },
+    {
+      "no": 3,
+      "asr": "3:34",
+      "day": "Fri",
+      "date": [
+        2026,
+        2,
+        20
+      ],
+      "fajr": "",
+      "isha": "7:30",
+      "jAsr": "4:30",
+      "zuhr": "12:25",
+      "jFajr": "6:00",
+      "jIsha": "",
+      "jZuhr": "1:00",
+      "sehri": "5:35",
+      "maghrib": "5:29",
+      "sunrise": "7:15"
+    },
+    {
+      "no": 4,
+      "asr": "3:35",
+      "day": "Sat",
+      "date": [
+        2026,
+        2,
+        21
+      ],
+      "fajr": "",
+      "isha": "",
+      "jAsr": "",
+      "zuhr": "12:25",
+      "jFajr": "",
+      "jIsha": "",
+      "jZuhr": "",
+      "sehri": "5:33",
+      "maghrib": "5:31",
+      "sunrise": "7:13"
+    },
+    {
+      "no": 5,
+      "asr": "3:37",
+      "day": "Sun",
+      "date": [
+        2026,
+        2,
+        22
+      ],
+      "fajr": "",
+      "isha": "",
+      "jAsr": "",
+      "zuhr": "12:25",
+      "jFajr": "",
+      "jIsha": "",
+      "jZuhr": "",
+      "sehri": "5:31",
+      "maghrib": "5:33",
+      "sunrise": "7:10"
+    },
+    {
+      "no": 6,
+      "asr": "3:39",
+      "day": "Mon",
+      "date": [
+        2026,
+        2,
+        23
+      ],
+      "fajr": "",
+      "isha": "",
+      "jAsr": "",
+      "zuhr": "12:25",
+      "jFajr": "",
+      "jIsha": "",
+      "jZuhr": "",
+      "sehri": "5:29",
+      "maghrib": "5:35",
+      "sunrise": "7:08"
+    },
+    {
+      "no": 7,
+      "asr": "3:41",
+      "day": "Tue",
+      "date": [
+        2026,
+        2,
+        24
+      ],
+      "fajr": "",
+      "isha": "",
+      "jAsr": "",
+      "zuhr": "12:25",
+      "jFajr": "",
+      "jIsha": "",
+      "jZuhr": "",
+      "sehri": "5:26",
+      "maghrib": "5:37",
+      "sunrise": "7:06"
+    },
+    {
+      "no": 8,
+      "asr": "3:42",
+      "day": "Wed",
+      "date": [
+        2026,
+        2,
+        25
+      ],
+      "fajr": "",
+      "isha": "",
+      "jAsr": "",
+      "zuhr": "12:25",
+      "jFajr": "",
+      "jIsha": "",
+      "jZuhr": "",
+      "sehri": "5:24",
+      "maghrib": "5:39",
+      "sunrise": "7:04"
+    },
+    {
+      "no": 9,
+      "asr": "3:44",
+      "day": "Thu",
+      "date": [
+        2026,
+        2,
+        26
+      ],
+      "fajr": "",
+      "isha": "",
+      "jAsr": "",
+      "zuhr": "12:24",
+      "jFajr": "",
+      "jIsha": "",
+      "jZuhr": "",
+      "sehri": "5:22",
+      "maghrib": "5:41",
+      "sunrise": "7:01"
+    },
+    {
+      "no": 10,
+      "asr": "3:46",
+      "day": "Fri",
+      "date": [
+        2026,
+        2,
+        27
+      ],
+      "fajr": "",
+      "isha": "7:30",
+      "jAsr": "4:45",
+      "zuhr": "12:24",
+      "jFajr": "5:45",
+      "jIsha": "",
+      "jZuhr": "1:00",
+      "sehri": "5:20",
+      "maghrib": "5:43",
+      "sunrise": "6:59"
+    },
+    {
+      "no": 11,
+      "asr": "3:48",
+      "day": "Sat",
+      "date": [
+        2026,
+        2,
+        28
+      ],
+      "fajr": "",
+      "isha": "",
+      "jAsr": "",
+      "zuhr": "12:24",
+      "jFajr": "",
+      "jIsha": "",
+      "jZuhr": "",
+      "sehri": "5:17",
+      "maghrib": "5:45",
+      "sunrise": "6:57"
+    },
+    {
+      "no": 12,
+      "asr": "3:49",
+      "day": "Sun",
+      "date": [
+        2026,
+        3,
+        1
+      ],
+      "fajr": "",
+      "isha": "",
+      "jAsr": "",
+      "zuhr": "12:24",
+      "jFajr": "",
+      "jIsha": "",
+      "jZuhr": "",
+      "sehri": "5:15",
+      "maghrib": "5:47",
+      "sunrise": "6:55"
+    },
+    {
+      "no": 13,
+      "asr": "3:51",
+      "day": "Mon",
+      "date": [
+        2026,
+        3,
+        2
+      ],
+      "fajr": "",
+      "isha": "",
+      "jAsr": "",
+      "zuhr": "12:24",
+      "jFajr": "",
+      "jIsha": "",
+      "jZuhr": "",
+      "sehri": "5:13",
+      "maghrib": "5:49",
+      "sunrise": "6:52"
+    },
+    {
+      "no": 14,
+      "asr": "3:52",
+      "day": "Tue",
+      "date": [
+        2026,
+        3,
+        3
+      ],
+      "fajr": "",
+      "isha": "",
+      "jAsr": "",
+      "zuhr": "12:23",
+      "jFajr": "",
+      "jIsha": "",
+      "jZuhr": "",
+      "sehri": "5:10",
+      "maghrib": "5:51",
+      "sunrise": "6:50"
+    },
+    {
+      "no": 15,
+      "asr": "3:54",
+      "day": "Wed",
+      "date": [
+        2026,
+        3,
+        4
+      ],
+      "fajr": "",
+      "isha": "",
+      "jAsr": "",
+      "zuhr": "12:23",
+      "jFajr": "",
+      "jIsha": "",
+      "jZuhr": "",
+      "sehri": "5:08",
+      "maghrib": "5:53",
+      "sunrise": "6:48"
+    },
+    {
+      "no": 16,
+      "asr": "3:56",
+      "day": "Thu",
+      "date": [
+        2026,
+        3,
+        5
+      ],
+      "fajr": "",
+      "isha": "",
+      "jAsr": "",
+      "zuhr": "12:23",
+      "jFajr": "",
+      "jIsha": "",
+      "jZuhr": "",
+      "sehri": "5:06",
+      "maghrib": "5:55",
+      "sunrise": "6:45"
+    },
+    {
+      "no": 17,
+      "asr": "3:57",
+      "day": "Fri",
+      "date": [
+        2026,
+        3,
+        6
+      ],
+      "fajr": "",
+      "isha": "7:45",
+      "jAsr": "5:00",
+      "zuhr": "12:23",
+      "jFajr": "5:20",
+      "jIsha": "",
+      "jZuhr": "1:00",
+      "sehri": "5:03",
+      "maghrib": "5:57",
+      "sunrise": "6:43"
+    },
+    {
+      "no": 18,
+      "asr": "3:59",
+      "day": "Sat",
+      "date": [
+        2026,
+        3,
+        7
+      ],
+      "fajr": "",
+      "isha": "",
+      "jAsr": "",
+      "zuhr": "12:22",
+      "jFajr": "",
+      "jIsha": "",
+      "jZuhr": "",
+      "sehri": "5:01",
+      "maghrib": "5:58",
+      "sunrise": "6:41"
+    },
+    {
+      "no": 19,
+      "asr": "4:01",
+      "day": "Sun",
+      "date": [
+        2026,
+        3,
+        8
+      ],
+      "fajr": "",
+      "isha": "",
+      "jAsr": "",
+      "zuhr": "12:22",
+      "jFajr": "",
+      "jIsha": "",
+      "jZuhr": "",
+      "sehri": "4:58",
+      "maghrib": "6:00",
+      "sunrise": "6:38"
+    },
+    {
+      "no": 20,
+      "asr": "4:02",
+      "day": "Mon",
+      "date": [
+        2026,
+        3,
+        9
+      ],
+      "fajr": "",
+      "isha": "",
+      "jAsr": "",
+      "zuhr": "12:22",
+      "jFajr": "",
+      "jIsha": "",
+      "jZuhr": "",
+      "sehri": "4:56",
+      "maghrib": "6:02",
+      "sunrise": "6:36"
+    },
+    {
+      "no": 21,
+      "asr": "4:04",
+      "day": "Tue",
+      "date": [
+        2026,
+        3,
+        10
+      ],
+      "fajr": "",
+      "isha": "",
+      "jAsr": "",
+      "zuhr": "12:22",
+      "jFajr": "",
+      "jIsha": "",
+      "jZuhr": "",
+      "sehri": "4:54",
+      "maghrib": "6:04",
+      "sunrise": "6:33"
+    },
+    {
+      "no": 22,
+      "asr": "4:05",
+      "day": "Wed",
+      "date": [
+        2026,
+        3,
+        11
+      ],
+      "fajr": "",
+      "isha": "",
+      "jAsr": "",
+      "zuhr": "12:21",
+      "jFajr": "",
+      "jIsha": "",
+      "jZuhr": "",
+      "sehri": "4:51",
+      "maghrib": "6:06",
+      "sunrise": "6:31"
+    },
+    {
+      "no": 23,
+      "asr": "4:07",
+      "day": "Thu",
+      "date": [
+        2026,
+        3,
+        12
+      ],
+      "fajr": "",
+      "isha": "",
+      "jAsr": "",
+      "zuhr": "12:21",
+      "jFajr": "",
+      "jIsha": "",
+      "jZuhr": "",
+      "sehri": "4:49",
+      "maghrib": "6:08",
+      "sunrise": "6:29"
+    },
+    {
+      "no": 24,
+      "asr": "4:09",
+      "day": "Fri",
+      "date": [
+        2026,
+        3,
+        13
+      ],
+      "fajr": "",
+      "isha": "8:00",
+      "jAsr": "5:15",
+      "zuhr": "12:21",
+      "jFajr": "5:10",
+      "jIsha": "",
+      "jZuhr": "1:00",
+      "sehri": "4:46",
+      "maghrib": "6:10",
+      "sunrise": "6:26"
+    },
+    {
+      "no": 25,
+      "asr": "4:10",
+      "day": "Sat",
+      "date": [
+        2026,
+        3,
+        14
+      ],
+      "fajr": "",
+      "isha": "",
+      "jAsr": "",
+      "zuhr": "12:21",
+      "jFajr": "",
+      "jIsha": "",
+      "jZuhr": "",
+      "sehri": "4:44",
+      "maghrib": "6:12",
+      "sunrise": "6:24"
+    },
+    {
+      "no": 26,
+      "asr": "4:12",
+      "day": "Sun",
+      "date": [
+        2026,
+        3,
+        15
+      ],
+      "fajr": "",
+      "isha": "",
+      "jAsr": "",
+      "zuhr": "12:20",
+      "jFajr": "",
+      "jIsha": "",
+      "jZuhr": "",
+      "sehri": "4:42",
+      "maghrib": "6:14",
+      "sunrise": "6:21"
+    },
+    {
+      "no": 27,
+      "asr": "4:13",
+      "day": "Mon",
+      "date": [
+        2026,
+        3,
+        16
+      ],
+      "fajr": "",
+      "isha": "",
+      "jAsr": "",
+      "zuhr": "12:20",
+      "jFajr": "",
+      "jIsha": "",
+      "jZuhr": "",
+      "sehri": "4:39",
+      "maghrib": "6:15",
+      "sunrise": "6:19"
+    },
+    {
+      "no": 28,
+      "asr": "4:15",
+      "day": "Tue",
+      "date": [
+        2026,
+        3,
+        17
+      ],
+      "fajr": "",
+      "isha": "",
+      "jAsr": "",
+      "zuhr": "12:20",
+      "jFajr": "",
+      "jIsha": "",
+      "jZuhr": "",
+      "sehri": "4:39",
+      "maghrib": "6:17",
+      "sunrise": "6:16"
+    },
+    {
+      "no": 29,
+      "asr": "4:16",
+      "day": "Wed",
+      "date": [
+        2026,
+        3,
+        18
+      ],
+      "fajr": "",
+      "isha": "",
+      "jAsr": "",
+      "zuhr": "12:20",
+      "jFajr": "",
+      "jIsha": "",
+      "jZuhr": "",
+      "sehri": "4:37",
+      "maghrib": "6:19",
+      "sunrise": "6:14"
+    },
+    {
+      "no": 30,
+      "asr": "4:18",
+      "day": "Thu",
+      "date": [
+        2026,
+        3,
+        19
+      ],
+      "fajr": "",
+      "isha": "",
+      "jAsr": "",
+      "zuhr": "12:19",
+      "jFajr": "",
+      "jIsha": "",
+      "jZuhr": "",
+      "sehri": "4:34",
+      "maghrib": "6:21",
+      "sunrise": "6:12"
+    }
+  ],
+  "short_name": "Makki Masjid Leeds",
+  "donation_info": "",
+  "prefix": "makkimasjidmadrassah",
+  "color1": "#1a3a2e",
+  "color2": "#2d6a4f"
+}
