@@ -1,7 +1,7 @@
 # Prayer-times Project
 
 ## Overview
-Prayer timetable web app for UK mosques (50 with timetables, 1000+ in directory).
+Prayer timetable web app for UK mosques (51 with timetables, 1000+ in directory).
 Ramadan 1447 (Feb-Mar 2026) + year-round prayer times. Cities: Bradford, Leeds, Keighley, Oldham, and more.
 Hosted on GitHub Pages. Each mosque gets its own subfolder with a self-contained HTML page.
 
@@ -99,7 +99,7 @@ Prayer-times/
     ├── og-image.svg        # Social preview image
     ├── qr-code.svg         # QR code for poster
     └── poster.html         # A4 printable QR poster
-# ... plus 38 batch-generated mosque folders (alabrar/, alamin/, alhidaya/, westleeds/, etc.)
+# ... plus 39 batch-generated mosque folders (alabrar/, alamin/, alhidaya/, westleeds/, makkimasjidmadrassah/, etc.)
 # See "Batch Mosque Generation" section below for the full list and workflow.
 scripts/
 └── patch_timetables.py     # Applies Fixes 4 & 5 to 10 original hand-crafted mosque pages
