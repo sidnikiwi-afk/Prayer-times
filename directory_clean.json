@@ -1297,21 +1297,6 @@
       "website": "https://keelesu.com/activities/society/islamic/"
     },
     {
-      "name": "Khizra Mosque",
-      "address": "425 Cheetham Hill Road",
-      "postcode": "M8 0PN",
-      "city": "Manchester",
-      "has_timetable": false,
-      "slug": null,
-      "color1": null,
-      "color2": null,
-      "tags": "",
-      "type": "mosque",
-      "lat": 53.505556,
-      "lon": -2.237622,
-      "website": "https://www.khizramosque.org/"
-    },
-    {
       "name": "Shahporan Masjid",
       "address": "",
       "postcode": "M13 0TA",
@@ -1788,22 +1773,6 @@
       "type": "mosque",
       "lat": 53.575795,
       "lon": -2.451295
-    },
-    {
-      "name": "Masjid-e-Salaam",
-      "address": "4 Ramsay Street, Bolton",
-      "postcode": "PR2 8EA",
-      "city": "Bolton",
-      "has_timetable": false,
-      "slug": null,
-      "color1": null,
-      "color2": null,
-      "tags": "",
-      "type": "mosque",
-      "phone": "01772 788447",
-      "website": "https://masjidesalaam.com/",
-      "lat": 53.777878,
-      "lon": -2.703744
     },
     {
       "name": "Mawlawi Kurdish Cultural Centre",
@@ -2661,21 +2630,6 @@
       "lon": -1.795441,
       "phone": "01484 450183",
       "website": "https://communitydirectory.kirklees.gov.uk/communityDirectory/organisationdetails.aspx?orgid=2183"
-    },
-    {
-      "name": "Faizan-e-Madinah",
-      "address": "75 New North Road",
-      "postcode": "WF13 3LE",
-      "city": "Kirklees",
-      "has_timetable": false,
-      "slug": null,
-      "color1": null,
-      "color2": null,
-      "tags": "",
-      "type": "mosque",
-      "lat": 53.678263,
-      "lon": -1.665122,
-      "website": "https://www.yorkshire.com/huddersfield/community/mosques/faizan-e-madinah-education-centre-huddersfield?srsltid=AfmBOorN_QtrMBHgsog3FY-7G3i-2dKYxMlUQDP7wqmqJnnbY-loFCpa"
     },
     {
       "name": "Masjid As-Salaam",
@@ -3852,21 +3806,6 @@
       "lon": -1.790505,
       "phone": "01924 409786",
       "website": "https://communitydirectory.kirklees.gov.uk/communityDirectory/organisationdetails.aspx?orgid=6696"
-    },
-    {
-      "name": "Jamia Masjid Ghausia",
-      "address": "73 Victoria Road",
-      "postcode": "WF13 3AB",
-      "city": "Kirklees",
-      "has_timetable": false,
-      "slug": null,
-      "color1": null,
-      "color2": null,
-      "tags": "",
-      "type": "mosque",
-      "lat": 53.679791,
-      "lon": -1.664977,
-      "website": "https://masjidghausia.org/"
     },
     {
       "name": "Al Madina Jamia Mosque",
@@ -14322,20 +14261,6 @@
       "website": "https://lutonislamiccentre.com/"
     },
     {
-      "name": "Bradley Rd Masjid",
-      "address": "Luton",
-      "postcode": "LU4 8SW",
-      "city": "Luton",
-      "has_timetable": false,
-      "slug": null,
-      "color1": null,
-      "color2": null,
-      "tags": "",
-      "type": "mosque",
-      "lat": 51.888495,
-      "lon": -0.466777
-    },
-    {
       "name": "Masjid Bilal ... (Sunni)",
       "address": "Luton",
       "postcode": "LU3 2RA",
@@ -14672,36 +14597,6 @@
       "website": "https://jaffaria.org.uk/"
     },
     {
-      "name": "Prayer Room",
-      "address": "",
-      "postcode": "L69 7ZG",
-      "city": "Liverpool",
-      "has_timetable": false,
-      "slug": null,
-      "color1": null,
-      "color2": null,
-      "tags": "",
-      "type": "mosque",
-      "lat": 53.402592,
-      "lon": -2.963831,
-      "website": "https://www.liverpoolmuslimsociety.org.uk/"
-    },
-    {
-      "name": "Hussain Islamic Academy",
-      "address": "203 Allerton Road",
-      "postcode": "BD15 7RD",
-      "city": "Bradford",
-      "has_timetable": false,
-      "slug": null,
-      "color1": null,
-      "color2": null,
-      "tags": "",
-      "type": "mosque",
-      "lat": 53.802414,
-      "lon": -1.815861,
-      "website": "https://hussainiabradford.com/"
-    },
-    {
       "name": "Masjid Doha",
       "address": "",
       "postcode": "",
@@ -14715,22 +14610,6 @@
       "lat": 53.790138,
       "lon": -1.762158,
       "website": "https://dohamosque.co.uk/"
-    },
-    {
-      "name": "Jamiyat Tabligh-ul-Islam",
-      "address": "",
-      "postcode": "BD3 9AP",
-      "city": "Bradford",
-      "has_timetable": false,
-      "slug": null,
-      "color1": null,
-      "color2": null,
-      "tags": "",
-      "type": "mosque",
-      "lat": 53.797209,
-      "lon": -1.737161,
-      "phone": "012 7473 2958",
-      "website": "https://mawaqit.net/en/m/jamiyat-tabligh-ul-islam-bradford-bd5-7te-united-kingdom"
     },
     {
       "name": "Diyanet Mosque",
@@ -14775,54 +14654,6 @@
       "lon": -0.080024
     },
     {
-      "name": "Imam Yusuf Motala Academy",
-      "address": "",
-      "postcode": "BD2 4NH",
-      "city": "Bradford",
-      "has_timetable": false,
-      "slug": null,
-      "color1": null,
-      "color2": null,
-      "tags": "",
-      "type": "mosque",
-      "lat": 53.810246,
-      "lon": -1.732552,
-      "phone": "07771 635480",
-      "website": "https://masjidbox.com/prayer-times/imam-yusuf-motala-academy"
-    },
-    {
-      "name": "Al Mahadul Islami",
-      "address": "",
-      "postcode": "BD5 0LT",
-      "city": "Bradford",
-      "has_timetable": false,
-      "slug": null,
-      "color1": null,
-      "color2": null,
-      "tags": "",
-      "type": "mosque",
-      "lat": 53.778617,
-      "lon": -1.764944,
-      "phone": "01274575600",
-      "website": "https://www.yorkshire.com/wibsey/community/mosques/al-mahadul-islami?srsltid=AfmBOoq-U005U4SKpl14W07dPPUxvb4rrOH7UrOLECGX0H_the3VpCQM"
-    },
-    {
-      "name": "Masjid Ibraheem Education Center",
-      "address": "",
-      "postcode": "BD3 8PX",
-      "city": "Bradford",
-      "has_timetable": false,
-      "slug": null,
-      "color1": null,
-      "color2": null,
-      "tags": "",
-      "type": "mosque",
-      "lat": 53.796136,
-      "lon": -1.710663,
-      "phone": "07832673712",
-      "website": "https://miec.co.uk/"
-    },
-    {
       "name": "Al Abrar Academy Masjid",
       "address": "20 Heap Lane",
       "postcode": "BD3 0BE",
@@ -14836,21 +14667,6 @@
       "lat": 53.797666,
       "lon": -1.742549,
       "website": "https://alabraracademy.org/"
-    },
-    {
-      "name": "Al Hikmah",
-      "address": "12 Bull Royd Lane",
-      "postcode": "BD3 9AP",
-      "city": "Bradford",
-      "has_timetable": false,
-      "slug": null,
-      "color1": null,
-      "color2": null,
-      "tags": "",
-      "type": "mosque",
-      "lat": 53.797193,
-      "lon": -1.736698,
-      "website": "https://alhikaminstitute.co.uk/"
     },
     {
       "name": "Madrassah Jamiah Farooqiah",
