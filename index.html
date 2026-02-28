@@ -974,7 +974,7 @@
                     if (m.type === 'prayer_room') typeBadge = '<span class="card-type-badge prayer-room">Prayer Room</span>';
                     else if (m.type === 'community_centre') typeBadge = '<span class="card-type-badge community-centre">Community Centre</span>';
 
-                    var pinSvg = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 22V6h10V2l9 8-9 8v-4H10v12z" fill="currentColor"/></svg>';
+                    var pinSvg = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12l10-10v6h10v8H12v6z" fill="currentColor"/></svg>';
 
                     if (m.has_timetable) {
                         html += '<a href="' + m.slug + '/" class="masjid-card" data-mosque="' + escapeHtml(m.slug) + '" data-tags="' + escapeHtml(m.city + ' ' + (m.tags || '')) + '"' + animStyle + '>';
