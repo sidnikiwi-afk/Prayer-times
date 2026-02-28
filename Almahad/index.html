@@ -535,29 +535,32 @@
             position: relative;
             height: 6px;
             background: rgba(0,0,0,0.15);
-            overflow: hidden;
+            margin-bottom: 20px;
         }
         .ramadan-progress-fill {
             height: 100%;
-            background: linear-gradient(90deg, #66bb6a, #ffd54f, #388e3c);
+            background: linear-gradient(90deg, #1b5e20, #388e3c);
             border-radius: 0 3px 3px 0;
-            transition: width 0.8s ease;
+            transition: width 0.6s ease;
         }
         .ramadan-progress-text {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 9px;
-            font-weight: 700;
-            color: white;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
-            white-space: nowrap;
-            line-height: 6px;
-            pointer-events: none;
+            top: 8px;
+            width: 100%;
+            text-align: center;
+            font-size: 11px;
+            font-weight: 600;
+            color: #1b5e20;
+            padding: 2px 0;
         }
         body.dark-mode .ramadan-progress {
             background: rgba(255,255,255,0.08);
+        }
+        body.dark-mode .ramadan-progress-fill {
+            background: linear-gradient(90deg, #388e3c, #81c784);
+        }
+        body.dark-mode .ramadan-progress-text {
+            color: #81c784;
         }
 
         /* === FEATURE 7: Qibla Compass === */
