@@ -645,6 +645,38 @@
             .qibla-btn, .qibla-overlay { display: none !important; }
             #eidConfettiCanvas { display: none !important; }
         }
+
+        /* === Nav Bar Walkthrough Tour === */
+        .nav-tooltip {
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.88);
+            color: white;
+            font-size: 12px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            white-space: nowrap;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 10001;
+        }
+        .nav-tooltip::before {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 6px solid transparent;
+            border-bottom-color: rgba(0,0,0,0.88);
+        }
+        .nav-tooltip.visible { opacity: 1; }
+        .top-nav-btn.tour-highlight {
+            background: rgba(255,255,255,0.3);
+            box-shadow: 0 0 0 3px rgba(255,255,255,0.2), 0 0 12px rgba(255,255,255,0.15);
+        }
     </style>
 </head>
 <body>
@@ -1455,6 +1487,61 @@
     </script>
     <script src="../chat.js"></script>
     <script src="../nav.js"></script>
+
+    <!-- Nav bar walkthrough tour (first visit) -->
+    <script>
+    (function() {
+        var key = 'azharulmadaaris-navTourSeen';
+        if (localStorage.getItem(key)) return;
+        var steps = [
+            { selector: '.notify-btn', text: 'Get Sehri & Iftar reminders' },
+            { selector: '.dark-mode-toggle', text: 'Switch to dark mode' },
+            { selector: '.top-nav-btn[onclick*="shareWhatsApp"]', text: 'Share with friends' }
+        ];
+        var current = -1;
+        var tooltip = null;
+        var timer = null;
+
+        function cleanup() {
+            if (tooltip && tooltip.parentNode) tooltip.parentNode.removeChild(tooltip);
+            steps.forEach(function(s) {
+                var btn = document.querySelector(s.selector);
+                if (btn) btn.classList.remove('tour-highlight');
+            });
+            localStorage.setItem(key, '1');
+            document.removeEventListener('click', advance);
+        }
+
+        function advance() {
+            if (tooltip && tooltip.parentNode) tooltip.parentNode.removeChild(tooltip);
+            if (current >= 0 && current < steps.length) {
+                var prev = document.querySelector(steps[current].selector);
+                if (prev) prev.classList.remove('tour-highlight');
+            }
+            clearTimeout(timer);
+            current++;
+            if (current >= steps.length) { cleanup(); return; }
+
+            var step = steps[current];
+            var btn = document.querySelector(step.selector);
+            if (!btn) { advance(); return; }
+
+            btn.classList.add('tour-highlight');
+            btn.style.position = 'relative';
+            tooltip = document.createElement('div');
+            tooltip.className = 'nav-tooltip';
+            tooltip.textContent = step.text;
+            btn.appendChild(tooltip);
+            requestAnimationFrame(function() { tooltip.classList.add('visible'); });
+            timer = setTimeout(advance, 4000);
+        }
+
+        setTimeout(function() {
+            advance();
+            document.addEventListener('click', advance);
+        }, 1000);
+    })();
+    </script>
     <!-- Granim.js - async loaded -->
     <script>
     (function() {
