@@ -52,7 +52,13 @@ NEAR_DUPLICATE_NAMES = {
 # ---- 2. NON-UK ENTRIES ----
 REMOVE_NON_UK = {
     "dundalk islamic culture centre",  # Republic of Ireland
+    "ballyhaunis mosque",              # Republic of Ireland
+    "anwar-e-madina islamic centre",   # Dublin, Ireland
 }
+
+# Rough UK bounding box for coordinate-based filtering
+UK_LAT_MIN, UK_LAT_MAX = 49.9, 60.9
+UK_LON_MIN, UK_LON_MAX = -8.2, 1.8
 
 # ---- 3. MISSED SHIA/SECTARIAN ----
 REMOVE_SHIA = {
@@ -86,6 +92,53 @@ CITY_FIXES = {
     "Oadby and Wigston": "Oadby",
     # Standardise Blackburn
     "Blackburn with Darwen": "Blackburn",
+    # London boroughs → London
+    "Tower Hamlets": "London",
+    "Newham": "London",
+    "Redbridge": "London",
+    "Hounslow": "London",
+    "Croydon": "London",
+    "Ealing": "London",
+    "Westminster": "London",
+    "Brent": "London",
+    "Hillingdon": "London",
+    "Barking and Dagenham": "London",
+    "Haringey": "London",
+    "Lambeth": "London",
+    "Barnet": "London",
+    "Camden": "London",
+    "Hackney": "London",
+    "Wandsworth": "London",
+    "Southwark": "London",
+    "Harrow": "London",
+    "Waltham Forest": "London",
+    "Islington": "London",
+    "Enfield": "London",
+    "Bromley": "London",
+    "Hammersmith and Fulham": "London",
+    "Merton": "London",
+    "Havering": "London",
+    "Sutton": "London",
+    "Lewisham": "London",
+    "City of London": "London",
+    "Kensington and Chelsea": "London",
+    "Greenwich": "London",
+    "Kingston upon Thames": "London",
+    "Bexley": "London",
+    "Richmond upon Thames": "London",
+    # Other council name simplifications
+    "Kirklees": "Huddersfield",
+    "Hyndburn": "Accrington",
+    "Pendle": "Nelson",
+    "Calderdale": "Halifax",
+    "Sandwell": "West Bromwich",
+    "Walsall": "Walsall",
+    "Wolverhampton": "Wolverhampton",
+    "Trafford": "Manchester",
+    "Salford": "Manchester",
+    "Rochdale": "Rochdale",
+    "Tameside": "Ashton-under-Lyne",
+    "Bury": "Bury",
 }
 
 # ---- 6. GENERIC NAME FIXES ----
@@ -151,6 +204,15 @@ def main():
             removed["non_uk"] += 1
             print(f"  REMOVED (non-UK): {name}")
             continue
+
+        # Coordinate-based non-UK check
+        lat = m.get("lat", 0)
+        lon = m.get("lon", 0)
+        if lat and lon:
+            if lat < UK_LAT_MIN or lat > UK_LAT_MAX or lon < UK_LON_MIN or lon > UK_LON_MAX:
+                removed["non_uk"] += 1
+                print(f"  REMOVED (non-UK coords): {name} [{lat}, {lon}]")
+                continue
 
         # ---- Remove missed Shia ----
         if name_lower in REMOVE_SHIA:
