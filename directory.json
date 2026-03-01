@@ -1965,7 +1965,7 @@
     {
       "name": "Wrexham Islamic Cultural Centre",
       "address": "6 Grosvenor Road, Wrexham",
-      "postcode": "",
+      "postcode": "LL11 1DN",
       "city": "Wrexham",
       "has_timetable": false,
       "slug": null,
@@ -2639,7 +2639,8 @@
       "type": "mosque",
       "lat": 53.693419,
       "lon": -1.63037,
-      "website": "https://www.madnijamiamasjid.com/"
+      "website": "https://www.madnijamiamasjid.com/",
+      "phone": "01484301103"
     },
     {
       "name": "Darul Ilm",
@@ -2918,7 +2919,7 @@
     },
     {
       "name": "Hanfia Masjid",
-      "address": "",
+      "address": "372 Sheffield Road",
       "postcode": "S9 1SX",
       "city": "Sheffield",
       "has_timetable": false,
@@ -3068,7 +3069,7 @@
     },
     {
       "name": "Markazi Mosque",
-      "address": "",
+      "address": "73 Victoria Road",
       "postcode": "WF12 9NG",
       "city": "Huddersfield",
       "has_timetable": false,
@@ -3173,7 +3174,7 @@
     },
     {
       "name": "Jamia Masjid Noor-Ul-Huda",
-      "address": "",
+      "address": "113 Psalters Lane",
       "postcode": "S61 1DP",
       "city": "Rotherham",
       "has_timetable": false,
@@ -3391,7 +3392,8 @@
       "type": "mosque",
       "lat": 53.40816,
       "lon": -1.449584,
-      "website": "https://en.masjidway.com/masjid/3355/prayer"
+      "website": "https://en.masjidway.com/masjid/3355/prayer",
+      "phone": "0114 261 0551"
     },
     {
       "name": "Al-Rahman Mosque",
@@ -3646,7 +3648,8 @@
       "type": "mosque",
       "lat": 53.67164,
       "lon": -1.637889,
-      "website": "https://communitydirectory.kirklees.gov.uk/communityDirectory/organisationdetails.aspx?orgid=1630"
+      "website": "https://communitydirectory.kirklees.gov.uk/communityDirectory/organisationdetails.aspx?orgid=1630",
+      "phone": "01484 423081"
     },
     {
       "name": "Faizan E Madina Jamia Masjid",
@@ -3722,7 +3725,8 @@
       "type": "mosque",
       "lat": 53.678846,
       "lon": -1.637476,
-      "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=703"
+      "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=703",
+      "phone": "01924 464523"
     },
     {
       "name": "Madrassah Islamiyah",
@@ -3741,7 +3745,7 @@
     },
     {
       "name": "Markazi Jamia Masjid Anwar-e-Madina",
-      "address": "",
+      "address": "10 Clara Street",
       "postcode": "HD1 6DX",
       "city": "Huddersfield",
       "has_timetable": false,
@@ -3800,11 +3804,12 @@
       "type": "mosque",
       "lat": 53.658613,
       "lon": -1.789345,
-      "website": "https://www.masjidomar.org.uk/"
+      "website": "https://www.masjidomar.org.uk/",
+      "phone": "01484 541634"
     },
     {
       "name": "Masjid e Umar",
-      "address": "",
+      "address": "32 Blacker Road",
       "postcode": "WF12 9LF",
       "city": "Huddersfield",
       "has_timetable": false,
@@ -3819,7 +3824,7 @@
     },
     {
       "name": "Masjid Ghausia",
-      "address": "",
+      "address": "73 Victoria Road",
       "postcode": "WF12 9NQ",
       "city": "Huddersfield",
       "has_timetable": false,
@@ -3830,7 +3835,8 @@
       "type": "mosque",
       "lat": 53.683394,
       "lon": -1.631917,
-      "website": "https://masjidghausia.org/"
+      "website": "https://masjidghausia.org/",
+      "phone": "01484 513248"
     },
     {
       "name": "Masjid Iman",
@@ -4110,7 +4116,7 @@
     },
     {
       "name": "Masjid Ar-Rashideen",
-      "address": "",
+      "address": "14 Farfield Street",
       "postcode": "WF17 8LX",
       "city": "Huddersfield",
       "has_timetable": false,
@@ -4289,7 +4295,7 @@
     },
     {
       "name": "Bradford Central Mosque",
-      "address": "",
+      "address": "9 Darfield Street",
       "postcode": "BD1 3RU",
       "city": "Bradford",
       "has_timetable": false,
@@ -4607,7 +4613,7 @@
     },
     {
       "name": "Masjid Hilal",
-      "address": "",
+      "address": "245 Yews Hill",
       "postcode": "WF17 7JU",
       "city": "Huddersfield",
       "has_timetable": false,
@@ -4711,7 +4717,7 @@
     },
     {
       "name": "Kashmir Muslims Welfare Associatian Leeds",
-      "address": "",
+      "address": "9 Lodge Lane",
       "postcode": "LS11 6BJ",
       "city": "Leeds",
       "has_timetable": false,
@@ -4818,7 +4824,7 @@
     },
     {
       "name": "Madina Masjid",
-      "address": "",
+      "address": "10 Clara Street",
       "postcode": "WF17 7NQ",
       "city": "Huddersfield",
       "has_timetable": false,
@@ -4829,7 +4835,8 @@
       "type": "mosque",
       "lat": 53.709405,
       "lon": -1.63642,
-      "website": "https://mpit.org.uk/"
+      "website": "https://mpit.org.uk/",
+      "phone": "01484 421 236"
     },
     {
       "name": "Madressa Islamiyah",
@@ -5166,7 +5173,8 @@
       "type": "mosque",
       "lat": 53.791125,
       "lon": -1.777844,
-      "website": "https://www.alhuda-masjid.co.uk/"
+      "website": "https://www.alhuda-masjid.co.uk/",
+      "phone": "07808 321950"
     },
     {
       "name": "Jamia Masjid Milat E Islamia",
@@ -5215,7 +5223,7 @@
     },
     {
       "name": "Jamia Abu Hanifa Mosque",
-      "address": "",
+      "address": "35 Hustler Street",
       "postcode": "BD3 0QB",
       "city": "Bradford",
       "has_timetable": false,
@@ -5368,7 +5376,7 @@
     },
     {
       "name": "Umm ul Qura Islamic Centre",
-      "address": "",
+      "address": "93 Greenhill Lane",
       "postcode": "BD3 8DZ",
       "city": "Bradford",
       "has_timetable": false,
@@ -5643,7 +5651,7 @@
     },
     {
       "name": "Madrasah Abdullah Bin Masood",
-      "address": "",
+      "address": "14 Lynthorne Road",
       "postcode": "BD9 4EZ",
       "city": "Bradford",
       "has_timetable": false,
@@ -5813,7 +5821,7 @@
     },
     {
       "name": "Ummah Masjid",
-      "address": "",
+      "address": "32 Blacker Road",
       "postcode": "WF17 5EA",
       "city": "Huddersfield",
       "has_timetable": false,
@@ -5906,7 +5914,7 @@
     },
     {
       "name": "Abuzahra Mosque",
-      "address": "",
+      "address": "38 Steadman Terrace",
       "postcode": "BD21 2BL",
       "city": "Bradford",
       "has_timetable": false,
@@ -5977,7 +5985,8 @@
       "type": "mosque",
       "lat": 53.721023,
       "lon": -1.890215,
-      "website": "http://nooranimasjid.co.uk/"
+      "website": "http://nooranimasjid.co.uk/",
+      "phone": "07547 030312"
     },
     {
       "name": "Masjid Taqwa Park Road",
@@ -6008,7 +6017,8 @@
       "type": "mosque",
       "lat": 53.713579,
       "lon": -1.622378,
-      "website": "https://dawatalislambatley.org.uk/"
+      "website": "https://dawatalislambatley.org.uk/",
+      "phone": "01924 424786"
     },
     {
       "name": "Blackpool Central Mosque",
@@ -6270,7 +6280,7 @@
     },
     {
       "name": "Al-Huda",
-      "address": "",
+      "address": "14 Avenham Road",
       "postcode": "PR1 3TJ",
       "city": "Preston",
       "has_timetable": false,
@@ -6281,7 +6291,8 @@
       "type": "mosque",
       "lat": 53.755682,
       "lon": -2.6976,
-      "website": "https://www.al-huda.org.uk/"
+      "website": "https://www.al-huda.org.uk/",
+      "phone": "01772204299"
     },
     {
       "name": "Masjide Moorul",
@@ -6640,7 +6651,7 @@
     },
     {
       "name": "Bashir Ahmed Masjid",
-      "address": "",
+      "address": "100 Portswood Road",
       "postcode": "SO17 2FB",
       "city": "Southampton",
       "has_timetable": false,
@@ -7272,7 +7283,7 @@
     },
     {
       "name": "Rabbaniah Islamic Cultural Centre",
-      "address": "",
+      "address": "33 Clare Road",
       "postcode": "CF11 6DL",
       "city": "Cardiff",
       "has_timetable": false,
@@ -7828,7 +7839,7 @@
     },
     {
       "name": "Boston Mosque & Islamic Centre",
-      "address": "",
+      "address": "27 Horncastle Road",
       "postcode": "PE21 9BU",
       "city": "Boston",
       "has_timetable": false,
@@ -9199,7 +9210,7 @@
     },
     {
       "name": "New Abu Bakr Mosque",
-      "address": "",
+      "address": "12 Cannon Park Way",
       "postcode": "TS1 5JU",
       "city": "Middlesbrough",
       "has_timetable": false,
@@ -9287,7 +9298,7 @@
     {
       "name": "Al Azhar Mosque",
       "address": "South Shields",
-      "postcode": "",
+      "postcode": "NE33 5RU",
       "city": "South Shields",
       "has_timetable": false,
       "slug": null,
@@ -9297,7 +9308,8 @@
       "type": "mosque",
       "lat": 54.990234,
       "lon": -1.440035,
-      "website": "https://alazharsouthshields.com/"
+      "website": "https://alazharsouthshields.com/",
+      "phone": "01914540738"
     },
     {
       "name": "Masjid e Anwaar e Madinah",
@@ -9715,7 +9727,7 @@
     },
     {
       "name": "IQRA Academy",
-      "address": "",
+      "address": "10 East Suffolk Road",
       "postcode": "EH16 5PH",
       "city": "Edinburgh",
       "has_timetable": false,
@@ -10131,7 +10143,7 @@
     {
       "name": "Islamic Cultural Centre Neasden",
       "address": "259 Neasden Lane, London",
-      "postcode": "",
+      "postcode": "NW10 1QG",
       "city": "London",
       "has_timetable": false,
       "slug": null,
@@ -10634,7 +10646,7 @@
     {
       "name": "Masjid Khalil",
       "address": "7 Sutherland Avenue, London",
-      "postcode": "",
+      "postcode": "W9 2HE",
       "city": "London",
       "has_timetable": false,
       "slug": null,
@@ -10983,7 +10995,7 @@
     },
     {
       "name": "Globe Town Mosque",
-      "address": "",
+      "address": "100 Roman Road",
       "postcode": "E2 0PL",
       "city": "London",
       "has_timetable": false,
@@ -10994,7 +11006,8 @@
       "type": "mosque",
       "lat": 51.52863,
       "lon": -0.048281,
-      "website": "https://www.towerhamletsmosques.co.uk/globetownmasjid/"
+      "website": "https://www.towerhamletsmosques.co.uk/globetownmasjid/",
+      "phone": "0798029826"
     },
     {
       "name": "Chadwell Heath Muslim Centre",
@@ -11014,7 +11027,7 @@
     },
     {
       "name": "Poplar Central Mosque",
-      "address": "",
+      "address": "253 East India Dock Road",
       "postcode": "E14 6LQ",
       "city": "London",
       "has_timetable": false,
@@ -11025,7 +11038,8 @@
       "type": "mosque",
       "lat": 51.511521,
       "lon": -0.009796,
-      "website": "https://www.towerhamletsmosques.co.uk/poplarcentralmasjid/"
+      "website": "https://www.towerhamletsmosques.co.uk/poplarcentralmasjid/",
+      "phone": "020 7536 0726"
     },
     {
       "name": "Leytonstone Mosque",
@@ -11054,7 +11068,8 @@
       "type": "mosque",
       "lat": 51.551002,
       "lon": -0.07403,
-      "website": "https://www.masjidramadan.org/"
+      "website": "https://www.masjidramadan.org/",
+      "phone": "020 7249 2244"
     },
     {
       "name": "Qurani Murkuz",
@@ -11446,7 +11461,7 @@
     },
     {
       "name": "Aziziye Mosque and Community Centre",
-      "address": "",
+      "address": "119 Stoke Newington Road",
       "postcode": "N16 8BU",
       "city": "London",
       "has_timetable": false,
@@ -11457,7 +11472,8 @@
       "type": "mosque",
       "lat": 51.555366,
       "lon": -0.075078,
-      "website": "https://www.aziziye.org.uk/"
+      "website": "https://www.aziziye.org.uk/",
+      "phone": "020 7254 0046"
     },
     {
       "name": "Darul Ummah Mosque",
@@ -11752,7 +11768,7 @@
     {
       "name": "East End Islamic Centre (Maktab Building)",
       "address": "2 Lucas Avenue, London",
-      "postcode": "",
+      "postcode": "E13 0RQ",
       "city": "London",
       "has_timetable": false,
       "slug": null,
@@ -11762,7 +11778,8 @@
       "type": "mosque",
       "lat": 51.537343,
       "lon": 0.029704,
-      "website": "https://eastendislamic.co.uk/"
+      "website": "https://eastendislamic.co.uk/",
+      "phone": "07956 236 644"
     },
     {
       "name": "Newbury Park Masjid",
@@ -12043,7 +12060,7 @@
     },
     {
       "name": "North Brixton Islamic Cultural Centre",
-      "address": "",
+      "address": "182A Brixton Road",
       "postcode": "SW9 6AT",
       "city": "London",
       "has_timetable": false,
@@ -12054,7 +12071,8 @@
       "type": "mosque",
       "lat": 51.473967,
       "lon": -0.113042,
-      "website": "https://nbicc.org.uk/"
+      "website": "https://nbicc.org.uk/",
+      "phone": "020 7735 9967"
     },
     {
       "name": "Makkah Masjid Mitcham",
@@ -12234,7 +12252,8 @@
       "type": "mosque",
       "lat": 51.389466,
       "lon": -0.112627,
-      "website": "https://www.croydonmosque.com/"
+      "website": "https://www.croydonmosque.com/",
+      "phone": "020 8684 8200"
     },
     {
       "name": "Surrey Muslim Centre",
@@ -12369,7 +12388,7 @@
     },
     {
       "name": "Faizan-E-Jumu'ah Masjid",
-      "address": "",
+      "address": "195 Vicarage Lane",
       "postcode": "TW3 3RP",
       "city": "London",
       "has_timetable": false,
@@ -12414,7 +12433,7 @@
     },
     {
       "name": "Camberwell Islamic Centre",
-      "address": "",
+      "address": "188 Camberwell Road",
       "postcode": "SE5 0ED",
       "city": "London",
       "has_timetable": false,
@@ -12461,7 +12480,7 @@
     },
     {
       "name": "Docklands Community Centre",
-      "address": "",
+      "address": "113 Mellish Street",
       "postcode": "E14 8PL",
       "city": "London",
       "has_timetable": false,
@@ -12939,7 +12958,7 @@
     },
     {
       "name": "Jamia Mosque Amir-e-Millat",
-      "address": "",
+      "address": "21 Shakespeare Street",
       "postcode": "B11 4RU",
       "city": "Birmingham",
       "has_timetable": false,
@@ -13213,7 +13232,7 @@
     },
     {
       "name": "Witton Islamic Centre",
-      "address": "",
+      "address": "313 Witton Road",
       "postcode": "B6 6NS",
       "city": "Birmingham",
       "has_timetable": false,
@@ -13224,7 +13243,8 @@
       "type": "mosque",
       "lat": 52.51057,
       "lon": -1.887861,
-      "website": "http://wittonislamiccentre.org.uk/"
+      "website": "http://wittonislamiccentre.org.uk/",
+      "phone": "0121 572 3294"
     },
     {
       "name": "Aston Mosque & Community Centre",
@@ -13582,7 +13602,7 @@
     },
     {
       "name": "Masjid-e-Baitul Amaan",
-      "address": "",
+      "address": "259 Halfords Lane",
       "postcode": "B66 1BD",
       "city": "West Bromwich",
       "has_timetable": false,
@@ -13827,7 +13847,8 @@
       "type": "mosque",
       "lat": 52.512407,
       "lon": -2.078768,
-      "website": "https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/4037156"
+      "website": "https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/4037156",
+      "phone": "01384 458799"
     },
     {
       "name": "Darus Salam Masjid & Bangladeshi Islamic Centre",
@@ -13888,7 +13909,7 @@
     },
     {
       "name": "Jamia Masjid Anwar-Ul-Uloom",
-      "address": "",
+      "address": "48 Windmill Lane",
       "postcode": "B66 3EU",
       "city": "West Bromwich",
       "has_timetable": false,
@@ -13899,7 +13920,8 @@
       "type": "mosque",
       "lat": 52.489719,
       "lon": -1.958003,
-      "website": "http://smethwickjamiamosque.co.uk/"
+      "website": "http://smethwickjamiamosque.co.uk/",
+      "phone": "01216016721"
     },
     {
       "name": "Masjid Shah Jalal",
@@ -14017,7 +14039,8 @@
       "type": "mosque",
       "lat": 51.75227,
       "lon": -0.321221,
-      "website": "https://stalbansjamiemasjid.org/"
+      "website": "https://stalbansjamiemasjid.org/",
+      "phone": "07985279674"
     },
     {
       "name": "Hazrath Shahjahal Jamie Masjid",
@@ -14288,7 +14311,7 @@
     },
     {
       "name": "Masjid Al-Ghurabaa",
-      "address": "",
+      "address": "27 Bury Park",
       "postcode": "LU1 1HE",
       "city": "Luton",
       "has_timetable": false,
@@ -14625,7 +14648,7 @@
     {
       "name": "Masjid Doha",
       "address": "",
-      "postcode": "",
+      "postcode": "BD7 1BG",
       "city": "",
       "has_timetable": false,
       "slug": null,
@@ -14766,7 +14789,8 @@
       "type": "mosque",
       "lat": 52.412773,
       "lon": -4.074786,
-      "website": "https://aberystwyth-masjid.wheree.com/"
+      "website": "https://aberystwyth-masjid.wheree.com/",
+      "phone": "01970 639195"
     },
     {
       "name": "Cardigan Islamic Centre",
@@ -15442,7 +15466,8 @@
       "tags": "",
       "type": "prayer_room",
       "lat": 52.408469,
-      "lon": -1.504247
+      "lon": -1.504247,
+      "website": "https://www.liverpoolmuslimsociety.org.uk/"
     },
     {
       "name": "Masjid-e-Noor and Madressa Anwarool-Islam",
@@ -16703,7 +16728,7 @@
     {
       "name": "musallah",
       "address": "Goldsmith Hall, Trinity College Dublin",
-      "postcode": "",
+      "postcode": "N16 0PH",
       "city": "",
       "has_timetable": false,
       "slug": null,
@@ -16712,7 +16737,8 @@
       "tags": "",
       "type": "mosque",
       "lat": 53.3437,
-      "lon": -6.24845
+      "lon": -6.24845,
+      "website": "https://www.mosques.london/hackney/133"
     },
     {
       "name": "Masjid Imaam Muqbil",
@@ -16731,7 +16757,7 @@
     {
       "name": "musallah",
       "address": "University College Dublin",
-      "postcode": "",
+      "postcode": "N16 0PH",
       "city": "",
       "has_timetable": false,
       "slug": null,
@@ -16740,7 +16766,8 @@
       "tags": "",
       "type": "mosque",
       "lat": 53.307307,
-      "lon": -6.220182
+      "lon": -6.220182,
+      "website": "https://www.mosques.london/hackney/133"
     },
     {
       "name": "Edgware Islamic Cultural Trust",
@@ -17381,7 +17408,7 @@
     {
       "name": "Jumu'ah Salaah",
       "address": "Room 1 or Forest Suite, Bracknell Sports Centre, Bagshot Roa",
-      "postcode": "",
+      "postcode": "SW1P 4HB",
       "city": "",
       "has_timetable": false,
       "slug": null,
@@ -17391,7 +17418,8 @@
       "type": "mosque",
       "lat": 51.402512,
       "lon": -0.747693,
-      "phone": "07863 112343"
+      "phone": "07863 112343",
+      "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=1436"
     },
     {
       "name": "Islamic Society",
@@ -17544,7 +17572,7 @@
     {
       "name": "Jamiat-ul-Imam Muhammad Zakaria",
       "address": "Thornton View Road",
-      "postcode": "",
+      "postcode": "BD14 6JX",
       "city": "",
       "has_timetable": false,
       "slug": null,
@@ -17554,7 +17582,8 @@
       "type": "mosque",
       "lat": 53.776555,
       "lon": -1.811453,
-      "phone": "01274 815522"
+      "phone": "01274 815522",
+      "website": "https://www.isc.co.uk/schools/england/yorkshire-area-west/bradford/jaamiatul-imaam-muhammad-zakaria/"
     },
     {
       "name": "Jamia Mosque Tablighul Islam",
@@ -17933,7 +17962,7 @@
     {
       "name": "Darul Uloom Al-Arabiya Al-Islamia",
       "address": "Holcombe Hall, Holcombe Brook or Holcombe Old Road",
-      "postcode": "",
+      "postcode": "BL8 4NG",
       "city": "",
       "has_timetable": false,
       "slug": null,
@@ -17943,7 +17972,8 @@
       "type": "mosque",
       "lat": 53.6383,
       "lon": -2.335174,
-      "phone": "01706 826106"
+      "phone": "01706 826106",
+      "website": "https://www.theburydirectory.co.uk/directory/darul-uloom-al-arabiya-al-islamiya"
     },
     {
       "name": "Jamia Masjid-e-Khizra and Islamic Centre",
@@ -18223,7 +18253,8 @@
       "tags": "",
       "type": "prayer_room",
       "lat": 51.948725,
-      "lon": -0.500935
+      "lon": -0.500935,
+      "website": "https://www.liverpoolmuslimsociety.org.uk/"
     },
     {
       "name": "Masjid-e-Ibrahim",
@@ -18389,7 +18420,7 @@
     {
       "name": "Lewisham & Kent Islamic Centre (Chislehurst)",
       "address": "Foxbury Avenue",
-      "postcode": "",
+      "postcode": "SE13 6NZ",
       "city": "",
       "has_timetable": false,
       "slug": null,
@@ -18399,7 +18430,8 @@
       "type": "mosque",
       "lat": 51.416525,
       "lon": 0.081174,
-      "phone": "020 8295 0637"
+      "phone": "020 8295 0637",
+      "website": "https://lewishamislamiccentre.com/"
     },
     {
       "name": "Colchester Islamic Cultural Association",
@@ -18592,7 +18624,8 @@
       "tags": "",
       "type": "prayer_room",
       "lat": 52.961862,
-      "lon": -1.268878
+      "lon": -1.268878,
+      "website": "https://www.reddit.com/r/soccer/comments/6djhlz/liverpool_constructed_a_prayer_room_arranged_for/"
     },
     {
       "name": "Prayer Room (Liverpool)",
@@ -18887,7 +18920,8 @@
       "type": "mosque",
       "lat": 55.818596,
       "lon": -4.378352,
-      "phone": "not known"
+      "phone": "not known",
+      "website": "https://www.iqracentre.org/"
     },
     {
       "name": "Jamia Noor ul Qur'an",
@@ -18966,7 +19000,7 @@
     {
       "name": "Isle of Man Muslim Association",
       "address": "3 Mona Terrace, Harris View",
-      "postcode": "",
+      "postcode": "IM1 3NA",
       "city": "",
       "has_timetable": false,
       "slug": null,
@@ -18976,7 +19010,8 @@
       "type": "mosque",
       "lat": 54.153312,
       "lon": -4.481656,
-      "phone": "01624 620336"
+      "phone": "01624 620336",
+      "website": "https://iaiom.com/"
     },
     {
       "name": "Abington Jame Masjid",
@@ -19005,7 +19040,8 @@
       "type": "mosque",
       "lat": 53.304714,
       "lon": -6.23443,
-      "phone": "+353"
+      "phone": "+353",
+      "website": "https://5pillarsuk.com/2026/02/19/irelands-largest-mosque-reopens-amid-fresh-controversy-following-nine-month-closure/"
     },
     {
       "name": "Kanz ul Iman Central Jamia Mosque",
@@ -19210,7 +19246,8 @@
       "type": "prayer_room",
       "lat": 51.425407,
       "lon": -0.565147,
-      "phone": "07984 340799"
+      "phone": "07984 340799",
+      "website": "https://www.liverpoolmuslimsociety.org.uk/"
     },
     {
       "name": "Musallah",
@@ -19952,7 +19989,8 @@
       "type": "mosque",
       "lat": 52.362432,
       "lon": -2.214024,
-      "phone": "01562 66894"
+      "phone": "01562 66894",
+      "website": "https://muai.org.uk/"
     },
     {
       "name": "Kidderminster Madani Masjid",
@@ -19987,7 +20025,7 @@
     {
       "name": "Islamic Society of Lancaster University",
       "address": "Lancaster University Islamic Society, Lancaster University S",
-      "postcode": "",
+      "postcode": "LA1 1TN",
       "city": "",
       "has_timetable": false,
       "slug": null,
@@ -19997,7 +20035,8 @@
       "type": "mosque",
       "lat": 54.007441,
       "lon": -2.782567,
-      "phone": "01524 65201"
+      "phone": "01524 65201",
+      "website": "https://lancasterisoc.org/times/"
     },
     {
       "name": "Jamia Tul Batool",
@@ -20325,7 +20364,7 @@
     {
       "name": "University of Leicester Islamic Society",
       "address": "Percy Gee Building, University Road",
-      "postcode": "",
+      "postcode": "LE1 7RH",
       "city": "",
       "has_timetable": false,
       "slug": null,
@@ -20334,7 +20373,8 @@
       "tags": "",
       "type": "mosque",
       "lat": 52.621919,
-      "lon": -1.12381
+      "lon": -1.12381,
+      "website": "https://www.ulisoc.com/"
     },
     {
       "name": "Attaqwa Mosque",
@@ -20918,7 +20958,7 @@
     {
       "name": "Daventry Muslim Association",
       "address": "Bridge Hall, Brook Street",
-      "postcode": "",
+      "postcode": "NN11 8YL",
       "city": "",
       "has_timetable": false,
       "slug": null,
@@ -20927,7 +20967,8 @@
       "tags": "",
       "type": "mosque",
       "lat": 52.259276,
-      "lon": -1.165854
+      "lon": -1.165854,
+      "website": "https://www.daventrymasjid.org.uk/"
     },
     {
       "name": "Jamia Masjid e Quba",
@@ -22197,7 +22238,7 @@
     {
       "name": "Jumu'ah salaah for UCLan Islamic Society",
       "address": "Sir Tom Finney Sports Centre, Marsh Lane",
-      "postcode": "",
+      "postcode": "PR1 2HE",
       "city": "",
       "has_timetable": false,
       "slug": null,
@@ -22206,7 +22247,8 @@
       "tags": "",
       "type": "mosque",
       "lat": 53.760282,
-      "lon": -2.709467
+      "lon": -2.709467,
+      "website": "https://mosquefinder.co.uk/jumuah-salaah-for-uclan-islamic-society.html"
     },
     {
       "name": "Sutton Islamic Centre",
@@ -23538,7 +23580,8 @@
       "tags": "",
       "type": "mosque",
       "lat": 51.61296,
-      "lon": -0.339256
+      "lon": -0.339256,
+      "website": "https://en.masjidway.com/masjid/3494/prayer"
     },
     {
       "name": "Aysha Siddique Muslim Community Centre And Prayers Room",
@@ -23603,7 +23646,7 @@
     {
       "name": "Jumu'ah Salaah",
       "address": "The Weatherley Centre Ltd, Eagle Farm Road",
-      "postcode": "",
+      "postcode": "OX11 8TP",
       "city": "",
       "has_timetable": false,
       "slug": null,
@@ -23613,7 +23656,8 @@
       "type": "mosque",
       "lat": 52.086946,
       "lon": -0.251108,
-      "phone": "01767 315709"
+      "phone": "01767 315709",
+      "website": "https://www.salaahtimes.co.uk/Jummah"
     },
     {
       "name": "Jumu'ah Salaah",
@@ -23892,7 +23936,7 @@
     {
       "name": "Jumu'ah Salaah",
       "address": "Jack Carter Pavillion, Oakfield Playing Fields, Fencepiece R",
-      "postcode": "",
+      "postcode": "SW1P 4HB",
       "city": "",
       "has_timetable": false,
       "slug": null,
@@ -23902,7 +23946,8 @@
       "type": "mosque",
       "lat": 51.597634,
       "lon": 0.087217,
-      "phone": "07424 086067"
+      "phone": "07424 086067",
+      "website": "https://www.salaahtimes.co.uk/Jummah"
     },
     {
       "name": "New North Road Community Centre",
@@ -24082,7 +24127,8 @@
       "type": "mosque",
       "lat": 52.42302,
       "lon": -1.848385,
-      "phone": "07944 064854"
+      "phone": "07944 064854",
+      "website": "https://isaibnmaryam.co.uk/"
     },
     {
       "name": "Guinea Community Birmingham West Midlands",
@@ -24161,7 +24207,7 @@
     {
       "name": "Al-Fatihah Mosque & Islamic Centre",
       "address": "Coombe Farm, Oaks Road",
-      "postcode": "",
+      "postcode": "CR0 5HL",
       "city": "",
       "has_timetable": false,
       "slug": null,
@@ -24171,7 +24217,8 @@
       "type": "mosque",
       "lat": 51.365966,
       "lon": -0.066881,
-      "phone": "07415 955893"
+      "phone": "07415 955893",
+      "website": "https://www.mosquedirectory.co.uk/mosques/england/london/croydon/heathfield/Al-Fatihah-Mosque-&-Islamic-Centre/3689"
     },
     {
       "name": "Jamia Masjid West Drayton",
@@ -24397,7 +24444,7 @@
     {
       "name": "Al Mustafa Islamic Centre",
       "address": "31 Coolmine Industrial Estate",
-      "postcode": "",
+      "postcode": "TS1 4JA",
       "city": "",
       "has_timetable": false,
       "slug": null,
@@ -24407,7 +24454,8 @@
       "type": "mosque",
       "lat": 53.383354,
       "lon": -6.397897,
-      "phone": "+353 1 515 6206"
+      "phone": "+353 1 515 6206",
+      "website": "https://almustafacentre.org/"
     },
     {
       "name": "Blanchardstown Islamic Centre",
@@ -24422,7 +24470,8 @@
       "type": "mosque",
       "lat": 53.385167,
       "lon": -6.398219,
-      "phone": "+353 1 822 2366"
+      "phone": "+353 1 822 2366",
+      "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=1671"
     },
     {
       "name": "Makki Masjid",
@@ -25259,7 +25308,7 @@
     {
       "name": "Loughborough Students Union Islamic Society",
       "address": "Brockington Building, University of Loughborough",
-      "postcode": "",
+      "postcode": "LE11 3TU",
       "city": "",
       "has_timetable": false,
       "slug": null,
@@ -25268,7 +25317,8 @@
       "tags": "",
       "type": "mosque",
       "lat": 52.765417,
-      "lon": -1.227234
+      "lon": -1.227234,
+      "website": "https://lsu.co.uk/societies/Islamic"
     },
     {
       "name": "Huntingdon Muslim Community",
@@ -25712,7 +25762,8 @@
       "type": "mosque",
       "lat": 55.816975,
       "lon": -3.991964,
-      "phone": "01698 730650"
+      "phone": "01698 730650",
+      "website": "https://www.lanarkshiremosque.com/"
     },
     {
       "name": "Jamia Masjid Sultania",
@@ -25862,7 +25913,8 @@
       "type": "mosque",
       "lat": 52.255196,
       "lon": 0.41473,
-      "phone": "01638 669944"
+      "phone": "01638 669944",
+      "website": "https://www.noorulislam.org.uk/mosque/"
     },
     {
       "name": "Masjid at-Taqwa",
@@ -26989,7 +27041,8 @@
       "tags": "",
       "type": "prayer_room",
       "lat": 50.935005,
-      "lon": -1.397967
+      "lon": -1.397967,
+      "website": "https://www.southamptonisoc.org/"
     },
     {
       "name": "Southampton Umar al Farooq Islamic Centre",
@@ -27343,7 +27396,8 @@
       "type": "mosque",
       "lat": 51.609915,
       "lon": -3.977389,
-      "phone": "07793 050226"
+      "phone": "07793 050226",
+      "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=2302"
     },
     {
       "name": "Madina Masjid & Community Centre",
@@ -27582,7 +27636,8 @@
       "tags": "",
       "type": "mosque",
       "lat": 52.246489,
-      "lon": -7.077561
+      "lon": -7.077561,
+      "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=2365"
     },
     {
       "name": "North Jamia Watford Mosque",
@@ -27826,7 +27881,7 @@
     {
       "name": "Cambridge University Islamic Society's Jumu'ah Venue",
       "address": "Bowett Room, Queens College, Silver Street",
-      "postcode": "",
+      "postcode": "CB3 9ET",
       "city": "",
       "has_timetable": false,
       "slug": null,
@@ -27835,7 +27890,8 @@
       "tags": "",
       "type": "prayer_room",
       "lat": 52.201987,
-      "lon": 0.113513
+      "lon": 0.113513,
+      "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=2490"
     },
     {
       "name": "Herts & Essex Mosque and Islamic Cultural Centre",
@@ -28935,7 +28991,7 @@
     {
       "name": "Jumu'ah Salaah",
       "address": "Scout Hut, 500, Basingstoke Road",
-      "postcode": "",
+      "postcode": "OX11 8TP",
       "city": "",
       "has_timetable": false,
       "slug": null,
@@ -28944,7 +29000,8 @@
       "tags": "",
       "type": "mosque",
       "lat": 51.42434,
-      "lon": -0.970461
+      "lon": -0.970461,
+      "website": "https://www.westnorthants.gov.uk/directory/vcse/a5781d20-7eb7-446d-893f-cb6350979670"
     },
     {
       "name": "Tawheed Islamic Education Centre of Maidenhead",
@@ -29045,7 +29102,8 @@
       "tags": "",
       "type": "prayer_room",
       "lat": 51.588108,
-      "lon": -3.326449
+      "lon": -3.326449,
+      "website": "https://www.liverpoolmuslimsociety.org.uk/"
     },
     {
       "name": "[Unsure] Abdullah Qullium Islamic Centre",
@@ -29355,7 +29413,8 @@
       "type": "community_centre",
       "lat": 50.23077,
       "lon": -5.089298,
-      "phone": "01872 870137"
+      "phone": "01872 870137",
+      "website": "https://www.cornwallislamiccentre.org/"
     },
     {
       "name": "Norbury Muslim Centre",
@@ -29562,7 +29621,8 @@
       "type": "mosque",
       "lat": 53.234946,
       "lon": -0.564423,
-      "phone": "01522 873694"
+      "phone": "01522 873694",
+      "website": "https://mosques.muslimsinbritain.org/show-mosque.php?id=2841"
     },
     {
       "name": "Masjid Daar as-Sunnah",
@@ -29800,7 +29860,8 @@
       "tags": "",
       "type": "mosque",
       "lat": 52.81976,
-      "lon": -6.934224
+      "lon": -6.934224,
+      "website": "https://carlowmasjid.ie/"
     },
     {
       "name": "Queensway Mosque",
@@ -30156,7 +30217,7 @@
     {
       "name": "Jumu'ah Salaah",
       "address": "Netball hall, Brunel University, Kingston Lane",
-      "postcode": "",
+      "postcode": "FY2 0HH",
       "city": "",
       "has_timetable": false,
       "slug": null,
@@ -30165,7 +30226,8 @@
       "tags": "",
       "type": "mosque",
       "lat": 51.533444,
-      "lon": -0.469534
+      "lon": -0.469534,
+      "website": "https://www.salaahtimes.co.uk/Jummah"
     },
     {
       "name": "Ilford C&acirc;mii ve &#304;slam K&uuml;lt&uuml;r Merkezi",
@@ -31041,7 +31103,7 @@
     {
       "name": "Heriot-Watt University Prayer Room",
       "address": "Hugh Nisbit Building, Third Gait",
-      "postcode": "",
+      "postcode": "EH14 4AS",
       "city": "",
       "has_timetable": false,
       "slug": null,
@@ -31050,12 +31112,14 @@
       "tags": "",
       "type": "prayer_room",
       "lat": 55.910938,
-      "lon": -3.322356
+      "lon": -3.322356,
+      "phone": "0131 449 5111",
+      "website": "https://www.hw.ac.uk/students/health-and-wellbeing/edinburgh-campus/faith-and-belief/muslim-worship"
     },
     {
       "name": "Jumu'ah Salaah at Heriot-Watt University",
       "address": "NS301, James Naysmith Building",
-      "postcode": "",
+      "postcode": "EH14 4AS",
       "city": "",
       "has_timetable": false,
       "slug": null,
@@ -31064,7 +31128,8 @@
       "tags": "",
       "type": "mosque",
       "lat": 55.911255,
-      "lon": -3.323759
+      "lon": -3.323759,
+      "website": "https://www.mosquedirectory.co.uk/mosques/scotland/lothian/edinburgh/pentland-hills/[Jumuah-Salaah]-Heriot-Watt-University-Edinburgh-Lothian/3512"
     },
     {
       "name": "United Afghan Community Centre",
@@ -31151,7 +31216,8 @@
       "type": "mosque",
       "lat": 54.177034,
       "lon": -4.453775,
-      "phone": "01624 620336"
+      "phone": "01624 620336",
+      "website": "https://iaiom.com/prayer-time/"
     }
   ]
 }
