@@ -26,7 +26,9 @@
       "tags": "Manningham",
       "type": "mosque",
       "lat": 53.807331,
-      "lon": -1.768044
+      "lon": -1.768044,
+      "phone": "01274 542027",
+      "website": "https://masjidquba.org"
     },
     {
       "name": "Al Mahad Ul Islami",
@@ -54,7 +56,9 @@
       "tags": "Manningham",
       "type": "mosque",
       "lat": 53.802469,
-      "lon": -1.759295
+      "lon": -1.759295,
+      "phone": "01274 734563",
+      "website": "https://tawakkulia.com"
     },
     {
       "name": "Salahadin Mosque",
@@ -82,7 +86,8 @@
       "tags": "",
       "type": "mosque",
       "lat": 53.793439,
-      "lon": -1.728364
+      "lon": -1.728364,
+      "phone": "01274 668343"
     },
     {
       "name": "IYMA",
@@ -96,7 +101,9 @@
       "tags": "Idle",
       "type": "mosque",
       "lat": 53.810188,
-      "lon": -1.732933
+      "lon": -1.732933,
+      "phone": "07771 635 480",
+      "website": "https://www.iyma.org.uk"
     },
     {
       "name": "Jamia Masjid",
@@ -110,7 +117,9 @@
       "tags": "",
       "type": "mosque",
       "lat": 53.789632,
-      "lon": -1.759851
+      "lon": -1.759851,
+      "phone": "01274 724 819",
+      "notes": "Maghrib Salah commences 2 min after Iftar"
     },
     {
       "name": "Masjid Taqwa",
@@ -124,7 +133,8 @@
       "tags": "Great Horton",
       "type": "mosque",
       "lat": 53.775234,
-      "lon": -1.797217
+      "lon": -1.797217,
+      "website": "https://www.masjidat-taqwa.co.uk"
     },
     {
       "name": "Al Abrar Academy",
@@ -208,7 +218,8 @@
       "tags": "",
       "type": "mosque",
       "lat": 53.780176,
-      "lon": -1.767024
+      "lon": -1.767024,
+      "phone": "01274 407790"
     },
     {
       "name": "Azharul Madaaris",
@@ -236,7 +247,9 @@
       "tags": "",
       "type": "mosque",
       "lat": 53.786309,
-      "lon": -1.737115
+      "lon": -1.737115,
+      "phone": "07742 253475",
+      "website": "https://www.madrasahbaitulilm.co.uk"
     },
     {
       "name": "Darul Mahmood",
@@ -253,7 +266,7 @@
       "lon": -1.771231
     },
     {
-      "name": "Doha Mosque (مسجد الدوحة)",
+      "name": "Doha Mosque (\u0645\u0633\u062c\u062f \u0627\u0644\u062f\u0648\u062d\u0629)",
       "address": "13-15 Claremont",
       "postcode": "BD7 1BG",
       "city": "Bradford",
@@ -278,7 +291,8 @@
       "tags": "",
       "type": "mosque",
       "lat": 53.789306,
-      "lon": -1.748395
+      "lon": -1.748395,
+      "phone": "07982 610 331"
     },
     {
       "name": "Iqra Masjid",
@@ -292,7 +306,9 @@
       "tags": "Idle",
       "type": "mosque",
       "lat": 53.817582,
-      "lon": -1.748063
+      "lon": -1.748063,
+      "phone": "01274 020 255",
+      "website": "https://www.iqra-centre.co.uk"
     },
     {
       "name": "Jamia Abu Hanifa Madrassa",
@@ -404,7 +420,8 @@
       "tags": "Manningham",
       "type": "mosque",
       "lat": 53.828576,
-      "lon": -1.75448
+      "lon": -1.75448,
+      "website": "https://www.masjidayeshamadrasah.com"
     },
     {
       "name": "Masjid Bilal",
@@ -488,7 +505,9 @@
       "tags": "",
       "type": "mosque",
       "lat": 53.805972,
-      "lon": -1.783621
+      "lon": -1.783621,
+      "phone": "01274 487 304",
+      "website": "https://www.masjidnoorbradford.co.uk"
     },
     {
       "name": "Masjid Noorul Islam",
@@ -586,7 +605,8 @@
       "tags": "Clayton Great Horton",
       "type": "mosque",
       "lat": 53.783152,
-      "lon": -1.802536
+      "lon": -1.802536,
+      "website": "https://www.musallasalaam.com"
     },
     {
       "name": "PYC Masjid Ahle Bayt",
@@ -670,7 +690,9 @@
       "tags": "Beeston",
       "type": "mosque",
       "lat": 53.773146,
-      "lon": -1.548764
+      "lon": -1.548764,
+      "phone": "0113 270 9536",
+      "website": "https://masjidibraheemleeds.com"
     },
     {
       "name": "West Leeds Jamia Masjid",
@@ -684,7 +706,8 @@
       "tags": "Armley",
       "type": "mosque",
       "lat": 53.797402,
-      "lon": -1.598459
+      "lon": -1.598459,
+      "phone": "07801 997 364"
     },
     {
       "name": "Makki Masjid & Madrassah",
@@ -698,7 +721,9 @@
       "tags": "Headingley",
       "type": "mosque",
       "lat": 53.822,
-      "lon": -1.576
+      "lon": -1.576,
+      "phone": "0113 245 6501",
+      "website": "https://www.makkimasjid.co.uk"
     },
     {
       "name": "Masjid-Ul-Aqsa & Islamic Centre",
@@ -712,7 +737,9 @@
       "tags": "",
       "type": "mosque",
       "lat": 53.53249,
-      "lon": -2.123738
+      "lon": -2.123738,
+      "phone": "0161 633 0327",
+      "website": "https://www.masjidulaqsa.org.uk"
     },
     {
       "name": "Chelmsford Mosque",
@@ -6452,7 +6479,7 @@
     },
     {
       "name": "Stornoway Masjid",
-      "address": "14 Sràid Sheumais, Stornoway",
+      "address": "14 Sr\u00e0id Sheumais, Stornoway",
       "postcode": "HS1 2QS",
       "city": "Stornoway",
       "has_timetable": false,
@@ -14583,7 +14610,7 @@
     },
     {
       "name": "Sevenoaks Muslim Centre",
-      "address": "St John’s Road, Sevenoaks",
+      "address": "St John\u2019s Road, Sevenoaks",
       "postcode": "TN13 3LR",
       "city": "Sevenoaks",
       "has_timetable": false,

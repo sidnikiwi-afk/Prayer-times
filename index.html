@@ -478,15 +478,143 @@
         }
         .card-pin:hover .card-pin-label { color: #00bfa5; }
 
-        /* --- Directory card (no timetable) --- */
-        .masjid-card.directory-only {
-            cursor: default;
+        /* --- Directory card (clickable for popup) --- */
+        .masjid-card[data-mosque-idx] {
+            cursor: pointer;
         }
-        .masjid-card.directory-only:hover {
-            transform: none;
-            background: rgba(255,255,255,0.08);
-            border-color: rgba(255,255,255,0.1);
-            box-shadow: none;
+
+        /* --- Mosque Detail Popup --- */
+        .mosque-popup-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.25s ease;
+            padding: 20px;
+        }
+        .mosque-popup-overlay.open { opacity: 1; }
+        .mosque-popup {
+            background: rgba(30,40,60,0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 20px;
+            max-width: 400px;
+            width: 100%;
+            padding: 28px 24px 24px;
+            position: relative;
+            transform: translateY(20px);
+            transition: transform 0.25s ease;
+            color: white;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+        }
+        .mosque-popup-overlay.open .mosque-popup { transform: translateY(0); }
+        .mosque-popup-close {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 32px;
+            height: 32px;
+            border: none;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+        .mosque-popup-close:hover { background: rgba(255,255,255,0.2); }
+        .mosque-popup-name {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            padding-right: 30px;
+        }
+        .mosque-popup-address {
+            font-size: 13px;
+            opacity: 0.6;
+            margin-bottom: 16px;
+            line-height: 1.4;
+        }
+        .mosque-popup-detail {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 0;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            font-size: 14px;
+        }
+        .mosque-popup-detail svg {
+            width: 18px;
+            height: 18px;
+            fill: rgba(255,255,255,0.5);
+            flex-shrink: 0;
+        }
+        .mosque-popup-detail a {
+            color: #4dd0e1;
+            text-decoration: none;
+        }
+        .mosque-popup-detail a:hover { text-decoration: underline; }
+        .mosque-popup-detail .popup-notes {
+            font-size: 13px;
+            opacity: 0.7;
+            font-style: italic;
+        }
+        .mosque-popup-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 18px;
+        }
+        .mosque-popup-actions a {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            min-height: 44px;
+            transition: all 0.2s;
+        }
+        .popup-btn-directions {
+            background: rgba(0,191,165,0.15);
+            color: #00bfa5;
+            border: 1px solid rgba(0,191,165,0.3);
+        }
+        .popup-btn-directions:hover { background: rgba(0,191,165,0.25); }
+        .popup-btn-directions svg { width: 16px; height: 16px; fill: #00bfa5; }
+        .popup-btn-timetable {
+            background: rgba(77,208,225,0.15);
+            color: #4dd0e1;
+            border: 1px solid rgba(77,208,225,0.3);
+        }
+        .popup-btn-timetable:hover { background: rgba(77,208,225,0.25); }
+        .popup-btn-timetable svg { width: 16px; height: 16px; fill: #4dd0e1; }
+
+        @media (max-width: 600px) {
+            .mosque-popup-overlay {
+                align-items: flex-end;
+                padding: 0;
+            }
+            .mosque-popup {
+                border-radius: 20px 20px 0 0;
+                max-width: 100%;
+                transform: translateY(100%);
+                padding-bottom: max(24px, env(safe-area-inset-bottom));
+            }
+            .mosque-popup-overlay.open .mosque-popup { transform: translateY(0); }
         }
 
         /* --- Submit / Contribute Section --- */
@@ -875,6 +1003,68 @@
         }
 
         // --- Render ---
+        // --- Mosque Detail Popup ---
+        function openMosquePopup(m) {
+            var mapDest;
+            if (m.lat && m.lon) mapDest = m.lat + ',' + m.lon;
+            else if (m.address && m.postcode) mapDest = m.address + ', ' + m.postcode;
+            else if (m.postcode) mapDest = m.postcode;
+            else mapDest = m.name + ', ' + (m.city || 'UK');
+            var mapsUrl = 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(mapDest);
+
+            var displayAddr = '';
+            if (m.address && m.postcode) displayAddr = m.address + ', ' + m.postcode;
+            else if (m.address) displayAddr = m.address;
+            else if (m.postcode) displayAddr = m.postcode;
+            else displayAddr = m.city || '';
+
+            var typeBadge = '';
+            if (m.type === 'prayer_room') typeBadge = ' <span class="card-type-badge prayer-room">Prayer Room</span>';
+            else if (m.type === 'community_centre') typeBadge = ' <span class="card-type-badge community-centre">Community Centre</span>';
+
+            var html = '<div class="mosque-popup-overlay" onclick="if(event.target===this)closeMosquePopup()">';
+            html += '<div class="mosque-popup">';
+            html += '<button class="mosque-popup-close" onclick="closeMosquePopup()" aria-label="Close">&times;</button>';
+            html += '<div class="mosque-popup-name">' + escapeHtml(m.name) + typeBadge + '</div>';
+            html += '<div class="mosque-popup-address">' + escapeHtml(displayAddr) + (m.city ? ', ' + escapeHtml(m.city) : '') + '</div>';
+
+            if (m.phone) {
+                var tel = m.phone.replace(/[\s\-]/g, '');
+                html += '<div class="mosque-popup-detail"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg><a href="tel:' + escapeHtml(tel) + '">' + escapeHtml(m.phone) + '</a></div>';
+            }
+            if (m.website) {
+                var displayUrl = m.website.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
+                html += '<div class="mosque-popup-detail"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/></svg><a href="' + escapeHtml(m.website) + '" target="_blank" rel="noopener">' + escapeHtml(displayUrl) + '</a></div>';
+            }
+            if (m.notes) {
+                html += '<div class="mosque-popup-detail"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"/></svg><span class="popup-notes">' + escapeHtml(m.notes) + '</span></div>';
+            }
+
+            html += '<div class="mosque-popup-actions">';
+            html += '<a href="' + mapsUrl + '" target="_blank" rel="noopener" class="popup-btn-directions"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Get Directions</a>';
+            if (m.has_timetable && m.slug) {
+                html += '<a href="' + m.slug + '/" class="popup-btn-timetable"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>View Timetable</a>';
+            }
+            html += '</div>';
+            html += '</div></div>';
+
+            document.body.insertAdjacentHTML('beforeend', html);
+            requestAnimationFrame(function() {
+                document.querySelector('.mosque-popup-overlay').classList.add('open');
+            });
+        }
+
+        window.closeMosquePopup = function() {
+            var overlay = document.querySelector('.mosque-popup-overlay');
+            if (!overlay) return;
+            overlay.classList.remove('open');
+            setTimeout(function() { overlay.remove(); }, 250);
+        };
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeMosquePopup();
+        });
+
         function render() {
             var filtered = mosques;
             if (currentView === 'timetables') {
@@ -976,23 +1166,31 @@
 
                     var pinSvg = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>';
 
+                    // Store mosque index for popup
+                    var mosqueIdx = mosques.indexOf(m);
+
                     if (m.has_timetable) {
-                        html += '<a href="' + m.slug + '/" class="masjid-card" data-mosque="' + escapeHtml(m.slug) + '" data-tags="' + escapeHtml(m.city + ' ' + (m.tags || '')) + '"' + animStyle + '>';
                         if (currentView === 'directory') {
-                            html += '<span class="card-pin" onclick="event.preventDefault();event.stopPropagation();window.open(\'' + mapsUrl + '\',\'_blank\')" title="Get directions">' + pinSvg + '<span class="card-pin-label">Directions</span></span>';
+                            // In directory view: card opens popup, pin opens maps
+                            html += '<div class="masjid-card" data-mosque-idx="' + mosqueIdx + '" data-tags="' + escapeHtml(m.city + ' ' + (m.tags || '')) + '"' + animStyle + ' role="button" tabindex="0">';
+                            html += '<span class="card-pin" onclick="event.stopPropagation();window.open(\'' + mapsUrl + '\',\'_blank\')" title="Get directions">' + pinSvg + '<span class="card-pin-label">Directions</span></span>';
                         } else {
+                            // In timetables view: card navigates to timetable page
+                            html += '<a href="' + m.slug + '/" class="masjid-card" data-mosque="' + escapeHtml(m.slug) + '" data-tags="' + escapeHtml(m.city + ' ' + (m.tags || '')) + '"' + animStyle + '>';
                             html += '<div class="card-colour" style="background:linear-gradient(to bottom,' + m.color1 + ',' + m.color2 + ')"></div>';
                         }
                         html += '<div class="card-info"><div class="card-name">' + escapeHtml(m.name) + typeBadge + '</div><div class="card-address">' + escapeHtml(displayAddr) + '</div></div>';
                         html += distHtml;
                         if (currentView === 'timetables') {
                             html += '<div class="card-arrow">&rsaquo;</div>';
+                            html += '</a>';
+                        } else {
+                            html += '</div>';
                         }
-                        html += '</a>';
                     } else {
                         // Directory-only card
-                        html += '<div class="masjid-card directory-only" data-tags="' + escapeHtml(m.city + ' ' + (m.tags || '')) + '"' + animStyle + '>';
-                        html += '<a class="card-pin" href="' + mapsUrl + '" target="_blank" title="Get directions">' + pinSvg + '<span class="card-pin-label">Directions</span></a>';
+                        html += '<div class="masjid-card directory-only" data-mosque-idx="' + mosqueIdx + '" data-tags="' + escapeHtml(m.city + ' ' + (m.tags || '')) + '"' + animStyle + ' role="button" tabindex="0">';
+                        html += '<a class="card-pin" href="' + mapsUrl + '" target="_blank" title="Get directions" onclick="event.stopPropagation()">' + pinSvg + '<span class="card-pin-label">Directions</span></a>';
                         html += '<div class="card-info"><div class="card-name">' + escapeHtml(m.name) + typeBadge + '</div><div class="card-address">' + escapeHtml(displayAddr) + '</div></div>';
                         html += distHtml;
                         html += '</div>';
@@ -1004,6 +1202,14 @@
             });
 
             listEl.innerHTML = html;
+
+            // Add click handlers for popup cards
+            listEl.querySelectorAll('[data-mosque-idx]').forEach(function(card) {
+                card.addEventListener('click', function() {
+                    var idx = parseInt(this.dataset.mosqueIdx, 10);
+                    if (mosques[idx]) openMosquePopup(mosques[idx]);
+                });
+            });
 
             // Re-apply search filter if active
             var q = searchEl.value.toLowerCase().trim();
