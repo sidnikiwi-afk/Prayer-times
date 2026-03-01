@@ -15291,7 +15291,7 @@
       "phone": "01259 724623"
     },
     {
-      "name": "[Unsure] Dar-ul-Uloom Qadiria Jilania",
+      "name": "Dar-ul-Uloom Qadiria Jilania",
       "address": "95 Burlington Street",
       "postcode": "OL6 7HJ",
       "city": "Ashton-under-Lyne",
@@ -15783,7 +15783,7 @@
       "phone": "07588 796792"
     },
     {
-      "name": "[Unsure] Anwar-e-Medina",
+      "name": "Anwar-e-Medina",
       "address": "68 Nansen Road",
       "postcode": "B11 4DT",
       "city": "Birmingham",
@@ -16311,20 +16311,6 @@
       "type": "mosque",
       "lat": 52.418937,
       "lon": -1.493937
-    },
-    {
-      "name": "[Unsure] Idara-e-Dar-ul-Aslaam",
-      "address": "124-126 Pretoria Road",
-      "postcode": "B9 5LQ",
-      "city": "Birmingham",
-      "has_timetable": false,
-      "slug": null,
-      "color1": null,
-      "color2": null,
-      "tags": "",
-      "type": "mosque",
-      "lat": 52.480812,
-      "lon": -1.848198
     },
     {
       "name": "Handsworth Islamic Centre",
@@ -17332,7 +17318,7 @@
       "lon": -2.096661
     },
     {
-      "name": "[Unsure] Al-Qamar Islamic Institute",
+      "name": "Al-Qamar Islamic Institute",
       "address": "12 Beverley Road",
       "postcode": "BL1 4DU",
       "city": "Bolton",
@@ -17346,7 +17332,7 @@
       "lon": -2.453073
     },
     {
-      "name": "[Unsure] Madrasa Taleemul-Quran",
+      "name": "Madrasa Taleemul-Quran",
       "address": "89 Grasmere Street",
       "postcode": "BL1 8LH",
       "city": "Bolton",
@@ -17391,7 +17377,7 @@
       "phone": "01793 485896"
     },
     {
-      "name": "[Unsure] Markazi Jamiat Ahl-e-Hadith",
+      "name": "Markazi Jamiat Ahl-e-Hadith",
       "address": "13 Westwood Road",
       "postcode": "BL1 4DL",
       "city": "Bolton",
@@ -18078,20 +18064,6 @@
       "lat": 52.200211,
       "lon": 0.135964,
       "phone": "01223 350134"
-    },
-    {
-      "name": "[Unsure] Bazma Chistiya Centre",
-      "address": "71 Preston New Road",
-      "postcode": "BB2 6AY",
-      "city": "Blackburn",
-      "has_timetable": false,
-      "slug": null,
-      "color1": null,
-      "color2": null,
-      "tags": "",
-      "type": "mosque",
-      "lat": 53.751989,
-      "lon": -2.491198
     },
     {
       "name": "Muslim Community Centre",
@@ -20304,20 +20276,6 @@
       "phone": "020 3556 2110"
     },
     {
-      "name": "[Unsure] Afghan Community Association",
-      "address": "Unit 2, Block A, New Normanton Mills, Stanhope Street",
-      "postcode": "DE23 6QJ",
-      "city": "Derby",
-      "has_timetable": false,
-      "slug": null,
-      "color1": null,
-      "color2": null,
-      "tags": "",
-      "type": "mosque",
-      "lat": 52.907708,
-      "lon": -1.479712
-    },
-    {
       "name": "Masjid Fida",
       "address": "127 Loughborough Road",
       "postcode": "LE4 5LQ",
@@ -21654,7 +21612,7 @@
       "phone": "020 8964 1496"
     },
     {
-      "name": "[Unsure] Letchworth Islamic Society",
+      "name": "Letchworth Islamic Society",
       "address": "No regular or masjid premises yet found",
       "postcode": "SG6 3AN",
       "city": "North Hertfordshire",
@@ -21713,7 +21671,7 @@
       "lon": -0.172718
     },
     {
-      "name": "[Unsure] Makame Ibadah Musalaah for Bexhill Masjid and Islamic Centre",
+      "name": "Makame Ibadah Musalaah for Bexhill Masjid and Islamic Centre",
       "address": "Shiplu Restauarant, 109-111 London Road",
       "postcode": "TN39 3FU",
       "city": "Rother",
@@ -22751,7 +22709,7 @@
       "phone": "020 7828 3360"
     },
     {
-      "name": "[Unsure] Malaysia Hall",
+      "name": "Malaysia Hall",
       "address": "30-34 Queensborough Terrace",
       "postcode": "W2 3ST",
       "city": "London",
@@ -24398,20 +24356,6 @@
       "lon": -1.89867
     },
     {
-      "name": "[Unsure] Bradford Dawah Centre",
-      "address": "Shearbridge Mills, 137 Great Horton Road",
-      "postcode": "BD7 1PU",
-      "city": "Bradford",
-      "has_timetable": false,
-      "slug": null,
-      "color1": null,
-      "color2": null,
-      "tags": "",
-      "type": "mosque",
-      "lat": 53.788314,
-      "lon": -1.770676
-    },
-    {
       "name": "Masjid Ibrahim",
       "address": "37-39 Upper Lloyd Street",
       "postcode": "M14 4HY",
@@ -25410,7 +25354,7 @@
       "phone": "07834 719789"
     },
     {
-      "name": "[Unsure] Islamic Centre",
+      "name": "Islamic Centre",
       "address": "30-32 Whitehead Street",
       "postcode": "BB2 1HT",
       "city": "Blackburn",
@@ -26940,7 +26884,7 @@
       "phone": "0114 242 2520"
     },
     {
-      "name": "[Unsure] Markazi Jamiat Ahl-e-Hadith",
+      "name": "Markazi Jamiat Ahl-e-Hadith",
       "address": "26 Seabrook Street",
       "postcode": "S2 2RZ",
       "city": "Sheffield",
@@ -27253,7 +27197,7 @@
       "phone": "01782 287432"
     },
     {
-      "name": "[Unsure] Al-Mahd Al-Islami",
+      "name": "Al-Mahd Al-Islami",
       "address": "1 Mercia Crescent",
       "postcode": "ST6 3JD",
       "city": "Stoke-on-Trent",
@@ -29106,21 +29050,6 @@
       "website": "https://www.liverpoolmuslimsociety.org.uk/"
     },
     {
-      "name": "[Unsure] Abdullah Qullium Islamic Centre",
-      "address": "2 Lodge Lane",
-      "postcode": "L8 0QH",
-      "city": "Liverpool",
-      "has_timetable": false,
-      "slug": null,
-      "color1": null,
-      "color2": null,
-      "tags": "",
-      "type": "mosque",
-      "lat": 53.398406,
-      "lon": -2.949877,
-      "phone": "0151 709 6567"
-    },
-    {
       "name": "Prayer Room (Liverpool)",
       "address": "Baker Building, Birmingham City University, Aldridge Road",
       "postcode": "B42 2UN",
@@ -29371,7 +29300,7 @@
       "phone": "020 7254 0967"
     },
     {
-      "name": "[Unsure] Jumu'ah Salaah",
+      "name": "Jumu'ah Salaah",
       "address": "Al Farooqia Foundation c/o Grahame Park Centre, The Concours",
       "postcode": "NW9 5XN",
       "city": "London",
@@ -29907,7 +29836,7 @@
       "lon": -1.718427
     },
     {
-      "name": "[Unsure] West London School of Islamic Studies",
+      "name": "West London School of Islamic Studies",
       "address": "Banklabs House, 33-41 Cross Lances Road",
       "postcode": "TW3 2AD",
       "city": "London",
@@ -30557,7 +30486,7 @@
       "phone": "01223 366304"
     },
     {
-      "name": "[Unsure] Jamia Abdullah bin Masood",
+      "name": "Jamia Abdullah bin Masood",
       "address": "160 Broad Oaks",
       "postcode": "S9 3HJ",
       "city": "Sheffield",
