@@ -1040,8 +1040,13 @@
                 html += '<div class="mosque-popup-detail"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"/></svg><span class="popup-notes">' + escapeHtml(m.notes) + '</span></div>';
             }
 
+            // Google Maps profile link (search by name + location)
+            var gmapsQuery = m.name + (m.address ? ', ' + m.address : '') + (m.city ? ', ' + m.city : '');
+            var gmapsUrl = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(gmapsQuery);
+            html += '<div class="mosque-popup-detail"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg><a href="' + escapeHtml(gmapsUrl) + '" target="_blank" rel="noopener">View on Google Maps</a></div>';
+
             html += '<div class="mosque-popup-actions">';
-            html += '<a href="' + mapsUrl + '" target="_blank" rel="noopener" class="popup-btn-directions"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Get Directions</a>';
+            html += '<a href="' + mapsUrl + '" target="_blank" rel="noopener" class="popup-btn-directions"><svg viewBox="0 0 24 24"><path d="M21.71 11.29l-9-9c-.39-.39-1.02-.39-1.41 0l-9 9c-.39.39-.39 1.02 0 1.41l9 9c.39.39 1.02.39 1.41 0l9-9c.39-.38.39-1.01 0-1.41zM14 14.5V12h-4v3H8v-4c0-.55.45-1 1-1h5V7.5l3.5 3.5-3.5 3.5z"/></svg>Directions</a>';
             if (m.has_timetable && m.slug) {
                 html += '<a href="' + m.slug + '/" class="popup-btn-timetable"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>View Timetable</a>';
             }
