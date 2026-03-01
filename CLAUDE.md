@@ -1,7 +1,7 @@
 # Prayer-times Project
 
 ## Overview
-Prayer timetable web app for UK mosques (51 with timetables, 1000+ in directory).
+Prayer timetable web app for UK mosques (51 with timetables, 2100+ in directory).
 Ramadan 1447 (Feb-Mar 2026) + year-round prayer times. Cities: Bradford, Leeds, Keighley, Oldham, and more.
 Hosted on GitHub Pages. Each mosque gets its own subfolder with a self-contained HTML page.
 
@@ -102,7 +102,14 @@ Prayer-times/
 # ... plus 39 batch-generated mosque folders (alabrar/, alamin/, alhidaya/, westleeds/, makkimasjidmadrassah/, etc.)
 # See "Batch Mosque Generation" section below for the full list and workflow.
 scripts/
-└── patch_timetables.py     # Applies Fixes 4 & 5 to 10 original hand-crafted mosque pages
+├── patch_timetables.py     # Applies Fixes 4 & 5 to 10 original hand-crafted mosque pages
+├── build_directory.py      # Queries OSM Overpass API for UK mosques → merges with directory.json
+├── clean_directory.py      # Deduplicates, removes non-UK, tags types, fixes city names
+├── enrich_directory.py     # Fills missing data (address, phone, website) via Serper.dev
+├── import_mib.py           # Imports Muslims in Britain CSV, filters Shia/multi-faith, deduplicates
+├── add_coordinates.py      # Adds lat/lon via Postcodes.io batch API
+├── fix_coordinates.py      # Corrects bad lat/lon values
+└── MosquesMar26.csv        # Muslims in Britain raw data (2,191 entries)
 Masjids/                    # Source data for batch-generated mosques
 ├── generate.py             # Batch HTML generator (uses abubakar/ as template, applies colors)
 ├── gen_pwa.py              # Batch PWA asset generator (manifest, sw, og-image, poster)
@@ -665,10 +672,29 @@ After the last day's Isha Jamaah, shows "Eid Mubarak".
 - **Google Analytics 4** (`G-9DPJ6NR37M`) - injected dynamically via `chat.js` (covers all timetable pages). Dashboard: `analytics.google.com`.
 - No other external JS libraries. All other effects are vanilla CSS/JS/SVG + Web Audio API.
 
-### Data Source
-- Timetables transcribed from printed/JPEG posters provided by each mosque
+### Data Sources
+- **Timetables**: Transcribed from printed/JPEG posters provided by each mosque
+- **Directory (OSM)**: ~1,034 mosques from OpenStreetMap Overpass API (via `build_directory.py`)
+- **Directory (MiB)**: ~1,084 mosques from Muslims in Britain (muslimsInBritain.org) GPS CSV (via `import_mib.py`, added Mar 2026). Filtered Shia (148), multi-faith (75), non-UK (8). Deduplicated by postcode + coordinate proximity.
+- **Enrichment**: Addresses, phones, websites filled via Serper.dev Google Search API
+- **Geocoding**: Postcodes and cities via Postcodes.io free batch reverse geocode API
 - Each mosque has slightly different Jamaah times
 - Beginning times (Fajr, Zuhr, Asr, Isha) may also differ slightly between mosques
+
+### Directory Stats (Mar 2026)
+- **Total**: 2,113 mosques (51 with timetables, 2,062 directory-only)
+- **Types**: 2,002 mosques, 57 prayer rooms, 54 community centres
+- **Coverage**: 91% addresses, 99% postcodes, 50% phones, 24% websites
+- **Top cities**: London (425), Birmingham (174), Bradford (138), Huddersfield (74), Leicester (69)
+
+### Directory Update Pipeline
+```
+1. build_directory.py    → directory_new.json  (OSM import)
+   import_mib.py         → directory_new.json  (MiB import, alternative source)
+2. clean_directory.py    → directory_clean.json (dedup, tag types, fix cities)
+3. enrich_directory.py   → directory_clean.json (Serper.dev search enrichment)
+4. cp directory_clean.json directory.json → commit & push
+```
 
 ### Deployment
 - GitHub Pages, deploy from branch (legacy mode), `master` branch

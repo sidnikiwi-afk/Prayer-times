@@ -1,0 +1,24 @@
+email,mosque_name,address,source,notes,reoon_status,is_disposable,mx_accepts_mail
+info@iyma.org.uk,IYMA (Imam Yusuf Motala Academy),"68 Idle Road, Bradford BD2 4NH",CLAUDE.md / iyma/index.html,Active timetable,unknown,False,True
+tjmasjid@outlook.com,Tawakkulia Islamic Society,"48 Cornwall Road, Bradford BD8 7JN",CLAUDE.md / Tawakkulia/index.html,Active timetable,safe,False,True
+masjidibraheemleeds11@gmail.com,Masjid Ibraheem Leeds,"4 Woodview Rd, Beeston, Leeds LS11 6LE",CLAUDE.md / ibrahim/index.html,Active timetable,safe,False,True
+westleedsjamiamasjid@gmail.com,West Leeds Jamia Masjid,"Town Street, Armley, Leeds LS12 3JG",CLAUDE.md / Masjids/West Leeds Jamia Masjid/data.json,Active timetable,safe,False,True
+baitulilm30@gmail.com,Madrasah Baitul Ilm,"4 St Johns Court, Square Street, Bradford BD4 7NP",baitulilm/.mcp.json,Active timetable,safe,False,True
+info@masjidquba.org,Masjid Quba,"20 Quba Court, Bradford BD8 7LA",quba/index.html,Active timetable,unknown,False,True
+mabbradford@gmail.com,Jamia Masjid (Muslim Association of Bradford),"32 Howard Street, Bradford BD5 0BP",Masjids/1. Masjid_text.txt,From directory,safe,False,True
+salaattimetables@gmail.com,Masjid Namirah / Madrasah Ta'limul Quran,"8-10 Hanover Square, Bradford BD1 3BY",Masjids/1. Masjid_text.txt,From directory,safe,False,True
+almustaqeemeducation@outlook.com,Al-Mustaqeem Education and Community Centre,"4 Central Avenue, Bradford BD5 0PB",Masjids/1. Masjid_text.txt,From directory,safe,False,True
+Masjidurraashideen@gmail.com,Masjidur Raashideen,"14 Farfield Street, Bradford BD9 5AS",Masjids/1. Masjid_text.txt,From directory,safe,False,True
+masjidhusain_bfd@outlook.com,Masjid Husain,"203 Allerton Road, Bradford BD15 7RD",Masjids/1. Masjid_text.txt,From directory,safe,False,True
+masjidbilal@hotmail.co.uk,Masjid Bilal,"1-3 Drummond Rd, Bradford BD8 8DA",Masjids/1. Masjid_text.txt,From directory,safe,False,True
+info@farooqiah.co.uk,Jamiah Farooqiah,"432 Barkerend Road, Bradford BD3 8QJ",Masjids/1. Masjid_text.txt,From directory,role_account,False,True
+basfordculturecentre@hotmail.com,Basford Culture Centre,,scripts/retry_osm_data.json,OSM data,safe,False,True
+eemforum@gmail.com,EEM Forum,,scripts/retry_osm_data.json,OSM data,safe,False,True
+info@blackhallmosque.com,Black Hall Mosque,,scripts/retry_osm_data.json,OSM data,catch_all,False,True
+info@daarulhuda.org,Darul Huda,,scripts/retry_osm_data.json,OSM data,role_account,False,True
+info@darulisra.org.uk,Darul Isra,,scripts/retry_osm_data.json,OSM data,role_account,False,True
+info@newportdiyanet.org,Newport Diyanet,,scripts/retry_osm_data.json,OSM data,catch_all,False,True
+info@owma.org.uk,OWMA,,scripts/retry_osm_data.json,OSM data,role_account,False,True
+info@wbicc.org.uk,WBICC,,scripts/retry_osm_data.json,OSM data,role_account,False,True
+iqranewport@gmail.com,Iqra Newport,,scripts/retry_osm_data.json,OSM data,safe,False,True
+islahulmuslimeen@hotmail.co.uk,Islahul Muslimeen,,scripts/retry_osm_data.json,OSM data,safe,False,True
