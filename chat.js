@@ -168,6 +168,7 @@
         '- Tawakkulia Islamic Society: Daily Taleem & Dars-e-Quran after Fajr, Bangla Bayan (Wednesday nights), English Weekend Bayan (Sat/Sun after Zuhr), Quran Mashq sessions, Late Night Taraweeh.',
         '- IYMA: Phase 3 extension building project donation appeal. Limited parking.',
         '- Jamia Masjid: Maghrib Salah commences 2 minutes after Iftar.',
+        '- Madrasah Noorul Islam (1A Back St. Margaret\'s Road West, Bradford, BD7 3AU) holds Friday prayers at three times: 12:30pm (26 Dec 2025 – 27 Mar 2026), 1:30pm (30 Jan 2026 – 23 Oct 2026), and 2:30pm–3:45pm (13 Mar 2026 – 16 Oct 2026). Part of Masjid Noorul Islam.',
         '- All mosques open for Taraweeh after Isha Jama\'ah throughout Ramadan.'
     ].join('\n');
 
