@@ -1,7 +1,7 @@
 {
-  "name": "Wibsey Musalla - Ramadan Timetable",
-  "short_name": "Wibsey Musalla Times",
-  "description": "Ramadan 1447 prayer timetable for Wibsey Musalla, Bradford",
+  "name": "Al-Rahma Islamic Centre - Ramadan Timetable",
+  "short_name": "Al-Rahma Times",
+  "description": "Ramadan 1447 prayer timetable for Al-Rahma Islamic Centre (formerly Wibsey Musalla), Bradford",
   "start_url": "/wibsey/",
   "display": "standalone",
   "background_color": "#2a1a3d",
