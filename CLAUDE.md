@@ -207,7 +207,7 @@ Source data in `Masjids/<Name>/data.json`. Regenerate with `python Masjids/gener
 | Shipley Islamic & Education Centre | `shipley` | Aireville Road, Bradford, BD9 4HH | Teal |
 | Wibsey & Buttershaw Islamic Learning Centre | `wibseybuttershaw` | The Cooperville Centre, Bellerby Brow, Bradford, BD6 3JY | Purple-navy |
 | West Leeds Jamia Masjid | `westleeds` | Town Street, Armley, Leeds, LS12 3JG | Charcoal/Graphite |
-| Wibsey Musalla | `wibsey` | 75 Odsal Road, Wibsey, BD6 1PN | Purple-grey |
+| Al-Rahma Islamic Centre (formerly Wibsey Musalla) | `wibsey` | 73 Odsal Road, Wibsey, BD6 1PN | Purple-grey |
 | Shahjalal Jami Masjid & Jamia Qurania | `sjmkeighley` | Temple Row, Keighley, BD21 2AH | Dark gold/Goldenrod |
 | Jamia Masjid - Howard Street | `JamiaMasjid` | 28-32 Howard St, BD5 0BP | (shares JamiaMasjid page) |
 | Makki Masjid & Madrassah | `makkimasjidmadrassah` | 1 Vicarage Road, Leeds, LS6 1NX | Dark green `#1a3a2e` / `#2d6a4f` |
@@ -252,7 +252,7 @@ Source data in `Masjids/<Name>/data.json`. Regenerate with `python Masjids/gener
 - **Auto dark mode at Maghrib**: Automatically enables dark mode after Maghrib, disables after Fajr. Respects manual toggle (disables auto if user toggles manually). localStorage: `{prefix}-autoDark`
 - **Eid confetti burst**: 150 themed particles burst when "Eid Mubarak" state triggers. Canvas overlay, self-removes after 5s.
 - **Qibla compass**: Floating button (bottom-left) opens overlay with compass rose SVG. Arrow points 119.7° (Bradford → Ka'bah). Live compass on mobile via DeviceOrientationEvent (incl. `deviceorientationabsolute`), static bearing on desktop. **Standard implementation**: All mosques use the Shahjalal compass pattern (IIFE with `openQibla`/`closeQibla`/`closeQiblaOverlay` on window, `.qibla-overlay.open` toggle, `.qibla-compass`/`.qibla-compass-ring`/`.qibla-bearing-text` classes, `#qiblaSvg`/`#qiblaArrow`/`#qiblaKaaba` SVG IDs). New mosques should copy this pattern and only change theme colors.
-- **AI Prayer Assistant**: `chat.js` — floating gold chat button (bottom-left, above Qibla compass) on all pages. Opens glassmorphism chat panel. Includes STATIC_INFO variable with mosque programmes/events (Quba tarawih, Tawakkulia daily programmes, IYMA donation appeal, Jamia Masjid maghrib notice) appended to timetable context. Sends questions + full context from all mosques to n8n webhook (`/webhook/prayer-chat`), which calls GPT-4o-mini via OpenAI API (system prompt includes spelling variations: jummah, jamaah, sehri, taraweeh, witr, asr, iftar; max_tokens=350). Suggestion chips: "Latest Isha Jamaah?", "Earliest Fajr Jamaah?". Header uses mosque's theme color. Mobile keyboard handling via `visualViewport` API. Session-only message history (not persisted). Context gathered by fetching each mosque's `index.html` and regex-extracting `timetableData`, cached per session.
+- **AI Prayer Assistant**: `chat.js` — floating gold chat button (bottom-left, above Qibla compass) on all pages. Opens glassmorphism chat panel. Includes STATIC_INFO variable with: (1) mosque programmes/events (Quba tarawih, Tawakkulia daily programmes, IYMA donation appeal, Jamia Masjid maghrib notice), (2) Madrasah Noorul Islam Jummah times (3 slots with date ranges), (3) Eid prayer times & Fitrana for 32 mosques. All appended to timetable context. Sends questions + full context from all mosques to n8n webhook (`/webhook/prayer-chat`), which calls GPT-4o-mini via OpenAI API (system prompt includes spelling variations: jummah, jamaah, sehri, taraweeh, witr, asr, iftar, fitrana; max_tokens=350; explicitly instructed to check STATIC_INFO for Jummah and Eid queries). Suggestion chips: "Latest Isha Jamaah?", "Earliest Fajr Jamaah?". Header uses mosque's theme color. Mobile keyboard handling via `visualViewport` API. Session-only message history (not persisted). Context gathered by fetching each mosque's `index.html` and regex-extracting `timetableData`, cached per session.
 
 ### Progressive Enhancement
 - All visual effects respect `prefers-reduced-motion: reduce`
@@ -379,7 +379,7 @@ CREATE TABLE IF NOT EXISTS timetable_submissions (
 
 #### 5. Telegram Bot
 - **Name**: `Waqt_timetable_bot`
-- **Token**: `8238602157:AAG2fKf3kzOlK8RW51QVI2Oq02sq_aWnvJ8`
+- **Token**: Set via `WAQT_TELEGRAM_BOT_TOKEN` env var in `~/.zshrc`
 - **Chat ID**: `1578762040`
 - **Message format**:
   ```
@@ -455,8 +455,35 @@ End-to-end test passed: Submission Processor (11 nodes) + Approval Handler (20 n
 - **Approval Handler 422 "sha wasn't supplied"**: When file already existed on GitHub, PUT without SHA failed. Fixed by adding Get File SHA (HTTP GET, continueOnFail) before commit, and Build Commit Body that includes SHA if file exists.
 
 **Design decisions:**
-- Telegram inline keyboard with Approve/Reject buttons for timetable submissions. Approve commits data.json to GitHub repo via API. Non-timetable submissions (Eid, Jumu'ah, etc.) get an Acknowledged button.
+- Telegram inline keyboard with Approve/Reject buttons for timetable submissions. Approve commits data.json to GitHub repo via API. Non-timetable submissions (Eid, Jumu'ah, etc.) currently get only an Acknowledged button — **TODO: update to show Approve/Reject for all submission types.**
 - After approval, still run `/add-mosque` manually to generate full HTML page, PWA assets, and update nav/directory.
+
+### WhatsApp Group Automation (added Mar 2026)
+
+**Source:** "Salaat Timetables Bradford" WhatsApp community group — admins post timetable images and prayer time updates.
+
+**Pipeline:** WhatsApp notification → MacroDroid → DriveSync → Google Drive → Apps Script → n8n → Telegram
+
+**Components:**
+1. **Android device** with WhatsApp logged in (linked device)
+2. **MacroDroid** macro "Timetable Auto-Forward":
+   - Trigger: Notification from WhatsApp containing "Salaat Timetables Bradford"
+   - Action 1: Wait 3 seconds
+   - Action 2: Write notification text to `messages.txt` (append)
+   - Action 3: Shell Script (non-rooted) — copies only images from last 5 minutes:
+     ```sh
+     find "/storage/emulated/0/Android/media/com.whatsapp/WhatsApp/Media/WhatsApp Images/" -maxdepth 1 -mmin -5 \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" \) -exec cp {} /storage/emulated/0/DriveSyncFiles/TimetableUploads/ \;
+     ```
+   - "Block next actions until complete" enabled
+3. **DriveSync (Autosync)** folder pair "Timetable Uploads":
+   - Local: `[Internal storage]/DriveSyncFiles/TimetableUploads/`
+   - Remote: `[Shared with me]/Prayer_submissions/Timetables`
+   - Mode: Upload only, Instant upload enabled
+4. Existing pipeline takes over: Apps Script watcher → n8n Processor → AI Vision → Telegram
+
+**Battery:** Set MacroDroid and DriveSync to "Unrestricted" battery mode. Keep phone plugged in.
+
+**Incident (2026-03-08):** Original MacroDroid action used File Operation (Copy All Images) which copied entire WhatsApp Images folder (~713 files) on every trigger. This flooded Google Drive → Apps Script → n8n with junk, filled the Postgres volume (495/500MB), crashed both Postgres and n8n. Fixed by replacing File Operation with shell script (only copies last 5 mins). Postgres volume resized to 1GB. Cleared: Drive folder, 93 junk Postgres submissions, old n8n execution data + binary data (VACUUM FULL).
 
 ### Post-Approval Workflow
 
