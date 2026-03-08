@@ -152,11 +152,15 @@
 
     function formatRow(name, row) {
         if (!row) return name + ': No data for today';
-        var s = name + ': Sehri ' + row.sehri + ', Fajr ' + row.fajr + ' (Jama\'ah ' + row.jFajr + ')';
+        var s = name + ':';
+        if (row.sehri) s += ' Sehri ' + row.sehri + ',';
+        s += ' Fajr ' + row.fajr + ' (Jama\'ah ' + row.jFajr + ')';
         s += ', Sunrise ' + row.sunrise;
         s += ', Zuhr ' + row.zuhr + ' (Jama\'ah ' + (row.jZuhl || row.jZuhr) + ')';
         s += ', Asr ' + row.asr + ' (Jama\'ah ' + row.jAsr + ')';
+        if (row.iftar) s += ', Iftar ' + row.iftar;
         s += ', Maghrib ' + row.maghrib;
+        if (row.jMaghrib) s += ' (Jama\'ah ' + row.jMaghrib + ')';
         s += ', Isha ' + row.isha + ' (Jama\'ah ' + row.jIsha + ')';
         if (row.no) s += ', Ramadan Day ' + row.no;
         return s;
