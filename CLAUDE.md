@@ -1,8 +1,8 @@
 # Prayer-times Project
 
 ## Overview
-Prayer timetable web app for UK mosques (51 with timetables, 2100+ in directory).
-Ramadan 1447 (Feb-Mar 2026) + year-round prayer times. Cities: Bradford, Leeds, Keighley, Oldham, and more.
+Prayer timetable web app for UK mosques (52 with timetables, 2100+ in directory).
+Ramadan 1447 (Feb-Mar 2026) + year-round prayer times. Cities: Bradford, Leeds, Keighley, Oldham, Cardiff, and more.
 Hosted on GitHub Pages. Each mosque gets its own subfolder with a self-contained HTML page.
 
 - **Repo**: https://github.com/sidnikiwi-afk/Prayer-times
@@ -99,6 +99,13 @@ Prayer-times/
     ├── og-image.svg        # Social preview image
     ├── qr-code.svg         # QR code for poster
     └── poster.html         # A4 printable QR poster
+└── alikhlas/
+    ├── index.html          # Al-Ikhlas Centre timetable (Cardiff)
+    ├── manifest.json       # PWA manifest
+    ├── sw.js               # Service worker (offline support)
+    ├── og-image.svg        # Social preview image
+    ├── qr-code.svg         # QR code for poster
+    └── poster.html         # A4 printable QR poster
 # ... plus 39 batch-generated mosque folders (alabrar/, alamin/, alhidaya/, westleeds/, makkimasjidmadrassah/, etc.)
 # See "Batch Mosque Generation" section below for the full list and workflow.
 scripts/
@@ -135,6 +142,7 @@ Masjids/                    # Source data for batch-generated mosques
 | Masjid Taqwa | `taqwa` | 807 Great Horton Road, BD7 4AG | Cobalt Blue `#0d47a1` / `#1976d2` | 6:30am, 9:30am | £5.00 |
 | Masjid Ibraheem | `ibrahim` | 4 Woodview Rd, Beeston, Leeds LS11 6LE | Deep Orange `#bf360c` / `#e64a19` | 9:00am (Men), 10:30am (Men & Women) | £5.00 |
 | Masjid-Ul-Aqsa & Islamic Centre | `aqsa` | 135 Windsor Road, Coppice, Oldham OL8 1RG | Wine Red `#5d1020` / `#8b2040` | TBA | £5.00 |
+| Al-Ikhlas Centre | `alikhlas` | 88-92 Broadway, Cardiff CF24 1NH | Steel Blue `#2E4057` / `#548CA8` | 8:00am, 9:00am | £5.00 |
 
 ### Donation Details
 - **Shahjalal**: Not listed in timetable
@@ -148,6 +156,7 @@ Masjids/                    # Source data for batch-generated mosques
 - **Masjid Taqwa**: Acc: 34495853, Sort: 40-13-15
 - **Masjid Ibraheem**: Acc: 80015318, Sort: 40-27-41 | pay.easydonate.uk/masjidibraheem
 - **Masjid-Ul-Aqsa**: Barclays Bank, Sort: 20-26-20, Acc: 70626694, Charity Reg: 1179403
+- **Al-Ikhlas Centre**: Sort: 40-16-35, Acc: 21751972 (ref "Zakah" for Zakah payments)
 
 ### Contact / Radio
 - **Quba**: Tel 01274 542027 | masjidquba.org | Receiver: 454.3500
@@ -161,6 +170,7 @@ Masjids/                    # Source data for batch-generated mosques
 - **West Leeds Jamia Masjid**: Tel 07801 997 364 | westleedsjamiamasjid@gmail.com
 - **Makki Masjid & Madrassah**: Tel 0113 245 6501 | www.makkimasjid.co.uk | Queries: 07827 295201
 - **Masjid-Ul-Aqsa**: Tel 0161 633 0327 | www.masjidulaqsa.org.uk
+- **Al-Ikhlas Centre**: www.alikhlas.org.uk | Jumu'ah: 12:30
 
 ### Batch-Generated Mosques (Ramadan 1447 – added Feb 2026)
 
@@ -684,6 +694,7 @@ After the last day's Isha Jamaah, shows "Eid Mubarak".
 | Masjid Taqwa | `taqwa-darkMode` | `taqwa-notifications` | `taqwa-viewMode` | `taqwa-autoDark` |
 | Masjid Ibraheem | `ibrahim-darkMode` | `ibrahim-notifications` | `ibrahim-viewMode` | `ibrahim-autoDark` |
 | Masjid-Ul-Aqsa | `aqsa-darkMode` | `aqsa-notifications` | `aqsa-viewMode` | `aqsa-autoDark` |
+| Al-Ikhlas Centre | `alikhlas-darkMode` | `alikhlas-notifications` | `alikhlas-viewMode` | `alikhlas-autoDark` |
 
 ### nav.js
 - Self-executing function that injects CSS, HTML, and event handlers
@@ -756,6 +767,7 @@ CNAME www   sidnikiwi-afk.github.io
 | Masjid Taqwa | `waqt.uk/taqwa/` |
 | Masjid Ibraheem (Leeds) | `waqt.uk/ibrahim/` |
 | Masjid-Ul-Aqsa (Oldham) | `waqt.uk/aqsa/` |
+| Al-Ikhlas Centre (Cardiff) | `waqt.uk/alikhlas/` |
 
 **Batch mosques** (41 total, all at `waqt.uk/<prefix>/`): alabrar, alamin, alhidaya, alhikmah, alhidaayah, almustaqeem, azharulmadaaris, baitulilm, darulmahmood, doha, firdaws, iqra, abuhanifa, farooqiah, madnimasjid, abbasiya, darulirfan, abdullahbinmasood, masjidali, masjidayesha, masjidbilal, masjidhamza, masjidhusain, ibraheem, namirah, masjidnoor, noorulislam, nusratul, farooqia, masjidumar, masjidusman, raashideen, musallasalaam, ahlebayt, shipley, westleeds, wibseybuttershaw, wibsey, sjmkeighley, masjidtaqwa, makkimasjidmadrassah
 
