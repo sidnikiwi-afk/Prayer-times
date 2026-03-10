@@ -798,18 +798,19 @@
       "lon": 1.266827
     },
     {
-      "name": "Masjid Al Ikhlas & Cambridge Islamic Centre",
-      "address": "4 Devonshire Road, Cambridge",
-      "postcode": "CB1 2BH",
-      "city": "Cambridge",
-      "has_timetable": false,
-      "slug": null,
-      "color1": null,
-      "color2": null,
-      "tags": "",
+      "name": "Al-Ikhlas Centre",
+      "address": "88-92 Broadway",
+      "postcode": "CF24 1NH",
+      "city": "Cardiff",
+      "has_timetable": true,
+      "slug": "alikhlas",
+      "color1": "#2E4057",
+      "color2": "#548CA8",
+      "tags": "Cardiff Broadway",
       "type": "mosque",
       "lat": 52.198761,
-      "lon": 0.138886
+      "lon": 0.138886,
+      "website": "www.alikhlas.org.uk"
     },
     {
       "name": "The Ihsan Mosque and Islamic Centre",
@@ -7295,22 +7296,6 @@
       "lat": 51.474782,
       "lon": -3.186885,
       "website": "https://mawaqit.net/en/rabbaniah-islamic-cultural-centre-cardiff-cf11-6qp-united-kingdom"
-    },
-    {
-      "name": "Al-Ikhlas Centre",
-      "address": "",
-      "postcode": "CF24 1LL",
-      "city": "Cardiff",
-      "has_timetable": false,
-      "slug": null,
-      "color1": null,
-      "color2": null,
-      "tags": "",
-      "type": "mosque",
-      "lat": 51.488059,
-      "lon": -3.154753,
-      "phone": "07536 761723",
-      "website": "https://alikhlas.org.uk/"
     },
     {
       "name": "Exeter Mosque",

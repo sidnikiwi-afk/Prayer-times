@@ -51,6 +51,7 @@ const MASJIDS = [
     { name: 'West Leeds Jamia Masjid', addr: 'Town Street, Armley, Leeds, LS12 3JG', folder: 'westleeds', tags: 'Leeds Armley' },
     { name: 'Makki Masjid & Madrassah', addr: '1 Vicarage Road, Leeds, LS6 1NX', folder: 'makkimasjidmadrassah', tags: 'Leeds Headingley' },
     { name: 'Masjid-Ul-Aqsa & Islamic Centre', addr: '135 Windsor Road, Coppice, Oldham OL8 1RG', folder: 'aqsa', tags: 'Oldham' },
+    { name: 'Al-Ikhlas Centre', addr: '88-92 Broadway, Cardiff CF24 1NH', folder: 'alikhlas', tags: 'Cardiff' },
 ];
 
 (function() {
